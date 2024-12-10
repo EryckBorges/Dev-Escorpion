@@ -243,8 +243,7 @@ main {
     position: absolute;
     left: 2vw;
     top:0;
-    animation: fadeInLeftBig;
-    animation-duration: 300ms;
+    animation: barraTitleLeft 5s infinite;
 }
 
 .titleMyProject::before {
@@ -253,10 +252,9 @@ main {
     height:10px;
     background:var(--vermelhoPadrao);
     position: absolute;
-    right: 2vw;
+    right: -50vw;
     bottom:0;
-    animation: fadeInRightBig;
-    animation-duration: 300ms;
+    animation: barraTitleRight 5s infinite;
 }
 
 .swiper {
@@ -361,10 +359,9 @@ main {
     background-color: var(--vermelhoPadrao);
     border-radius: 50%;
     position: absolute;
-    top:1vh;
+    top:2vh;
     left:0;
-    animation: bounceIn;
-    animation-duration: 1s;
+    animation: pulse infinite 2s;
 }
 
 .ferramentas::before {
@@ -377,8 +374,7 @@ main {
     position: absolute;
     bottom:0;
     right:0;
-    animation: fadeInRightBig;
-    animation-duration: 500ms;
+    animation: triangulo infinite 5s;
 }
 
 .ferramentas > h1 {
@@ -408,8 +404,7 @@ main {
     position: absolute;
     bottom:0;
     left:0;
-    animation: fadeInLeftBig;
-    animation-duration: 500ms;
+    animation: flip infinite 5s;
 }
 
 .estudos > h1 {
@@ -437,6 +432,22 @@ main {
 }
 
 /*Certificados e Conquistas*/
+
+.zoomCertificado {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+    background:var(--cinzaOpacity);
+    top: 0;
+    left:0;
+}
+
+.zoomCertificado > img {
+    width:80%;
+    height: 80%;
+}
 
 .certificados {
     transition: height 1s linear;
@@ -659,4 +670,40 @@ main {
     width:100%;
     height: 55%;
     font-size: 1.1em;
+}
+
+/*Animações Expecificas*/
+
+@keyframes barraTitleRight {
+    from {
+        right: 2vw;
+    }50% {
+        opacity: 0;
+        right: 70vw;
+    }to {
+        right: 2vw;
+    }
+}
+
+
+@keyframes barraTitleLeft {
+    from {
+        left: 2vw;
+    }50% {
+        opacity: 0;
+        left: 70vw;
+    }to {
+        left: 2vw;
+    }
+}
+
+@keyframes triangulo {
+    from {
+        right: 0vw;
+    }50% {
+        opacity: 0;
+        right: -10vw;
+    }to {
+        right: 0vw;
+    }
 }

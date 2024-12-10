@@ -265,33 +265,42 @@ const interval = setInterval(() => {
     }
 }, 200);
 
-//Abre as seleção de linguagens
-
+// Abre as seleção de linguagens
 const flagsSelecionada = document.querySelector(".flagsSelecionada");
-
 const langs = document.querySelector('.lang');
 
-let clickLang = 0;
+let isLangOpen = false;
 
-flagsSelecionada.addEventListener('click', () => {
-    langs.style.display = 'flex';
-    clickLang++
-    
-    langs.style.opacity = "1";
-    langs.classList.add('fadeInLang');
-    
-    if (langs.classList.contains('fadeInLang') && clickLang > 1) {
-        langs.classList.remove('fadeInLang');
-        langs.classList.add('fadeOutLang');
-        clickLang = 0;
-        
-        setTimeout(() => {
-            langs.classList.remove('fadeOutLang');
-            langs.style.opacity = "0";
-            langs.style.display = 'none';
-        }, 80);
+flagsSelecionada.addEventListener('click', (event) => {
+    event.stopPropagation();
+    if (!isLangOpen) {
+        langs.style.display = 'flex';
+        langs.style.opacity = "1";
+        langs.classList.add('fadeInLang');
+        langs.classList.remove('fadeOutLang');
+        isLangOpen = true;
+    } else {
+        closeLang();
     }
 });
+
+document.addEventListener("click", (event) => {
+    if (isLangOpen && !langs.contains(event.target)) {
+        closeLang();
+    }
+});
+
+function closeLang() {
+    langs.classList.remove('fadeInLang');
+    langs.classList.add('fadeOutLang');
+    setTimeout(() => {
+        langs.style.opacity = "0";
+        langs.style.display = 'none';
+        langs.classList.remove('fadeOutLang');
+        isLangOpen = false;
+    }, 80);
+}
+
 
 const eu = document.querySelector('.eua');
 
@@ -438,3 +447,6 @@ buttonCertificado.addEventListener('click', () => {
         isExpanded = false;
     }
 });
+
+
+
