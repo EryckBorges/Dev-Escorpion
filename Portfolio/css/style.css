@@ -1,3 +1,11 @@
+.fadeIn {
+    animation: fadeInUp 1s;
+}
+
+.fadeOut {
+    animation: fadeOutDown 1s;
+}
+
 header {
     background:url('../image/header.jpg') center / cover no-repeat;
     width:100%;
@@ -43,16 +51,15 @@ header {
     text-decoration: none;
 }
 
-.apresentacao {
+.typedBr, .typedEu, .typedEs, .typedCh, .typedFr {
     position: relative;
-    color: var(--branco);
+    color: var(--vermelhoPadrao);
     font-size:2.5em;
 }
 
-.red {
-    margin-left: 15px;
+.typed-cursor {
+    font-size:2.5em;
     color:var(--vermelhoPadrao);
-    font-size: 2.5em;
 }
 
 .flagsSelecionada {
@@ -335,14 +342,171 @@ main {
     -webkit-transform: scale(0);
     transform: scale(0);
   }
-  
-  
+
+
+.fadeInLeft {
+    animation:fadeInLeftBig 1s;
+}
+
+.fadeOutLeft {
+    animation:fadeOutLeftBig 1s;
+}
+
+.fadeInRight {
+    animation:fadeInRightBig 1s;
+}
+
+.fadeOutRight {
+    animation:fadeOutRightBig 1s;
+}
+
 .tecnologias {
     margin-top: 50px;
     width: 100%;
     height:auto;
     align-items: baseline !important;
     flex-direction: column;
+}
+
+.more {
+    width:100%;
+    height: 70vh;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.iconMore {
+    width:100%;
+    height:20%;
+}
+
+.iconMore > img {
+    width:80px;
+    height: 80px;
+}
+
+.iconMore > h1 {
+    width: 80%;
+    margin-left:20px;
+    height: 100%;
+    color: var(--html);
+}
+
+.iconMore > button {
+    width:40px;
+    height: 40px;
+    background:none;
+    border:none;
+    cursor: pointer;
+    color: var(--html);
+}
+
+.porcentagem {
+    width: 100%;
+    height: 15%;
+    padding-inline: 10px;  
+}
+
+.porcentagem::after {
+    content: '';
+    width:20%;
+    margin-left:15px;
+    height: 2px;
+    background: var(--branco);
+}
+
+.porcentagem::before {
+    content: '';
+    width:20%;
+    margin-right:15px;
+    height: 2px;
+    background: var(--branco);
+}
+
+.porcento {
+    width:50%;
+    height: 40%;
+    border-radius: 50px;
+    border:2px solid var(--html);
+    justify-content: left !important;
+}
+
+.carregamento {
+    width:0%;
+    height: 100%;
+    background-color: var(--html);
+    border-radius: 50px;
+}
+
+.carregamento > p {
+    font-size: 1.2em;
+    color: var(--branco);
+    font-weight: bold;
+}
+
+.conteudoConhecimento {
+    width: 100%;
+    height: 55%;
+}
+
+.dadosConhecimento {
+    width: 25%;
+    height: 100%;
+    flex-direction: column;
+    position: relative;
+}
+
+.dadosConhecimento::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 2px;
+    height: 90%;
+    background: var(--branco);
+}
+
+.dadosConhecimento > .conhecimento, .naoConhecimento {
+    width: 100%;
+    height: 25%;
+    font-weight: bold;
+}
+
+.naoConhecimento::before, .conhecimento::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-inline:10px;
+    background: var(--branco);
+}
+
+.dadosConhecimento > .conhecimento {
+    color: var(--html);
+}
+
+.dadosConhecimento > .naoConhecimento {
+    color: var(--branco);
+}
+
+.conhecimentos {
+    width:75%;
+    height: 100%;
+    flex-direction: row;
+    gap:10px;
+}
+
+.allConhecimentos {
+    width:35%;
+    height: 100%;
+    flex-direction: column;
+
+}
+
+.allConhecimentos > p {
+    color: var(--html);
+    width: 100%;
+    font-weight: bold;
+    height: 30%;
 }
 
 .ferramentas {
@@ -429,6 +593,11 @@ main {
     width:80px;
     height:80px;
     z-index: 2;
+    cursor: pointer;
+}
+
+.closed {
+    display: none !important;
 }
 
 /*Certificados e Conquistas*/
@@ -706,4 +875,83 @@ main {
     }to {
         right: 0vw;
     }
+}
+
+@keyframes html {
+    from {
+        width:0%;
+    }to {
+        width:75%;
+    }
+}
+
+@keyframes css {
+    from {
+        width:0%;
+    }to {
+        width:80%;
+    }
+}
+
+@keyframes js {
+    from {
+        width:0%;
+    }to {
+        width:80%;
+    }
+}
+
+@keyframes figma {
+    from {
+        width:0%;
+    }to {
+        width:80%;
+    }
+}
+
+@keyframes canva {
+    from {
+        width:0%;
+    }to {
+        width:80%;
+    }
+}
+
+@keyframes github {
+    from {
+        width:0%;
+    }to {
+        width:80%;
+    }
+}
+
+.githubAnimation {
+    width: 80%;
+    animation: github 1s linear;
+    color: var(--preto);
+}
+
+.canvaAnimation {
+    width: 80%;
+    animation: canva 1s linear;
+}
+
+.figmaAnimation {
+    width: 80%;
+    animation: figma 1s linear;
+}
+
+.jsAnimation {
+    width: 80%;
+    animation: js 1s linear;
+}
+
+.cssAnimation {
+    width: 80%;
+    animation: css 1s linear;
+}
+
+.htmlAnimation {
+    width: 75%;
+    animation: html 1s linear;
 }
