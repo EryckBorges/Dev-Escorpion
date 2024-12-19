@@ -101,6 +101,10 @@ header {
     border-radius: 5px;
 }
 
+.btnMenu {
+    display: none;
+}
+
 .lang {
     display: none;
     z-index: 98;
@@ -251,6 +255,7 @@ main {
     left: 2vw;
     top:0;
     animation: barraTitleLeft 5s infinite;
+    border-radius: 10px;
 }
 
 .titleMyProject::before {
@@ -262,6 +267,7 @@ main {
     right: -50vw;
     bottom:0;
     animation: barraTitleRight 5s infinite;
+    border-radius: 10px;
 }
 
 .swiper {
@@ -390,6 +396,7 @@ main {
     margin-left:20px;
     height: 100%;
     color: var(--html);
+    font-size: 2em;
 }
 
 .iconMore > button {
@@ -525,7 +532,9 @@ main {
     position: absolute;
     top:2vh;
     left:0;
+    z-index: 0;
     animation: pulse infinite 2s;
+    z-index: 0;
 }
 
 .ferramentas::before {
@@ -538,10 +547,13 @@ main {
     position: absolute;
     bottom:0;
     right:0;
+    z-index: 0;
     animation: triangulo infinite 5s;
+    z-index: 0;
 }
 
 .ferramentas > h1 {
+    z-index: 1;
     height:30%;
     width: 100%;
     font-size: 2em;
@@ -569,6 +581,7 @@ main {
     bottom:0;
     left:0;
     animation: flip infinite 5s;
+    z-index: 0;
 }
 
 .estudos > h1 {
@@ -576,6 +589,7 @@ main {
     width: 100%;
     font-size: 2em;
     color: var(--branco);
+    z-index: 1;
 }
 
 .estudos > h1 > b {
@@ -587,6 +601,11 @@ main {
     width:100%;
     height:60%;
     gap:50px;
+    z-index: 1;
+}
+
+.iconesMobile {
+    display: none;
 }
 
 .icones > img {
@@ -601,22 +620,6 @@ main {
 }
 
 /*Certificados e Conquistas*/
-
-.zoomCertificado {
-    display: none;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: 999;
-    background:var(--cinzaOpacity);
-    top: 0;
-    left:0;
-}
-
-.zoomCertificado > img {
-    width:80%;
-    height: 80%;
-}
 
 .certificados {
     transition: height 1s linear;
@@ -764,6 +767,7 @@ main {
     height: 100%;
     margin-inline: 5px;
     position: relative;
+    opacity: 0;
 }
 
 .avaliacaoCard {

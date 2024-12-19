@@ -1191,6 +1191,7 @@ let isDown = false;
 let startX;
 let scrollLeft;
 
+// Eventos de mouse
 slider.addEventListener('mousedown', (e) => {
     isDown = true;
     slider.classList.add('active');
@@ -1216,12 +1217,33 @@ slider.addEventListener('mousemove', (e) => {
     slider.scrollLeft = scrollLeft - walk;
 });
 
+// Eventos de toque
+slider.addEventListener('touchstart', (e) => {
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.touches[0].pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener('touchend', () => {
+    isDown = false;
+    slider.classList.remove('active');
+});
+
+slider.addEventListener('touchmove', (e) => {
+    if (!isDown) return; // Parar se não houver toque ativo
+    e.preventDefault();
+    const x = e.touches[0].pageX - slider.offsetLeft;
+    const walk = (x - startX) * 2; // Multiplica para ajustar a velocidade
+    slider.scrollLeft = scrollLeft - walk;
+});
 // Função de slide de avaliação
 const avalia = document.querySelector('.avalia');
 let praBaixo = false;
 let startXY;
 let scrollEsquerda;
 
+// Eventos de mouse
 avalia.addEventListener('mousedown', (e) => {
     praBaixo = true;
     avalia.classList.add('active');
@@ -1243,9 +1265,31 @@ avalia.addEventListener('mousemove', (e) => {
     if (!praBaixo) return;
     e.preventDefault();
     const x = e.pageX - avalia.scrollLeft;
-    const walk = (x - startXY) * 0.5;
-    avalia.scrollLeft = scrollEsquerda - walk; 
+    const walk = (x - startXY) * 0.5; // Multiplica para ajustar a velocidade
+    avalia.scrollLeft = scrollEsquerda - walk;
 });
+
+// Eventos de toque
+avalia.addEventListener('touchstart', (e) => {
+    praBaixo = true;
+    avalia.classList.add('active');
+    startXY = e.touches[0].pageX - avalia.scrollLeft;
+    scrollEsquerda = avalia.scrollLeft;
+});
+
+avalia.addEventListener('touchend', () => {
+    praBaixo = false;
+    avalia.classList.remove('active');
+});
+
+avalia.addEventListener('touchmove', (e) => {
+    if (!praBaixo) return;
+    e.preventDefault();
+    const x = e.touches[0].pageX - avalia.scrollLeft;
+    const walk = (x - startXY) * 0.5; // Multiplica para ajustar a velocidade
+    avalia.scrollLeft = scrollEsquerda - walk;
+});
+
 
 //Função mostrar mais certificados
 const buttonCertificado = document.querySelector('.certificados button');
@@ -1289,262 +1333,23 @@ buttonCertificado.addEventListener('click', () => {
 //Icones para clique
 
 const html = document.querySelector('.html5');
+const htmlMobile = document.querySelector('.html5Mobile');
 const css = document.querySelector('.css');
+const cssMobile = document.querySelector('.cssMobile');
 const js = document.querySelector('.js');
+const jsMobile = document.querySelector('.jsMobile');
 const git = document.querySelector('.git');
+const gitMobile = document.querySelector('.gitMobile');
 const figma = document.querySelector('.figma');
+const figmaMobile = document.querySelector('.figmaMobile');
 const github = document.querySelector('.github');
+const githubMobile = document.querySelector('.githubMobile');
 const canva = document.querySelector('.canva');
+const canvaMobile = document.querySelector('.canvaMobile');
 
-//Função do clique do icone de Html
+//Funções 
 
-html.addEventListener('click', () => {
-    more.classList.add('html');
-    iconeConhecimento.src = './image/html.png';
-    conhecimento1.style.color = "var(--html)";
-    conhecimento2.style.color = "var(--html)";
-    conhecimento3.style.color = "var(--html)";
-    conhecimento4.style.color = "var(--html)";
-    conhecimento5.style.color = "var(--html)";
-    conhecimento6.style.color = "var(--html)";
-    conhecimento7.style.color = "var(--html)";
-    conhecimento8.style.color = "var(--html)";
-    conhecimento9.style.color = "var(--html)";
-    titleConhecimento.style.color = "var(--html)";
-    carregamento.style.background = 'var(--html)';
-    porcento.style.border = '2px solid var(--html)';
-    closeMore.style.color = 'var(--html)';
-    conhecimentoPorcento.style.color = 'var(--html)';
-setInterval(() => {
-    langPage();
-}, 500);
-    if (ferramentas.classList.contains('fadeInLeft')) {
-        ferramentas.classList.remove('fadeInLeft');
-    }
-    if (more.classList.contains('fadeOutRight')) {
-        more.classList.remove('fadeOutRight');
-    }
-    ferramentas.classList.add('fadeOutLeft');
-    setTimeout(() => {
-        ferramentas.classList.add('closed');
-        more.classList.add("fadeInRight");   
-        more.classList.remove("closed");
-        setTimeout(() => {
-            carregamento.classList.add('htmlAnimation');
-        }, 500);
-        carregamentoText.innerHTML = '75%';
-        carregamentoText.style.color = 'var(--branco)';
-        conhecimentoPorcento.innerHTML = '75% de meu conhecimento';
-        naoConhecimentoPorcento.innerHTML = '25% de conhecimento <br> que não possuo'
-    }, 500);
-});
-
-css.addEventListener('click', () => {
-    more.classList.add('css');
-    iconeConhecimento.src = './image/css.png';
-    conhecimento1.style.color = "var(--css)";
-    conhecimento2.style.color = "var(--css)";
-    conhecimento3.style.color = "var(--css)";
-    conhecimento4.style.color = "var(--css)";
-    conhecimento5.style.color = "var(--css)";
-    conhecimento6.style.color = "var(--css)";
-    conhecimento7.style.color = "var(--css)";
-    conhecimento8.style.color = "var(--css)";
-    conhecimento9.style.color = "var(--css)";
-    titleConhecimento.style.color = "var(--css)";
-    carregamento.style.background = 'var(--css)';
-    porcento.style.border = '2px solid var(--css)';
-    closeMore.style.color = 'var(--css)';
-    conhecimentoPorcento.style.color = 'var(--css)';
-    setInterval(() => {
-        langPage();
-    }, 500);
-    if (ferramentas.classList.contains('fadeInLeft')) {
-        ferramentas.classList.remove('fadeInLeft');
-    }
-    if (more.classList.contains('fadeOutRight')) {
-        more.classList.remove('fadeOutRight');
-    }
-    ferramentas.classList.add('fadeOutLeft');
-    setTimeout(() => {
-        ferramentas.classList.add('closed');
-        more.classList.add("fadeInRight");   
-        more.classList.remove("closed");
-        setTimeout(() => {
-            carregamento.classList.add('cssAnimation');
-        }, 500);
-        carregamentoText.innerHTML = '80%';
-        carregamentoText.style.color = 'var(--branco)';
-        conhecimentoPorcento.innerHTML = '80% de meu conhecimento';
-        naoConhecimentoPorcento.innerHTML = '20% de conhecimento <br> que não possuo'
-    }, 500);
-});
-
-js.addEventListener('click', () => {
-    more.classList.add('javaScript');
-    iconeConhecimento.src = './image/js.png';
-    conhecimento1.style.color = "var(--js)";
-    conhecimento2.style.color = "var(--js)";
-    conhecimento3.style.color = "var(--js)";
-    conhecimento4.style.color = "var(--js)";
-    conhecimento5.style.color = "var(--js)";
-    conhecimento6.style.color = "var(--js)";
-    conhecimento7.style.color = "var(--js)";
-    conhecimento8.style.color = "var(--js)";
-    conhecimento9.style.color = "var(--js)";
-    titleConhecimento.style.color = "var(--js)";
-    carregamento.style.background = 'var(--js)';
-    porcento.style.border = '2px solid var(--js)';
-    closeMore.style.color = 'var(--js)';
-    conhecimentoPorcento.style.color = 'var(--js)';
-    setInterval(() => {
-        langPage();
-    }, 500);
-    if (ferramentas.classList.contains('fadeInLeft')) {
-        ferramentas.classList.remove('fadeInLeft');
-    }
-    if (more.classList.contains('fadeOutRight')) {
-        more.classList.remove('fadeOutRight');
-    }
-    ferramentas.classList.add('fadeOutLeft');
-    setTimeout(() => {
-        ferramentas.classList.add('closed');
-        more.classList.add("fadeInRight");   
-        more.classList.remove("closed");
-        setTimeout(() => {
-            carregamento.classList.add('jsAnimation');
-        }, 500);
-        carregamentoText.innerHTML = '80%';
-        carregamentoText.style.color = 'var(--branco)';
-        conhecimentoPorcento.innerHTML = '80% de meu conhecimento';
-        naoConhecimentoPorcento.innerHTML = '20% de conhecimento <br> que não possuo'
-    }, 500);
-});
-
-git.addEventListener('click', () => {
-    more.classList.add('Gt');
-    iconeConhecimento.src = './image/git.webp';
-    conhecimento1.style.color = "var(--git)";
-    conhecimento2.style.color = "var(--git)";
-    conhecimento3.style.color = "var(--git)";
-    conhecimento4.style.color = "var(--git)";
-    conhecimento5.style.color = "var(--git)";
-    conhecimento6.style.color = "var(--git)";
-    conhecimento7.style.color = "var(--git)";
-    conhecimento8.style.color = "var(--git)";
-    conhecimento9.style.color = "var(--git)";
-    titleConhecimento.style.color = "var(--git)";
-    carregamento.style.background = 'var(--git)';
-    porcento.style.border = '2px solid var(--git)';
-    closeMore.style.color = 'var(--git)';
-    conhecimentoPorcento.style.color = 'var(--git)';
-    setInterval(() => {
-        langPage();
-    }, 500);
-    if (ferramentas.classList.contains('fadeInLeft')) {
-        ferramentas.classList.remove('fadeInLeft');
-    }
-    if (more.classList.contains('fadeOutRight')) {
-        more.classList.remove('fadeOutRight');
-    }
-    ferramentas.classList.add('fadeOutLeft');
-    setTimeout(() => {
-        ferramentas.classList.add('closed');
-        more.classList.add("fadeInRight");   
-        more.classList.remove("closed");
-        setTimeout(() => {
-            carregamento.classList.add('gitAnimation');
-        }, 500);
-        carregamentoText.innerHTML = '80%';
-        carregamentoText.style.color = 'var(--branco)';
-        conhecimentoPorcento.innerHTML = '80% de meu conhecimento';
-        naoConhecimentoPorcento.innerHTML = '20% de conhecimento <br> que não possuo'
-    }, 500);
-});
-
-github.addEventListener('click', () => {
-    more.classList.add('Gth');
-    iconeConhecimento.src = './image/github.png';
-    conhecimento1.style.color = "var(--branco)";
-    conhecimento2.style.color = "var(--branco)";
-    conhecimento3.style.color = "var(--branco)";
-    conhecimento4.style.color = "var(--branco)";
-    conhecimento5.style.color = "var(--branco)";
-    conhecimento6.style.color = "var(--branco)";
-    conhecimento7.style.color = "var(--branco)";
-    conhecimento8.style.color = "var(--branco)";
-    conhecimento9.style.color = "var(--branco)";
-    titleConhecimento.style.color = "var(--branco)";
-    carregamento.style.background = 'var(--branco)';
-    porcento.style.border = '2px solid var(--branco)';
-    closeMore.style.color = 'var(--branco)';
-    conhecimentoPorcento.style.color = 'var(--branco)';
-    setInterval(() => {
-        langPage();
-    }, 500);
-    if (ferramentas.classList.contains('fadeInLeft')) {
-        ferramentas.classList.remove('fadeInLeft');
-    }
-    if (more.classList.contains('fadeOutRight')) {
-        more.classList.remove('fadeOutRight');
-    }
-    ferramentas.classList.add('fadeOutLeft');
-    setTimeout(() => {
-        ferramentas.classList.add('closed');
-        more.classList.add("fadeInRight");   
-        more.classList.remove("closed");
-        setTimeout(() => {
-            carregamento.classList.add('githubAnimation');
-        }, 500);
-        carregamentoText.innerHTML = '80%';
-        carregamentoText.style.color = 'var(--preto)';
-        conhecimentoPorcento.innerHTML = '80% de meu conhecimento';
-        naoConhecimentoPorcento.innerHTML = '20% de conhecimento <br> que não possuo'
-    }, 500);
-});
-
-canva.addEventListener('click', () => {
-    more.classList.add('Cnv');
-    iconeConhecimento.src = './image/canva.png';
-    conhecimento1.style.color = "var(--canva)";
-    conhecimento2.style.color = "var(--canva)";
-    conhecimento3.style.color = "var(--canva)";
-    conhecimento4.style.color = "var(--canva)";
-    conhecimento5.style.color = "var(--canva)";
-    conhecimento6.style.color = "var(--canva)";
-    conhecimento7.style.color = "var(--canva)";
-    conhecimento8.style.color = "var(--canva)";
-    conhecimento9.style.color = "var(--canva)";
-    titleConhecimento.style.color = "var(--canva)";
-    carregamento.style.background = 'var(--canva)';
-    porcento.style.border = '2px solid var(--canva)';
-    closeMore.style.color = 'var(--canva)';
-    conhecimentoPorcento.style.color = 'var(--canva)';
-    setInterval(() => {
-        langPage();
-    }, 500);
-    if (ferramentas.classList.contains('fadeInLeft')) {
-        ferramentas.classList.remove('fadeInLeft');
-    }
-    if (more.classList.contains('fadeOutRight')) {
-        more.classList.remove('fadeOutRight');
-    }
-    ferramentas.classList.add('fadeOutLeft');
-    setTimeout(() => {
-        ferramentas.classList.add('closed');
-        more.classList.add("fadeInRight");   
-        more.classList.remove("closed");
-        setTimeout(() => {
-            carregamento.classList.add('canvaAnimation');
-        }, 500);
-        carregamentoText.innerHTML = '80%';
-        carregamentoText.style.color = 'var(--branco)';
-        conhecimentoPorcento.innerHTML = '80% de meu conhecimento';
-        naoConhecimentoPorcento.innerHTML = '20% de conhecimento <br> que não possuo'
-    }, 500);
-});
-
-figma.addEventListener('click', () => {
+const figmaFunction = () => {
     more.classList.add('Fgm');
     iconeConhecimento.src = './image/figma.png';
     conhecimento1.style.color = "var(--figma)";
@@ -1583,7 +1388,311 @@ figma.addEventListener('click', () => {
         conhecimentoPorcento.innerHTML = '80% de meu conhecimento';
         naoConhecimentoPorcento.innerHTML = '20% de conhecimento <br> que não possuo'
     }, 500);
+}
+
+const htmlFunction = () => {
+    more.classList.add('html');
+    iconeConhecimento.src = './image/html.png';
+    conhecimento1.style.color = "var(--html)";
+    conhecimento2.style.color = "var(--html)";
+    conhecimento3.style.color = "var(--html)";
+    conhecimento4.style.color = "var(--html)";
+    conhecimento5.style.color = "var(--html)";
+    conhecimento6.style.color = "var(--html)";
+    conhecimento7.style.color = "var(--html)";
+    conhecimento8.style.color = "var(--html)";
+    conhecimento9.style.color = "var(--html)";
+    titleConhecimento.style.color = "var(--html)";
+    carregamento.style.background = 'var(--html)';
+    porcento.style.border = '2px solid var(--html)';
+    closeMore.style.color = 'var(--html)';
+    conhecimentoPorcento.style.color = 'var(--html)';
+setInterval(() => {
+    langPage();
+}, 500);
+    if (ferramentas.classList.contains('fadeInLeft')) {
+        ferramentas.classList.remove('fadeInLeft');
+    }
+    if (more.classList.contains('fadeOutRight')) {
+        more.classList.remove('fadeOutRight');
+    }
+    ferramentas.classList.add('fadeOutLeft');
+    setTimeout(() => {
+        ferramentas.classList.add('closed');
+        more.classList.add("fadeInRight");   
+        more.classList.remove("closed");
+        setTimeout(() => {
+            carregamento.classList.add('htmlAnimation');
+        }, 500);
+        carregamentoText.innerHTML = '75%';
+        carregamentoText.style.color = 'var(--branco)';
+        conhecimentoPorcento.innerHTML = '75% de meu conhecimento';
+        naoConhecimentoPorcento.innerHTML = '25% de conhecimento <br> que não possuo'
+    }, 500);
+}
+
+const cssFunction = () => {
+    more.classList.add('css');
+    iconeConhecimento.src = './image/css.png';
+    conhecimento1.style.color = "var(--css)";
+    conhecimento2.style.color = "var(--css)";
+    conhecimento3.style.color = "var(--css)";
+    conhecimento4.style.color = "var(--css)";
+    conhecimento5.style.color = "var(--css)";
+    conhecimento6.style.color = "var(--css)";
+    conhecimento7.style.color = "var(--css)";
+    conhecimento8.style.color = "var(--css)";
+    conhecimento9.style.color = "var(--css)";
+    titleConhecimento.style.color = "var(--css)";
+    carregamento.style.background = 'var(--css)';
+    porcento.style.border = '2px solid var(--css)';
+    closeMore.style.color = 'var(--css)';
+    conhecimentoPorcento.style.color = 'var(--css)';
+    setInterval(() => {
+        langPage();
+    }, 500);
+    if (ferramentas.classList.contains('fadeInLeft')) {
+        ferramentas.classList.remove('fadeInLeft');
+    }
+    if (more.classList.contains('fadeOutRight')) {
+        more.classList.remove('fadeOutRight');
+    }
+    ferramentas.classList.add('fadeOutLeft');
+    setTimeout(() => {
+        ferramentas.classList.add('closed');
+        more.classList.add("fadeInRight");   
+        more.classList.remove("closed");
+        setTimeout(() => {
+            carregamento.classList.add('cssAnimation');
+        }, 500);
+        carregamentoText.innerHTML = '80%';
+        carregamentoText.style.color = 'var(--branco)';
+        conhecimentoPorcento.innerHTML = '80% de meu conhecimento';
+        naoConhecimentoPorcento.innerHTML = '20% de conhecimento <br> que não possuo'
+    }, 500);
+}
+
+const jsFunction = () => {
+    more.classList.add('javaScript');
+    iconeConhecimento.src = './image/js.png';
+    conhecimento1.style.color = "var(--js)";
+    conhecimento2.style.color = "var(--js)";
+    conhecimento3.style.color = "var(--js)";
+    conhecimento4.style.color = "var(--js)";
+    conhecimento5.style.color = "var(--js)";
+    conhecimento6.style.color = "var(--js)";
+    conhecimento7.style.color = "var(--js)";
+    conhecimento8.style.color = "var(--js)";
+    conhecimento9.style.color = "var(--js)";
+    titleConhecimento.style.color = "var(--js)";
+    carregamento.style.background = 'var(--js)';
+    porcento.style.border = '2px solid var(--js)';
+    closeMore.style.color = 'var(--js)';
+    conhecimentoPorcento.style.color = 'var(--js)';
+    setInterval(() => {
+        langPage();
+    }, 500);
+    if (ferramentas.classList.contains('fadeInLeft')) {
+        ferramentas.classList.remove('fadeInLeft');
+    }
+    if (more.classList.contains('fadeOutRight')) {
+        more.classList.remove('fadeOutRight');
+    }
+    ferramentas.classList.add('fadeOutLeft');
+    setTimeout(() => {
+        ferramentas.classList.add('closed');
+        more.classList.add("fadeInRight");   
+        more.classList.remove("closed");
+        setTimeout(() => {
+            carregamento.classList.add('jsAnimation');
+        }, 500);
+        carregamentoText.innerHTML = '80%';
+        carregamentoText.style.color = 'var(--branco)';
+        conhecimentoPorcento.innerHTML = '80% de meu conhecimento';
+        naoConhecimentoPorcento.innerHTML = '20% de conhecimento <br> que não possuo'
+    }, 500);
+}
+
+const gitFunction = () => {
+    more.classList.add('Gt');
+    iconeConhecimento.src = './image/git.webp';
+    conhecimento1.style.color = "var(--git)";
+    conhecimento2.style.color = "var(--git)";
+    conhecimento3.style.color = "var(--git)";
+    conhecimento4.style.color = "var(--git)";
+    conhecimento5.style.color = "var(--git)";
+    conhecimento6.style.color = "var(--git)";
+    conhecimento7.style.color = "var(--git)";
+    conhecimento8.style.color = "var(--git)";
+    conhecimento9.style.color = "var(--git)";
+    titleConhecimento.style.color = "var(--git)";
+    carregamento.style.background = 'var(--git)';
+    porcento.style.border = '2px solid var(--git)';
+    closeMore.style.color = 'var(--git)';
+    conhecimentoPorcento.style.color = 'var(--git)';
+    setInterval(() => {
+        langPage();
+    }, 500);
+    if (ferramentas.classList.contains('fadeInLeft')) {
+        ferramentas.classList.remove('fadeInLeft');
+    }
+    if (more.classList.contains('fadeOutRight')) {
+        more.classList.remove('fadeOutRight');
+    }
+    ferramentas.classList.add('fadeOutLeft');
+    setTimeout(() => {
+        ferramentas.classList.add('closed');
+        more.classList.add("fadeInRight");   
+        more.classList.remove("closed");
+        setTimeout(() => {
+            carregamento.classList.add('gitAnimation');
+        }, 500);
+        carregamentoText.innerHTML = '80%';
+        carregamentoText.style.color = 'var(--branco)';
+        conhecimentoPorcento.innerHTML = '80% de meu conhecimento';
+        naoConhecimentoPorcento.innerHTML = '20% de conhecimento <br> que não possuo'
+    }, 500);
+}
+
+const githubFunction = () => {
+    more.classList.add('Gth');
+    iconeConhecimento.src = './image/github.png';
+    conhecimento1.style.color = "var(--branco)";
+    conhecimento2.style.color = "var(--branco)";
+    conhecimento3.style.color = "var(--branco)";
+    conhecimento4.style.color = "var(--branco)";
+    conhecimento5.style.color = "var(--branco)";
+    conhecimento6.style.color = "var(--branco)";
+    conhecimento7.style.color = "var(--branco)";
+    conhecimento8.style.color = "var(--branco)";
+    conhecimento9.style.color = "var(--branco)";
+    titleConhecimento.style.color = "var(--branco)";
+    carregamento.style.background = 'var(--branco)';
+    porcento.style.border = '2px solid var(--branco)';
+    closeMore.style.color = 'var(--branco)';
+    conhecimentoPorcento.style.color = 'var(--branco)';
+    setInterval(() => {
+        langPage();
+    }, 500);
+    if (ferramentas.classList.contains('fadeInLeft')) {
+        ferramentas.classList.remove('fadeInLeft');
+    }
+    if (more.classList.contains('fadeOutRight')) {
+        more.classList.remove('fadeOutRight');
+    }
+    ferramentas.classList.add('fadeOutLeft');
+    setTimeout(() => {
+        ferramentas.classList.add('closed');
+        more.classList.add("fadeInRight");   
+        more.classList.remove("closed");
+        setTimeout(() => {
+            carregamento.classList.add('githubAnimation');
+        }, 500);
+        carregamentoText.innerHTML = '80%';
+        carregamentoText.style.color = 'var(--preto)';
+        conhecimentoPorcento.innerHTML = '80% de meu conhecimento';
+        naoConhecimentoPorcento.innerHTML = '20% de conhecimento <br> que não possuo'
+    }, 500);
+}
+
+const canvaFunction = () => {
+    more.classList.add('Cnv');
+    iconeConhecimento.src = './image/canva.png';
+    conhecimento1.style.color = "var(--canva)";
+    conhecimento2.style.color = "var(--canva)";
+    conhecimento3.style.color = "var(--canva)";
+    conhecimento4.style.color = "var(--canva)";
+    conhecimento5.style.color = "var(--canva)";
+    conhecimento6.style.color = "var(--canva)";
+    conhecimento7.style.color = "var(--canva)";
+    conhecimento8.style.color = "var(--canva)";
+    conhecimento9.style.color = "var(--canva)";
+    titleConhecimento.style.color = "var(--canva)";
+    carregamento.style.background = 'var(--canva)';
+    porcento.style.border = '2px solid var(--canva)';
+    closeMore.style.color = 'var(--canva)';
+    conhecimentoPorcento.style.color = 'var(--canva)';
+    setInterval(() => {
+        langPage();
+    }, 500);
+    if (ferramentas.classList.contains('fadeInLeft')) {
+        ferramentas.classList.remove('fadeInLeft');
+    }
+    if (more.classList.contains('fadeOutRight')) {
+        more.classList.remove('fadeOutRight');
+    }
+    ferramentas.classList.add('fadeOutLeft');
+    setTimeout(() => {
+        ferramentas.classList.add('closed');
+        more.classList.add("fadeInRight");   
+        more.classList.remove("closed");
+        setTimeout(() => {
+            carregamento.classList.add('canvaAnimation');
+        }, 500);
+        carregamentoText.innerHTML = '80%';
+        carregamentoText.style.color = 'var(--branco)';
+        conhecimentoPorcento.innerHTML = '80% de meu conhecimento';
+        naoConhecimentoPorcento.innerHTML = '20% de conhecimento <br> que não possuo'
+    }, 500);
+}
+
+//Função do clique do icone
+
+html.addEventListener('click', () => {
+   htmlFunction();
 });
+
+htmlMobile.addEventListener('click', () => {
+    htmlFunction();
+ });
+
+css.addEventListener('click', () => {
+    cssFunction();
+});
+
+cssMobile.addEventListener('click', () => {
+    cssFunction();
+});
+
+js.addEventListener('click', () => {
+   jsFunction();
+});
+
+jsMobile.addEventListener('click', () => {
+    jsFunction();
+});
+
+git.addEventListener('click', () => {
+   gitFunction();
+});
+
+gitMobile.addEventListener('click', () => {
+    gitFunction();
+});
+
+github.addEventListener('click', () => {
+    githubFunction();
+});
+
+githubMobile.addEventListener('click', () => {
+    githubFunction();
+});
+
+canva.addEventListener('click', () => {
+   canvaFunction();
+});
+
+canvaMobile.addEventListener('click', () => {
+    canvaFunction();
+ });
+
+figma.addEventListener('click', () => {
+   figmaFunction();
+});
+
+figmaMobile.addEventListener('click', () => {
+    figmaFunction();
+})
 
 closeMore.addEventListener('click', () => {
     conhecimento1.innerHTML = ' ';
@@ -1613,3 +1722,4 @@ closeMore.addEventListener('click', () => {
         more.classList.add("closed");
     }, 500);
 });
+

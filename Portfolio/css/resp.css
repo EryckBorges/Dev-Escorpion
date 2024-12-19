@@ -1,0 +1,311 @@
+@media screen and (width <= 767px) {
+    .menu {
+        width:95%;
+        top:2vh;
+        height: 8vh;
+    }
+
+    .logo > h1 {
+        margin-left: 15px;
+    }
+
+    .logo > h1, .logo > h1 > p {
+        font-size: 1.6em;
+    }
+
+    .indices {
+        gap: 15px;
+    }
+
+    .indices > a {
+        display:none;
+    }
+
+    .typedBr, .typedEu, .typedEs, .typedCh, .typedFr {
+        font-size:1.6em;
+        text-align: center;
+    }    
+
+    .flagsSelecionada {
+        margin-right: 0px;
+    }
+
+    .flagsSelecionada > p {
+        font-size: 1em;
+    }
+
+    .flagsSelecionada > img {
+        width:30px;
+        height: 20px;
+    }
+
+    .btnMenu {
+        width:30px;
+        height: 30px;
+        border:none;    
+        margin-right: 20px;
+        background: transparent;
+        cursor: pointer;
+        display: flex;
+    }
+
+    .btnMenu > span {
+        color: var(--vermelhoPadrao);
+        font-size:2em;
+        font-weight: bold;
+    }
+
+    .triangulo {
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
+        border-top: 100px solid var(--preto);
+    }
+    
+    .sobreMim {
+        height: 35vh;
+        flex-direction: column;
+    }
+
+    .cont {
+        width:90%;
+        height:100%;
+    }
+
+    .cont > h1 {
+        font-size:1.6em;
+    }
+    
+    .cont > p {
+        font-size: 1em;
+    }
+    
+    .minhaFoto {
+        display: none;
+    }
+
+    .meusProjetos {
+        height: 65vh;
+    }
+
+    .titleMyProject {
+        font-size: 1.6em;
+        position: relative;
+    }
+
+    .titleMyProject::after, .titleMyProject::before {
+        width:150px;
+    }
+    
+    .ferramentas {
+        width:100%;
+        height:90vh;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .ferramentas > h1 {
+        height:20%;
+        font-size: 1.4em;
+        text-align: center;
+    }
+
+    .ferramentas::after {
+        width:150px;
+        height: 150px;
+    }
+
+    .icones {
+        display: none;
+    }
+
+    .iconesMobile {
+        width:100%;
+        height:80%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .icons {
+        width: 100%;
+        height: 35%;
+        flex-direction: row;
+        gap: 40px;
+        z-index: 1;
+    }
+
+    .icons > img {
+        width:80px;
+        height:80px;
+    }
+
+    .estudos {
+        height:80vh;
+    }
+
+    .estudos > h1 {
+        height:30%;
+        width: 100%;
+        font-size: 1.4em;
+        text-align: center;
+    }
+
+    .more {
+        height: 80vh;
+    }
+
+    .iconMore > img {
+        width:60px;
+        height: 60px;
+        margin-inline:10px;
+    }
+
+    .iconMore > h1 {
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    .iconMore > button {
+        width:60px;
+        height: 60px;
+        margin-inline:10px;
+        font-size: 3em;
+    }
+    
+    .porcentagem::before, .porcentagem::after {
+        width:10%;
+    }
+
+    .conteudoConhecimento {
+        height: 65%;
+        flex-direction: column;
+    }
+
+    .dadosConhecimento {
+        width: 100%;
+        height: 25%;
+        flex-direction: row;
+    }
+
+    .dadosConhecimento::after {
+        bottom: 0;
+        width: 95%;
+        margin-inline:10px;
+        height: 2px;
+    }
+
+    .dadosConhecimento > .conhecimento, .naoConhecimento {
+        width: 45%;
+        height: 100%;
+    }
+
+    .conhecimentos {
+        width:100%;
+        height: 75%;
+        text-align: center;
+    }
+
+    .carregamento > p {
+        font-size: 1em;
+    }
+
+    .porcento {
+        width:70%;
+    }
+
+    /*Certificados e Conquistas*/
+
+.certificados > h1 {
+    height:15vh;
+    font-size: 1.4em;
+    text-align: center;
+    z-index: 2;
+}
+
+.certificados > h1::after {
+    width:20px;
+    z-index: -5;
+}
+
+.certificados > h1::before {
+    width:40px;
+    z-index: -5;
+}
+
+.certificado, .certificadoOculto {
+    flex-direction: column;
+    gap:20px;
+    margin-block:10px;
+    z-index: 2;
+}
+
+.certificado > img, .certificado > img > .certificadoOculto {
+    width: 90%;
+    height: 80%;
+}
+
+.certificados > button {
+    z-index: 1;
+}
+
+    /*Avaliações*/
+
+.avaliacao {
+    height:90vh;
+    margin-bottom:0px;
+}
+
+.avaliacao > h1 {
+    height:15%;
+    font-size: 1.4em;
+    text-align: center;
+    z-index: 2;
+}
+
+.avaliacao > h1::after {
+    border-right: 80px solid transparent;
+    border-top: 80px solid var(--vermelhoPadrao);
+    z-index: 1;
+}
+
+.avaliacao > h1::before {
+    border-right: 80px solid transparent;
+    border-top: 80px solid var(--preto);
+    z-index: 1;
+}
+
+.avalia {
+    margin-top: 10px;
+}
+
+.avaliacoes {
+    width: 350px;
+    height: 80%;
+}
+
+.nameAvaliador > h1 {
+    width:160px;
+    height:50px;
+}
+
+.avaliadorPhoto > img {
+    width:90px;
+    height: 90px;
+}
+
+.contAvaliacao {
+    height: 80%;
+}
+
+.stars {
+    font-size: 2em;
+    height:20%;
+}
+
+.contAvaliacao > p {
+    font-size: 1.1em;
+}
+
+.descAvaliacao {
+    font-size: 1em;
+}
+}
