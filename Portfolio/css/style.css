@@ -23,6 +23,10 @@ header {
     backdrop-filter: blur(5px);
 }
 
+.menuMobile {
+    display: none;
+}
+
 .logo {
     width:20%;
     height: 100%;

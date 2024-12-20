@@ -1684,7 +1684,7 @@ canva.addEventListener('click', () => {
 
 canvaMobile.addEventListener('click', () => {
     canvaFunction();
- });
+});
 
 figma.addEventListener('click', () => {
    figmaFunction();
@@ -1722,4 +1722,31 @@ closeMore.addEventListener('click', () => {
         more.classList.add("closed");
     }, 500);
 });
+
+//Função do OpenMenu
+
+
+const btnMenu = document.querySelector('.btnMenu');
+const menuMobile = document.querySelector('.menuMobile');
+const mobile = document.querySelector('.mobile');
+const closeMenuBtn = document.querySelector('.closeMenuBtn');
+
+btnMenu.addEventListener('click', () => {
+    menuMobile.classList.remove('fadeOutMenu');
+    mobile.classList.remove('fadeOutRightMenu');
+    menuMobile.classList.add('activedMenu');
+    menuMobile.classList.add('fadeInMenu');
+    mobile.classList.add('fadeInRightMenu');
+});
+
+closeMenuBtn.addEventListener('click', () => {
+    menuMobile.classList.remove('fadeInMenu');
+    mobile.classList.remove('fadeInRightMenu');    
+    mobile.classList.add('fadeOutRightMenu');
+    menuMobile.classList.add('fadeOutMenu');
+    setTimeout(() => {
+        menuMobile.classList.remove('activedMenu');
+    }, 500);
+});
+
 
