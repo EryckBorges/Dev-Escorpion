@@ -51,6 +51,7 @@ const more = document.querySelector('.more');
 const ferramentas = document.querySelector('.ferramentas');
 const closeMore = document.querySelector('.iconMore button');
 
+
 //Linguagens
 
 const eua = {
@@ -517,12 +518,12 @@ canvaTitleCh: '我的 Canva 知识',
 };
 
 const elementos = {
-    inicio: document.querySelector('.inicio'),
-    cursos: document.querySelector('.cursos'),
-    jogos: document.querySelector('.jogos'),
-    portfolio: document.querySelector('.portfolio'),
-    contato: document.querySelector('.contato'),
-    sobre: document.querySelector('.sobre'),
+    inicio: document.querySelectorAll('.inicio'),
+    cursos: document.querySelectorAll('.cursos'),
+    jogos: document.querySelectorAll('.jogos'),
+    portfolio: document.querySelectorAll('.portfolio'),
+    contato: document.querySelectorAll('.contato'),
+    sobre: document.querySelectorAll('.sobre'),
     sobreMim: document.querySelector('.cont h1'),
     contMim: document.querySelector('.cont p'),
     meusProjetos: document.querySelector('.titleMyProject'),
@@ -534,12 +535,24 @@ const elementos = {
 };
 
 const ingles = () => {
-    elementos.inicio.innerHTML = eua.inicio;
-    elementos.cursos.innerHTML = eua.cursos;
-    elementos.jogos.innerHTML = eua.jogos;
-    elementos.portfolio.innerHTML = eua.portfolio;
-    elementos.contato.innerHTML = eua.contato;
-    elementos.sobre.innerHTML = eua.sobre;
+    elementos.inicio.forEach((inicioText) => {
+        inicioText.innerHTML = eua.inicio;
+    });
+    elementos.cursos.forEach((cursosText) => {
+        cursosText.innerHTML= eua.cursos;
+    });
+    elementos.jogos.forEach((jogosText) => {
+        jogosText.innerHTML= eua.jogos;
+    });
+    elementos.portfolio.forEach((portfolioText) => {
+        portfolioText.innerHTM = eua.portfolio;
+    });
+    elementos.contato.forEach((contatoText) => {
+        contatoText.innerHTML= eua.contato;
+    });
+    elementos.sobre.forEach((sobreText) => {
+        sobreText.innerHTML = eua.sobre;
+    });   
     elementos.sobreMim.innerHTML = eua.sobreMim;
     elementos.contMim.innerHTML = eua.contMim;
     elementos.meusProjetos.innerHTML = eua.meusProjetos;
@@ -641,12 +654,24 @@ const ingles = () => {
 }
 
 const portugues = () => {
-    elementos.inicio.innerHTML = brasil.inicio;
-    elementos.cursos.innerHTML = brasil.cursos;
-    elementos.jogos.innerHTML = brasil.jogos;
-    elementos.portfolio.innerHTML = brasil.portfolio;
-    elementos.contato.innerHTML = brasil.contato;
-    elementos.sobre.innerHTML = brasil.sobre;
+    elementos.inicio.forEach((inicioText) => {
+        inicioText.innerHTML = brasil.inicio;
+    });
+    elementos.cursos.forEach((cursosText) => {
+        cursosText.innerHTML= brasil.cursos;
+    });
+    elementos.jogos.forEach((jogosText) => {
+        jogosText.innerHTML= brasil.jogos;
+    });
+    elementos.portfolio.forEach((portfolioText) => {
+        portfolioText.innerHTM = brasil.portfolio;
+    });
+    elementos.contato.forEach((contatoText) => {
+        contatoText.innerHTML= brasil.contato;
+    });
+    elementos.sobre.forEach((sobreText) => {
+        sobreText.innerHTML = brasil.sobre;
+    });   
     elementos.sobreMim.innerHTML = brasil.sobreMim;
     elementos.contMim.innerHTML = brasil.contMim;
     elementos.meusProjetos.innerHTML = brasil.meusProjetos;
@@ -748,12 +773,24 @@ const portugues = () => {
 }
 
 const espanha = () => {
-    elementos.inicio.innerHTML = spain.inicio;
-    elementos.cursos.innerHTML = spain.cursos;
-    elementos.jogos.innerHTML = spain.jogos;
-    elementos.portfolio.innerHTML = spain.portfolio;
-    elementos.contato.innerHTML = spain.contato;
-    elementos.sobre.innerHTML = spain.sobre;
+    elementos.inicio.forEach((inicioText) => {
+        inicioText.innerHTML = spain.inicio;
+    });
+    elementos.cursos.forEach((cursosText) => {
+        cursosText.innerHTML= spain.cursos;
+    });
+    elementos.jogos.forEach((jogosText) => {
+        jogosText.innerHTML= spain.jogos;
+    });
+    elementos.portfolio.forEach((portfolioText) => {
+        portfolioText.innerHTM = spain.portfolio;
+    });
+    elementos.contato.forEach((contatoText) => {
+        contatoText.innerHTML= spain.contato;
+    });
+    elementos.sobre.forEach((sobreText) => {
+        sobreText.innerHTML = spain.sobre;
+    });   
     elementos.sobreMim.innerHTML = spain.sobreMim;
     elementos.contMim.innerHTML = spain.contMim;
     elementos.meusProjetos.innerHTML = spain.meusProjetos;
@@ -854,12 +891,24 @@ const espanha = () => {
 }
 
 const frances = () => {
-    elementos.inicio.innerHTML = franca.inicio;
-    elementos.cursos.innerHTML = franca.cursos;
-    elementos.jogos.innerHTML = franca.jogos;
-    elementos.portfolio.innerHTML = franca.portfolio;
-    elementos.contato.innerHTML = franca.contato;
-    elementos.sobre.innerHTML = franca.sobre;
+    elementos.inicio.forEach((inicioText) => {
+        inicioText.innerHTML = franca.inicio;
+    });
+    elementos.cursos.forEach((cursosText) => {
+        cursosText.innerHTML= franca.cursos;
+    });
+    elementos.jogos.forEach((jogosText) => {
+        jogosText.innerHTML= franca.jogos;
+    });
+    elementos.portfolio.forEach((portfolioText) => {
+        portfolioText.innerHTM = franca.portfolio;
+    });
+    elementos.contato.forEach((contatoText) => {
+        contatoText.innerHTML= franca.contato;
+    });
+    elementos.sobre.forEach((sobreText) => {
+        sobreText.innerHTML = franca.sobre;
+    });   
     elementos.sobreMim.innerHTML = franca.sobreMim;
     elementos.contMim.innerHTML = franca.contMim;
     elementos.meusProjetos.innerHTML = franca.meusProjetos;
@@ -962,12 +1011,24 @@ const frances = () => {
 }
 
 const chines = () => {
-    elementos.inicio.innerHTML = china.inicio;
-    elementos.cursos.innerHTML = china.cursos;
-    elementos.jogos.innerHTML = china.jogos;
-    elementos.portfolio.innerHTML = china.portfolio;
-    elementos.contato.innerHTML = china.contato;
-    elementos.sobre.innerHTML = china.sobre;
+    elementos.inicio.forEach((inicioText) => {
+        inicioText.innerHTML = china.inicio;
+    });
+    elementos.cursos.forEach((cursosText) => {
+        cursosText.innerHTML= china.cursos;
+    });
+    elementos.jogos.forEach((jogosText) => {
+        jogosText.innerHTML= china.jogos;
+    });
+    elementos.portfolio.forEach((portfolioText) => {
+        portfolioText.innerHTM = china.portfolio;
+    });
+    elementos.contato.forEach((contatoText) => {
+        contatoText.innerHTML= china.contato;
+    });
+    elementos.sobre.forEach((sobreText) => {
+        sobreText.innerHTML = china.sobre;
+    });   
     elementos.sobreMim.innerHTML = china.sobreMim;
     elementos.contMim.innerHTML = china.contMim;
     elementos.meusProjetos.innerHTML = china.meusProjetos;
@@ -1066,6 +1127,7 @@ const chines = () => {
     titleConhecimento.innerHTML = china.canvaTitleCh;
 }
 }
+
 //Muda a linguagem do site 
 
 let langSelecionada = document.querySelector('.idiomaSelecionada');
@@ -1074,116 +1136,30 @@ let flagSelecionada = document.querySelector(".flagsSelecionada img");
 const langPage = () => {
     if (localStorage.getItem('lang') == 'eu') {
         langSelecionada.innerHTML = "EN";
-        flagSelecionada.src = "./image/eua.png";
+        flagSelecionada.src = "../../global/icon/eua.png";
         ingles();
     }else if (localStorage.getItem('lang') == 'es') {
             langSelecionada.innerHTML = "ES";
-            flagSelecionada.src = "./image/spain.png";
+            flagSelecionada.src = "../../global/icon/spain.png";
             espanha();
         
     }else if (localStorage.getItem('lang') == 'fr') {
             langSelecionada.innerHTML = "FR";
             flagSelecionada.src = "./image/franca.png";
             frances();
-          
     }else if (localStorage.getItem('lang') == 'ch') {
             langSelecionada.innerHTML = "ZH";
-            flagSelecionada.src = "./image/china.png";
+            flagSelecionada.src = "../../global/icon/china.png";
             chines();
-       
     }else {
         localStorage.setItem('lang', 'br');
         langSelecionada.innerHTML = "PT";
-        flagSelecionada.src = "./image/brasil.png";
+        flagSelecionada.src = "../../global/icon/brasil.png";
         portugues();
     }
 }
 
 langPage();
-
-// Abre as seleção de linguagens
-
-const flagsSelecionada = document.querySelector(".flagsSelecionada");
-const langs = document.querySelector('.lang');
-
-let isLangOpen = false;
-
-flagsSelecionada.addEventListener('click', (event) => {
-    event.stopPropagation();
-    if (!isLangOpen) {
-        langs.style.display = 'flex';
-        langs.style.opacity = "1";
-        langs.classList.add('fadeInLang');
-        langs.classList.remove('fadeOutLang');
-        isLangOpen = true;
-    } else {
-        closeLang();
-    }
-});
-
-document.addEventListener("click", (event) => {
-    if (isLangOpen && !langs.contains(event.target)) {
-        closeLang();
-    }
-});
-
-function closeLang() {
-    langs.classList.remove('fadeInLang');
-    langs.classList.add('fadeOutLang');
-    setTimeout(() => {
-        langs.style.opacity = "0";
-        langs.style.display = 'none';
-        langs.classList.remove('fadeOutLang');
-        isLangOpen = false;
-    }, 80);
-}
-
-//Função dos cliques para mudar de idioma
-
-const eu = document.querySelector('.eua');
-
-eu.addEventListener('click', () => {
-    langSelecionada.innerHTML = "EN";
-    flagSelecionada.src = "./image/eua.png"
-    localStorage.setItem('lang', 'eu');
-    ingles();
-});
-
-const es = document.querySelector('.spain');
-
-es.addEventListener('click', () => {
-    langSelecionada.innerHTML = "ES";
-    flagSelecionada.src = "./image/spain.png"
-    localStorage.setItem('lang', 'es');
-    espanha();
-});
-
-const br = document.querySelector('.brasil');
-
-br.addEventListener('click', () => {
-    langSelecionada.innerHTML = "PT";
-    flagSelecionada.src = "./image/brasil.png"
-    localStorage.setItem('lang', 'br');
-    portugues();
-});
-
-const fr = document.querySelector('.franca');
-
-fr.addEventListener('click', () => {
-    langSelecionada.innerHTML = "FR";
-    flagSelecionada.src = "./image/franca.png"
-    localStorage.setItem('lang', 'fr');
-    frances();
-});
-
-const ch = document.querySelector('.china');
-
-ch.addEventListener('click', () => {
-    langSelecionada.innerHTML = "ZH";
-    flagSelecionada.src = "./image/china.png"
-    localStorage.setItem('lang', 'ch');
-    chines();
-});
 
 //Função de slide de projetos e serviços
 const slider = document.querySelector('.swiper');
@@ -1289,7 +1265,6 @@ avalia.addEventListener('touchmove', (e) => {
     const walk = (x - startXY) * 0.5; // Multiplica para ajustar a velocidade
     avalia.scrollLeft = scrollEsquerda - walk;
 });
-
 
 //Função mostrar mais certificados
 const buttonCertificado = document.querySelector('.certificados button');
@@ -1644,7 +1619,7 @@ html.addEventListener('click', () => {
 
 htmlMobile.addEventListener('click', () => {
     htmlFunction();
- });
+});
 
 css.addEventListener('click', () => {
     cssFunction();
@@ -1723,30 +1698,5 @@ closeMore.addEventListener('click', () => {
     }, 500);
 });
 
-//Função do OpenMenu
-
-
-const btnMenu = document.querySelector('.btnMenu');
-const menuMobile = document.querySelector('.menuMobile');
-const mobile = document.querySelector('.mobile');
-const closeMenuBtn = document.querySelector('.closeMenuBtn');
-
-btnMenu.addEventListener('click', () => {
-    menuMobile.classList.remove('fadeOutMenu');
-    mobile.classList.remove('fadeOutRightMenu');
-    menuMobile.classList.add('activedMenu');
-    menuMobile.classList.add('fadeInMenu');
-    mobile.classList.add('fadeInRightMenu');
-});
-
-closeMenuBtn.addEventListener('click', () => {
-    menuMobile.classList.remove('fadeInMenu');
-    mobile.classList.remove('fadeInRightMenu');    
-    mobile.classList.add('fadeOutRightMenu');
-    menuMobile.classList.add('fadeOutMenu');
-    setTimeout(() => {
-        menuMobile.classList.remove('activedMenu');
-    }, 500);
-});
 
 

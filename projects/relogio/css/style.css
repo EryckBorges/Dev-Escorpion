@@ -1,0 +1,149 @@
+* {
+    margin:0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--backgroundCinza);
+    overflow-x: hidden;
+}
+
+header {
+    background:url('../image/background.svg') center / cover no-repeat !important;
+    height: 50vh !important;
+}
+
+.content_clock {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+}
+
+.content_clock > #myCanvas {
+    width: 100%;
+    height: 100%;
+}
+
+.relogio {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 55%;
+}
+
+.textClock {
+    width: 45%;
+    position: absolute;
+    left:0;
+    top:0;
+    height: 100%;
+    flex-direction: column;
+}
+
+.textClock > h1 {
+    display: flex;
+    justify-content: left;
+    width: 90%;
+    font-size: 2em;
+    color: white;
+    font-weight: bold;
+}
+
+.textClock > p {
+    width: 90%;
+    color: var(--branco);
+    font-size: 1.2em;
+    margin: 20px;
+}
+
+.clock {
+    background-color: #1d1d1d;
+    border-radius: 20px;
+    width:80%;
+    height: 60%;
+    border:2px solid #383838;
+    box-shadow: 15px -10px 0px 10px #272727;
+    position: relative;
+    flex-direction: column;
+}
+
+.detalhes.top {
+    position: absolute;
+    top: 2vh;
+    left:1vw;
+    border:none;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    border-left: 2px solid #383838;
+    border-top: 2px solid #383838;
+}
+
+.detalhes.bottom {
+    position: absolute;
+    bottom: 2vh;
+    right:1vw;
+    border:none;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    border-right: 2px solid #383838;
+    border-bottom: 2px solid #383838;
+}
+
+.detalhes.left {
+    position: absolute;
+    bottom: 2vh;
+    left:1vw;
+    border:none;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    border-left: 2px solid #383838;
+    border-bottom: 2px solid #383838;
+}
+
+.detalhes.right {
+    position: absolute;
+    top: 2vh;
+    right:1vw;
+    border:none;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    border-right: 2px solid #383838;
+    border-top: 2px solid #383838;
+}
+
+.dia {
+    width: 100%;
+    height: 25%;
+}
+
+.dia > p {
+    font-size: 1.2em;
+    color: var(--vermelhoPadrao);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.dados {
+    width: 100%;
+    height: 50%;
+    font-size: 4em;
+    color: var(--branco);
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+
+.mes {
+    width: 100%;
+    height: 30%;
+    flex-direction: row;
+    font-size: 1.2em;
+    color: var(--vermelhoPadrao);
+    font-weight: bold;
+    letter-spacing: 2px;
+    gap: 10px;
+}
