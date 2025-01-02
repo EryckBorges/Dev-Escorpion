@@ -150,8 +150,8 @@
               </nav>
             </section>
         </header>
+        <canvas id="myCanvas" resize></canvas>
         <div class="content_clock center over">
-            <canvas id="myCanvas" resize></canvas>
             <div class="center over textClock">
                 <h1 class="title">Relógio Digital Interativo</h1>
                 <p class="text">Ao lado, você pode conferir um relógio 
@@ -169,19 +169,75 @@
                     <div class="detalhes center over left"></div>
                     <div class="detalhes center over right"></div>
                     <div class="dia center over">
-                        <p class="title diaSemana">MONDAY</p>
+                        <p class="title diaSemana">Segunda</p>
                     </div>
                     <div class="center over dados">
-                        <p class="title hours">12</p>:<p class="title minutes">53</p>:<p class="title secunds">00</p>
+                        <p class="title hours">00</p>:<p class="title minutes">00</p>:<p class="title secunds">00</p>
+                        <p class="title hoursEua"></p>
                     </div>
                     <div class="mes center over">
-                        <p class="mesAno title">December<p class="diaMes title">30</p></p>
+                        <p class="mesAno title">Janeiro<p class="diaMes title">30</p></p>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.15/paper-full.min.js"></script>
+        <div class="clockChess center over">
+          <div class="iconChess3d center over">
+            <div class="center over titleClockChess">
+              <h1 class="title">Relógio de Xadrez Interativo</h1>
+            </div>
+            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.54/build/spline-viewer.js"></script>
+            <spline-viewer url="./image/untitled.spline"></spline-viewer> 
+            <div class="contentClockChess center over">
+              <p class="text">Ao lado, você pode conferir um relógio de xadrez dinâmico, criado com HTML, CSS e JavaScript. Ele controla o tempo de cada jogador em uma partida, mostrando como a programação transforma ideias estratégicas em ferramentas úteis!</p>
+            </div>
+          </div>
+          <div class="clockChessDiv center over">
+            <div class="clockChessElement center over">
+              <div class="center over vezPlayer">
+                <button class="leftClock fadeInLeftClock button center over">
+                  
+                </button>
+                <button class="rightClock fadeOutRightClock button center over">
+
+                </button>
+              </div>
+              <div class="telaClockChess center over">
+                <div class="telaClock center over">
+  
+                </div>
+                <div class="buttonsClock center over">
+                  <button class="button center over mais">
+                    <span class="material-symbols-outlined">
+                      arrow_left
+                      </span>
+                  </button>
+                  <button class="button center over menos">
+                    <span class="material-symbols-outlined">
+                      remove
+                      </span>
+                  </button>
+                  <button class="button center over playClockChess play">
+                    <span class="material-symbols-outlined">
+                      play_arrow
+                      </span>
+                  </button>
+                  <button class="button center over mais">
+                    <span class="material-symbols-outlined">
+                      add
+                      </span>
+                  </button>
+                  <button class="button center over next">
+                    <span class="material-symbols-outlined">
+                      arrow_right
+                      </span>
+                  </button>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.15/paper-full.min.js"></script>
         <script src="./js/script.js"></script>
 
     </body>

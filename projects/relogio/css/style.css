@@ -14,14 +14,19 @@ header {
 }
 
 .content_clock {
+    z-index: 2;
     position: relative;
     width: 100%;
     height: 80vh;
 }
 
-.content_clock > #myCanvas {
-    width: 100%;
-    height: 100%;
+#myCanvas {
+    top: 0vh;
+    left: 0;
+    position: absolute;
+    z-index: -5;
+    width: 125%;
+    height: 125%;
 }
 
 .relogio {
@@ -146,4 +151,196 @@ header {
     font-weight: bold;
     letter-spacing: 2px;
     gap: 10px;
+}
+
+.hoursEua {
+    font-size: 0.4em;
+    margin-left: 10px;
+    color: var(--vermelhoPadrao);
+    display: none;
+}
+
+/*Clock Chess*/
+
+.clockChess {
+    width: 100%;
+    height: 80vh;
+    flex-direction: row;
+    margin-bottom:20px;
+}
+
+.iconChess3d {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.contentClockChess {
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    bottom:0;
+    left: 0;
+    z-index: 3;
+    background: var(--backgroundCinza);
+}
+
+.contentClockChess > p {
+    margin-inline: 30px;
+    color:var(--branco);
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.titleClockChess {
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.titleClockChess > h1 {
+    color: var(--vermelhoPadrao);
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.clockChessDiv {
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+
+.clockChessElement {
+    width: 90%;
+    height: 90%;
+    flex-direction: column;
+    position: relative;
+}
+
+.telaClockChess {
+    position: relative;
+    left: 0;
+    flex-direction: column;
+    width:95%;
+    height: 60%;
+    border: 2px solid black;
+    background: var(--vermelhoPadrao);
+    border-radius: 5px;
+}
+
+.telaClock {
+    width:95%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 70%;
+    background: #a8f3c0;
+}
+
+.buttonsClock {
+    width:95%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 20%;
+    cursor: pointer;
+}
+
+.buttonsClock > button {
+    width: 20%;
+    height: 100%;
+    background: var(--preto);
+    cursor: pointer;
+}
+
+.buttonsClock > button > span {
+    color: var(--branco);
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.vezPlayer {
+    width: 90%;
+    height: 18%;
+    position: relative;
+}
+
+.leftClock {
+    cursor: pointer;
+    position: absolute;
+    bottom:-80px;
+    left: 10px;
+    width: 100%;
+    height: 90%;
+    background:var(--branco);
+    border:2px solid var(--preto);
+    border-top: 10px solid var(--vermelhoPadrao);
+    rotate: 15deg;
+    border-top-left-radius: 5px;
+}
+
+.rightClock {
+    cursor: pointer;
+    position: absolute;
+    bottom:-80px;
+    right: 10px;
+    width: 100%;
+    height: 90%;
+    background:var(--branco);
+    border:2px solid var(--preto);
+    border-top: 10px solid var(--vermelhoPadrao);
+    rotate: 0deg;
+    border-top-right-radius: 5px;
+}
+
+.fadeOutLeftClock {
+    rotate: 0deg;
+    animation: fadeOutLeftClock 0.5s;    
+}
+
+@keyframes fadeOutLeftClock {
+    from {
+        rotate: 15deg;
+    }to {
+        rotate:0deg;
+    }
+}
+
+.fadeInLeftClock {
+    rotate: 15deg;
+    animation: fadeInLeftClock 0.5s;
+}
+
+@keyframes fadeInLeftClock {
+    from {
+        rotate: 0deg;
+    }to {
+        rotate:15deg;
+    }
+}
+
+.fadeInRightClock {
+    rotate: -15deg;
+    animation: fadeInRightClock 0.5s;    
+}
+
+@keyframes fadeInRightClock {
+    from {
+        rotate: 0deg;
+    }to {
+        rotate:-15deg;
+    }
+}
+
+.fadeOutRightClock {
+    rotate: 0deg;
+    animation: fadeOutRightClock 0.5s;
+}
+
+@keyframes fadeOutRightClock {
+    from {
+        rotate: -15deg;
+    }to {
+        rotate:0deg;
+    }
 }
