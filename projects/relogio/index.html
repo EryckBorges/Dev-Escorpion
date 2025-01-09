@@ -204,10 +204,15 @@
               </div>
               <div class="telaClockChess center over">
                 <div class="telaClock center over">
-  
+                  <div class="personOne center over">
+                    <input class="title horaChess" value="00" readonly>:<input class="title minutoChess" value="00" readonly>:<input class="title segundoChess" value="00" readonly>
+                  </div>
+                  <div class="personTwo center over">
+                    <input class="title horaChess2" type="text" value="00" readonly>:<input class="title minutoChess2" type="text" value="00" readonly>:<input class="title segundoChess2" type="text" value="00" readonly>
+                  </div>
                 </div>
                 <div class="buttonsClock center over">
-                  <button class="button center over mais">
+                  <button class="button center over backChess">
                     <span class="material-symbols-outlined">
                       arrow_left
                       </span>
@@ -227,7 +232,7 @@
                       add
                       </span>
                   </button>
-                  <button class="button center over next">
+                  <button class="button center over nextChess">
                     <span class="material-symbols-outlined">
                       arrow_right
                       </span>
@@ -237,7 +242,15 @@
             </div>
           </div>
         </div>
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.15/paper-full.min.js"></script>
+        <div class="toast center over">
+          <div class="center over imgToast">
+            <img class="imageToast" src="../../global/icon/atencao.png" draggable="false" alt="">
+          </div>
+          <div class="center over pToast">
+            <p class="title textToast"></p>
+          </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.15/paper-full.min.js"></script>
         <script src="./js/script.js"></script>
 
     </body>

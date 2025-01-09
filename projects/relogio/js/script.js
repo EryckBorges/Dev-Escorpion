@@ -789,48 +789,395 @@ clickSong.src = './music/clickClock.mp3';
 let clockSong = new Audio();
 clockSong.src = './music/clock.mp3';
 
+const nextNumberChess = document.querySelector('.nextChess');
+const backNumberChess = document.querySelector('.backChess');
+
+//Player 1
+let horaChess = document.querySelector('.horaChess');
+let minutoChess = document.querySelector('.minutoChess');
+let segundoChess = document.querySelector('.segundoChess');
+
+//Player 2
+let horaChess2 = document.querySelector('.horaChess2');
+let minutoChess2 = document.querySelector('.minutoChess2');
+let segundoChess2 = document.querySelector('.segundoChess2');
+
+let menos = document.querySelector('.menos');
+let mais = document.querySelector('.mais');
+
+let valorHora = 0;
+let valorMinuto = 0;
+let valorSegundo = 0;
+
+let valorHora2 = 0;
+let valorMinuto2 = 0;
+let valorSegundo2 = 0;
+
+mais.addEventListener('click', () => {
+    if (horaChess.classList.contains('activedNumberChess')) {
+        valorHora = Math.min(12, valorHora + 1);
+        horaChess.value = valorHora < 10 ? `0${valorHora}` : valorHora;
+    }
+
+    if (minutoChess.classList.contains('activedNumberChess')) {
+        valorMinuto++;
+        if (valorMinuto >= 60) valorMinuto = 0;
+        minutoChess.value = valorMinuto < 10 ? `0${valorMinuto}` : valorMinuto;
+    }
+
+    if (segundoChess.classList.contains('activedNumberChess')) {
+        valorSegundo++;
+        if (valorSegundo >= 60) valorSegundo = 0;
+        segundoChess.value = valorSegundo < 10 ? `0${valorSegundo}` : valorSegundo;
+    }
+
+    if (horaChess2.classList.contains('activedNumberChess')) {
+        valorHora2 = Math.min(12, valorHora2 + 1);
+        horaChess2.value = valorHora2 < 10 ? `0${valorHora2}` : valorHora2;
+    }
+
+    if (minutoChess2.classList.contains('activedNumberChess')) {
+        valorMinuto2++;
+        if (valorMinuto2 >= 60) valorMinuto2 = 0;
+        minutoChess2.value = valorMinuto2 < 10 ? `0${valorMinuto2}` : valorMinuto2;
+    }
+
+    if (segundoChess2.classList.contains('activedNumberChess')) {
+        valorSegundo2++;
+        if (valorSegundo2 >= 60) valorSegundo2 = 0;
+        segundoChess2.value = valorSegundo2 < 10 ? `0${valorSegundo2}` : valorSegundo2;
+    }
+});
+
+
+menos.addEventListener('click', () => {
+    // Decrementa e ajusta Hora Chess
+    if (horaChess.classList.contains('activedNumberChess')) {
+        valorHora = Math.max(0, valorHora - 1);
+        horaChess.value = valorHora < 10 ? `0${valorHora}` : valorHora;
+    }
+
+    // Decrementa e ajusta Minuto Chess
+    if (minutoChess.classList.contains('activedNumberChess')) {
+        valorMinuto = Math.max(0, valorMinuto - 1);
+        minutoChess.value = valorMinuto < 10 ? `0${valorMinuto}` : valorMinuto;
+    }
+
+    // Decrementa e ajusta Segundo Chess
+    if (segundoChess.classList.contains('activedNumberChess')) {
+        valorSegundo = Math.max(0, valorSegundo - 1);
+        segundoChess.value = valorSegundo < 10 ? `0${valorSegundo}` : valorSegundo;
+    }
+
+    // Decrementa e ajusta Hora Chess2
+    if (horaChess2.classList.contains('activedNumberChess')) {
+        valorHora2 = Math.max(0, valorHora2 - 1);
+        horaChess2.value = valorHora2 < 10 ? `0${valorHora2}` : valorHora2;
+    }
+
+    // Decrementa e ajusta Minuto Chess2
+    if (minutoChess2.classList.contains('activedNumberChess')) {
+        valorMinuto2 = Math.max(0, valorMinuto2 - 1);
+        minutoChess2.value = valorMinuto2 < 10 ? `0${valorMinuto2}` : valorMinuto2;
+    }
+
+    // Decrementa e ajusta Segundo Chess2
+    if (segundoChess2.classList.contains('activedNumberChess')) {
+        valorSegundo2 = Math.max(0, valorSegundo2 - 1);
+        segundoChess2.value = valorSegundo2 < 10 ? `0${valorSegundo2}` : valorSegundo2;
+    }
+});
+
+let intervalId = null; // Armazena o ID do intervalo
+let isRunning = false; // Verifica se o cronômetro está rodando
+let finishTime = new Audio();
+finishTime.src = './music/alarme.mp3';
+
+// Função para iniciar o tempo
+const startClock = () => {
+    if (!isRunning) {
+        isRunning = true; // Define como rodando
+        intervalId = setInterval(() => {
+            // Lógica para decrementar o tempo
+            if (valorSegundo > 0) {
+                valorSegundo--;
+            } else if (valorMinuto > 0) {
+                valorMinuto--;
+                valorSegundo = 59;
+            } else if (valorHora > 0) {
+                valorHora--;
+                valorMinuto = 59;
+                valorSegundo = 59;
+            } else {
+                // Para o relógio quando chega a 0
+                pauseClock();
+                clockSong.pause();
+                finishTime.play();
+                play.classList.remove('pause');
+                play.classList.add('play');
+                pause.innerHTML = 'play_arrow';
+            }
+
+            // Atualiza os elementos HTML
+            segundoChess.value = valorSegundo < 10 ? `0${valorSegundo}` : valorSegundo;
+            minutoChess.value = valorMinuto < 10 ? `0${valorMinuto}` : valorMinuto;
+            horaChess.value = valorHora < 10 ? `0${valorHora}` : valorHora;
+        }, 1000);
+    }
+};
+
+// Função para pausar o tempo
+const pauseClock = () => {
+    if (isRunning) {
+        isRunning = false; // Define como pausado
+        clearInterval(intervalId); // Para o intervalo
+    }
+};
+
+// Função para iniciar o tempo
+const startClock2 = () => {
+    if (!isRunning) {
+        isRunning = true; // Define como rodando
+        intervalId = setInterval(() => {
+            // Lógica para decrementar o tempo
+            if (valorSegundo2 > 0) {
+                valorSegundo2--;
+            } else if (valorMinuto2 > 0) {
+                valorMinuto2--;
+                valorSegundo2 = 59;
+            } else if (valorHora2 > 0) {
+                valorHora2--;
+                valorMinuto2 = 59;
+                valorSegundo2 = 59;
+            } else {
+                // Para o relógio quando chega a 0
+                pauseClock();
+                clockSong.pause();
+                finishTime.play();
+                play.classList.remove('pause');
+                play.classList.add('play');
+                pause.innerHTML = 'play_arrow';
+            }
+
+            // Atualiza os elementos HTML
+            segundoChess2.value = valorSegundo2 < 10 ? `0${valorSegundo2}` : valorSegundo2;
+            minutoChess2.value = valorMinuto2 < 10 ? `0${valorMinuto2}` : valorMinuto2;
+            horaChess2.value = valorHora2 < 10 ? `0${valorHora2}` : valorHora2;
+        }, 1000);
+    }
+};
+
+// Função para pausar o tempo
+const pauseClock2 = () => {
+    if (isRunning) {
+        isRunning = false; // Define como pausado
+        clearInterval(intervalId); // Para o intervalo
+    }
+};
+
+nextNumberChess.addEventListener('click', () => {
+    pauseClock();
+    pauseClock2();
+        switch (tempPlayer) {
+            case 0:
+            case -1:
+                if (play.classList.contains('pause')) {
+                    clockSong.pause();
+                    clockSong.currentTime = 0;
+                    play.classList.remove('pause');
+                    play.classList.add('play');
+                    pause.innerHTML = 'play_arrow';
+                }
+                segundoChess2.classList.remove('activedNumberChess');
+                horaChess.classList.add('activedNumberChess');
+                tempPlayer++
+            break;
+            case 1:
+                horaChess.classList.remove('activedNumberChess');
+                minutoChess.classList.add('activedNumberChess');
+                tempPlayer++
+            break;
+            case 2:
+            case -5:
+                minutoChess.classList.remove('activedNumberChess');
+                segundoChess.classList.add('activedNumberChess');
+                tempPlayer++
+            break;
+            case 3:
+            case -4:
+                segundoChess.classList.remove('activedNumberChess');
+                horaChess2.classList.add('activedNumberChess');
+                tempPlayer++
+            break;
+            case 4:
+            case -3:
+                horaChess2.classList.remove('activedNumberChess');
+                minutoChess2.classList.add('activedNumberChess');
+                tempPlayer++
+            break;
+            case 5:
+            case -2:
+                minutoChess2.classList.remove('activedNumberChess');
+                segundoChess2.classList.add('activedNumberChess');
+                tempPlayer = 0;
+            break;
+            default:
+            break;
+        }
+});
+
+backNumberChess.addEventListener('click', () => {
+    pauseClock();
+    pauseClock2();
+    switch (tempPlayer) {
+        case 1:
+        case 0:
+            if (play.classList.contains('pause')) {
+                clockSong.pause();
+                clockSong.currentTime = 0;
+                play.classList.remove('pause');
+                play.classList.add('play');
+                pause.innerHTML = 'play_arrow';
+            }
+            horaChess.classList.remove('activedNumberChess');
+            segundoChess2.classList.add('activedNumberChess');
+            tempPlayer--
+        break;
+        case -1:
+            segundoChess2.classList.remove('activedNumberChess');
+            minutoChess2.classList.add('activedNumberChess');
+            tempPlayer--
+            
+        break;
+        case -2:
+        case 5:
+            minutoChess2.classList.remove('activedNumberChess');
+            horaChess2.classList.add('activedNumberChess');
+            tempPlayer--
+            
+        break;
+        case -3:
+        case 4:
+            horaChess2.classList.remove('activedNumberChess');
+            segundoChess.classList.add('activedNumberChess');
+            tempPlayer--
+        break;
+        case -4:
+        case 3:
+            segundoChess.classList.remove('activedNumberChess');
+            minutoChess.classList.add('activedNumberChess');
+            tempPlayer--
+        break;
+        case -5:
+        case 2: 
+            minutoChess.classList.remove('activedNumberChess');
+            horaChess.classList.add('activedNumberChess');
+            tempPlayer = 0;
+        break;
+        default:
+        break;
+    }
+});
+
+const play = document.querySelector('.play');
+const pause = document.querySelector('.playClockChess span');
+
 const leftClickClock = document.querySelector('.leftClock');
 const rightClickClock = document.querySelector('.rightClock');
 
-const playClockChess = document.querySelector('.playClockChess');
-const pause = document.querySelector('.playClockChess span');
+let toast = document.querySelector('.toast');
+let textToast = document.querySelector('.pToast');
+let imageToast = document.querySelector('.toast img');
 
-leftClickClock.addEventListener('click', () => {
-    clickSong.play();
-    if (leftClickClock.classList.contains('fadeInLeftClock')) {
-        leftClickClock.classList.remove('fadeInLeftClock');
-        rightClickClock.classList.remove('fadeOutRightClock');
-        leftClickClock.classList.add('fadeOutLeftClock');
-        rightClickClock.classList.add('fadeInRightClock');
-    }
-})
-
-rightClickClock.addEventListener('click', () => {
-    clickSong.play();
-    if (rightClickClock.classList.contains('fadeInRightClock')) {
-        rightClickClock.classList.remove('fadeInRightClock');
-        leftClickClock.classList.remove('fadeOutLeftClock');
-        rightClickClock.classList.add('fadeOutRightClock');
-        leftClickClock.classList.add('fadeInLeftClock');
-    }
-})
+toast.addEventListener('click', () => {
+    toast.classList.remove('toastOpen');
+    toast.style.animation = 'closeToast 500ms';
+    setTimeout(() => {
+        textToast.style.display = 'none'
+        setTimeout(() => {
+            toast.style.opacity = '0'
+            toast.style.display = 'none'
+            toast.style.animation = 'none';
+        }, 500);
+    }, 200);
+});
 
 let isPlaying = false;
 
-playClockChess.addEventListener('click', () => {
-    if (isPlaying) {
-        clockSong.pause();
-        clockSong.currentTime = 0;
-        playClockChess.classList.remove('pause');
-        playClockChess.classList.add('play');
-        pause.innerHTML = 'play_arrow';
-    } else {
-        clockSong.play();
-        playClockChess.classList.remove('play');
-        playClockChess.classList.add('pause');
-        pause.innerHTML = 'pause';
+let tempPlayer = 0;
+
+play.addEventListener('click', () => {
+    const hora1 = Number(horaChess.value);
+    const minuto1 = Number(minutoChess.value);
+    const segundo1 = Number(segundoChess.value);
+
+    const hora2 = Number(horaChess2.value);
+    const minuto2 = Number(minutoChess2.value);
+    const segundo2 = Number(segundoChess2.value);
+
+    if (
+        (hora1 > 0 || minuto1 > 0 || segundo1 > 0) &&
+    (hora2 > 0 || minuto2 > 0 || segundo2 > 0)
+    )  {
+        if (isPlaying) {
+            finishTime.pause();
+            if (leftClickClock.classList.contains('fadeInLeftClock')) {
+                pauseClock2();
+            }else {
+                pauseClock();
+            }
+            clockSong.pause();
+            clockSong.currentTime = 0;
+            play.classList.remove('pause');
+            play.classList.add('play');
+            pause.innerHTML = 'play_arrow';
+        } else {
+            if (leftClickClock.classList.contains('fadeInLeftClock')) {
+                startClock();
+            }else {
+                startClock2();
+            }
+            clockSong.play();
+            play.classList.remove('play');
+            play.classList.add('pause');
+            pause.innerHTML = 'pause';
+            tempPlayer = 0;
+            console.log(tempPlayer);
+            horaChess.classList.remove('activedNumberChess')
+            minutoChess.classList.remove('activedNumberChess')
+            segundoChess.classList.remove('activedNumberChess')
+            horaChess2.classList.remove('activedNumberChess')
+            minutoChess2.classList.remove('activedNumberChess')
+            segundoChess2.classList.remove('activedNumberChess')
+        }
+        isPlaying = !isPlaying;
     }
-    isPlaying = !isPlaying;
+    else if( (hora1 == 0 || minuto1 == 0 || segundo1 == 0) &&
+    (hora2 == 0 || minuto2 == 0 || segundo2 == 0)) {
+        toast.style.display = 'flex';
+        toast.style.opacity = '1';
+        setTimeout(() => {
+            toast.classList.add('toastOpen');
+            toast.style.animation = 'openToast 1s';
+            setTimeout(() => {
+                textToast.style.display = 'flex'
+                textToast.innerHTML = 'Adicione um Tempo'
+                
+            }, 200);
+        }, 200);
+        setTimeout(() => {
+            toast.classList.remove('toastOpen');
+            toast.style.animation = 'closeToast 500ms';
+            setTimeout(() => {
+                textToast.style.display = 'none'
+                setTimeout(() => {
+                    toast.style.opacity = '0'
+                    toast.style.display = 'none'
+                    toast.style.animation = 'none';
+                }, 500);
+            }, 200);
+        }, 5000);
+    }
 });
 
 clockSong.addEventListener('ended', () => {
@@ -838,3 +1185,37 @@ clockSong.addEventListener('ended', () => {
         clockSong.play();
     }
 });
+
+leftClickClock.addEventListener('click', () => {
+    const hora2 = Number(horaChess2.value);
+    const minuto2 = Number(minutoChess2.value);
+    const segundo2 = Number(segundoChess2.value);
+    clickSong.play();
+    if (leftClickClock.classList.contains('fadeInLeftClock')) {
+        leftClickClock.classList.remove('fadeInLeftClock');
+        rightClickClock.classList.remove('fadeOutRightClock');
+        leftClickClock.classList.add('fadeOutLeftClock');
+        rightClickClock.classList.add('fadeInRightClock');
+        if (hora2 > 0 || minuto2 > 0 || segundo2 > 0) {
+            pauseClock();
+            startClock2();
+        }
+    }
+})
+
+rightClickClock.addEventListener('click', () => {
+    const hora1 = Number(horaChess.value);
+    const minuto1 = Number(minutoChess.value);
+    const segundo1 = Number(segundoChess.value);
+    clickSong.play();
+    if (rightClickClock.classList.contains('fadeInRightClock')) {
+        rightClickClock.classList.remove('fadeInRightClock');
+        leftClickClock.classList.remove('fadeOutLeftClock');
+        rightClickClock.classList.add('fadeOutRightClock');
+        leftClickClock.classList.add('fadeInLeftClock');
+    }
+    if (hora1 > 0 || minuto1 > 0 || segundo1 > 0) {
+    pauseClock2();
+    startClock();
+    }
+})

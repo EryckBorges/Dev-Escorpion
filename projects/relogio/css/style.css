@@ -3,6 +3,14 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: '7Segments';
+    src: url('./fonts/segments.woff2') format('woff2'), url('./fonts/segments.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 body {
     background-color: var(--backgroundCinza);
     overflow-x: hidden;
@@ -225,7 +233,7 @@ header {
     flex-direction: column;
     width:95%;
     height: 60%;
-    border: 2px solid black;
+    border: 2px solid var(--preto);
     background: var(--vermelhoPadrao);
     border-radius: 5px;
 }
@@ -342,5 +350,45 @@ header {
         rotate: -15deg;
     }to {
         rotate:0deg;
+    }
+}
+
+.personOne {
+    width: 50%;
+    height: 100%;
+    flex-direction: row;
+    border-right: 3px solid #85be97;
+    font-size: 2.5em;
+}
+
+.personTwo {
+    width: 50%;
+    height: 100%;
+    flex-direction: row;
+    font-size: 2.5em;
+}
+
+.personOne > input, .personTwo > input {
+    width: 78px;
+    font-size: 1.5em;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: auto;
+    vertical-align: auto;
+}
+
+.activedNumberChess {
+    animation: activedNumberChess 1s infinite;
+    opacity: 0;
+}
+
+@keyframes activedNumberChess {
+    from {
+        opacity: 0;
+    }50% {
+        opacity: 1;
+    }to {
+        opacity: 0;
     }
 }
