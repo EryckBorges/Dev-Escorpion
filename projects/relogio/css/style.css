@@ -19,22 +19,15 @@ body {
 header {
     background:url('../image/background.svg') center / cover no-repeat !important;
     height: 50vh !important;
+    animation: fadeInDown 1s;
 }
 
 .content_clock {
+    background:url('../image/clock.svg') bottom / contain no-repeat !important;
     z-index: 2;
     position: relative;
     width: 100%;
     height: 80vh;
-}
-
-#myCanvas {
-    top: 0vh;
-    left: 0;
-    position: absolute;
-    z-index: -5;
-    width: 125%;
-    height: 125%;
 }
 
 .relogio {
@@ -171,10 +164,11 @@ header {
 /*Clock Chess*/
 
 .clockChess {
+    background:url('../image/clockChess.svg') top / contain no-repeat;
     width: 100%;
     height: 80vh;
     flex-direction: row;
-    margin-bottom:20px;
+    margin-top: -12px;
 }
 
 .iconChess3d {
@@ -209,7 +203,7 @@ header {
 }
 
 .titleClockChess > h1 {
-    color: var(--vermelhoPadrao);
+    color: var(--preto);
     font-size: 2em;
     font-weight: bold;
 }
@@ -392,3 +386,136 @@ header {
         opacity: 0;
     }
 }
+
+/* Cronometro */
+
+.cronometro {
+    width: 100%;
+    height: 100vh;
+    padding-block:50px;
+    margin-bottom: 10px;
+    background: url('../image/cronometro.svg') center / cover no-repeat;
+}
+
+.contentCronometo {
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contentCronometo > h1 {
+    width: 90%;
+    font-size: 2em;
+    color: var(--vermelhoPadrao);
+    justify-content: left !important;
+}
+
+.contentCronometo > p {
+    width: 90%;
+    color: var(--branco);
+    font-size: 1.2em;
+}
+
+.clockCronometro {
+    width:50%;
+    height: 100%;
+    justify-content: left !important;
+    padding: 20px;
+}
+
+.divCronometro {
+    width:70%;
+    height: 80%;
+    border-radius: 20px;
+    position: relative;
+}
+
+.backCronometro {
+    width:85%;
+    height: 95%;
+    background:#D9D9D9;
+    border-radius: 20px;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.frontCronometro {
+    width:80%;
+    height: 90%;
+    background:#D9D9D9;
+    border-radius: 20px;
+    position: absolute;
+    left: 1.5vw;
+    top: 0;
+    box-shadow: -10px 5px 10px 1px #5959594f;
+}
+
+.telaCronometro {
+    flex-direction: column;
+    width: 90%;
+    height: 45%;
+    border-radius: 20px;
+    background-color: #99B9A3;
+    position: absolute;
+    top:5vh;
+    box-shadow: 0px 0px 10px 2px #5959594f;
+}
+
+.controlCronometro {
+    width: 100%;
+    height: 40%;
+    position:absolute;
+    bottom: 0;
+    align-items: baseline !important;
+    gap: 20px;
+}
+
+.controlCronometro > button {
+    margin-top: 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+    border:none;
+    background-color: transparent;
+    box-shadow: 0px 0px 10px 1px #5959594f;
+    padding: 0;
+    font-weight: bold;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.numbersCronometro {
+    width: 100%;
+    height: 80%;
+    font-size: 3em;
+}
+
+.numbersCronometro > input, .numbersCronometro > input {
+    width: 120px;
+    font-size: 2em;
+    background-color: transparent;
+    text-align: center;
+    border: none;
+    outline: none;
+    cursor: auto;
+    vertical-align: auto;
+}
+
+.minSec {
+    width: 100%;
+    height: 20%;
+}
+
+.minSec > p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--preto);
+    width: 40%;
+    text-align: center;
+}
+
+
+

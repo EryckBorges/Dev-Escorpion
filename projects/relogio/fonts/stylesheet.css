@@ -1,9 +1,0 @@
-@font-face {
-    font-family: '7Segments';
-    src: url('7Segments.woff2') format('woff2'),
-        url('7Segments.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-

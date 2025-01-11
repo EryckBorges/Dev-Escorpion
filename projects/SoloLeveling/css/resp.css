@@ -1,0 +1,1173 @@
+@media screen and (max-width:767px) {
+    body {
+        height:100vh;
+        width:100%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        background:url('https://img.freepik.com/premium-photo/purple-simple-neon-thumbnail_769134-197.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #cont {
+        
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        width:100%;
+        height:100vh;
+    }
+    
+#cont #contTotal {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        position:relative;
+        top:3vh;
+        width:100%;
+        height:100vh;
+        background:url('https://img.freepik.com/premium-photo/purple-simple-neon-thumbnail_769134-197.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius:10px;
+}
+    
+#cont #imgPerson {
+        display: flex;
+        width:100%;
+        height:50vh;
+        z-index: 2;
+}
+    
+#cont #imgPerson img { 
+        width:100%;
+        height:90vh;
+    
+}
+    
+#cont #imgPerson button {
+    overflow:hidden;
+    width:25vw;
+    height:5vh;
+    position: absolute;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    right:4vw;
+    color:white;
+    border:none;
+    top:12vh;
+    z-index:3;
+    font-size:10pt;
+    cursor:pointer;
+}
+
+#cont #dados {
+    position: relative;
+    top:3vh;
+    width:100%;
+    height:100vh;
+}
+
+#cont #dados #menu {
+    width:100%;
+    height:8vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#cont #dados #menu button {
+    display:flex;
+    overflow:hidden;
+    justify-content: center;
+    align-items: center;
+    width:25vw;
+    height:5vh;
+    margin:0px 2px;
+    border:none;
+    background:none;
+    color:white;
+    font-size:10pt;
+    font-weight: 500;
+    border-bottom:2px solid black;
+}
+
+#cont #dados #menu #btnStatus {
+    border-bottom:2px solid rgb(92, 0, 128);
+}
+
+#cont #dados #status {
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:85%;
+}
+
+#cont #dados #status #status1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:50%;
+    height:100%;
+}
+
+#cont #dados #status #status2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:50%;
+    height:100%;
+}
+
+#cont #dados #status #status1 input {
+    color:white;
+    width:90%;
+    margin:10px 0px;
+    height:4vh;
+    border:1px solid rgb(92, 0, 128);
+    text-align: center;
+    border-radius: 5px;
+    background:black;
+}
+
+#cont #dados #status #status2 input {
+    color:white;
+    width:90%;
+    margin:10px 0px;
+    height:4vh;
+    background:black;
+    border:1px solid rgb(92, 0, 128);
+    text-align: center;
+    border-radius: 5px;
+}
+
+#cont #dados #status #status2 button {
+    overflow:hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:25vw;
+    height:5vh;
+    border:none;
+    border-radius: 5px;
+    position:absolute;
+    top:72vh;
+    color:white;
+    background:rgb(92, 0, 128);
+    left:70vw;
+    cursor:pointer;
+}
+
+#cont #dados #status #status1 p {
+    color:white;
+    font-size:12pt;
+}
+
+#cont #dados #status #status2 p {
+    color:white;
+    font-size:12pt;
+}
+
+#cont #dados #desc {
+    overflow-x: hidden;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:85%;
+}
+
+#cont #dados #desc #descDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:50%;
+    height:100%;
+}
+
+#cont #dados #desc #descDiv2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:50%;
+    height:100%;
+}
+
+#cont #dados #desc #descDiv input {
+    color:white;
+    width:90%;
+    margin:10px 0px;
+    height:4vh;
+    border:1px solid rgb(92, 0, 128);
+    text-align: center;
+    border-radius: 5px;
+    background:black;
+}
+
+#cont #dados #desc #descDiv2 input {
+    color:white;
+    width:90%;
+    margin:10px 0px;
+    height:4vh;
+    background:black;
+    border:1px solid rgb(92, 0, 128);
+    text-align: center;
+    border-radius: 5px;
+}
+
+#cont #dados #desc #descDiv2 button {
+    overflow:hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:25vw;
+    height:5vh;
+    border:none;
+    border-radius: 5px;
+    position:absolute;
+    top:72vh;
+    color:white;
+    background:rgb(92, 0, 128);
+    left:70vw;
+    cursor:pointer;
+}
+
+#cont #dados #desc #descDiv p {
+    color:white;
+    font-size:14pt;
+}
+
+#cont #dados #desc #descDiv2 p {
+    color:white;
+    font-size:14pt;
+}
+
+#cont #dados #desc #descDiv #descricao {
+    resize: none;
+    width:90%;
+    height:40%;
+    margin:5px 0px;
+    background:black;
+    color:white;
+    font-size:12pt;
+    border:1px solid rgb(92, 0, 128);
+    border-radius: 5px;
+}
+
+#descricao::-webkit-scrollbar {
+    width: 8px;
+    background:transparent;
+}
+  
+#descricao::-webkit-scrollbar-thumb {
+    background: purple;
+    border-radius:50px;
+    border: 2px solid black;
+}
+  
+#descricao::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.5);
+}
+
+#cont #dados #outro {
+    overflow-x: hidden;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+    height:85%;
+}
+
+#cont #dados #outro input {
+    color:white;
+    width:60%;
+    margin:10px 0px;
+    height:4vh;
+    border:1px solid rgb(92, 0, 128);
+    text-align: center;
+    border-radius: 5px;
+    background:black;
+}
+
+#cont #dados #outro p {
+    color:white;
+    font-size:14pt;
+}
+
+#cont #dados #outro button {
+    overflow:hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:25vw;
+    height:5vh;
+    border:none;
+    margin:10px 0px;
+    border-radius: 5px;
+    color:white;
+    background:rgb(92, 0, 128);
+    cursor:pointer;
+}
+
+#cont #dados #download {
+    overflow-x: hidden;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+    height:85%;
+}
+
+#cont #dados #download textarea {
+    border:1px solid rgb(92, 0, 128);
+    border-radius: 5px;
+    background:black;
+    width:80%;
+    height:70%;
+    color:white;
+    font-size:12pt;
+}
+
+#downloadText {
+    resize: none;
+}
+
+#downloadText::-webkit-scrollbar {
+    width: 8px;
+    background:transparent;
+}
+  
+#downloadText::-webkit-scrollbar-thumb {
+    background: purple;
+    border-radius:50px;
+    border: 2px solid black;
+}
+  
+#downloadText::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.5);
+}
+
+#downloadText::selection {
+    background: transparent; 
+    color: inherit; 
+    text-decoration: none;
+}
+
+#cont #dados #download button {
+    overflow:hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:28vw;
+    height:5vh;
+    border:none;
+    font-size:12pt;
+    margin:20px 0px;
+    border-radius: 5px;
+    color:white;
+    background:rgb(92, 0, 128);
+    cursor:pointer;
+}
+
+}
+
+@media screen and (max-height:400px) {
+    body {
+        height:100vh;
+        width:100%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        background:url('https://img.freepik.com/premium-photo/purple-simple-neon-thumbnail_769134-197.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #cont {
+        
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        width:100%;
+        height:100vh;
+    }
+    
+#cont #contTotal {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        position:relative;
+        top:3vh;
+        width:100%;
+        height:100vh;
+        background:url('https://img.freepik.com/premium-photo/purple-simple-neon-thumbnail_769134-197.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius:10px;
+}
+    
+#cont #imgPerson {
+        width:50%;
+        height:100vh;
+        z-index: 2;
+}
+    
+#cont #imgPerson img { 
+        width:100%;
+        height:100vh;
+    
+}
+    
+#cont #imgPerson button {
+    overflow:hidden;
+    width:25vw;
+    height:5vh;
+    position: absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    right:-5vw;
+    color:white;
+    border:none;
+    top:5vh;
+    z-index:3;
+    font-size:10pt;
+    cursor:pointer;
+}
+
+#cont #dados {
+    position: relative;
+    top:3vh;
+    width:100%;
+    height:100vh;
+}
+
+#cont #dados #menu {
+    width:100%;
+    height:8vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#cont #dados #menu button {
+    display:flex;
+    overflow:hidden;
+    justify-content: center;
+    align-items: center;
+    width:15vw;
+    height:5vh;
+    margin:0px 2px;
+    border:none;
+    background:none;
+    color:white;
+    font-size:10pt;
+    font-weight: 500;
+    border-bottom:2px solid black;
+}
+
+#cont #dados #menu #btnStatus {
+    border-bottom:2px solid rgb(92, 0, 128);
+}
+
+#cont #dados #status {
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:85%;
+}
+
+#cont #dados #status #status1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:50%;
+    height:100%;
+}
+
+#cont #dados #status #status2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:50%;
+    height:100%;
+}
+
+#cont #dados #status #status1 input {
+    color:white;
+    width:80%;
+    margin:10px 0px;
+    height:5vh;
+    border:1px solid rgb(92, 0, 128);
+    text-align: center;
+    border-radius: 5px;
+    background:black;
+}
+
+#cont #dados #status #status2 input {
+    color:white;
+    width:80%;
+    margin:10px 0px;
+    height:5vh;
+    background:black;
+    border:1px solid rgb(92, 0, 128);
+    text-align: center;
+    border-radius: 5px;
+}
+
+#cont #dados #status #status2 button {
+    overflow:hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:20vw;
+    height:6vh;
+    border:none;
+    border-radius: 5px;
+    position:absolute;
+    top:85vh;
+    color:white;
+    background:rgb(92, 0, 128);
+    left:5vw;
+    cursor:pointer;
+}
+
+#cont #dados #status #status1 p {
+    color:white;
+    font-size:12pt;
+}
+
+#cont #dados #status #status2 p {
+    color:white;
+    font-size:12pt;
+}
+
+#cont #dados #desc {
+    overflow-x: hidden;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:85%;
+}
+
+#cont #dados #desc #descDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:50%;
+    height:100%;
+}
+
+#cont #dados #desc #descDiv2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:50%;
+    height:100%;
+}
+
+#cont #dados #desc #descDiv input {
+    color:white;
+    width:80%;
+    margin:10px 0px;
+    height:5vh;
+    border:1px solid rgb(92, 0, 128);
+    text-align: center;
+    border-radius: 5px;
+    background:black;
+}
+
+#cont #dados #desc #descDiv2 input {
+    color:white;
+    width:80%;
+    margin:10px 0px;
+    height:5vh;
+    background:black;
+    border:1px solid rgb(92, 0, 128);
+    text-align: center;
+    border-radius: 5px;
+}
+
+#cont #dados #desc #descDiv2 button {
+    overflow:hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:20vw;
+    height:6vh;
+    border:none;
+    border-radius: 5px;
+    position:absolute;
+    z-index: 3;
+    top:80vh;
+    color:white;
+    background:rgb(92, 0, 128);
+    left:75vw;
+    cursor:pointer;
+}
+
+#cont #dados #desc #descDiv p {
+    color:white;
+    font-size:14pt;
+}
+
+#cont #dados #desc #descDiv2 p {
+    color:white;
+    font-size:14pt;
+}
+
+#cont #dados #desc #descDiv #descricao {
+    resize: none;
+    width:90%;
+    height:40%;
+    margin:5px 0px;
+    background:black;
+    color:white;
+    font-size:12pt;
+    border:1px solid rgb(92, 0, 128);
+    border-radius: 5px;
+}
+
+#descricao::-webkit-scrollbar {
+    width: 8px;
+    background:transparent;
+}
+  
+#descricao::-webkit-scrollbar-thumb {
+    background: purple;
+    border-radius:50px;
+    border: 2px solid black;
+}
+  
+#descricao::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.5);
+}
+
+#cont #dados #outro {
+    overflow-x: hidden;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+    height:85%;
+}
+
+#cont #dados #outro input {
+    color:white;
+    width:60%;
+    margin:10px 0px;
+    height:6vh;
+    border:1px solid rgb(92, 0, 128);
+    text-align: center;
+    border-radius: 5px;
+    background:black;
+}
+
+#cont #dados #outro p {
+    color:white;
+    font-size:14pt;
+}
+
+#cont #dados #outro button {
+    position: absolute;
+    overflow:hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:20vw;
+    height:7vh;
+    border:none;
+    margin:10px 0px;
+    border-radius: 5px;
+    color:white;
+    background:rgb(92, 0, 128);
+    cursor:pointer;
+    top:75vh;
+    left:75vw;
+    z-index: 3;
+}
+
+#cont #dados #download {
+    overflow-x: hidden;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+    height:85%;
+}
+
+#cont #dados #download textarea {
+    border:1px solid rgb(92, 0, 128);
+    border-radius: 5px;
+    background:black;
+    width:80%;
+    height:70%;
+    color:white;
+    font-size:12pt;
+}
+
+#downloadText {
+    resize: none;
+}
+
+#downloadText::-webkit-scrollbar {
+    width: 8px;
+    background:transparent;
+}
+  
+#downloadText::-webkit-scrollbar-thumb {
+    background: purple;
+    border-radius:50px;
+    border: 2px solid black;
+}
+  
+#downloadText::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.5);
+}
+
+#downloadText::selection {
+    background: transparent; 
+    color: inherit; 
+    text-decoration: none;
+}
+
+#cont #dados #download button {
+    overflow:hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:20vw;
+    height:7vh;
+    border:none;
+    font-size:12pt;
+    margin:20px 0px;
+    border-radius: 5px;
+    color:white;
+    background:rgb(92, 0, 128);
+    cursor:pointer;
+}
+
+}
+
+@media screen and (min-width:767px) and (max-width:1023px) {
+    body {
+        height:100vh;
+        width:100%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        background:url('https://img.freepik.com/premium-photo/purple-simple-neon-thumbnail_769134-197.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #cont {
+        
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        width:100%;
+        height:100vh;
+    }
+    
+#cont #contTotal {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        position:relative;
+        top:3vh;
+        width:100%;
+        height:100vh;
+        background:url('https://img.freepik.com/premium-photo/purple-simple-neon-thumbnail_769134-197.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius:10px;
+}
+    
+#cont #imgPerson {
+        display: flex;
+        width:100%;
+        height:50vh;
+        z-index: 2;
+}
+    
+#cont #imgPerson img { 
+        width:100%;
+        height:90vh;
+    
+}
+    
+#cont #imgPerson button {
+    overflow:hidden;
+    width:25vw;
+    height:5vh;
+    position: absolute;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    right:2vw;
+    color:white;
+    border:none;
+    top:12vh;
+    z-index:3;
+    font-size:16pt;
+    cursor:pointer;
+}
+
+#cont #dados {
+    position: relative;
+    top:3vh;
+    width:100%;
+    height:100vh;
+}
+
+#cont #dados #menu {
+    width:100%;
+    height:8vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#cont #dados #menu button {
+    display:flex;
+    overflow:hidden;
+    justify-content: center;
+    align-items: center;
+    width:25vw;
+    height:5vh;
+    margin:0px 2px;
+    border:none;
+    background:none;
+    color:white;
+    font-size:16pt;
+    font-weight: 500;
+    border-bottom:2px solid black;
+}
+
+#cont #dados #menu #btnStatus {
+    border-bottom:2px solid rgb(92, 0, 128);
+}
+
+#cont #dados #status {
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:85%;
+}
+
+#cont #dados #status #status1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:50%;
+    height:100%;
+}
+
+#cont #dados #status #status2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:50%;
+    height:100%;
+}
+
+#cont #dados #status #status1 input {
+    color:white;
+    width:90%;
+    margin:20px 0px;
+    height:4vh;
+    border:1px solid rgb(92, 0, 128);
+    text-align: center;
+    border-radius: 5px;
+    background:black;
+    font-size:14pt;
+}
+
+#cont #dados #status #status2 input {
+    color:white;
+    width:90%;
+    margin:20px 0px;
+    height:4vh;
+    background:black;
+    border:1px solid rgb(92, 0, 128);
+    text-align: center;
+    border-radius: 5px;
+    font-size:14pt;
+}
+
+#cont #dados #status #status2 button {
+    overflow:hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:25vw;
+    height:5vh;
+    border:none;
+    border-radius: 5px;
+    position:absolute;
+    top:72vh;
+    color:white;
+    background:rgb(92, 0, 128);
+    left:70vw;
+    cursor:pointer;
+    font-size:16pt;
+}
+
+#cont #dados #status #status1 p {
+    color:white;
+    font-size:16pt;
+}
+
+#cont #dados #status #status2 p {
+    color:white;
+    font-size:16pt;
+}
+
+#cont #dados #desc {
+    overflow-x: hidden;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:85%;
+}
+
+#cont #dados #desc #descDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:50%;
+    height:100%;
+}
+
+#cont #dados #desc #descDiv2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:50%;
+    height:100%;
+}
+
+#cont #dados #desc #descDiv input {
+    color:white;
+    width:90%;
+    margin:20px 0px;
+    height:4vh;
+    border:1px solid rgb(92, 0, 128);
+    text-align: center;
+    border-radius: 5px;
+    background:black;
+    font-size:14pt;
+}
+
+#cont #dados #desc #descDiv2 input {
+    color:white;
+    width:90%;
+    margin:20px 0px;
+    height:4vh;
+    background:black;
+    border:1px solid rgb(92, 0, 128);
+    text-align: center;
+    border-radius: 5px;
+    font-size:14pt;
+}
+
+#cont #dados #desc #descDiv2 button {
+    overflow:hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:25vw;
+    height:5vh;
+    border:none;
+    border-radius: 5px;
+    position:absolute;
+    top:72vh;
+    color:white;
+    background:rgb(92, 0, 128);
+    left:70vw;
+    cursor:pointer;
+    font-size:14pt;
+}
+
+#cont #dados #desc #descDiv p {
+    color:white;
+    font-size:16pt;
+}
+
+#cont #dados #desc #descDiv2 p {
+    color:white;
+    font-size:16pt;
+}
+
+#cont #dados #desc #descDiv #descricao {
+    resize: none;
+    width:90%;
+    height:40%;
+    margin:20px 0px;
+    background:black;
+    color:white;
+    font-size:14pt;
+    border:1px solid rgb(92, 0, 128);
+    border-radius: 5px;
+}
+
+#descricao::-webkit-scrollbar {
+    width: 8px;
+    background:transparent;
+}
+  
+#descricao::-webkit-scrollbar-thumb {
+    background: purple;
+    border-radius:50px;
+    border: 2px solid black;
+}
+  
+#descricao::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.5);
+}
+
+#cont #dados #outro {
+    overflow-x: hidden;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+    height:85%;
+}
+
+#cont #dados #outro input {
+    color:white;
+    width:60%;
+    margin:20px 0px;
+    height:4vh;
+    border:1px solid rgb(92, 0, 128);
+    text-align: center;
+    border-radius: 5px;
+    background:black;
+    font-size:14pt;
+}
+
+#cont #dados #outro p {
+    color:white;
+    font-size:16pt;
+}
+
+#cont #dados #outro button {
+    overflow:hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:25vw;
+    height:5vh;
+    border:none;
+    margin:10px 0px;
+    border-radius: 5px;
+    color:white;
+    background:rgb(92, 0, 128);
+    cursor:pointer;
+    font-size:14pt;
+}
+
+#cont #dados #download {
+    overflow-x: hidden;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+    height:85%;
+}
+
+#cont #dados #download textarea {
+    border:1px solid rgb(92, 0, 128);
+    border-radius: 5px;
+    background:black;
+    width:80%;
+    height:70%;
+    color:white;
+    font-size:14pt;
+}
+
+#downloadText {
+    resize: none;
+}
+
+#downloadText::-webkit-scrollbar {
+    width: 8px;
+    background:transparent;
+}
+  
+#downloadText::-webkit-scrollbar-thumb {
+    background: purple;
+    border-radius:50px;
+    border: 2px solid black;
+}
+  
+#downloadText::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.5);
+}
+
+#downloadText::selection {
+    background: transparent; 
+    color: inherit; 
+    text-decoration: none;
+}
+
+#cont #dados #download button {
+    overflow:hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:28vw;
+    height:5vh;
+    border:none;
+    font-size:12pt;
+    margin:20px 0px;
+    border-radius: 5px;
+    color:white;
+    background:rgb(92, 0, 128);
+    cursor:pointer;
+    font-size:16pt;
+}
+
+}

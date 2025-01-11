@@ -1,114 +1,3 @@
-// Seleciona o canvas e define o atributo willReadFrequently para melhorar o desempenho
-const canvas = document.getElementById('myCanvas');
-const context = canvas.getContext('2d', { willReadFrequently: true });
-
-// Inicialize o Paper.js com o canvas
-paper.setup(canvas);
-
-// Estilo padrão para os objetos
-paper.project.currentStyle = {
-    fillColor: 'red',
-};
-
-// Configuração das posições das bolas
-var ballPositions = [
-    [255, 129], [610, 73], [486, 363],
-    [117, 459], [484, 726], [843, 306],
-    [789, 615], [1049, 82], [1292, 428],
-    [1117, 733], [1352, 86], [92, 798],
-];
-
-var handle_len_rate = 2.4;
-var circlePaths = [];
-var radius = 50;
-
-// Criação dos círculos com base nas posições
-for (var i = 0, l = ballPositions.length; i < l; i++) {
-    var circlePath = new paper.Path.Circle({
-        center: ballPositions[i],
-        radius: radius,
-    });
-    circlePaths.push(circlePath);
-}
-
-// Criação do círculo maior para interatividade
-var largeCircle = new paper.Path.Circle({
-    center: [676, 433],
-    radius: 100,
-});
-circlePaths.push(largeCircle);
-
-// Função de movimentação do mouse
-function onMouseMove(event) {
-    largeCircle.position = event.point; // Atualiza a posição do grande círculo
-    generateConnections(circlePaths);  // Gera as conexões metaball
-}
-
-// Grupo para as conexões metaball
-var connections = new paper.Group();
-
-// Função para gerar conexões entre círculos
-function generateConnections(paths) {
-    connections.removeChildren(); // Limpa conexões anteriores
-
-    for (var i = 0, l = paths.length; i < l; i++) {
-        for (var j = i - 1; j >= 0; j--) {
-            var path = metaball(paths[i], paths[j], 0.5, handle_len_rate, 300);
-            if (path) {
-                connections.addChild(path);
-                path.removeOnMove();
-            }
-        }
-    }
-}
-
-// Função metaball para criar as formas entre círculos
-function metaball(ball1, ball2, v, handle_len_rate, maxDistance) {
-    var center1 = ball1.position;
-    var center2 = ball2.position;
-    var radius1 = ball1.bounds.width / 2;
-    var radius2 = ball2.bounds.width / 2;
-    var pi2 = Math.PI / 2;
-    var d = center1.getDistance(center2);
-
-    if (radius1 === 0 || radius2 === 0 || d > maxDistance || d <= Math.abs(radius1 - radius2)) {
-        return null;
-    }
-
-    // Correção: Subtrai os centros e obtém o ângulo corretamente
-    var vector = center2.subtract(center1);
-    var angle1 = vector.getAngle() * Math.PI / 180; // Converte para radianos
-    var angle2 = Math.acos((radius1 - radius2) / d);
-    var angle1a = angle1 + angle2;
-    var angle1b = angle1 - angle2;
-
-    var p1a = center1.add(getVector(angle1a, radius1));
-    var p1b = center1.add(getVector(angle1b, radius1));
-    var p2a = center2.add(getVector(angle1a + Math.PI, radius2));
-    var p2b = center2.add(getVector(angle1b + Math.PI, radius2));
-
-    var path = new paper.Path({
-        segments: [p1a, p2a, p2b, p1b],
-        closed: true,
-        style: ball1.style,
-    });
-    return path;
-}
-
-// Função auxiliar para calcular vetores
-function getVector(angle, length) {
-    return new paper.Point({
-        angle: angle * 180 / Math.PI, // Converte o ângulo de radianos para graus
-        length: length,
-    });
-}
-
-// Detecta movimento do mouse e chama a função de atualização
-paper.view.onMouseMove = onMouseMove;
-
-// Gera conexões iniciais
-generateConnections(circlePaths);
-
 //Linguagens 
 
 const eua = {
@@ -137,13 +26,17 @@ const eua = {
     outubro: 'October',
     novembro: 'November',
     dezembro: 'December',
+    titleClock: 'Interactive Digital Clock',
+    textClock: "On the side, you can see a real-time digital clock, created as part of my portfolio. This project uses JavaScript's Date() function to dynamically and accurately display hours, minutes, and seconds. Explore this demonstration and see how programming can bring simple and functional ideas to life!",
+    titleClockChess: 'Interactive Chess Clock',
+    textClockChess: 'On the side, you can check out a dynamic chess clock, created with HTML, CSS, and JavaScript. It controls the time of each player in a match, showing how programming transforms strategic ideas into useful tools!',
 };
 
 const brasil = {
     inicio: 'Ínicio',
     cursos: 'Cursos',
     jogos: 'Jogos',
-    portfolio: 'Portfolio',
+    portfolio: 'Portfólio',
     contato: 'Contato',
     sobre: 'Sobre',
     segunda: 'Segunda-feira',
@@ -165,13 +58,17 @@ const brasil = {
     outubro: 'Outubro',
     novembro: 'Novembro',
     dezembro: 'Dezembro',
+    titleClock: 'Relógio Digital Interativo',
+    textClock: 'Ao lado, você pode conferir um relógio digital em tempo real, criado como parte do meu portfólio. Este projeto utiliza a função Date() do JavaScript para exibir horas, minutos e segundos de forma dinâmica e precisa. Explore esta demonstração e veja como a programação pode dar vida a ideias simples e funcionais!',
+    titleClockChess: 'Relógio de Xadrez Interativo',
+    textClockChess: 'Ao lado, você pode conferir um relógio de xadrez dinâmico, criado com HTML, CSS e JavaScript. Ele controla o tempo de cada jogador em uma partida, mostrando como a programação transforma ideias estratégicas em ferramentas úteis!',
 };
 
 const spain = {
     inicio: 'Comenzar',
     cursos: 'Cursos',
     jogos: 'Juegos',
-    portfolio: 'Cartera',
+    portfolio: 'Portafolio',
     contato: 'Contacto',
     sobre: 'En',
     segunda: 'Lunes',
@@ -193,6 +90,10 @@ const spain = {
     outubro: 'Octubre',
     novembro: 'Noviembre',
     dezembro: 'Diciembre',
+    titleClock: 'Reloj digital interactivo',
+    textClock: 'Al lado, puedes ver un reloj digital en tiempo real, creado como parte de mi portafolio. Este proyecto utiliza la función Date() de JavaScript para mostrar horas, minutos y segundos de forma dinámica y precisa. ¡Explora esta demostración y descubre cómo la programación puede dar vida a ideas simples y funcionales!',
+    titleClockChess: 'Reloj de Ajedrez Interactivo',
+    textClockChess: 'A la derecha, puedes ver un reloj de ajedrez dinámico, creado con HTML, CSS y JavaScript. Controla el tiempo de cada jugador en una partida, mostrando cómo la programación transforma ideas estratégicas en herramientas útiles!',
 };
 
 const franca = {
@@ -221,13 +122,17 @@ const franca = {
     outubro: 'Octobre',
     novembro: 'Novembre',
     dezembro: 'Décembre',
+    titleClock: 'Horloge numérique interactive',
+    textClock: 'À côté, vous pouvez voir une horloge numérique en temps réel, créée dans le cadre de mon portfolio. Ce projet utilise la fonction Date() de JavaScript pour afficher les heures, les minutes et les secondes de manière dynamique et précise. Explorez cette démonstration et découvrez comment la programmation peut donner vie à des idées simples et fonctionnelles !',
+    titleClockChess: 'Horloge d\'Échecs Interactive',
+textClockChess: 'À côté, vous pouvez consulter une horloge d\'échecs dynamique, créée avec HTML, CSS et JavaScript. Elle contrôle le temps de chaque joueur pendant une partie, montrant comment la programmation transforme des idées stratégiques en outils utiles!',
 };
 
 const china = {
     inicio: '开始',
     cursos: '课程',
     jogos: '游戏',
-    portfolio: '文件夹',
+    portfolio: '作品集',
     contato: '接触',
     sobre: '在',
     segunda: '星期一',
@@ -249,6 +154,11 @@ const china = {
     outubro: '十月',
     novembro: '十一月',
     dezembro: '十二月',
+    titleClock: '互动数字时钟',
+    textClock: '在旁边，您可以看到一个实时数字时钟，这是我作品集的一部分。这个项目使用了 JavaScript 的 Date() 函数，以动态和精确的方式显示小时、分钟和秒。探索这个演示，看看编程如何让简单而实用的想法变得生动起来！',
+    titleClockChess: '互动国际象棋时钟',
+textClockChess: '在旁边，您可以查看一个动态国际象棋时钟，使用HTML、CSS和JavaScript创建。它控制每个玩家在比赛中的时间，展示了编程如何将战略思维转化为有用的工具！',
+
 };
 
 const elementos = {
@@ -260,6 +170,10 @@ const elementos = {
     sobre: document.querySelectorAll('.sobre'),
     diaDaSemana: document.querySelector('.diaSemana'),
     mesAno: document.querySelector('.mesAno'),
+    titleClock: document.querySelector('.textClock h1'),
+    textClock: document.querySelector('.textClock p'),
+    titleClockChess: document.querySelector('.titleClockChess h1'),
+    textClockChess: document.querySelector('.contentClockChess p'),
 };
 
 const ingles = () => {
@@ -273,7 +187,7 @@ const ingles = () => {
         jogosText.innerHTML= eua.jogos;
     });
     elementos.portfolio.forEach((portfolioText) => {
-        portfolioText.innerHTM = eua.portfolio;
+        portfolioText.innerHTML = eua.portfolio;
     });
     elementos.contato.forEach((contatoText) => {
         contatoText.innerHTML= eua.contato;
@@ -349,6 +263,10 @@ const ingles = () => {
         default:
         break;
     }
+    elementos.titleClock.innerHTML = eua.titleClock;
+    elementos.textClock.innerHTML = eua.textClock;
+    elementos.titleClockChess.innerHTML = eua.titleClockChess;
+    elementos.textClockChess.innerHTML = eua.textClockChess;
 }
 
 const portugues = () => {
@@ -362,7 +280,7 @@ const portugues = () => {
         jogosText.innerHTML= brasil.jogos;
     });
     elementos.portfolio.forEach((portfolioText) => {
-        portfolioText.innerHTM = brasil.portfolio;
+        portfolioText.innerHTML = brasil.portfolio;
     });
     elementos.contato.forEach((contatoText) => {
         contatoText.innerHTML= brasil.contato;
@@ -438,6 +356,10 @@ const portugues = () => {
         default:
         break;
     }
+    elementos.titleClock.innerHTML = brasil.titleClock;
+    elementos.textClock.innerHTML = brasil.textClock;
+    elementos.titleClockChess.innerHTML = brasil.titleClockChess;
+    elementos.textClockChess.innerHTML = brasil.textClockChess;
 }
 
 const espanha = () => {
@@ -451,7 +373,7 @@ const espanha = () => {
         jogosText.innerHTML= spain.jogos;
     });
     elementos.portfolio.forEach((portfolioText) => {
-        portfolioText.innerHTM = spain.portfolio;
+        portfolioText.innerHTML = spain.portfolio;
     });
     elementos.contato.forEach((contatoText) => {
         contatoText.innerHTML= spain.contato;
@@ -528,6 +450,10 @@ const espanha = () => {
         default:
         break;
     }
+    elementos.titleClock.innerHTML = spain.titleClock;
+    elementos.textClock.innerHTML = spain.textClock;
+    elementos.titleClockChess.innerHTML = spain.titleClockChess;
+    elementos.textClockChess.innerHTML = spain.textClockChess;
 }
 
 const frances = () => {
@@ -541,7 +467,7 @@ const frances = () => {
         jogosText.innerHTML= franca.jogos;
     });
     elementos.portfolio.forEach((portfolioText) => {
-        portfolioText.innerHTM = franca.portfolio;
+        portfolioText.innerHTML = franca.portfolio;
     });
     elementos.contato.forEach((contatoText) => {
         contatoText.innerHTML= franca.contato;
@@ -617,6 +543,10 @@ const frances = () => {
         default:
         break;
     }
+    elementos.titleClock.innerHTML = franca.titleClock;
+    elementos.textClock.innerHTML = franca.textClock;
+    elementos.titleClockChess.innerHTML = franca.titleClockChess;
+    elementos.textClockChess.innerHTML = franca.textClockChess;
 }
 
 const chines = () => {
@@ -630,7 +560,7 @@ const chines = () => {
         jogosText.innerHTML= china.jogos;
     });
     elementos.portfolio.forEach((portfolioText) => {
-        portfolioText.innerHTM = china.portfolio;
+        portfolioText.innerHTML = china.portfolio;
     });
     elementos.contato.forEach((contatoText) => {
         contatoText.innerHTML= china.contato;
@@ -706,6 +636,10 @@ const chines = () => {
         default:
         break;
     }
+    elementos.titleClock.innerHTML = china.titleClock;
+    elementos.textClock.innerHTML = china.textClock;
+    elementos.titleClockChess.innerHTML = china.titleClockChess;
+    elementos.textClockChess.innerHTML = china.textClockChess;
 }
 
 //Função para exibir a hora 
@@ -817,74 +751,109 @@ mais.addEventListener('click', () => {
     if (horaChess.classList.contains('activedNumberChess')) {
         valorHora = Math.min(12, valorHora + 1);
         horaChess.value = valorHora < 10 ? `0${valorHora}` : valorHora;
+        personOne.style.background = '#a8f3c0'
+        personTwo.style.background = '#a8f3c0'
+        leftClickClock.removeAttribute('disabled');
+        rightClickClock.removeAttribute('disabled');
     }
 
     if (minutoChess.classList.contains('activedNumberChess')) {
         valorMinuto++;
         if (valorMinuto >= 60) valorMinuto = 0;
         minutoChess.value = valorMinuto < 10 ? `0${valorMinuto}` : valorMinuto;
+        personOne.style.background = '#a8f3c0'
+        personTwo.style.background = '#a8f3c0'
+        leftClickClock.removeAttribute('disabled');
+        rightClickClock.removeAttribute('disabled');
     }
 
     if (segundoChess.classList.contains('activedNumberChess')) {
         valorSegundo++;
         if (valorSegundo >= 60) valorSegundo = 0;
         segundoChess.value = valorSegundo < 10 ? `0${valorSegundo}` : valorSegundo;
+        personOne.style.background = '#a8f3c0'
+        personTwo.style.background = '#a8f3c0'
+        leftClickClock.removeAttribute('disabled');
+        rightClickClock.removeAttribute('disabled');
     }
 
     if (horaChess2.classList.contains('activedNumberChess')) {
         valorHora2 = Math.min(12, valorHora2 + 1);
         horaChess2.value = valorHora2 < 10 ? `0${valorHora2}` : valorHora2;
+        personOne.style.background = '#a8f3c0'
+        personTwo.style.background = '#a8f3c0'
+        leftClickClock.removeAttribute('disabled');
+        rightClickClock.removeAttribute('disabled');
     }
 
     if (minutoChess2.classList.contains('activedNumberChess')) {
         valorMinuto2++;
         if (valorMinuto2 >= 60) valorMinuto2 = 0;
         minutoChess2.value = valorMinuto2 < 10 ? `0${valorMinuto2}` : valorMinuto2;
+        personOne.style.background = '#a8f3c0'
+        personTwo.style.background = '#a8f3c0'
+        leftClickClock.removeAttribute('disabled');
+        rightClickClock.removeAttribute('disabled');
     }
 
     if (segundoChess2.classList.contains('activedNumberChess')) {
         valorSegundo2++;
         if (valorSegundo2 >= 60) valorSegundo2 = 0;
         segundoChess2.value = valorSegundo2 < 10 ? `0${valorSegundo2}` : valorSegundo2;
+        personOne.style.background = '#a8f3c0'
+        personTwo.style.background = '#a8f3c0'
+        leftClickClock.removeAttribute('disabled');
+        rightClickClock.removeAttribute('disabled');
     }
 });
-
 
 menos.addEventListener('click', () => {
     // Decrementa e ajusta Hora Chess
     if (horaChess.classList.contains('activedNumberChess')) {
         valorHora = Math.max(0, valorHora - 1);
         horaChess.value = valorHora < 10 ? `0${valorHora}` : valorHora;
+        leftClickClock.removeAttribute('disabled');
+        rightClickClock.removeAttribute('disabled');
     }
 
     // Decrementa e ajusta Minuto Chess
     if (minutoChess.classList.contains('activedNumberChess')) {
         valorMinuto = Math.max(0, valorMinuto - 1);
         minutoChess.value = valorMinuto < 10 ? `0${valorMinuto}` : valorMinuto;
+        leftClickClock.removeAttribute('disabled');
+        rightClickClock.removeAttribute('disabled');
     }
 
     // Decrementa e ajusta Segundo Chess
     if (segundoChess.classList.contains('activedNumberChess')) {
         valorSegundo = Math.max(0, valorSegundo - 1);
         segundoChess.value = valorSegundo < 10 ? `0${valorSegundo}` : valorSegundo;
+        leftClickClock.removeAttribute('disabled');
+        rightClickClock.removeAttribute('disabled');
     }
 
     // Decrementa e ajusta Hora Chess2
     if (horaChess2.classList.contains('activedNumberChess')) {
         valorHora2 = Math.max(0, valorHora2 - 1);
         horaChess2.value = valorHora2 < 10 ? `0${valorHora2}` : valorHora2;
+        leftClickClock.removeAttribute('disabled');
+        rightClickClock.removeAttribute('disabled');
     }
 
     // Decrementa e ajusta Minuto Chess2
     if (minutoChess2.classList.contains('activedNumberChess')) {
         valorMinuto2 = Math.max(0, valorMinuto2 - 1);
         minutoChess2.value = valorMinuto2 < 10 ? `0${valorMinuto2}` : valorMinuto2;
+        leftClickClock.removeAttribute('disabled');
+        rightClickClock.removeAttribute('disabled');
     }
 
     // Decrementa e ajusta Segundo Chess2
     if (segundoChess2.classList.contains('activedNumberChess')) {
         valorSegundo2 = Math.max(0, valorSegundo2 - 1);
         segundoChess2.value = valorSegundo2 < 10 ? `0${valorSegundo2}` : valorSegundo2;
+        leftClickClock.removeAttribute('disabled');
+        rightClickClock.removeAttribute('disabled');
     }
 });
 
@@ -893,13 +862,20 @@ let isRunning = false; // Verifica se o cronômetro está rodando
 let finishTime = new Audio();
 finishTime.src = './music/alarme.mp3';
 
+const personOne = document.querySelector('.personOne');
+const personTwo = document.querySelector('.personTwo');      
+
 // Função para iniciar o tempo
 const startClock = () => {
     if (!isRunning) {
         isRunning = true; // Define como rodando
         intervalId = setInterval(() => {
             // Lógica para decrementar o tempo
-            if (valorSegundo > 0) {
+            if (valorHora == 0 && valorMinuto == 0 && valorSegundo == 1) {
+                leftClickClock.setAttribute('disabled', '');
+                rightClickClock.setAttribute('disabled', '');
+                valorSegundo--;
+            } else if (valorSegundo > 0) {
                 valorSegundo--;
             } else if (valorMinuto > 0) {
                 valorMinuto--;
@@ -911,6 +887,7 @@ const startClock = () => {
             } else {
                 // Para o relógio quando chega a 0
                 pauseClock();
+                personOne.style.background = 'red'
                 clockSong.pause();
                 finishTime.play();
                 play.classList.remove('pause');
@@ -940,7 +917,11 @@ const startClock2 = () => {
         isRunning = true; // Define como rodando
         intervalId = setInterval(() => {
             // Lógica para decrementar o tempo
-            if (valorSegundo2 > 0) {
+            if (valorHora2 == 0 && valorMinuto2 == 0 && valorSegundo2 == 1) {
+                leftClickClock.setAttribute('disabled', '');
+                rightClickClock.setAttribute('disabled', '');
+                valorSegundo2--;
+            } else if (valorSegundo2 > 0) {
                 valorSegundo2--;
             } else if (valorMinuto2 > 0) {
                 valorMinuto2--;
@@ -952,6 +933,7 @@ const startClock2 = () => {
             } else {
                 // Para o relógio quando chega a 0
                 pauseClock();
+                personTwo.style.background = 'red';
                 clockSong.pause();
                 finishTime.play();
                 play.classList.remove('pause');
@@ -1089,6 +1071,9 @@ let toast = document.querySelector('.toast');
 let textToast = document.querySelector('.pToast');
 let imageToast = document.querySelector('.toast img');
 
+const toastNotification = new Audio();
+toastNotification.src = '../../../global/music/toastNotification.mp3'
+
 toast.addEventListener('click', () => {
     toast.classList.remove('toastOpen');
     toast.style.animation = 'closeToast 500ms';
@@ -1142,7 +1127,6 @@ play.addEventListener('click', () => {
             play.classList.add('pause');
             pause.innerHTML = 'pause';
             tempPlayer = 0;
-            console.log(tempPlayer);
             horaChess.classList.remove('activedNumberChess')
             minutoChess.classList.remove('activedNumberChess')
             segundoChess.classList.remove('activedNumberChess')
@@ -1154,6 +1138,7 @@ play.addEventListener('click', () => {
     }
     else if( (hora1 == 0 || minuto1 == 0 || segundo1 == 0) &&
     (hora2 == 0 || minuto2 == 0 || segundo2 == 0)) {
+        toastNotification.play();
         toast.style.display = 'flex';
         toast.style.opacity = '1';
         setTimeout(() => {
@@ -1197,13 +1182,21 @@ leftClickClock.addEventListener('click', () => {
         leftClickClock.classList.add('fadeOutLeftClock');
         rightClickClock.classList.add('fadeInRightClock');
         if (hora2 > 0 || minuto2 > 0 || segundo2 > 0) {
-            pauseClock();
-            startClock2();
+            horaChess.classList.remove('activedNumberChess')
+            minutoChess.classList.remove('activedNumberChess')
+            segundoChess.classList.remove('activedNumberChess')
+            horaChess2.classList.remove('activedNumberChess')
+            minutoChess2.classList.remove('activedNumberChess')
+            segundoChess2.classList.remove('activedNumberChess')
+            if (isPlaying) {
+                pauseClock();
+                startClock2();
+            }
         }
     }
 })
 
-rightClickClock.addEventListener('click', () => {
+rightClickClock.addEventListener('click', () => { 
     const hora1 = Number(horaChess.value);
     const minuto1 = Number(minutoChess.value);
     const segundo1 = Number(segundoChess.value);
@@ -1213,9 +1206,17 @@ rightClickClock.addEventListener('click', () => {
         leftClickClock.classList.remove('fadeOutLeftClock');
         rightClickClock.classList.add('fadeOutRightClock');
         leftClickClock.classList.add('fadeInLeftClock');
-    }
-    if (hora1 > 0 || minuto1 > 0 || segundo1 > 0) {
-    pauseClock2();
-    startClock();
+        if (hora1 > 0 || minuto1 > 0 || segundo1 > 0) {
+            horaChess.classList.remove('activedNumberChess')
+            minutoChess.classList.remove('activedNumberChess')
+            segundoChess.classList.remove('activedNumberChess')
+            horaChess2.classList.remove('activedNumberChess')
+            minutoChess2.classList.remove('activedNumberChess')
+            segundoChess2.classList.remove('activedNumberChess')
+            if (isPlaying) {
+                pauseClock2();
+                startClock();
+            } 
+        }
     }
 })
