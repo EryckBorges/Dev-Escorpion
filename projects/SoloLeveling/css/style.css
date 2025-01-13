@@ -137,6 +137,7 @@ header > video {
     background:rgb(92, 0, 128);
     right: 1vw;
     cursor:pointer;
+    animation: fadeIn 1s;
 }
 
 .status1 > p,.status2 > p, .descDiv > p, .descDiv2 > p, .outro > p {

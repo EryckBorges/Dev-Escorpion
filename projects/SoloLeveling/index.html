@@ -37,52 +37,52 @@
                 <img src="./image/person.png" alt="">
                 <button id="voltarDesc" class="button over center"><span class="material-symbols-outlined">
                         arrow_left_alt
-                    </span>Voltar</button>
+                    </span><p class="voltarDesc title"></p></button>
                 <button id="voltarOutro" class="button over center"><span class="material-symbols-outlined">
                         arrow_left_alt
-                    </span>Voltar</button>
+                    </span><p class="voltarOutro title"></p></button>
                 <button id="voltarDown" class="button over center"><span class="material-symbols-outlined">
                         arrow_left_alt
-                    </span>Voltar</button>
+                    </span><p class="voltarDown title"></p></button>
             </div>
             <div class="center over contTotal animate-on-scroll" data-animation="fadeIn">
                 <div class="dados center over">
-                    <div class="center over btnControls">
-                        <button id="btnStatus" class="center over button animate-on-scroll" data-animation="fadeInUpBig"><span class="material-symbols-outlined">
-                                bar_chart
-                            </span>Status</button>
-                        <button id="btnDesc" class="center over button animate-on-scroll" data-animation="fadeInDownBig">
-                            <span class="material-symbols-outlined">
-                                summarize
-                            </span>Descrição</button>
-                        <button id="btnOutro" class="center over button animate-on-scroll" data-animation="fadeInUpBig"><span class="material-symbols-outlined">
-                                add
-                            </span>Outros</button>
-                        <button id="btnCopy" class="center over button animate-on-scroll" data-animation="fadeInDownBig"><span class="material-symbols-outlined">
-                                content_copy
-                            </span>Copiar</button>
-                    </div>
+                  <div class="center over btnControls">
+                    <button id="btnStatus" class="center over button animate-on-scroll" data-animation="fadeInUpBig"><span class="material-symbols-outlined">
+                            bar_chart
+                        </span><p class="title statusP"></p></button>
+                    <button id="btnDesc" class="center over button animate-on-scroll" data-animation="fadeInDownBig">
+                        <span class="material-symbols-outlined">
+                            summarize
+                        </span><p class="title descP"></p></button>
+                    <button id="btnOutro" class="center over button animate-on-scroll" data-animation="fadeInUpBig"><span class="material-symbols-outlined">
+                            add
+                        </span><p class="title outroP"></p></button>
+                    <button id="btnCopy" class="center over button animate-on-scroll" data-animation="fadeInDownBig"><span class="material-symbols-outlined">
+                            content_copy
+                        </span><p class="title copyP"></p></button>
+                </div>
                     <div class="center over status">
                         <div class="center over status1">
-                            <p>Link</p>
-                            <input type="text" id="link">
-                            <p>Nome</p>
-                            <input type="text" id="nome">
-                            <p>Rank</p>
-                            <input type="text" id="rank">
-                            <p>Ataque</p>
-                            <input type="text" id="ataque">
+                            <p class="title animate-on-scroll linkStatus" data-animation="fadeInLeftBig"></p>
+                            <input type="text" id="link" class="animate-on-scroll" data-animation="fadeInLeftBig">
+                            <p class="title animate-on-scroll nomeStatus" data-animation="fadeInLeftBig"></p>
+                            <input type="text" id="nome" class="animate-on-scroll" data-animation="fadeInLeftBig">
+                            <p class="title animate-on-scroll rankStatus" data-animation="fadeInLeftBig"></p>
+                            <input type="text" id="rank" class="animate-on-scroll" data-animation="fadeInLeftBig">
+                            <p class="title animate-on-scroll ataqueStatus" data-animation="fadeInLeftBig"></p>
+                            <input type="text" id="ataque" class="animate-on-scroll" data-animation="fadeInLeftBig">
                         </div>
                         <div class="center over status2">
-                            <p>Defesa</p>
-                            <input type="text" id="defesa">
-                            <p>HP</p>
-                            <input type="text" id="hp">
-                            <p>Agilidade</p>
-                            <input type="text" id="agilidade">
-                            <p>Energia</p>
-                            <input type="text" id="energia">
-                            <button id="statusButton" class="button center over">Próximo<span class="material-symbols-outlined">
+                            <p class="title animate-on-scroll defesaStatus" data-animation="fadeInRightBig"></p>
+                            <input type="text" id="defesa" class="animate-on-scroll" data-animation="fadeInRightBig">
+                            <p class="title animate-on-scroll hpStatus" data-animation="fadeInRightBig"></p>
+                            <input type="text" id="hp" class="animate-on-scroll" data-animation="fadeInRightBig">
+                            <p class="title animate-on-scroll agilidadeStatus" data-animation="fadeInRightBig"></p>
+                            <input type="text" id="agilidade" class="animate-on-scroll" data-animation="fadeInRightBig">
+                            <p class="title animate-on-scroll energiaStatus" data-animation="fadeInRightBig"></p>
+                            <input type="text" id="energia" class="animate-on-scroll" data-animation="fadeInRightBig">
+                            <button id="statusButton" class="button center over"><p class="title"></p><span class="material-symbols-outlined">
                                     arrow_right_alt
                                 </span></button>
                         </div>
@@ -90,44 +90,44 @@
                     </div>
                     <div class="center over desc" style="display: none;">
                         <div class="center over descDiv">
-                            <p>Descrição</p>
-                            <textarea id="descricao"></textarea>
-                            <p>Observação 1</p>
-                            <input type="text" id="obs1">
-                            <p>Observação 2</p>
-                            <input type="text" id="obs2">
+                            <p class="title animate-on-scroll descricao" data-animation="fadeInDown"></p>
+                            <textarea id="descricao" class="animate-on-scroll" data-animation="fadeInDown"></textarea>
+                            <p class="title animate-on-scroll obs1" data-animation="fadeInDown"></p>
+                            <input type="text" id="obs1" class="animate-on-scroll" data-animation="fadeInDown">
+                            <p class="title animate-on-scroll obs2" data-animation="fadeInDown"></p>
+                            <input type="text" id="obs2" class="animate-on-scroll" data-animation="fadeInDown">
                         </div>
                         <div class="center over descDiv2">
-                            <p>Observação 3</p>
-                            <input type="text" id="obs3">
-                            <p>Observação 4</p>
-                            <input type="text" id="obs4">
-                            <p>Observação 5</p>
-                            <input type="text" id="obs5">
-                            <p>Observação 6</p>
-                            <input type="text" id="obs6">
-                            <button id="descButton" class="center over button">Próximo<span class="material-symbols-outlined">
+                            <p class="title animate-on-scroll obs3" data-animation="fadeInRight"></p>
+                            <input type="text" id="obs3" class="animate-on-scroll" data-animation="fadeInRight">
+                            <p class="title animate-on-scroll obs4" data-animation="fadeInRight"></p>
+                            <input type="text" id="obs4" class="animate-on-scroll" data-animation="fadeInRight">
+                            <p class="title animate-on-scroll obs5" data-animation="fadeInRight"></p>
+                            <input type="text" id="obs5" class="animate-on-scroll" data-animation="fadeInRight">
+                            <p class="title animate-on-scroll obs6" data-animation="fadeInRight"></p>
+                            <input type="text" id="obs6" class="animate-on-scroll" data-animation="fadeInRight">
+                            <button id="descButton" class="center over button"><p class="title"></p><span class="material-symbols-outlined">
                                     arrow_right_alt
                                 </span></button>
                         </div>
     
                     </div>
                     <div class="center over outro" style="display: none;">
-                        <p>Cooldown</p>
-                        <input type="text" id="cooldown">
-                        <p>Fuga</p>
-                        <input type="text" id="fuga">
-                        <p>Usuários</p>
-                        <input type="text" id="usuarios">
-                        <p>Preço</p>
-                        <input type="text" id="preco">
-                        <button id="outroButton" class="center over button">Próximo<span class="material-symbols-outlined">
+                        <p class="title animate-on-scroll cooldown" data-animation="fadeInUp">Cooldown</p>
+                        <input type="text" id="cooldown" class="animate-on-scroll" data-animation="fadeInUp">
+                        <p class="title animate-on-scroll fuga" data-animation="fadeInUp">Fuga</p>
+                        <input type="text" id="fuga" class="animate-on-scroll" data-animation="fadeInUp">
+                        <p class="title animate-on-scroll usuarios" data-animation="fadeInUp">Usuários</p>
+                        <input type="text" id="usuarios" class="animate-on-scroll" data-animation="fadeInUp">
+                        <p class="title animate-on-scroll preco" data-animation="fadeInUp">Preço</p>
+                        <input type="text" id="preco" class="animate-on-scroll" data-animation="fadeInUp">
+                        <button id="outroButton" class="center over button"><p class="title"></p><span class="material-symbols-outlined">
                                 arrow_right_alt
                             </span></button>
                     </div>
                     <div class="center over download" style="display: none;">
-                        <textarea id="downloadText" spellcheck="false"></textarea>
-                        <button id="copiar" class="center over button">Copiar<span class="material-symbols-outlined">
+                        <textarea id="downloadText" spellcheck="false" class="animate-on-scroll" data-animation="fadeIn"></textarea>
+                        <button id="copiar" class="center over button"><p class="title copiar"></p><span class="material-symbols-outlined">
                                 content_copy
                             </span></button>
                     </div>
@@ -279,19 +279,9 @@
             <div id="topBack" class="animate-on-scroll" data-animation="fadeInDown" draggable="false" alt="Top back"></div>
             <div id="bottomBack" class="animate-on-scroll" data-animation="fadeInUp" draggable="false" alt="Bottom back"></div>
             <div class="textProject center over animate-on-scroll" data-animation="fadeInLeft">
-                <img src="./image/logoSoloLeveling.png" draggable="false" alt="Logo SoloLeveling">
-                <h1 class="title">Gerador de Personagens de RPG no WhatsApp</h1>
-                <p class="text">Este projeto é um gerador de personagens 
-                    para RPG no WhatsApp, desenvolvido com 
-                    HTML, CSS e JavaScript. O usuário preenche
-                     os campos disponíveis, personalizando 
-                    seu personagem, e no final recebe todos os
-                     dados formatados, prontos para copiar
-                    e colar diretamente no WhatsApp. Com um
-                     design inspirado no incrível anime
-                    Solo Leveling, o visual do projeto é dinâmico
-                     e imersivo, trazendo a vibe de caçadores
-                    e portais para os fãs do anime e RPGs!</p>
+                <img src="" draggable="false" alt="Logo SoloLeveling">
+                <h1 class="title"></h1>
+                <p class="text"></p>
             </div>
             <div class="personSung center over animate-on-scroll" data-animation="fadeInRight">
                 <img src="https://preview.redd.it/l15ciyfgs6c41.png?auto=webp&s=683483302a9634e2b1d77694ab9440f8cf75744c" alt="Sung Gin Hu" draggable="false">
