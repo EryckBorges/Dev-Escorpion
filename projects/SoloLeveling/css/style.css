@@ -9,7 +9,7 @@
 ::-webkit-scrollbar-thumb {
     background:#614080 !important;
     border-radius: 10px;
-  }
+}
 
 body {
     background-color: var(--backgroundCinza);
@@ -170,18 +170,18 @@ header > video {
     border-radius: 5px;
 }
 
-#descricao::-webkit-scrollbar {
+.descricao::-webkit-scrollbar {
     width: 8px;
     background:transparent;
 }
 
-#descricao::-webkit-scrollbar-thumb {
+.descricao::-webkit-scrollbar-thumb {
     background: purple;
     border-radius:50px;
     border: 2px solid var(--preto);
 }
 
-#descricao::-webkit-scrollbar-track {
+.descricao::-webkit-scrollbar-track {
     background: rgba(0,0,0,0.5);
 }
 
