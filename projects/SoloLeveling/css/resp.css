@@ -602,11 +602,16 @@
 
 .contentDescProject {
     width:100%;
-    height: 80vh;
+    height: 90vh;
 }
 
 .personSung > img {
-    width: 95%;
+    width: 100%;
     height: 90%;
+}
+
+.textProject > img {
+    height: 250px;
+    width: 350px;
 }
 }

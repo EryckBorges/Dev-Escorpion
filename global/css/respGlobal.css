@@ -234,3 +234,18 @@
     }
 
 }
+
+@media screen and (width >= 767px) and (width <= 1023px) {
+    .menu {
+        width:95%;
+        height: 8vh;
+        top:3vh;
+    }
+
+    .lang {
+        display: none;
+        width:120px;
+        right:2vw;
+        top:12vh;
+    }
+}
