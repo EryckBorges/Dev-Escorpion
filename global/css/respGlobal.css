@@ -249,3 +249,23 @@
         top:12vh;
     }
 }
+
+@media screen and (width <= 500px) {
+    .menu {
+        width:90%;
+        height: 10vh;
+    }
+
+    .logo {
+        font-size: 0.8em;
+        width: 30% !important;
+    }
+
+    .linkMenu {
+        padding-left: 20px;
+    }
+
+    .userMobile {
+        padding-left: 20px;
+    }
+}
