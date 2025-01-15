@@ -97,7 +97,7 @@ header > video {
     color:var(--branco);
     font-size:1.2em;
     font-weight: bold;
-    border-bottom:2px solid var(--preto);
+    border-bottom:2px solid transparent;
 }
 
 .btnControls > #btnStatus {
@@ -126,7 +126,7 @@ header > video {
     background:var(--preto);
 }
 
-.status2 > button, .descDiv2 > button, .outro > button, .download > button {
+.status2 > #statusButton, .descDiv2 > #descButton, .outro > #outroButton, .download > #copiar {
     width:8vw;
     height:5vh;
     border:none;
@@ -136,6 +136,34 @@ header > video {
     color:var(--branco);
     background:rgb(92, 0, 128);
     right: 1vw;
+    cursor:pointer;
+    animation: fadeIn 1s;
+}
+
+.outro > #voltarOutro, .download > #voltarDown {
+    width:8vw;
+    height:5vh;
+    border:none;
+    border-radius: 5px;
+    position:absolute;
+    bottom:5vh;
+    color:var(--preto);
+    background:var(--branco);
+    left: 1vw;
+    cursor:pointer;
+    animation: fadeIn 1s;
+}
+
+.descDiv2 > #voltarDesc {
+    width:8vw;
+    height:5vh;
+    border:none;
+    border-radius: 5px;
+    position:absolute;
+    bottom:5vh;
+    color:var(--preto);
+    background:var(--branco);
+    right: 12vw;
     cursor:pointer;
     animation: fadeIn 1s;
 }

@@ -13,7 +13,6 @@
     display:none !important;
 }
 
-
 .dados {
     position: relative;
     top:3vh;
@@ -44,12 +43,55 @@
     justify-content: left !important;
 }
 
-.status2 > button, .descDiv2 > button, .outro > button, .download > button {
+.status2 > #statusButton {
+    width:30vw;
+    bottom:12vh;
+    right: 2vw;
+    z-index: 5;
+}
+
+.download > #copiar {
+    width:30vw;
+    bottom:6vh;
+    right: 5vw;
+    z-index: 5;
+}
+
+.outro > #outroButton {
     width:30vw;
     bottom:12vh;
     right: 5vw;
     z-index: 5;
 }
+
+.descDiv2 > #descButton {
+    width:42vw;
+    bottom:16vh;
+    right: 2vw;
+    z-index: 5;
+}
+
+.download > #voltarDown {
+    width:30vw;
+    bottom:6vh;
+    left: 6vw;
+    z-index: 5;
+}
+
+.outro > #voltarOutro {
+    width:30vw;
+    bottom:12vh;
+    left: 5vw;
+    z-index: 5;
+}
+
+.descDiv2 > #voltarDesc {
+    width:42vw;
+    bottom:10vh;
+    right: 2vw;
+    z-index: 5;
+}
+
 
 .desc {
     display: none;
@@ -116,14 +158,14 @@
 
 @media screen and (width <= 500px) {
     header {
-        height: 120vh !important;
+        height: 150vh !important;
         position: relative;
         margin-bottom: 20px;
     }
 
     .cont {
         width:98%; 
-        top: -2vh;
+        top: 5vh;
         border-radius: 20px;
         height:120vh;
         justify-content: left !important;
@@ -146,11 +188,11 @@
     position: relative;
     top:3vh;
     width:100%;
-    height:100vh;
+    height:120vh;
 }
 
 .btnControls {
-    height:50%;
+    height:60%;
     gap: 10px;
     flex-direction: column;
     
@@ -175,10 +217,52 @@
     justify-content: left !important;
 }
 
-.status2 > button, .descDiv2 > button, .outro > button, .download > button {
+.status2 > #statusButton {
     width:30vw;
-    bottom:2vh;
+    bottom:6vh;
+    right: 2vw;
+    z-index: 5;
+}
+
+.download > #copiar {
+    width:30vw;
+    bottom:5vh;
     right: 5vw;
+    z-index: 5;
+}
+
+.outro > #outroButton {
+    width:30vw;
+    bottom:6vh;
+    right: 5vw;
+    z-index: 5;
+}
+
+.descDiv2 > #descButton {
+    width:42vw;
+    bottom:14vh;
+    right: 2vw;
+    z-index: 5;
+}
+
+.download > #voltarDown {
+    width:30vw;
+    bottom:5vh;
+    left: 6vw;
+    z-index: 5;
+}
+
+.outro > #voltarOutro {
+    width:30vw;
+    bottom:6vh;
+    left: 5vw;
+    z-index: 5;
+}
+
+.descDiv2 > #voltarDesc {
+    width:42vw;
+    bottom:6vh;
+    right: 2vw;
     z-index: 5;
 }
 

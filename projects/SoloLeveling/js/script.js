@@ -1,249 +1,3 @@
-const buttonStatus = document.querySelector('#statusButton');
-
-buttonStatus.addEventListener('click', () => {
-    document.querySelector(".status").style.display = 'none'; 
-    document.querySelector(".desc").style.display = 'flex'; 
-    document.querySelector("#voltarDesc").style.display = 'flex';
-    document.querySelector("#btnStatus").style.transition = '0.2s linear';
-    document.querySelector("#btnStatus").style.borderBottom = '2px solid black';
-    document.querySelector("#btnDesc").style.transition = '0.5s linear';
-    document.querySelector("#btnDesc").style.borderBottom = '2px solid rgb(92, 0, 128)';
-    //Manda para o banco de dados
-    //Link
-    const link = document.querySelector('#link');
-    const linkValue = link.value;
-    if(linkValue.length == 0) {
-        localStorage.setItem('link', 'Tirei da Mente Mesmo');
-    }else {
-        localStorage.setItem('link', linkValue);
-    }
-    //Nome
-    const nome = document.querySelector('#nome');
-    const nomeValue = nome.value;
-    if(nomeValue.length == 0) {
-        localStorage.setItem('nome', 'Sem Nome');
-    }else {
-        localStorage.setItem('nome', nomeValue);
-    }
-    //Descrição
-    const rank = document.querySelector('#rank');
-    const rankValue = rank.value;
-    if(rankValue.length == 0) {
-        localStorage.setItem('rank', 'Sem Rank');
-    }else {
-        localStorage.setItem('rank', rankValue);
-    }
-    //Ataque
-    const ataque = document.querySelector('#ataque');
-    const ataqueValue = ataque.value;
-    if(ataqueValue.length == 0) {
-        localStorage.setItem('ataque', '0');
-    }else {
-        localStorage.setItem('ataque', ataqueValue);
-    }
-    //Defesa
-    const defesa = document.querySelector('#defesa');
-    const defesaValue = defesa.value;
-    if(defesaValue.length == 0) {
-        localStorage.setItem('defesa', '0');
-    }else {
-        localStorage.setItem('defesa', defesaValue);
-    }
-    //Hp
-    const hp = document.querySelector('#hp');
-    const hpValue = hp.value;
-    if(hpValue.length == 0) {
-        localStorage.setItem('hp', '0');
-    }else {
-        localStorage.setItem('hp', hpValue);
-    }
-    //Agilidade
-    const agilidade = document.querySelector('#agilidade');
-    const agilidadeValue = agilidade.value;
-    if(agilidadeValue.length == 0) {
-        localStorage.setItem('agilidade', '0');
-    }else {
-        localStorage.setItem('agilidade', agilidadeValue);
-    }
-    //Energia
-    const energia = document.querySelector('#energia');
-    const energiaValue = energia.value;
-    if(energiaValue.length == 0) {
-        localStorage.setItem('energia', '0');
-    }else {
-        localStorage.setItem('energia', energiaValue);
-    }
-});
-
-const buttonDesc = document.querySelector('#descButton');
-
-buttonDesc.addEventListener('click', () => {
-    document.querySelector("#voltarDesc").style.display = 'none';
-    document.querySelector(".desc").style.display = 'none'; 
-    document.querySelector(".outro").style.display = 'flex'; 
-    document.querySelector("#voltarOutro").style.display = 'flex';
-    document.querySelector("#btnDesc").style.transition = '0.2s linear';
-    document.querySelector("#btnDesc").style.borderBottom = '2px solid black';
-    document.querySelector("#btnOutro").style.transition = '0.5s linear';
-    document.querySelector("#btnOutro").style.borderBottom = '2px solid rgb(92, 0, 128)';
-    //Descrição
-    const desc = document.querySelector('#descricao');
-    const descValue = desc.value;
-    if(descValue.length == 0) {
-        localStorage.setItem('Desc', 'Sem Descrição');
-    }else {
-        localStorage.setItem('Desc', descValue);
-    }
-    //Observação
-    const obs1 = document.querySelector('#obs1');
-    const obs1Value = obs1.value;
-    if(obs1Value.length == 0) {
-        localStorage.setItem('Obs1', 'Sem Observação');
-    }else {
-        localStorage.setItem('Obs1', obs1Value);
-    }
-    //Observação
-    const obs2 = document.querySelector('#obs2');
-    const obs2Value = obs2.value;
-    if(obs2Value.length == 0) {
-        localStorage.setItem('Obs2', 'Sem Observação');
-    }else {
-        localStorage.setItem('Obs2', obs2Value);
-    }
-    //Observação
-    const obs3 = document.querySelector('#obs3');
-    const obs3Value = obs3.value;
-    if(obs3Value.length == 0) {
-        localStorage.setItem('Obs3', 'Sem Observação');
-    }else {
-        localStorage.setItem('Obs3', obs3Value);
-    }
-    //Observação
-    const obs4 = document.querySelector('#obs4');
-    const obs4Value = obs4.value;
-    if(obs4Value.length == 0) {
-        localStorage.setItem('Obs4', 'Sem Observação');
-    }else {
-        localStorage.setItem('Obs4', obs4Value);
-    }
-    //Observação
-    const obs5 = document.querySelector('#obs5');
-    const obs5Value = obs5.value;
-    if(obs5Value.length == 0) {
-        localStorage.setItem('Obs5', 'Sem Observação');
-    }else {
-        localStorage.setItem('Obs5', obs5Value);
-    }
-    //Observação
-    const obs6 = document.querySelector('#obs6');
-    const obs6Value = obs6.value;
-    if(obs6Value.length == 0) {
-        localStorage.setItem('Obs6', 'Sem Observação');
-    }else {
-        localStorage.setItem('Obs6', obs6Value);
-    }
-});
-
-const buttonOutro = document.querySelector('#outroButton');
-
-buttonOutro.addEventListener('click', () => {
-    document.querySelector("#voltarOutro").style.display = 'none';
-    document.querySelector(".outro").style.display = 'none'; 
-    document.querySelector(".download").style.display = 'flex';
-    document.querySelector("#voltarDown").style.display = 'flex'; 
-    document.querySelector("#btnOutro").style.transition = '0.2s linear';
-    document.querySelector("#btnOutro").style.borderBottom = '2px solid black';
-    document.querySelector("#btnCopy").style.transition = '0.5s linear';
-    document.querySelector("#btnCopy").style.borderBottom = '2px solid rgb(92, 0, 128)';
-    //Cooldown
-    const cool = document.querySelector('#cooldown');
-    const coolValue = cool.value;
-    if(coolValue.length == 0) {
-        localStorage.setItem('cool', '0');
-    }else {
-        localStorage.setItem('cool', coolValue);
-    }
-    //Fuga
-    const fuga = document.querySelector('#fuga');
-    const fugaValue = fuga.value;
-    if(fugaValue.length == 0) {
-        localStorage.setItem('fuga', 'Sem Fuga');
-    }else {
-        localStorage.setItem('fuga', fugaValue);
-    }
-    //Usuários
-    const user = document.querySelector('#usuarios');
-    const userValue = user.value;
-    if(userValue.length == 0) {
-        localStorage.setItem('user', 'Sem usuário');
-    }else {
-        localStorage.setItem('user', userValue);
-    }
-    //Preço
-    const preco = document.querySelector('#preco');
-    const precoValue = preco.value;
-    if(precoValue.length == 0) {
-        localStorage.setItem('preco', '0,00');
-    }else {
-        localStorage.setItem('preco', precoValue);
-    }
-    const conteudo = localStorage.getItem('link') + "\n\n" +  `*${localStorage.getItem('nome')}*` + "\n\n" + `*${localStorage.getItem('rank')}*` + "\n\n" + "*Atk*: " + localStorage.getItem('ataque') + "\n\n" + "*Def*: " + localStorage.getItem('defesa') + "\n\n" + "*Hp*: " + localStorage.getItem('hp') + "\n\n" + "*Agl*: " + localStorage.getItem('agilidade') + "\n\n" + "*Eng*: " + localStorage.getItem('energia') + "\n\n" + "*Descrição*: " + localStorage.getItem('Desc') + "\n\n" + "*Obs 1*: " + localStorage.getItem('Obs1') + "\n\n"  + "*Obs 2*: " + localStorage.getItem('Obs2') + "\n\n"  + "*Obs 3*: " + localStorage.getItem('Obs3') + "\n\n"  + "*Obs 4*: " + localStorage.getItem('Obs4') + "\n\n" + "*Obs 5*: " + localStorage.getItem('Obs5') + "\n\n"  + "*Obs 6*: " + localStorage.getItem('Obs6') + "\n\n" + "*Cooldown*: " + localStorage.getItem('cool') + "\n\n"  + "*Fuga*: " + localStorage.getItem('fuga') + "\n\n"  + "*Usuário*: " + localStorage.getItem('user') + "\n\n"  + "*Preço*: " + localStorage.getItem('preco') + "\n\n";
-    const descricao = document.querySelector('#downloadText').value = conteudo;
-});
-
-const copiar = document.querySelector('#copiar');
-
-copiar.addEventListener('click', () => {
-    document.querySelector('#copiar').innerHTML = 'Copiado <span class="material-symbols-outlined">done</span></button>';
-    setTimeout(() => {
-        document.querySelector('#copiar').innerHTML = 'Copiar <span class="material-symbols-outlined">content_copy</span></button>';
-    }, 2000);
-    const descricao = document.querySelector('#downloadText');
-    descricao.select();
-    descricao.setSelectionRange(0, 99999);
-    document.execCommand('copy');
-});
-
-//Função dos botões de voltar
-
-const buttonVoltar = document.querySelector('#voltarDesc');
-
-buttonVoltar.addEventListener('click', () => {
-    document.querySelector("#voltarDesc").style.display = 'none'; 
-    document.querySelector(".status").style.display = 'flex'; 
-    document.querySelector(".desc").style.display = 'none';
-    document.querySelector("#btnDesc").style.transition = '0.2s linear';
-    document.querySelector("#btnDesc").style.borderBottom = '2px solid black';
-    document.querySelector("#btnStatus").style.transition = '0.5s linear';
-    document.querySelector("#btnStatus").style.borderBottom = '2px solid rgb(92, 0, 128)';
-});
-
-const voltarOutro = document.querySelector('#voltarOutro');
-
-voltarOutro.addEventListener('click', () => {
-    document.querySelector("#voltarOutro").style.display = 'none';
-    document.querySelector("#voltarDesc").style.display = 'flex'; 
-    document.querySelector(".desc").style.display = 'flex'; 
-    document.querySelector(".outro").style.display = 'none';
-    document.querySelector("#btnOutro").style.transition = '0.2s linear';
-    document.querySelector("#btnOutro").style.borderBottom = '2px solid black';
-    document.querySelector("#btnDesc").style.transition = '0.5s linear';
-    document.querySelector("#btnDesc").style.borderBottom = '2px solid rgb(92, 0, 128)';
-});
-
-const voltarDownload = document.querySelector('#voltarDown');
-
-voltarDownload.addEventListener('click', () => {
-    document.querySelector("#voltarDown").style.display = 'none'; 
-    document.querySelector("#voltarOutro").style.display = 'flex';
-    document.querySelector(".outro").style.display = 'flex'; 
-    document.querySelector(".download").style.display = 'none';
-    document.querySelector("#btnCopy").style.transition = '0.2s linear';
-    document.querySelector("#btnCopy").style.borderBottom = '2px solid black';
-    document.querySelector("#btnOutro").style.transition = '0.5s linear';
-    document.querySelector("#btnOutro").style.borderBottom = '2px solid rgb(92, 0, 128)';
-});
-
 //Linguagens 
 
 const eua = {
@@ -273,14 +27,21 @@ const eua = {
     usuarios: 'Users',
     preco: 'Price',
     linkStatus: 'Link',
-nomeStatus: 'Name',
-rankStatus: 'Rank',
-ataqueStatus: 'Attack',
-defesaStatus: 'Defense',
-hpStatus: 'HP',
-agilidadeStatus: 'Agility',
-energiaStatus: 'Energy',
-next: 'Next',
+    nomeStatus: 'Name',
+    rankStatus: 'Rank',
+    ataqueStatus: 'Attack',
+    defesaStatus: 'Defense',
+    hpStatus: 'HP',
+    agilidadeStatus: 'Agility',
+    energiaStatus: 'Energy',
+    next: 'Next',
+    mente: 'I came up with it out of my mind.',
+    nomeValue: 'No Name',
+rankValue: 'No Rank',
+observacao: 'No Observation',
+descricaoValue: 'No Description',
+userValue: 'No User',
+fuga: 'No Escape',
 
 };
 
@@ -319,6 +80,13 @@ hpStatus: 'Hp',
 agilidadeStatus: 'Agilidade',
 energiaStatus: 'Energia',
 next: 'Próximo',
+mente: 'Tirei da Mente Mesmo',
+nomeValue: 'Sem Nome',
+rankValue: 'Sem Rank',
+descricaoValue: 'Sem Descrição',
+observacao: 'Sem Observação',
+userValue: 'Sem Usuário',
+fuga: 'Sem Fuga',
 };
 
 const spain = {
@@ -356,6 +124,13 @@ hpStatus: 'HP',
 agilidadeStatus: 'Agilidad',
 energiaStatus: 'Energía',
 next: 'Siguiente',
+mente: 'Lo saqué de mi mente.',
+nomeValue: 'Sin Nombre',
+rankValue: 'Sin Rango',
+observacao: 'Sin Observación',
+descricaoValue: 'Sin Descripción',
+userValue: 'Sin Usuario',
+fuga: 'Sin Escape',
 
 };
 
@@ -394,6 +169,13 @@ hpStatus: 'HP',
 agilidadeStatus: 'Agilité',
 energiaStatus: 'Énergie',
 next: 'Suivant',
+mente: "Je l'ai sorti de mon esprit.",
+nomeValue: 'Sans Nom',
+rankValue: 'Sans Rang',
+observacao: 'Aucune Observation',
+descricaoValue: 'Aucune Description',
+userValue: 'Sans Utilisateur',
+fuga: 'Sans Évasion',
 
 };
 
@@ -432,6 +214,13 @@ hpStatus: '生命值',
 agilidadeStatus: '敏捷',
 energiaStatus: '能量',
 next: '下一个',
+mente: "我完全是凭自己的想法想出来的。",
+nomeValue: '无名',
+rankValue: '无等级',
+observacao: '无备注',
+descricaoValue: '无描述',
+userValue: '无用户',
+fuga: '无逃脱',
 
 };
 
@@ -529,6 +318,21 @@ const ingles = () => {
     elementos.nextStatus.innerHTML = eua.next;
     elementos.nextDesc.innerHTML = eua.next;
     elementos.nextOutro.innerHTML = eua.next;
+    localStorage.setItem('link', eua.mente);
+    localStorage.setItem('nome', eua.nomeValue);
+    localStorage.setItem('rank', eua.rankValue);
+    localStorage.setItem('Desc', eua.descricaoValue);
+    localStorage.setItem('Obs1', eua.observacao);
+    localStorage.setItem('Obs2', eua.observacao);
+    localStorage.setItem('Obs3', eua.observacao);
+    localStorage.setItem('Obs4', eua.observacao);
+    localStorage.setItem('Obs5', eua.observacao);
+    localStorage.setItem('Obs6', eua.observacao);
+    localStorage.setItem('fuga', eua.fuga);
+    localStorage.setItem('userValue', eua.userValue);
+    const conteudo = localStorage.getItem('link') + "\n\n" +  `*${localStorage.getItem('nome')}*` + "\n\n" + `*${localStorage.getItem('rank')}*` + "\n\n" + "*Attack*: " + localStorage.getItem('ataque') + "\n\n" + "*Defense*: " + localStorage.getItem('defesa') + "\n\n" + "*Hp*: " + localStorage.getItem('hp') + "\n\n" + "*Agility*: " + localStorage.getItem('agilidade') + "\n\n" + "*Energy*: " + localStorage.getItem('energia') + "\n\n" + "*Description*: " + localStorage.getItem('Desc') + "\n\n" + "*Observation 1*: " + localStorage.getItem('Obs1') + "\n\n"  + "*Observation 2*: " + localStorage.getItem('Obs2') + "\n\n"  + "*Observation 3*: " + localStorage.getItem('Obs3') + "\n\n"  + "*Observation 4*: " + localStorage.getItem('Obs4') + "\n\n" + "*Observation 5*: " + localStorage.getItem('Obs5') + "\n\n"  + "*Observation 6*: " + localStorage.getItem('Obs6') + "\n\n" + "*Cooldown*: " + localStorage.getItem('cool') + "\n\n"  + "*Escape*: " + localStorage.getItem('fuga') + "\n\n"  + "*User*: " + localStorage.getItem('user') + "\n\n"  + "*Price*: " + localStorage.getItem('preco') + "\n\n";
+    const descricao = document.querySelector('#downloadText').value = conteudo;
+    
 }
 
 const portugues = () => {
@@ -583,6 +387,21 @@ const portugues = () => {
     elementos.nextStatus.innerHTML = brasil.next;
     elementos.nextDesc.innerHTML = brasil.next;
     elementos.nextOutro.innerHTML = brasil.next;
+    localStorage.setItem('link', brasil.mente);
+    localStorage.setItem('nome', brasil.nomeValue);
+    localStorage.setItem('rank', brasil.rankValue);
+    localStorage.setItem('Desc', brasil.descricaoValue);
+    localStorage.setItem('Obs1', brasil.observacao);
+    localStorage.setItem('Obs2', brasil.observacao);
+    localStorage.setItem('Obs3', brasil.observacao);
+    localStorage.setItem('Obs4', brasil.observacao);
+    localStorage.setItem('Obs5', brasil.observacao);
+    localStorage.setItem('Obs6', brasil.observacao);
+    localStorage.setItem('fuga', brasil.fuga);
+    localStorage.setItem('userValue', brasil.userValue);
+    const conteudo = localStorage.getItem('link') + "\n\n" + `*${localStorage.getItem('nome')}*` + "\n\n" + `*${localStorage.getItem('rank')}*` + "\n\n" + "*Ataque*: " + localStorage.getItem('ataque') + "\n\n" + "*Defesa*: " + localStorage.getItem('defesa') + "\n\n" + "*Hp*: " + localStorage.getItem('hp') + "\n\n" + "*Agilidade*: " + localStorage.getItem('agilidade') + "\n\n" + "*Energia*: " + localStorage.getItem('energia') + "\n\n" + "*Descrição*: " + localStorage.getItem('Desc') + "\n\n" + "*Observação 1*: " + localStorage.getItem('Obs1') + "\n\n" +  "*Observação 2*: " + localStorage.getItem('Obs2') + "\n\n" +  "*Observação 3*: " + localStorage.getItem('Obs3') + "\n\n" +  "*Observação 4*: " + localStorage.getItem('Obs4') + "\n\n" + "*Observação 5*: " + localStorage.getItem('Obs5') + "\n\n" +  "*Observação 6*: " + localStorage.getItem('Obs6') + "\n\n" + "*Tempo de Recarga*: " + localStorage.getItem('cool') + "\n\n" +  "*Fuga*: " + localStorage.getItem('fuga') + "\n\n" +  "*Usuário*: " + localStorage.getItem('userValue') + "\n\n" +  "*Preço*: " + localStorage.getItem('preco') + "\n\n";
+    const descricao = document.querySelector('#downloadText').value = conteudo;
+    
 }
 
 const espanha = () => {
@@ -637,6 +456,20 @@ const espanha = () => {
     elementos.nextStatus.innerHTML = spain.next;
     elementos.nextDesc.innerHTML = spain.next;
     elementos.nextOutro.innerHTML = spain.next;
+    localStorage.setItem('link', spain.mente);
+    localStorage.setItem('nome', spain.nomeValue);
+    localStorage.setItem('rank', spain.rankValue);
+    localStorage.setItem('Desc', spain.descricaoValue);
+    localStorage.setItem('Obs1', spain.observacao);
+    localStorage.setItem('Obs2', spain.observacao);
+    localStorage.setItem('Obs3', spain.observacao);
+    localStorage.setItem('Obs4', spain.observacao);
+    localStorage.setItem('Obs5', spain.observacao);
+    localStorage.setItem('Obs6', spain.observacao);
+    localStorage.setItem('fuga', spain.fuga);
+    localStorage.setItem('userValue', spain.userValue);
+    const conteudo = localStorage.getItem('link') + "\n\n" + `*${localStorage.getItem('nome')}*` + "\n\n" + `*${localStorage.getItem('rank')}*` + "\n\n" + "*Ataque*: " + localStorage.getItem('ataque') + "\n\n" + "*Defensa*: " + localStorage.getItem('defesa') + "\n\n" + "*Hp*: " + localStorage.getItem('hp') + "\n\n" + "*Agilidad*: " + localStorage.getItem('agilidade') + "\n\n" + "*Energía*: " + localStorage.getItem('energia') + "\n\n" + "*Descripción*: " + localStorage.getItem('Desc') + "\n\n" + "*Observación 1*: " + localStorage.getItem('Obs1') + "\n\n" +  "*Observación 2*: " + localStorage.getItem('Obs2') + "\n\n" +  "*Observación 3*: " + localStorage.getItem('Obs3') + "\n\n" +  "*Observación 4*: " + localStorage.getItem('Obs4') + "\n\n" + "*Observación 5*: " + localStorage.getItem('Obs5') + "\n\n" +  "*Observación 6*: " + localStorage.getItem('Obs6') + "\n\n" + "*Tiempo de recarga*: " + localStorage.getItem('cool') + "\n\n" +  "*Escape*: " + localStorage.getItem('fuga') + "\n\n" +  "*Usuario*: " + localStorage.getItem('userValue') + "\n\n" +  "*Precio*: " + localStorage.getItem('preco') + "\n\n";
+    const descricao = document.querySelector('#downloadText').value = conteudo;
 }
 
 const frances = () => {
@@ -691,6 +524,20 @@ const frances = () => {
     elementos.nextStatus.innerHTML = franca.next;
     elementos.nextDesc.innerHTML = franca.next;
     elementos.nextOutro.innerHTML = franca.next;
+    localStorage.setItem('link', franca.mente);
+    localStorage.setItem('nome', franca.nomeValue);
+    localStorage.setItem('rank', franca.rankValue);
+    localStorage.setItem('Desc', franca.descricaoValue);
+    localStorage.setItem('Obs1', franca.observacao);
+    localStorage.setItem('Obs2', franca.observacao);
+    localStorage.setItem('Obs3', franca.observacao);
+    localStorage.setItem('Obs4', franca.observacao);
+    localStorage.setItem('Obs5', franca.observacao);
+    localStorage.setItem('Obs6', franca.observacao);
+    localStorage.setItem('fuga', franca.fuga);
+    localStorage.setItem('userValue', franca.userValue);
+    const conteudo = localStorage.getItem('link') + "\n\n" +  `*${localStorage.getItem('nome')}*` + "\n\n" + `*${localStorage.getItem('rank')}*` + "\n\n" + "*Attaque*: " + localStorage.getItem('ataque') + "\n\n" + "*Défense*: " + localStorage.getItem('defesa') + "\n\n" + "*Hp*: " + localStorage.getItem('hp') + "\n\n" + "*Agilité*: " + localStorage.getItem('agilidade') + "\n\n" + "*Énergie*: " + localStorage.getItem('energia') + "\n\n" + "*Description*: " + localStorage.getItem('Desc') + "\n\n" + "*Observation 1*: " + localStorage.getItem('Obs1') + "\n\n" +  "*Observation 2*: " + localStorage.getItem('Obs2') + "\n\n" +  "*Observation 3*: " + localStorage.getItem('Obs3') + "\n\n" +  "*Observation 4*: " + localStorage.getItem('Obs4') + "\n\n" + "*Observation 5*: " + localStorage.getItem('Obs5') + "\n\n" +  "*Observation 6*: " + localStorage.getItem('Obs6') + "\n\n" + "*Temps de recharge*: " + localStorage.getItem('cool') + "\n\n" +  "*Fuite*: " + localStorage.getItem('fuga') + "\n\n" +  "*Utilisateur*: " + localStorage.getItem('userValue') + "\n\n" +  "*Prix*: " + localStorage.getItem('preco') + "\n\n";
+    const descricao = document.querySelector('#downloadText').value = conteudo;
 }
 
 const chines = () => {
@@ -745,7 +592,457 @@ const chines = () => {
     elementos.nextStatus.innerHTML = china.next;
     elementos.nextDesc.innerHTML = china.next;
     elementos.nextOutro.innerHTML = china.next;
+    localStorage.setItem('link', china.mente);
+    localStorage.setItem('nome', china.nomeValue);
+    localStorage.setItem('rank', china.rankValue);
+    localStorage.setItem('Desc', china.descricaoValue);
+    localStorage.setItem('Obs1', china.observacao);
+    localStorage.setItem('Obs2', china.observacao);
+    localStorage.setItem('Obs3', china.observacao);
+    localStorage.setItem('Obs4', china.observacao);
+    localStorage.setItem('Obs5', china.observacao);
+    localStorage.setItem('Obs6', china.observacao);
+    localStorage.setItem('fuga', china.fuga);
+    localStorage.setItem('userValue', china.userValue);
+    const conteudo = localStorage.getItem('link') + "\n\n" + `*${localStorage.getItem('nome')}*` + "\n\n" + `*${localStorage.getItem('rank')}*` + "\n\n" + "*攻击*: " + localStorage.getItem('ataque') + "\n\n" + "*防御*: " + localStorage.getItem('defesa') + "\n\n" + "*生命值*: " + localStorage.getItem('hp') + "\n\n" + "*敏捷*: " + localStorage.getItem('agilidade') + "\n\n" + "*能量*: " + localStorage.getItem('energia') + "\n\n" + "*描述*: " + localStorage.getItem('Desc') + "\n\n" + "*观察 1*: " + localStorage.getItem('Obs1') + "\n\n" +  "*观察 2*: " + localStorage.getItem('Obs2') + "\n\n" +  "*观察 3*: " + localStorage.getItem('Obs3') + "\n\n" +  "*观察 4*: " + localStorage.getItem('Obs4') + "\n\n" + "*观察 5*: " + localStorage.getItem('Obs5') + "\n\n" +  "*观察 6*: " + localStorage.getItem('Obs6') + "\n\n" + "*冷却时间*: " + localStorage.getItem('cool') + "\n\n" +  "*逃跑*: " + localStorage.getItem('fuga') + "\n\n" +  "*用户*: " + localStorage.getItem('userValue') + "\n\n" +  "*价格*: " + localStorage.getItem('preco') + "\n\n";
+    const descricao = document.querySelector('#downloadText').value = conteudo;
 }
+
+const buttonStatus = document.querySelector('#statusButton');
+
+const link = document.querySelector('#link');
+
+const statu = document.querySelector(".status");
+const desc = document.querySelector(".desc");
+const backDesc = document.querySelector("#voltarDesc");
+const btnStatus = document.querySelector("#btnStatus");
+const btnDesc = document.querySelector("#btnDesc");
+const nome = document.querySelector('#nome');
+const nomeValue = nome.value;
+const rank = document.querySelector('#rank');
+const rankValue = rank.value;
+const ataque = document.querySelector('#ataque');
+const ataqueValue = ataque.value;
+const defesa = document.querySelector('#defesa');
+const defesaValue = defesa.value;
+const hp = document.querySelector('#hp');
+const hpValue = hp.value;
+const agilidade = document.querySelector('#agilidade');
+const agilidadeValue = agilidade.value;
+const energia = document.querySelector('#energia');
+const energiaValue = energia.value;
+
+const backOur = document.querySelector("#voltarOutro");
+const our = document.querySelector(".outro");
+const btnOur = document.querySelector("#btnOutro");
+
+const btnCopy = document.querySelector("#btnCopy");
+const backDown = document.querySelector("#voltarDown");
+const download = document.querySelector(".download");
+
+const descricao = document.querySelector('#descricao');
+const descValue = descricao.value;
+
+const obs1 = document.querySelector('#obs1');
+const obs1Value = obs1.value;
+const obs2 = document.querySelector('#obs2');
+const obs2Value = obs2.value;
+const obs3 = document.querySelector('#obs3');
+const obs3Value = obs3.value;
+const obs6 = document.querySelector('#obs6');
+const obs6Value = obs6.value;
+const obs4 = document.querySelector('#obs4');
+const obs4Value = obs4.value;
+const obs5 = document.querySelector('#obs5');
+const obs5Value = obs5.value;
+
+const cool = document.querySelector('#cooldown');
+const coolValue = cool.value;
+const fuga = document.querySelector('#fuga');
+const fugaValue = fuga.value;
+const user = document.querySelector('#usuarios');
+const userValue = user.value;
+const preco = document.querySelector('#preco');
+    const precoValue = preco.value;
+
+buttonStatus.addEventListener('click', () => {
+    statu.style.display = 'none'; 
+    desc.style.display = 'flex'; 
+    backDesc.style.display = 'flex';
+    btnStatus.style.transition = '0.2s linear';
+    btnStatus.style.borderBottom = '2px solid transparent';
+    btnDesc.style.transition = '0.5s linear';
+    btnDesc.style.borderBottom = '2px solid rgb(92, 0, 128)';
+
+    //Manda para o LocalStorage de dados
+    const linkValue = link.value;
+    if(linkValue.length == 0 && localStorage.getItem('lang') == 'eu') {
+        localStorage.setItem('link', eua.mente);
+    }else if(linkValue.length == 0 && localStorage.getItem('lang') == 'es') {
+        localStorage.setItem('link', spain.mente);
+    }else if(linkValue.length == 0 && localStorage.getItem('lang') == 'fr') {
+        localStorage.setItem('link', franca.mente);
+    }else if(linkValue.length == 0 && localStorage.getItem('lang') == 'br') {
+        localStorage.setItem('link', brasil.mente);
+    }else if(linkValue.length == 0 && localStorage.getItem('lang') == 'ch') {
+        localStorage.setItem('link', china.mente);
+    }else {
+        localStorage.setItem('link', linkValue);
+    }
+    
+    //Nome
+
+    if(nomeValue.length == 0 && localStorage.getItem('lang') == 'eu') {
+        localStorage.setItem('nome', eua.nomeValue);
+    }else if(nomeValue.length == 0 && localStorage.getItem('lang') == 'es') {
+        localStorage.setItem('nome', spain.nomeValue);
+    }else if(nomeValue.length == 0 && localStorage.getItem('lang') == 'fr') {
+        localStorage.setItem('nome', franca.nomeValue);
+    }else if(nomeValue.length == 0 && localStorage.getItem('lang') == 'br') {
+        localStorage.setItem('nome', brasil.nomeValue);
+    }else if(nomeValue.length == 0 && localStorage.getItem('lang') == 'ch') {
+        localStorage.setItem('nome', china.nomeValue);
+    }else {
+        localStorage.setItem('nome', nomeValue);
+    }
+
+    //Descrição
+
+    if(rankValue.length == 0 && localStorage.getItem('lang') == 'eu') {
+        localStorage.setItem('rank', eua.rankValue);
+    }else if(rankValue.length == 0 && localStorage.getItem('lang') == 'es') {
+        localStorage.setItem('rank', spain.rankValue);
+    }else if(rankValue.length == 0 && localStorage.getItem('lang') == 'fr') {
+        localStorage.setItem('rank', franca.rankValue);
+    }else if(rankValue.length == 0 && localStorage.getItem('lang') == 'br') {
+        localStorage.setItem('rank', brasil.rankValue);
+    }else if(rankValue.length == 0 && localStorage.getItem('lang') == 'ch') {
+        localStorage.setItem('rank', china.rankValue);
+    }else {
+        localStorage.setItem('rank', rankValue);
+    }
+
+    //Ataque
+
+    if(ataqueValue.length == 0) {
+        localStorage.setItem('ataque', '0');
+    }else {
+        localStorage.setItem('ataque', ataqueValue);
+    }
+
+    //Defesa
+
+    if(defesaValue.length == 0) {
+        localStorage.setItem('defesa', '0');
+    }else {
+        localStorage.setItem('defesa', defesaValue);
+    }
+
+    //Hp
+
+    if(hpValue.length == 0) {
+        localStorage.setItem('hp', '0');
+    }else {
+        localStorage.setItem('hp', hpValue);
+    }
+
+    //Agilidade
+
+    if(agilidadeValue.length == 0) {
+        localStorage.setItem('agilidade', '0');
+    }else {
+        localStorage.setItem('agilidade', agilidadeValue);
+    }
+
+    //Energia
+
+    if(energiaValue.length == 0) {
+        localStorage.setItem('energia', '0');
+    }else {
+        localStorage.setItem('energia', energiaValue);
+    }
+});
+
+const buttonDesc = document.querySelector('#descButton');
+
+buttonDesc.addEventListener('click', () => {
+    backDesc.style.display = 'none';
+    desc.style.display = 'none'; 
+    our.style.display = 'flex'; 
+    backOur.style.display = 'flex';
+    btnDesc.style.transition = '0.2s linear';
+    btnDesc.style.borderBottom = '2px solid transparent';
+    btnOur.style.transition = '0.5s linear';
+    btnOur.style.borderBottom = '2px solid rgb(92, 0, 128)';
+    
+    //Descrição
+    
+    if(descValue.length == 0 && localStorage.getItem('lang') == 'eu') {
+        localStorage.setItem('Desc', eua.descricaoValue);
+    }else if(descValue.length == 0 && localStorage.getItem('lang') == 'es') {
+        localStorage.setItem('Desc', spain.descricaoValue);
+    }else if(descValue.length == 0 && localStorage.getItem('lang') == 'fr') {
+        localStorage.setItem('Desc', franca.descricaoValue);
+    }else if(descValue.length == 0 && localStorage.getItem('lang') == 'br') {
+        localStorage.setItem('Desc', brasil.descricaoValue);
+    }else if(descValue.length == 0 && localStorage.getItem('lang') == 'ch') {
+        localStorage.setItem('Desc', china.descricaoValue);
+    }else {
+        localStorage.setItem('Desc', descValue);
+    }
+    
+    //Observação
+
+    if(obs1Value.length == 0 && localStorage.getItem('lang') == 'eu') {
+        localStorage.setItem('Obs1', eua.observacao);
+    }else if(obs1Value.length == 0 && localStorage.getItem('lang') == 'es') {
+        localStorage.setItem('Obs1', spain.observacao);
+    }else if(obs1Value.length == 0 && localStorage.getItem('lang') == 'fr') {
+        localStorage.setItem('Obs1', franca.observacao);
+    }else if(obs1Value.length == 0 && localStorage.getItem('lang') == 'br') {
+        localStorage.setItem('Obs1', brasil.observacao);
+    }else if(obs1Value.length == 0 && localStorage.getItem('lang') == 'ch') {
+        localStorage.setItem('Obs1', china.observacao);
+    }else {
+        localStorage.setItem('Obs1', obs1Value);
+    }
+
+    //Observação
+
+    if(obs2Value.length == 0 && localStorage.getItem('lang') == 'eu') {
+        localStorage.setItem('Obs2', eua.observacao);
+    }else if(obs2Value.length == 0 && localStorage.getItem('lang') == 'es') {
+        localStorage.setItem('Obs2', spain.observacao);
+    }else if(obs2Value.length == 0 && localStorage.getItem('lang') == 'fr') {
+        localStorage.setItem('Obs2', franca.observacao);
+    }else if(obs2Value.length == 0 && localStorage.getItem('lang') == 'br') {
+        localStorage.setItem('Obs2', brasil.observacao);
+    }else if(obs2Value.length == 0 && localStorage.getItem('lang') == 'ch') {
+        localStorage.setItem('Obs2', china.observacao);
+    }else {
+        localStorage.setItem('Obs2', obs2Value);
+    }
+
+    //Observação
+
+    if(obs3Value.length == 0 && localStorage.getItem('lang') == 'eu') {
+        localStorage.setItem('Obs3', eua.observacao);
+    }else if(obs3Value.length == 0 && localStorage.getItem('lang') == 'es') {
+        localStorage.setItem('Obs3', spain.observacao);
+    }else if(obs3Value.length == 0 && localStorage.getItem('lang') == 'fr') {
+        localStorage.setItem('Obs3', franca.observacao);
+    }else if(obs3Value.length == 0 && localStorage.getItem('lang') == 'br') {
+        localStorage.setItem('Obs3', brasil.observacao);
+    }else if(obs3Value.length == 0 && localStorage.getItem('lang') == 'ch') {
+        localStorage.setItem('Obs3', china.observacao);
+    }else {
+        localStorage.setItem('Obs3', obs3Value);
+    }
+
+    //Observação
+
+    if(obs4Value.length == 0 && localStorage.getItem('lang') == 'eu') {
+        localStorage.setItem('Obs4', eua.observacao);
+    }else if(obs4Value.length == 0 && localStorage.getItem('lang') == 'es') {
+        localStorage.setItem('Obs4', spain.observacao);
+    }else if(obs4Value.length == 0 && localStorage.getItem('lang') == 'fr') {
+        localStorage.setItem('Obs4', franca.observacao);
+    }else if(obs4Value.length == 0 && localStorage.getItem('lang') == 'br') {
+        localStorage.setItem('Obs4', brasil.observacao);
+    }else if(obs4Value.length == 0 && localStorage.getItem('lang') == 'ch') {
+        localStorage.setItem('Obs4', china.observacao);
+    }else {
+        localStorage.setItem('Obs4', obs4Value);
+    }
+
+    //Observação
+
+    if(obs5Value.length == 0 && localStorage.getItem('lang') == 'eu') {
+        localStorage.setItem('Obs5', eua.observacao);
+    }else if(obs5Value.length == 0 && localStorage.getItem('lang') == 'es') {
+        localStorage.setItem('Obs5', spain.observacao);
+    }else if(obs5Value.length == 0 && localStorage.getItem('lang') == 'fr') {
+        localStorage.setItem('Obs5', franca.observacao);
+    }else if(obs5Value.length == 0 && localStorage.getItem('lang') == 'br') {
+        localStorage.setItem('Obs5', brasil.observacao);
+    }else if(obs5Value.length == 0 && localStorage.getItem('lang') == 'ch') {
+        localStorage.setItem('Obs5', china.observacao);
+    }else {
+        localStorage.setItem('Obs5', obs5Value);
+    }
+
+    //Observação
+    
+    if(obs6Value.length == 0 && localStorage.getItem('lang') == 'eu') {
+        localStorage.setItem('Obs6', eua.observacao);
+    }else if(obs6Value.length == 0 && localStorage.getItem('lang') == 'es') {
+        localStorage.setItem('Obs6', spain.observacao);
+    }else if(obs6Value.length == 0 && localStorage.getItem('lang') == 'fr') {
+        localStorage.setItem('Obs6', franca.observacao);
+    }else if(obs6Value.length == 0 && localStorage.getItem('lang') == 'br') {
+        localStorage.setItem('Obs6', brasil.observacao);
+    }else if(obs6Value.length == 0 && localStorage.getItem('lang') == 'ch') {
+        localStorage.setItem('Obs6', china.observacao);
+    }else {
+        localStorage.setItem('Obs6', obs6Value);
+    }
+});
+
+const buttonOutro = document.querySelector('#outroButton');
+
+buttonOutro.addEventListener('click', () => {
+    backOur.style.display = 'none';
+    our.style.display = 'none'; 
+    download.style.display = 'flex';
+    backDown.style.display = 'flex'; 
+    btnOur.style.transition = '0.2s linear';
+    btnOur.style.borderBottom = '2px solid transparent';
+    btnCopy.style.transition = '0.5s linear';
+    btnCopy.style.borderBottom = '2px solid rgb(92, 0, 128)';
+
+    //Cooldown
+    
+    if(coolValue.length == 0) {
+        localStorage.setItem('cool', '0');
+    }else {
+        localStorage.setItem('cool', coolValue);
+    }
+
+    //Fuga
+
+    if(fugaValue.length == 0 && localStorage.getItem('lang') == 'eu') {
+        localStorage.setItem('fuga', eua.fuga);
+    }else if(fugaValue.length == 0 && localStorage.getItem('lang') == 'es') {
+        localStorage.setItem('fuga', spain.fuga);
+    }else if(fugaValue.length == 0 && localStorage.getItem('lang') == 'fr') {
+        localStorage.setItem('fuga', franca.fuga);
+    }else if(fugaValue.length == 0 && localStorage.getItem('lang') == 'br') {
+        localStorage.setItem('fuga', brasil.fuga);
+    }else if(fugaValue.length == 0 && localStorage.getItem('lang') == 'ch') {
+        localStorage.setItem('fuga', china.fuga);
+    }else {
+        localStorage.setItem('fuga', fugaValue);
+    }
+
+    //Usuários
+
+    if(userValue.length == 0 && localStorage.getItem('lang') == 'eu') {
+        localStorage.setItem('userValue', eua.userValue);
+    }else if(userValue.length == 0 && localStorage.getItem('lang') == 'es') {
+        localStorage.setItem('userValue', spain.userValue);
+    }else if(userValue.length == 0 && localStorage.getItem('lang') == 'fr') {
+        localStorage.setItem('userValue', franca.userValue);
+    }else if(userValue.length == 0 && localStorage.getItem('lang') == 'br') {
+        localStorage.setItem('userValue', brasil.userValue);
+    }else if(userValue.length == 0 && localStorage.getItem('lang') == 'ch') {
+        localStorage.setItem('userValue', china.userValue);
+    }else {
+        localStorage.setItem('userValue', userValue);
+    }
+    
+    //Preço
+    
+    if(precoValue.length == 0) {
+        localStorage.setItem('preco', '0,00');
+    }else {
+        localStorage.setItem('preco', precoValue);
+    }
+
+    //Exibe no textearea o conteudo preenchido nos formularios
+
+    if(descValue.length == 0 && localStorage.getItem('lang') == 'eu') {
+        const conteudo = localStorage.getItem('link') + "\n\n" +  `*${localStorage.getItem('nome')}*` + "\n\n" + `*${localStorage.getItem('rank')}*` + "\n\n" + "*Attack*: " + localStorage.getItem('ataque') + "\n\n" + "*Defense*: " + localStorage.getItem('defesa') + "\n\n" + "*Hp*: " + localStorage.getItem('hp') + "\n\n" + "*Agility*: " + localStorage.getItem('agilidade') + "\n\n" + "*Energy*: " + localStorage.getItem('energia') + "\n\n" + "*Description*: " + localStorage.getItem('Desc') + "\n\n" + "*Observation 1*: " + localStorage.getItem('Obs1') + "\n\n"  + "*Observation 2*: " + localStorage.getItem('Obs2') + "\n\n"  + "*Observation 3*: " + localStorage.getItem('Obs3') + "\n\n"  + "*Observation 4*: " + localStorage.getItem('Obs4') + "\n\n" + "*Observation 5*: " + localStorage.getItem('Obs5') + "\n\n"  + "*Observation 6*: " + localStorage.getItem('Obs6') + "\n\n" + "*Cooldown*: " + localStorage.getItem('cool') + "\n\n"  + "*Escape*: " + localStorage.getItem('fuga') + "\n\n"  + "*User*: " + localStorage.getItem('userValue') + "\n\n"  + "*Price*: " + localStorage.getItem('preco') + "\n\n";
+        const descricao = document.querySelector('#downloadText').value = conteudo;
+    }else if(descValue.length == 0 && localStorage.getItem('lang') == 'es') {
+        const conteudo = localStorage.getItem('link') + "\n\n" + `*${localStorage.getItem('nome')}*` + "\n\n" + `*${localStorage.getItem('rank')}*` + "\n\n" + "*Ataque*: " + localStorage.getItem('ataque') + "\n\n" + "*Defensa*: " + localStorage.getItem('defesa') + "\n\n" + "*Hp*: " + localStorage.getItem('hp') + "\n\n" + "*Agilidad*: " + localStorage.getItem('agilidade') + "\n\n" + "*Energía*: " + localStorage.getItem('energia') + "\n\n" + "*Descripción*: " + localStorage.getItem('Desc') + "\n\n" + "*Observación 1*: " + localStorage.getItem('Obs1') + "\n\n" +  "*Observación 2*: " + localStorage.getItem('Obs2') + "\n\n" +  "*Observación 3*: " + localStorage.getItem('Obs3') + "\n\n" +  "*Observación 4*: " + localStorage.getItem('Obs4') + "\n\n" + "*Observación 5*: " + localStorage.getItem('Obs5') + "\n\n" +  "*Observación 6*: " + localStorage.getItem('Obs6') + "\n\n" + "*Tiempo de recarga*: " + localStorage.getItem('cool') + "\n\n" +  "*Escape*: " + localStorage.getItem('fuga') + "\n\n" +  "*Usuario*: " + localStorage.getItem('userValue') + "\n\n" +  "*Precio*: " + localStorage.getItem('preco') + "\n\n";
+        const descricao = document.querySelector('#downloadText').value = conteudo;
+    }else if(descValue.length == 0 && localStorage.getItem('lang') == 'fr') {
+        const conteudo = localStorage.getItem('link') + "\n\n" +  `*${localStorage.getItem('nome')}*` + "\n\n" + `*${localStorage.getItem('rank')}*` + "\n\n" + "*Attaque*: " + localStorage.getItem('ataque') + "\n\n" + "*Défense*: " + localStorage.getItem('defesa') + "\n\n" + "*Hp*: " + localStorage.getItem('hp') + "\n\n" + "*Agilité*: " + localStorage.getItem('agilidade') + "\n\n" + "*Énergie*: " + localStorage.getItem('energia') + "\n\n" + "*Description*: " + localStorage.getItem('Desc') + "\n\n" + "*Observation 1*: " + localStorage.getItem('Obs1') + "\n\n" +  "*Observation 2*: " + localStorage.getItem('Obs2') + "\n\n" +  "*Observation 3*: " + localStorage.getItem('Obs3') + "\n\n" +  "*Observation 4*: " + localStorage.getItem('Obs4') + "\n\n" + "*Observation 5*: " + localStorage.getItem('Obs5') + "\n\n" +  "*Observation 6*: " + localStorage.getItem('Obs6') + "\n\n" + "*Temps de recharge*: " + localStorage.getItem('cool') + "\n\n" +  "*Fuite*: " + localStorage.getItem('fuga') + "\n\n" +  "*Utilisateur*: " + localStorage.getItem('userValue') + "\n\n" +  "*Prix*: " + localStorage.getItem('preco') + "\n\n";
+        const descricao = document.querySelector('#downloadText').value = conteudo;
+    }else if(descValue.length == 0 && localStorage.getItem('lang') == 'br') {
+        const conteudo = localStorage.getItem('link') + "\n\n" + `*${localStorage.getItem('nome')}*` + "\n\n" + `*${localStorage.getItem('rank')}*` + "\n\n" + "*Ataque*: " + localStorage.getItem('ataque') + "\n\n" + "*Defesa*: " + localStorage.getItem('defesa') + "\n\n" + "*Hp*: " + localStorage.getItem('hp') + "\n\n" + "*Agilidade*: " + localStorage.getItem('agilidade') + "\n\n" + "*Energia*: " + localStorage.getItem('energia') + "\n\n" + "*Descrição*: " + localStorage.getItem('Desc') + "\n\n" + "*Observação 1*: " + localStorage.getItem('Obs1') + "\n\n" +  "*Observação 2*: " + localStorage.getItem('Obs2') + "\n\n" +  "*Observação 3*: " + localStorage.getItem('Obs3') + "\n\n" +  "*Observação 4*: " + localStorage.getItem('Obs4') + "\n\n" + "*Observação 5*: " + localStorage.getItem('Obs5') + "\n\n" +  "*Observação 6*: " + localStorage.getItem('Obs6') + "\n\n" + "*Tempo de Recarga*: " + localStorage.getItem('cool') + "\n\n" +  "*Fuga*: " + localStorage.getItem('fuga') + "\n\n" +  "*Usuário*: " + localStorage.getItem('userValue') + "\n\n" +  "*Preço*: " + localStorage.getItem('preco') + "\n\n";
+        const descricao = document.querySelector('#downloadText').value = conteudo;
+    }else if(descValue.length == 0 && localStorage.getItem('lang') == 'ch') {
+        const conteudo = localStorage.getItem('link') + "\n\n" + `*${localStorage.getItem('nome')}*` + "\n\n" + `*${localStorage.getItem('rank')}*` + "\n\n" + "*攻击*: " + localStorage.getItem('ataque') + "\n\n" + "*防御*: " + localStorage.getItem('defesa') + "\n\n" + "*生命值*: " + localStorage.getItem('hp') + "\n\n" + "*敏捷*: " + localStorage.getItem('agilidade') + "\n\n" + "*能量*: " + localStorage.getItem('energia') + "\n\n" + "*描述*: " + localStorage.getItem('Desc') + "\n\n" + "*观察 1*: " + localStorage.getItem('Obs1') + "\n\n" +  "*观察 2*: " + localStorage.getItem('Obs2') + "\n\n" +  "*观察 3*: " + localStorage.getItem('Obs3') + "\n\n" +  "*观察 4*: " + localStorage.getItem('Obs4') + "\n\n" + "*观察 5*: " + localStorage.getItem('Obs5') + "\n\n" +  "*观察 6*: " + localStorage.getItem('Obs6') + "\n\n" + "*冷却时间*: " + localStorage.getItem('cool') + "\n\n" +  "*逃跑*: " + localStorage.getItem('fuga') + "\n\n" +  "*用户*: " + localStorage.getItem('userValue') + "\n\n" +  "*价格*: " + localStorage.getItem('preco') + "\n\n";
+        const descricao = document.querySelector('#downloadText').value = conteudo;
+    }
+});
+
+const copiar = document.querySelector('#copiar');
+
+copiar.addEventListener('click', () => { 
+    if(localStorage.getItem('lang') == 'eu') {
+        document.querySelector('#copiar').innerHTML = 'Copied <span class="material-symbols-outlined">done</span></button>';
+        setTimeout(() => {
+            document.querySelector('#copiar').innerHTML = `${eua.copyP} <span class="material-symbols-outlined">content_copy</span></button>`;
+        }, 2000);
+    }else if(localStorage.getItem('lang') == 'es') {
+        document.querySelector('#copiar').innerHTML = 'Copiado <span class="material-symbols-outlined">done</span></button>';
+        setTimeout(() => {
+            document.querySelector('#copiar').innerHTML = `${spain.copyP} <span class="material-symbols-outlined">content_copy</span></button>`;
+        }, 2000);
+    }else if(localStorage.getItem('lang') == 'fr') {
+        document.querySelector('#copiar').innerHTML = 'Copié <span class="material-symbols-outlined">done</span></button>';
+        setTimeout(() => {
+            document.querySelector('#copiar').innerHTML = `${franca.copyP} <span class="material-symbols-outlined">content_copy</span></button>`;
+        }, 2000);
+    }else if(localStorage.getItem('lang') == 'br') {
+        document.querySelector('#copiar').innerHTML = 'Copiado <span class="material-symbols-outlined">done</span></button>';
+        setTimeout(() => {
+            document.querySelector('#copiar').innerHTML = `${brasil.copyP} <span class="material-symbols-outlined">content_copy</span></button>`;
+        }, 2000);
+    }else if(localStorage.getItem('lang') == 'ch') {
+        document.querySelector('#copiar').innerHTML = '已复制 <span class="material-symbols-outlined">done</span></button>';
+        setTimeout(() => {
+            document.querySelector('#copiar').innerHTML = `${china.copyP} <span class="material-symbols-outlined">content_copy</span></button>`;
+        }, 2000);
+    }
+    
+    const descricao = document.querySelector('#downloadText');
+    descricao.select();
+    descricao.setSelectionRange(0, 99999);
+    document.execCommand('copy');
+});
+
+//Função dos botões de voltar
+
+const buttonVoltar = document.querySelector('#voltarDesc');
+
+buttonVoltar.addEventListener('click', () => {
+    backDesc.style.display = 'none'; 
+    statu.style.display = 'flex'; 
+    desc.style.display = 'none';
+    btnDesc.style.transition = '0.2s linear';
+    btnDesc.style.borderBottom = '2px solid transparent';
+    btnStatus.style.transition = '0.5s linear';
+    btnStatus.style.borderBottom = '2px solid rgb(92, 0, 128)';
+});
+
+const voltarOutro = document.querySelector('#voltarOutro');
+
+voltarOutro.addEventListener('click', () => {
+    backOur.style.display = 'none';
+    backDesc.style.display = 'flex'; 
+    desc.style.display = 'flex'; 
+    our.style.display = 'none';
+    btnOur.style.transition = '0.2s linear';
+    btnOur.style.borderBottom = '2px solid transparent'; 
+    btnDesc.style.transition = '0.5s linear';   
+    btnDesc.style.borderBottom = '2px solid rgb(92, 0, 128)';
+});
+
+const voltarDownload = document.querySelector('#voltarDown');
+
+voltarDownload.addEventListener('click', () => {
+    document.querySelector("#voltarDown").style.display = 'none'; 
+    backOur.style.display = 'flex';
+    our.style.display = 'flex'; 
+    download.style.display = 'none';
+    btnCopy.style.transition = '0.2s linear';
+    btnCopy.style.borderBottom = '2px solid transparent';
+    btnOur.style.transition = '0.5s linear';
+    btnOur.style.borderBottom = '2px solid rgb(92, 0, 128)';
+});
 
 let langSelecionada = document.querySelector('.idiomaSelecionada');
 let flagSelecionada = document.querySelector(".flagsSelecionada img");

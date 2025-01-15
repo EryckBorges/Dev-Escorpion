@@ -1,289 +1,281 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/resp.css" />
-     <link rel="stylesheet" href="../../global/css/style.css" />
-     <link rel="stylesheet" href="../../global/css/respGlobal.css" />
-     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      rel="stylesheet"
-    />
-    <!-- Scripts Personalizados -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
-    <script src="../../global/js/script.js" defer></script>
-  </head>
-  <body>
-    <header class="center over">
-        <video src="../SoloLeveling/image/background.mp4" autoplay="true"></video>
-        <div class="center over cont">
-            <div class="center over imgPerson animate-on-scroll" data-animation="fadeInUp">
-                <img src="./image/person.png" alt="">
-                <button id="voltarDesc" class="button over center"><span class="material-symbols-outlined">
-                        arrow_left_alt
-                    </span><p class="voltarDesc title"></p></button>
-                <button id="voltarOutro" class="button over center"><span class="material-symbols-outlined">
-                        arrow_left_alt
-                    </span><p class="voltarOutro title"></p></button>
-                <button id="voltarDown" class="button over center"><span class="material-symbols-outlined">
-                        arrow_left_alt
-                    </span><p class="voltarDown title"></p></button>
-            </div>
-            <div class="center over contTotal animate-on-scroll" data-animation="fadeIn">
-                <div class="dados center over">
-                  <div class="center over btnControls">
-                    <button id="btnStatus" class="center over button animate-on-scroll" data-animation="fadeInUpBig"><span class="material-symbols-outlined">
-                            bar_chart
-                        </span><p class="title statusP"></p></button>
-                    <button id="btnDesc" class="center over button animate-on-scroll" data-animation="fadeInDownBig">
-                        <span class="material-symbols-outlined">
-                            summarize
-                        </span><p class="title descP"></p></button>
-                    <button id="btnOutro" class="center over button animate-on-scroll" data-animation="fadeInUpBig"><span class="material-symbols-outlined">
-                            add
-                        </span><p class="title outroP"></p></button>
-                    <button id="btnCopy" class="center over button animate-on-scroll" data-animation="fadeInDownBig"><span class="material-symbols-outlined">
-                            content_copy
-                        </span><p class="title copyP"></p></button>
-                </div>
-                    <div class="center over status">
-                        <div class="center over status1">
-                            <p class="title animate-on-scroll linkStatus" data-animation="fadeInLeftBig"></p>
-                            <input type="text" id="link" class="animate-on-scroll" data-animation="fadeInLeftBig">
-                            <p class="title animate-on-scroll nomeStatus" data-animation="fadeInLeftBig"></p>
-                            <input type="text" id="nome" class="animate-on-scroll" data-animation="fadeInLeftBig">
-                            <p class="title animate-on-scroll rankStatus" data-animation="fadeInLeftBig"></p>
-                            <input type="text" id="rank" class="animate-on-scroll" data-animation="fadeInLeftBig">
-                            <p class="title animate-on-scroll ataqueStatus" data-animation="fadeInLeftBig"></p>
-                            <input type="text" id="ataque" class="animate-on-scroll" data-animation="fadeInLeftBig">
-                        </div>
-                        <div class="center over status2">
-                            <p class="title animate-on-scroll defesaStatus" data-animation="fadeInRightBig"></p>
-                            <input type="text" id="defesa" class="animate-on-scroll" data-animation="fadeInRightBig">
-                            <p class="title animate-on-scroll hpStatus" data-animation="fadeInRightBig"></p>
-                            <input type="text" id="hp" class="animate-on-scroll" data-animation="fadeInRightBig">
-                            <p class="title animate-on-scroll agilidadeStatus" data-animation="fadeInRightBig"></p>
-                            <input type="text" id="agilidade" class="animate-on-scroll" data-animation="fadeInRightBig">
-                            <p class="title animate-on-scroll energiaStatus" data-animation="fadeInRightBig"></p>
-                            <input type="text" id="energia" class="animate-on-scroll" data-animation="fadeInRightBig">
-                            <button id="statusButton" class="button center over"><p class="title"></p><span class="material-symbols-outlined">
-                                    arrow_right_alt
-                                </span></button>
-                        </div>
-    
-                    </div>
-                    <div class="center over desc" style="display: none;">
-                        <div class="center over descDiv">
-                            <p class="title animate-on-scroll descricao" data-animation="fadeInDown"></p>
-                            <textarea id="descricao" class="animate-on-scroll" data-animation="fadeInDown"></textarea>
-                            <p class="title animate-on-scroll obs1" data-animation="fadeInDown"></p>
-                            <input type="text" id="obs1" class="animate-on-scroll" data-animation="fadeInDown">
-                            <p class="title animate-on-scroll obs2" data-animation="fadeInDown"></p>
-                            <input type="text" id="obs2" class="animate-on-scroll" data-animation="fadeInDown">
-                        </div>
-                        <div class="center over descDiv2">
-                            <p class="title animate-on-scroll obs3" data-animation="fadeInRight"></p>
-                            <input type="text" id="obs3" class="animate-on-scroll" data-animation="fadeInRight">
-                            <p class="title animate-on-scroll obs4" data-animation="fadeInRight"></p>
-                            <input type="text" id="obs4" class="animate-on-scroll" data-animation="fadeInRight">
-                            <p class="title animate-on-scroll obs5" data-animation="fadeInRight"></p>
-                            <input type="text" id="obs5" class="animate-on-scroll" data-animation="fadeInRight">
-                            <p class="title animate-on-scroll obs6" data-animation="fadeInRight"></p>
-                            <input type="text" id="obs6" class="animate-on-scroll" data-animation="fadeInRight">
-                            <button id="descButton" class="center over button"><p class="title"></p><span class="material-symbols-outlined">
-                                    arrow_right_alt
-                                </span></button>
-                        </div>
-    
-                    </div>
-                    <div class="center over outro" style="display: none;">
-                        <p class="title animate-on-scroll cooldown" data-animation="fadeInUp">Cooldown</p>
-                        <input type="text" id="cooldown" class="animate-on-scroll" data-animation="fadeInUp">
-                        <p class="title animate-on-scroll fuga" data-animation="fadeInUp">Fuga</p>
-                        <input type="text" id="fuga" class="animate-on-scroll" data-animation="fadeInUp">
-                        <p class="title animate-on-scroll usuarios" data-animation="fadeInUp">Usuários</p>
-                        <input type="text" id="usuarios" class="animate-on-scroll" data-animation="fadeInUp">
-                        <p class="title animate-on-scroll preco" data-animation="fadeInUp">Preço</p>
-                        <input type="text" id="preco" class="animate-on-scroll" data-animation="fadeInUp">
-                        <button id="outroButton" class="center over button"><p class="title"></p><span class="material-symbols-outlined">
-                                arrow_right_alt
-                            </span></button>
-                    </div>
-                    <div class="center over download" style="display: none;">
-                        <textarea id="downloadText" spellcheck="false" class="animate-on-scroll" data-animation="fadeIn"></textarea>
-                        <button id="copiar" class="center over button"><p class="title copiar"></p><span class="material-symbols-outlined">
-                                content_copy
-                            </span></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-      <nav class="center over menu">
-        <div class="logo center over">
-          <h1>E<b>B</b></h1>
-        </div>
-        <div class="indices center over">
-          <a href="" class="hvr-underline-from-center inicio">Ínicio</a>
-          <a href="" class="hvr-underline-from-center cursos">Cursos</a>
-          <a href="" class="hvr-underline-from-center jogos">Jogos</a>
-          <a href="" class="hvr-underline-from-center portfolio">Portfolio</a>
-          <a href="" class="hvr-underline-from-center contato">Contato</a>
-          <a href="" class="hvr-underline-from-center sobre">Sobre</a>
-          <div class="flagsSelecionada button center over">
-            <p class="idiomaSelecionada center over">BR</p>
-            <img
-              src="./image/brasil.png"
-              draggable="false"
-              alt="Flags"
-            />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/resp.css" />
+  <link rel="stylesheet" href="../../global/css/style.css" />
+  <link rel="stylesheet" href="../../global/css/respGlobal.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <!-- Scripts Personalizados -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
+  <script src="../../global/js/script.js" defer></script>
+</head>
+
+<body>
+  <header class="center over">
+    <video src="../SoloLeveling/image/background.mp4" autoplay="true"></video>
+    <div class="center over cont">
+      <div class="center over imgPerson animate-on-scroll" data-animation="fadeInUp">
+        <img src="./image/person.png" alt="" />
+      </div>
+      <div class="center over contTotal animate-on-scroll" data-animation="fadeIn">
+        <div class="dados center over">
+          <div class="center over btnControls">
+            <button id="btnStatus" class="center over button animate-on-scroll" data-animation="fadeInUpBig">
+              <span class="material-symbols-outlined"> bar_chart </span>
+              <p class="title statusP"></p>
+            </button>
+            <button id="btnDesc" class="center over button animate-on-scroll" data-animation="fadeInDownBig">
+              <span class="material-symbols-outlined"> summarize </span>
+              <p class="title descP"></p>
+            </button>
+            <button id="btnOutro" class="center over button animate-on-scroll" data-animation="fadeInUpBig">
+              <span class="material-symbols-outlined"> add </span>
+              <p class="title outroP"></p>
+            </button>
+            <button id="btnCopy" class="center over button animate-on-scroll" data-animation="fadeInDownBig">
+              <span class="material-symbols-outlined"> content_copy </span>
+              <p class="title copyP"></p>
+            </button>
           </div>
-          <button class="btnMenu button center over">
-            <span class="material-symbols-outlined"> menu </span>
-          </button>
-        </div>
-      </nav>
-      <div class="typedBr title" style="display: none"></div>
-      <div class="typedEu title" style="display: none"></div>
-      <div class="typedEs title" style="display: none"></div>
-      <div class="typedCh title" style="display: none"></div>
-      <div class="typedFr title" style="display: none"></div>
-      <section class="lang center over animate__animated">
-        <div class="flagsSelect center over eua">
-          <p class="idioma center over">EN</p>
-          <img
-            src="../../global/icon/eua.png"
-            draggable="false"
-            alt="Flags"
-          />
-        </div>
-        <div class="flagsSelect center over spain">
-          <p class="idioma center over">ES</p>
-          <img
-            src="../../global/icon/spain.png"
-            draggable="false"
-            alt="Flags"
-          />
-        </div>
-        <div class="flagsSelect center over brasil">
-          <p class="idioma center over">PT</p>
-          <img
-            src="../../global/icon/brasil.png"
-            draggable="false"
-            alt="Flags"
-          />
-        </div>
-        <div class="flagsSelect center over franca">
-          <p class="idioma center over">FR</p>
-          <img
-            src="../../global/icon/franca.png"
-            draggable="false"
-            alt="Flags"
-          />
-        </div>
-        <div class="flagsSelect center over china">
-          <p class="idioma center over">ZH</p>
-          <img
-            src="../../global/icon/china.png"
-            draggable="false"
-            alt="Flags"
-          />
-        </div>
-      </section>
-      <!--Mobile Menu-->
-      <section class="menuMobile center over fadeInMenu">
-        <nav class="center over mobile fadeInRightMenu">
-          <div class="center over logoMenu">
-            <section class="triangulos center over">
-              <div class="triangulo center over"></div>
-              <div class="triangulo center over"></div>
-              <div class="triangulo center over"></div>
-            </section>
-            <div class="logo center over">
-              <h1>E<b>B</b></h1>
+          <div class="center over status">
+            <div class="center over status1">
+              <p class="title animate-on-scroll linkStatus" data-animation="fadeInLeftBig"></p>
+              <input type="text" id="link" class="animate-on-scroll" data-animation="fadeInLeftBig" />
+              <p class="title animate-on-scroll nomeStatus" data-animation="fadeInLeftBig"></p>
+              <input type="text" id="nome" class="animate-on-scroll" data-animation="fadeInLeftBig" />
+              <p class="title animate-on-scroll rankStatus" data-animation="fadeInLeftBig"></p>
+              <input type="text" id="rank" class="animate-on-scroll" data-animation="fadeInLeftBig" />
+              <p class="title animate-on-scroll ataqueStatus" data-animation="fadeInLeftBig"></p>
+              <input type="text" id="ataque" class="animate-on-scroll" data-animation="fadeInLeftBig" />
             </div>
-            <div class="button closeMenu center over">
-              <button class="button center over closeMenuBtn">
-                <span class="material-symbols-outlined"> close </span>
+            <div class="center over status2">
+              <p class="title animate-on-scroll defesaStatus" data-animation="fadeInRightBig"></p>
+              <input type="text" id="defesa" class="animate-on-scroll" data-animation="fadeInRightBig" />
+              <p class="title animate-on-scroll hpStatus" data-animation="fadeInRightBig"></p>
+              <input type="text" id="hp" class="animate-on-scroll" data-animation="fadeInRightBig" />
+              <p class="title animate-on-scroll agilidadeStatus" data-animation="fadeInRightBig"></p>
+              <input type="text" id="agilidade" class="animate-on-scroll" data-animation="fadeInRightBig" />
+              <p class="title animate-on-scroll energiaStatus" data-animation="fadeInRightBig"></p>
+              <input type="text" id="energia" class="animate-on-scroll" data-animation="fadeInRightBig" />
+              <button id="statusButton" class="button center over">
+                <p class="title"></p>
+                <span class="material-symbols-outlined">
+                  arrow_right_alt
+                </span>
               </button>
             </div>
           </div>
-          <div class="contMenu center over">
-            <section class="triangulos center over">
-              <div class="triangulo center over"></div>
-              <div class="triangulo center over"></div>
-              <div class="triangulo center over"></div>
-            </section>
-            <div class="linksMenu center over">
-              <div class="userMobile center over button">
-                <img
-                  src="./image/userPhoto.jpg"
-                  draggable="false"
-                  alt="User Image"
-                  loading="lazy"
-                />
-                <p class="title">Éryck Borges</p>
-              </div>
-              <div class="linkMenu center over">
-                <span class="material-symbols-outlined"> home </span>
-                <a href="" class="inicio">Ínicio</a>
-              </div>
-              <div class="linkMenu center over">
-                <span class="material-symbols-outlined"> book_2 </span>
-                <a href="" class="cursos">Cursos</a>
-              </div>
-              <div class="linkMenu center over">
-                <span class="material-symbols-outlined"> sports_esports </span>
-                <a href="" class="jogos">Jogos</a>
-              </div>
-              <div class="linkMenu center over">
-                <span class="material-symbols-outlined"> person </span>
-                <a href="" class="portfolio">Portfolio</a>
-              </div>
-              <div class="linkMenu center over">
-                <span class="material-symbols-outlined"> mail </span>
-                <a href="" class="contato">Contato</a>
-              </div>
-              <div class="linkMenu center over">
-                <span class="material-symbols-outlined"> info </span>
-                <a href="" class="sobre">Sobre</a>
-              </div>
+          <div class="center over desc" style="display: none">
+            <div class="center over descDiv">
+              <p class="title animate-on-scroll descricao" data-animation="fadeInDown"></p>
+              <textarea id="descricao" class="animate-on-scroll" data-animation="fadeInDown"></textarea>
+              <p class="title animate-on-scroll obs1" data-animation="fadeInDown"></p>
+              <input type="text" id="obs1" class="animate-on-scroll" data-animation="fadeInDown" />
+              <p class="title animate-on-scroll obs2" data-animation="fadeInDown"></p>
+              <input type="text" id="obs2" class="animate-on-scroll" data-animation="fadeInDown" />
+            </div>
+            <div class="center over descDiv2">
+              <p class="title animate-on-scroll obs3" data-animation="fadeInRight"></p>
+              <input type="text" id="obs3" class="animate-on-scroll" data-animation="fadeInRight" />
+              <p class="title animate-on-scroll obs4" data-animation="fadeInRight"></p>
+              <input type="text" id="obs4" class="animate-on-scroll" data-animation="fadeInRight" />
+              <p class="title animate-on-scroll obs5" data-animation="fadeInRight"></p>
+              <input type="text" id="obs5" class="animate-on-scroll" data-animation="fadeInRight" />
+              <p class="title animate-on-scroll obs6" data-animation="fadeInRight"></p>
+              <input type="text" id="obs6" class="animate-on-scroll" data-animation="fadeInRight" />
+              <button id="descButton" class="center over button">
+                <p class="title"></p>
+                <span class="material-symbols-outlined">
+                  arrow_right_alt
+                </span>
+              </button>
+              <button id="voltarDesc" class="button over center">
+                <span class="material-symbols-outlined">
+                  arrow_left_alt
+                </span>
+                <p class="voltarDesc title"></p>
+              </button>
             </div>
           </div>
-        </nav>
-      </section>
-    </header>
-    <main class="center over">
-        <div class="contentDescProject center over">
-            <div id="topBack" class="animate-on-scroll" data-animation="fadeInDown" draggable="false" alt="Top back"></div>
-            <div id="bottomBack" class="animate-on-scroll" data-animation="fadeInUp" draggable="false" alt="Bottom back"></div>
-            <div class="textProject center over animate-on-scroll" data-animation="fadeInLeft">
-                <img src="" draggable="false" alt="Logo SoloLeveling">
-                <h1 class="title"></h1>
-                <p class="text"></p>
-            </div>
-            <div class="personSung center over animate-on-scroll" data-animation="fadeInRight">
-                <img src="https://preview.redd.it/l15ciyfgs6c41.png?auto=webp&s=683483302a9634e2b1d77694ab9440f8cf75744c" alt="Sung Gin Hu" draggable="false">
-            </div>
+          <div class="center over outro" style="display: none">
+            <p class="title animate-on-scroll cooldown" data-animation="fadeInUp">
+              Cooldown
+            </p>
+            <input type="text" id="cooldown" class="animate-on-scroll" data-animation="fadeInUp" />
+            <p class="title animate-on-scroll fuga" data-animation="fadeInUp">
+              Fuga
+            </p>
+            <input type="text" id="fuga" class="animate-on-scroll" data-animation="fadeInUp" />
+            <p class="title animate-on-scroll usuarios" data-animation="fadeInUp">
+              Usuários
+            </p>
+            <input type="text" id="usuarios" class="animate-on-scroll" data-animation="fadeInUp" />
+            <p class="title animate-on-scroll preco" data-animation="fadeInUp">
+              Preço
+            </p>
+            <input type="text" id="preco" class="animate-on-scroll" data-animation="fadeInUp" />
+            <button id="outroButton" class="center over button">
+              <p class="title"></p>
+              <span class="material-symbols-outlined"> arrow_right_alt </span>
+            </button>
+            <button id="voltarOutro" class="button over center">
+              <span class="material-symbols-outlined">
+                arrow_left_alt
+              </span>
+              <p class="voltarOutro title"></p>
+            </button>
+          </div>
+          <div class="center over download" style="display: none">
+            <textarea id="downloadText" spellcheck="false" class="animate-on-scroll" data-animation="fadeIn"></textarea>
+            <button id="copiar" class="center over button">
+              <p class="title copiar"></p>
+              <span class="material-symbols-outlined"> content_copy </span>
+            </button>
+            <button id="voltarDown" class="button over center">
+              <span class="material-symbols-outlined">
+                arrow_left_alt
+              </span>
+              <p class="voltarDown title"></p>
+            </button>
+          </div>
         </div>
-    </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.15/paper-full.min.js"></script>
-    <script src="./js/script.js"></script>
-  </body>
+      </div>
+    </div>
+    <nav class="center over menu">
+      <div class="logo center over">
+        <h1>E<b>B</b></h1>
+      </div>
+      <div class="indices center over">
+        <a href="" class="hvr-underline-from-center inicio">Ínicio</a>
+        <a href="" class="hvr-underline-from-center cursos">Cursos</a>
+        <a href="" class="hvr-underline-from-center jogos">Jogos</a>
+        <a href="" class="hvr-underline-from-center portfolio">Portfolio</a>
+        <a href="" class="hvr-underline-from-center contato">Contato</a>
+        <a href="" class="hvr-underline-from-center sobre">Sobre</a>
+        <div class="flagsSelecionada button center over">
+          <p class="idiomaSelecionada center over">BR</p>
+          <img src="./image/brasil.png" draggable="false" alt="Flags" />
+        </div>
+        <button class="btnMenu button center over">
+          <span class="material-symbols-outlined"> menu </span>
+        </button>
+      </div>
+    </nav>
+    <div class="typedBr title" style="display: none"></div>
+    <div class="typedEu title" style="display: none"></div>
+    <div class="typedEs title" style="display: none"></div>
+    <div class="typedCh title" style="display: none"></div>
+    <div class="typedFr title" style="display: none"></div>
+    <section class="lang center over animate__animated">
+      <div class="flagsSelect center over eua">
+        <p class="idioma center over">EN</p>
+        <img src="../../global/icon/eua.png" draggable="false" alt="Flags" />
+      </div>
+      <div class="flagsSelect center over spain">
+        <p class="idioma center over">ES</p>
+        <img src="../../global/icon/spain.png" draggable="false" alt="Flags" />
+      </div>
+      <div class="flagsSelect center over brasil">
+        <p class="idioma center over">PT</p>
+        <img src="../../global/icon/brasil.png" draggable="false" alt="Flags" />
+      </div>
+      <div class="flagsSelect center over franca">
+        <p class="idioma center over">FR</p>
+        <img src="../../global/icon/franca.png" draggable="false" alt="Flags" />
+      </div>
+      <div class="flagsSelect center over china">
+        <p class="idioma center over">ZH</p>
+        <img src="../../global/icon/china.png" draggable="false" alt="Flags" />
+      </div>
+    </section>
+    <!--Mobile Menu-->
+    <section class="menuMobile center over fadeInMenu">
+      <nav class="center over mobile fadeInRightMenu">
+        <div class="center over logoMenu">
+          <section class="triangulos center over">
+            <div class="triangulo center over"></div>
+            <div class="triangulo center over"></div>
+            <div class="triangulo center over"></div>
+          </section>
+          <div class="logo center over">
+            <h1>E<b>B</b></h1>
+          </div>
+          <div class="button closeMenu center over">
+            <button class="button center over closeMenuBtn">
+              <span class="material-symbols-outlined"> close </span>
+            </button>
+          </div>
+        </div>
+        <div class="contMenu center over">
+          <section class="triangulos center over">
+            <div class="triangulo center over"></div>
+            <div class="triangulo center over"></div>
+            <div class="triangulo center over"></div>
+          </section>
+          <div class="linksMenu center over">
+            <div class="userMobile center over button">
+              <img src="./image/userPhoto.jpg" draggable="false" alt="User Image" loading="lazy" />
+              <p class="title">Éryck Borges</p>
+            </div>
+            <div class="linkMenu center over">
+              <span class="material-symbols-outlined"> home </span>
+              <a href="" class="inicio">Ínicio</a>
+            </div>
+            <div class="linkMenu center over">
+              <span class="material-symbols-outlined"> book_2 </span>
+              <a href="" class="cursos">Cursos</a>
+            </div>
+            <div class="linkMenu center over">
+              <span class="material-symbols-outlined"> sports_esports </span>
+              <a href="" class="jogos">Jogos</a>
+            </div>
+            <div class="linkMenu center over">
+              <span class="material-symbols-outlined"> person </span>
+              <a href="" class="portfolio">Portfolio</a>
+            </div>
+            <div class="linkMenu center over">
+              <span class="material-symbols-outlined"> mail </span>
+              <a href="" class="contato">Contato</a>
+            </div>
+            <div class="linkMenu center over">
+              <span class="material-symbols-outlined"> info </span>
+              <a href="" class="sobre">Sobre</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </section>
+  </header>
+  <main class="center over">
+    <div class="contentDescProject center over">
+      <div id="topBack" class="animate-on-scroll" data-animation="fadeInDown" draggable="false" alt="Top back"></div>
+      <div id="bottomBack" class="animate-on-scroll" data-animation="fadeInUp" draggable="false" alt="Bottom back">
+      </div>
+      <div class="textProject center over animate-on-scroll" data-animation="fadeInLeft">
+        <img src="" draggable="false" alt="Logo SoloLeveling" />
+        <h1 class="title"></h1>
+        <p class="text"></p>
+      </div>
+      <div class="personSung center over animate-on-scroll" data-animation="fadeInRight">
+        <img src="https://preview.redd.it/l15ciyfgs6c41.png?auto=webp&s=683483302a9634e2b1d77694ab9440f8cf75744c"
+          alt="Sung Gin Hu" draggable="false" />
+      </div>
+    </div>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.15/paper-full.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
 </html>
