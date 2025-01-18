@@ -704,6 +704,7 @@ main {
 .qrCode > img {
     width: 50%;
     height: 80%;
+    border-radius:20px;
 }
 
 .redesContact {
