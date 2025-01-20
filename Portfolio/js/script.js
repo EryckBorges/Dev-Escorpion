@@ -1699,4 +1699,16 @@ closeMore.addEventListener('click', () => {
 });
 
 
+//Redirecionamento dos projetos
 
+const sololeveling = document.querySelector('.sololeveling');
+
+sololeveling.addEventListener('click', () => {
+    window.location.href = '../../projects/sololeveling/'
+});
+
+const relogio = document.querySelector('.relogio');
+
+relogio.addEventListener('click', () => {
+    window.location.href = '../../projects/relogio/'
+});

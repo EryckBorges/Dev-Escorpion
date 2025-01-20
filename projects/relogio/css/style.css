@@ -52,7 +52,7 @@ header {
     justify-content: left;
     width: 90%;
     font-size: 2em;
-    color: white;
+    color: var(--branco);
     font-weight: bold;
 }
 
