@@ -252,4 +252,37 @@
 .descAvaliacao {
     font-size: 1em;
 }
+
+.qrCode {
+    width: 60%;
+    margin-left: 0px;
+    padding-left: 10px;
+}
+
+.contactRedes {
+    margin-block: -20px;
+}
+
+.qrCode > h1 {
+    font-size: 1.6em;
+    color: var(--branco);
+    height: 20%;
+    text-align: center;
+}
+
+.qrCode > img {
+    width: 95%;
+    height: 40%;
+    border-radius:20px;
+}
+
+.redesContact {
+    width: 40%;
+}
+
+.redesContact > a {
+    width: 60%;
+    height: 15%;
+}
+
 }
