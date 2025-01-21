@@ -51,7 +51,6 @@ const more = document.querySelector('.more');
 const ferramentas = document.querySelector('.ferramentas');
 const closeMore = document.querySelector('.iconMore button');
 
-
 //Linguagens
 
 const eua = {
@@ -143,7 +142,6 @@ canva7Eu: 'Exporting and Formats',
 canva8Eu: 'Animations',
 canva9Eu: 'Marketing and Branding',
 canvaTitleEu: 'My Canva Knowledge',
-
 };
 
 const brasil = {
@@ -1341,9 +1339,6 @@ const figmaFunction = () => {
     porcento.style.border = '2px solid var(--figma)';
     closeMore.style.color = 'var(--figma)';
     conhecimentoPorcento.style.color = 'var(--figma)';
-    setInterval(() => {
-        langPage();
-    }, 500);
     if (ferramentas.classList.contains('fadeInLeft')) {
         ferramentas.classList.remove('fadeInLeft');
     }
@@ -1363,6 +1358,7 @@ const figmaFunction = () => {
         conhecimentoPorcento.innerHTML = '80% de meu conhecimento';
         naoConhecimentoPorcento.innerHTML = '20% de conhecimento <br> que não possuo'
     }, 500);
+    langPage();
 }
 
 const htmlFunction = () => {
@@ -1382,9 +1378,6 @@ const htmlFunction = () => {
     porcento.style.border = '2px solid var(--html)';
     closeMore.style.color = 'var(--html)';
     conhecimentoPorcento.style.color = 'var(--html)';
-setInterval(() => {
-    langPage();
-}, 500);
     if (ferramentas.classList.contains('fadeInLeft')) {
         ferramentas.classList.remove('fadeInLeft');
     }
@@ -1404,6 +1397,7 @@ setInterval(() => {
         conhecimentoPorcento.innerHTML = '75% de meu conhecimento';
         naoConhecimentoPorcento.innerHTML = '25% de conhecimento <br> que não possuo'
     }, 500);
+    langPage();
 }
 
 const cssFunction = () => {
@@ -1423,9 +1417,6 @@ const cssFunction = () => {
     porcento.style.border = '2px solid var(--css)';
     closeMore.style.color = 'var(--css)';
     conhecimentoPorcento.style.color = 'var(--css)';
-    setInterval(() => {
-        langPage();
-    }, 500);
     if (ferramentas.classList.contains('fadeInLeft')) {
         ferramentas.classList.remove('fadeInLeft');
     }
@@ -1445,6 +1436,7 @@ const cssFunction = () => {
         conhecimentoPorcento.innerHTML = '80% de meu conhecimento';
         naoConhecimentoPorcento.innerHTML = '20% de conhecimento <br> que não possuo'
     }, 500);
+    langPage();
 }
 
 const jsFunction = () => {
@@ -1464,9 +1456,6 @@ const jsFunction = () => {
     porcento.style.border = '2px solid var(--js)';
     closeMore.style.color = 'var(--js)';
     conhecimentoPorcento.style.color = 'var(--js)';
-    setInterval(() => {
-        langPage();
-    }, 500);
     if (ferramentas.classList.contains('fadeInLeft')) {
         ferramentas.classList.remove('fadeInLeft');
     }
@@ -1486,6 +1475,7 @@ const jsFunction = () => {
         conhecimentoPorcento.innerHTML = '80% de meu conhecimento';
         naoConhecimentoPorcento.innerHTML = '20% de conhecimento <br> que não possuo'
     }, 500);
+    langPage();
 }
 
 const gitFunction = () => {
@@ -1505,9 +1495,6 @@ const gitFunction = () => {
     porcento.style.border = '2px solid var(--git)';
     closeMore.style.color = 'var(--git)';
     conhecimentoPorcento.style.color = 'var(--git)';
-    setInterval(() => {
-        langPage();
-    }, 500);
     if (ferramentas.classList.contains('fadeInLeft')) {
         ferramentas.classList.remove('fadeInLeft');
     }
@@ -1527,6 +1514,7 @@ const gitFunction = () => {
         conhecimentoPorcento.innerHTML = '80% de meu conhecimento';
         naoConhecimentoPorcento.innerHTML = '20% de conhecimento <br> que não possuo'
     }, 500);
+    langPage();
 }
 
 const githubFunction = () => {
@@ -1546,9 +1534,6 @@ const githubFunction = () => {
     porcento.style.border = '2px solid var(--branco)';
     closeMore.style.color = 'var(--branco)';
     conhecimentoPorcento.style.color = 'var(--branco)';
-    setInterval(() => {
-        langPage();
-    }, 500);
     if (ferramentas.classList.contains('fadeInLeft')) {
         ferramentas.classList.remove('fadeInLeft');
     }
@@ -1568,6 +1553,7 @@ const githubFunction = () => {
         conhecimentoPorcento.innerHTML = '80% de meu conhecimento';
         naoConhecimentoPorcento.innerHTML = '20% de conhecimento <br> que não possuo'
     }, 500);
+    langPage();
 }
 
 const canvaFunction = () => {
@@ -1587,9 +1573,6 @@ const canvaFunction = () => {
     porcento.style.border = '2px solid var(--canva)';
     closeMore.style.color = 'var(--canva)';
     conhecimentoPorcento.style.color = 'var(--canva)';
-    setInterval(() => {
-        langPage();
-    }, 500);
     if (ferramentas.classList.contains('fadeInLeft')) {
         ferramentas.classList.remove('fadeInLeft');
     }
@@ -1609,6 +1592,7 @@ const canvaFunction = () => {
         conhecimentoPorcento.innerHTML = '80% de meu conhecimento';
         naoConhecimentoPorcento.innerHTML = '20% de conhecimento <br> que não possuo'
     }, 500);
+    langPage();
 }
 
 //Função do clique do icone
@@ -1697,7 +1681,6 @@ closeMore.addEventListener('click', () => {
         more.classList.add("closed");
     }, 500);
 });
-
 
 //Redirecionamento dos projetos
 
