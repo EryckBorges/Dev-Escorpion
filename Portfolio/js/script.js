@@ -142,6 +142,7 @@ canva7Eu: 'Exporting and Formats',
 canva8Eu: 'Animations',
 canva9Eu: 'Marketing and Branding',
 canvaTitleEu: 'My Canva Knowledge',
+contact: "Talk to me, and let's create something amazing together!",
 };
 
 const brasil = {
@@ -236,7 +237,7 @@ const brasil = {
     canva8Br: 'Animações',
     canva9Br: 'Marketing e Branding',
     canvaTitleBr: 'Meus Conhecimentos de Canva',
-
+    contact: 'Fale comigo e vamos criar algo incrível juntos!',
 };
 
 const spain = {
@@ -328,7 +329,7 @@ canva7Es: 'Exportación y Formatos',
 canva8Es: 'Animaciones',
 canva9Es: 'Marketing y Branding',
 canvaTitleEs: 'Mis Conocimientos de Canva',
-
+contact: '¡Habla conmigo y creemos algo increíble juntos!'
 };
 
 const franca = {
@@ -420,7 +421,7 @@ canva7Fr: 'Exportation et Formats',
 canva8Fr: 'Animations',
 canva9Fr: 'Marketing et Branding',
 canvaTitleFr: 'Mes Connaissances en Canva',
-
+contact : "Parlez-moi et créons quelque chose d'incroyable ensemble !"
 };
 
 const china = {
@@ -512,7 +513,7 @@ canva7Ch: '导出和格式',
 canva8Ch: '动画',
 canva9Ch: '市场营销和品牌',
 canvaTitleCh: '我的 Canva 知识',
-
+contact: '和我聊聊，让我们一起创造一些令人惊叹的东西！'
 };
 
 const elementos = {
@@ -530,6 +531,7 @@ const elementos = {
     tecnologias: document.querySelector('.estudos h1'),
     certificado: document.querySelector('.certificados h1'),
     avaliacaoTitle: document.querySelector('.avaliacao h1'),
+    contact: document.querySelector('.qrCode h1'),
 };
 
 const ingles = () => {
@@ -649,6 +651,7 @@ const ingles = () => {
         conhecimento9.innerHTML = eua.canva9Eu;
         titleConhecimento.innerHTML = eua.canvaTitleEu;
     }
+    elementos.contact.innerHTML = eua.contact;
 }
 
 const portugues = () => {
@@ -768,6 +771,7 @@ const portugues = () => {
         conhecimento9.innerHTML = brasil.canva9Br;
         titleConhecimento.innerHTML = brasil.canvaTitleBr;
     }
+    elementos.contact.innerHTML = brasil.contact;
 }
 
 const espanha = () => {
@@ -886,6 +890,7 @@ const espanha = () => {
         conhecimento9.innerHTML = spain.canva9Es;
         titleConhecimento.innerHTML = spain.canvaTitleEs;
     }
+    elementos.contact.innerHTML = spain.contact;
 }
 
 const frances = () => {
@@ -1005,7 +1010,7 @@ const frances = () => {
         conhecimento9.innerHTML = franca.canva9Fr;
         titleConhecimento.innerHTML = franca.canvaTitleFr;
     }
-    
+    elementos.contact.innerHTML = franca.contact;
 }
 
 const chines = () => {
@@ -1124,6 +1129,7 @@ const chines = () => {
     conhecimento9.innerHTML = china.canva9Ch;
     titleConhecimento.innerHTML = china.canvaTitleCh;
 }
+elementos.contact.innerHTML = china.contact;
 }
 
 //Muda a linguagem do site 
