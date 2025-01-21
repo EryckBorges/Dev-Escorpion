@@ -9,6 +9,7 @@ header {
     height:auto;
     background: transparent;
     flex-direction: row;
+    margin-top: -10px;
 }
 
 .triangulo {
