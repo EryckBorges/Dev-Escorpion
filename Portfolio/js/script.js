@@ -143,6 +143,9 @@ canva8Eu: 'Animations',
 canva9Eu: 'Marketing and Branding',
 canvaTitleEu: 'My Canva Knowledge',
 contact: "Talk to me, and let's create something amazing together!",
+titleSolo: 'Solo Leveling RPG Generator',
+titleRelogio: 'Clocks and Stopwatch',
+
 };
 
 const brasil = {
@@ -238,6 +241,8 @@ const brasil = {
     canva9Br: 'Marketing e Branding',
     canvaTitleBr: 'Meus Conhecimentos de Canva',
     contact: 'Fale comigo e vamos criar algo incrível juntos!',
+    titleSolo: 'Gerador RPG Solo Leveling',
+titleRelogio: 'Relógios e Cronômetro',
 };
 
 const spain = {
@@ -329,7 +334,10 @@ canva7Es: 'Exportación y Formatos',
 canva8Es: 'Animaciones',
 canva9Es: 'Marketing y Branding',
 canvaTitleEs: 'Mis Conocimientos de Canva',
-contact: '¡Habla conmigo y creemos algo increíble juntos!'
+contact: '¡Habla conmigo y creemos algo increíble juntos!',
+titleSolo: 'Generador RPG Solo Leveling',
+titleRelogio: 'Relojes y Cronómetro',
+
 };
 
 const franca = {
@@ -421,7 +429,10 @@ canva7Fr: 'Exportation et Formats',
 canva8Fr: 'Animations',
 canva9Fr: 'Marketing et Branding',
 canvaTitleFr: 'Mes Connaissances en Canva',
-contact : "Parlez-moi et créons quelque chose d'incroyable ensemble !"
+contact : "Parlez-moi et créons quelque chose d'incroyable ensemble !",
+titleSolo: 'Générateur RPG Solo Leveling',
+titleRelogio: 'Horloges et Chronomètre',
+
 };
 
 const china = {
@@ -513,7 +524,10 @@ canva7Ch: '导出和格式',
 canva8Ch: '动画',
 canva9Ch: '市场营销和品牌',
 canvaTitleCh: '我的 Canva 知识',
-contact: '和我聊聊，让我们一起创造一些令人惊叹的东西！'
+contact: '和我聊聊，让我们一起创造一些令人惊叹的东西！',
+titleSolo: 'Solo Leveling RPG 生成器',
+titleRelogio: '时钟和计时器',
+
 };
 
 const elementos = {
@@ -532,6 +546,8 @@ const elementos = {
     certificado: document.querySelector('.certificados h1'),
     avaliacaoTitle: document.querySelector('.avaliacao h1'),
     contact: document.querySelector('.qrCode h1'),
+    titleRelogio: document.querySelector('.relogio p'),
+    titleSolo: document.querySelector('.sololeveling p'),
 };
 
 const ingles = () => {
@@ -652,6 +668,8 @@ const ingles = () => {
         titleConhecimento.innerHTML = eua.canvaTitleEu;
     }
     elementos.contact.innerHTML = eua.contact;
+    elementos.titleSolo.innerHTML = eua.titleSolo;
+    elementos.titleRelogio.innerHTML = eua.titleRelogio;
 }
 
 const portugues = () => {
@@ -772,6 +790,8 @@ const portugues = () => {
         titleConhecimento.innerHTML = brasil.canvaTitleBr;
     }
     elementos.contact.innerHTML = brasil.contact;
+    elementos.titleSolo.innerHTML = brasil.titleSolo;
+    elementos.titleRelogio.innerHTML = brasil.titleRelogio;
 }
 
 const espanha = () => {
@@ -891,6 +911,8 @@ const espanha = () => {
         titleConhecimento.innerHTML = spain.canvaTitleEs;
     }
     elementos.contact.innerHTML = spain.contact;
+    elementos.titleSolo.innerHTML = spain.titleSolo;
+    elementos.titleRelogio.innerHTML = spain.titleRelogio;
 }
 
 const frances = () => {
@@ -1011,6 +1033,8 @@ const frances = () => {
         titleConhecimento.innerHTML = franca.canvaTitleFr;
     }
     elementos.contact.innerHTML = franca.contact;
+    elementos.titleSolo.innerHTML = franca.titleSolo;
+    elementos.titleRelogio.innerHTML = franca.titleRelogio;
 }
 
 const chines = () => {
@@ -1130,6 +1154,8 @@ const chines = () => {
     titleConhecimento.innerHTML = china.canvaTitleCh;
 }
 elementos.contact.innerHTML = china.contact;
+elementos.titleSolo.innerHTML = china.titleSolo;
+elementos.titleRelogio.innerHTML = china.titleRelogio;
 }
 
 //Muda a linguagem do site 

@@ -129,6 +129,23 @@ main {
     justify-content: left !important;
     cursor: pointer;
     transition:0.5s linear;
+    position: relative;
+  }
+
+  .project > p {
+    font-size: 1.6em;
+    font-weight: bold;
+    position: absolute;
+    top: 5vh;
+    width: 100%;
+  }
+
+  .sololeveling > p {
+    color: #614080;
+  }
+
+  .relogio > p {
+    color: var(--vermelhoPadrao);
   }
   
   .project > img {

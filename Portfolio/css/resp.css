@@ -39,6 +39,10 @@
     .titleMyProject::after, .titleMyProject::before {
         width:150px;
     }
+
+    .project > p {
+        font-size: 1.4em;
+      }    
     
     .ferramentas {
         width:100%;
@@ -318,6 +322,11 @@
     height: 90%;
   }
 
+  .project > p {
+    font-size: 2em;
+  }
+
+
   .icones {
     display: none;
 }
@@ -563,7 +572,7 @@
 
 }
 
-@media screen and (width <= 500px) {
+@media screen and (width <= 350px) {
     .triangulo {
         border-left: 100px solid transparent;
         border-right: 100px solid transparent;
@@ -605,6 +614,10 @@
         width:150px;
         height: 5px;
     }
+
+    .project > p {
+        font-size: 1.4em;
+      }    
 
     .meusProjetos {
         height: 95vh;
