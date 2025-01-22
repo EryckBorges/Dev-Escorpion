@@ -19,7 +19,7 @@ body {
 header {
     height: 100vh !important;
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 header > video {
@@ -265,6 +265,7 @@ main {
 .contentDescProject {
     width:100%;
     height: 150vh;
+    margin-top: 0px;
     flex-direction: row;
     position: relative;
 }

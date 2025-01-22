@@ -1,4 +1,9 @@
 @media screen and (width <= 767px) {
+
+    header {
+        height: 30vh !important;
+    }
+
     .content_clock {
         background:url('../image/clock.svg') bottom / contain no-repeat !important;
         z-index: 2;
@@ -157,5 +162,194 @@
         rotate: 0deg;
         z-index: 10;
     }
+
+    .cronometro {
+        flex-direction: column-reverse;
+    }
+
+    .contentCronometo > h1 {
+        font-size: 1.6em;
+    }
     
+    .contentCronometo > p {
+        font-size: 1em;
+    }
+  
+.contentCronometo {
+    width: 100%;
+    height: 40%;
+}
+
+.clockCronometro {
+    width:100%;
+    height: 60%;
+    justify-content: center !important;
+    padding: 10px;
+}
+
+.backCronometro {
+    width:100%;
+    height: 100%;
+}
+
+.frontCronometro {
+    width:100%;
+    height: 95%;
+}
+
+.controlCronometro > button {
+    width: 60px;
+    height: 60px;
+    font-size: 1em;
+}
+
+.numbersCronometro {
+    font-size: 1.8em;
+}
+
+}
+
+@media screen and (width >= 767px) and (width <= 1023px) {
+
+    header {
+        height: 40vh !important;
+    }
+
+    .content_clock {
+        background:url('../image/clock.svg') bottom / contain no-repeat !important;
+        z-index: 2;
+        position: relative;
+        width: 100%;
+        height: 80vh;
+    }
+
+    .textClock {
+        width: 100%;
+        top:35vh;
+        height:60%;
+    }
+
+    .textClock > h1 {
+        font-size: 2em;
+    }
+    
+    .relogio {
+        height: 50%;
+        width:100%;
+    }
+
+    .dia, .mes {
+        font-size: 1.8em;
+    }
+
+    .clock {
+        box-shadow: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width:95%;
+        margin-inline: 15px;
+    }
+
+    .dados {
+        font-size: 5em;
+    }
+
+    .clockChess {
+        height: 120vh;
+        flex-direction: column;
+        margin-top: -6px;
+    }
+    
+    .clockChessDiv {
+        flex-direction: column;
+        width: 100%;
+        height: 60%;
+    }
+
+    .iconChess3d {
+        width: 100%;
+        height: 40%;
+    }
+    
+    .contentClockChess {
+        height: 35%;
+    }
+
+    .titleClockChess > h1 {
+        color: var(--vermelhoPadrao);
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .contentClockChess > p {
+        font-size: 1.2em;
+    }
+    
+    .rightClock, .leftClock {
+        bottom:-120px;
+    }
+
+    .cronometro {
+        flex-direction: column-reverse;
+        height: 80vh;
+    }
+
+    .contentCronometo > h1 {
+        font-size: 1.6em;
+    }
+    
+    .contentCronometo > p {
+        font-size: 1em;
+    }
+  
+.contentCronometo {
+    width: 100%;
+    height: 25%;
+}
+
+.clockCronometro {
+    width:80%;
+    height: 75%;
+    justify-content: center !important;
+    padding: 10px;
+}
+
+.backCronometro {
+    width:100%;
+    height: 100%;
+}
+
+.frontCronometro {
+    width:100%;
+    height: 95%;
+}
+
+.controlCronometro {
+    gap: 30px;
+}
+
+.controlCronometro > button {
+    width: 80px;
+    height: 80px;
+    font-size: 1.2em;
+}
+
+.numbersCronometro {
+    font-size: 2.5em;
+}
+
+.contentCronometo > h1 {
+    font-size: 2em;
+}
+
+.contentCronometo > p{
+    font-size: 1.2em;
+}
+
+.minSec {
+    font-size: 1.4em;
+}
+
 }
