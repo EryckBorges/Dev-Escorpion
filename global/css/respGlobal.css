@@ -213,8 +213,8 @@
     }
 
     .flagsSelecionada > img {
-        width:30px;
-        height: 20px;
+        width:35px;
+        height: 25px;
     }
 
     .btnMenu {
@@ -250,7 +250,20 @@
     }
 }
 
-@media screen and (width <= 500px) {
+@media screen and (height <= 500px) {
+    .menu {
+        width:95%;
+        height: 18vh;
+        top:3vh;
+    }
+
+    .flagsSelecionada > img {
+        width:40px;
+        height: 30px;
+    }
+}
+
+@media screen and (width <= 350px) {
     .menu {
         width:90%;
         height: 10vh;
