@@ -521,7 +521,7 @@
 
 }
 
-@media screen and (height <= 350px)  {
+@media screen and (height <= 500px)  {
     header {
         height: 240vh !important;
     }
@@ -672,7 +672,7 @@
     width:20vw;
     bottom:25vh;
     height: 15vh;
-    right: 30vw;
+    right: 25vw;
     z-index: 5;
     font-size: 1.4em;
 }
