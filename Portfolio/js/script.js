@@ -51,6 +51,8 @@ const more = document.querySelector('.more');
 const ferramentas = document.querySelector('.ferramentas');
 const closeMore = document.querySelector('.iconMore button');
 
+let titleButtonTranslate = document.querySelectorAll('.btnTraduz');
+
 //Linguagens
 
 const eua = {
@@ -670,6 +672,9 @@ const ingles = () => {
     elementos.contact.innerHTML = eua.contact;
     elementos.titleSolo.innerHTML = eua.titleSolo;
     elementos.titleRelogio.innerHTML = eua.titleRelogio;
+    titleButtonTranslate.forEach((btnTranslate) => {
+        btnTranslate.setAttribute('title', 'Translate to English');
+    });
 }
 
 const portugues = () => {
@@ -792,6 +797,9 @@ const portugues = () => {
     elementos.contact.innerHTML = brasil.contact;
     elementos.titleSolo.innerHTML = brasil.titleSolo;
     elementos.titleRelogio.innerHTML = brasil.titleRelogio;
+    titleButtonTranslate.forEach((btnTranslate) => {
+        btnTranslate.setAttribute('title', 'Traduzir para o Português');
+    });
 }
 
 const espanha = () => {
@@ -913,6 +921,9 @@ const espanha = () => {
     elementos.contact.innerHTML = spain.contact;
     elementos.titleSolo.innerHTML = spain.titleSolo;
     elementos.titleRelogio.innerHTML = spain.titleRelogio;
+    titleButtonTranslate.forEach((btnTranslate) => {
+        btnTranslate.setAttribute('title', 'Traducir al español');
+    });
 }
 
 const frances = () => {
@@ -1035,6 +1046,9 @@ const frances = () => {
     elementos.contact.innerHTML = franca.contact;
     elementos.titleSolo.innerHTML = franca.titleSolo;
     elementos.titleRelogio.innerHTML = franca.titleRelogio;
+    titleButtonTranslate.forEach((btnTranslate) => {
+        btnTranslate.setAttribute('title', 'Traduire en français');
+    });
 }
 
 const chines = () => {
@@ -1156,8 +1170,10 @@ const chines = () => {
 elementos.contact.innerHTML = china.contact;
 elementos.titleSolo.innerHTML = china.titleSolo;
 elementos.titleRelogio.innerHTML = china.titleRelogio;
+titleButtonTranslate.forEach((btnTranslate) => {
+    btnTranslate.setAttribute('title', '翻译成中文');
+});
 }
-
 //Muda a linguagem do site 
 
 let langSelecionada = document.querySelector('.idiomaSelecionada');
@@ -1205,30 +1221,47 @@ const langPage = () => {
   
 let langSelecionada = document.querySelector('.idiomaSelecionada');
 let flagSelecionada = document.querySelector(".flagsSelecionada img");
+let titleButtonTranslate = document.querySelectorAll('.btnTraduz');
+
 
     const lang = localStorage.getItem('lang'); // Obtém a linguagem salva no localStorage
 
     if (lang === 'eu') {
         langSelecionada.innerHTML = "EN";
         flagSelecionada.src = "../../global/icon/eua.png";
+        titleButtonTranslate.forEach((btnTranslate) => {
+            btnTranslate.setAttribute('title', 'Translate to English');
+        });
         ingles();
     } else if (lang === 'es') {
         langSelecionada.innerHTML = "ES";
         flagSelecionada.src = "../../global/icon/spain.png";
+        titleButtonTranslate.forEach((btnTranslate) => {
+            btnTranslate.setAttribute('title', 'Traducir al español');
+        });
         espanha();
     } else if (lang === 'fr') {
         langSelecionada.innerHTML = "FR";
         flagSelecionada.src = "./image/franca.png";
+        titleButtonTranslate.forEach((btnTranslate) => {
+            btnTranslate.setAttribute('title', 'Traduire en français');
+        });
         frances();
     } else if (lang === 'ch') {
         langSelecionada.innerHTML = "ZH";
         flagSelecionada.src = "../../global/icon/china.png";
+        titleButtonTranslate.forEach((btnTranslate) => {
+            btnTranslate.setAttribute('title', '翻译成中文');
+        });
         chines();
     } else {
         // Caso nenhuma linguagem esteja no localStorage, define como 'br'
         localStorage.setItem('lang', 'br');
         langSelecionada.innerHTML = "PT";
         flagSelecionada.src = "../../global/icon/brasil.png";
+        titleButtonTranslate.forEach((btnTranslate) => {
+            btnTranslate.setAttribute('title', 'Traduzir para o Português');
+        });
         portugues();
     }
 };

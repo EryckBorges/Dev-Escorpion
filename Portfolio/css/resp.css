@@ -590,6 +590,64 @@
 
 }
 
+@media screen and (height <= 500px) {
+    .sobreMim {
+        height: 60vh;
+    }
+
+    .cont > h1 {
+        font-size:2em;
+    }
+    
+    .cont > p {
+        font-size: 1.2em;
+    }
+
+    .meusProjetos {
+        height: 250vh;
+    }
+
+    .ferramentas {
+        height:180vh;
+    }
+
+    .estudos {
+        height:150vh;
+    }
+
+    .certificados {
+        height: 700vh;
+    }
+
+    .certificado, .certificadoOculto {
+        height: 300vh;
+        gap:1px
+    }
+
+    .avaliacao {
+        height:300vh;
+    }
+
+    .avaliadorPhoto > button {
+        right: 4vw;
+        bottom: 5vh;
+    }
+
+    .contactRedes {
+        height: 180vh;
+    }
+
+    .redesContact > a {
+        width: 35%;
+    }
+
+    .qrCode > img {
+        width: 60%;
+        height: 90%;
+    }
+    
+}
+
 @media screen and (width <= 350px) {
     .triangulo {
         border-left: 100px solid transparent;
