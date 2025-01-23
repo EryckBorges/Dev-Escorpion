@@ -653,6 +653,27 @@ main {
     align-items: baseline !important;
 }
 
+.avaliadorPhoto > button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    position: absolute;
+    right: 3vw;
+    bottom: 5vh;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.avaliadorPhoto > button:hover {
+    color: var(--vermelhoPadrao);
+    transition: 0.5s;
+}
+
+.avaliadorPhoto > button > span {
+    font-size: 3em;
+}
+
 .avaliadorPhoto > img {
     width:120px;
     height: 120px;

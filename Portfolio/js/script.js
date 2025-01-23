@@ -1162,33 +1162,82 @@ elementos.titleRelogio.innerHTML = china.titleRelogio;
 
 let langSelecionada = document.querySelector('.idiomaSelecionada');
 let flagSelecionada = document.querySelector(".flagsSelecionada img");
+// Função para traduzir o texto usando a API do Google Translate
+const traduzirAvaliacao = async (texto, targetLang) => {
+    try {
+        const response = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${targetLang}&dt=t&q=${encodeURIComponent(texto)}`, {
+            method: "GET",
+        });
+        const data = await response.json();
+
+        // Combina todas as partes do texto traduzido caso sejam separadas
+        return data[0].map((part) => part[0]).join(" ");
+    } catch (error) {
+        console.error("Erro ao traduzir:", error);
+        return texto; // Retorna o texto original em caso de erro
+    }
+};
+
+// Função para lidar com o clique no botão de tradução
+document.querySelectorAll('.btnTraduz').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+        // Identifica o idioma selecionado
+        const lang = localStorage.getItem('lang') || 'br';
+        const targetLang = {
+            br: 'pt',
+            eu: 'en',
+            es: 'es',
+            fr: 'fr',
+            ch: 'zh-CN'
+        }[lang];
+
+        // Pega o texto da avaliação
+        const descAvaliacao = btn.closest('.avaliacaoCard').querySelector('.descAvaliacao');
+        const originalText = descAvaliacao.textContent.trim();
+
+        // Tradução e atualização do texto
+        const translatedText = await traduzirAvaliacao(originalText, targetLang);
+        descAvaliacao.textContent = translatedText;
+    });
+});
 
 const langPage = () => {
-    if (localStorage.getItem('lang') == 'eu') {
+  
+let langSelecionada = document.querySelector('.idiomaSelecionada');
+let flagSelecionada = document.querySelector(".flagsSelecionada img");
+
+    const lang = localStorage.getItem('lang'); // Obtém a linguagem salva no localStorage
+
+    if (lang === 'eu') {
         langSelecionada.innerHTML = "EN";
         flagSelecionada.src = "../../global/icon/eua.png";
         ingles();
-    }else if (localStorage.getItem('lang') == 'es') {
-            langSelecionada.innerHTML = "ES";
-            flagSelecionada.src = "../../global/icon/spain.png";
-            espanha();
-        
-    }else if (localStorage.getItem('lang') == 'fr') {
-            langSelecionada.innerHTML = "FR";
-            flagSelecionada.src = "./image/franca.png";
-            frances();
-    }else if (localStorage.getItem('lang') == 'ch') {
-            langSelecionada.innerHTML = "ZH";
-            flagSelecionada.src = "../../global/icon/china.png";
-            chines();
-    }else {
+    } else if (lang === 'es') {
+        langSelecionada.innerHTML = "ES";
+        flagSelecionada.src = "../../global/icon/spain.png";
+        espanha();
+    } else if (lang === 'fr') {
+        langSelecionada.innerHTML = "FR";
+        flagSelecionada.src = "./image/franca.png";
+        frances();
+    } else if (lang === 'ch') {
+        langSelecionada.innerHTML = "ZH";
+        flagSelecionada.src = "../../global/icon/china.png";
+        chines();
+    } else {
+        // Caso nenhuma linguagem esteja no localStorage, define como 'br'
         localStorage.setItem('lang', 'br');
         langSelecionada.innerHTML = "PT";
         flagSelecionada.src = "../../global/icon/brasil.png";
         portugues();
     }
-}
+};
 
+// Executa ao carregar a página
+langPage();
+
+
+// Executa ao carregar a página
 langPage();
 
 //Função de slide de projetos e serviços
