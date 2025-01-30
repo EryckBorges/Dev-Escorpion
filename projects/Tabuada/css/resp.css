@@ -1,0 +1,126 @@
+@media screen and (width <= 767px) {
+
+    header {
+        background: url('../image/background.svg') bottom / cover no-repeat !important;
+    }
+
+    main {
+        margin-top: -20px;
+        background: url('../image/backgroundPage2.svg') bottom / contain no-repeat;
+    }
+
+    .contentTabuada {
+        display: none;
+    }
+
+    .quadrados {
+        position: relative;
+        top: -8vh;
+        height: 15%;
+        background: url('../image/quadrados.svg') top / cover no-repeat !important;
+    }
+    
+    .tabuadas {
+        width: 100%;
+    }
+
+    .typeTab {
+        position: relative;
+        width: 100%;
+        height: 150vh;
+        flex-direction: column;
+    }
+
+    .titleTabuada {
+        width: 95%;
+        height: 15%;
+        font-size: 1.6em;
+        text-align: center;
+        color: var(--azulTabuada);
+        background:none !important;
+       align-items: baseline !important;
+    }
+    
+    .estudar {
+        height: 60vh;
+    }
+
+    .titleEstudar {
+        gap: 30px;
+    }
+
+    .titleEstudar > h1 {
+        font-size: 1.4em;
+    }
+
+    .titleEstudar > img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .textEstudar > p {
+        font-size: 1.2em
+    }
+
+    .textTabuada > p {
+        font-size: 1.2em;
+        height: 20%;
+    }
+
+    .tabuadaSelect {
+        width: 80%;
+        height: 90%;
+        background: var(--branco);
+        border-radius: 20px;
+        position: relative;
+    }    
+
+    .backTabuada, .nextTabuada {
+       display: none;
+    }
+
+    .reviews {
+        width: 100%;
+        height: 150vh;
+        flex-direction: column;
+    }
+
+    .allReview, .animationReview  {
+        width: 100%;
+        height: 50%;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .allReview > h1 {
+        font-size: 1.6em;
+        height: 10%;
+        width: 90%;
+        text-align: center;
+        margin-block: 20px;
+    }
+
+    .review {
+        width: 90%;
+        height: 20%;
+        gap: 0px;
+    }
+
+    .review > img {
+        width: 80px;
+        height: 80px;
+        margin-inline: 15px;
+    }
+    
+    .conteudoReview > h1 {
+        width: 90%;
+        height: 30%;
+        font-size: 1.2em;
+    }
+    
+    .conteudoReview > p {
+        font-size: 1em;
+        width: 90%;
+    }
+    
+}
