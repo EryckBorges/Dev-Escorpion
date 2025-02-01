@@ -1,0 +1,1699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/Imagens/Icon.ico">
+    <title>Downloads</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            background:black;
+        }
+        .logo{
+            background:rgb(51, 51, 51);
+            width:100%;
+            height:17vh;
+            position:fixed;
+        }
+        ul{
+            list-style: none;
+            display:flex;
+            flex-direction:column;
+            align-items:left;
+            margin-left:5vw;
+            justify-content:space-around; 
+        }
+        li a{
+            position:relative;
+            margin-top:50px;
+            
+            font-size:16pt;
+            color:white;
+            display:flex;
+            text-decoration: none;
+            letter-spacing: 3px;
+            animation: text 2s;
+        }
+        @keyframes text{
+            from{
+                left:-100vw;
+                opacity: 0;
+            }
+            to{
+                opacity:1;
+                left:0;
+            }
+        }
+        .lupa{
+            position:absolute;
+            right:2vw;
+            top:8vh;
+            border:none;
+            background:transparent;
+            cursor:pointer;
+            margin-right:3vw;
+            width:7vw;
+            height:7vh;            
+        }
+        #logo{
+            position:absolute;
+            left:42vw;
+            width:15vw;
+            top:-1.5vh;
+            height:20vh;
+        }
+        #img-lupa{
+            top:3vh;
+            background:transparent; 
+            width:4vw;
+            height:5vh;
+        }
+        .lup{
+            position:absolute;
+            top:17.5vh;
+            border:none;
+            border-radius:5px;
+            width:100vw;
+            height:4vh;
+            opacity:0.5;
+            display:none;
+            animation: input 1s;
+            color:black;
+            font-size:12pt;
+        }
+        
+        .lup::placeholder{
+            font-size:10pt;
+            text-align: center;
+        }
+        @keyframes input{
+            from{
+                
+                opacity:0;
+            }
+            10%{
+                opacity:0.1;
+            }
+            20%{
+                opacity:0.2;
+            }
+            30%{
+                opacity:0.3;
+            }
+            40%{
+                opacity:0.4;
+            }
+            to{
+               
+                opacity:0.5;
+            }
+        }
+
+        .cont{
+            display:none;
+            position:fixed;
+            width:28vw;
+            top:17.5vh;
+            height:100%;
+            background:rgb(51, 51, 51);
+            animation: menu 1s ;
+            overflow:auto;
+        }
+       
+        
+        @keyframes fecha{
+            from{
+                transform:translateX(0);
+                opacity: 1;
+            }
+            50%{
+                transform:translateX(-50vw);
+                opacity:0.5;
+            }
+            to{
+                opacity: 0;
+                transform:translateX(-100vw);
+            }
+        }
+        @keyframes menu{
+            from{
+                transform:translateY(-100vw);
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+                transform:translateY(0);
+            }
+        }
+        
+        .btn-menu div{
+                width:5vw;
+                height:1vh;
+                background:white;
+                margin:1vh;
+        }
+        .menu{
+            position:absolute;
+            top:8.5vh;
+            left:5vw;
+            background:transparent;
+            border:none;
+            cursor:pointer;
+        }
+        @media(max-width:999px){
+            .cont{
+            display:none;
+            position:fixed;
+            width:50vw;
+            top:17.5vh;
+            height:100%;
+            background:rgb(51, 51, 51);
+            animation: menu 1s ;
+            overflow:auto;
+        }
+        #logo{
+            position:absolute;
+            left:40vw;
+            width:25vw;
+            top:-1.5vh;
+            height:20vh;
+        }
+        #img-lupa{
+            
+            top:3vh;
+            background:transparent; 
+            width: 6vw;
+            height:6vh;
+        }
+        .lupa{
+            position:absolute;
+            right:4vw;
+            top:8.7vh;
+            border:none;
+            background:transparent;
+            cursor:pointer;
+            margin-right:3vw;
+            width:8vw;
+            height:7vh;            
+        }
+        .lup{
+            position:absolute;
+            top:17.5vh;
+            border:none;
+            border-radius:5px;
+            width:100vw;
+            height:4vh;
+            opacity:0.5;
+            display:none;
+            animation: input 1s;
+            color:black;
+            font-size:12pt;
+        }
+               .btn-menu div{
+                width:8.5vw;
+                height:1vh;
+                background:white;
+                margin:1vh;
+        }
+        li a{
+            position:relative;
+            margin-top:50px;
+            
+            font-size:12pt;
+            color:white;
+            display:flex;
+            text-decoration: none;
+            letter-spacing: 3px;
+            animation: text 1s;
+        }
+    }
+    .icons{   
+            max-width:40px;
+            max-height:40px;
+            margin-right:10px;
+            margin-top:-10px;
+        }
+        .div-pok{
+            display:none;
+            margin-top:20vh;
+        }
+        .btn-pok{
+            background:none;
+            cursor:pointer;
+            border:none;
+            width:10vw;
+            height:10vh;
+            gap:5vw;
+            margin-left:5vw;
+        }
+        .img-pok{
+            width:10vw;
+            height:10vh;
+            gap:2vw;
+        }
+        .fun-pok{
+            font-size:24pt;
+            font-weight: 400;
+            color:white;
+            background:none;
+            border:none;
+            margin-left: 45vw;
+            cursor:pointer;
+        }
+        .fun-aud{
+            font-size:24pt;
+            font-weight:400;
+            color:white;
+            background:none;
+            border:none;
+            text-align:center;
+            margin-left:45vw;
+            cursor:pointer;
+        }
+        .fun-jogo{
+            font-size:24pt;
+            font-weight:400;
+            color:white;
+            background:none;
+            border:none;
+            text-align:center;
+            margin-left:45vw;
+            cursor:pointer;
+        }
+        .aud{
+            text-align:center;
+            text-decoration:none;
+            font-size:20pt;
+            font-weight:400;
+            color:white;
+
+        }
+        .div-aud{
+            display:none;
+            margin:0 auto;
+            text-align:center;
+            padding:10vh;
+        }
+        h1{
+            color:red;
+            font-size:30pt;
+            font-weight:500;
+            margin-top:25vh;
+            text-align:center;
+            
+        }
+        .div-jogo{
+            display:none;
+        }
+        .img-jogo{
+            width:30vw;
+            height:70vh;
+            border-radius:10px;
+        }
+        .download{
+            font-size:16pt;
+            width:30vw;
+            height:5vh;
+            cursor: pointer;
+            border:none;
+            border-radius:10px;
+            background:linear-gradient(rgb(175, 0, 0),rgb(202, 1, 1),red);
+        }
+        .download a{
+            text-decoration: none;
+            color:white;
+            font-weight:500;
+        }
+        .desc{
+            text-align:center;
+            list-style: none;
+            color:white;
+            font-weight: 500;
+            font-size:14pt;
+        }
+        #fim{
+            height:30vh;
+            background:rgb(51, 51, 51);
+            display:block;
+            position:bottom;
+            text-align:center;
+            background-attachment:fixed;
+        }
+        #e{
+            text-decoration:none;
+            color:white;
+        }
+        #eco{
+            width:3vw;
+            height:3vh;
+        }
+        #pix{
+            width:4vw;
+            height:3.5vh;
+        }
+         p{
+            font-size:18pt;
+            color:white;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <button class="menu" onclick="menu()">
+            <div class="btn-menu">
+                <div class="l1"></div>
+                <div class="l2"></div>
+                <div class="l3"></div>
+            </div>
+        </button>
+   
+        <img src="/Imagens/logo.png" alt="logo" id="logo"/>
+        <button class="lupa" ondblclick="lupa()">
+            <img id="img-lupa" src="https://www.pngall.com/wp-content/uploads/8/Magnifying-Glass-Search-PNG-Clipart.png" alt="Lupa">
+        </button>
+        <input type="text" class="lup" placeholder="Pesquisar...">
+    </div> 
+    <div class="cont">
+        <ul>
+            <li><a href="/Login.html"><img class="icons"src="https://cdn-icons-png.flaticon.com/512/17/17004.png"/>Entrar</a></li>
+            <li><a href="/inicio.html"><img class="icons"src="https://cdn-icons-png.flaticon.com/512/18/18625.png"/>Menu</a></li>
+            <li><a href="/index.html"><img class="icons"src="https://i0.wp.com/pokemythology.net/conteudo/imgs/info/pokedex10closed.png?resize=200%2C220&ssl=1"/>Pokédex</a></li>
+            <li><a href="./download.html"><img class="icons"src="https://www.freeiconspng.com/uploads/white-download-icon-png-32.png"/>Downloads</a></li>
+            <li><a href="/Quem.html"><img class="icons"src="https://yata-apix-62ec97e4-f758-4e42-924b-e9b48a7bb1db.s3-object.locaweb.com.br/88f06ab369694f54a5e2956469fe49d6.png"/>Quem Somos?</a></li>
+        </ul>
+    </div><br/>
+    <h1 id="a">Área de Downloads</h1>
+    <br/><br/><br/><br/><br/><br/>
+    <button class="fun-pok" onclick="pok()">Pokémons</button>
+    <hr>
+    <div class="div-pok">
+        <a href="/pokemons/bulbasaur.gif" download>
+            <button class="btn-pok">
+                <img div="img-pok" src="/pokemons/bulbasaur.gif">
+            </button>
+        </a>
+        <a href="/pokemons/ivysaur.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/ivysaur.gif">
+        </button>
+        </a>
+        <a href="/pokemons/venusaur.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/venusaur.gif">
+        </button>
+        </a>
+        <a href="/pokemons/charmander.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/charmander.gif">
+        </button>
+        </a>
+        <a href="/pokemons/charmeleon.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/charmeleon.gif">
+        </button>
+        </a>
+        <a href="/pokemons/charizard.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/charizard.gif">
+        </button>
+        </a>
+        <a href="/pokemons/squirtle.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/squirtle.gif">
+        </button>
+        </a>
+        <a href="/pokemons/wartortle.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/wartortle.gif">
+        </button>
+        </a>
+        <a href="/pokemons/blastoise.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/blastoise.gif">
+        </button>
+        </a>
+        <a href="/pokemons/caterpie.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/caterpie.gif">
+        </button>
+        </a>
+        <a href="/pokemons/metapod.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/metapod.gif">
+        </button>
+        </a>
+        <a href="/pokemons/butterfree.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/butterfree.gif">
+        </button>
+        </a>
+        <a href="/pokemons/butterfree-f.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/butterfree-f.gif">
+        </button>
+        </a>
+        <a href="/pokemons/weedle.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/weedle.gif">
+        </button>
+        </a>
+        <a href="/pokemons/kakuna.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/kakuna.gif">
+        </button>
+        </a>
+        <a href="/pokemons/beedrill.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/beedrill.gif">
+        </button>
+        </a>
+        <a href="/pokemons/pidgey.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/pidgey.gif">
+        </button>
+        </a>
+        <a href="/pokemons/pidgeotto.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/pidgeotto.gif">
+        </button>
+        </a>
+        <a href="/pokemons/pidgeot.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/pidgeot.gif">
+        </button>
+        </a>
+        <a href="/pokemons/rattata.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/rattata.gif">
+        </button>
+        </a>
+        <a href="/pokemons/rattata-f.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/rattata-f.gif">
+        </button>
+        </a>
+        <a href="/pokemons/raticate.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/raticate.gif">
+        </button>
+        </a>
+        <a href="/pokemons/raticate-f.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/raticate-f.gif">
+        </button>
+        </a>
+        <a href="/pokemons/spearow.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/spearow.gif">
+        </button>
+        </a>
+        <a href="/pokemons/fearow.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/fearow.gif">
+        </button>
+        </a>
+        <a href="/pokemons/ekans.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/ekans.gif">
+        </button>
+        </a>
+        <a href="/pokemons/arbok.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/arbok.gif">
+        </button>
+        </a>
+        <a href="/pokemons/pikachu.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/pikachu.gif">
+        </button>
+        </a>
+        <a href="/pokemons/pikachu-f.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/pikachu-f.gif">
+        </button>
+        </a>
+        <a href="/pokemons/raichu.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/raichu.gif">
+        </button>
+        </a>
+        <a href="/pokemons/raichu-f.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/raichu-f.gif">
+        </button>
+        </a>
+        <a href="/pokemons/sandshrew.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/sandshrew.gif">
+        </button>
+        </a>
+        <a href="/pokemons/sandslash.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/sandslash.gif">
+        </button>
+        </a>
+        <a href="/pokemons/abra.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/abra.gif">
+        </button>
+        </a>
+        <a href="/pokemons/nidoran_f.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/nidoran_f.gif">
+        </button>
+        </a>
+        <a href="/pokemons/nidorina.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/nidorina.gif">
+        </button>
+        </a>
+        <a href="/pokemons/nidoqueen.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/nidoqueen.gif">
+        </button>
+        </a>
+        <a href="/pokemons/nidoran_m.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/nidoran_m.gif">
+        </button>
+        </a>
+        <a href="/pokemons/nidorino.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/nidorino.gif">
+        </button>
+        </a>
+        <a href="/pokemons/nidoking.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/nidoking.gif">
+        </button>
+        </a>
+        <a href="/pokemons/clefairy.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/clefairy.gif">
+        </button>
+        </a>
+        <a href="/pokemons/clefable.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/clefable.gif">
+        </button>
+        </a>
+        <a href="/pokemons/vulpix.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/vulpix.gif">
+        </button>
+        </a>
+        <a href="/pokemons/ninetales.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/ninetales.gif">
+        </button>
+        </a>
+        <a href="/pokemons/jigglypuff.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/jigglypuff.gif">
+        </button>
+        </a>
+        <a href="/pokemons/wigglytuff.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/wigglytuff.gif">
+        </button>
+        </a>
+        <a href="/pokemons/zubat.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/zubat.gif">
+        </button>
+        </a>
+        <a href="/pokemons/golbat.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/golbat.gif">
+        </button>
+        </a>
+        <a href="/pokemons/zubat-f.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/zubat-f.gif">
+        </button>
+        </a>
+        <a href="/pokemons/golbat-f.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/golbat-f.gif">
+        </button>
+        </a>
+        <a href="/pokemons/oddish.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/oddish.gif">
+        </button>
+        </a>
+        <a href="/pokemons/gloom.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/gloom.gif">
+        </button>
+        </a>
+        <a href="/pokemons/vileplume.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/vileplume.gif">
+         </button>
+        </a>
+        <a href="/pokemons/gloom-f.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/gloom-f.gif">
+        </button>
+        </a>
+        <a href="/pokemons/vileplume-f.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/vileplume-f.gif">
+        </button>
+        </a>
+        <a href="/pokemons/paras.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/paras.gif">
+        </button>
+        </a>
+        <a href="/pokemons/parasect.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/parasect.gif">
+        </button>
+        </a>
+        <a href="/pokemons/venonat.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/venonat.gif">
+        </button>
+            </a>
+        <a href="/pokemons/venomoth.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/venomoth.gif">
+        </button>
+        </a>
+        <a href="/pokemons/diglett.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/diglett.gif">
+        </button>
+        </a>
+        <a href="/pokemons/dugtrio.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/dugtrio.gif">
+        </button>
+        </a>
+        <a href="/pokemons/meowth.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/meowth.gif">
+        </button>
+        </a>
+        <a href="/pokemons/persian.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/persian.gif">
+        </button>
+        </a>
+        <a href="/pokemons/psyduck.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/psyduck.gif">
+        </button>
+        </a>
+        <a href="/pokemons/golduck.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/golduck.gif">
+        </button>
+        </a>
+        <a href="/pokemons/mankey.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/mankey.gif">
+        </button>
+        </a>
+        <a href="/pokemons/primeape.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/primeape.gif">
+        </button>
+        </a>
+        <a href="/pokemons/growlithe.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/growlithe.gif">
+        </button>
+        </a>
+        <a href="/pokemons/arcanine.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/arcanine.gif">
+        </button>
+        </a>
+        <a href="/pokemons/poliwag.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/poliwag.gif">
+        </button>
+        </a>
+        <a href="/pokemons/poliwhirl.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/poliwhirl.gif">
+        </button>
+        </a>
+        <a href="/pokemons/poliwrath.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/poliwrath.gif">
+        </button>
+        </a>
+        <a href="/pokemons/abra.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/abra.gif">
+        </button>
+        </a>
+        <a href="/pokemons/kadabra.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/kadabra.gif">
+        </button>
+        </a>
+        <a href="/pokemons/alakazam.gif" download>
+            <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/alakazam.gif">
+        </button>
+        </a>
+        <a href="/pokemons/kadabra-f.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/kadabra-f.gif">
+        </button>
+        </a>
+        <a href="/pokemons/alakazam-f.gif" download>
+         <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/alakazam-f.gif">
+        </button>
+        </a>
+        <a href="/pokemons/machop.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/machop.gif">
+        </button>
+        </a>
+        <a href="/pokemons/machoke.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/machoke.gif">
+        </button>
+        </a>
+        <a href="/pokemons/machamp.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/machamp.gif">
+        </button>
+        </a>
+        <a href="/pokemons/bellsprout.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/bellsprout.gif">
+        </button>
+        </a>
+        <a href="/pokemons/weepinbell.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/weepinbell.gif">
+        </button>
+        </a>
+        <a href="/pokemons/victreebel.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/victreebel.gif">
+        </button>
+        </a>
+        <a href="/pokemons/tentacool.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/tentacool.gif">
+        </button>
+        </a>
+        <a href="/pokemons/tentacruel.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/tentacruel.gif">
+        </button>
+        </a>
+        <a href="/pokemons/geodude.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/geodude.gif">
+        </button>
+        </a>
+        <a href="/pokemons/graveler.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/graveler.gif">
+        </button>
+        </a>
+        <a href="/pokemons/golem.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/golem.gif">
+        </button>
+        </a>
+        <a href="/pokemons/ponyta.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/ponyta.gif">
+        </button>
+        </a>
+        <a href="/pokemons/rapidash.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/rapidash.gif">
+        </button>
+        </a>
+        <a href="/pokemons/slowpoke.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/slowpoke.gif">
+        </button>
+        </a>
+        <a href="/pokemons/slowbro.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/slowbro.gif">
+        </button>
+        </a>
+        <a href="/pokemons/magnemite.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/magnemite.gif">
+        </button>
+        </a>
+        <a href="/pokemons/magneton.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/magneton.gif">
+        </button>
+        </a>
+        <a href="/pokemons/farfetchd.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/farfetchd.gif">
+        </button>
+        </a>
+        <a href="/pokemons/doduo.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/doduo.gif">
+        </button>
+        </a>
+        <a href="/pokemons/dodrio.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/dodrio.gif">
+        </button>
+        </a>
+        <a href="/pokemons/doduo-f.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/doduo-f.gif">
+        </button>
+        </a>
+        <a href="/pokemons/seel.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/seel.gif">
+        </button>
+        </a>
+        <a href="/pokemons/dewgong.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/dewgong.gif">
+        </button>
+        </a>
+        <a href="/pokemons/grimer.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/grimer.gif">
+        </button>
+        </a>
+        <a href="/pokemons/muk.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/muk.gif">
+        </button>
+        </a>
+        <a href="/pokemons/shellder.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/shellder.gif">
+        </button>
+        </a>
+        <a href="/pokemons/cloyster.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/cloyster.gif">
+        </button>
+        </a>
+        <a href="/pokemons/gastly.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/gastly.gif">
+        </button>
+        </a>
+        <a href="/pokemons/haunter.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/haunter.gif">
+        </button>
+        </a>
+        <a href="/pokemons/gengar.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/gengar.gif">
+        </button>
+        </a>
+        <a href="/pokemons/onix.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/onix.gif">
+        </button>
+        </a>
+        <a href="/pokemons/drowzee.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/drowzee.gif">
+        </button>
+        </a>
+        <a href="/pokemons/hypno.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/hypno.gif">
+        </button>
+        </a>
+        <a href="/pokemons/hypno-f.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/hypno-f.gif">
+        </button>
+        </a>
+        <a href="/pokemons/krabby.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/krabby.gif">
+        </button>
+        </a>
+        <a href="/pokemons/kingler.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/kingler.gif">
+        </button>
+        </a>
+        <a href="/pokemons/voltorb.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/voltorb.gif">
+        </button>
+        </a>
+        <a href="/pokemons/electrode.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/electrode.gif">
+        </button>
+        </a>
+        <a href="/pokemons/exeggcute.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/exeggcute.gif">
+        </button>
+        </a>
+        <a href="/pokemons/exeggutor.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/exeggutor.gif">
+        </button>
+        </a>
+        <a href="/pokemons/cubone.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/cubone.gif">
+        </button>
+        </a>
+        <a href="/pokemons/marowak.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/marowak.gif">
+        </button>
+        </a>
+        <a href="/pokemons/hitmonlee.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/hitmonlee.gif">
+        </button>
+        </a>
+        <a href="/pokemons/hitmonchan.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/hitmonchan.gif">
+        </button>
+        </a>
+        <a href="/pokemons/lickitung.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/lickitung.gif">
+        </button>
+        </a>
+        <a href="/pokemons/koffing.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/koffing.gif">
+        </button>
+        </a>
+        <a href="/pokemons/weepinbell.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/weezing.gif">
+        </button>
+        </a>
+        <a href="/pokemons/rhyhorn.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/rhyhorn.gif">
+        </button>
+        </a>
+        <a href="/pokemons/rhydon.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/rhydon.gif">
+        </button>
+        </a>
+        <a href="/pokemons/rhyhorn-f.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/rhyhorn-f.gif">
+        </button>
+        </a>
+        <a href="/pokemons/rhydon-f.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/rhydon-f.gif">
+        </button>
+        </a>
+        <a href="/pokemons/chansey.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/chansey.gif">
+        </button>
+        </a>
+        <a href="/pokemons/tangela.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/tangela.gif">
+        </button>
+        </a>
+        <a href="/pokemons/kangaskhan.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/kangaskhan.gif">
+        </button>
+        </a>
+        <a href="/pokemons/horsea.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/horsea.gif">
+        </button>
+        </a>
+        <a href="/pokemons/seadra.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/seadra.gif">
+        </button>
+        </a>
+        <a href="/pokemons/goldeen.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/goldeen.gif">
+        </button>
+        </a>
+        <a href="/pokemons/seaking.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/seaking.gif">
+        </button>
+        </a>
+        <a href="/pokemons/goldeen-f.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/goldeen-f.gif">
+        </button>
+        </a>
+        <a href="/pokemons/seaking-f.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/seaking-f.gif">
+        </button>
+        </a>
+        <a href="/pokemons/staryu.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/staryu.gif">
+        </button>
+        </a>
+        <a href="/pokemons/starmie.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/starmie.gif">
+        </button>
+        </a>
+        <a href="/pokemons/mr.mime.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/mr.mime.gif">
+        </button>
+        </a>
+        <a href="/pokemons/scyther.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/scyther.gif">
+        </button>
+        </a>
+        <a href="/pokemons/scyther-f.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/scyther-f.gif">
+        </button>
+        </a>
+        <a href="/pokemons/jynx.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/jynx.gif">
+        </button>
+        </a>
+        <a href="/pokemons/electabuzz.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/electabuzz.gif">
+        </button>
+        </a>
+        <a href="/pokemons/magmar.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/magmar.gif">
+        </button>
+        </a>
+        <a href="/pokemons/pinsir.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/pinsir.gif">
+        </button>
+        </a>
+        <a href="/pokemons/tauros.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/tauros.gif">
+        </button>
+        </a>
+        <a href="/pokemons/magikarp.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/magikarp.gif">
+        </button>
+        </a>
+        <a href="/pokemons/gyarados.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/gyarados.gif">
+        </button>
+        </a>
+        <a href="/pokemons/magikarp-f.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/magikarp-f.gif">
+        </button>
+        </a>
+        <a href="/pokemons/gyarados-f.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/gyarados-f.gif">
+        </button>
+        </a>
+        <a href="/pokemons/lapras.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/lapras.gif">
+        </button>
+        </a>
+        <a href="/pokemons/ditto.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/ditto.gif">
+        </button>
+        </a>
+        <a href="/pokemons/eevee.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/eevee.gif">
+        </button>
+        </a>
+        <a href="/pokemons/vaporeon.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/vaporeon.gif">
+        </button>
+        </a>
+        <a href="/pokemons/jolteon.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/jolteon.gif">
+        </button>
+        </a>
+        <a href="/pokemons/flareon.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/flareon.gif">
+        </button>
+        </a>
+        <a href="/pokemons/porygon.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/porygon.gif">
+        </button>
+        </a>
+        <a href="/pokemons/omanyte.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/omanyte.gif">
+        </button>
+        </a>
+        <a href="/pokemons/omastar.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/omastar.gif">
+        </button>
+        </a>
+        <a href="/pokemons/kabuto.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/kabuto.gif">
+        </button>
+        </a>
+        <a href="/pokemons/kabutops.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/kabutops.gif">
+        </button>
+        </a>
+        <a href="/pokemons/aerodactyl.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/aerodactyl.gif">
+        </button>
+        </a>
+        <a href="/pokemons/snorlax.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/snorlax.gif">
+        </button>
+        </a>
+        <a href="/pokemons/articuno.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/articuno.gif">
+        </button>
+        </a>
+        <a href="/pokemons/zapdos.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/zapdos.gif">
+        </button>
+        </a>
+        <a href="/pokemons/moltres.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/moltres.gif">
+        </button>
+        </a>
+        <a href="/pokemons/dratini.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/dratini.gif">
+        </button>
+        </a>
+        <a href="/pokemons/dragonair.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/dragonair.gif">
+        </button>
+        </a>
+        <a href="/pokemons/dragonite.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/dragonite.gif">
+        </button>
+        </a>
+        <a href="/pokemons/mewtwo.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/mewtwo.gif">
+        </button>
+        </a>
+        <a href="/pokemons/mew.gif" download>
+        <button class="btn-pok">
+            <img div="img-pok" src="/pokemons/mew.gif">
+        </button>
+        </a>
+    </div>
+    <hr/><br/><br/><br/>
+    <button class="fun-aud" onclick="aud()">🎧 Aúdios</button><hr>
+    <div class="div-aud">
+        <a class="aud" href="/Sons/bulbasaur.mp3" download="Bulbasaur">⮋ Bulbasaur</a><br/><br/>
+        <a class="aud" href="/Sons/ivysaur.mp3" download="Ivysaur">⮋ Ivysaur</a><br/><br/>
+        <a class="aud" href="/Sons/venusaur.mp3" download="Venasaur">⮋ Venasaur</a><br/><br/>
+        <a class="aud" href="/Sons/charmander.mp3" download="Charmander">⮋ Charmander</a><br/><br/>
+        <a class="aud" href="/Sons/charmeleon.mp3" download="Charmeleon">⮋ charmeleon</a><br/><br/>
+        <a class="aud" href="/Sons/charizard.mp3" download="Charizard">⮋ Charizard</a><br/><br/>
+        <a class="aud" href="/Sons/squirtle.mp3" download="Squirtle">⮋ Squirtle</a><br/><br/>
+        <a class="aud" href="/Sons/wartortle.mp3" download="Wartortle">⮋ Wartortle</a><br/><br/>
+        <a class="aud" href="/Sons/blastoise.mp3" download="Blastoise">⮋ Blastoise</a><br/><br/>
+        <a class="aud" href="/Sons/caterpie.mp3" download="Caterpie">⮋ Caterpie</a><br/><br/>
+        <a class="aud" href="/Sons/metapod.mp3" download="Metapod">⮋ Metapod</a><br/><br/>
+        <a class="aud" href="/Sons/butterfree.mp3" download="Butterfree">⮋ Butterfree</a><br/><br/>
+        <a class="aud" href="/Sons/weedle.mp3" download="Weedle">⮋ Weedle</a><br/><br/>
+        <a class="aud" href="/Sons/kakuna.mp3" download="Kakuna">⮋ Kakuna</a><br/><br/>
+        <a class="aud" href="/Sons/beedrill.mp3" download="Beedrill">⮋ Beedrill</a><br/><br/>
+        <a class="aud" href="/Sons/pidgey.mp3" download="Pìdgey">⮋ Pidgey</a><br/><br/>
+        <a class="aud" href="/Sons/pidgeotto.mp3" download="Pidgeotto">⮋ Pidgeotto</a><br/><br/>
+        <a class="aud" href="/Sons/pidgeot.mp3" download="Pidgeot">⮋ Pidgeot</a><br/><br/>
+        <a class="aud" href="/Sons/rattata.mp3" download="Rattata">⮋ Rattata</a><br/><br/>
+        <a class="aud" href="/Sons/raticate.mp3" download="Raticate">⮋ Raticate</a><br/><br/>
+        <a class="aud" href="/Sons/spearow.mp3" download="Spearow">⮋ Spearow</a><br/><br/>
+        <a class="aud" href="/Sons/fearow.mp3" download="Fearow">⮋ Fearow</a><br/><br/>
+        <a class="aud" href="/Sons/ekans.mp3" download="Ekans">⮋ Ekans</a><br/><br/>
+        <a class="aud" href="/Sons/arbok.mp3" download="Arbok">⮋ Arbok</a><br/><br/>
+        <a class="aud" href="/Sons/pikachu.mp3" download="Pikachu">⮋ Pikachu</a><br/><br/>
+        <a class="aud" href="/Sons/raichu.mp3" download="Raichu">⮋ Raichu</a><br/><br/>
+        <a class="aud" href="/Sons/sandshrew.mp3" download="Sandshrew">⮋ Sandshrew</a><br/><br/>
+        <a class="aud" href="/Sons/sandslash.mp3" download="Sandslash">⮋ Sandslash</a><br/><br/>
+        <a class="aud" href="/Sons/nidoran-f.mp3" download="Nidoran Fêmea">⮋ Nidoran Fêmea</a><br/><br/>
+        <a class="aud" href="/Sons/nidorina.mp3" download="Nidorina">⮋ Nidorina</a><br/><br/>
+        <a class="aud" href="/Sons/nidoqueen.mp3" download="Nidoqueen">⮋ Nidoqueen</a><br/><br/>
+        <a class="aud" href="/Sons/nidoranm.mp3" download="Nidoran Macho">⮋ Nidoran Macho</a><br/><br/>
+        <a class="aud" href="/Sons/nidorino.mp3" download="Nidorino">⮋ Nidorino</a><br/><br/>
+        <a class="aud" href="/Sons/nidoking.mp3" download="Nidoking">⮋ Nidoking</a><br/><br/>
+        <a class="aud" href="/Sons/clefairy.mp3" download="Clefairy">⮋ Clefairy</a><br/><br/>
+        <a class="aud" href="/Sons/clefable.mp3" download="Clefable">⮋ Clefable</a><br/><br/>
+        <a class="aud" href="/Sons/vulpix.mp3" download="Vulpix">Vulpix</a><br/><br/>
+        <a class="aud" href="/Sons/ninetales.mp3" download="Ninetales">⮋ Ninetales</a><br/><br/>
+        <a class="aud" href="/Sons/jigglypuff.mp3" download="Jigglypuff">⮋ Jigglypuff</a><br/><br/>
+        <a class="aud" href="/Sons/wigglytuff.mp3" download="Wigglytuff">⮋ Wigglytuff</a><br/><br/>
+        <a class="aud" href="/Sons/zubat.mp3" download="Zubat">⮋ Zubat</a><br/><br/>
+        <a class="aud" href="/Sons/golbat.mp3" download="Golbat">⮋ Golbat</a><br/><br/>
+        <a class="aud" href="/Sons/oddish.mp3" download="Oddish">⮋ Oddish</a><br/><br/>
+        <a class="aud" href="/Sons/gloom.mp3" download="Gloom">⮋ Gloom</a><br/><br/>
+        <a class="aud" href="/Sons/vileplume.mp3" download="Vileplume">⮋ Vileplume</a><br/><br/>
+        <a class="aud" href="/Sons/paras.mp3" download="Paras">⮋ Paras</a><br/><br/>
+        <a class="aud" href="/Sons/parasect.mp3" download="Parasect">Parasect</a><br/><br/>
+        <a class="aud" href="/Sons/venonat.mp3" download="Venonat">⮋ Venonat</a><br/><br/>
+        <a class="aud" href="/Sons/venomoth.mp3" download="Venomoth">⮋ Venomoth</a><br/><br/>
+        <a class="aud" href="/Sons/diglett.mp3" download="Diglett">⮋ Diglett</a><br/><br/>
+        <a class="aud" href="/Sons/dugtrio.mp3" download="Dugtrio">⮋ Dugtrio</a><br/><br/>
+        <a class="aud" href="/Sons/meowth.mp3" download="Meowth">⮋ Meowth</a><br/><br/>
+        <a class="aud" href="/Sons/persian.mp3" download="Persian">⮋ Persian</a><br/><br/>
+        <a class="aud" href="/Sons/psyduck.mp3" download="Psyduck">⮋ Psyduck</a><br/><br/>
+        <a class="aud" href="/Sons/golduck.mp3" download="Golduck">⮋ Golduck</a><br/><br/>
+        <a class="aud" href="/Sons/mankey.mp3" download="Mankey">⮋ Mankey</a><br/><br/>
+        <a class="aud" href="/Sons/primeape.mp3" download="Primeape">⮋ Primeape</a><br/><br/>
+        <a class="aud" href="/Sons/growlithe.mp3" download="Growlithe">⮋ Growlithe</a><br/><br/>
+        <a class="aud" href="/Sons/arcanine.mp3" download="Arcanine">⮋ Arcanine</a><br/><br/>
+        <a class="aud" href="/Sons/poliwag.mp3" download="Poliwag">⮋ Poliwag</a><br/><br/>
+        <a class="aud" href="/Sons/poliwhirl.mp3" download="Poliwhirl">⮋ Poliwhirl</a><br/><br/>
+        <a class="aud" href="/Sons/poliwrath.mp3" download="Poliwrath">⮋ Poliwrath</a><br/><br/>
+        <a class="aud" href="/Sons/abra.mp3" download="Abra">⮋ Abra</a><br/><br/>
+        <a class="aud" href="/Sons/kadabra.mp3" download="Kadabra">⮋ Kadabra</a><br/><br/>
+        <a class="aud" href="/Sons/alakazam.mp3" download="Alakazam">⮋ Alakazam</a><br/><br/>
+        <a class="aud" href="/Sons/machop.mp3" download="Machop">⮋ Machop</a><br/><br/>
+        <a class="aud" href="/Sons/machoke.mp3" download="Machoke">⮋ Machoke</a><br/><br/>
+        <a class="aud" href="/Sons/machamp.mp3" download="Machamp">⮋ Machamp</a><br/><br/>
+        <a class="aud" href="/Sons/bellsprout.mp3" download="Bellsprout">⮋ Bellsprout</a><br/><br/>
+        <a class="aud" href="/Sons/weepinbell.mp3" download="Weepinbell">⮋ Weepinbell</a><br/><br/>
+        <a class="aud" href="/Sons/victreebel.mp3" download="Victreebel">⮋ Victreebel</a><br/><br/>
+        <a class="aud" href="/Sons/tentacool.mp3" download="Tentacool">⮋ Tentacool</a><br/><br/>
+        <a class="aud" href="/Sons/tentacruel.mp3" download="Tentacruel">⮋ Tentacruel</a><br/><br/>
+        <a class="aud" href="/Sons/geodude.mp3" download="Geodude">⮋ Geodude</a><br/><br/>
+        <a class="aud" href="/Sons/graveler.mp3" download="Graveler">⮋ Graveler</a><br/><br/>
+        <a class="aud" href="/Sons/golem.mp3" download="Golem">⮋ Golem</a><br/><br/>
+        <a class="aud" href="/Sons/ponyta.mp3" download="Ponyta">⮋ Ponyta</a><br/><br/>
+        <a class="aud" href="/Sons/rapidash.mp3" download="Rapidash">⮋ Rapidash</a><br/><br/>
+        <a class="aud" href="/Sons/slowpoke.mp3" download="Slowpoke">⮋ Slowpoke</a><br/><br/>
+        <a class="aud" href="/Sons/slowbro.mp3" download="Slowbro">⮋ Slowbro</a><br/><br/>
+        <a class="aud" href="/Sons/magnemite.mp3" download="Magnemite">⮋ Magnemite</a><br/><br/>
+        <a class="aud" href="/Sons/magneton.mp3" download="Magneton">⮋ Magneton</a><br/><br/>
+        <a class="aud" href="/Sons/farfetchd.mp3" download="Farfetchd">⮋ Farfetchd</a><br/><br/>
+        <a class="aud" href="/Sons/doduo.mp3" download="Doduo">⮋ Doduo</a><br/><br/>
+        <a class="aud" href="/Sons/dodrio.mp3" download="Dodrio">⮋ Dodrio</a><br/><br/>
+        <a class="aud" href="/Sons/seel.mp3" download="Seel">⮋ Seel</a><br/><br/>
+        <a class="aud" href="/Sons/dewgong.mp3" download="Dewgong">⮋ Dewgong</a><br/><br/>
+        <a class="aud" href="/Sons/grimer.mp3" download="Grimer">⮋ Grimer</a><br/><br/>
+        <a class="aud" href="/Sons/muk.mp3" download="Muk">⮋ Muk</a><br/><br/>
+        <a class="aud" href="/Sons/shellder.mp3" download="Shellder">⮋ Shellder</a><br/><br/>
+        <a class="aud" href="/Sons/cloyster.mp3" download="Cloyster">⮋ Cloyster</a><br/><br/>
+        <a class="aud" href="/Sons/gastly.mp3" download="Gastly">⮋ Gastly</a><br/><br/>
+        <a class="aud" href="/Sons/haunter.mp3" download="Haunter">⮋ Haunter</a><br/><br/>
+        <a class="aud" href="/Sons/gengar.mp3" download="Gengar">⮋ Gengar</a><br/><br/>
+        <a class="aud" href="/Sons/onix.mp3" download="Onix">⮋ Onix</a><br/><br/>
+        <a class="aud" href="/Sons/drowzee.mp3" download="Drowzee">⮋ Drowzee</a><br/><br/>
+        <a class="aud" href="/Sons/hypno.mp3" download="Hypno">⮋ Hypno</a><br/><br/>
+        <a class="aud" href="/Sons/krabby.mp3" download="Krabby">⮋ Krabby</a><br/><br/>
+        <a class="aud" href="/Sons/kingler.mp3" download="Kingler">⮋ Kingler</a><br/><br/>
+        <a class="aud" href="/Sons/voltorb.mp3" download="Voltorb">⮋ Voltorb</a><br/><br/>
+        <a class="aud" href="/Sons/electrode.mp3" download="Electrode">⮋ Electrode</a><br/><br/>
+        <a class="aud" href="/Sons/exeggcute.mp3" download="Exeggcute">⮋ Exeggcute</a><br/><br/>
+        <a class="aud" href="/Sons/exeggutor.mp3" download="Exeggutor">⮋ Exeggutor</a><br/><br/>
+        <a class="aud" href="/Sons/cubone.mp3" download="Cubone">⮋ Cubone</a><br/><br/>
+        <a class="aud" href="/Sons/marowak.mp3" download="Marowak">⮋ Marowak</a><br/><br/>
+        <a class="aud" href="/Sons/hitmonlee.mp3" download="Hitmonlee">⮋ Hitmonlee</a><br/><br/>
+        <a class="aud" href="/Sons/hitmonchan.mp3" download="Hitmonchan">⮋ Hitmonchan</a><br/><br/>
+        <a class="aud" href="/Sons/lickitung.mp3" download="Lickitung">⮋ Lickitung</a><br/><br/>
+        <a class="aud" href="/Sons/koffing.mp3" download="Koffing">⮋ Koffing</a><br/><br/>
+        <a class="aud" href="/Sons/weezing.mp3" download="Weezing">⮋ Weezing</a><br/><br/>
+        <a class="aud" href="/Sons/rhyhorn.mp3" download="Rhyhorn">⮋ Rhyhorn</a><br/><br/>
+        <a class="aud" href="/Sons/rhydon.mp3" download="Rhydon">⮋ Rhydon</a><br/><br/>
+        <a class="aud" href="/Sons/chansey.mp3" download="Chansey">⮋ Chansey</a><br/><br/>
+        <a class="aud" href="/Sons/tangela.mp3" download="Tangela">⮋ Tangela</a><br/><br/>
+        <a class="aud" href="/Sons/kangaskhan.mp3" download="Kangaskhan">⮋ Kangaskhan</a><br/><br/>
+        <a class="aud" href="/Sons/horsea.mp3" download="Horsea">⮋ Horsea</a><br/><br/>
+        <a class="aud" href="/Sons/seadra.mp3" download="Seadra">⮋ Seadra</a><br/><br/>
+        <a class="aud" href="/Sons/goldeen.mp3" download="Goldeen">⮋ Goldeen</a><br/><br/>
+        <a class="aud" href="/Sons/seaking.mp3" download="Seaking">⮋ Seaking</a><br/><br/>
+        <a class="aud" href="/Sons/staryu.mp3" download="Staryu">⮋ Staryu</a><br/><br/>
+        <a class="aud" href="/Sons/starmie.mp3" download="Starmie">⮋ Starmie</a><br/><br/>
+        <a class="aud" href="/Sons/mrmime.mp3" download="Mrmime">⮋ Mrmime</a><br/><br/>
+        <a class="aud" href="/Sons/scyther.mp3" download="Scyther">⮋ Scyther</a><br/><br/>
+        <a class="aud" href="/Sons/jynx.mp3" download="Jynx">⮋ Jynx</a><br/><br/>
+        <a class="aud" href="/Sons/electabuzz.mp3" download="Electabuzz">⮋ Electabuzz</a><br/><br/>
+        <a class="aud" href="/Sons/magmar.mp3" download="Magmar">⮋ Magmar</a><br/><br/>
+        <a class="aud" href="/Sons/pinsir.mp3" download="Pinsir">⮋ Pinsir</a><br/><br/>
+        <a class="aud" href="/Sons/tauros.mp3" download="Tauros">⮋ Tauros</a><br/><br/>
+        <a class="aud" href="/Sons/magikarp.mp3" download="Magikarp">⮋ Magikarp</a><br/><br/>
+        <a class="aud" href="/Sons/gyarados.mp3" download="Gyarados">⮋ Gyarados</a><br/><br/>
+        <a class="aud" href="/Sons/lapras.mp3" download="Lapras">⮋ Lapras</a><br/><br/>
+        <a class="aud" href="/Sons/ditto.mp3" download="Ditto">⮋ Ditto</a><br/><br/>
+        <a class="aud" href="/Sons/eevee.mp3" download="Eevee">⮋ Eevee</a><br/><br/>
+        <a class="aud" href="/Sons/vaporeon.mp3" download="Vaporeon">⮋ Vaporeon</a><br/><br/>
+        <a class="aud" href="/Sons/jolteon.mp3" download="Jolteon">⮋ Jolteon</a><br/><br/>
+        <a class="aud" href="/Sons/flareon.mp3" download="Flareon">⮋ Flareon</a><br/><br/>
+        <a class="aud" href="/Sons/porygon.mp3" download="Potygon">⮋ Porygon</a><br/><br/>
+        <a class="aud" href="/Sons/omanyte.mp3" download="Omanyte">⮋ Omanyte</a><br/><br/>
+        <a class="aud" href="/Sons/omastar.mp3" download="Omastar">⮋ Omastar</a><br/><br/>
+        <a class="aud" href="/Sons/kabuto.mp3" download="Kabuto">⮋ Kabuto</a><br/><br/>
+        <a class="aud" href="/Sons/kabutops.mp3" download="Kabutops">⮋ Kabutops</a><br/><br/>
+        <a class="aud" href="/Sons/aerodactyl.mp3" download="Aerodactyl">⮋ Aerodactyl</a><br/><br/>
+        <a class="aud" href="/Sons/snorlax.mp3" download="Snorlax">⮋ Snorlax</a><br/><br/>
+        <a class="aud" href="/Sons/articuno.mp3" download="Articuno">⮋ Articuno</a><br/><br/>
+        <a class="aud" href="/Sons/zapdos.mp3" download="Zapdos">⮋ Zapdos</a><br/><br/>
+        <a class="aud" href="/Sons/moltres.mp3" download="Moltre">⮋ Moltres</a><br/><br/>
+        <a class="aud" href="/Sons/dratini.mp3" download="Dratini">⮋ Dratini</a><br/><br/>
+        <a class="aud" href="/Sons/dragonair.mp3" download="Dragonair">⮋ Dragonair</a><br/><br/>
+        <a class="aud" href="/Sons/dragonite.mp3" download="Dragonite">⮋ Dragonite</a><br/><br/>
+        <a class="aud" href="/Sons/mewtwo.mp3" download="Mewtwo">⮋ Mewtow</a><br/><br/>
+        <a class="aud" href="/Sons/mew.mp3" download="Mew">⮋ Mew</a><br/><br/>
+    </div>
+    </button>
+    <hr><br/><br/><br/>
+    <button class="fun-jogo" onclick="jogo()">🎮 Jogos</button><hr>
+    <div class="div-jogo">
+        <h1>Pokémon Red</h1>
+        <br/><br/>
+         <center>   
+                <img class="img-jogo" src="/Img-jogo/PokemonRed.jpg" alt="Pokémon Red"></a>
+        </center>
+        <br/><br/>
+        <ul class="desc">
+            <li>Linguagem: (USA)</li>
+            <li>Formato: (GBC)</li>
+    
+        </ul>
+        <br/><br/>
+        <center>
+            <button class="download">
+                <a href="/Jogos/Pokemon-Red_Version(UE)[!].zip">
+                    Download
+                </a>
+            </button>
+        </center>
+        <br/><br/>
+        <h1 style="color:rgb(39, 39, 223)">Pokémon Blue</h1>
+        <br/><br/>
+         <center>   
+                <img class="img-jogo" src="/Img-jogo/PokemonBlue.jpg" alt="Pokémon Blue"></a>
+        </center>
+        <br/>
+        <ul class="desc">
+            <li>Linguagem: (USA)</li>
+            <li>Formato: (GBC)</li>
+        </ul>
+        <br/><br/>
+        <center>
+            <button class="download" style="background:linear-gradient(rgb(0, 0, 131),rgb(14, 14, 211),blue)">
+            <a href="/Jogos/Pokemon-Blue_Version (UE)[!].zip">
+                    Download
+                </a>
+            </button>
+        </center>
+        <br/><br/>
+        <h1 style="color:yellow">Pokémon Yellow</h1>
+        <br/><br/>
+         <center>   
+                <img class="img-jogo" src="https://upload.wikimedia.org/wikipedia/pt/4/43/Pok%C3%A9mon_Yellow_cover.png" alt="Pokémon Yellow"></a>
+        </center>
+        <br/>
+        <ul class="desc">
+            <li>Linguagem: (USA)</li>
+            <li>Formato: (GBC)</li>
+    
+        </ul>
+        <br/><br/>
+        <center>
+            <button class="download" style="background:linear-gradient(rgb(201, 201, 0),rgb(223, 223, 0),yellow)">
+                <a href="Jogos/PokemonYellowVersion(UE)[!].zip">
+                    Download
+                </a>
+            </button>
+        </center>
+        <br/><br/>
+        <h1 style="color:rgb(172, 172, 11)">Pokémon Gold</h1>
+        <br/><br/>
+         <center>   
+                <img class="img-jogo" src="https://wowroms-photos.com/emulators-roms-logo/28/11377/420-420/Pokemon+-+Gold+Version+(USA,+Europe)+(SGB+Enhanced)-image.jpg" alt="Pokémon Gold"></a>
+        </center>
+        <br/>
+        <ul class="desc">
+            <li>Linguagem: (USA)</li>
+            <li>Formato: (GBC)</li>
+    
+        </ul>
+        <br/><br/>
+        <center>
+            <button class="download" style="background:linear-gradient(rgb(114, 114, 0),rgb(170, 170, 0),rgb(179, 179, 0))">
+                <a href="Jogos/Pokemon - Gold Version (UE) [C][!].zip">
+                    Download
+                </a>
+            </button>
+        </center>
+        <br/><br/>
+        <h1 style="color:rgb(116, 116, 116)">Pokémon Silver</h1>
+        <br/><br/>
+         <center>   
+                <img class="img-jogo" src="https://wowroms-photos.com/emulators-roms-logo/28/11381/420-420/Pokemon+-+Silver+Version+(USA,+Europe)+(SGB+Enhanced)-image.jpg" alt="Pokémon Silver"></a>
+        </center>
+        <br/>
+        <ul class="desc">
+            <li>Linguagem: (USA)</li>
+            <li>Formato: (GBC)</li>
+    
+        </ul>
+        <br/><br/>
+        <center>
+            <button class="download" style="background:linear-gradient(rgb(92, 92, 92),rgb(121, 121, 121),rgb(145, 145, 144))">
+                <a href="/Jogos/Pokemon-Silver Version(UE)[C][!].zip">
+                    Download
+                </a>
+            </button>
+        </center>
+        <br/><br/>
+        <h1 style="color:rgb(0, 146, 122)">Pokémon Crystal</h1>
+        <br/><br/>
+         <center>   
+                <img class="img-jogo" src="https://2.bp.blogspot.com/-rmeFOVbOsNI/UrR13xJiQqI/AAAAAAAALVQ/-Et2E7HLudc/s1600/Pok%C3%A9mon+Crystal+Nintendo+blast.jpg" alt="Pokémon Crystal"></a>
+        </center>
+        <br/>
+        <ul class="desc">
+            <li>Linguagem: (USA)</li>
+            <li>Formato: (GBC)</li>
+    
+        </ul>
+        <br/><br/>
+        <center>
+            <button class="download" style="background:linear-gradient(rgb(0, 107, 107),rgb(0, 165, 165),rgb(7, 165, 152))">
+                <a href="Jogos/Pokemon - Crystal Version (UE) (V1.1) [C][!].zip">
+                    Download
+                </a>
+            </button>
+        </center>
+        <br/><br/>
+        <h1 style="color:rgb(212, 0, 71)">Pokémon Ruby</h1>
+        <br/><br/>
+         <center>   
+                <img class="img-jogo" src="https://notadogame.com/uploads/game/cover/250x/5bfdc3d65ac27.jpg" alt="Pokémon Ruby"></a>
+        </center>
+        <br/>
+        <ul class="desc">
+            <li>Linguagem: (USA)</li>
+            <li>Formato: (GBA)</li>
+    
+        </ul>
+        <br/><br/>
+        <center>
+            <button class="download" style="background:linear-gradient(rgb(156, 1, 40),rgb(192, 0, 64),rgb(204, 0, 68))">
+                <a href="Jogos/Pokemon - Ruby Version (U) (V1.1).zip">
+                    Download
+                </a>
+            </button>
+        </center>
+        <br/><br/>
+        <h1 style="color:rgb(17, 125, 226)">Pokémon Sapphire</h1>
+        <br/><br/>
+         <center>   
+                <img class="img-jogo" src="https://m.media-amazon.com/images/I/61RDD36KWPL._AC_.jpg" alt="Pokémon Sapphire"></a>
+        </center>
+        <br/>
+        <ul class="desc">
+            <li>Linguagem: (USA)</li>
+            <li>Formato: (GBA)</li>
+    
+        </ul>
+        <br/><br/>
+        <center>
+            <button class="download" style="background:linear-gradient(rgb(0, 88, 146),rgb(0, 97, 189),rgb(0, 119, 255))">
+                <a href="Jogos/Pokemon - Sapphire Version (U) (V1.1).zip">
+                    Download
+                </a>
+            </button>
+        </center>
+        <br/><br/>
+        <h1 style="color:rgb(202, 13, 0)">Pokémon Fire Red</h1>
+        <br/><br/>
+         <center>   
+                <img class="img-jogo" src="https://notadogame.com/uploads/game/cover/250x/5bfdc3d5a86b9.jpg" alt="Pokémon Fire Red"></a>
+        </center>
+        <br/>
+        <ul class="desc">
+            <li>Linguagem: (USA)</li>
+            <li>Formato: (GBA)</li>
+    
+        </ul>
+        <br/><br/>
+        <center>
+            <button class="download" style="background:linear-gradient(rgb(189, 28, 0),rgb(201, 23, 0),rgb(214, 25, 0))">
+                <a href="Jogos/Pokemon - Fire Red Version (U) (V1.1).zip">
+                    Download
+                </a>
+            </button>
+        </center>
+        <br/><br/>
+        <h1 style="color:rgb(27, 94, 0)">Pokémon Leaf Green</h1>
+        <br/><br/>
+         <center>   
+                <img class="img-jogo" src="https://romsportugues.tk/wp-content/uploads/2018/07/Pokemon-Leaf-Green-Version-Baixar-Download-em-Portugu%C3%AAs-Traduzido-PTBR.jpg" alt="Pokémon Leaf Green"></a>
+        </center>
+        <br/>
+        <ul class="desc">
+            <li>Linguagem: (USA)</li>
+            <li>Formato: (GBA)</li>
+    
+        </ul>
+        <br/><br/>
+        <center>
+            <button class="download" style="background:linear-gradient(rgb(0, 102, 0),rgb(15, 128, 0),rgb(14, 168, 0))">
+                <a href="Jogos/Pokemon - Leaf Green Version (U) (V1.1).zip">
+                    Download
+                </a>
+            </button>
+        </center>
+        <br/><br/>
+        <h1 style="color:rgb(7, 209, 7)">Pokémon Esmerald</h1>
+        <br/><br/>
+         <center>   
+                <img class="img-jogo" src="https://upload.wikimedia.org/wikipedia/pt/7/72/Pok%C3%A9mon_Emerald_cover.png" alt="Esmerald"></a>
+        </center>
+        <br/>
+        <ul class="desc">
+            <li>Linguagem: (USA)</li>
+            <li>Formato: (GBA)</li>
+    
+        </ul>
+        <br/><br/>
+        <center>
+            <button class="download" style="background:linear-gradient(rgb(0, 122, 37),rgb(0, 153, 38),rgb(0, 170, 51))">
+                <a href="Jogos/Pokemon - Emerald Version (U).zip">
+                    Download
+                </a>
+            </button>
+        </center>
+        <br/><br/>
+    </div>
+    </button><hr><br><br/><br/><br/><br/>
+    <div id="fim">
+        <br/><br/>
+    <p>Se quiser nos ajudar com qualquer quantia ou relatar erros, o E-mail e o Pix estão logo abaixo:
+        <br/><br/><br/><img id="eco" src="https://bk.ibxk.com.br/2014/11/programas/70504815.png">&nbsp;<a id="e" href="mailto:eryckborges2502@gmail.com">E-mail</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img id="pix" src="https://www.advocacianunes.com.br/wp-content/uploads/2022/04/logo-pix-icone-1024.png">&nbsp;522.476.818-75
+    </p>
+    </div>
+    <script>
+        var pes = document.querySelector(".lup");
+        var conte = document.querySelector(".cont");
+        var poke =  document.querySelector(".div-pok");
+        var audio = document.querySelector(".div-aud");
+        var jogos = document.querySelector(".div-jogo");
+        function lupa(){
+            if(pes.style.display == "none"){
+                pes.style.display = "block";
+               
+            }
+            else{
+                pes.style.display = "none";
+                
+            }
+        }
+        
+        function menu(){
+            if(conte.style.display == "none"){
+                conte.style.display = "block";
+               
+            }
+            else{
+                conte.style.display = "none";
+                
+            }
+        }
+        function pok(){
+            if(poke.style.display == "none"){
+                poke.style.display = "block";
+            }
+            else{
+                poke.style.display = "none";
+            }
+        }
+        function aud(){
+            if(audio.style.display == "none"){
+                audio.style.display = "block";
+            }
+            else{
+                audio.style.display = "none";
+            }
+        }
+        function jogo(){
+            if(jogos.style.display == "none"){
+                jogos.style.display = "block";
+               
+            }
+            else{
+                jogos.style.display = "none";
+                
+            }
+        }
+    </script>
+</body>
+</html>

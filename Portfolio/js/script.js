@@ -147,7 +147,8 @@ canvaTitleEu: 'My Canva Knowledge',
 contact: "Talk to me, and let's create something amazing together!",
 titleSolo: 'Solo Leveling RPG Generator',
 titleRelogio: 'Clocks and Stopwatch',
-
+titleGenshin: 'Genshin Impact Divination',
+toastAlertDesenvolvi: 'In Development',
 };
 
 const brasil = {
@@ -245,6 +246,8 @@ const brasil = {
     contact: 'Fale comigo e vamos criar algo incrível juntos!',
     titleSolo: 'Gerador RPG Solo Leveling',
 titleRelogio: 'Relógios e Cronômetro',
+titleGenshin: 'Adivinhação de Genshin Impact',
+toastAlertDesenvolvi: 'Em Desenvolvimento',
 };
 
 const spain = {
@@ -339,7 +342,8 @@ canvaTitleEs: 'Mis Conocimientos de Canva',
 contact: '¡Habla conmigo y creemos algo increíble juntos!',
 titleSolo: 'Generador RPG Solo Leveling',
 titleRelogio: 'Relojes y Cronómetro',
-
+titleGenshin: 'Adivinación de Genshin Impact',
+toastAlertDesenvolvi: 'En Desarrollo',
 };
 
 const franca = {
@@ -434,7 +438,8 @@ canvaTitleFr: 'Mes Connaissances en Canva',
 contact : "Parlez-moi et créons quelque chose d'incroyable ensemble !",
 titleSolo: 'Générateur RPG Solo Leveling',
 titleRelogio: 'Horloges et Chronomètre',
-
+titleGenshin: 'Divination de Genshin Impact',
+toastAlertDesenvolvi: 'En Développement',
 };
 
 const china = {
@@ -529,7 +534,8 @@ canvaTitleCh: '我的 Canva 知识',
 contact: '和我聊聊，让我们一起创造一些令人惊叹的东西！',
 titleSolo: 'Solo Leveling RPG 生成器',
 titleRelogio: '时钟和计时器',
-
+titleGenshin: '原神占卜',
+toastAlertDesenvolvi: '开发中',
 };
 
 const elementos = {
@@ -550,6 +556,9 @@ const elementos = {
     contact: document.querySelector('.qrCode h1'),
     titleRelogio: document.querySelector('.relogio p'),
     titleSolo: document.querySelector('.sololeveling p'),
+    titleGenshin: document.querySelector('.genshin p'),
+    toastAlertDesenvolvi: document.querySelector('.textToast'),
+
 };
 
 const ingles = () => {
@@ -672,6 +681,8 @@ const ingles = () => {
     elementos.contact.innerHTML = eua.contact;
     elementos.titleSolo.innerHTML = eua.titleSolo;
     elementos.titleRelogio.innerHTML = eua.titleRelogio;
+    elementos.titleGenshin.innerHTML = eua.titleGenshin;
+    elementos.toastAlertDesenvolvi.innerHTML = eua.toastAlertDesenvolvi;
     titleButtonTranslate.forEach((btnTranslate) => {
         btnTranslate.setAttribute('title', 'Translate to English');
     });
@@ -797,6 +808,8 @@ const portugues = () => {
     elementos.contact.innerHTML = brasil.contact;
     elementos.titleSolo.innerHTML = brasil.titleSolo;
     elementos.titleRelogio.innerHTML = brasil.titleRelogio;
+    elementos.titleGenshin.innerHTML = brasil.titleGenshin;
+    elementos.toastAlertDesenvolvi.innerHTML = brasil.toastAlertDesenvolvi;
     titleButtonTranslate.forEach((btnTranslate) => {
         btnTranslate.setAttribute('title', 'Traduzir para o Português');
     });
@@ -921,6 +934,8 @@ const espanha = () => {
     elementos.contact.innerHTML = spain.contact;
     elementos.titleSolo.innerHTML = spain.titleSolo;
     elementos.titleRelogio.innerHTML = spain.titleRelogio;
+    elementos.titleGenshin.innerHTML = spain.titleGenshin;
+    elementos.toastAlertDesenvolvi.innerHTML = spain.toastAlertDesenvolvi;
     titleButtonTranslate.forEach((btnTranslate) => {
         btnTranslate.setAttribute('title', 'Traducir al español');
     });
@@ -1046,6 +1061,8 @@ const frances = () => {
     elementos.contact.innerHTML = franca.contact;
     elementos.titleSolo.innerHTML = franca.titleSolo;
     elementos.titleRelogio.innerHTML = franca.titleRelogio;
+    elementos.titleGenshin.innerHTML = franca.titleGenshin;
+    elementos.toastAlertDesenvolvi.innerHTML = franca.toastAlertDesenvolvi;
     titleButtonTranslate.forEach((btnTranslate) => {
         btnTranslate.setAttribute('title', 'Traduire en français');
     });
@@ -1170,6 +1187,8 @@ const chines = () => {
 elementos.contact.innerHTML = china.contact;
 elementos.titleSolo.innerHTML = china.titleSolo;
 elementos.titleRelogio.innerHTML = china.titleRelogio;
+elementos.titleGenshin.innerHTML = china.titleGenshin;
+elementos.toastAlertDesenvolvi.innerHTML = china.toastAlertDesenvolvi;
 titleButtonTranslate.forEach((btnTranslate) => {
     btnTranslate.setAttribute('title', '翻译成中文');
 });
@@ -1808,4 +1827,97 @@ const relogio = document.querySelector('.relogio');
 
 relogio.addEventListener('click', () => {
     window.location.href = '../../projects/relogio/'
+});
+
+const toastFunction = () => {
+    if (lang === 'eu') {
+        textToast.innerHTML = eua.toastAlertDesenvolvi;
+    } else if (lang === 'es') {
+        textToast.innerHTML = spain.toastAlertDesenvolvi;
+    } else if (lang === 'fr') {
+        textToast.innerHTML = franca.toastAlertDesenvolvi;
+    } else if (lang === 'ch') {
+        textToast.innerHTML = china.toastAlertDesenvolvi;
+    } else {
+        // Caso nenhuma linguagem esteja no localStorage, define como 'br'
+        textToast.innerHTML = brasil.toastAlertDesenvolvi;
+    }
+}
+
+const genshin = document.querySelector('.genshin');
+const allButtonProject = document.querySelector('.buttonAllProjects');
+
+let toast = document.querySelector('.toast');
+let textToast = document.querySelector('.pToast');
+let imageToast = document.querySelector('.toast img');
+
+const toastNotification = new Audio();
+toastNotification.src = '../../../global/music/toastNotification.mp3'
+
+genshin.addEventListener('click', () => {
+    toastNotification.play();
+    toast.style.display = 'flex';
+    toast.style.opacity = '1';
+    setTimeout(() => {
+        toast.classList.add('toastOpen');
+        toast.style.animation = 'openToast 1s';
+        setTimeout(() => {
+            textToast.style.display = 'flex'
+            textToast.innerHTML = toastFunction();
+            
+        }, 200);
+    }, 200);
+    setTimeout(() => {
+        toast.classList.remove('toastOpen');
+        toast.style.animation = 'closeToast 500ms';
+        setTimeout(() => {
+            textToast.style.display = 'none'
+            setTimeout(() => {
+                toast.style.opacity = '0'
+                toast.style.display = 'none'
+                toast.style.animation = 'none';
+            }, 500);
+        }, 200);
+    }, 5000);
+});
+
+allButtonProject.addEventListener('click', () => {
+    toastNotification.play();
+    toast.style.display = 'flex';
+    toast.style.opacity = '1';
+    setTimeout(() => {
+        toast.classList.add('toastOpen');
+        toast.style.animation = 'openToast 1s';
+        setTimeout(() => {
+            textToast.style.display = 'flex'
+            textToast.innerHTML = toastFunction();
+            
+        }, 200);
+    }, 200);
+    setTimeout(() => {
+        toast.classList.remove('toastOpen');
+        toast.style.animation = 'closeToast 500ms';
+        setTimeout(() => {
+            textToast.style.display = 'none'
+            setTimeout(() => {
+                toast.style.opacity = '0'
+                toast.style.display = 'none'
+                toast.style.animation = 'none';
+            }, 500);
+        }, 200);
+    }, 5000);
+});
+
+
+toast.addEventListener('click', () => {
+    toast.classList.remove('toastOpen');
+    toast.style.animation = 'closeToast 500ms';
+    setTimeout(() => {
+        textToast.style.display = 'none'
+        setTimeout(() => {
+            toast.style.opacity = '0'
+            toast.style.display = 'none'
+            toast.style.animation = 'none';
+        }, 500);
+    }, 200);
 });

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario</title>
+    <style>
+        body{
+            margin:0;
+            background:black;
+            color:white;
+            
+        }
+        #input-image{
+          display:none; 
+          margin-top:30vh;
+        }
+        .img{
+           height:30vh;
+           width:100%;
+           border-radius:100px;
+        }
+        .picture{
+            width:30vh;
+            top:30vh;
+            height:30vh;
+            aspect-ratio: 16/9;
+            display:flex;
+            position:absolute;
+            left:40vw;
+            color:white;
+            border-radius:100px;
+            cursor:pointer;
+            box-shadow: 0 0 15px 0.5px lightgray;
+        }
+        .image{
+            width:30vw;
+            height:30vh;
+        }
+        #name{
+            text-align:center;
+            display:block;
+            top:65vh;
+            left:41vw;
+            position:absolute;
+            margin:0 auto;
+            background:transparent;
+            border:none;
+            height:5vh;
+            cursor:auto;
+        }
+        #name::placeholder{
+            font-size:18pt;
+        }
+        textarea:focus, input:focus {
+            box-shadow: 0 0 0 0;
+            outline: 0;
+        }
+        .logo{
+            background:rgb(51, 51, 51);
+            width:100%;
+            height:20vh;
+            background-attachment: fixed;
+        }
+        ul{
+            list-style: none;
+            display:flex;
+            flex-direction:column;
+            align-items: center;
+            justify-content: space-around; 
+        }
+        li a{
+            position:relative;
+            margin-top:50px;
+            left:0;
+            font-size:16pt;
+            color:white;
+            display:flex;
+            text-decoration: none;
+            letter-spacing: 3px;
+            animation: text 1s;
+        }
+        @keyframes text{
+            from{
+                left:-25vw;
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+                left:0;
+            }
+        }
+        .lupa{
+            position:absolute;
+            right:2vw;
+            top:10vh;
+            border:none;
+            background:transparent;
+            cursor:pointer;
+            margin-right:3vw;
+            width:7vw;
+            height:7vh;            
+        }
+        #logo{
+            position:absolute;
+            left:47vw;
+            width:10vw;
+            top:2vh;
+            height:15vh;
+        }
+        #img-lupa{
+            top:3vh;
+            background:transparent; 
+            width:4vw;
+            height:5vh;
+        }
+        .lup{
+            position:absolute;
+            top:20.5vh;
+            border:none;
+            border-radius:5px;
+            width:100vw;
+            height:4vh;
+            opacity:0.5;
+            display:none;
+            animation: input 1s;
+            color:black;
+            font-size:12pt;
+        }
+        
+        .lup::placeholder{
+            font-size:10pt;
+            text-align: center;
+        }
+        @keyframes input{
+            from{
+                
+                opacity:0;
+            }
+            10%{
+                opacity:0.1;
+            }
+            20%{
+                opacity:0.2;
+            }
+            30%{
+                opacity:0.3;
+            }
+            40%{
+                opacity:0.4;
+            }
+            to{
+               
+                opacity:0.5;
+            }
+        }
+
+        .cont{
+            display:none;
+            position:absolute;
+            width:28vw;
+            text-align: center;
+            top:20.5vh;
+            height:80vh;
+            background:rgb(51, 51, 51);
+            animation: menu 1s;
+        } 
+        @keyframes menu{
+            from{
+                left:-25vw;
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+                left:0;
+            }
+        }
+        
+        .btn-menu div{
+                width:5vw;
+                height:1vh;
+                background:white;
+                margin:1vh;
+        }
+        .menu{
+            position:absolute;
+            top:10vh;
+            left:5vw;
+            background:transparent;
+            border:none;
+            cursor:pointer;
+        }
+        @media(max-width:999px){
+            .cont{
+            display:none;
+            position:absolute;
+            width:50vw;
+            text-align: center;
+            top:20.5vh;
+            height:100vh;
+            background:rgb(51, 51, 51);
+            animation: menu 1s;
+        } 
+        #logo{
+            position:absolute;
+            left:41vw;
+            width:20vw;
+            top:2.5vh;
+            height:15vh;
+        }
+        #img-lupa{
+            
+            top:3vh;
+            background:transparent; 
+            width:8vw;
+            height:7vh;
+        }
+        .lupa{
+            position:absolute;
+            right:4vw;
+            top:10vh;
+            border:none;
+            background:transparent;
+            cursor:pointer;
+            margin-right:3vw;
+            width:7vw;
+            height:7vh;            
+        }
+        .lup{
+            position:absolute;
+            top:20.5vh;
+            border:none;
+            border-radius:5px;
+            width:100vw;
+            height:4vh;
+            opacity:0.5;
+            display:none;
+            animation: input 1s;
+            color:black;
+            font-size:12pt;
+        }
+               .btn-menu div{
+                width:9vw;
+                height:1vh;
+                background:white;
+                margin:1vh;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <button class="menu" onclick="menu()">
+            <div class="btn-menu">
+                <div class="l1"></div>
+                <div class="l2"></div>
+                <div class="l3"></div>
+            </div>
+        </button>
+   
+        <img src="./Imagens/WhatsApp Image 2022-10-10 at 12.50.07.jpeg" alt="logo" id="logo"/>
+        <button class="lupa" ondblclick="lupa()">
+            <img id="img-lupa" src="https://www.pngall.com/wp-content/uploads/8/Magnifying-Glass-Search-PNG-Clipart.png" alt="Lupa">
+        </button>
+        <input type="text" class="lup" placeholder="Pesquisar...">
+    </div> 
+    <div class="cont">
+        <ul>
+            <li><a href=""><img class="icons"src=""/>Entrar</a></li>
+            <li><a href="/Inicio/inicio.html"><img class="icons"src=""/>Menu</a></li>
+            <li><a href="/Pokedex/index.html"><img class="icons"src=""/>Pokédex</a></li>
+            <li><a href=""><img class="icons"src=""/>Downloads</a></li>
+            <li><a href=""><img class="icons"src=""/>Quem Somos?</a></li>
+        </ul>
+    </div>
+<label class="picture">
+    <input type="file" accept="image/jpeg" id="input-image">
+    <span class="image">
+    <img class="img" src="https://icones.pro/wp-content/uploads/2021/02/icone-utilisateur-gris.png" alt=""></span>
+</label>
+<br/><br/>
+<input id="name" type="text" readOnly placeholder="Eryck Borges">
+    <script>
+    const inputFile = document.querySelector("#input-image");
+    const pictureImage = document.querySelector(".image");
+    inputFile.addEventListener('change', function(e){
+        const inputTarget = e.target;
+        const file = inputTarget.files[0];
+        if(file){
+            const reader = new FileReader();
+            reader.addEventListener('load', function(e){
+                const readerTarget = e.target;
+                const img = document.createElement('img');
+                img.src = readerTarget.result;
+                img.classList.add('img');
+                pictureImage.innerHTML = "";
+                pictureImage.appendChild(img);
+            });
+
+            reader.readAsDataURL(file);
+        }
+
+    });
+    var pes = document.querySelector(".lup");
+    var conte = document.querySelector(".cont");
+        function lupa(){
+            if(pes.style.display == "none"){
+                pes.style.display = "block";
+               
+            }
+            else{
+                pes.style.display = "none";
+                
+            }
+        }
+        
+        function menu(){
+            if(conte.style.display == "none"){
+                conte.style.display = "block";
+               
+            }
+            else{
+                conte.style.display = "none";
+                
+            }
+        }
+    </script>
+</body>
+</html>

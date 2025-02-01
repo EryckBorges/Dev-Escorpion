@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Imagens/Icon.ico">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            background:black;
+        }
+        .logo{
+            background:rgb(51, 51, 51);
+            width:100%;
+            height:17vh;
+            position:fixed;
+        }
+        ul{
+            list-style: none;
+            display:flex;
+            flex-direction:column;
+            align-items:left;
+            margin-left:5vw;
+            justify-content:space-around; 
+        }
+        li a{
+            position:relative;
+            margin-top:50px;
+            
+            font-size:16pt;
+            color:white;
+            display:flex;
+            text-decoration: none;
+            letter-spacing: 3px;
+            animation: text 2s;
+        }
+        @keyframes text{
+            from{
+                left:-100vw;
+                opacity: 0;
+            }
+            to{
+                opacity:1;
+                left:0;
+            }
+        }
+        .lupa{
+            position:absolute;
+            right:2vw;
+            top:8vh;
+            border:none;
+            background:transparent;
+            cursor:pointer;
+            margin-right:3vw;
+            width:7vw;
+            height:7vh;            
+        }
+        #logo{
+            position:absolute;
+            left:42vw;
+            width:15vw;
+            top:-1.5vh;
+            height:20vh;
+        }
+        #img-lupa{
+            top:3vh;
+            background:transparent; 
+            width:4vw;
+            height:5vh;
+        }
+        .lup{
+            position:absolute;
+            top:17.5vh;
+            border:none;
+            border-radius:5px;
+            width:100vw;
+            height:4vh;
+            opacity:0.5;
+            display:none;
+            animation: input 1s;
+            color:black;
+            font-size:12pt;
+        }
+        
+        .lup::placeholder{
+            font-size:10pt;
+            text-align: center;
+        }
+        @keyframes input{
+            from{
+                
+                opacity:0;
+            }
+            10%{
+                opacity:0.1;
+            }
+            20%{
+                opacity:0.2;
+            }
+            30%{
+                opacity:0.3;
+            }
+            40%{
+                opacity:0.4;
+            }
+            to{
+               
+                opacity:0.5;
+            }
+        }
+
+        .cont{
+            display:none;
+            position:fixed;
+            width:28vw;
+            top:17.5vh;
+            height:100%;
+            background:rgb(51, 51, 51);
+            animation: menu 1s ;
+            overflow:auto;
+        }
+        @keyframes menu{
+            from{
+                transform:translateY(-100vw);
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+                transform:translateY(0);
+            }
+        }
+        
+        .btn-menu div{
+                width:5vw;
+                height:1vh;
+                background:white;
+                margin:1vh;
+        }
+        .menu{
+            position:absolute;
+            top:8.5vh;
+            left:5vw;
+            background:transparent;
+            border:none;
+            cursor:pointer;
+        }
+        @media(max-width:999px){
+            .cont{
+            display:none;
+            position:fixed;
+            width:50vw;
+            top:17.5vh;
+            height:100%;
+            background:rgb(51, 51, 51);
+            animation: menu 1s ;
+            overflow:auto;
+        }
+        #logo{
+            position:absolute;
+            left:40vw;
+            width:25vw;
+            top:-1.5vh;
+            height:20vh;
+        }
+        #img-lupa{
+            
+            top:3vh;
+            background:transparent; 
+            width: 6vw;
+            height:6vh;
+        }
+        .lupa{
+            position:absolute;
+            right:4vw;
+            top:8.7vh;
+            border:none;
+            background:transparent;
+            cursor:pointer;
+            margin-right:3vw;
+            width:8vw;
+            height:7vh;            
+        }
+        .lup{
+            position:absolute;
+            top:17.5vh;
+            border:none;
+            border-radius:5px;
+            width:100vw;
+            height:4vh;
+            opacity:0.5;
+            display:none;
+            animation: input 1s;
+            color:black;
+            font-size:12pt;
+        }
+               .btn-menu div{
+                width:8.5vw;
+                height:1vh;
+                background:white;
+                margin:1vh;
+        }
+        li a{
+            position:relative;
+            margin-top:50px;
+            
+            font-size:12pt;
+            color:white;
+            display:flex;
+            text-decoration: none;
+            letter-spacing: 3px;
+            animation: text 1s;
+        }
+        .icons{
+            
+            max-width:30px;
+            max-height:30px;
+            margin-right:10px;
+            margin-top:-10px;
+        }     
+        }
+        .icons{
+            
+            max-width:40px;
+            max-height:40px;
+            margin-right:10px;
+            margin-top:-10px;
+        }
+        #tit{ 
+            text-align:center; 
+            font-size:35pt;
+            color:white; 
+            background:linear-gradient(20deg,yellow,red,purple,rgb(163, 0, 101));
+            margin-top:20vh;       
+        }
+        .fundo{
+            border-radius:50%;
+            height:45vh;
+            width:25vw;
+            margin-left:37vw;
+        }
+        .foto{
+            border-radius:50%;
+            height:45vh;
+            width:25vw;
+            margin:0 auto;
+        }
+        h1{
+            font-size:26pt;
+            color:white;
+            text-align:center;
+        }
+        p{
+            font-size:18pt;
+            color:white;
+            text-align:center;
+        }
+        .ling{
+            width:4vw;
+            height:8vh;
+        }
+        #ul{
+            text-align:center;
+        }
+        .li{
+            text-decoration: none;
+            text-align:left;
+            margin-left:35vw;
+        }
+        #fim{
+            height:30vh;
+            background:rgb(51, 51, 51);
+            display:block;
+            position:bottom;
+            text-align:center;
+        }
+        #e{
+            text-decoration:none;
+            color:white;
+        }
+        #eco{
+            width:3vw;
+            height:3vh;
+        }
+        #pix{
+            width:4vw;
+            height:3.5vh;
+        }
+         p{
+            font-size:18pt;
+            color:white;
+            text-align:center;
+        }
+    </style>
+    <title>Quem Somos?</title>
+</head>
+<body>
+    <div class="logo">
+        <button class="menu" onclick="menu()">
+            <div class="btn-menu">
+                <div class="l1"></div>
+                <div class="l2"></div>
+                <div class="l3"></div>
+            </div>
+        </button>
+   
+        <img src="/Imagens/logo.png" alt="logo" id="logo"/>
+        <button class="lupa" ondblclick="lupa()">
+            <img id="img-lupa" src="https://www.pngall.com/wp-content/uploads/8/Magnifying-Glass-Search-PNG-Clipart.png" alt="Lupa">
+        </button>
+        <input type="text" class="lup" placeholder="Pesquisar...">
+    </div> 
+    
+    <div class="cont">
+
+        <ul>
+            <li><a href="/login.html"><img class="icons"src="https://cdn-icons-png.flaticon.com/512/17/17004.png"/>Entrar</a></li>
+            <li><a href="/inicio.html"><img class="icons"src="https://cdn-icons-png.flaticon.com/512/18/18625.png"/>Menu</a></li>
+            <li><a href="/index.html"><img class="icons"src="https://i0.wp.com/pokemythology.net/conteudo/imgs/info/pokedex10closed.png?resize=200%2C220&ssl=1"/>Pokédex</a></li>
+            <li><a href="/download/download.html"><img class="icons"src="https://www.freeiconspng.com/uploads/white-download-icon-png-32.png"/>Downloads</a></li>
+            <li><a href="./Quem.html"><img class="icons"src="https://yata-apix-62ec97e4-f758-4e42-924b-e9b48a7bb1db.s3-object.locaweb.com.br/88f06ab369694f54a5e2956469fe49d6.png"/>Quem Somos?</a></li>
+        </ul>
+        </div>
+        <br/>
+        <h1 id="tit">Quem Somos?</h1>
+        <br/><br/><br/><br/><br/><br/>
+        <h1>Eryck Borges da Silva Dionizio</h1>
+        <br/><br/><br/><br/>    
+        <div class="fundo">
+            <img class="foto" src="./Imagens/Eryck.jpeg" alt="Eryck">
+        </div>
+        <br/><br/><br/><br/><br/>
+        <p>Desenvolvi e Programei essa Aplicação com:</p> 
+        <br/><br/><br/>
+        <ul id="ul">
+            <li class="li"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Javascript-shield.svg/397px-Javascript-shield.svg.png" class="ling"><b style="margin-left:1vw;color:rgb(184, 187, 36);">JavaScript</b></li>
+            <br/><li class="li"><img src="https://logodownload.org/wp-content/uploads/2017/04/css-3-logo-1.png" class="ling"><b style="margin-left:1vw;color:rgb(6, 87, 238);">Css</b></li>
+            <br/><li class="li"><img class="ling" src="https://cdn-icons-png.flaticon.com/512/732/732212.png?w=360"><b style="margin-left:1vw;color:rgb(216, 88, 29);">Html</b></li>
+        </ul>
+        <br/>
+        <br/><br/>
+        <p>Sou estudante da escola CTA, e estou no 1° Ano do ensino médio, tenho 15 anos e sou apaixonado em programação.</p>
+        <br><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/>
+        <h1>Helena Borges</h1>
+        <br/><br/><br/><br/>
+
+        <div class="fundo">
+            <img class="foto" src="./Imagens/Helena.jpeg" alt="Helena">
+        </div>
+        <br/><br/><br/><br/><br/>
+        <p>Desenvolvi e Programei essa Aplicação com:</p> 
+        <br/><br/><br/>
+        <ul id="ul">
+            <li class="li"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Javascript-shield.svg/397px-Javascript-shield.svg.png" class="ling"><b style="margin-left:1vw;color:rgb(184, 187, 36);">JavaScript</b></li>
+        </ul>
+        <br/>
+        <br/><br/>
+        <p>Sou estudante da escola CTA, e estou no 1° Ano do ensino médio, tenho 15 anos e apaixonado em programação</p>
+        <br><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/>
+        <h1>Ian</h1>
+        <br/><br/><br/><br/><br/>
+        <div class="fundo">
+            <img class="foto" src="./Imagens/Ian.jpeg" alt="Eryck">
+        </div>
+        <br/><br/><br/>
+        <p>Desenvolvi e Programei essa Aplicação com:</p> 
+        <br/><br/><br/>
+        <ul id="ul">
+            <li class="li"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Javascript-shield.svg/397px-Javascript-shield.svg.png" class="ling"><b style="margin-left:1vw;color:rgb(184, 187, 36);">JavaScript</b></li>
+        </ul>
+        <br/>
+        <br/><br/>
+        <p>Sou estudante da escola CTA, e estou no 1° Ano do ensino médio, tenho 15 anos e apaixonado em programação</p>
+        <br><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/>
+        <h1>Henrique</h1>
+        <br/><br/><br/><br/><br/>
+        
+       
+        <div class="fundo">
+            <img class="foto" src="/Imagens/Henrique.jpeg" alt="Eryck">
+        </div>
+        <br/><br/><br/>
+        <p>Desenvolvi e Programei essa Aplicação com:</p> 
+        <br/><br/><br/>
+        <ul id="ul">
+            <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Javascript-shield.svg/397px-Javascript-shield.svg.png" class="ling"><b style="margin-left:1vw;color:rgb(184, 187, 36);">JavaScript</b></li>
+        </ul>
+        <br/>
+        <br/><br/>
+        <p>Sou estudante da escola CTA, e estou no 1° Ano do ensino médio, tenho 15 anos e apaixonado em programação</p>
+        <br><br/><br/><br/><br/>
+        <div id="fim">
+            <br/><br/>
+        <p>Se quiser nos ajudar com qualquer quantia ou relatar erros, o E-mail e o Pix estão logo abaixo:
+            <br/><br/><br/><img id="eco" src="https://bk.ibxk.com.br/2014/11/programas/70504815.png">&nbsp;<a id="e" href="mailto:eryckborges2502@gmail.com">E-mail</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img id="pix" src="https://www.advocacianunes.com.br/wp-content/uploads/2022/04/logo-pix-icone-1024.png">&nbsp;522.476.818-75
+        </p>
+        </div>
+        <script>
+            var pes = document.querySelector(".lup");
+            var conte = document.querySelector(".cont");
+            function lupa(){
+                if(pes.style.display == "none"){
+                    pes.style.display = "block";
+                   
+                }
+                else{
+                    pes.style.display = "none";
+                    
+                }
+            }
+            
+            function menu(){
+                if(conte.style.display == "none"){
+                    conte.style.display = "block";
+                   
+                }
+                else{
+                    conte.style.display = "none";
+                    
+                }
+            }
+        </script>
+    </body>
+</html>

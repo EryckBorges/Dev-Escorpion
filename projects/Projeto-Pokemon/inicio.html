@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Imagens/Icon.ico">
+    <title>Inicio</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            background:black;
+        }
+        .logo{
+            background:rgb(51, 51, 51);
+            width:100%;
+            height:17vh;
+            position:fixed;
+        }
+        ul{
+            list-style: none;
+            display:flex;
+            flex-direction:column;
+            align-items:left;
+            margin-left:5vw;
+            justify-content:space-around; 
+        }
+        li a{
+            position:relative;
+            margin-top:50px;
+            font-size:16pt;
+            color:white;
+            display:flex;
+            text-decoration: none;
+            letter-spacing: 3px;
+            animation: text 2s;
+        }
+        @keyframes text{
+            from{
+                left:-100vw;
+                opacity: 0;
+            }
+            to{
+                opacity:1;
+                left:0;
+            }
+        }
+        .lupa{
+            position:absolute;
+            right:2vw;
+            top:8vh;
+            border:none;
+            background:transparent;
+            cursor:pointer;
+            margin-right:3vw;
+            width:7vw;
+            height:7vh;            
+        }
+        #logo{
+            position:absolute;
+            left:42vw;
+            width:15vw;
+            top:-1.5vh;
+            height:20vh;
+        }
+        #img-lupa{
+            top:3vh;
+            background:transparent; 
+            width:4vw;
+            height:5vh;
+        }
+        .lup{
+            position:absolute;
+            top:17.5vh;
+            border:none;
+            border-radius:5px;
+            width:100vw;
+            height:4vh;
+            opacity:0.5;
+            display:none;
+            animation: input 1s;
+            color:black;
+            font-size:12pt;
+        }
+        
+        .lup::placeholder{
+            font-size:10pt;
+            text-align: center;
+        }
+        @keyframes input{
+            from{
+                
+                opacity:0;
+            }
+            10%{
+                opacity:0.1;
+            }
+            20%{
+                opacity:0.2;
+            }
+            30%{
+                opacity:0.3;
+            }
+            40%{
+                opacity:0.4;
+            }
+            to{
+               
+                opacity:0.5;
+            }
+        }
+
+        .cont{
+            display:none;
+            position:fixed;
+            width:28vw;
+            top:17.5vh;
+            height:100%;
+            background:rgb(51, 51, 51);
+            animation: menu 1s ;
+            overflow:auto;
+        }
+        @keyframes menu{
+            from{
+                transform:translateY(-100vw);
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+                transform:translateY(0);
+            }
+        }
+        
+        .btn-menu div{
+                width:5vw;
+                height:1vh;
+                background:white;
+                margin:1vh;
+        }
+        .menu{
+            position:absolute;
+            top:8.5vh;
+            left:5vw;
+            background:transparent;
+            border:none;
+            cursor:pointer;
+        }
+        @media(max-width:999px){
+            .cont{
+            display:none;
+            position:fixed;
+            width:50vw;
+            top:17.5vh;
+            height:100%;
+            background:rgb(51, 51, 51);
+            animation: menu 1s ;
+            overflow:auto;
+        }
+        #logo{
+            position:absolute;
+            left:40vw;
+            width:25vw;
+            top:-1.5vh;
+            height:20vh;
+        }
+        #img-lupa{
+            
+            top:3vh;
+            background:transparent; 
+            width: 6vw;
+            height:6vh;
+        }
+        .lupa{
+            position:absolute;
+            right:4vw;
+            top:8.7vh;
+            border:none;
+            background:transparent;
+            cursor:pointer;
+            margin-right:3vw;
+            width:8vw;
+            height:7vh;            
+        }
+        .lup{
+            position:absolute;
+            top:17.5vh;
+            border:none;
+            border-radius:5px;
+            width:100vw;
+            height:4vh;
+            opacity:0.5;
+            display:none;
+            animation: input 1s;
+            color:black;
+            font-size:12pt;
+        }
+               .btn-menu div{
+                width:8.5vw;
+                height:1vh;
+                background:white;
+                margin:1vh;
+        }
+        li a{
+            position:relative;
+            margin-top:50px;
+            
+            font-size:12pt;
+            color:white;
+            display:flex;
+            text-decoration: none;
+            letter-spacing: 3px;
+            animation: text 1s;
+        }
+        .icons{
+            
+            max-width:30px;
+            max-height:30px;
+            margin-right:10px;
+            margin-top:-10px;
+        }
+        #pokedex{
+            cursor:pointer;
+            border:none;
+            width:35vw;
+            height:50vh;
+            border-radius:10px;
+           
+        }
+        #img-pokedex{
+            width:35vw;
+            
+            height:30vh;
+            border-radius:10px;
+        }
+        
+        }
+        .icons{
+            
+            max-width:40px;
+            max-height:40px;
+            margin-right:10px;
+            margin-top:-10px;
+        }
+        h1{
+            color:red;
+            text-align:center;
+            margin-top:30vh;
+        }
+        p{
+            margin:2vw;
+            color:white;
+            font-size:18pt;
+            font-weight:500;
+        }
+        #img-pok{
+            height:35vh;
+            
+            
+            
+           
+        }
+        .img-jogo{
+            width:30vw;
+            height:60vh;
+        }
+        #pokedex{
+            cursor:pointer;
+            border:none;
+            width:25vw;
+            height:70vh;
+            border-radius:10px;
+            background:transparent;
+        }
+        #img-pokedex{
+            width:25vw;
+            height:70vh;
+            border-radius:10px;
+        }
+        @media(max-width:666px){
+            #img-pok{
+            margin-left:2vw;
+            height:30vh;
+            width:90vw;
+        }
+            .para{
+            text-align:center;
+            font-size:12pt;
+            font-weight:500;
+            margin:3vw;
+        }
+        #pokedex{
+            cursor:pointer;
+            border:none;
+            width:40vw;
+            height:40vh;
+            border-radius:10px;
+            background:transparent;
+        }
+        #img-pokedex{
+            width:40vw;
+            height:45vh;
+            border-radius:10px;
+        }
+        .img-jogo{
+            width:50vw;
+            height:40vh;
+        }
+        }
+        .para{
+            text-align:center;
+            font-weight:500;
+            
+        }
+        #fim{
+            height:30vh;
+            background:rgb(51, 51, 51);
+            display:block;
+            position:bottom;
+            text-align:center;
+        }
+        #e{
+            text-decoration:none;
+            color:white;
+        }
+        #eco{
+            width:3vw;
+            height:3vh;
+        }
+        #pix{
+            width:4vw;
+            height:3.5vh;
+        }
+         p{
+            font-size:18pt;
+            color:white;
+            text-align:center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <button class="menu" onclick="menu()">
+            <div class="btn-menu">
+                <div class="l1"></div>
+                <div class="l2"></div>
+                <div class="l3"></div>
+            </div>
+        </button>
+   
+        <img src="./Imagens/logo.png" alt="logo" id="logo"/>
+        <button class="lupa" ondblclick="lupa()">
+            <img id="img-lupa" src="https://www.pngall.com/wp-content/uploads/8/Magnifying-Glass-Search-PNG-Clipart.png" alt="Lupa">
+        </button>
+        <input type="text" class="lup" placeholder="Pesquisar...">
+    </div> 
+    
+    <div class="cont">
+        <ul>
+            <li><a href="./login.html"><img class="icons"src="https://cdn-icons-png.flaticon.com/512/17/17004.png"/>Entrar</a></li>
+            <li><a href="./inicio.html"><img class="icons"src="https://cdn-icons-png.flaticon.com/512/18/18625.png"/>Menu</a></li>
+            <li><a href="./index.html"><img class="icons"src="https://i0.wp.com/pokemythology.net/conteudo/imgs/info/pokedex10closed.png?resize=200%2C220&ssl=1"/>Pokédex</a></li>
+            <li><a href="./download/download.html"><img class="icons"src="https://www.freeiconspng.com/uploads/white-download-icon-png-32.png"/>Downloads</a></li>
+            <li><a href="./Quem.html"><img class="icons"src="https://yata-apix-62ec97e4-f758-4e42-924b-e9b48a7bb1db.s3-object.locaweb.com.br/88f06ab369694f54a5e2956469fe49d6.png"/>Quem Somos?</a></li>
+        </ul>
+    </div>
+    <br/>
+    <h1>Tudo sobre Pokémons</h1><br/><br/>
+    <center><img id="img-pok" src="https://tm.ibxk.com.br/2016/07/19/19183755227514.jpg?ims=1120x420">
+  </center>
+  <p class="para"> Pokemon é uma franquia de mídia que pertence a The Pokémon Company, tendo sido criada por Satoshi Tajiri em 1995. Ela é centrada em criaturas ficcionais chamadas "Pokémon", que os seres humanos capturam e os treinam para lutarem entre si com seus ataques de diversos tipos.
+    A franquia começou com um par de jogos lançados para o Game Boy original, desenvolvidos pela Game Freak e publicados pela Nintendo. Atualmente, a franquia se estende em jogos, cartas colecionáveis, série de televisão, além de filmes, mangás e brinquedos. Pokémon é a segunda franquia de mídia de jogos mais bem sucedida e lucrativa do mundo, atrás da franquia de Mario que também pertence a Nintendo.
+
+Em 2006, a franquia celebrou seu aniversário de 10 anos. As vendas dos jogos (incluindo home console games, como Hey You, Pikachu!, para Nintendo 64) acumularam mais de 200 milhões de cópias vendidas. Em novembro de 2005, a 4Kids Entertainment, que tinha conseguido o licenciamento da série animada, anunciou que havia concordado em não renovar o contrato da representação da franquia. A Pokémon USA Inc. (atualmente The Pokémon Company International), uma subsidiária da japonesa Pokémon Co., passou a supervisionar todas as licenças de Pokémon fora da Ásia. Até 2013, a franquia de Pokémon acumulou ¥4 trilhões ao redor do mundo (equivalente a US$ 40,98 bilhões).
+  </p>
+  <p class="para">
+    Além do anime jogos foram criados com graficos cada vez melhores, os jogos de pokémons vem desde 1996, abaixo vc verá todos os jogos de Pokémon para baixar como pokémons:
+  </p>
+  <center>
+    <h1>Pokémon Red</h1><br/><br/>
+    <img class="img-jogo" src="https://vortexcultural.com.br/images/2016/03/pkmtop.jpg" alt="Pokémon Red">
+</center>
+    <h1 style="color:rgb(36, 36, 248)">Pokémon Blue</h1>
+    <br/><br/>
+    <center>
+        <img class="img-jogo" src="https://www.ziliongames.com.br/banco_imagens/produtos/g/pokemon-blue-version-gameboy-color-seminovo1pvr.jpg" alt="Pokémon Blue">
+    </center>
+    <p class="para">Mais jogos no menu...</p>
+    <br/><br/>
+    <p class="para">Para guardar as informações dos pokémons, temos a Pokédex, ela é uma enciclopédia onde armazena os dados dos Pokémons capturados, clicando nela abaixo você terá acesso a todos os dados e Pokémons da 1° Geração.
+    </p>
+   <br/><br/>
+   <center> 
+    <button id="pokedex">
+        <a href="/index.html"><img id="img-pokedex" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c5069763-9098-4808-b222-a0089bb5786d/dcrrow9-6eb749e4-5308-4985-ac0b-20e432f8425c.png/v1/fill/w_670,h_1192,q_70,strp/pokedex_phone_wallpaper_by_drboxhead_dcrrow9-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Mjg0NiIsInBhdGgiOiJcL2ZcL2M1MDY5NzYzLTkwOTgtNDgwOC1iMjIyLWEwMDg5YmI1Nzg2ZFwvZGNycm93OS02ZWI3NDllNC01MzA4LTQ5ODUtYWMwYi0yMGU0MzJmODQyNWMucG5nIiwid2lkdGgiOiI8PTE2MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.np-kqNxcquZ_PQMMY5BIw44HX2ccec7_5auukla8gKc" alt="Pokédex"></a>    
+        
+        
+    </button>
+</center><br/><br/><br/>
+<div id="fim">
+    <br/><br/>
+<p>Se quiser nos ajudar com qualquer quantia ou relatar erros, o E-mail e o Pix estão logo abaixo:
+    <br/><br/><br/><img id="eco" src="https://bk.ibxk.com.br/2014/11/programas/70504815.png">&nbsp;<a id="e" href="mailto:eryckborges2502@gmail.com">E-mail</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img id="pix" src="https://www.advocacianunes.com.br/wp-content/uploads/2022/04/logo-pix-icone-1024.png">&nbsp;522.476.818-75
+</p>
+</div>
+    <script>
+        var pes = document.querySelector(".lup");
+        var conte = document.querySelector(".cont");
+        function lupa(){
+            if(pes.style.display == "none"){
+                pes.style.display = "block";
+               
+            }
+            else{
+                pes.style.display = "none";
+                
+            }
+        }
+        
+        function menu(){
+            if(conte.style.display == "none"){
+                conte.style.display = "block";
+               
+            }
+            else{
+                conte.style.display = "none";
+                
+            }
+        }
+    </script>
+</body>
+</html>

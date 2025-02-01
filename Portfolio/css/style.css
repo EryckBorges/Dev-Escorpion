@@ -147,6 +147,10 @@ main {
   .relogio > p {
     color: var(--vermelhoPadrao);
   }
+
+  .genshin > p {
+    color: #489ee6;
+  }
   
   .project > img {
     width: 100%;
@@ -157,6 +161,34 @@ main {
     width:455px;
     height: 92%;
     transition:0.5s linear;
+  }
+
+  .buttonAllProjects {
+    background: url('../image/btnAllProject.svg') center / cover no-repeat !important;
+    height: 60%;
+    margin-right: 100px;
+  }
+
+  .btnAllProject {
+    width:80%;
+    height: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    font-size: 1.6em;
+    font-weight: bold;
+    cursor: pointer;
+    background: url('../image/btnAllProject.svg') center / cover no-repeat !important;
+    color: var(--branco);
+    flex-direction: column;
+  }
+
+  .btnAllProject > span {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: var(--branco);
   }
 
   .hvr-rectangle-in {
@@ -476,7 +508,7 @@ main {
     transition: height 1s linear;
     margin-top:60px;
     width: 100%;
-    height: 150vh;
+    height: 80vh;
     flex-direction: column;
     justify-content: left !important;
 }
@@ -514,6 +546,7 @@ main {
 }
 
 .certificados > button {
+    display: none !important;
     margin-block:30px;
     width: 60px;
     height: 60px;
@@ -734,6 +767,7 @@ main {
     font-size: 2em;
     color: var(--branco);
     height: 20%;
+    width: 90%;
 }
 
 .qrCode > img {
@@ -781,6 +815,10 @@ main {
 
 .gmail {
     background: #C5221F;
+}
+
+.github {
+    background: var(--preto);
 }
 
 /*Animações Expecificas*/
