@@ -1,7 +1,36 @@
 @media screen and (width <= 767px) {  
+
+    .toast {
+        width: 56px;
+        height: 60px;
+        border-radius: 50px;
+        background-color: var(--preto);
+        position: fixed;
+    }
+
+    .toastOpen {
+        width: 80%;
+        animation: openToast 0.5s linear;
+    }
+
+    @keyframes openToast {
+        from {
+            width: 56px;
+        }to {
+            width: 80%;
+        }
+    }
+    
+    @keyframes closeToast {
+        from {
+            width:80%;
+        }to {
+            width: 56px;
+        }
+    }
+    
     .menuMobile {
         top:0;
-        
         width:100%;
         height: 100dvh;
         background-color: var(--cinzaOpacity);
@@ -238,6 +267,37 @@
         font-weight: bold;
     }
 
+    
+footer {
+    height: 100vh;
+}
+
+.logoFooter > h1 {
+    margin-left: 0px;
+}
+
+.conteudoFooter {
+    flex-direction: column;
+}
+
+.menuFooter {
+    width: 100%;
+    height: 50%;
+}
+
+.contFooter {
+    width: 100%;
+    height: 50%;
+}
+
+.column1 > a {
+    text-align: center;
+}
+
+.copyRight {
+    text-align: center;
+}
+
 }
 
 @media screen and (width >= 767px) and (width <= 1023px) {
@@ -286,4 +346,66 @@
     .userMobile {
         padding-left: 20px;
     }
+
+    .toast {
+        width: 56px;
+        height: 60px;
+        border-radius: 50px;
+        background-color: var(--preto);
+        position: fixed;
+    }
+
+    .toastOpen {
+        width: 80%;
+        animation: openToast 0.5s linear;
+    }
+
+    @keyframes openToast {
+        from {
+            width: 56px;
+        }to {
+            width: 80%;
+        }
+    }
+    
+    @keyframes closeToast {
+        from {
+            width:80%;
+        }to {
+            width: 56px;
+        }
+    }
+    
+ 
+footer {
+    height: 150vh;
+}
+
+.logoFooter > h1 {
+    margin-left: 0px;
+}
+
+.conteudoFooter {
+    flex-direction: column;
+}
+
+.menuFooter {
+    width: 100%;
+    height: 50%;
+}
+
+.contFooter {
+    width: 100%;
+    height: 50%;
+}
+
+.column1 > a {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.copyRight {
+    text-align: center;
+}
+
 }

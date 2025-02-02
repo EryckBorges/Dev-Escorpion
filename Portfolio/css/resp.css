@@ -6,7 +6,7 @@
     }
     
     .sobreMim {
-        height: 35vh;
+        height: 60vh;
         flex-direction: column;
     }
 
@@ -20,6 +20,7 @@
     }
     
     .cont > p {
+        height:auto;
         font-size: 1em;
     }
     
@@ -277,16 +278,14 @@
 }
 
 .qrCode > h1 {
-    font-size: 1.6em;
-    color: var(--branco);
-    height: 20%;
+    font-size: 1.4em;
+    height: auto;
     text-align: center;
 }
 
 .qrCode > img {
     width: 95%;
     height: 40%;
-    border-radius:20px;
 }
 
 .redesContact {
@@ -297,6 +296,17 @@
     width: 60%;
     height: 15%;
 }
+
+.buttonAllProjects {
+    width: 60%;
+}
+
+.buttonAllProjects:hover {
+    width: 60%;
+    height: 60%;
+}
+
+
 
 }
 
@@ -649,6 +659,15 @@
 }
 
 @media screen and (width <= 350px) {
+    .buttonAllProjects {
+        width: 80%;
+    }
+    
+    .buttonAllProjects:hover {
+        width: 80%;
+        height: 60%;
+    }
+
     .triangulo {
         border-left: 100px solid transparent;
         border-right: 100px solid transparent;
@@ -656,7 +675,7 @@
     }
     
     .sobreMim {
-        height: 50vh;
+        height: 80vh;
         flex-direction: column;
     }
 
@@ -834,7 +853,7 @@
     /*Certificados e Conquistas*/
 
     .certificados {
-        height: 200vh;
+        height: 100vh;
     }
 
 .certificados > h1 {
@@ -956,7 +975,7 @@
 .qrCode > h1 {
     font-size: 1.2em;
     color: var(--branco);
-    height: 20%;
+    height:auto;
     text-align: center;
 }
 
