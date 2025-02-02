@@ -1,4 +1,8 @@
 @media screen and (width <= 767px) {
+    header {
+        background:url('../image/backProfile.png') center / cover no-repeat;
+    }
+
     .triangulo {
         border-left: 100px solid transparent;
         border-right: 100px solid transparent;

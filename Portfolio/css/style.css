@@ -1,5 +1,6 @@
 header {
-    background:url('../image/header.jpg') center / cover no-repeat;
+    background:url('../image/backProfile.png') center / contain no-repeat;
+    background-color: var(--preto);
 }
 
 /*Triangulos*/
