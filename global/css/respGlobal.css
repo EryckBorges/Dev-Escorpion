@@ -329,6 +329,20 @@ footer {
 }
 
 @media screen and (width <= 350px) {
+
+    .toast {
+        width: 56px;
+        height: 60px;
+        border-radius: 50px;
+        background-color: var(--preto);
+        position: fixed;
+    }
+
+    .pToast {
+        font-size: 0.8em;
+        width: 70%;
+    }
+
     .menu {
         width:90%;
         height: 10vh;

@@ -963,7 +963,6 @@
 
 .qrCode {
     gap: 20px;
-    width: 60%;
     margin-left: 0px;
     padding-left: 10px;
 }
@@ -987,6 +986,7 @@
 
 .redesContact {
     width: 40%;
+    gap: 10px;
 }
 
 .redesContact > a {
