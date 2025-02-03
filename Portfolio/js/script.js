@@ -149,6 +149,7 @@ titleSolo: 'Solo Leveling RPG Generator',
 titleRelogio: 'Clocks and Stopwatch',
 titleGenshin: 'Genshin Impact Divination',
 toastAlertDesenvolvi: 'In Development',
+btnAllProject: 'See all projects',
 };
 
 const brasil = {
@@ -248,6 +249,7 @@ const brasil = {
 titleRelogio: 'Relógios e Cronômetro',
 titleGenshin: 'Adivinhação de Genshin Impact',
 toastAlertDesenvolvi: 'Em Desenvolvimento',
+btnAllProject: 'Veja todos os projetos',
 };
 
 const spain = {
@@ -344,6 +346,8 @@ titleSolo: 'Generador RPG Solo Leveling',
 titleRelogio: 'Relojes y Cronómetro',
 titleGenshin: 'Adivinación de Genshin Impact',
 toastAlertDesenvolvi: 'En Desarrollo',
+btnAllProject: 'Ver todos los proyectos',
+
 };
 
 const franca = {
@@ -440,6 +444,8 @@ titleSolo: 'Générateur RPG Solo Leveling',
 titleRelogio: 'Horloges et Chronomètre',
 titleGenshin: 'Divination de Genshin Impact',
 toastAlertDesenvolvi: 'En Développement',
+btnAllProject: 'Voir tous les projets',
+
 };
 
 const china = {
@@ -536,6 +542,7 @@ titleSolo: 'Solo Leveling RPG 生成器',
 titleRelogio: '时钟和计时器',
 titleGenshin: '原神占卜',
 toastAlertDesenvolvi: '开发中',
+btnAllProject: '查看所有项目',
 };
 
 const elementos = {
@@ -558,7 +565,7 @@ const elementos = {
     titleSolo: document.querySelector('.sololeveling p'),
     titleGenshin: document.querySelector('.genshin p'),
     toastAlertDesenvolvi: document.querySelector('.textToast'),
-
+    btnAllProject: document.querySelector('.btnAllProject'),
 };
 
 const ingles = () => {
@@ -683,6 +690,7 @@ const ingles = () => {
     elementos.titleRelogio.innerHTML = eua.titleRelogio;
     elementos.titleGenshin.innerHTML = eua.titleGenshin;
     elementos.toastAlertDesenvolvi.innerHTML = eua.toastAlertDesenvolvi;
+    elementos.btnAllProject.innerHTML = eua.btnAllProject;
     titleButtonTranslate.forEach((btnTranslate) => {
         btnTranslate.setAttribute('title', 'Translate to English');
     });
@@ -810,6 +818,7 @@ const portugues = () => {
     elementos.titleRelogio.innerHTML = brasil.titleRelogio;
     elementos.titleGenshin.innerHTML = brasil.titleGenshin;
     elementos.toastAlertDesenvolvi.innerHTML = brasil.toastAlertDesenvolvi;
+    elementos.btnAllProject.innerHTML = brasil.btnAllProject;
     titleButtonTranslate.forEach((btnTranslate) => {
         btnTranslate.setAttribute('title', 'Traduzir para o Português');
     });
@@ -936,6 +945,7 @@ const espanha = () => {
     elementos.titleRelogio.innerHTML = spain.titleRelogio;
     elementos.titleGenshin.innerHTML = spain.titleGenshin;
     elementos.toastAlertDesenvolvi.innerHTML = spain.toastAlertDesenvolvi;
+    elementos.btnAllProject.innerHTML = spain.btnAllProject;
     titleButtonTranslate.forEach((btnTranslate) => {
         btnTranslate.setAttribute('title', 'Traducir al español');
     });
@@ -1063,6 +1073,7 @@ const frances = () => {
     elementos.titleRelogio.innerHTML = franca.titleRelogio;
     elementos.titleGenshin.innerHTML = franca.titleGenshin;
     elementos.toastAlertDesenvolvi.innerHTML = franca.toastAlertDesenvolvi;
+    elementos.btnAllProject.innerHTML = franca.btnAllProject;
     titleButtonTranslate.forEach((btnTranslate) => {
         btnTranslate.setAttribute('title', 'Traduire en français');
     });
@@ -1189,6 +1200,7 @@ elementos.titleSolo.innerHTML = china.titleSolo;
 elementos.titleRelogio.innerHTML = china.titleRelogio;
 elementos.titleGenshin.innerHTML = china.titleGenshin;
 elementos.toastAlertDesenvolvi.innerHTML = china.toastAlertDesenvolvi;
+elementos.btnAllProject.innerHTML = china.btnAllProject;
 titleButtonTranslate.forEach((btnTranslate) => {
     btnTranslate.setAttribute('title', '翻译成中文');
 });

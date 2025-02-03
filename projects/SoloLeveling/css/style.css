@@ -327,3 +327,17 @@ main {
     z-index: -5;
     background: url('../image/bottomBack.svg') center / cover no-repeat;
 }
+
+footer {
+    background: url('../image/backFooter.svg') center / cover no-repeat !important;
+    margin-top: 0px !important;
+}
+
+.logoFooter > h1 > b {
+    color:#614080 !important;
+}
+
+.logoFooter {
+    background: url('../image/titleBarra.svg') bottom / contain no-repeat !important;
+}
+

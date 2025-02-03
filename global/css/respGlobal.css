@@ -313,9 +313,74 @@ footer {
         right:2vw;
         top:12vh;
     }
+
+   
+    .toast {
+        width: 56px;
+        height: 60px;
+        border-radius: 50px;
+        background-color: var(--preto);
+        position: fixed;
+    }
+
+    .toastOpen {
+        width: 40%;
+        animation: openToast 0.5s linear;
+    }
+
+    @keyframes openToast {
+        from {
+            width: 56px;
+        }to {
+            width: 40%;
+        }
+    }
+    
+    @keyframes closeToast {
+        from {
+            width:40%;
+        }to {
+            width: 56px;
+        }
+    }
+    
+    .pToast {
+        font-size: 1.2em;
+        width: 70%;
+    }
+
+    footer {
+        height: 40vh;
+    }
+
+    .logoFooter {
+        padding-top: 40px;
+    }
+
+    .copyRight {
+        text-align: center;
+    }
 }
 
 @media screen and (height <= 500px) {
+
+    .toast {
+        top: 25vh;
+    }
+
+    footer {
+        height: 120vh;
+    }
+
+    .redesFooter1 > img, .redesFooter2 > img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .column1 > a {
+        font-size: 1.2em;
+    }
+
     .menu {
         width:95%;
         height: 18vh;
@@ -329,14 +394,6 @@ footer {
 }
 
 @media screen and (width <= 350px) {
-
-    .toast {
-        width: 56px;
-        height: 60px;
-        border-radius: 50px;
-        background-color: var(--preto);
-        position: fixed;
-    }
 
     .pToast {
         font-size: 0.8em;

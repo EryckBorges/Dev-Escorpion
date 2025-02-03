@@ -315,6 +315,10 @@
 }
 
 @media screen and (width >= 767px) and (width <= 1023px) {
+    header {
+        background:url('../image/backProfile.png') center / cover no-repeat;
+    }
+
     .sobreMim {
         height: 30vh;
     }
@@ -458,7 +462,7 @@
 }
 
 .certificados {
-    height: 200vh;
+    height: 120vh;
 }
 
 .certificados > h1 {
@@ -602,11 +606,21 @@
     height: 12%;
 }
 
+.buttonAllProjects {
+    width: 60%;
+}
+
+.buttonAllProjects:hover {
+    width: 60%;
+    height: 60%;
+}
+
+
 }
 
 @media screen and (height <= 500px) {
     .sobreMim {
-        height: 60vh;
+        height: 80vh;
     }
 
     .cont > h1 {
@@ -614,6 +628,7 @@
     }
     
     .cont > p {
+        height: auto;
         font-size: 1.2em;
     }
 
@@ -628,9 +643,10 @@
     .estudos {
         height:150vh;
     }
+    
 
     .certificados {
-        height: 700vh;
+        height: 350vh;
     }
 
     .certificado, .certificadoOculto {
@@ -653,6 +669,14 @@
 
     .redesContact > a {
         width: 35%;
+    }
+
+    .qrCode {
+        gap:0px;
+    }
+
+    .qrCode > h1 {
+        height: auto;
     }
 
     .qrCode > img {
