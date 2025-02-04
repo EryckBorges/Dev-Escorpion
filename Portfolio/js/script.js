@@ -2066,6 +2066,7 @@ const toastFunction = () => {
 };
 
 const genshin = document.querySelector(".genshin");
+const tabuada = document.querySelector(".tabuada");
 const allButtonProject = document.querySelector(".buttonAllProjects");
 
 let toast = document.querySelector(".toast");
@@ -2102,6 +2103,32 @@ genshin.addEventListener("click", () => {
 });
 
 allButtonProject.addEventListener("click", () => {
+  toastNotification.play();
+  toast.style.display = "flex";
+  toast.style.opacity = "1";
+  setTimeout(() => {
+    toast.classList.add("toastOpen");
+    toast.style.animation = "openToast 1s";
+    setTimeout(() => {
+      textToast.style.display = "flex";
+      textToast.innerHTML = toastFunction();
+    }, 200);
+  }, 200);
+  setTimeout(() => {
+    toast.classList.remove("toastOpen");
+    toast.style.animation = "closeToast 500ms";
+    setTimeout(() => {
+      textToast.style.display = "none";
+      setTimeout(() => {
+        toast.style.opacity = "0";
+        toast.style.display = "none";
+        toast.style.animation = "none";
+      }, 500);
+    }, 200);
+  }, 5000);
+});
+
+tabuada.addEventListener("click", () => {
   toastNotification.play();
   toast.style.display = "flex";
   toast.style.opacity = "1";

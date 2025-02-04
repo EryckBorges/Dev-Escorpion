@@ -150,8 +150,12 @@ main {
     color: var(--vermelhoPadrao);
   }
 
-  .genshin > p {
+  .tabuada > p {
     color: #489ee6;
+  }
+
+  .genshin > p {
+    color: #646464;
   }
   
   .project > img {
