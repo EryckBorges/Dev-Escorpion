@@ -1859,28 +1859,28 @@ const langPage = () => {
 
   if (lang === "eu") {
     langSelecionada.innerHTML = "EN";
-    flagSelecionada.src = "../../global/icon/eua.png";
+    flagSelecionada.src = "../global/icon/eua.png";
     titleButtonTranslate.forEach((btnTranslate) => {
       btnTranslate.setAttribute("title", "Translate to English");
     });
     ingles();
   } else if (lang === "es") {
     langSelecionada.innerHTML = "ES";
-    flagSelecionada.src = "../../global/icon/spain.png";
+    flagSelecionada.src = "../global/icon/spain.png";
     titleButtonTranslate.forEach((btnTranslate) => {
       btnTranslate.setAttribute("title", "Traducir al español");
     });
     espanha();
   } else if (lang === "fr") {
     langSelecionada.innerHTML = "FR";
-    flagSelecionada.src = "./image/franca.png";
+    flagSelecionada.src = "../global/icon/franca.png";
     titleButtonTranslate.forEach((btnTranslate) => {
       btnTranslate.setAttribute("title", "Traduire en français");
     });
     frances();
   } else if (lang === "ch") {
     langSelecionada.innerHTML = "ZH";
-    flagSelecionada.src = "../../global/icon/china.png";
+    flagSelecionada.src = "../global/icon/china.png";
     titleButtonTranslate.forEach((btnTranslate) => {
       btnTranslate.setAttribute("title", "翻译成中文");
     });
