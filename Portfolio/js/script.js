@@ -1850,12 +1850,14 @@ document.querySelectorAll(".btnTraduz").forEach((btn) => {
   });
 });
 
+const lang = localStorage.getItem("lang");
+
 const langPage = () => {
   let langSelecionada = document.querySelector(".idiomaSelecionada");
   let flagSelecionada = document.querySelector(".flagsSelecionada img");
   let titleButtonTranslate = document.querySelectorAll(".btnTraduz");
-
-  const lang = localStorage.getItem("lang"); // Obtém a linguagem salva no localStorage
+  
+  // Obtém a linguagem salva no localStorage
 
   if (lang === "eu") {
     langSelecionada.innerHTML = "EN";
