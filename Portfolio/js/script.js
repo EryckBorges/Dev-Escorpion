@@ -1861,7 +1861,7 @@ const langPage = () => {
     langSelecionada.innerHTML = "EN";
     console.log("po");
     
-    flagSelecionada.src = "./image/eua.png";
+    flagSelecionada.src = "https://eryckborges.github.io/global/icon/eua.png";
     titleButtonTranslate.forEach((btnTranslate) => {
       btnTranslate.setAttribute("title", "Translate to English");
     });
