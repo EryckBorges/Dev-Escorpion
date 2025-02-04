@@ -1880,7 +1880,7 @@ const langPage = () => {
     frances();
   } else if (lang === "ch") {
     langSelecionada.innerHTML = "ZH";
-    flagSelecionada.src = "../global/icon/china.png";
+    flagSelecionada.src = "./image/china.png";
     titleButtonTranslate.forEach((btnTranslate) => {
       btnTranslate.setAttribute("title", "翻译成中文");
     });
