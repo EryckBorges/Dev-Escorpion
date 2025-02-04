@@ -1859,6 +1859,8 @@ const langPage = () => {
 
   if (lang === "eu") {
     langSelecionada.innerHTML = "EN";
+    console.log("po");
+    
     flagSelecionada.src = "./image/eua.png";
     titleButtonTranslate.forEach((btnTranslate) => {
       btnTranslate.setAttribute("title", "Translate to English");
