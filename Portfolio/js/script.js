@@ -2084,7 +2084,7 @@ let textToast = document.querySelector(".pToast");
 let imageToast = document.querySelector(".toast img");
 
 const toastNotification = new Audio();
-toastNotification.src = "../../../global/music/toastNotification.mp3";
+toastNotification.src = "https://eryckborges.github.io/global/music/toastNotification.mp3";
 
 genshin.addEventListener("click", () => {
   toastNotification.play();
