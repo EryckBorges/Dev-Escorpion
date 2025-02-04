@@ -154,6 +154,7 @@
     height: 100%;
 }
 
+
 }
 
 @media screen and (width >= 767px) and (width <= 1023px) {
@@ -203,11 +204,6 @@
     height:100%;
 }
 
-.menu {
-    width:100%;
-    height:15%;
-}
-
 .btnControls > button {
     width:25vw;
     font-size:1.6em;
@@ -242,9 +238,10 @@
 
 .download > #copiar {
     width:30vw;
-    bottom:5vh;
+    bottom:15vh;
     right: 5vw;
     z-index: 5;
+    font-size: 1.4em;
 }
 
 .outro > #outroButton {
@@ -269,9 +266,10 @@
 
 .download > #voltarDown {
     width:30vw;
-    bottom:5vh;
-    left: 6vw;
+    bottom:15vh;
+    left: 5vw;
     z-index: 5;
+    font-size: 1.4em;
 }
 
 .outro > #voltarOutro {
@@ -286,7 +284,7 @@
 .descDiv2 > #voltarDesc {
     width:20vw;
     bottom:14vh;
-    right: 30vw;
+    right: 25vw;
     z-index: 5;
     font-size: 1.4em;
 }
@@ -344,6 +342,222 @@
 .textProject > img {
     height: 250px;
     width: 350px;
+}
+}
+
+@media screen and (height <= 500px)  {
+    header {
+        height: 240vh !important;
+    }
+
+    .cont {
+        top:10vh;
+        width:95%;
+        height:180vh;
+        border-radius: 20px;
+    }
+    
+.contTotal {
+    top:3vh;
+    height:180vh;  
+}
+    
+.imgPerson {
+        display: none !important;
+}
+    
+.imgPerson > img { 
+        width:80%;
+        height:100%;
+}
+    
+.imgPerson > button {
+    overflow:hidden;
+    width:25vw;
+    height:5vh;
+    position: absolute;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    right:2vw;
+    color:white;
+    border:none;
+    top:12vh;
+    z-index:3;
+    font-size:16pt;
+    cursor:pointer;
+}
+
+.dados {
+    position: relative;
+    top:3vh;
+    width:100%;
+    height:100%;
+}
+
+.menu {
+    width:100%;
+    height:25%;
+}
+
+.btnControls > button {
+    width:25vw;
+    height: 100%;
+    font-size:1.2em;
+}
+
+.status {
+    width:100%;
+    height:85%;
+}
+
+.status1, .status2 {
+    justify-content: left !important;
+    margin-top: 100px;
+}
+
+.status1 > input, .status2 > input, .descDiv > input, .descDiv2 > input, .outro > input {
+    margin:15px 0px;
+    font-size:1.4em;
+    height: 10vh;
+}
+
+.status2 > #statusButton {
+    width:30vw;
+    height: 15vh;
+    bottom:13vh;
+    right: 2vw;
+    z-index: 5;
+    font-size: 1.4em;
+}
+
+.status2 > #statusButton > span {
+    font-size: 1.4em;
+}
+
+.download > #copiar {
+    width:30vw;
+    height: 15vh;
+    bottom:25vh;
+    right: 5vw;
+    z-index: 5;
+    font-size: 1.4em;
+}
+
+.download > #copiar > span {
+    font-size: 1.2em;
+}
+
+.outro > #outroButton {
+    width:30vw;
+    height: 15vh;
+    bottom:14vh;
+    right: 5vw;
+    z-index: 5;
+    font-size: 1.4em;
+}
+
+.outro > #outroButton {
+    font-size: 1.4em;
+}
+
+.descDiv2 > #descButton {
+    width:20vw;
+    bottom:25vh;
+    height: 15vh;
+    right: 2vw;
+    z-index: 5;
+    font-size: 1.4em;
+}
+
+.download > #voltarDown {
+    width:30vw;
+    bottom:25vh;
+    height: 15vh;
+    left: 6vw;
+    z-index: 5;
+    font-size: 1.4em;
+}
+
+.download > #voltarDown > span {
+    font-size: 1.4em;
+}
+
+.outro > #voltarOutro {
+    width:30vw;
+    bottom:14vh;
+    left: 5vw;
+    height: 15vh;
+    z-index: 5;
+    font-size: 1.4em;
+}
+
+.descDiv2 > #voltarDesc {
+    width:20vw;
+    bottom:25vh;
+    height: 15vh;
+    right: 25vw;
+    z-index: 5;
+    font-size: 1.4em;
+}
+
+
+.status1 > p,.status2 > p, .descDiv > p, .descDiv2 > p, .outro > p {
+    font-size:1.4em;
+}
+
+.desc {
+    display: none;
+}
+
+.descDiv, .descDiv2 {
+    justify-content: left !important;
+}
+
+#descricao {
+    width:90%;
+    height:40%;
+}
+
+.outro {
+    display: none;
+    justify-content: left !important;
+    margin-top: 40px;
+}
+
+.download {
+    display: none ;
+    justify-content: left !important;
+    margin-top: 20px;
+}
+
+.download > textarea {
+    width:90%;
+    height:60%;
+    font-size:1.6em;
+}
+
+#downloadText {
+    resize: none;
+}
+
+.contentDescProject {
+    width:100%;
+    height: 280vh;
+}
+
+.personSung > img {
+    width: 100%;
+    height: 90%;
+}
+
+.textProject > img {
+    height: 250px;
+    width: 350px;
+}
+
+.textProject > p {
+    font-size: 1.2em;
 }
 }
 
@@ -519,216 +733,4 @@
     height: 50%;
 }
 
-}
-
-@media screen and (height <= 500px)  {
-    header {
-        height: 240vh !important;
-    }
-
-    .cont {
-        top:10vh;
-        width:95%;
-        height:180vh;
-        border-radius: 20px;
-    }
-    
-.contTotal {
-    top:3vh;
-    height:180vh;  
-}
-    
-.imgPerson {
-        display: none !important;
-}
-    
-.imgPerson > img { 
-        width:80%;
-        height:100%;
-}
-    
-.imgPerson > button {
-    overflow:hidden;
-    width:25vw;
-    height:5vh;
-    position: absolute;
-    display:none;
-    justify-content: center;
-    align-items: center;
-    right:2vw;
-    color:white;
-    border:none;
-    top:12vh;
-    z-index:3;
-    font-size:16pt;
-    cursor:pointer;
-}
-
-.dados {
-    position: relative;
-    top:3vh;
-    width:100%;
-    height:100%;
-}
-
-.menu {
-    width:100%;
-    height:25%;
-}
-
-.btnControls > button {
-    width:25vw;
-    height: 100%;
-    font-size:1.6em;
-}
-
-.status {
-    width:100%;
-    height:85%;
-}
-
-.status1, .status2 {
-    justify-content: left !important;
-    margin-top: 100px;
-}
-
-.status1 > input, .status2 > input, .descDiv > input, .descDiv2 > input, .outro > input {
-    margin:15px 0px;
-    font-size:1.4em;
-    height: 10vh;
-}
-
-.status2 > #statusButton {
-    width:30vw;
-    height: 15vh;
-    bottom:13vh;
-    right: 2vw;
-    z-index: 5;
-    font-size: 1.4em;
-}
-
-.status2 > #statusButton > span {
-    font-size: 1.4em;
-}
-
-.download > #copiar {
-    width:30vw;
-    height: 15vh;
-    bottom:25vh;
-    right: 5vw;
-    z-index: 5;
-    font-size: 1.4em;
-}
-
-.download > #copiar > span {
-    font-size: 1.2em;
-}
-
-.outro > #outroButton {
-    width:30vw;
-    height: 15vh;
-    bottom:14vh;
-    right: 5vw;
-    z-index: 5;
-    font-size: 1.4em;
-}
-
-.outro > #outroButton {
-    font-size: 1.4em;
-}
-
-.descDiv2 > #descButton {
-    width:20vw;
-    bottom:25vh;
-    height: 15vh;
-    right: 2vw;
-    z-index: 5;
-    font-size: 1.4em;
-}
-
-.download > #voltarDown {
-    width:30vw;
-    bottom:25vh;
-    height: 15vh;
-    left: 6vw;
-    z-index: 5;
-    font-size: 1.4em;
-}
-
-.download > #voltarDown > span {
-    font-size: 1.4em;
-}
-
-.outro > #voltarOutro {
-    width:30vw;
-    bottom:14vh;
-    left: 5vw;
-    height: 15vh;
-    z-index: 5;
-    font-size: 1.4em;
-}
-
-.descDiv2 > #voltarDesc {
-    width:20vw;
-    bottom:25vh;
-    height: 15vh;
-    right: 25vw;
-    z-index: 5;
-    font-size: 1.4em;
-}
-
-
-.status1 > p,.status2 > p, .descDiv > p, .descDiv2 > p, .outro > p {
-    font-size:1.4em;
-}
-
-.desc {
-    display: none;
-}
-
-.descDiv, .descDiv2 {
-    justify-content: left !important;
-}
-
-#descricao {
-    width:90%;
-    height:40%;
-}
-
-.outro {
-    display: none;
-    justify-content: left !important;
-    margin-top: 40px;
-}
-
-.download {
-    display: none ;
-    justify-content: left !important;
-    margin-top: 20px;
-}
-
-.download > textarea {
-    width:90%;
-    height:60%;
-    font-size:1.6em;
-}
-
-#downloadText {
-    resize: none;
-}
-
-.contentDescProject {
-    width:100%;
-    height: 280vh;
-}
-
-.personSung > img {
-    width: 100%;
-    height: 90%;
-}
-
-.textProject > img {
-    height: 250px;
-    width: 350px;
-}
 }

@@ -33,7 +33,7 @@
     }
 
     .meusProjetos {
-        height: 65vh;
+        height: 70vh;
     }
 
     .titleMyProject {
@@ -223,7 +223,7 @@
 .avaliacao > h1::before {
     border-right: 80px solid transparent;
     border-top: 80px solid var(--preto);
-    z-index: 1;
+    z-index: -5;
 }
 
 .avalia {
@@ -232,7 +232,7 @@
 
 .avaliacoes {
     width: 350px;
-    height: 80%;
+    height: 90%;
 }
 
 .nameAvaliador > h1 {
@@ -320,7 +320,7 @@
     }
 
     .sobreMim {
-        height: 30vh;
+        height: 35vh;
     }
 
     .cont {
@@ -505,7 +505,7 @@
 }
 
 .avaliacao {
-    height:90vh;
+    height:100vh;
     margin-bottom:0px;
 }
 
@@ -538,7 +538,6 @@
 }
 
 .nameAvaliador > h1 {
-    width:200px;
     height:70px;
     font-size: 1.6em;
 }
@@ -620,7 +619,7 @@
 
 @media screen and (height <= 500px) {
     .sobreMim {
-        height: 80vh;
+        height: 100vh;
     }
 
     .cont > h1 {
@@ -633,7 +632,7 @@
     }
 
     .meusProjetos {
-        height: 250vh;
+        height: 260vh;
     }
 
     .ferramentas {
@@ -655,7 +654,7 @@
     }
 
     .avaliacao {
-        height:300vh;
+        height:330vh;
     }
 
     .avaliadorPhoto > button {
@@ -682,6 +681,15 @@
     .qrCode > img {
         width: 60%;
         height: 90%;
+    }
+
+    .more {
+        height: 200vh;
+    }
+
+    .icons > img {
+        width:70px;
+        height:70px;
     }
     
 }
@@ -743,7 +751,7 @@
       }    
 
     .meusProjetos {
-        height: 95vh;
+        height: 110vh;
         gap: 10px;
     }
 
@@ -921,7 +929,7 @@
     /*Avaliações*/
 
 .avaliacao {
-    height:120vh;
+    height:130vh;
     margin-bottom:0px;
 }
 

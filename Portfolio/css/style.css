@@ -676,7 +676,8 @@ main {
 
 .nameAvaliador > h1 {
     background: var(--vermelhoPadrao);
-    width:180px;
+    width:auto;
+    padding-inline: 20px;
     height:60px;
     border-radius: 20px;
     font-size: 1.2em;

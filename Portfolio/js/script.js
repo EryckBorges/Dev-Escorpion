@@ -175,6 +175,7 @@ const eua = {
   btnAllProject: "See all projects",
   allConhecimento: "of my knowledge",
   notConhecimento: "of knowledge <br> that I do not possess",
+yourNumber: 'Your number, your Multiplication Table'
 };
 
 const brasil = {
@@ -278,6 +279,7 @@ const brasil = {
   btnAllProject: "Veja todos os projetos",
   allConhecimento: 'de meu conhecimento',
   notConhecimento: 'de conhecimento <br> que não possuo',
+  yourNumber: 'Seu número, sua Tabuada'
 };
 
 const spain = {
@@ -377,7 +379,8 @@ const spain = {
   toastAlertDesenvolvi: "En Desarrollo",
   btnAllProject: "Ver todos los proyectos",
   allConhecimento: "de mi conocimiento",
-notConhecimento: "de conocimiento <br> que no poseo"
+notConhecimento: "de conocimiento <br> que no poseo",
+yourNumber: 'Tu número, tu Tabla de Multiplicar'
 };
 
 const franca = {
@@ -477,7 +480,8 @@ const franca = {
   toastAlertDesenvolvi: "En Développement",
   btnAllProject: "Voir tous les projets",
   allConhecimento: "de ma connaissance",
-notConhecimento: "de connaissance <br> que je ne possède pas"
+notConhecimento: "de connaissance <br> que je ne possède pas",
+yourNumber: 'Votre numéro, votre Table de Multiplication'
 };
 
 const china = {
@@ -577,7 +581,8 @@ const china = {
   toastAlertDesenvolvi: "开发中",
   btnAllProject: "查看所有项目",
   allConhecimento: "我的知识",
-notConhecimento: "我不具备的知识"
+notConhecimento: "我不具备的知识",
+yourNumber: '你的数字，你的乘法表',
 };
 
 const elementos = {
@@ -602,7 +607,8 @@ const elementos = {
   toastAlertDesenvolvi: document.querySelector(".textToast"),
   btnAllProject: document.querySelector(".btnAllProject"),
   allConhecimento: document.querySelector('.conhecimento'),
-  notConhecimento: document.querySelector('.naoConhecimento')
+  notConhecimento: document.querySelector('.naoConhecimento'),
+  yourNumber: document.querySelector('.tabuada p'),
 };
 
 //Icones para clique
@@ -1269,6 +1275,7 @@ const ingles = () => {
   elementos.titleGenshin.innerHTML = eua.titleGenshin;
   elementos.toastAlertDesenvolvi.innerHTML = eua.toastAlertDesenvolvi;
   elementos.btnAllProject.innerHTML = eua.btnAllProject;
+  elementos.yourNumber.innerHTML = eua.yourNumber;
   verificaCont();
  
   titleButtonTranslate.forEach((btnTranslate) => {
@@ -1399,6 +1406,7 @@ const portugues = () => {
   elementos.titleGenshin.innerHTML = brasil.titleGenshin;
   elementos.toastAlertDesenvolvi.innerHTML = brasil.toastAlertDesenvolvi;
   elementos.btnAllProject.innerHTML = brasil.btnAllProject;
+  elementos.yourNumber.innerHTML = brasil.yourNumber;
   verificaCont();
   titleButtonTranslate.forEach((btnTranslate) => {
     btnTranslate.setAttribute("title", "Traduzir para o Português");
@@ -1527,6 +1535,7 @@ const espanha = () => {
   elementos.titleGenshin.innerHTML = spain.titleGenshin;
   elementos.toastAlertDesenvolvi.innerHTML = spain.toastAlertDesenvolvi;
   elementos.btnAllProject.innerHTML = spain.btnAllProject;
+  elementos.yourNumber.innerHTML = spain.yourNumber;
   verificaCont();
   titleButtonTranslate.forEach((btnTranslate) => {
     btnTranslate.setAttribute("title", "Traducir al español");
@@ -1656,6 +1665,7 @@ const frances = () => {
   elementos.titleGenshin.innerHTML = franca.titleGenshin;
   elementos.toastAlertDesenvolvi.innerHTML = franca.toastAlertDesenvolvi;
   elementos.btnAllProject.innerHTML = franca.btnAllProject;
+  elementos.yourNumber.innerHTML = franca.yourNumber;
   verificaCont();
   titleButtonTranslate.forEach((btnTranslate) => {
     btnTranslate.setAttribute("title", "Traduire en français");
@@ -1784,6 +1794,7 @@ const chines = () => {
   elementos.titleGenshin.innerHTML = china.titleGenshin;
   elementos.toastAlertDesenvolvi.innerHTML = china.toastAlertDesenvolvi;
   elementos.btnAllProject.innerHTML = china.btnAllProject;
+  elementos.yourNumber.innerHTML = china.yourNumber;
   verificaCont();
   titleButtonTranslate.forEach((btnTranslate) => {
     btnTranslate.setAttribute("title", "翻译成中文");

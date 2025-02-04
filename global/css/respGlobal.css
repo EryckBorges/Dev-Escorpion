@@ -292,10 +292,17 @@ footer {
 
 .column1 > a {
     text-align: center;
+    font-size: 1.2em;
+    margin-inline: 10px;
 }
 
 .copyRight {
     text-align: center;
+}
+
+.redesFooter1 > img, .redesFooter2 > img {
+    width: 40px;
+    height: 40px;
 }
 
 }
@@ -355,6 +362,11 @@ footer {
 
     .logoFooter {
         padding-top: 40px;
+    }
+
+    .redesFooter1 > img, .redesFooter2 > img {
+        width: 40px;
+        height: 40px;
     }
 
     .copyRight {
