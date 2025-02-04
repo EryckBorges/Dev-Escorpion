@@ -1859,21 +1859,21 @@ const langPage = () => {
 
   if (lang === "eu") {
     langSelecionada.innerHTML = "EN";
-    flagSelecionada.src = "../global/icon/eua.png";
+    flagSelecionada.src = "./image/eua.png";
     titleButtonTranslate.forEach((btnTranslate) => {
       btnTranslate.setAttribute("title", "Translate to English");
     });
     ingles();
   } else if (lang === "es") {
     langSelecionada.innerHTML = "ES";
-    flagSelecionada.src = "../global/icon/spain.png";
+    flagSelecionada.src = "./image/spain.png";
     titleButtonTranslate.forEach((btnTranslate) => {
       btnTranslate.setAttribute("title", "Traducir al español");
     });
     espanha();
   } else if (lang === "fr") {
     langSelecionada.innerHTML = "FR";
-    flagSelecionada.src = "../global/icon/franca.png";
+    flagSelecionada.src = "./image/franca.png";
     titleButtonTranslate.forEach((btnTranslate) => {
       btnTranslate.setAttribute("title", "Traduire en français");
     });
@@ -1889,7 +1889,7 @@ const langPage = () => {
     // Caso nenhuma linguagem esteja no localStorage, define como 'br'
     localStorage.setItem("lang", "br");
     langSelecionada.innerHTML = "PT";
-    flagSelecionada.src = "../../global/icon/brasil.png";
+    flagSelecionada.src = "./image/brasil.png";
     titleButtonTranslate.forEach((btnTranslate) => {
       btnTranslate.setAttribute("title", "Traduzir para o Português");
     });
