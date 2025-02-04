@@ -1900,9 +1900,6 @@ const langPage = () => {
 // Executa ao carregar a página
 langPage();
 
-// Executa ao carregar a página
-langPage();
-
 //Função de slide de projetos e serviços
 const slider = document.querySelector(".swiper");
 let isDown = false;
