@@ -863,7 +863,7 @@ main {
     from {
         width:0%;
     }to {
-        width:75%;
+        width:80%;
     }
 }
 
@@ -871,7 +871,7 @@ main {
     from {
         width:0%;
     }to {
-        width:80%;
+        width:70%;
     }
 }
 
@@ -879,7 +879,7 @@ main {
     from {
         width:0%;
     }to {
-        width:80%;
+        width:65%;
     }
 }
 
@@ -887,7 +887,7 @@ main {
     from {
         width:0%;
     }to {
-        width:80%;
+        width:83%;
     }
 }
 
@@ -895,11 +895,19 @@ main {
     from {
         width:0%;
     }to {
-        width:80%;
+        width:83%;
     }
 }
 
 @keyframes github {
+    from {
+        width:0%;
+    }to {
+        width:80%;
+    }
+}
+
+@keyframes git {
     from {
         width:0%;
     }to {
@@ -914,26 +922,31 @@ main {
 }
 
 .canvaAnimation {
-    width: 80%;
+    width: 83%;
     animation: canva 1s linear;
 }
 
 .figmaAnimation {
-    width: 80%;
+    width: 83%;
     animation: figma 1s linear;
 }
 
 .jsAnimation {
-    width: 80%;
+    width: 65%;
     animation: js 1s linear;
 }
 
 .cssAnimation {
-    width: 80%;
+    width: 70%;
     animation: css 1s linear;
 }
 
 .htmlAnimation {
-    width: 75%;
+    width: 80%;
     animation: html 1s linear;
+}
+
+.gitAnimation {
+    width: 80%;
+    animation: git 1s linear;
 }
