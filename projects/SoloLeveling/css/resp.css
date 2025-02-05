@@ -1,7 +1,14 @@
 @media screen and (width <= 767px) {
+    header {
+        height: 110vh !important;
+        position: relative;
+        margin-bottom: 0px;
+    }
+    
+
     .cont {
         width:98%;
-        height:auto;
+        height:80%;
     }
     
 .contTotal {
@@ -21,8 +28,10 @@
 }
 
 .btnControls {
-    height:25%;
-    gap: 30px;
+    position: fixed;
+    top: 0;
+    height:35%;
+    gap: 5px;
     flex-direction: column;
 }
 
@@ -30,12 +39,14 @@
     width:90%;
     height:5vh;
     margin:0px 2px;
-    font-size: 1em;
+    font-size: 1.1em;
 }
 
 .status {
     width:100%;
     height:70%;
+    position: fixed;
+    bottom: 0;
 }
 
 .status1, .status2 {
@@ -45,57 +56,63 @@
 
 .status2 > #statusButton {
     width:30vw;
-    bottom:12vh;
+    bottom:8vh;
     right: 2vw;
     z-index: 5;
 }
 
 .download > #copiar {
     width:30vw;
-    bottom:6vh;
+    bottom:3vh;
     right: 5vw;
     z-index: 5;
 }
 
 .outro > #outroButton {
     width:30vw;
-    bottom:12vh;
+    bottom:3vh;
     right: 5vw;
     z-index: 5;
 }
 
 .descDiv2 > #descButton {
     width:42vw;
-    bottom:16vh;
+    bottom:12vh;
     right: 2vw;
     z-index: 5;
 }
 
 .download > #voltarDown {
     width:30vw;
-    bottom:6vh;
+    bottom:3vh;
     left: 6vw;
     z-index: 5;
 }
 
 .outro > #voltarOutro {
     width:30vw;
-    bottom:12vh;
+    bottom:3vh;
     left: 5vw;
     z-index: 5;
 }
 
 .descDiv2 > #voltarDesc {
     width:42vw;
-    bottom:10vh;
+    bottom:5vh;
     right: 2vw;
     z-index: 5;
 }
 
+.descDiv, .descDiv2 {
+    justify-content: left !important;
+    margin-top: 50px;
+}
 
 .desc {
     display: none;
-    height:85%;
+    height:70%;
+    position: fixed;
+    bottom: 0;
 }
 
 .descricao {
@@ -107,11 +124,14 @@
     justify-content: left !important;
     display: none;
     height: 70%;
+    position: fixed;
+    bottom: 0;
 }
 
 .download textarea {
     width:80%;
     height:70%;
+    margin-top:20px;
 }
 
 #downloadText {
@@ -154,6 +174,13 @@
     height: 100%;
 }
 
+.outro {
+height: 60%;
+position: fixed;
+bottom: 0;
+padding-block: 30px;
+    justify-content: center !important;
+}
 
 }
 
