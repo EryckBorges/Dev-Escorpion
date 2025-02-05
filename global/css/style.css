@@ -8,6 +8,7 @@
 body {
     scroll-behavior: smooth;
     background: var(--backgroundCinza);
+    height: 100%;
 }
 
 .title {
