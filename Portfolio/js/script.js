@@ -2064,7 +2064,7 @@ let textToast = document.querySelector(".pToast");
 let imageToast = document.querySelector(".toast img");
 
 const toastNotification = new Audio();
-toastNotification.src = "../../global/music/toastNotification.mp3";
+toastNotification.src = "../global/music/toastNotification.mp3";
 
 const toastFunction = () => {
 
