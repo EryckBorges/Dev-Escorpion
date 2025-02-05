@@ -601,7 +601,7 @@ padding-block: 30px;
 
     .cont {
         width:98%; 
-        top: 5vh;
+        top: 10vh;
         border-radius: 20px;
         height:120vh;
         justify-content: left !important;
@@ -628,10 +628,11 @@ padding-block: 30px;
 }
 
 .btnControls {
-    height:60%;
+    height:35%;
     gap: 10px;
-    flex-direction: column;
-    
+    position: fixed;
+    top: 0;
+    flex-direction: column;  
 }
 
 .btnControls > button { 
@@ -643,7 +644,9 @@ padding-block: 30px;
 
 .status {
     width:100%;
-    height:70%;
+    height:65%;
+    position: fixed;
+    bottom: 0;
     align-items: baseline !important;
 }
 
@@ -655,56 +658,65 @@ padding-block: 30px;
 
 .status2 > #statusButton {
     width:30vw;
-    bottom:6vh;
+    height: 6vh;
+    bottom:40vh;
     right: 2vw;
     z-index: 5;
 }
 
 .download > #copiar {
     width:30vw;
-    bottom:5vh;
+    bottom:28vh;
     right: 5vw;
     z-index: 5;
+    height: 6vh;
 }
 
 .outro > #outroButton {
-    width:30vw;
-    bottom:6vh;
+    width:35vw;
+    bottom:30vh;
     right: 5vw;
     z-index: 5;
+    height: 7vh;
 }
 
 .descDiv2 > #descButton {
     width:42vw;
-    bottom:14vh;
+    bottom:40vh;
     right: 2vw;
     z-index: 5;
+    height: 6vh;
 }
 
 .download > #voltarDown {
     width:30vw;
-    bottom:5vh;
+    bottom:28vh;
     left: 6vw;
+    height: 6vh;
     z-index: 5;
 }
 
 .outro > #voltarOutro {
-    width:30vw;
-    bottom:6vh;
+    width:35vw;
+    bottom:30vh;
     left: 5vw;
+    height: 6vh;
     z-index: 5;
 }
 
 .descDiv2 > #voltarDesc {
     width:42vw;
-    bottom:6vh;
+    bottom:30vh;
     right: 2vw;
     z-index: 5;
+    height: 6vh;
 }
 
 .desc {
+    position: fixed;
+    bottom: 0;
     display: none;
-    height:100%;
+    height:70%;
 }
 
 .descDiv, .descDiv2 {
@@ -731,7 +743,7 @@ padding-block: 30px;
 
 .download textarea {
     width:80%;
-    height:70%;
+    height:55%;
 }
 
 #downloadText {
