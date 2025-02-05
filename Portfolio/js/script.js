@@ -1850,41 +1850,38 @@ document.querySelectorAll(".btnTraduz").forEach((btn) => {
   });
 });
 
-const lang = localStorage.getItem("lang");
-
 const langPage = () => {
   let langSelecionada = document.querySelector(".idiomaSelecionada");
   let flagSelecionada = document.querySelector(".flagsSelecionada img");
   let titleButtonTranslate = document.querySelectorAll(".btnTraduz");
   
   // Obtém a linguagem salva no localStorage
+  const lang = localStorage.getItem("lang");
 
   if (lang === "eu") {
     langSelecionada.innerHTML = "EN";
-    console.log("po");
-    
-    flagSelecionada.src = "https://eryckborges.github.io/global/icon/eua.png";
+    flagSelecionada.src = "../global/icon/eua.png";
     titleButtonTranslate.forEach((btnTranslate) => {
       btnTranslate.setAttribute("title", "Translate to English");
     });
     ingles();
   } else if (lang === "es") {
     langSelecionada.innerHTML = "ES";
-    flagSelecionada.src = "./image/spain.png";
+    flagSelecionada.src = "../global/icon/spain.png";
     titleButtonTranslate.forEach((btnTranslate) => {
       btnTranslate.setAttribute("title", "Traducir al español");
     });
     espanha();
   } else if (lang === "fr") {
     langSelecionada.innerHTML = "FR";
-    flagSelecionada.src = "./image/franca.png";
+    flagSelecionada.src = "../global/icon/franca.png";
     titleButtonTranslate.forEach((btnTranslate) => {
       btnTranslate.setAttribute("title", "Traduire en français");
     });
     frances();
   } else if (lang === "ch") {
     langSelecionada.innerHTML = "ZH";
-    flagSelecionada.src = "./image/china.png";
+    flagSelecionada.src = "../global/icon/china.png";
     titleButtonTranslate.forEach((btnTranslate) => {
       btnTranslate.setAttribute("title", "翻译成中文");
     });
@@ -1893,7 +1890,7 @@ const langPage = () => {
     // Caso nenhuma linguagem esteja no localStorage, define como 'br'
     localStorage.setItem("lang", "br");
     langSelecionada.innerHTML = "PT";
-    flagSelecionada.src = "./image/brasil.png";
+    flagSelecionada.src = "../global/icon/brasil.png";
     titleButtonTranslate.forEach((btnTranslate) => {
       btnTranslate.setAttribute("title", "Traduzir para o Português");
     });
@@ -2062,33 +2059,34 @@ relogio.addEventListener("click", () => {
   window.location.href = "https://eryckborges.github.io/Dev-Escorpion/projects/relogio/";
 });
 
-const toastFunction = () => {
-  const lang = localStorage.getItem("lang");
-
-  if (lang === "eu") {
-    textToast.innerHTML = eua.toastAlertDesenvolvi;
-  } else if (lang === "es") {
-    textToast.innerHTML = spain.toastAlertDesenvolvi;
-  } else if (lang === "fr") {
-    textToast.innerHTML = franca.toastAlertDesenvolvi;
-  } else if (lang === "ch") {
-    textToast.innerHTML = china.toastAlertDesenvolvi;
-  } else {
-    // Caso nenhuma linguagem esteja no localStorage, define como 'br'
-    textToast.innerHTML = brasil.toastAlertDesenvolvi;
-  }
-};
-
-const genshin = document.querySelector(".genshin");
-const tabuada = document.querySelector(".tabuada");
-const allButtonProject = document.querySelector(".buttonAllProjects");
-
 let toast = document.querySelector(".toast");
 let textToast = document.querySelector(".pToast");
 let imageToast = document.querySelector(".toast img");
 
 const toastNotification = new Audio();
 toastNotification.src = "../../global/music/toastNotification.mp3";
+
+const toastFunction = () => {
+
+  const lang = localStorage.getItem("lang");
+
+  if (lang === "eu") {
+    elementos.toastAlertDesenvolvi.innerHTML = eua.toastAlertDesenvolvi;
+  } else if (lang === "es") {
+    elementos.toastAlertDesenvolvi.innerHTML = spain.toastAlertDesenvolvi;
+  } else if (lang === "fr") {
+    elementos.toastAlertDesenvolvi.innerHTML = franca.toastAlertDesenvolvi;
+  } else if (lang === "ch") {
+    elementos.toastAlertDesenvolvi.innerHTML = china.toastAlertDesenvolvi;
+  } else {
+    // Caso nenhuma linguagem esteja no localStorage, define como 'br'
+    elementos.toastAlertDesenvolvi.innerHTML = brasil.toastAlertDesenvolvi;
+  }
+};
+
+const genshin = document.querySelector(".genshin");
+const tabuada = document.querySelector(".tabuada");
+const allButtonProject = document.querySelector(".buttonAllProjects");
 
 genshin.addEventListener("click", () => {
   toastNotification.play();
@@ -2099,7 +2097,7 @@ genshin.addEventListener("click", () => {
     toast.style.animation = "openToast 1s";
     setTimeout(() => {
       textToast.style.display = "flex";
-      textToast.innerHTML = toastFunction();
+      toastFunction();
     }, 200);
   }, 200);
   setTimeout(() => {
@@ -2125,7 +2123,7 @@ allButtonProject.addEventListener("click", () => {
     toast.style.animation = "openToast 1s";
     setTimeout(() => {
       textToast.style.display = "flex";
-      textToast.innerHTML = toastFunction();
+      toastFunction();
     }, 200);
   }, 200);
   setTimeout(() => {
@@ -2151,7 +2149,7 @@ tabuada.addEventListener("click", () => {
     toast.style.animation = "openToast 1s";
     setTimeout(() => {
       textToast.style.display = "flex";
-      textToast.innerHTML = toastFunction();
+      toastFunction();
     }, 200);
   }, 200);
   setTimeout(() => {
