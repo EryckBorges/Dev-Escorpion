@@ -1,0 +1,711 @@
+@import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{        
+    height:100vh;
+    overflow:hidden;
+    width:100%;
+    background-attachment:fixed;
+    background-image: url("http://media-s3-us-east-1.ceros.com/hype-beast/images/2018/07/13/a9a51bc0b8d626db493ab5f9a971b043/background-hero.png");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:0 -20vh;
+}
+.pokemon-img{
+    position:fixed;
+    margin-top:45vh;
+    margin-left:20vw;    
+}
+.pokemon-dados{  
+    position:fixed;
+    top:15vh;
+    font-size:20pt;
+    left:21vw;
+    font-weight:600;
+    color:rgb(212, 212, 212);
+    font-size:clamp(12px,5vw,25px);
+}
+.input-search{
+    text-align:center;
+    outline:none;
+    border-radius:5px;
+    width:22vw;
+    padding:1%;
+    left:16vw;
+    top:80vh;
+    position:fixed;
+    opacity: 0.55;
+    border:none;
+    transition:3s;
+}
+.input-search:hover{  
+    border-radius: 5px;
+    background:white;
+    opacity: 0.9;
+    transition:0.5s;
+}
+.buttons{
+    position:absolute;
+    top:55vh;
+    left:7vw;
+    width:90vw;
+    display:flex;
+    gap:30vw;
+    opacity: 1;
+}
+#next{
+   
+    font-weight:600;
+    padding:1%;
+    border-radius:5px;
+    cursor:pointer;
+    border:none;
+    font-size:30pt;
+    color:lightgray;
+    background:transparent;
+    transition: 0.5s;
+    
+}
+#next:hover{
+    opacity: 1;
+    color:white;
+    font-size:30pt;
+    transition: 0.5s;
+}
+#prev{
+   
+    font-weight:600;
+    padding:1%;
+    border-radius:5px;
+    cursor:pointer;
+    border:none;
+    font-size:30pt;
+    color:lightgray;
+    background:transparent;
+    transition: 0.5s;
+    
+}
+#prev:hover{
+    opacity: 1;
+    color:white;
+    font-size:30pt;
+    transition: 0.5s;
+}
+#next:active{
+    font-size:0.9rem;
+}
+#prev:active{
+    font-size:0.9rem;
+}
+#dados{
+    
+    position:fixed;
+    background:linear-gradient(45deg, rgb(3, 206, 172), rgb(2, 47, 131),rgb(4, 68, 185), rgb(3, 206, 172));
+    height:98vh;
+    width:50vw;
+    font-size:14pt;
+    border-radius:10px;
+    top:1vh;
+    right: 0.5vw;
+    color:white;
+    text-align:center;
+    opacity:0.9;
+}
+.tela{
+    width:46vw;
+    height:80vh;
+    font-family: 'Silkscreen', cursive;
+    background:rgb(19, 19, 19);
+    border-radius: 5px;
+    margin:0 auto;
+    margin-top:15vh;
+    overflow-y:auto;
+    overflow-x:hidden;
+    
+}
+
+main{
+    display:inline-block;
+    margin-top: 2vh;
+    padding:20px;
+    position:relative;
+    margin-left:1vw;
+}
+.tit{
+    font-size:16pt;
+    font-family: 'Stalinist One', cursive;
+    width:30vw;
+    position: absolute;
+    height:7vh;
+    top:3vh;
+    right:12vw;
+    white-space: nowrap;
+    
+}
+.icon{
+    height:40px;
+    width:40px;
+}
+.pok-img0{
+    height:9vh;
+    position:fixed;
+    margin-top:5vh;
+    margin-left:0vw;
+}
+.pok-img1{
+    height:10vh;
+    position:fixed;
+    margin-top:4.5vh;
+    margin-left:1vw;
+}
+.pok-img2{
+    height:13vh;
+    position:fixed;
+    margin-top:1.5vh;
+    margin-left:0vw;
+}
+.pok-img3{
+    height:17vh;
+    position:fixed;
+    margin-top:-1.5vh;
+    margin-left:0vw;
+}
+.pok-img4{
+    height:30vh;
+    position:fixed;
+    margin-top:-15vh;
+    margin-left:0vw;    
+}
+@media(max-width:999px){
+    body{        
+        height:100vh;
+        width:100%;
+        background-attachment:fixed;
+        background-image: url("http://media-s3-us-east-1.ceros.com/hype-beast/images/2018/07/13/a9a51bc0b8d626db493ab5f9a971b043/background-hero.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position:-50vw -30vh;
+    }
+        big{
+            font-size:16pt;
+        }
+        .pokemon-img{
+            position:fixed;
+            margin-top:20vh;
+            margin-left:25vw;    
+        }
+        .pokemon-dados{  
+            position:fixed;
+            top:5vh;
+            left:30vw;
+            font-weight:600;
+            color:rgb(230, 230, 230);
+            font-size:clamp(12px,5vw,25px);
+        }
+        .input-search{
+            text-align:center;
+            outline:none;
+            border-radius:5px;
+            width:40vw;
+            padding:1%;
+            left:30vw;
+            top:50vh;
+            position:fixed;
+            opacity: 0.65;
+            border:none;
+            transition:3s;
+        }
+        .input-search:hover{  
+            border-radius: 5px;
+            background:white;
+            opacity: 0.9;
+            transition:0.5s;
+        }
+        .buttons{
+            position:fixed;
+            top:30vh;
+            left:7vw;
+            width:90vw;
+            display:flex;
+            gap:70vw;
+            opacity: 1;
+        }
+        #next{
+            font-weight:600;
+            padding:1%;
+            cursor:pointer;
+            border:none;
+            font-size:20pt;
+            color:lightgray;
+            background:transparent;
+            transition: 0.5s;
+            
+        }
+        #next:hover{
+            opacity: 1;
+            color:white;
+            font-size:20pt;
+            transition: 0.5s;
+        }
+        #prev{
+            font-weight:600;
+            padding:1%;
+            cursor:pointer;
+            border:none;
+            font-size:20pt;
+            color:lightgray;
+            background:transparent;
+            transition: 0.5s;
+            
+        }
+        #prev:hover{
+            opacity: 1;
+            color:white;
+            font-size:20pt;
+            transition: 0.5s;
+        }
+        #next:active{
+            font-size:1rem;
+        }
+        #prev:active{
+            font-size:1rem;
+        }
+        #dados{
+            
+            position:fixed;
+            background:linear-gradient(45deg, rgb(3, 206, 172), rgb(2, 47, 131),rgb(4, 68, 185), rgb(3, 206, 172));
+            height:42vh;
+            width:98vw;
+            font-size:14pt;
+            border-radius:10px;
+            top:60vh;
+            right: 1vw;
+            color:white;
+            text-align:center;
+            opacity:0.88;
+        }
+        .tela{
+            width:94vw;
+            position:absolute;
+            height:29vh;
+            font-family: 'Silkscreen', cursive;
+            background:rgb(19, 19, 19);
+            border-radius: 5px;
+            margin-left:2vw;
+            margin-top:10vh;
+            overflow-y:auto;
+            overflow-x:hidden;
+            
+        }
+        
+        main{
+            display:inline-block;
+            margin-top: 2vh;
+            padding:20px;
+            position:relative;
+            margin-left:1vw;
+        }
+        .tit{
+            font-size:10px;
+            font-family: 'Stalinist One', cursive;
+            width:75vw;
+            position: absolute;
+            height:7vh;
+            top:2vh;
+            right:12vw;
+            white-space: nowrap;
+            
+        }
+        .icon{
+            height:25px;
+            width:25px;
+        }
+        .pok-img0{
+            height:8vh;
+            position:fixed;
+            margin-top:5vh;
+            margin-left:0vw;
+        }
+        .pok-img1{
+            height:10vh;
+            position:fixed;
+            margin-top:4.5vh;
+            margin-left:1vw;
+        }
+        .pok-img2{
+            height:13vh;
+            position:fixed;
+            margin-top:1.5vh;
+            margin-left:0vw;
+        }
+        .pok-img3{
+            height:17vh;
+            position:fixed;
+            margin-top:-1.5vh;
+            margin-left:0vw;
+        }
+        .pok-img4{
+            height:28vh;
+            position:fixed;
+            margin-top:-12vh;
+            margin-left:0vw;    
+        }
+
+}
+@media(max-width:666px){
+    body{        
+        height:100vh;
+        width:100%;
+        background-attachment:fixed;
+        background-image: url("http://media-s3-us-east-1.ceros.com/hype-beast/images/2018/07/13/a9a51bc0b8d626db493ab5f9a971b043/background-hero.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position:-50vw -30vh;
+    }
+        big{
+            font-size:22pt;
+        }
+        .pokemon-img{
+            position:fixed;
+            margin-top:20vh;
+            margin-left:23vw;    
+        }
+        .pokemon-dados{  
+            position:fixed;
+            top:5vh;
+            left:22vw;
+            font-weight:600;
+            color:rgb(230, 230, 230);
+            font-size:clamp(12px,5vw,25px);
+        }
+        .input-search{
+            text-align:center;
+            outline:none;
+            border-radius:5px;
+            width:45vw;
+            padding:2%;
+            left:28vw;
+            top:48vh;
+            position:fixed;
+            opacity: 0.65;
+            border:none;
+            transition:3s;
+        }
+        .input-search:hover{  
+            border-radius: 5px;
+            background:white;
+            opacity: 0.9;
+            transition:0.5s;
+        }
+        .buttons{
+            position:fixed;
+            top:30vh;
+            left:5vw;
+            width:90vw;
+            display:flex;
+            gap:70vw;
+            opacity: 1;
+        }
+        #next{
+            font-weight:600;
+            padding:1%;
+            cursor:pointer;
+            border:none;
+            font-size:40pt;
+            color:lightgray;
+            -webkit-text-stroke: 1.5px black;
+            background:transparent;
+            transition: 0.5s;
+            
+        }
+        #next:hover{
+            opacity: 1;
+            color:lightgray;
+            font-size:40pt;
+            transition: 0.5s;
+        }
+        #prev{
+            font-weight:600;
+            padding:1%;
+            cursor:pointer;
+            border:none;
+            font-size:40pt;
+            color:lightgray;
+            -webkit-text-stroke: 1.5px black;
+            background:transparent;
+            transition: 0.5s;
+            
+        }
+        #prev:hover{
+            opacity: 1;
+            color:lightgray;
+            font-size:40pt;
+            transition: 0.5s;
+        }
+        #next:active{
+            font-size:2.8rem;
+        }
+        #prev:active{
+            font-size:2.8rem;
+        }
+        #dados{
+            
+            position:fixed;
+            background:linear-gradient(45deg, rgb(3, 206, 172), rgb(2, 47, 131),rgb(4, 68, 185), rgb(3, 206, 172));
+            height:35vh;
+            width:94vw;
+            font-size:14pt;
+            border-radius:10px;
+            top:56vh;
+            right: 3vw;
+            color:white;
+            text-align:center;
+            opacity:0.88;
+        }
+        .tela{
+            width:90vw;
+            position:absolute;
+            height:24vh;
+            font-family: 'Silkscreen', cursive;
+            background:rgb(19, 19, 19);
+            border-radius: 5px;
+            margin-left:2vw;
+            margin-top:10vh;
+            overflow-y:auto;
+            overflow-x:hidden;
+            
+        }
+        
+        main{
+            display:inline-block;
+            margin-top: 2vh;
+            padding:20px;
+            position:relative;
+            margin-left:1vw;
+        }
+        .tit{
+            font-size:10pt;
+            font-family: 'Stalinist One', cursive;
+            width:75vw;
+            position: absolute;
+            height:7vh;
+            top:3vh;
+            left:8vw;
+            white-space: nowrap;
+            
+        }
+        .icon{
+            height:30px;
+            width:30px;
+        }
+        .pok-img0{
+            height:8vh;
+            position:fixed;
+            margin-top:5vh;
+            margin-left:10vw;
+        }
+        .pok-img1{
+            height:8vh;
+            position:fixed;
+            margin-top:5.5vh;
+            margin-left:8vw;
+        }
+        .pok-img2{
+            height:12vh;
+            position:fixed;
+            margin-top:1.5vh;
+            margin-left:10vw;
+        }
+        .pok-img3{
+            height:15vh;
+            position:fixed;
+            margin-top:-1.5vh;
+            margin-left:-1vw;
+        }
+        .pok-img4{
+            height:28vh;
+            position:fixed;
+            margin-top:-12vh;
+            margin-left:-6vw;    
+        }
+
+}
+@media(max-width:333px){
+    body{        
+    height:100vh;
+    width:100%;
+    background-attachment:fixed;
+    background-image: url("http://media-s3-us-east-1.ceros.com/hype-beast/images/2018/07/13/a9a51bc0b8d626db493ab5f9a971b043/background-hero.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:-50vw -30vh;
+}
+    big{
+        font-size:16pt;
+    }
+    .pokemon-img{
+        position:fixed;
+        margin-top:20vh;
+        margin-left:25vw;    
+    }
+    .pokemon-dados{  
+        position:fixed;
+        top:5vh;
+        left:30vw;
+        font-weight:600;
+        color:rgb(230, 230, 230);
+        font-size:clamp(12px,5vw,25px);
+    }
+    .input-search{
+        text-align:center;
+        outline:none;
+        border-radius:5px;
+        width:40vw;
+        padding:1%;
+        left:30vw;
+        top:50vh;
+        position:fixed;
+        opacity: 0.65;
+        border:none;
+        transition:3s;
+    }
+    .input-search:hover{  
+        border-radius: 5px;
+        background:white;
+        opacity: 0.9;
+        transition:0.5s;
+    }
+    .buttons{
+        position:fixed;
+        top:30vh;
+        left:7vw;
+        width:90vw;
+        display:flex;
+        gap:70vw;
+        opacity: 1;
+    }
+    #next{
+        font-weight:600;
+        padding:1%;
+        cursor:pointer;
+        border:none;
+        font-size:20pt;
+        color:lightgray;
+        background:transparent;
+        transition: 0.5s;
+        
+    }
+    #next:hover{
+        opacity: 1;
+        color:white;
+        font-size:20pt;
+        transition: 0.5s;
+    }
+    #prev{
+        font-weight:600;
+        padding:1%;
+        cursor:pointer;
+        border:none;
+        font-size:20pt;
+        color:lightgray;
+        background:transparent;
+        transition: 0.5s;
+        
+    }
+    #prev:hover{
+        opacity: 1;
+        color:white;
+        font-size:20pt;
+        transition: 0.5s;
+    }
+    #next:active{
+        font-size:1rem;
+    }
+    #prev:active{
+        font-size:1rem;
+    }
+    #dados{
+        
+        position:fixed;
+        background:linear-gradient(45deg, rgb(3, 206, 172), rgb(2, 47, 131),rgb(4, 68, 185), rgb(3, 206, 172));
+        height:42vh;
+        width:98vw;
+        font-size:14pt;
+        border-radius:10px;
+        top:60vh;
+        right: 1vw;
+        color:white;
+        text-align:center;
+        opacity:0.88;
+    }
+    .tela{
+        width:94vw;
+        position:absolute;
+        height:29vh;
+        font-family: 'Silkscreen', cursive;
+        background:rgb(19, 19, 19);
+        border-radius: 5px;
+        margin-left:2vw;
+        margin-top:10vh;
+        overflow-y:auto;
+        overflow-x:hidden;
+        
+    }
+    
+    main{
+        display:inline-block;
+        margin-top: 2vh;
+        padding:20px;
+        position:relative;
+        margin-left:1vw;
+    }
+    .tit{
+        font-size:10px;
+        font-family: 'Stalinist One', cursive;
+        width:75vw;
+        position: absolute;
+        height:7vh;
+        top:2vh;
+        right:12vw;
+        white-space: nowrap;
+        
+    }
+    .icon{
+        height:25px;
+        width:25px;
+    }
+    .pok-img0{
+        height:8vh;
+        position:fixed;
+        margin-top:5vh;
+        margin-left:0vw;
+    }
+    .pok-img1{
+        height:10vh;
+        position:fixed;
+        margin-top:4.5vh;
+        margin-left:1vw;
+    }
+    .pok-img2{
+        height:13vh;
+        position:fixed;
+        margin-top:1.5vh;
+        margin-left:0vw;
+    }
+    .pok-img3{
+        height:17vh;
+        position:fixed;
+        margin-top:-1.5vh;
+        margin-left:0vw;
+    }
+    .pok-img4{
+        height:28vh;
+        position:fixed;
+        margin-top:-12vh;
+        margin-left:0vw;    
+    }
+}
