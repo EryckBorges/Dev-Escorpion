@@ -68,97 +68,97 @@ ultraSun.addEventListener('click', () => {
 sun.addEventListener('click', () => {
   logoPokemon.src = './image/logoSun.webp';
 videoPokemon.src = './video/sun.mp4';  
-linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Jogos-para-a-Nintendo-3DS/Pokemon-Ultra-Sun-1231949.html'
+linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Jogos-para-a-Nintendo-3DS/Pokemon-Sun-1092368.html?srsltid=AfmBOorALcY28IzVBpw5GZQU8LBmffwCpY0Fsp6E4VLGT7GKStpqcNV1'
 })
 
 ruby.addEventListener('click', () => {
   logoPokemon.src = './image/logoOmega.webp';
 videoPokemon.src = './video/omega.mp4';  
-linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Jogos-para-a-Nintendo-3DS/Pokemon-Ultra-Sun-1231949.html'
+linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Jogos-para-a-Nintendo-3DS/Pokemon-Omega-Ruby-893014.html?srsltid=AfmBOoqJH2DmTESjannVTiECjdQUIbGSsMqeszsQZQGMnTDrPrPiaJ1D'
 })
 
 xy.addEventListener('click', () => {
   logoPokemon.src = './image/logoY.webp';
 videoPokemon.src = './video/xy.mp4';  
-linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Jogos-para-a-Nintendo-3DS/Pokemon-Ultra-Sun-1231949.html'
+linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Jogos-para-a-Nintendo-3DS/Pokemon-Y-766700.html?srsltid=AfmBOopeodX2V9L1zNN3J_h360XYH0MbRRSV6ZqYSevvxKkc4tGYAXvh'
 })
 
 black.addEventListener('click', () => {
   logoPokemon.src = './image/logoBlack2.webp';
 videoPokemon.src = './video/black2.mp4';  
-linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Jogos-para-a-Nintendo-3DS/Pokemon-Ultra-Sun-1231949.html'
+linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Nintendo-DS/Pokemon-Black-Version-2-523591.html?srsltid=AfmBOop5__Ag7VMInaWB1kdZsB8RAXoP-jBpliRIY3LX9_l6nVpeMcO4'
 })
 
 white.addEventListener('click', () => {
   logoPokemon.src = './image/logoBlack.webp';
 videoPokemon.src = './video/black.mp4';  
-linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Jogos-para-a-Nintendo-3DS/Pokemon-Ultra-Sun-1231949.html'
+linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Nintendo-DS/Pokemon-Black-Version-272332.html?srsltid=AfmBOordTfBLWLtZXSJJnWzi2h4Rqqh85kyrear2bv65GSvW6eF_WCmh'
 })
 
 silver.addEventListener('click', () => {
   logoPokemon.src = './image/logoSilver.webp';
 videoPokemon.src = './video/silver.mp4';  
-linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Jogos-para-a-Nintendo-3DS/Pokemon-Ultra-Sun-1231949.html'
+linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Nintendo-DS/Pokemon-SoulSilver-Version-272475.html?srsltid=AfmBOoqRGXmizQ1f09yB6GqxRFT9waoC5nOw81Gwwtudu6Z2vGbfBFna'
 })
 
 platinum.addEventListener('click', () => {
   logoPokemon.src = './image/logoPlatinum.png';
 videoPokemon.src = './video/platinum.mp4';  
-linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Jogos-para-a-Nintendo-3DS/Pokemon-Ultra-Sun-1231949.html'
+linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Nintendo-DS/Pokemon-Platinum-Version-272321.html?srsltid=AfmBOoowBP2yJGrOe1GS9EKOyHtj3bIXAFIk42kPf2Ga-DU-OPQsD96O'
 })
 
 pearl.addEventListener('click', () => {
   logoPokemon.src = './image/logoPearl.png';
 videoPokemon.src = './video/pearl.mp4';  
-linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Jogos-para-a-Nintendo-3DS/Pokemon-Ultra-Sun-1231949.html'
+linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Nintendo-DS/Pokemon-Pearl-272431.html?srsltid=AfmBOopFUQnrqO2MD9pLq03HjP1bCpWtUuZv1eauIYhz0hhsCdAaxdHl'
 })
 
 rubyVersion.addEventListener('click', () => {
-  logoPokemon.src = './image/logoRuby.webp';
+  logoPokemon.src = './image/logoRuby.png';
 videoPokemon.src = './video/rubyVersion.mp4';  
-linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Jogos-para-a-Nintendo-3DS/Pokemon-Ultra-Sun-1231949.html'
+linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Game-Boy-Advance/Pokemon-Ruby-267167.html?srsltid=AfmBOoqypz0nkFNXLBlxPJt4ZDsy9sJhxG-TQr1m8f8TEpiMTMQd9-cW'
 })
 
 esmerald.addEventListener('click', () => {
   logoPokemon.src = './image/logoEsmerald.webp';
 videoPokemon.src = './video/esmerald.mp4';  
-linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Jogos-para-a-Nintendo-3DS/Pokemon-Ultra-Sun-1231949.html'
+linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Game-Boy-Advance/Pokemon-Emerald-Version-267112.html?srsltid=AfmBOopneU6FFufaPdDbLHFKn15jCB1aQ6o-hz10ruoPz_KLWPlEKGyk'
 })
 
 fireRed.addEventListener('click', () => {
   logoPokemon.src = './image/logoFireRed.webp';
 videoPokemon.src = './video/fireRed.mp4';  
-linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Jogos-para-a-Nintendo-3DS/Pokemon-Ultra-Sun-1231949.html'
+linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Game-Boy-Advance/Pokemon-FireRed-267123.html?srsltid=AfmBOoouv5Dv5Dt7dvS1K1gPn7_6MwErLwInpPu84MNcfyDcLqtkcorm'
 })
 
 cristal.addEventListener('click', () => {
   logoPokemon.src = './image/logoCristal.webp';
 videoPokemon.src = './video/cristal.mp4';  
-linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Jogos-para-a-Nintendo-3DS/Pokemon-Ultra-Sun-1231949.html'
+linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Game-Boy-Color/Pokemon-Crystal-Version-266065.html?srsltid=AfmBOoqWZv12-5TsZ_pieqKtPOTm7w9ttakE66q4ceaOUesiSqMtp984'
 })
 
 gold.addEventListener('click', () => {
   logoPokemon.src = './image/logoGold.webp';
 videoPokemon.src = './video/gold.mp4';  
-linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Jogos-para-a-Nintendo-3DS/Pokemon-Ultra-Sun-1231949.html'
+linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Game-Boy-Color/Pokemon-Gold-Version-266076.html?srsltid=AfmBOoqnzzf71rASkd-Z8nnCa3TVeZ17HflVXWszvw4GQuOs4r8Ao_i6'
 })
 
 yellow.addEventListener('click', () => {
   logoPokemon.src = './image/logoYellow.png';
 videoPokemon.src = './video/yellow.mp4';  
-linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Jogos-para-a-Nintendo-3DS/Pokemon-Ultra-Sun-1231949.html'
+linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Game-Boy/Pokemon-Yellow-Version-Special-Pikachu-Edition-266142.html?srsltid=AfmBOoq-aSXnAk-oSsUVZYje0rjlezefLsiXNLEqqg5S2U-tZZ6UlbFW'
 })
 
 blue.addEventListener('click', () => {
   logoPokemon.src = './image/logoBlue.webp';
 videoPokemon.src = './video/blue.mp4';  
-linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Jogos-para-a-Nintendo-3DS/Pokemon-Ultra-Sun-1231949.html'
+linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Game-Boy/Pokemon-Blue-Version-266054.html?srsltid=AfmBOoopdK4X-W1uynwO8vrt_FsLL7lFDcWT6jTRWWAFHivSdBuL5fGJ'
 })
 
 red.addEventListener('click', () => {
   logoPokemon.src = './image/logoRed.webp';
 videoPokemon.src = './video/red.mp4';  
-linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Jogos-para-a-Nintendo-3DS/Pokemon-Ultra-Sun-1231949.html'
+linkJogo = 'https://www.nintendo.com/pt-pt/Jogos/Game-Boy/Pokemon-Red-Version-266109.html?srsltid=AfmBOoq5w4VrcPTVKEHF3YzrYEJRwpzdfj4ofitCDtZ0XWqTtkDY2tKI'
 })
 
 btnNintendo.addEventListener('click', () => {
@@ -217,3 +217,6 @@ avalia.addEventListener("touchmove", (e) => {
   const walk = (x - startXY) * 0.5; // Multiplica para ajustar a velocidade
   avalia.scrollLeft = scrollEsquerda - walk;
 });
+
+
+const btnAudio = document.querySelector('.btnAudio');
