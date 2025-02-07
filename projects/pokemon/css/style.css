@@ -91,7 +91,7 @@ header {
 }
 
 .contPokemon > p {
-    font-size: 1.2em;
+    font-size: 1em;
     color: var(--branco);
     font-weight: bold;
 }

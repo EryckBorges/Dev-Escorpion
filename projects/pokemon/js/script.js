@@ -26,15 +26,81 @@ const logoPokemon = document.querySelector('.contPokemon img');
 
 const videoPokemon = document.querySelector('.gamesPoke video');
 
+
 let linkJogo;
+let gameDesc;
+
+const eua = {
+  inicio: "Home",
+  cursos: "Courses",
+  jogos: "Games",
+  portfolio: "Portfolio",
+  contato: "Contact",
+  sobre: "About",
+  descScarlet: "Capture, battle, and train Pokémon in the Paldea region, a vast area filled with lakes, towering peaks, deserts, villages, and expanding cities. Explore the open world at your own pace and traverse land, water, and air while riding the shape-shifting legendary Pokémon (Koraidon in Pokémon Scarlet and Miraidon in Pokémon Violet). Choose between Sprigatito, Fuecoco, or Quaxly as your first partner Pokémon before setting off on your journey through Paldea.",
+  descArceus: "Get ready for a new grand Pokémon adventure in Pokémon™ Legends: Arceus, a brand-new game from Game Freak that combines action and exploration with the RPG roots of the Pokémon series. Embark on research missions in the ancient Hisui region. Explore natural expanses to capture wild Pokémon by learning their behavior, sneaking up on them, and throwing a well-aimed Poké Ball™."
+}
+
+const brasil = {
+  inicio: "Ínicio",
+  cursos: "Cursos",
+  jogos: "Jogos",
+  portfolio: "Portfólio",
+  contato: "Contato",
+  sobre: "Sobre",
+  descScarlet: 'Capture, lute e treine Pokémon na região de Paldea, uma vasta área cheia de lagos, picos imponentes, desertos, vilarejos e cidades em expansão. Explore o mundo aberto no seu próprio ritmo e atravesse terra, água e ar montado no Pokémon lendário que muda de forma (Koraidon no Pokémon Scarlet e Miraidon no Pokémon Violet). Escolha entre Sprigatito, Fuecoco ou Quaxly para ser seu primeiro parceiro Pokémon antes de partir em sua jornada por Paldea.',
+  descArceus: 'Prepare-se para uma nova grande aventura Pokémon em Pokémon™ Legends: Arceus, um jogo totalmente novo da Game Freak que combina ação e exploração com as raízes de RPG da série Pokémon. Embarque em missões de pesquisa na antiga região de Hisui. Explore extensões naturais para capturar Pokémon selvagens, aprendendo seu comportamento, aproximando-se sorrateiramente e jogando uma Poké Ball™ bem direcionada.',
+}
+
+const spain = {
+  inicio: "Comenzar",
+  cursos: "Cursos",
+  jogos: "Juegos",
+  portfolio: "Portafolio",
+  contato: "Contacto",
+  sobre: "En",
+}
+
+const franca = {
+  inicio: "Commencer",
+  cursos: "Cours",
+  jogos: "Jeux",
+  portfolio: "Portefeuille",
+  contato: "Contact",
+  sobre: "Sur",
+}
+
+const china = {
+  inicio: "开始",
+  cursos: "课程",
+  jogos: "游戏",
+  portfolio: "作品集",
+  contato: "接触",
+  sobre: "在",
+  sobreMim: "关于我",
+}
+
+const elementos = {
+  inicio: document.querySelectorAll(".inicio"),
+  cursos: document.querySelectorAll(".cursos"),
+  jogos: document.querySelectorAll(".jogos"),
+  portfolio: document.querySelectorAll(".portfolio"),
+  contato: document.querySelectorAll(".contato"),
+  sobre: document.querySelectorAll(".sobre"),
+  descPokemon: document.querySelector('.contPokemon p'),
+}
 
 scarlet.addEventListener('click', () => {
+    gameDesc = "scarlet";
+    langPage();
     logoPokemon.src = './image/logoScarlet.webp';
     videoPokemon.src = './video/scarlet.mp4';
     linkJogo = 'https://www.nintendo.com/pt-br/store/products/pokemon-scarlet-switch/?srsltid=AfmBOoq3CpftcNgAFU9-nsu-QBCQRiiXFXiFdJaUQEvWoc2S51PtrwPp'
 });
 
 arceus.addEventListener('click', () => {
+  gameDesc = "arceus";
+  langPage();
     logoPokemon.src = './image/logoArceus.png';
     videoPokemon.src = './video/arceus.mp4';
     linkJogo = 'https://www.nintendo.com/pt-br/store/products/pokemon-legends-arceus-switch/'
@@ -220,3 +286,163 @@ avalia.addEventListener("touchmove", (e) => {
 
 
 const btnAudio = document.querySelector('.btnAudio');
+
+const ingles = () => {
+  elementos.inicio.forEach((inicioText) => {
+    inicioText.innerHTML = eua.inicio;
+  });
+  elementos.cursos.forEach((cursosText) => {
+    cursosText.innerHTML = eua.cursos;
+  });
+  elementos.jogos.forEach((jogosText) => {
+    jogosText.innerHTML = eua.jogos;
+  });
+  elementos.portfolio.forEach((portfolioText) => {
+    portfolioText.innerHTML = eua.portfolio;
+  });
+  elementos.contato.forEach((contatoText) => {
+    contatoText.innerHTML = eua.contato;
+  });
+  elementos.sobre.forEach((sobreText) => {
+    sobreText.innerHTML = eua.sobre;
+  });
+  switch (gameDesc) {
+    case 'scarlet':
+      elementos.descPokemon.innerHTML = eua.descScarlet;
+      break;
+      case 'arceus': 
+      elementos.descPokemon.innerHTML = eua.descArceus;
+      break;
+    default:
+      break;
+  }
+}
+
+const portugues = () => {
+  elementos.inicio.forEach((inicioText) => {
+    inicioText.innerHTML = brasil.inicio;
+  });
+  elementos.cursos.forEach((cursosText) => {
+    cursosText.innerHTML = brasil.cursos;
+  });
+  elementos.jogos.forEach((jogosText) => {
+    jogosText.innerHTML = brasil.jogos;
+  });
+  elementos.portfolio.forEach((portfolioText) => {
+    portfolioText.innerHTML = brasil.portfolio;
+  });
+  elementos.contato.forEach((contatoText) => {
+    contatoText.innerHTML = brasil.contato;
+  });
+  elementos.sobre.forEach((sobreText) => {
+    sobreText.innerHTML = brasil.sobre;
+  });
+  switch (gameDesc) {
+    case 'scarlet':
+      elementos.descPokemon.innerHTML = brasil.descScarlet;
+      break;
+      case 'arceus': 
+      elementos.descPokemon.innerHTML = brasil.descArceus;
+      break;
+    default:
+      break;
+  }
+}
+
+const espanha = () => {
+  elementos.inicio.forEach((inicioText) => {
+    inicioText.innerHTML = spain.inicio;
+  });
+  elementos.cursos.forEach((cursosText) => {
+    cursosText.innerHTML = spain.cursos;
+  });
+  elementos.jogos.forEach((jogosText) => {
+    jogosText.innerHTML = spain.jogos;
+  });
+  elementos.portfolio.forEach((portfolioText) => {
+    portfolioText.innerHTML = spain.portfolio;
+  });
+  elementos.contato.forEach((contatoText) => {
+    contatoText.innerHTML = spain.contato;
+  });
+  elementos.sobre.forEach((sobreText) => {
+    sobreText.innerHTML = spain.sobre;
+  });
+}
+
+const frances = () => {
+  elementos.inicio.forEach((inicioText) => {
+    inicioText.innerHTML = franca.inicio;
+  });
+  elementos.cursos.forEach((cursosText) => {
+    cursosText.innerHTML = franca.cursos;
+  });
+  elementos.jogos.forEach((jogosText) => {
+    jogosText.innerHTML = franca.jogos;
+  });
+  elementos.portfolio.forEach((portfolioText) => {
+    portfolioText.innerHTML = franca.portfolio;
+  });
+  elementos.contato.forEach((contatoText) => {
+    contatoText.innerHTML = franca.contato;
+  });
+  elementos.sobre.forEach((sobreText) => {
+    sobreText.innerHTML = franca.sobre;
+  });
+}
+
+const chines = () => {
+  elementos.inicio.forEach((inicioText) => {
+    inicioText.innerHTML = china.inicio;
+  });
+  elementos.cursos.forEach((cursosText) => {
+    cursosText.innerHTML = china.cursos;
+  });
+  elementos.jogos.forEach((jogosText) => {
+    jogosText.innerHTML = china.jogos;
+  });
+  elementos.portfolio.forEach((portfolioText) => {
+    portfolioText.innerHTML = china.portfolio;
+  });
+  elementos.contato.forEach((contatoText) => {
+    contatoText.innerHTML = china.contato;
+  });
+  elementos.sobre.forEach((sobreText) => {
+    sobreText.innerHTML = china.sobre;
+  });
+}
+
+let langSelecionada = document.querySelector(".idiomaSelecionada");
+let flagSelecionada = document.querySelector(".flagsSelecionada img");
+
+const langPage = () => {
+  // Obtém a linguagem salva no localStorage
+  const lang = localStorage.getItem("lang");
+
+  if (lang === "eu") {
+    langSelecionada.innerHTML = "EN";
+    flagSelecionada.src = "../../global/icon/eua.png";
+    ingles();
+  } else if (lang === "es") {
+    langSelecionada.innerHTML = "ES";
+    flagSelecionada.src = "../../global/icon/spain.png";
+    espanha();
+  } else if (lang === "fr") {
+    langSelecionada.innerHTML = "FR";
+    flagSelecionada.src = "../../global/icon/franca.png";
+    frances();
+  } else if (lang === "ch") {
+    langSelecionada.innerHTML = "ZH";
+    flagSelecionada.src = "../../global/icon/china.png";
+    chines();
+  } else {
+    // Caso nenhuma linguagem esteja no localStorage, define como 'br'
+    localStorage.setItem("lang", "br");
+    langSelecionada.innerHTML = "PT";
+    flagSelecionada.src = "../../global/icon/brasil.png";
+    portugues();
+  }
+};
+
+// Executa ao carregar a página
+langPage();
