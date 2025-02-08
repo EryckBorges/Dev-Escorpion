@@ -157,6 +157,10 @@ main {
   .genshin > p {
     color: #646464;
   }
+
+  .pokemon > p {
+    color: #DC0A2D;
+  }
   
   .project > img {
     width: 100%;

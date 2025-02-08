@@ -1,0 +1,109 @@
+@media screen and (width <= 767px) {
+    .gamesPoke {
+        display: none;
+    }
+
+    .gamesPokeMobile {
+        display: flex;
+        height: 200vh;
+        flex-direction: column;
+    }
+
+    .contDescMobile, .gamesMobile {
+        height: 50%;
+        width: 100%;
+    }
+
+    .gamesMobile {
+        position: relative;
+    }
+
+    .gamesMobile > video {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        object-fit: cover;
+    }
+    
+    .gamesMobile > .games {
+        width: 100%;
+        height: 40%;
+    }
+
+    .btnAudioMobile {
+        position: absolute;
+        top: 2vh;
+        right: 2vw;
+        width: 80px;
+        height: 80px;
+        background: rgba(0, 0, 0, 0.555);
+        z-index: 5;
+        border:none;
+        border-radius: 50%;
+        color: var(--branco);
+        font-size: 1.2em;
+    }
+
+    .gamesPokeMobile > .contDescMobile {
+        flex-direction: column;
+        width: 90%;
+        align-items: baseline !important;
+        gap: 20px;
+    }
+
+    .gamesPokeMobile > .contDescMobile > img {
+        height: auto;
+        width: 80%;
+    }
+
+    .contDescMobile > p {
+        font-size: 1.2em;
+        color: var(--branco);      
+    }
+
+    .gamesPokeMobile > .contDescMobile > button {
+        width: 80%;
+        height: 8vh;
+    }
+
+    .logoPokemon {
+        width: 90%;
+        padding-inline: 20px;
+        height: 60vh;
+        gap: 30px;
+    }
+
+    .logoPokemon > img {
+        height: 20%;
+    }
+
+    .divPokedex {
+        flex-direction: column;
+    }
+
+    .pokedex {
+        width: 100%;
+        height: 50%;
+    }
+
+    .contPokedex {
+        width: 100%;
+        height: 50%;
+    }
+
+    .contPokedex > h1 {
+        width: 80%;
+        margin-left: 20px;
+        font-size: 1.6em;
+    }
+    
+    .contPokedex > p {
+        margin-left: 20px;
+        width: 80%;
+    }
+
+    .contPokedex > button {
+        width: 30%;
+    }
+}

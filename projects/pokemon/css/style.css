@@ -4,6 +4,10 @@ header {
     animation: fadeInDown 1s;
 }
 
+main {
+    flex-direction: column;
+}
+
 .logoPokemon {
     width: 40vw;
     height: 60vh;
@@ -32,6 +36,7 @@ header {
     height: 120vh;
     background: var(--cinzaOpacity);
     position: relative;
+    pointer-events: all;
 }
 
 .gamesPoke > video {
@@ -55,10 +60,27 @@ header {
 }
 
 .capaPokemon {
+    width: 180px;
+    height: 75%;
+    border-radius: 20px;
+    margin-inline: 20px;
+    opacity: 0.6;
+    transition: 0.2s ease-in-out;
+}
+
+.capaPokemon.actived {
     width: 200px;
     height: 80%;
     border-radius: 20px;
     margin-inline: 20px;
+    opacity: 1;
+}
+
+.capaPokemon:hover {
+    width: 200px;
+    transition: 0.2s ease-in-out;
+    height: 80%;
+    opacity: 1;
 }
 
 .capaPokemon > img {
@@ -109,3 +131,88 @@ header {
     height: 100%;
     object-fit: cover;
 }
+
+.btnAudio {
+    width:80px;
+    height:80px;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    right:2vw;
+top: 2vh;
+    background: rgba(0, 0, 0, 0.555);
+    cursor: pointer;
+    color: var(--branco);
+}
+
+.divPokedex {
+    height:100vh;
+    width: 100%;
+    background: url('../image/pokedex.svg') center / cover no-repeat;
+}
+
+.pokedex {
+    width: 50%;
+    height: 100%;
+}
+
+.pokedex > img {
+    width: 90%;
+    height: 90%;
+}
+
+.contPokedex {
+    width: 50%;
+    height: 100%;
+    background: url('../image/circle.svg') right / contain no-repeat;
+    flex-direction: column;
+    gap: 20px;
+    align-items: baseline !important;
+}
+
+.contPokedex > h1 {
+    width: 90%;
+    height: auto;
+    color: #DC0A2D;
+    font-size: 1.6em;
+}
+
+.contPokedex > p {
+    color: var(--branco);
+    width: 90%;
+    height: auto;
+}
+
+.contPokedex > button {
+    width: 25%;
+    background-color: #DC0A2D;
+    height: 6vh;
+    border-radius: 20px;
+    cursor: pointer;
+    border:none;
+    color: var(--branco);
+    font-size: 1em;
+}
+
+.gamesPokeMobile {
+    display:none;
+}
+
+footer {
+    margin-top: 0px;
+    background: url('../image/backFooter.svg') center / cover no-repeat !important;
+}
+
+.logoFooter {
+    background: url('../image/titleFooter.svg') bottom / contain no-repeat !important;
+}
+
+.logoFooter > h1 > b {
+    color: #DC0A2D;
+}
+
+::-webkit-scrollbar-thumb {
+    background:#DC0A2D;;
+    border-radius: 10px;
+  }
+  

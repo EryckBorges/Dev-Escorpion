@@ -74,7 +74,6 @@ const porcentagem =  {
     notPorcentoGithub: '20%',
 }
 
-
 //Linguagens
 
 const eua = {
@@ -171,6 +170,7 @@ const eua = {
   titleSolo: "Solo Leveling RPG Generator",
   titleRelogio: "Clocks and Stopwatch",
   titleGenshin: "Genshin Impact Divination",
+  titlePokemon: "Pokedex and Games",
   toastAlertDesenvolvi: "In Development",
   btnAllProject: "See all projects",
   allConhecimento: "of my knowledge",
@@ -274,6 +274,7 @@ const brasil = {
   contact: "Fale comigo e vamos criar algo incrível juntos!",
   titleSolo: "Gerador RPG Solo Leveling",
   titleRelogio: "Relógios e Cronômetro",
+  titlePokemon: "Pokedex e Jogos",
   titleGenshin: "Adivinhação de Genshin Impact",
   toastAlertDesenvolvi: "Em Desenvolvimento",
   btnAllProject: "Veja todos os projetos",
@@ -376,6 +377,7 @@ const spain = {
   titleSolo: "Generador RPG Solo Leveling",
   titleRelogio: "Relojes y Cronómetro",
   titleGenshin: "Adivinación de Genshin Impact",
+  titlePokemon: "Pokedex y Juegos",
   toastAlertDesenvolvi: "En Desarrollo",
   btnAllProject: "Ver todos los proyectos",
   allConhecimento: "de mi conocimiento",
@@ -476,6 +478,7 @@ const franca = {
   contact: "Parlez-moi et créons quelque chose d'incroyable ensemble !",
   titleSolo: "Générateur RPG Solo Leveling",
   titleRelogio: "Horloges et Chronomètre",
+  titlePokemon: "Pokedex et Jeux",
   titleGenshin: "Divination de Genshin Impact",
   toastAlertDesenvolvi: "En Développement",
   btnAllProject: "Voir tous les projets",
@@ -578,6 +581,7 @@ const china = {
   titleSolo: "Solo Leveling RPG 生成器",
   titleRelogio: "时钟和计时器",
   titleGenshin: "原神占卜",
+  titlePokemon: "宝可梦图鉴与游戏",
   toastAlertDesenvolvi: "开发中",
   btnAllProject: "查看所有项目",
   allConhecimento: "我的知识",
@@ -604,6 +608,7 @@ const elementos = {
   titleRelogio: document.querySelector(".relogio p"),
   titleSolo: document.querySelector(".sololeveling p"),
   titleGenshin: document.querySelector(".genshin p"),
+  titlePokemon: document.querySelector(".pokemon p"),
   toastAlertDesenvolvi: document.querySelector(".textToast"),
   btnAllProject: document.querySelector(".btnAllProject"),
   allConhecimento: document.querySelector('.conhecimento'),
@@ -1273,6 +1278,7 @@ const ingles = () => {
   elementos.titleSolo.innerHTML = eua.titleSolo;
   elementos.titleRelogio.innerHTML = eua.titleRelogio;
   elementos.titleGenshin.innerHTML = eua.titleGenshin;
+  elementos.titlePokemon.innerHTML = eua.titlePokemon;
   elementos.toastAlertDesenvolvi.innerHTML = eua.toastAlertDesenvolvi;
   elementos.btnAllProject.innerHTML = eua.btnAllProject;
   elementos.yourNumber.innerHTML = eua.yourNumber;
@@ -1404,6 +1410,7 @@ const portugues = () => {
   elementos.titleSolo.innerHTML = brasil.titleSolo;
   elementos.titleRelogio.innerHTML = brasil.titleRelogio;
   elementos.titleGenshin.innerHTML = brasil.titleGenshin;
+  elementos.titlePokemon.innerHTML = brasil.titlePokemon;
   elementos.toastAlertDesenvolvi.innerHTML = brasil.toastAlertDesenvolvi;
   elementos.btnAllProject.innerHTML = brasil.btnAllProject;
   elementos.yourNumber.innerHTML = brasil.yourNumber;
@@ -1533,6 +1540,7 @@ const espanha = () => {
   elementos.titleSolo.innerHTML = spain.titleSolo;
   elementos.titleRelogio.innerHTML = spain.titleRelogio;
   elementos.titleGenshin.innerHTML = spain.titleGenshin;
+  elementos.titlePokemon.innerHTML = spain.titlePokemon;
   elementos.toastAlertDesenvolvi.innerHTML = spain.toastAlertDesenvolvi;
   elementos.btnAllProject.innerHTML = spain.btnAllProject;
   elementos.yourNumber.innerHTML = spain.yourNumber;
@@ -1663,6 +1671,7 @@ const frances = () => {
   elementos.titleSolo.innerHTML = franca.titleSolo;
   elementos.titleRelogio.innerHTML = franca.titleRelogio;
   elementos.titleGenshin.innerHTML = franca.titleGenshin;
+  elementos.titlePokemon.innerHTML = franca.titlePokemon;
   elementos.toastAlertDesenvolvi.innerHTML = franca.toastAlertDesenvolvi;
   elementos.btnAllProject.innerHTML = franca.btnAllProject;
   elementos.yourNumber.innerHTML = franca.yourNumber;
@@ -1792,6 +1801,7 @@ const chines = () => {
   elementos.titleSolo.innerHTML = china.titleSolo;
   elementos.titleRelogio.innerHTML = china.titleRelogio;
   elementos.titleGenshin.innerHTML = china.titleGenshin;
+  elementos.titlePokemon.innerHTML = china.titlePokemon;
   elementos.toastAlertDesenvolvi.innerHTML = china.toastAlertDesenvolvi;
   elementos.btnAllProject.innerHTML = china.btnAllProject;
   elementos.yourNumber.innerHTML = china.yourNumber;
@@ -2057,6 +2067,12 @@ const relogio = document.querySelector(".relogio");
 
 relogio.addEventListener("click", () => {
   window.location.href = "https://eryckborges.github.io/Dev-Escorpion/projects/relogio/";
+});
+
+const pokemon = document.querySelector(".pokemon");
+
+pokemon.addEventListener("click", () => {
+  window.location.href = "https://eryckborges.github.io/Dev-Escorpion/projects/pokemon/";
 });
 
 let toast = document.querySelector(".toast");
