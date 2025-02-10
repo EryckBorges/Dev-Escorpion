@@ -67,8 +67,8 @@ descCristal: 'In Pokémon™ Crystal for the Game Boy Color, a new era of advent
 descGold: 'In Pokémon™ Gold for the Game Boy Color, embark on an epic journey through the Johto region! Capture new Pokémon, face challenging Gym Leaders, and unravel the mysteries behind the legendary Ho-Oh and Lugia. Venture through vibrant routes and cities, explore the famous Bellsprout Tower, and battle Team Rocket. With enhanced graphics and an engaging gaming experience, Pokémon Gold takes you on an unforgettable journey full of discoveries and exciting battles!',
 descYellow: 'In Pokémon™ Yellow for the Game Boy, the adventure takes a new perspective! Follow Pikachu as your faithful companion on its journey, who refuses to stay in its Poké Ball, and explore the Kanto region in search of becoming the greatest trainer of all. With a story closer to the anime, face challenging Gym Leaders, battle Team Rocket, and capture legendary Pokémon like Zapdos, Moltres, and Articuno. Pokémon Yellow brings a charming and unforgettable experience for fans of the series!',
 descBlue: 'In Pokémon™ Blue for the Game Boy, begin your journey in the classic Kanto region! Capture, train, and battle with over 150 Pokémon while facing Gym Leaders and challenging the Elite Four. Battle Team Rocket and do everything you can to become the Pokémon League Champion. With groundbreaking graphics for its time and an engaging gaming experience, Pokémon Blue offers a unique and challenging adventure for all fans of the series!',
-descRed: 'In Pokémon™ Red for the Game Boy, the classic adventure begins in the Kanto region! Capture, train, and battle with a wide range of Pokémon while facing Gym Leaders and battling Team Rocket. Face powerful trainers and aim to become the Pokémon League Champion. With captivating gameplay and groundbreaking graphics for its time, Pokémon Red is an epic journey that defined the series and captivated millions of fans worldwide!'
-
+descRed: 'In Pokémon™ Red for the Game Boy, the classic adventure begins in the Kanto region! Capture, train, and battle with a wide range of Pokémon while facing Gym Leaders and battling Team Rocket. Face powerful trainers and aim to become the Pokémon League Champion. With captivating gameplay and groundbreaking graphics for its time, Pokémon Red is an epic journey that defined the series and captivated millions of fans worldwide!',
+toastAlertDesenvolvi: "In Development",
 }
 
 const brasil = {
@@ -104,7 +104,8 @@ const brasil = {
   descGold: 'Em Pokémon™ Gold para o Game Boy Color, embarque em uma jornada épica pela região de Johto! Capture novos Pokémon, enfrente desafiantes Líderes de Ginásio e desvende os mistérios por trás dos lendários Ho-Oh e Lugia. Aventure-se por rotas e cidades vibrantes, explore a famosa Torre Bellsprout e lute contra a Equipe Rocket. Com gráficos aprimorados e uma experiência de jogo envolvente, Pokémon Gold leva você a uma jornada inesquecível cheia de descobertas e batalhas emocionantes!',
   descYellow: 'Em Pokémon™ Yellow para o Game Boy, a aventura ganha uma nova perspectiva! Acompanhe Pikachu em sua jornada como seu fiel companheiro, que se recusa a ficar dentro de sua Poké Ball, e explore a região de Kanto em busca de se tornar o maior treinador de todos. Com uma história mais próxima do anime, enfrente os desafiantes Líderes de Ginásio, lute contra a Equipe Rocket e capture os lendários Pokémon como Zapdos, Moltres e Articuno. Pokémon Yellow traz uma experiência encantadora e inesquecível para fãs da série!',
   descBlue: 'Em Pokémon™ Blue para o Game Boy, comece sua jornada na clássica região de Kanto! Capture, treine e batalhe com mais de 150 Pokémon enquanto enfrenta os Líderes de Ginásio e desafia a Elite dos Quatro. Enfrente a Equipe Rocket e faça de tudo para se tornar o Campeão da Liga Pokémon. Com gráficos inovadores para a época e uma jogabilidade envolvente, Pokémon Blue traz uma experiência única e cheia de desafios para todos os fãs da série!',
-  descRed: 'Em Pokémon™ Red para o Game Boy, a aventura clássica começa na região de Kanto! Capture, treine e batalhe com uma vasta gama de Pokémon enquanto enfrenta os Líderes de Ginásio e desafia a Equipe Rocket. Enfrente poderosos treinadores e busque se tornar o Campeão da Liga Pokémon. Com uma jogabilidade cativante e gráficos pioneiros para a época, Pokémon Red é uma jornada épica que definiu a série e cativou milhões de fãs ao redor do mundo!'
+  descRed: 'Em Pokémon™ Red para o Game Boy, a aventura clássica começa na região de Kanto! Capture, treine e batalhe com uma vasta gama de Pokémon enquanto enfrenta os Líderes de Ginásio e desafia a Equipe Rocket. Enfrente poderosos treinadores e busque se tornar o Campeão da Liga Pokémon. Com uma jogabilidade cativante e gráficos pioneiros para a época, Pokémon Red é uma jornada épica que definiu a série e cativou milhões de fãs ao redor do mundo!', 
+  toastAlertDesenvolvi: "Em Desenvolvimento",
 }
 
 const spain = {
@@ -140,8 +141,8 @@ descCristal: 'En Pokémon™ Crystal para Game Boy Color, comienza una nueva era
 descGold: 'En Pokémon™ Gold para Game Boy Color, emprende un viaje épico a través de la región de Johto. Captura nuevos Pokémon, enfrenta desafiantes Líderes de Gimnasio y desvela los secretos detrás de los legendarios Ho-Oh y Lugia. Viaja por rutas y ciudades vibrantes, explora la famosa Bellsprout Tower y enfrenta al Team Rocket. Con gráficos mejorados y una experiencia de juego cautivadora, Pokémon Gold te lleva a un viaje inolvidable lleno de descubrimientos y batallas emocionantes.',
 descYellow: 'En Pokémon™ Yellow para Game Boy, ¡la aventura toma una nueva perspectiva! Sigue a Pikachu como tu fiel compañero en su viaje, quien se niega a permanecer dentro de su Poké Ball, y explora la región de Kanto en busca de convertirte en el mejor entrenador de todos. Con una historia más cercana al anime, enfréntate a desafiantes Líderes de Gimnasio, combate contra el Team Rocket y captura Pokémon legendarios como Zapdos, Moltres y Articuno. Pokémon Yellow trae una experiencia encantadora e inolvidable para los fanáticos de la serie.',
 descBlue: 'En Pokémon™ Blue para Game Boy, comienza tu viaje en la clásica región de Kanto. Captura, entrena y combate con más de 150 Pokémon mientras enfrentas a los Líderes de Gimnasio y desafías a la Elite Four. Combate contra el Team Rocket y haz todo lo posible por convertirte en el Campeón de la Liga Pokémon. Con gráficos innovadores para su época y una experiencia de juego cautivadora, Pokémon Blue ofrece una aventura única y desafiante para todos los fanáticos de la serie.',
-descRed: 'En Pokémon™ Red para Game Boy, ¡comienza la aventura clásica en la región de Kanto! Captura, entrena y combate con una amplia gama de Pokémon mientras enfrentas a los Líderes de Gimnasio y combates contra el Team Rocket. Enfréntate a entrenadores poderosos y aspira a convertirte en el Campeón de la Liga Pokémon. Con jugabilidad cautivadora y gráficos innovadores para su época, Pokémon Red es un viaje épico que definió la serie y cautivó a millones de fanáticos en todo el mundo.'
-
+descRed: 'En Pokémon™ Red para Game Boy, ¡comienza la aventura clásica en la región de Kanto! Captura, entrena y combate con una amplia gama de Pokémon mientras enfrentas a los Líderes de Gimnasio y combates contra el Team Rocket. Enfréntate a entrenadores poderosos y aspira a convertirte en el Campeón de la Liga Pokémon. Con jugabilidad cautivadora y gráficos innovadores para su época, Pokémon Red es un viaje épico que definió la serie y cautivó a millones de fanáticos en todo el mundo.',
+toastAlertDesenvolvi: "En Desarrollo",
 }
 
 const franca = {
@@ -177,7 +178,8 @@ descCristal: 'Dans Pokémon™ Crystal pour Game Boy Color, commencez une nouvel
 descGold: 'Dans Pokémon™ Gold pour Game Boy Color, embarquez pour un voyage épique à travers la région de Johto. Capturez de nouveaux Pokémon, affrontez des leaders de gymnase redoutables et découvrez les secrets des légendaires Ho-Oh et Lugia. Voyagez à travers des routes et des villes vibrantes, explorez la fameuse Bellsprout Tower et combattez le Team Rocket. Avec des graphismes améliorés et une expérience captivante, Pokémon Gold vous emmène dans un voyage inoubliable rempli de découvertes et de combats excitants.',
 descYellow: 'Dans Pokémon™ Yellow pour Game Boy, l’aventure prend une nouvelle perspective ! Suivez Pikachu comme compagnon fidèle dans son voyage, qui refuse de rester dans sa Poké Ball, et explorez la région de Kanto pour devenir le meilleur dresseur de tous les temps. Avec une histoire plus proche de l’anime, affrontez des leaders de gymnase difficiles, combattez le Team Rocket et capturez des Pokémon légendaires comme Zapdos, Moltres et Articuno. Pokémon Yellow offre une expérience charmante et inoubliable pour les fans de la série.',
 descBlue: 'Dans Pokémon™ Blue pour Game Boy, commencez votre voyage dans la classique région de Kanto. Capturez, entraînez et combattez pour devenir le meilleur dresseur Pokémon. Défiez les leaders de gymnase, affrontez le redoutable Team Rocket et capturez les légendaires Mewtwo et Mew. Ce jeu est le point de départ d’une aventure épique pleine de souvenirs et de défis pour les amateurs de Pokémon.',
-descRed: 'Dans Pokémon™ Red pour Game Boy, commencez votre aventure dans la région classique de Kanto. Capturez, entraînez et combattez pour devenir le meilleur dresseur Pokémon. Défiez les leaders de gymnase, affrontez le redoutable Team Rocket et capturez les légendaires Mewtwo et Mew. Ce jeu est le point de départ d’une aventure épique pleine de souvenirs et de défis pour les amateurs de Pokémon.'
+descRed: 'Dans Pokémon™ Red pour Game Boy, commencez votre aventure dans la région classique de Kanto. Capturez, entraînez et combattez pour devenir le meilleur dresseur Pokémon. Défiez les leaders de gymnase, affrontez le redoutable Team Rocket et capturez les légendaires Mewtwo et Mew. Ce jeu est le point de départ d’une aventure épique pleine de souvenirs et de défis pour les amateurs de Pokémon.',
+toastAlertDesenvolvi: "En Développement",
 
 }
 
@@ -215,7 +217,8 @@ descCristal: '在《宝可梦 Crystal》中，体验全新的冒险！通过第�
 descGold: '在《宝可梦 Gold》中，开启金色之旅！挑战关都地区的道馆，捕捉全新宝可梦并阻止火箭队的阴谋，揭开传奇宝可梦 Ho-Oh 与 Lugia 的秘密。',
 descYellow: '在《宝可梦 Yellow》中，与皮卡丘一起踏上关东地区的冒险！随着皮卡丘的陪伴，挑战道馆并击败火箭队。捕捉传奇宝可梦 Zapdos、Moltres 和 Articuno！',
 descBlue: '在《宝可梦 Blue》中，开始你的冒险！挑战道馆，捕捉所有宝可梦，努力成为宝可梦联盟的冠军。与火箭队作战，探索一个充满挑战的世界。',
-descRed: '在《宝可梦 Red》中，开始你的经典冒险！捕捉、训练并挑战关东地区的道馆，击败火箭队并成为宝可梦联盟的冠军！'
+descRed: '在《宝可梦 Red》中，开始你的经典冒险！捕捉、训练并挑战关东地区的道馆，击败火箭队并成为宝可梦联盟的冠军！',
+toastAlertDesenvolvi: "开发中",
 
 }
 
@@ -232,6 +235,7 @@ const elementos = {
   descPokedex: document.querySelector('.contPokedex p'),
   btnPokedex: document.querySelector('.contPokedex button'),
   textHeader: document.querySelector('.logoPokemon p'),
+  toastAlertDesenvolvi: document.querySelector(".textToast"),
 }
 
 const select = new Audio();
@@ -787,6 +791,7 @@ const ingles = () => {
     default:
       break;
   }
+  elementos.toastAlertDesenvolvi.innerHTML = eua.toastAlertDesenvolvi;
   elementos.titlePokedex.innerHTML = eua.titlePokedex;
   elementos.descPokedex.innerHTML = eua.descPokedex;
   elementos.btnPokedex.innerHTML = eua.btnPokedex;
@@ -909,6 +914,7 @@ const portugues = () => {
     default:
       break;
   }
+  elementos.toastAlertDesenvolvi.innerHTML = brasil.toastAlertDesenvolvi;
   elementos.titlePokedex.innerHTML = brasil.titlePokedex;
   elementos.descPokedex.innerHTML = brasil.descPokedex;
   elementos.btnPokedex.innerHTML = brasil.btnPokedex;
@@ -1027,6 +1033,7 @@ const espanha = () => {
     default:
       break;
 }
+elementos.toastAlertDesenvolvi.innerHTML = spain.toastAlertDesenvolvi;
   elementos.titlePokedex.innerHTML = spain.titlePokedex;
   elementos.descPokedex.innerHTML = spain.descPokedex;
   elementos.btnPokedex.innerHTML = spain.btnPokedex;
@@ -1145,6 +1152,7 @@ const frances = () => {
     default:
       break;
 }
+elementos.toastAlertDesenvolvi.innerHTML = franca.toastAlertDesenvolvi;
   elementos.titlePokedex.innerHTML = franca.titlePokedex;
   elementos.descPokedex.innerHTML = franca.descPokedex;
   elementos.btnPokedex.innerHTML = franca.btnPokedex;
@@ -1263,6 +1271,7 @@ const chines = () => {
     default:
       break;
 }
+elementos.toastAlertDesenvolvi.innerHTML = china.toastAlertDesenvolvi;
   elementos.titlePokedex.innerHTML = china.titlePokedex;
   elementos.descPokedex.innerHTML = china.descPokedex;
   elementos.btnPokedex.innerHTML = china.btnPokedex;
@@ -1340,6 +1349,53 @@ btnAudioMobile.addEventListener('click', () => {
   }
  });
 
-elementos.btnPokedex.addEventListener('click', () => {
-  window.location.href = './pokedex/'
-});
+ let toast = document.querySelector(".toast");
+ let textToast = document.querySelector(".pToast");
+ let imageToast = document.querySelector(".toast img");
+ 
+ const toastNotification = new Audio();
+ toastNotification.src = "../../global/music/toastNotification.mp3";
+ 
+ const toastFunction = () => {
+ 
+   const lang = localStorage.getItem("lang");
+ 
+   if (lang === "eu") {
+     elementos.toastAlertDesenvolvi.innerHTML = eua.toastAlertDesenvolvi;
+   } else if (lang === "es") {
+     elementos.toastAlertDesenvolvi.innerHTML = spain.toastAlertDesenvolvi;
+   } else if (lang === "fr") {
+     elementos.toastAlertDesenvolvi.innerHTML = franca.toastAlertDesenvolvi;
+   } else if (lang === "ch") {
+     elementos.toastAlertDesenvolvi.innerHTML = china.toastAlertDesenvolvi;
+   } else {
+     // Caso nenhuma linguagem esteja no localStorage, define como 'br'
+     elementos.toastAlertDesenvolvi.innerHTML = brasil.toastAlertDesenvolvi;
+   }
+ };
+ 
+ elementos.btnPokedex.addEventListener("click", () => {
+   toastNotification.play();
+   toast.style.display = "flex";
+   toast.style.opacity = "1";
+   setTimeout(() => {
+     toast.classList.add("toastOpen");
+     toast.style.animation = "openToast 1s";
+     setTimeout(() => {
+       textToast.style.display = "flex";
+       toastFunction();
+     }, 200);
+   }, 200);
+   setTimeout(() => {
+     toast.classList.remove("toastOpen");
+     toast.style.animation = "closeToast 500ms";
+     setTimeout(() => {
+       textToast.style.display = "none";
+       setTimeout(() => {
+         toast.style.opacity = "0";
+         toast.style.display = "none";
+         toast.style.animation = "none";
+       }, 500);
+     }, 200);
+   }, 5000);
+ });
