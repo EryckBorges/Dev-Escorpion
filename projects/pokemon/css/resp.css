@@ -107,3 +107,208 @@
         width: 30%;
     }
 }
+
+@media screen and (width >= 767px) and (width <= 1023px) {
+    .logoPokemon {
+        width: 90%;
+    }
+
+    .logoPokemon > img {
+        height: 20%;
+    }
+
+    .logoPokemon > p {
+        font-size: 1.4em;
+    }
+
+    .gamesPoke {
+        height: 80vh;
+    }
+
+    .gamesPoke > video {
+        object-fit: cover;
+    }
+
+    .contPokemon {
+        width: 50%;
+    }   
+    
+    .contPokemon > img {
+        height: 20%;
+    }
+
+    .nintendo {
+        width: 80%;
+    }
+
+    .divPokedex {
+        height:60vh;
+        width: 100%;
+        background: url('../image/pokedex.svg') center / cover no-repeat;
+    }
+
+    .contPokedex > h1 {
+        color: var(--branco);
+    }
+
+    .contPokedex > button {
+        width: 45%;
+        font-size: 1.4em;
+        box-shadow: 0px 0px 10px 1px var(--preto);
+    }
+    
+}
+
+@media screen and (height <= 500px) {
+    .logoPokemon {
+        width: 90%;
+        left: 2vw;
+    }
+
+    .logoPokemon > img {
+        width: 30%;
+        height: auto;
+    }
+
+    .logoPokemon > p {
+        font-size: 1em;
+    }
+
+    .gamesPoke {
+        height: 250vh;
+    }
+
+    .divPokedex {
+        height:150vh;
+    }
+
+    .contPokedex > button {
+        width: 50%;
+        height: 15vh;  
+    }
+    
+}
+
+@media screen and (width <= 350px) {
+    .logoPokemon {
+        width: 90%;
+        left: 0vw !important;
+    }
+
+    .logoPokemon > p {
+        font-size: 1em;
+    }
+
+    .gamesPoke {
+        display: none;
+    }
+
+    .gamesPokeMobile {
+        display: flex;
+        height: 250vh;
+        flex-direction: column;
+    }
+
+    .contDescMobile, .gamesMobile {
+        height: 50%;
+        width: 100%;
+    }
+
+    .gamesMobile {
+        position: relative;
+    }
+
+    .gamesMobile > video {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        object-fit: cover;
+    }
+    
+    .gamesMobile > .games {
+        width: 100%;
+        height: 40%;
+    }
+
+    .nintendo {
+        height: 10vh !important;
+    }
+
+    .btnAudioMobile {
+        position: absolute;
+        top: 2vh;
+        right: 2vw;
+        width: 80px;
+        height: 80px;
+        background: rgba(0, 0, 0, 0.555);
+        z-index: 5;
+        border:none;
+        border-radius: 50%;
+        color: var(--branco);
+        font-size: 1.2em;
+    }
+
+    .gamesPokeMobile > .contDescMobile {
+        flex-direction: column;
+        width: 90%;
+        align-items: baseline !important;
+        gap: 20px;
+    }
+
+    .gamesPokeMobile > .contDescMobile > img {
+        height: auto;
+        width: 80%;
+    }
+
+    .contDescMobile > p {
+        font-size: 1em;
+        color: var(--branco);      
+    }
+
+    .gamesPokeMobile > .contDescMobile > button {
+        width: 80%;
+        height: 8vh;
+    }
+
+    .logoPokemon {
+        width: 90%;
+        padding-inline: 20px;
+        height: 60vh;
+        gap: 30px;
+    }
+
+    .logoPokemon > img {
+        height: 20%;
+    }
+
+    .divPokedex {
+        height: 150vh;
+        flex-direction: column;
+    }
+
+    .pokedex {
+        width: 100%;
+        height: 50%;
+    }
+
+    .contPokedex {
+        width: 100%;
+        height: 50%;
+    }
+
+    .contPokedex > h1 {
+        width: 80%;
+        margin-left: 20px;
+        font-size: 1.6em;
+    }
+    
+    .contPokedex > p {
+        margin-left: 20px;
+        width: 80%;
+    }
+
+    .contPokedex > button {
+        width: 30%;
+    }
+}
