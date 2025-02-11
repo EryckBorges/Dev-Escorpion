@@ -10,7 +10,7 @@
     }
     
     .sobreMim {
-        height: 60vh;
+        height: 110vh;
         flex-direction: column;
     }
 
@@ -26,6 +26,7 @@
     .cont > p {
         height:auto;
         font-size: 1em;
+        margin-bottom: 40px;
     }
     
     .minhaFoto {
@@ -320,7 +321,7 @@
     }
 
     .sobreMim {
-        height: 35vh;
+        height: 65vh;
     }
 
     .cont {
@@ -619,7 +620,7 @@
 
 @media screen and (height <= 500px) {
     .sobreMim {
-        height: 100vh;
+        height: 180vh;
     }
 
     .cont > h1 {
@@ -711,7 +712,7 @@
     }
     
     .sobreMim {
-        height: 80vh;
+        height: auto;
         flex-direction: column;
     }
 

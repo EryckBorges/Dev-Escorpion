@@ -85,7 +85,7 @@ const eua = {
   sobre: "About",
   sobreMim: "About Me",
   contMim:
-    "Hello, my name is Éryck Borges da Silva Dionizio, I am Brazilian and completed high school and a degree in IT at UNESP. I have a huge passion for programming and love exploring new technologies and creative solutions. I am always looking to improve my knowledge and I intend to continue my studies at FIAP, focusing on my professional development. Thank you for visiting my portfolio, it was a pleasure meeting you! 😊",
+    "Hello, my name is Éryck Borges da Silva Dionizio, I am 17 years old, graduated in Technical Computer Science from UNESP, and I am a Front-End Developer and Web Designer with experience in HTML, CSS, JavaScript, Git, GitHub, creating layouts and websites, basic maintenance of notebooks and PCs, as well as using Figma and Canva to develop modern and intuitive designs, always focusing on usability and performance. Passionate about technology, I am constantly seeking to learn and evolve.",
   meusProjetos: "My Projects and Services",
   visualizar: "View",
   ferramentas: "Tools and Technologies I Use",
@@ -175,7 +175,9 @@ const eua = {
   btnAllProject: "See all projects",
   allConhecimento: "of my knowledge",
   notConhecimento: "of knowledge <br> that I do not possess",
-yourNumber: 'Your number, your Multiplication Table'
+yourNumber: 'Your number, your Multiplication Table',
+servicePrest: 'Discover the Services I Offer',
+servicePrestText: "I offer computer and laptop repair and maintenance services, as well as PC assembly and upgrades, helping you choose the best parts for performance and cost-effectiveness. I also work in web application development, creating modern and responsive websites using HTML, CSS, JavaScript, Git, GitHub, Figma, and Canva. Get in touch and take your technology to the next level! Let's Code!",
 };
 
 const brasil = {
@@ -187,7 +189,7 @@ const brasil = {
   sobre: "Sobre",
   sobreMim: "Sobre Mim",
   contMim:
-    "Olá, meu nome é Éryck Borges da Silva Dionizio, sou brasileiro e concluí o ensino médio e o técnico em Informática pela UNESP. Tenho uma paixão enorme por programação e amo explorar novas tecnologias e soluções criativas. Estou sempre em busca de aprimorar meus conhecimentos e pretendo continuar meus estudos na FIAP, focando no meu desenvolvimento profissional. Obrigado por visitar meu portfólio, foi um prazer lhe conhecer! 😊",
+    "Olá, meu nome é Éryck Borges da Silva Dionizio, tenho 17 anos, sou formado em Técnico em Informática pela UNESP e sou Front-End Developer e Web Designer com experiência em HTML, CSS, JavaScript, Git, GitHub, criação de layouts e sites, manutenção básica de notebooks e PCs, além de utilizar Figma e Canva para desenvolver designs modernos e intuitivos, sempre focando em usabilidade e performance. Apaixonado por tecnologia, estou sempre em busca de aprender e evoluir.",
   meusProjetos: "Meus Projetos e Serviços",
   visualizar: "Visualizar",
   ferramentas: "Ferramentas e Tecnologias que Utilizo",
@@ -280,7 +282,9 @@ const brasil = {
   btnAllProject: "Veja todos os projetos",
   allConhecimento: 'de meu conhecimento',
   notConhecimento: 'de conhecimento <br> que não possuo',
-  yourNumber: 'Seu número, sua Tabuada'
+  yourNumber: 'Seu número, sua Tabuada',
+  servicePrest: 'Conheça os Serviços que Ofereço',
+servicePrestText: "Ofereço serviços de conserto e manutenção de computadores e notebooks, além de montagem e upgrade de PCs, ajudando a escolher as melhores peças para desempenho e custo-benefício. Também atuo no desenvolvimento de aplicações web, criando sites modernos e responsivos com HTML, CSS, JavaScript, Git, GitHub, Figma e Canva. Entre em contato e leve sua tecnologia para o próximo nível! Let's Code!",
 };
 
 const spain = {
@@ -292,7 +296,7 @@ const spain = {
   sobre: "En",
   sobreMim: "Acerca de Mí",
   contMim:
-    "Hola, mi nombre es Éryck Borges da Silva Dionizio, soy brasileño y completé la secundaria y la licenciatura en informática por la UNESP. Tengo una gran pasión por la programación y me encanta explorar nuevas tecnologías y soluciones creativas. Siempre estoy buscando mejorar mis conocimientos y pretendo continuar mis estudios en la FIAP, enfocándome en mi desarrollo profesional. Gracias por visitar mi portafolio, ¡fue un placer conocerte! 😊",
+    "Hola, mi nombre es Éryck Borges da Silva Dionizio, tengo 17 años, soy graduado en Técnico en Informática por la UNESP y soy Front-End Developer y Web Designer con experiencia en HTML, CSS, JavaScript, Git, GitHub, creación de layouts y sitios web, mantenimiento básico de notebooks y PCs, además de utilizar Figma y Canva para desarrollar diseños modernos e intuitivos, siempre enfocándome en la usabilidad y el rendimiento. Apasionado por la tecnología, siempre estoy buscando aprender y evolucionar.",
   meusProjetos: "Mis Proyectos y Servicios",
   visualizar: "Vista",
   ferramentas: "Herramientas y Tecnologías que uso",
@@ -382,7 +386,9 @@ const spain = {
   btnAllProject: "Ver todos los proyectos",
   allConhecimento: "de mi conocimiento",
 notConhecimento: "de conocimiento <br> que no poseo",
-yourNumber: 'Tu número, tu Tabla de Multiplicar'
+yourNumber: 'Tu número, tu Tabla de Multiplicar',
+servicePrest: 'Descubre los Servicios que Ofrezco',
+servicePrestText: "Ofrezco servicios de reparación y mantenimiento de computadoras y laptops, así como ensamblaje y actualización de PC, ayudándote a elegir las mejores piezas para rendimiento y costo-beneficio. También me dedico al desarrollo de aplicaciones web, creando sitios modernos y responsivos con HTML, CSS, JavaScript, Git, GitHub, Figma y Canva. ¡Ponte en contacto y lleva tu tecnología al siguiente nivel! ¡Let's Code!",
 };
 
 const franca = {
@@ -394,7 +400,7 @@ const franca = {
   sobre: "Sur",
   sobreMim: "Sur Moi",
   contMim:
-    "Bonjour, je m'appelle Éryck Borges da Silva Dionizio, je suis brésilien et j'ai terminé mes études secondaires et un diplôme en informatique à l'UNESP. J'ai une grande passion pour la programmation et j'aime explorer les nouvelles technologies et les solutions créatives. Je cherche toujours à améliorer mes connaissances et je compte poursuivre mes études à la FIAP en me concentrant sur mon évolution professionnelle. Merci d'avoir visité mon portfolio, ce fut un plaisir de vous rencontrer ! 😊",
+    "Bonjour, je m'appelle Éryck Borges da Silva Dionizio, j'ai 17 ans, je suis diplômé en Technicien en Informatique de l'UNESP et je suis Front-End Developer et Web Designer avec de l'expérience en HTML, CSS, JavaScript, Git, GitHub, création de layouts et de sites web, maintenance de base de notebooks et de PC, ainsi qu'en utilisant Figma et Canva pour développer des designs modernes et intuitifs, toujours en me concentrant sur l'ergonomie et la performance. Passionné par la technologie, je suis constamment à la recherche d'apprendre et d'évoluer.",
   meusProjetos: "Mes Projets et Services",
   visualizar: "Voir",
   ferramentas: "Outils et Technologies que j'utilise",
@@ -484,7 +490,9 @@ const franca = {
   btnAllProject: "Voir tous les projets",
   allConhecimento: "de ma connaissance",
 notConhecimento: "de connaissance <br> que je ne possède pas",
-yourNumber: 'Votre numéro, votre Table de Multiplication'
+yourNumber: 'Votre numéro, votre Table de Multiplication',
+servicePrest: 'Découvrez les services que j’offre',
+servicePrestText: "J'offre des services de réparation et de maintenance d'ordinateurs et d'ordinateurs portables, ainsi que l'assemblage et la mise à niveau de PC, en vous aidant à choisir les meilleures pièces pour la performance et le rapport qualité-prix. Je travaille également dans le développement d'applications web, en créant des sites modernes et responsifs avec HTML, CSS, JavaScript, Git, GitHub, Figma et Canva. Contactez-moi et faites passer votre technologie au niveau supérieur ! Let's Code ",
 };
 
 const china = {
@@ -496,7 +504,7 @@ const china = {
   sobre: "在",
   sobreMim: "关于我",
   contMim:
-    "您好，我叫 Éryck Borges da Silva Dionizio，我是巴西人，完成了高中学业，并在 UNESP 获得了 IT 学位。我对编程充满热情，喜欢探索新技术和创造性的解决方案。我一直在寻求提高我的知识，我打算继续在 FIAP 学习，专注于我的专业发展。感谢您访问我的作品集，很高兴认识您！ 😊",
+    "你好，我叫Éryck Borges da Silva Dionizio，今年17岁，毕业于UNESP的计算机技术专业，我是前端开发者和Web设计师，具有HTML、CSS、JavaScript、Git、GitHub经验，擅长布局和网站创建、笔记本电脑和PC的基础维护，并使用Figma和Canva开发现代化且直观的设计，始终关注可用性和性能。我热爱技术，始终在寻求学习和进步。",
   meusProjetos: "我的项目和服务",
   visualizar: "看法",
   ferramentas: "我使用的工具和技术",
@@ -587,6 +595,8 @@ const china = {
   allConhecimento: "我的知识",
 notConhecimento: "我不具备的知识",
 yourNumber: '你的数字，你的乘法表',
+servicePrest: '发现我提供的服务',
+servicePrestText: "我提供电脑和笔记本电脑的维修和维护服务，以及PC组装和升级，帮助您选择最佳配件，以提高性能并优化成本。我还从事Web应用开发，使用HTML、CSS、JavaScript、Git、GitHub、Figma和Canva创建现代化、响应式的网站。欢迎联系我们，让您的技术更上一层楼！Let's Code!",
 };
 
 const elementos = {
@@ -614,6 +624,8 @@ const elementos = {
   allConhecimento: document.querySelector('.conhecimento'),
   notConhecimento: document.querySelector('.naoConhecimento'),
   yourNumber: document.querySelector('.tabuada p'),
+  servicePrest: document.querySelector('.servicePrest'),
+servicePrestText: document.querySelector('.servicePrestText'),
 };
 
 //Icones para clique
@@ -1282,6 +1294,8 @@ const ingles = () => {
   elementos.toastAlertDesenvolvi.innerHTML = eua.toastAlertDesenvolvi;
   elementos.btnAllProject.innerHTML = eua.btnAllProject;
   elementos.yourNumber.innerHTML = eua.yourNumber;
+  elementos.servicePrest.innerHTML = eua.servicePrest;
+  elementos.servicePrestText.innerHTML = eua.servicePrestText;
   verificaCont();
  
   titleButtonTranslate.forEach((btnTranslate) => {
@@ -1414,6 +1428,8 @@ const portugues = () => {
   elementos.toastAlertDesenvolvi.innerHTML = brasil.toastAlertDesenvolvi;
   elementos.btnAllProject.innerHTML = brasil.btnAllProject;
   elementos.yourNumber.innerHTML = brasil.yourNumber;
+  elementos.servicePrest.innerHTML = brasil.servicePrest;
+  elementos.servicePrestText.innerHTML = brasil.servicePrestText;
   verificaCont();
   titleButtonTranslate.forEach((btnTranslate) => {
     btnTranslate.setAttribute("title", "Traduzir para o Português");
@@ -1544,6 +1560,8 @@ const espanha = () => {
   elementos.toastAlertDesenvolvi.innerHTML = spain.toastAlertDesenvolvi;
   elementos.btnAllProject.innerHTML = spain.btnAllProject;
   elementos.yourNumber.innerHTML = spain.yourNumber;
+  elementos.servicePrest.innerHTML = spain.servicePrest;
+  elementos.servicePrestText.innerHTML = spain.servicePrestText;
   verificaCont();
   titleButtonTranslate.forEach((btnTranslate) => {
     btnTranslate.setAttribute("title", "Traducir al español");
@@ -1675,6 +1693,8 @@ const frances = () => {
   elementos.toastAlertDesenvolvi.innerHTML = franca.toastAlertDesenvolvi;
   elementos.btnAllProject.innerHTML = franca.btnAllProject;
   elementos.yourNumber.innerHTML = franca.yourNumber;
+  elementos.servicePrest.innerHTML = franca.servicePrest;
+  elementos.servicePrestText.innerHTML = franca.servicePrestText;
   verificaCont();
   titleButtonTranslate.forEach((btnTranslate) => {
     btnTranslate.setAttribute("title", "Traduire en français");
@@ -1805,6 +1825,8 @@ const chines = () => {
   elementos.toastAlertDesenvolvi.innerHTML = china.toastAlertDesenvolvi;
   elementos.btnAllProject.innerHTML = china.btnAllProject;
   elementos.yourNumber.innerHTML = china.yourNumber;
+  elementos.servicePrest.innerHTML = china.servicePrest;
+  elementos.servicePrestText.innerHTML = china.servicePrestText;
   verificaCont();
   titleButtonTranslate.forEach((btnTranslate) => {
     btnTranslate.setAttribute("title", "翻译成中文");
