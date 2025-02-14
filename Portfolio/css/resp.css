@@ -33,20 +33,22 @@
         display: none;
     }
 
-    .meusProjetos {
+    .meusProjetos, .clientServices {
         height: 70vh;
     }
 
-    .titleMyProject {
+   
+
+    .titleMyProject, .titleMyProjectServices {
         font-size: 1.6em;
         position: relative;
     }
 
-    .titleMyProject::after, .titleMyProject::before {
+    .titleMyProject::after, .titleMyProject::before, .titleMyProjectServices::after, .titleMyProjectServices::before {
         width:150px;
     }
 
-    .project > p {
+    .project > p, .service > p {
         font-size: 1.4em;
       }    
     
@@ -350,7 +352,7 @@
     height: 90%;
   }
 
-  .project > p {
+  .project > p,  .service > p {
     font-size: 2em;
   }
 
@@ -632,7 +634,7 @@
         font-size: 1.2em;
     }
 
-    .meusProjetos {
+    .meusProjetos, .clientServices {
         height: 260vh;
     }
 
@@ -733,21 +735,17 @@
         display: none;
     }
 
-    .meusProjetos {
-        height: 65vh;
-    }
-
-    .titleMyProject {
+    .titleMyProject, .titleMyProjectServices {
         font-size: 1.4em;
         position: relative;
     }
 
-    .titleMyProject::after, .titleMyProject::before {
+    .titleMyProject::after, .titleMyProject::before, .titleMyProjectServices::after, .titleMyProjectServices::before {
         width:150px;
         height: 5px;
     }
 
-    .project > p {
+    .project > p, .service > p{
         font-size: 1.4em;
       }    
 
@@ -759,6 +757,11 @@
     .project > img {
         width: 450px;
         height: 100%;
+    }
+
+    .service > img {
+        width: 100%;
+        height: 70%;
     }
 
     .project:hover > img {

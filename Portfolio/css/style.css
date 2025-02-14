@@ -72,7 +72,7 @@ main {
 
 /*Meus Projetos*/
 
-.meusProjetos {
+.meusProjetos, .clientServices {
     width:100%;
     height: 85vh;
     flex-direction: column;
@@ -81,7 +81,7 @@ main {
 
 }
 
-.titleMyProject {
+.titleMyProject, .titleMyProjectServices {
     width:100%;
     height:20%;
     font-size: 2em;
@@ -89,7 +89,7 @@ main {
     position: relative;
 }
 
-.titleMyProject::after {
+.titleMyProject::after, .titleMyProjectServices::after {
     content: '';
     width:400px;
     height:10px;
@@ -101,7 +101,7 @@ main {
     border-radius: 10px;
 }
 
-.titleMyProject::before {
+.titleMyProject::before, .titleMyProjectServices::before {
     content: '';
     width:400px;
     height:10px;
@@ -113,7 +113,7 @@ main {
     border-radius: 10px;
 }
 
-.swiper {
+.swiper, .swiperServices {
     flex-direction: row;
     width:100%;
     height: 100%;
@@ -122,7 +122,7 @@ main {
     user-select: none; /* Impede a seleção de texto ao arrastar */
 }
   
-  .project {
+  .project, .service {
     flex-shrink: 0;
     width: 450px;
     height: 90%;
@@ -135,7 +135,7 @@ main {
     position: relative;
   }
 
-  .project > p {
+  .project > p, .service > p {
     font-size: 1.6em;
     font-weight: bold;
     position: absolute;
@@ -145,6 +145,10 @@ main {
 
   .sololeveling > p {
     color: #614080;
+  }
+
+  .slechi > p {
+    color: #7b9bb7;
   }
 
   .relogio > p {
@@ -166,6 +170,13 @@ main {
   .project > img {
     width: 100%;
     height: 100%;
+  }
+
+  .service > img {
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
   }
 
   .project:hover {

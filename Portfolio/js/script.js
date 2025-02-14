@@ -90,7 +90,8 @@ privacity: 'Privacy',
   sobreMim: "About Me",
   contMim:
     "Hello, my name is Éryck Borges da Silva Dionizio, I am 17 years old, graduated in Technical Computer Science from UNESP, and I am a Front-End Developer and Web Designer with experience in HTML, CSS, JavaScript, Git, GitHub, creating layouts and websites, basic maintenance of notebooks and PCs, as well as using Figma and Canva to develop modern and intuitive designs, always focusing on usability and performance. Passionate about technology, I am constantly seeking to learn and evolve.",
-  meusProjetos: "My Projects and Services",
+    meusProjetos: "My Projects",
+    clientProjetos: "Client Portfolio",    
   visualizar: "View",
   ferramentas: "Tools and Technologies I Use",
   tecnologias: "Tools and Technologies in Learning and Improvement",
@@ -175,6 +176,7 @@ privacity: 'Privacy',
   titleRelogio: "Clocks and Stopwatch",
   titleGenshin: "Genshin Impact Divination",
   titlePokemon: "Pokedex and Games",
+  titleSlechi: "Ice Cream Catalog",
   toastAlertDesenvolvi: "In Development",
   btnAllProject: "See all projects",
   allConhecimento: "of my knowledge",
@@ -198,7 +200,8 @@ const brasil = {
   sobreMim: "Sobre Mim",
   contMim:
     "Olá, meu nome é Éryck Borges da Silva Dionizio, tenho 17 anos, sou formado em Técnico em Informática pela UNESP e sou Front-End Developer e Web Designer com experiência em HTML, CSS, JavaScript, Git, GitHub, criação de layouts e sites, manutenção básica de notebooks e PCs, além de utilizar Figma e Canva para desenvolver designs modernos e intuitivos, sempre focando em usabilidade e performance. Apaixonado por tecnologia, estou sempre em busca de aprender e evoluir.",
-  meusProjetos: "Meus Projetos e Serviços",
+  meusProjetos: "Meus Projetos",
+  clientProjetos: 'Portfólio de Clientes',
   visualizar: "Visualizar",
   ferramentas: "Ferramentas e Tecnologias que Utilizo",
   tecnologias: "Ferramentas e Tecnologias em Aprendizado e Aprimoramento",
@@ -286,6 +289,7 @@ const brasil = {
   titleRelogio: "Relógios e Cronômetro",
   titlePokemon: "Pokedex e Jogos",
   titleGenshin: "Adivinhação de Genshin Impact",
+  titleSlechi: "Catalogo de Sorvetes",
   toastAlertDesenvolvi: "Em Desenvolvimento",
   btnAllProject: "Veja todos os projetos",
   allConhecimento: 'de meu conhecimento',
@@ -309,7 +313,8 @@ privacity: 'Privacidad',
   sobreMim: "Acerca de Mí",
   contMim:
     "Hola, mi nombre es Éryck Borges da Silva Dionizio, tengo 17 años, soy graduado en Técnico en Informática por la UNESP y soy Front-End Developer y Web Designer con experiencia en HTML, CSS, JavaScript, Git, GitHub, creación de layouts y sitios web, mantenimiento básico de notebooks y PCs, además de utilizar Figma y Canva para desarrollar diseños modernos e intuitivos, siempre enfocándome en la usabilidad y el rendimiento. Apasionado por la tecnología, siempre estoy buscando aprender y evolucionar.",
-  meusProjetos: "Mis Proyectos y Servicios",
+    meusProjetos: "Mis Proyectos",
+    clientProjetos: "Portafolio de Clientes",    
   visualizar: "Vista",
   ferramentas: "Herramientas y Tecnologías que uso",
   tecnologias: "Herramientas y Tecnologías en el Aprendizaje y la Mejora",
@@ -394,6 +399,7 @@ privacity: 'Privacidad',
   titleRelogio: "Relojes y Cronómetro",
   titleGenshin: "Adivinación de Genshin Impact",
   titlePokemon: "Pokedex y Juegos",
+  titleSlechi: "Catálogo de Helados",
   toastAlertDesenvolvi: "En Desarrollo",
   btnAllProject: "Ver todos los proyectos",
   allConhecimento: "de mi conocimiento",
@@ -417,7 +423,8 @@ privacity: 'Confidentialité',
   sobreMim: "Sur Moi",
   contMim:
     "Bonjour, je m'appelle Éryck Borges da Silva Dionizio, j'ai 17 ans, je suis diplômé en Technicien en Informatique de l'UNESP et je suis Front-End Developer et Web Designer avec de l'expérience en HTML, CSS, JavaScript, Git, GitHub, création de layouts et de sites web, maintenance de base de notebooks et de PC, ainsi qu'en utilisant Figma et Canva pour développer des designs modernes et intuitifs, toujours en me concentrant sur l'ergonomie et la performance. Passionné par la technologie, je suis constamment à la recherche d'apprendre et d'évoluer.",
-  meusProjetos: "Mes Projets et Services",
+    meusProjetos: "Mes Projets",
+    clientProjetos: "Portefeuille de Clients",    
   visualizar: "Voir",
   ferramentas: "Outils et Technologies que j'utilise",
   tecnologias: "Outils et Technologies d'apprentissage et d'amélioration",
@@ -502,6 +509,7 @@ privacity: 'Confidentialité',
   titleRelogio: "Horloges et Chronomètre",
   titlePokemon: "Pokedex et Jeux",
   titleGenshin: "Divination de Genshin Impact",
+  titleSlechi: "Catalogue de Glaces",
   toastAlertDesenvolvi: "En Développement",
   btnAllProject: "Voir tous les projets",
   allConhecimento: "de ma connaissance",
@@ -525,7 +533,8 @@ privacity: '隐私政策',
   sobreMim: "关于我",
   contMim:
     "你好，我叫Éryck Borges da Silva Dionizio，今年17岁，毕业于UNESP的计算机技术专业，我是前端开发者和Web设计师，具有HTML、CSS、JavaScript、Git、GitHub经验，擅长布局和网站创建、笔记本电脑和PC的基础维护，并使用Figma和Canva开发现代化且直观的设计，始终关注可用性和性能。我热爱技术，始终在寻求学习和进步。 ",
-  meusProjetos: "我的项目和服务",
+    meusProjetos: "我的项目",
+    clientProjetos: "客户作品集",    
   visualizar: "看法",
   ferramentas: "我使用的工具和技术",
   tecnologias: "学习和改进的工具和技术",
@@ -609,6 +618,7 @@ privacity: '隐私政策',
   titleSolo: "Solo Leveling RPG 生成器",
   titleRelogio: "时钟和计时器",
   titleGenshin: "原神占卜",
+  titleSlechi: "冰淇淋目录",
   titlePokemon: "宝可梦图鉴与游戏",
   toastAlertDesenvolvi: "开发中",
   btnAllProject: "查看所有项目",
@@ -633,6 +643,7 @@ const elementos = {
   sobreMim: document.querySelector(".cont h1"),
   contMim: document.querySelector(".cont p"),
   meusProjetos: document.querySelector(".titleMyProject"),
+  clientProjetos: document.querySelector(".titleMyProjectServices"),
   visualizar: document.querySelectorAll(".project button a"),
   ferramentas: document.querySelector(".ferramentas h1"),
   tecnologias: document.querySelector(".estudos h1"),
@@ -643,8 +654,9 @@ const elementos = {
   titleSolo: document.querySelector(".sololeveling p"),
   titleGenshin: document.querySelector(".genshin p"),
   titlePokemon: document.querySelector(".pokemon p"),
+  titleSlechi: document.querySelector(".slechi p"),
   toastAlertDesenvolvi: document.querySelector(".textToast"),
-  btnAllProject: document.querySelector(".btnAllProject"),
+  btnAllProject: document.querySelectorAll(".btnAllProject"),
   allConhecimento: document.querySelector('.conhecimento'),
   notConhecimento: document.querySelector('.naoConhecimento'),
   yourNumber: document.querySelector('.tabuada p'),
@@ -1219,6 +1231,7 @@ const ingles = () => {
   elementos.sobreMim.innerHTML = eua.sobreMim;
   elementos.contMim.innerHTML = eua.contMim;
   elementos.meusProjetos.innerHTML = eua.meusProjetos;
+  elementos.clientProjetos.innerHTML = eua.clientProjetos;
   elementos.visualizar.innerHTML = eua.visualizar;
   elementos.visualizar.forEach((button) => {
     button.innerHTML = eua.visualizar;
@@ -1316,11 +1329,14 @@ const ingles = () => {
   }
   elementos.contact.innerHTML = eua.contact;
   elementos.titleSolo.innerHTML = eua.titleSolo;
+  elementos.titleSlechi.innerHTML = eua.titleSlechi;
   elementos.titleRelogio.innerHTML = eua.titleRelogio;
   elementos.titleGenshin.innerHTML = eua.titleGenshin;
   elementos.titlePokemon.innerHTML = eua.titlePokemon;
   elementos.toastAlertDesenvolvi.innerHTML = eua.toastAlertDesenvolvi;
-  elementos.btnAllProject.innerHTML = eua.btnAllProject;
+  elementos.btnAllProject.forEach((btnAllProjectText) => {
+    btnAllProjectText.innerHTML = eua.btnAllProject;
+  });
   elementos.yourNumber.innerHTML = eua.yourNumber;
   elementos.servicePrest.innerHTML = eua.servicePrest;
   elementos.servicePrestText.innerHTML = eua.servicePrestText;
@@ -1357,6 +1373,7 @@ const portugues = () => {
   elementos.sobreMim.innerHTML = brasil.sobreMim;
   elementos.contMim.innerHTML = brasil.contMim;
   elementos.meusProjetos.innerHTML = brasil.meusProjetos;
+  elementos.clientProjetos.innerHTML = brasil.clientProjetos;
   elementos.visualizar.innerHTML = brasil.visualizar;
   elementos.visualizar.forEach((button) => {
     button.innerHTML = brasil.visualizar;
@@ -1452,13 +1469,16 @@ const portugues = () => {
     conhecimento9.innerHTML = brasil.canva9Br;
     titleConhecimento.innerHTML = brasil.canvaTitleBr;
   }
+  elementos.titleSlechi.innerHTML = brasil.titleSlechi;
   elementos.contact.innerHTML = brasil.contact;
   elementos.titleSolo.innerHTML = brasil.titleSolo;
   elementos.titleRelogio.innerHTML = brasil.titleRelogio;
   elementos.titleGenshin.innerHTML = brasil.titleGenshin;
   elementos.titlePokemon.innerHTML = brasil.titlePokemon;
   elementos.toastAlertDesenvolvi.innerHTML = brasil.toastAlertDesenvolvi;
-  elementos.btnAllProject.innerHTML = brasil.btnAllProject;
+  elementos.btnAllProject.forEach((btnAllProjectText) => {
+    btnAllProjectText.innerHTML = brasil.btnAllProject;
+  });
   elementos.yourNumber.innerHTML = brasil.yourNumber;
   elementos.servicePrest.innerHTML = brasil.servicePrest;
   elementos.servicePrestText.innerHTML = brasil.servicePrestText;
@@ -1494,6 +1514,7 @@ const espanha = () => {
   elementos.sobreMim.innerHTML = spain.sobreMim;
   elementos.contMim.innerHTML = spain.contMim;
   elementos.meusProjetos.innerHTML = spain.meusProjetos;
+  elementos.clientProjetos.innerHTML = spain.clientProjetos;
   elementos.visualizar.forEach((button) => {
     button.innerHTML = spain.visualizar;
   });
@@ -1593,8 +1614,11 @@ const espanha = () => {
   elementos.titleRelogio.innerHTML = spain.titleRelogio;
   elementos.titleGenshin.innerHTML = spain.titleGenshin;
   elementos.titlePokemon.innerHTML = spain.titlePokemon;
+  elementos.titleSlechi.innerHTML = spain.titleSlechi;
   elementos.toastAlertDesenvolvi.innerHTML = spain.toastAlertDesenvolvi;
-  elementos.btnAllProject.innerHTML = spain.btnAllProject;
+  elementos.btnAllProject.forEach((btnAllProjectText) => {
+    btnAllProjectText.innerHTML = spain.btnAllProject;
+  });
   elementos.yourNumber.innerHTML = spain.yourNumber;
   elementos.servicePrest.innerHTML = spain.servicePrest;
   elementos.servicePrestText.innerHTML = spain.servicePrestText;
@@ -1630,6 +1654,7 @@ const frances = () => {
   elementos.sobreMim.innerHTML = franca.sobreMim;
   elementos.contMim.innerHTML = franca.contMim;
   elementos.meusProjetos.innerHTML = franca.meusProjetos;
+  elementos.clientProjetos.innerHTML = franca.clientProjetos;
   elementos.visualizar.innerHTML = franca.visualizar;
   elementos.visualizar.forEach((button) => {
     button.innerHTML = franca.visualizar;
@@ -1730,8 +1755,11 @@ const frances = () => {
   elementos.titleRelogio.innerHTML = franca.titleRelogio;
   elementos.titleGenshin.innerHTML = franca.titleGenshin;
   elementos.titlePokemon.innerHTML = franca.titlePokemon;
+  elementos.titleSlechi.innerHTML = franca.titleSlechi;
   elementos.toastAlertDesenvolvi.innerHTML = franca.toastAlertDesenvolvi;
-  elementos.btnAllProject.innerHTML = franca.btnAllProject;
+  elementos.btnAllProject.forEach((btnAllProjectText) => {
+    btnAllProjectText.innerHTML = franca.btnAllProject;
+  });
   elementos.yourNumber.innerHTML = franca.yourNumber;
   elementos.servicePrest.innerHTML = franca.servicePrest;
   elementos.servicePrestText.innerHTML = franca.servicePrestText;
@@ -1763,6 +1791,7 @@ const chines = () => {
   elementos.sobreMim.innerHTML = china.sobreMim;
   elementos.contMim.innerHTML = china.contMim;
   elementos.meusProjetos.innerHTML = china.meusProjetos;
+  elementos.clientProjetos.innerHTML = china.clientProjetos;
   elementos.visualizar.forEach((button) => {
     button.innerHTML = china.visualizar;
   });
@@ -1866,8 +1895,11 @@ const chines = () => {
   elementos.titleRelogio.innerHTML = china.titleRelogio;
   elementos.titleGenshin.innerHTML = china.titleGenshin;
   elementos.titlePokemon.innerHTML = china.titlePokemon;
+  elementos.titleSlechi.innerHTML = china.titleSlechi;
   elementos.toastAlertDesenvolvi.innerHTML = china.toastAlertDesenvolvi;
-  elementos.btnAllProject.innerHTML = china.btnAllProject;
+  elementos.btnAllProject.forEach((btnAllProjectText) => {
+    btnAllProjectText.innerHTML = china.btnAllProject;
+  });
   elementos.yourNumber.innerHTML = china.yourNumber;
   elementos.servicePrest.innerHTML = china.servicePrest;
   elementos.servicePrestText.innerHTML = china.servicePrestText;
@@ -2029,6 +2061,7 @@ slider.addEventListener("touchmove", (e) => {
   const walk = (x - startX) * 2; // Multiplica para ajustar a velocidade
   slider.scrollLeft = scrollLeft - walk;
 });
+
 // Função de slide de avaliação
 const avalia = document.querySelector(".avalia");
 let praBaixo = false;
@@ -2080,6 +2113,58 @@ avalia.addEventListener("touchmove", (e) => {
   const x = e.touches[0].pageX - avalia.scrollLeft;
   const walk = (x - startXY) * 0.5; // Multiplica para ajustar a velocidade
   avalia.scrollLeft = scrollEsquerda - walk;
+});
+//Função de slide de projetos e serviços
+const sliderServices = document.querySelector(".swiperServices");
+let isDownServices = false;
+let startXServices;
+let scrollLeftServices;
+
+// Eventos de mouse
+sliderServices.addEventListener("mousedown", (ev) => {
+  isDownServices = true;
+  sliderServices.classList.add("active");
+  startXServices = ev.pageX - sliderServices.offsetLeft;
+  scrollLeftServices = sliderServices.scrollLeft;
+});
+
+sliderServices.addEventListener("mouseleave", () => {
+  isDownServices = false;
+  sliderServices.classList.remove("active");
+});
+
+sliderServices.addEventListener("mouseup", () => {
+  isDownServices = false;
+  sliderServices.classList.remove("active");
+});
+
+sliderServices.addEventListener("mousemove", (evs) => {
+  if (!isDownServices) return; // Parar se o mouse não estiver pressionado
+  evs.preventDefault();
+  const x = evs.pageX - sliderServices.offsetLeft;
+  const walk = (x - startXServices) * 2; // Multiplica para ajustar a velocidade
+  sliderServices.scrollLeft = scrollLeftServices - walk;
+});
+
+// Eventos de toque
+sliderServices.addEventListener("touchstart", (evsm) => {
+  isDownServices = true;
+  sliderServices.classList.add("active");
+  startXServices = evsm.touches[0].pageX - sliderServices.offsetLeft;
+  scrollLeftServices = sliderServices.scrollLeft;
+});
+
+sliderServices.addEventListener("touchend", () => {
+  isDownServices = false;
+  sliderServices.classList.remove("active");
+});
+
+sliderServices.addEventListener("touchmove", (evms) => {
+  if (!isDownServices) return; // Parar se não houver toque ativo
+  evms.preventDefault();
+  const x = evms.touches[0].pageX - sliderServices.offsetLeft;
+  const walk = (x - startXServices) * 2; // Multiplica para ajustar a velocidade
+  sliderServices.scrollLeft = scrollLeftServices - walk;
 });
 
 //Função mostrar mais certificados
@@ -2167,6 +2252,7 @@ const toastFunction = () => {
 };
 
 const genshin = document.querySelector(".genshin");
+const slechi = document.querySelector(".slechi");
 const tabuada = document.querySelector(".tabuada");
 const allButtonProject = document.querySelector(".buttonAllProjects");
 
@@ -2197,6 +2283,32 @@ genshin.addEventListener("click", () => {
 });
 
 allButtonProject.addEventListener("click", () => {
+  toastNotification.play();
+  toast.style.display = "flex";
+  toast.style.opacity = "1";
+  setTimeout(() => {
+    toast.classList.add("toastOpen");
+    toast.style.animation = "openToast 1s";
+    setTimeout(() => {
+      textToast.style.display = "flex";
+      toastFunction();
+    }, 200);
+  }, 200);
+  setTimeout(() => {
+    toast.classList.remove("toastOpen");
+    toast.style.animation = "closeToast 500ms";
+    setTimeout(() => {
+      textToast.style.display = "none";
+      setTimeout(() => {
+        toast.style.opacity = "0";
+        toast.style.display = "none";
+        toast.style.animation = "none";
+      }, 500);
+    }, 200);
+  }, 5000);
+});
+
+slechi.addEventListener("click", () => {
   toastNotification.play();
   toast.style.display = "flex";
   toast.style.opacity = "1";
