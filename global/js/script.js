@@ -111,7 +111,7 @@ const eu = document.querySelector('.eua');
 
 eu.addEventListener('click', () => {
     langSelecionada.innerHTML = "EN";
-    flagSelecionada.src = "../global/icon/eua.png"
+    flagSelecionada.src = "https://eryckborges.github.io/Dev-Escorpion/global/icon/eua.png"
     localStorage.setItem('lang', 'eu');
     ingles();
 });
@@ -120,7 +120,7 @@ const es = document.querySelector('.spain');
 
 es.addEventListener('click', () => {
     langSelecionada.innerHTML = "ES";
-    flagSelecionada.src = "../global/icon/spain.png"
+    flagSelecionada.src = "https://eryckborges.github.io/Dev-Escorpion/global/icon/spain.png"
     localStorage.setItem('lang', 'es');
     espanha();
 });
@@ -129,7 +129,7 @@ const br = document.querySelector('.brasil');
 
 br.addEventListener('click', () => {
     langSelecionada.innerHTML = "PT";
-    flagSelecionada.src = "../global/icon/brasil.png"
+    flagSelecionada.src = "https://eryckborges.github.io/Dev-Escorpion/global/icon/brasil.png"
     localStorage.setItem('lang', 'br');
     portugues();
 });
@@ -138,7 +138,7 @@ const fr = document.querySelector('.franca');
 
 fr.addEventListener('click', () => {
     langSelecionada.innerHTML = "FR";
-    flagSelecionada.src = "../global/icon/franca.png"
+    flagSelecionada.src = "https://eryckborges.github.io/Dev-Escorpion/global/icon/franca.png"
     localStorage.setItem('lang', 'fr');
     frances();
 });
@@ -147,7 +147,7 @@ const ch = document.querySelector('.china');
 
 ch.addEventListener('click', () => {
     langSelecionada.innerHTML = "ZH";
-    flagSelecionada.src = "../global/icon/china.png"
+    flagSelecionada.src = "https://eryckborges.github.io/Dev-Escorpion/global/icon/china.png"
     localStorage.setItem('lang', 'ch');
     chines();
 });
