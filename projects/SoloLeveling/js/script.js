@@ -7,6 +7,10 @@ const eua = {
     portfolio: 'Portfolio',
     contato: 'Contact',
     sobre: 'About',
+    footerProject: 'Projects',
+use: 'Terms of Use',
+cookie: 'Cookie Policy',
+privacity: 'Privacy',
     titleProject: 'RPG Character Generator for WhatsApp',
     textProject: "This project is a character generator for RPG on WhatsApp, developed with HTML, CSS, and JavaScript. Users fill in the available fields to customize their character, and at the end, they receive all the formatted data, ready to copy and paste directly into WhatsApp. With a design inspired by the amazing anime *Solo Leveling*, the project's visual is dynamic and immersive, bringing the vibe of hunters and portals to fans of the anime and RPGs!",
     logoSolo: './image/logoSoloLeveling.png',
@@ -52,6 +56,10 @@ const brasil = {
     portfolio: 'Portfólio',
     contato: 'Contato',
     sobre: 'Sobre',
+    footerProject: 'Projetos',
+  use: 'Termos de Uso',
+  cookie: 'Politica de Cookies',
+  privacity: 'Privacidade',
     titleProject: 'Gerador de Personagens de RPG no WhatsApp',
     textProject: 'Este projeto é um gerador de personagens para RPG no WhatsApp, desenvolvido com HTML, CSS e JavaScript. O usuário preenche os campos disponíveis, personalizando seu personagem, e no final recebe todos os dados formatados, prontos para copiare colar diretamente no WhatsApp. Com um design inspirado no incrível animeSolo Leveling, o visual do projeto é dinâmico e imersivo, trazendo a vibe de caçadorese portais para os fãs do anime e RPGs!',
     logoSolo: './image/logoSoloLeveling.png',
@@ -96,6 +104,10 @@ const spain = {
     portfolio: 'Portafolio',
     contato: 'Contacto',
     sobre: 'En',
+    footerProject: 'Proyectos',
+    use: 'Términos de Uso',
+    cookie: 'Política de Cookies',
+    privacity: 'Privacidad',
     titleProject: 'Generador de Personajes de RPG para WhatsApp',
     textProject: 'Este proyecto es un generador de personajes para RPG en WhatsApp, desarrollado con HTML, CSS y JavaScript. El usuario completa los campos disponibles para personalizar su personaje y, al final, recibe todos los datos formateados, listos para copiar y pegar directamente en WhatsApp. Con un diseño inspirado en el increíble anime *Solo Leveling*, el aspecto del proyecto es dinámico e inmersivo, transmitiendo la vibra de cazadores y portales para los fanáticos del anime y los RPGs.',
     logoSolo: './image/logoSoloLeveling.png',
@@ -141,6 +153,10 @@ const franca = {
     portfolio: 'Portefeuille',
     contato: 'Contact',
     sobre: 'Sur',
+    footerProject: 'Projets',
+    use: 'Conditions d’utilisation',
+    cookie: 'Politique de Cookies',
+    privacity: 'Confidentialité',
     titleProject: 'Générateur de Personnages de RPG pour WhatsApp',
     textProject: 'Ce projet est un générateur de personnages pour RPG sur WhatsApp, développé avec HTML, CSS et JavaScript. L’utilisateur remplit les champs disponibles pour personnaliser son personnage, et à la fin, il reçoit toutes les données formatées, prêtes à être copiées et collées directement dans WhatsApp. Avec un design inspiré par l’incroyable anime *Solo Leveling*, le visuel du projet est dynamique et immersif, apportant l’ambiance des chasseurs et des portails aux fans de l’anime et des RPG.',
     logoSolo: './image/logoSoloLeveling.png',
@@ -186,6 +202,10 @@ const china = {
     portfolio: '作品集',
     contato: '接触',
     sobre: '在',
+    footerProject: '项目',
+use: '使用条款',
+cookie: 'Cookie 政策',
+privacity: '隐私政策',
     titleProject: 'WhatsApp RPG角色生成器',
     textProject: '该项目是一个用于WhatsApp的RPG角色生成器，使用HTML、CSS和JavaScript开发。用户填写可用字段，自定义他们的角色，最终会收到所有格式化的数据，直接可以复制粘贴到WhatsApp中。项目的设计灵感来自于令人惊叹的动漫《Solo Leveling》，其视觉效果动态且沉浸，带来了猎人和传送门的氛围，专为动漫和RPG爱好者打造。',
     logoSolo: './image/soloLevelingLogoChines.webp',
@@ -231,6 +251,10 @@ const elementos = {
     portfolio: document.querySelectorAll('.portfolio'),
     contato: document.querySelectorAll('.contato'),
     sobre: document.querySelectorAll('.sobre'),
+    footerProject: document.querySelector('.footerProject'),
+  use: document.querySelector('.use'),
+  cookie: document.querySelector('.cookie'),
+  privacity: document.querySelector('.privacity'),
     titleProject: document.querySelector('.textProject > h1'),
     textProject: document.querySelector('.textProject > p'),
     logoSolo: document.querySelector('.textProject img'),
@@ -285,6 +309,10 @@ const ingles = () => {
     elementos.sobre.forEach((sobreText) => {
         sobreText.innerHTML = eua.sobre;
     });  
+    elementos.footerProject.innerHTML = eua.footerProject;
+  elementos.use.innerHTML = eua.use;
+  elementos.privacity.innerHTML = eua.privacity;
+  elementos.cookie.innerHTML = eua.cookie;
     elementos.titleProject.innerHTML = eua.titleProject;  
     elementos.textProject.innerHTML = eua.textProject;
     elementos.logoSolo.src = eua.logoSolo;
@@ -354,6 +382,10 @@ const portugues = () => {
     elementos.sobre.forEach((sobreText) => {
         sobreText.innerHTML = brasil.sobre;
     }); 
+    elementos.footerProject.innerHTML = brasil.footerProject;
+  elementos.use.innerHTML = brasil.use;
+  elementos.privacity.innerHTML = brasil.privacity;
+  elementos.cookie.innerHTML = brasil.cookie;
     elementos.titleProject.innerHTML = brasil.titleProject;  
     elementos.textProject.innerHTML = brasil.textProject; 
     elementos.logoSolo.src = brasil.logoSolo;
@@ -423,6 +455,10 @@ const espanha = () => {
     elementos.sobre.forEach((sobreText) => {
         sobreText.innerHTML = spain.sobre;
     });  
+    elementos.footerProject.innerHTML = spain.footerProject;
+  elementos.use.innerHTML = spain.use;
+  elementos.privacity.innerHTML = spain.privacity;
+  elementos.cookie.innerHTML = spain.cookie;
     elementos.titleProject.innerHTML = spain.titleProject;  
     elementos.textProject.innerHTML = spain.textProject;
     elementos.logoSolo.src = spain.logoSolo;
@@ -491,6 +527,10 @@ const frances = () => {
     elementos.sobre.forEach((sobreText) => {
         sobreText.innerHTML = franca.sobre;
     });   
+    elementos.footerProject.innerHTML = franca.footerProject;
+  elementos.use.innerHTML = franca.use;
+  elementos.privacity.innerHTML = franca.privacity;
+  elementos.cookie.innerHTML = franca.cookie;
     elementos.titleProject.innerHTML = franca.titleProject;  
     elementos.textProject.innerHTML = franca.textProject;
     elementos.logoSolo.src = franca.logoSolo;
@@ -558,7 +598,11 @@ const chines = () => {
     });
     elementos.sobre.forEach((sobreText) => {
         sobreText.innerHTML = china.sobre;
-    });  
+    }); 
+    elementos.footerProject.innerHTML = china.footerProject;
+    elementos.use.innerHTML = china.use;
+    elementos.privacity.innerHTML = china.privacity;
+    elementos.cookie.innerHTML = china.cookie; 
     elementos.titleProject.innerHTML = china.titleProject;  
     elementos.textProject.innerHTML = china.textProject;
     elementos.logoSolo.src = china.logoSolo;

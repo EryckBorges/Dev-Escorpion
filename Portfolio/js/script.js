@@ -83,6 +83,10 @@ const eua = {
   portfolio: "Portfolio",
   contato: "Contact",
   sobre: "About",
+  footerProject: 'Projects',
+use: 'Terms of Use',
+cookie: 'Cookie Policy',
+privacity: 'Privacy',
   sobreMim: "About Me",
   contMim:
     "Hello, my name is Éryck Borges da Silva Dionizio, I am 17 years old, graduated in Technical Computer Science from UNESP, and I am a Front-End Developer and Web Designer with experience in HTML, CSS, JavaScript, Git, GitHub, creating layouts and websites, basic maintenance of notebooks and PCs, as well as using Figma and Canva to develop modern and intuitive designs, always focusing on usability and performance. Passionate about technology, I am constantly seeking to learn and evolve.",
@@ -187,6 +191,10 @@ const brasil = {
   portfolio: "Portfólio",
   contato: "Contato",
   sobre: "Sobre",
+  footerProject: 'Projetos',
+  use: 'Termos de Uso',
+  cookie: 'Politica de Cookies',
+  privacity: 'Privacidade',
   sobreMim: "Sobre Mim",
   contMim:
     "Olá, meu nome é Éryck Borges da Silva Dionizio, tenho 17 anos, sou formado em Técnico em Informática pela UNESP e sou Front-End Developer e Web Designer com experiência em HTML, CSS, JavaScript, Git, GitHub, criação de layouts e sites, manutenção básica de notebooks e PCs, além de utilizar Figma e Canva para desenvolver designs modernos e intuitivos, sempre focando em usabilidade e performance. Apaixonado por tecnologia, estou sempre em busca de aprender e evoluir.",
@@ -294,6 +302,10 @@ const spain = {
   portfolio: "Portafolio",
   contato: "Contacto",
   sobre: "En",
+  footerProject: 'Proyectos',
+use: 'Términos de Uso',
+cookie: 'Política de Cookies',
+privacity: 'Privacidad',
   sobreMim: "Acerca de Mí",
   contMim:
     "Hola, mi nombre es Éryck Borges da Silva Dionizio, tengo 17 años, soy graduado en Técnico en Informática por la UNESP y soy Front-End Developer y Web Designer con experiencia en HTML, CSS, JavaScript, Git, GitHub, creación de layouts y sitios web, mantenimiento básico de notebooks y PCs, además de utilizar Figma y Canva para desarrollar diseños modernos e intuitivos, siempre enfocándome en la usabilidad y el rendimiento. Apasionado por la tecnología, siempre estoy buscando aprender y evolucionar.",
@@ -398,6 +410,10 @@ const franca = {
   portfolio: "Portefeuille",
   contato: "Contact",
   sobre: "Sur",
+  footerProject: 'Projets',
+use: 'Conditions d’utilisation',
+cookie: 'Politique de Cookies',
+privacity: 'Confidentialité',
   sobreMim: "Sur Moi",
   contMim:
     "Bonjour, je m'appelle Éryck Borges da Silva Dionizio, j'ai 17 ans, je suis diplômé en Technicien en Informatique de l'UNESP et je suis Front-End Developer et Web Designer avec de l'expérience en HTML, CSS, JavaScript, Git, GitHub, création de layouts et de sites web, maintenance de base de notebooks et de PC, ainsi qu'en utilisant Figma et Canva pour développer des designs modernes et intuitifs, toujours en me concentrant sur l'ergonomie et la performance. Passionné par la technologie, je suis constamment à la recherche d'apprendre et d'évoluer.",
@@ -502,9 +518,13 @@ const china = {
   portfolio: "作品集",
   contato: "接触",
   sobre: "在",
+  footerProject: '项目',
+use: '使用条款',
+cookie: 'Cookie 政策',
+privacity: '隐私政策',
   sobreMim: "关于我",
   contMim:
-    "你好，我叫Éryck Borges da Silva Dionizio，今年17岁，毕业于UNESP的计算机技术专业，我是前端开发者和Web设计师，具有HTML、CSS、JavaScript、Git、GitHub经验，擅长布局和网站创建、笔记本电脑和PC的基础维护，并使用Figma和Canva开发现代化且直观的设计，始终关注可用性和性能。我热爱技术，始终在寻求学习和进步。",
+    "你好，我叫Éryck Borges da Silva Dionizio，今年17岁，毕业于UNESP的计算机技术专业，我是前端开发者和Web设计师，具有HTML、CSS、JavaScript、Git、GitHub经验，擅长布局和网站创建、笔记本电脑和PC的基础维护，并使用Figma和Canva开发现代化且直观的设计，始终关注可用性和性能。我热爱技术，始终在寻求学习和进步。 ",
   meusProjetos: "我的项目和服务",
   visualizar: "看法",
   ferramentas: "我使用的工具和技术",
@@ -606,6 +626,10 @@ const elementos = {
   portfolio: document.querySelectorAll(".portfolio"),
   contato: document.querySelectorAll(".contato"),
   sobre: document.querySelectorAll(".sobre"),
+  footerProject: document.querySelector('.footerProject'),
+  use: document.querySelector('.use'),
+  cookie: document.querySelector('.cookie'),
+  privacity: document.querySelector('.privacity'),
   sobreMim: document.querySelector(".cont h1"),
   contMim: document.querySelector(".cont p"),
   meusProjetos: document.querySelector(".titleMyProject"),
@@ -1188,6 +1212,10 @@ const ingles = () => {
   elementos.sobre.forEach((sobreText) => {
     sobreText.innerHTML = eua.sobre;
   });
+  elementos.footerProject.innerHTML = eua.footerProject;
+  elementos.use.innerHTML = eua.use;
+  elementos.privacity.innerHTML = eua.privacity;
+  elementos.cookie.innerHTML = eua.cookie;
   elementos.sobreMim.innerHTML = eua.sobreMim;
   elementos.contMim.innerHTML = eua.contMim;
   elementos.meusProjetos.innerHTML = eua.meusProjetos;
@@ -1322,6 +1350,10 @@ const portugues = () => {
   elementos.sobre.forEach((sobreText) => {
     sobreText.innerHTML = brasil.sobre;
   });
+  elementos.footerProject.innerHTML = brasil.footerProject;
+  elementos.use.innerHTML = brasil.use;
+  elementos.privacity.innerHTML = brasil.privacity;
+  elementos.cookie.innerHTML = brasil.cookie;
   elementos.sobreMim.innerHTML = brasil.sobreMim;
   elementos.contMim.innerHTML = brasil.contMim;
   elementos.meusProjetos.innerHTML = brasil.meusProjetos;
@@ -1455,6 +1487,10 @@ const espanha = () => {
   elementos.sobre.forEach((sobreText) => {
     sobreText.innerHTML = spain.sobre;
   });
+  elementos.footerProject.innerHTML = spain.footerProject;
+  elementos.use.innerHTML = spain.use;
+  elementos.privacity.innerHTML = spain.privacity;
+  elementos.cookie.innerHTML = spain.cookie;
   elementos.sobreMim.innerHTML = spain.sobreMim;
   elementos.contMim.innerHTML = spain.contMim;
   elementos.meusProjetos.innerHTML = spain.meusProjetos;
@@ -1587,6 +1623,10 @@ const frances = () => {
   elementos.sobre.forEach((sobreText) => {
     sobreText.innerHTML = franca.sobre;
   });
+  elementos.footerProject.innerHTML = franca.footerProject;
+  elementos.use.innerHTML = franca.use;
+  elementos.privacity.innerHTML = franca.privacity;
+  elementos.cookie.innerHTML = franca.cookie;
   elementos.sobreMim.innerHTML = franca.sobreMim;
   elementos.contMim.innerHTML = franca.contMim;
   elementos.meusProjetos.innerHTML = franca.meusProjetos;
@@ -1726,6 +1766,10 @@ const chines = () => {
   elementos.visualizar.forEach((button) => {
     button.innerHTML = china.visualizar;
   });
+  elementos.footerProject.innerHTML = china.footerProject;
+  elementos.use.innerHTML = china.use;
+  elementos.privacity.innerHTML = china.privacity;
+  elementos.cookie.innerHTML = china.cookie;
   elementos.ferramentas.innerHTML = china.ferramentas;
   elementos.tecnologias.innerHTML = china.tecnologias;
   elementos.certificado.innerHTML = china.certificado;

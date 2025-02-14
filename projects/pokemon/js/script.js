@@ -41,6 +41,10 @@ const eua = {
   portfolio: "Portfolio",
   contato: "Contact",
   sobre: "About",
+  footerProject: 'Projects',
+use: 'Terms of Use',
+cookie: 'Cookie Policy',
+privacity: 'Privacy',
   descSword: "A new generation of Pokémon is coming to the Nintendo Switch™. Choose between Grookey, Scorbunny, or Sobble and embark on a journey through the Galar region, facing Team Yell and uncovering the mysteries of the legendary Zacian and Zamazenta. Explore the Wild Area with free camera control and join cooperative Max Raid Battles against Dynamax Pokémon.",
   textHeader: "Here you will find a complete interactive Pokédex, where you can explore all Pokémon in detail, as well as access the collection of all games in the Pokémon franchise. Discover trivia, abilities, and much more!",
   btnPokedex: "Pokédex",
@@ -78,6 +82,10 @@ const brasil = {
   portfolio: "Portfólio",
   contato: "Contato",
   sobre: "Sobre",
+  footerProject: 'Projetos',
+  use: 'Termos de Uso',
+  cookie: 'Politica de Cookies',
+  privacity: 'Privacidade',
   textHeader: 'Aqui você encontrará uma Pokédex interativa completa, onde poderá explorar todos os Pokémon em detalhes, além de acessar a coleção de todos os jogos da franquia Pokémon. Descubra curiosidades, habilidades e muito mais!',
   btnPokedex: 'Pokedex',
   titlePokedex: 'Pokédex Interativa',
@@ -115,6 +123,10 @@ const spain = {
   portfolio: "Portafolio",
   contato: "Contacto",
   sobre: "En",
+  footerProject: 'Proyectos',
+use: 'Términos de Uso',
+cookie: 'Política de Cookies',
+privacity: 'Privacidad',
   textHeader: "Aquí encontrarás una Pokédex interactiva completa, donde podrás explorar todos los Pokémon en detalle, además de acceder a la colección de todos los juegos de la franquicia Pokémon. ¡Descubre curiosidades, habilidades y mucho más!",
   btnPokedex: "Pokédex",
   titlePokedex: 'Pokédex Interactiva',
@@ -152,6 +164,10 @@ const franca = {
   portfolio: "Portefeuille",
   contato: "Contact",
   sobre: "Sur",
+  footerProject: 'Projets',
+use: 'Conditions d’utilisation',
+cookie: 'Politique de Cookies',
+privacity: 'Confidentialité',
   textHeader: "Ici, vous trouverez un Pokédex interactif complet, où vous pourrez explorer tous les Pokémon en détail, ainsi que la collection de tous les jeux de la franchise Pokémon. Découvrez des curiosités, des capacités et bien plus encore !",
   btnPokedex: "Pokédex",
   titlePokedex: 'Pokédex Interactive',
@@ -190,6 +206,10 @@ const china = {
   portfolio: "作品集",
   contato: "接触",
   sobre: "在",
+  footerProject: '项目',
+  use: '使用条款',
+  cookie: 'Cookie 政策',
+  privacity: '隐私政策',
   sobreMim: "关于我",
     textHeader: "在这里，您将找到一个完整的互动宝可梦图鉴，您可以详细探索所有宝可梦，并访问宝可梦系列所有游戏的合集。发现更多有趣的内容、技能等！",
   btnPokedex: "宝可梦图鉴",
@@ -229,6 +249,10 @@ const elementos = {
   portfolio: document.querySelectorAll(".portfolio"),
   contato: document.querySelectorAll(".contato"),
   sobre: document.querySelectorAll(".sobre"),
+  footerProject: document.querySelector('.footerProject'),
+  use: document.querySelector('.use'),
+  cookie: document.querySelector('.cookie'),
+  privacity: document.querySelector('.privacity'),
   descPokemon: document.querySelector('.contPokemon p'),
   descPokemonMobile: document.querySelector('.contDescMobile p'),
   titlePokedex: document.querySelector('.contPokedex h1'),
@@ -693,6 +717,10 @@ const ingles = () => {
   elementos.sobre.forEach((sobreText) => {
     sobreText.innerHTML = eua.sobre;
   });
+  elementos.footerProject.innerHTML = eua.footerProject;
+  elementos.use.innerHTML = eua.use;
+  elementos.privacity.innerHTML = eua.privacity;
+  elementos.cookie.innerHTML = eua.cookie;
   elementos.descPokemon.innerHTML = eua.descPokemon;
   elementos.descPokemonMobile.innerHTML = eua.descPokemon;
   switch (gameDesc) {
@@ -817,6 +845,10 @@ const portugues = () => {
   elementos.sobre.forEach((sobreText) => {
     sobreText.innerHTML = brasil.sobre;
   });
+  elementos.footerProject.innerHTML = brasil.footerProject;
+  elementos.use.innerHTML = brasil.use;
+  elementos.privacity.innerHTML = brasil.privacity;
+  elementos.cookie.innerHTML = brasil.cookie;
   elementos.descPokemon.innerHTML = brasil.descPokemon;
   switch (gameDesc) {
     case 'scarlet':
@@ -940,6 +972,10 @@ const espanha = () => {
   elementos.sobre.forEach((sobreText) => {
     sobreText.innerHTML = spain.sobre;
   });
+  elementos.footerProject.innerHTML = spain.footerProject;
+  elementos.use.innerHTML = spain.use;
+  elementos.privacity.innerHTML = spain.privacity;
+  elementos.cookie.innerHTML = spain.cookie;
   elementos.descPokemon.innerHTML = spain.descPokemon;
   switch (gameDesc) {
     case 'scarlet':
@@ -1059,6 +1095,10 @@ const frances = () => {
   elementos.sobre.forEach((sobreText) => {
     sobreText.innerHTML = franca.sobre;
   });
+  elementos.footerProject.innerHTML = franca.footerProject;
+  elementos.use.innerHTML = franca.use;
+  elementos.privacity.innerHTML = franca.privacity;
+  elementos.cookie.innerHTML = franca.cookie;
   elementos.descPokemon.innerHTML = franca.descPokemon;
   switch (gameDesc) {
     case 'scarlet':
@@ -1178,6 +1218,10 @@ const chines = () => {
   elementos.sobre.forEach((sobreText) => {
     sobreText.innerHTML = china.sobre;
   });
+  elementos.footerProject.innerHTML = china.footerProject;
+  elementos.use.innerHTML = china.use;
+  elementos.privacity.innerHTML = china.privacity;
+  elementos.cookie.innerHTML = china.cookie;
   elementos.descPokemon.innerHTML = china.descPokemon;
   switch (gameDesc) {
     case 'scarlet':

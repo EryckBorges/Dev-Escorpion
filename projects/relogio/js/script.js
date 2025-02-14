@@ -7,6 +7,10 @@ const eua = {
     portfolio: 'Portfolio',
     contato: 'Contact',
     sobre: 'About',
+    footerProject: 'Projects',
+use: 'Terms of Use',
+cookie: 'Cookie Policy',
+privacity: 'Privacy',
     segunda: 'Monday',
     terca: 'Tuesday',
     quarta: 'Wednesday',
@@ -42,6 +46,10 @@ const brasil = {
     portfolio: 'Portfólio',
     contato: 'Contato',
     sobre: 'Sobre',
+    footerProject: 'Projetos',
+    use: 'Termos de Uso',
+    cookie: 'Politica de Cookies',
+    privacity: 'Privacidade',
     segunda: 'Segunda-feira',
     terca: 'Terça-feira',
     quarta: 'Quarta-feira',
@@ -76,6 +84,10 @@ const spain = {
     portfolio: 'Portafolio',
     contato: 'Contacto',
     sobre: 'En',
+    footerProject: 'Proyectos',
+use: 'Términos de Uso',
+cookie: 'Política de Cookies',
+privacity: 'Privacidad',
     segunda: 'Lunes',
     terca: 'Martes',
     quarta: 'Miércoles',
@@ -111,6 +123,10 @@ const franca = {
     portfolio: 'Portefeuille',
     contato: 'Contact',
     sobre: 'Sur',
+    footerProject: 'Projets',
+use: 'Conditions d’utilisation',
+cookie: 'Politique de Cookies',
+privacity: 'Confidentialité',
     segunda: 'Lundi',
     terca: 'Mardi',
     quarta: 'Mercredi',
@@ -146,6 +162,10 @@ const china = {
     portfolio: '作品集',
     contato: '接触',
     sobre: '在',
+    footerProject: '项目',
+use: '使用条款',
+cookie: 'Cookie 政策',
+privacity: '隐私政策',
     segunda: '星期一',
     terca: '星期二',
     quarta: '星期三',
@@ -181,6 +201,10 @@ const elementos = {
     portfolio: document.querySelectorAll('.portfolio'),
     contato: document.querySelectorAll('.contato'),
     sobre: document.querySelectorAll('.sobre'),
+    footerProject: document.querySelector('.footerProject'),
+    use: document.querySelector('.use'),
+    cookie: document.querySelector('.cookie'),
+    privacity: document.querySelector('.privacity'),
     diaDaSemana: document.querySelector('.diaSemana'),
     mesAno: document.querySelector('.mesAno'),
     titleClock: document.querySelector('.textClock h1'),
@@ -210,6 +234,10 @@ const ingles = () => {
     elementos.sobre.forEach((sobreText) => {
         sobreText.innerHTML = eua.sobre;
     });  
+    elementos.footerProject.innerHTML = eua.footerProject;
+    elementos.use.innerHTML = eua.use;
+    elementos.privacity.innerHTML = eua.privacity;
+    elementos.cookie.innerHTML = eua.cookie;
     const data = new Date();
     let daySemana = data.getDay();
     let mesAno = data.getMonth();
@@ -305,6 +333,10 @@ const portugues = () => {
     elementos.sobre.forEach((sobreText) => {
         sobreText.innerHTML = brasil.sobre;
     });  
+    elementos.footerProject.innerHTML = brasil.footerProject;
+    elementos.use.innerHTML = brasil.use;
+    elementos.privacity.innerHTML = brasil.privacity;
+    elementos.cookie.innerHTML = brasil.cookie;
     const data = new Date();
     let daySemana = data.getDay();
     let mesAno = data.getMonth();
@@ -400,7 +432,10 @@ const espanha = () => {
     elementos.sobre.forEach((sobreText) => {
         sobreText.innerHTML = spain.sobre;
     });  
-    
+    elementos.footerProject.innerHTML = spain.footerProject;
+  elementos.use.innerHTML = spain.use;
+  elementos.privacity.innerHTML = spain.privacity;
+  elementos.cookie.innerHTML = spain.cookie;
     const data = new Date();
     let daySemana = data.getDay();
     let mesAno = data.getMonth();
@@ -496,6 +531,10 @@ const frances = () => {
     elementos.sobre.forEach((sobreText) => {
         sobreText.innerHTML = franca.sobre;
     });   
+    elementos.footerProject.innerHTML = franca.footerProject;
+  elementos.use.innerHTML = franca.use;
+  elementos.privacity.innerHTML = franca.privacity;
+  elementos.cookie.innerHTML = franca.cookie;
     const data = new Date();
     let daySemana = data.getDay();
     let mesAno = data.getMonth();
@@ -591,6 +630,10 @@ const chines = () => {
     elementos.sobre.forEach((sobreText) => {
         sobreText.innerHTML = china.sobre;
     });  
+    elementos.footerProject.innerHTML = china.footerProject;
+    elementos.use.innerHTML = china.use;
+    elementos.privacity.innerHTML = china.privacity;
+    elementos.cookie.innerHTML = china.cookie;
     const data = new Date();
     let daySemana = data.getDay();
     let mesAno = data.getMonth();
