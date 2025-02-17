@@ -1,0 +1,250 @@
+@media screen and (width <= 767px) {
+
+    main {
+        flex-direction: column !important;
+    }
+
+    body{        
+       background-position:0 -32vh;
+    }
+
+    .pokedexCont {
+        width: 100%;
+        height: 50%;
+        top: 0;
+        left: 0;
+    }
+
+    #dados {
+        border-top-left-radius:10px;
+        border-top-right-radius:10px;
+        border-bottom-left-radius:0px;
+        left: 0;
+        top:40%;
+        width:100%;
+        height: 60%;
+    }
+
+    .pokemon-dados{  
+        font-size: 1.6em;
+    }
+
+    .tela{
+        padding: 8px;
+    }
+
+    .btnBlue {
+        display: none;
+    }
+
+    .tit{
+        font-size:0.8em;
+    }
+
+    .icon{
+        height:35px;
+        width:35px;
+        margin-inline: 10px;
+    }
+}
+
+@media screen and (width >= 767px) and (width <= 1023px) {
+    main {
+        flex-direction: column !important;
+    }
+
+    body{        
+       background-position:0 -32vh;
+    }
+
+    .pokedexCont {
+        width: 100%;
+        height: 50%;
+        top: 0;
+        left: 0;
+    }
+
+    #dados {
+        border-top-left-radius:10px;
+        border-top-right-radius:10px;
+        border-bottom-left-radius:0px;
+        left: 0;
+        top:45%;
+        width:100%;
+        height: 55%;
+    }
+
+    .pokemon-dados{  
+        font-size: 2em;
+    }
+
+    .tela{
+        padding: 8px;
+        font-size: 1.2em;
+    }
+
+    .btnBlue {
+        display: none;
+    }
+
+    .tit{
+        font-size:1.6em;
+    }
+
+    .icon{
+        height:50px;
+        width:50px;
+        margin-inline: 10px;
+    }
+}
+
+@media screen and (height <= 500px) {
+    main {
+        flex-direction: row;
+    }
+
+    .pokedexCont {
+        width: 50%;
+        height: 100%;
+        top: 0;
+        right: 0;
+    }
+
+    .tela {
+        font-size: 0.9em;
+    }
+
+    .pokemon-dados{  
+        font-size: 1.6em;
+    }
+
+    #dados {
+        border-top-left-radius:10px;
+        border-bottom-left-radius:10px;
+        border-top-right-radius:0px;
+        top: 0;
+        left: 50%;
+        width:50%;
+        height: 100%;
+        gap: 10px;
+    }
+
+    .tit{
+        font-size:0.8em;
+        height: auto;
+    }
+
+    .icon{
+        height:30px;
+        width:30px;
+        margin-inline: 10px;
+    }
+
+    .input-search{
+        padding:10px;
+    }
+    
+    #prev, #next {
+        height: 90%;
+        font-size: 1.2em;
+    }
+
+    .pok-img0{
+        height:18vh;
+        position:fixed;
+        margin-top:5vh;
+        margin-left:0vw;
+    }
+    
+    .pok-img1{
+        height:20vh;
+        position:fixed;
+        margin-top:4.5vh;
+        margin-left:1vw;
+    }
+    
+    .pok-img2{
+        height:30vh;
+        position:fixed;
+        margin-top:1.5vh;
+        margin-left:0vw;
+    }
+    
+    .pok-img3{
+        height:35vh;
+        position:fixed;
+        margin-top:-1.5vh;
+        margin-left:0vw;
+    }
+    
+    .pok-img4{
+        height:55vh;
+        position:fixed;
+        margin-top:-15vh;
+        margin-left:0vw;    
+    }
+}
+
+@media screen and (width <= 350px) {
+
+    main {
+        flex-direction: column !important;
+    }
+
+    body{        
+       background-position:0 -32vh;
+    }
+
+    .pokedexCont {
+        width: 100%;
+        height: 50%;
+        top: 0;
+        left: 0;
+    }
+
+    #dados {
+        left: 0;
+        top:40%;
+        width:100%;
+        height: 60%;
+        gap:10px;
+        border-top-left-radius:10px;
+        border-top-right-radius:10px;
+        border-bottom-left-radius:0px;
+    }
+
+    .pokemon-dados{  
+        font-size: 1.6em;
+    }
+
+    .tela{
+        padding: 8px;
+        font-size: 0.8em;
+    }
+
+    .btnBlue {
+        display: none;
+    }
+
+    .tit{
+        font-size:0.7em;
+    }
+
+    .icon{
+        height:25px;
+        width:25px;
+        margin-inline: 10px;
+    }
+
+    .input-search{
+        padding:10px;
+    }
+
+    #next {
+        height: 90%;
+    }
+    
+    #prev {
+        height: 90%;
+    }
+}
