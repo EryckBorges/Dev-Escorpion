@@ -32,6 +32,56 @@ main {
     height: 100%;
   }
 
+  .grantop {
+    width: 100%;
+    height: 100%;
+    position:relative;
+  }
+
+  .grantop > .leite {
+    width: 45%;
+    height: 80%;
+    animation-duration: 0.5s !important;
+  }
+
+  .grantop > .sorveteGrantop {
+    position: absolute;
+    left: 30%;
+    top:5%;
+  }
+
+  .grantop > .morangoBottom {
+    position: absolute;
+    left: -10%;
+    bottom:-10%;
+  }
+
+  .grantop > .morangoTop {
+    position: absolute;
+    left: 10%;
+    top:10%;
+    width: 15%;
+    z-index: 99;
+  }
+
+  .grantop > .morangoBack {
+    position: absolute;
+    right: 10%;
+    top:12%;
+    width: 10%;
+    rotate: 90deg;
+    filter: blur(2px);
+  }
+  
+  .grantop > .morangoFront {
+    position: absolute;
+    right: 20%;
+    bottom:12%;
+    width: 12%;
+    rotate: 45deg;
+    filter: blur(0.5px);
+  }
+
   .contentImages {
     flex-direction: column;
     width: 100%;
