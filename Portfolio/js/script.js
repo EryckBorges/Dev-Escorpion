@@ -2309,29 +2309,7 @@ allButtonProject.addEventListener("click", () => {
 });
 
 slechi.addEventListener("click", () => {
-  toastNotification.play();
-  toast.style.display = "flex";
-  toast.style.opacity = "1";
-  setTimeout(() => {
-    toast.classList.add("toastOpen");
-    toast.style.animation = "openToast 1s";
-    setTimeout(() => {
-      textToast.style.display = "flex";
-      toastFunction();
-    }, 200);
-  }, 200);
-  setTimeout(() => {
-    toast.classList.remove("toastOpen");
-    toast.style.animation = "closeToast 500ms";
-    setTimeout(() => {
-      textToast.style.display = "none";
-      setTimeout(() => {
-        toast.style.opacity = "0";
-        toast.style.display = "none";
-        toast.style.animation = "none";
-      }, 500);
-    }, 200);
-  }, 5000);
+  window.location.href = "https://eryckborges.github.io/Dev-Escorpion/projects/client/slechi/";
 });
 
 tabuada.addEventListener("click", () => {
