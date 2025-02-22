@@ -87,9 +87,9 @@
         padding-inline:20px;
     }
 
-    .logoMenu > .logo > h1 {
-        z-index: 1;
-        color: var(--vermelhoPadrao);
+    .logoMenu > .logo > img {
+        width: 80%;
+        height: 90%;
     }
 
     .closeMenu {
@@ -217,12 +217,9 @@
         width: 30% !important;
     }
 
-    .logo > h1 {
-        margin-left: 20px !important;
-    }
-
-    .logo > h1, .logo > h1 > p {
-        font-size: 1.6em !important;
+    .logo > img {
+        width: 50%;
+        height: 80%;
     }
 
     .indices {
@@ -321,7 +318,15 @@ footer {
         top:12vh;
     }
 
-   
+    .logo {
+        width: 16% !important;
+    }
+
+    .logo > img {
+        width: 55%;
+        height: 80%;
+    }
+
     .toast {
         width: 56px;
         height: 60px;
@@ -364,6 +369,11 @@ footer {
         padding-top: 40px;
     }
 
+    .logoFooter > img {
+        width: 25%;
+        height: 70%;
+    }
+
     .redesFooter1 > img, .redesFooter2 > img {
         width: 40px;
         height: 40px;
@@ -375,6 +385,14 @@ footer {
 }
 
 @media screen and (height <= 500px) {
+    .logo {
+        width: 16% !important;
+    }
+
+    .logo > img {
+        width: 40%;
+        height: 80%;
+    }
 
     .toast {
         top: 25vh;
@@ -399,6 +417,8 @@ footer {
         top:3vh;
     }
 
+    
+
     .flagsSelecionada > img {
         width:40px;
         height: 30px;
@@ -406,6 +426,10 @@ footer {
 }
 
 @media screen and (width <= 350px) {
+    .logoMenu > .logo > img {
+        width: 70%;
+        height: 90%;
+    }
 
     .pToast {
         font-size: 0.8em;
@@ -464,8 +488,9 @@ footer {
     height: 150vh;
 }
 
-.logoFooter > h1 {
-    margin-left: 0px;
+.logoFooter > img {
+    width: 25%;
+    height: 70%;
 }
 
 .conteudoFooter {

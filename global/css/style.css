@@ -102,17 +102,13 @@ header {
 .logo {
     width:20%;
     height: 100%;
+    padding:20px;
     justify-content: left !important;
 }
 
-.logo > h1 {
-    font-size:2em;
-    margin-left: 40px;
-    color: var(--branco);
-}
-
-.logo > h1 > b {
-    color: var(--vermelhoPadrao);
+.logo > img {
+    width: 25%;
+    height: 80%;
 }
 
 .indices {
@@ -337,16 +333,14 @@ footer {
     height: 30%;
     width: 100%;
     background: url('../icon/backTitle.svg') bottom / contain no-repeat;
+    position: relative;
 }
 
-.logoFooter > h1 {
-    font-size:2.5em;
-    margin-left: 0px;
-    color: var(--branco);
-}
-
-.logoFooter > h1 > b {
-    color: var(--vermelhoPadrao);
+.logoFooter > img {
+    width: 20%;
+    height: 80%;
+    position: absolute;
+    top: 0;
 }
 
 .redesFooter {
