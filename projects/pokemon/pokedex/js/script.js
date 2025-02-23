@@ -3,6 +3,8 @@ const app = {
     permitirSom: false, // Som só toca após interação do usuário
 
     init: function() {
+        
+
         // Obtém os elementos HTML
         this.titulo = document.querySelector(".tit");
         let prev = document.querySelector("#prev");
@@ -55,26 +57,65 @@ const app = {
         // Seleciona a Descrição
         let desc = "";
         let tit = " ";
-        for (let tipo of pokemon.tipo) {
-            tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
-        }
-        desc += `<br/>${pokemon.descricao}`;
-
-        // Exibe a Descrição do Pokémon
-        this.dad.innerHTML = desc;
+        const langPage = () => {
+            // Obtém a linguagem salva no localStorage
+            const lang = localStorage.getItem("lang");
+          
+            if (lang === "eu") {
+             
+            } else if (lang === "es") {
+              
+            } else if (lang === "fr") {
+             
+            } else if (lang === "ch") {
+                for (let tipo of pokemon.tipoChn) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                desc += `<br/>${pokemon.descricaoChn}`;
+                this.dad.innerHTML = desc;
+                this.titulo.innerHTML = tit;
+            } else {
+                for (let tipo of pokemon.tipo) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                desc += `<br/>${pokemon.descricao}`;
+                this.dad.innerHTML = desc;
+                this.titulo.innerHTML = tit;
+            }
+          };
+          
+          // Executa ao carregar a página
+          langPage();
 
         // Exibe a Imagem do Pokémon
         this.imagem.innerHTML = img;
 
         // Exibe o Nome e o Número
         this.pokedad.innerHTML = nome;
-        this.titulo.innerHTML = tit;
 
         const shiny = document.querySelector('.shiny');
+        const alola = document.querySelector('.alola');
 
         shiny.addEventListener('click', () => {
             let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgShiny}" alt="${pokemon.nome}"/>`;
             this.imagem.innerHTML = img;
+        });
+
+        if (pokemon.imgAlola) {
+            alola.style.display = 'flex';
+        }else {
+            alola.style.display = 'none';
+        }
+
+        alola.addEventListener('click', () => {
+            if (pokemon.imgAlola) {
+                let nomeAlola = `<big>${pokemon.nro} - ${pokemon.nomeAlola}${pokemon.generoAlola}</big>`;
+                this.pokedad.innerHTML = nomeAlola;
+                let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgAlola}" alt="${pokemon.nomeAlola}"/>`;
+                this.imagem.innerHTML = img;
+            }else {
+                alola.style.display = 'none';
+            }
         });
     },
 
