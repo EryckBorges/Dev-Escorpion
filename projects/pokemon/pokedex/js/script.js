@@ -69,6 +69,13 @@ const app = {
         // Exibe o Nome e o Número
         this.pokedad.innerHTML = nome;
         this.titulo.innerHTML = tit;
+
+        const shiny = document.querySelector('.shiny');
+
+        shiny.addEventListener('click', () => {
+            let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgShiny}" alt="${pokemon.nome}"/>`;
+            this.imagem.innerHTML = img;
+        });
     },
 
     onSearch: function(event) {
