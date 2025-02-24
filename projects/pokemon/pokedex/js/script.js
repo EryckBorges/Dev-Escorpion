@@ -96,10 +96,12 @@ const app = {
         const shiny = document.querySelector('.shiny');
         const alola = document.querySelector('.alola');
         const galar = document.querySelector('.galar');
+        const mega = document.querySelector('.mega');
         const gigantamax = document.querySelector('.gigantamax');
         const alolaShiny = document.querySelector('.alolaShiny');
         const galarShiny = document.querySelector('.galarShiny');
         const gigantamaxShiny = document.querySelector('.gigantamaxShiny');
+        const megaShiny = document.querySelector('.megaShiny');
 
         shiny.addEventListener('click', () => {
             let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgShiny}" alt="${pokemon.nome}"/>`;
@@ -127,6 +129,13 @@ const app = {
             }else {
                 gigantamax.style.display = 'none';
                 gigantamaxShiny.style.display = 'none';
+            }
+            if (pokemon.imgMega) {
+                mega.style.display = 'flex';
+                megaShiny.style.display = 'flex';
+            }else {
+                mega.style.display = 'none';
+                megaShiny.style.display = 'none';
             }
         }
 
@@ -165,15 +174,15 @@ const app = {
             this.pokedad.innerHTML = nomeGigantamax;
             let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgGigantamax}" alt="${pokemon.nomeGigantamax}"/>`;
             this.imagem.innerHTML = img;
-    });
+        });
 
-    gigantamaxShiny.addEventListener('click', () => {
+        gigantamaxShiny.addEventListener('click', () => {
             let nomeGigantamax = `<big>${pokemon.nro} - ${pokemon.nomeGigantamax}</big>`;
             this.pokedad.innerHTML = nomeGigantamax;
             let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgGigantamaxShiny}" alt="${pokemon.nomeGigantamax}"/>`;
             this.imagem.innerHTML = img;
-    });
-    },
+        });
+        },
 
     onSearch: function(event) {
         let pokeFind = event.target.value;
