@@ -95,20 +95,42 @@ const app = {
 
         const shiny = document.querySelector('.shiny');
         const alola = document.querySelector('.alola');
+        const galar = document.querySelector('.galar');
+        const gigantamax = document.querySelector('.gigantamax');
         const alolaShiny = document.querySelector('.alolaShiny');
+        const galarShiny = document.querySelector('.galarShiny');
+        const gigantamaxShiny = document.querySelector('.gigantamaxShiny');
 
         shiny.addEventListener('click', () => {
             let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgShiny}" alt="${pokemon.nome}"/>`;
             this.imagem.innerHTML = img;
         });
 
-        if (pokemon.imgAlola) {
-            alola.style.display = 'flex';
-            alolaShiny.style.display = 'flex';
-        }else {
-            alola.style.display = 'none';
-            alolaShiny.style.display = 'none';
+        const verificaVersion = () => {
+            if (pokemon.imgAlola) {
+                alola.style.display = 'flex';
+                alolaShiny.style.display = 'flex';
+            }else {
+                alola.style.display = 'none';
+                alolaShiny.style.display = 'none';
+            }
+            if (pokemon.imgGalar) {
+                galar.style.display = 'flex';
+                galarShiny.style.display = 'flex';
+            }else {
+                galar.style.display = 'none';
+                galarShiny.style.display = 'none';
+            }
+            if (pokemon.imgGigantamax) {
+                gigantamax.style.display = 'flex';
+                gigantamaxShiny.style.display = 'flex';
+            }else {
+                gigantamax.style.display = 'none';
+                gigantamaxShiny.style.display = 'none';
+            }
         }
+
+        verificaVersion();
 
         alola.addEventListener('click', () => {
                 let nomeAlola = `<big>${pokemon.nro} - ${pokemon.nomeAlola}${pokemon.generoAlola }</big>`;
@@ -117,13 +139,40 @@ const app = {
                 this.imagem.innerHTML = img;
         });
 
-
         alolaShiny.addEventListener('click', () => {
                 let nomeAlola = `<big>${pokemon.nro} - ${pokemon.nomeAlola}${pokemon.generoAlola }</big>`;
                 this.pokedad.innerHTML = nomeAlola;
                 let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgAlolaShiny}" alt="${pokemon.nomeAlola}"/>`;
                 this.imagem.innerHTML = img;
         });
+
+        galar.addEventListener('click', () => {
+                let nomeGalar = `<big>${pokemon.nro} - ${pokemon.nomeGalar}${pokemon.generoGalar }</big>`;
+                this.pokedad.innerHTML = nomeGalar;
+                let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgGalar}" alt="${pokemon.nomeGalar}"/>`;
+                this.imagem.innerHTML = img;
+        });
+
+        galarShiny.addEventListener('click', () => {
+                let nomeGalar = `<big>${pokemon.nro} - ${pokemon.nomeGalar}${pokemon.generoGalar }</big>`;
+                this.pokedad.innerHTML = nomeGalar;
+                let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgGalarShiny}" alt="${pokemon.nomeGalar}"/>`;
+                this.imagem.innerHTML = img;
+        });
+
+        gigantamax.addEventListener('click', () => {
+            let nomeGigantamax = `<big>${pokemon.nro} - ${pokemon.nomeGigantamax}</big>`;
+            this.pokedad.innerHTML = nomeGigantamax;
+            let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgGigantamax}" alt="${pokemon.nomeGigantamax}"/>`;
+            this.imagem.innerHTML = img;
+    });
+
+    gigantamaxShiny.addEventListener('click', () => {
+            let nomeGigantamax = `<big>${pokemon.nro} - ${pokemon.nomeGigantamax}</big>`;
+            this.pokedad.innerHTML = nomeGigantamax;
+            let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgGigantamaxShiny}" alt="${pokemon.nomeGigantamax}"/>`;
+            this.imagem.innerHTML = img;
+    });
     },
 
     onSearch: function(event) {
