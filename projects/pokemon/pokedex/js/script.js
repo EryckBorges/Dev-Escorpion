@@ -95,6 +95,7 @@ const app = {
 
         const shiny = document.querySelector('.shiny');
         const alola = document.querySelector('.alola');
+        const alolaShiny = document.querySelector('.alolaShiny');
 
         shiny.addEventListener('click', () => {
             let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgShiny}" alt="${pokemon.nome}"/>`;
@@ -103,19 +104,25 @@ const app = {
 
         if (pokemon.imgAlola) {
             alola.style.display = 'flex';
+            alolaShiny.style.display = 'flex';
         }else {
             alola.style.display = 'none';
+            alolaShiny.style.display = 'none';
         }
 
         alola.addEventListener('click', () => {
-            if (pokemon.imgAlola) {
-                let nomeAlola = `<big>${pokemon.nro} - ${pokemon.nomeAlola}${pokemon.generoAlola}</big>`;
+                let nomeAlola = `<big>${pokemon.nro} - ${pokemon.nomeAlola}${pokemon.generoAlola }</big>`;
                 this.pokedad.innerHTML = nomeAlola;
                 let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgAlola}" alt="${pokemon.nomeAlola}"/>`;
                 this.imagem.innerHTML = img;
-            }else {
-                alola.style.display = 'none';
-            }
+        });
+
+
+        alolaShiny.addEventListener('click', () => {
+                let nomeAlola = `<big>${pokemon.nro} - ${pokemon.nomeAlola}${pokemon.generoAlola }</big>`;
+                this.pokedad.innerHTML = nomeAlola;
+                let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgAlolaShiny}" alt="${pokemon.nomeAlola}"/>`;
+                this.imagem.innerHTML = img;
         });
     },
 
