@@ -89,7 +89,7 @@ cookie: 'Cookie Policy',
 privacity: 'Privacy',
   sobreMim: "About Me",
   contMim:
-    "Hello, my name is Éryck Borges da Silva Dionizio, I am 17 years old, graduated in Technical Computer Science from UNESP, and I am a Front-End Developer and Web Designer with experience in HTML, CSS, JavaScript, Git, GitHub, creating layouts and websites, basic maintenance of notebooks and PCs, as well as using Figma and Canva to develop modern and intuitive designs, always focusing on usability and performance. Passionate about technology, I am constantly seeking to learn and evolve.",
+    "Hello, my name is Éryck Borges da Silva Dionizio, I am 18 years old, graduated in Technical Computer Science from UNESP, and I am a Front-End Developer and Web Designer with experience in HTML, CSS, JavaScript, Git, GitHub, creating layouts and websites, basic maintenance of notebooks and PCs, as well as using Figma and Canva to develop modern and intuitive designs, always focusing on usability and performance. Passionate about technology, I am constantly seeking to learn and evolve.",
     meusProjetos: "My Projects",
     clientProjetos: "Client Portfolio",    
   visualizar: "View",
@@ -199,7 +199,7 @@ const brasil = {
   privacity: 'Privacidade',
   sobreMim: "Sobre Mim",
   contMim:
-    "Olá, meu nome é Éryck Borges da Silva Dionizio, tenho 17 anos, sou formado em Técnico em Informática pela UNESP e sou Front-End Developer e Web Designer com experiência em HTML, CSS, JavaScript, Git, GitHub, criação de layouts e sites, manutenção básica de notebooks e PCs, além de utilizar Figma e Canva para desenvolver designs modernos e intuitivos, sempre focando em usabilidade e performance. Apaixonado por tecnologia, estou sempre em busca de aprender e evoluir.",
+    "Olá, meu nome é Éryck Borges da Silva Dionizio, tenho 18 anos, sou formado em Técnico em Informática pela UNESP e sou Front-End Developer e Web Designer com experiência em HTML, CSS, JavaScript, Git, GitHub, criação de layouts e sites, manutenção básica de notebooks e PCs, além de utilizar Figma e Canva para desenvolver designs modernos e intuitivos, sempre focando em usabilidade e performance. Apaixonado por tecnologia, estou sempre em busca de aprender e evoluir.",
   meusProjetos: "Meus Projetos",
   clientProjetos: 'Portfólio de Clientes',
   visualizar: "Visualizar",
@@ -312,7 +312,7 @@ cookie: 'Política de Cookies',
 privacity: 'Privacidad',
   sobreMim: "Acerca de Mí",
   contMim:
-    "Hola, mi nombre es Éryck Borges da Silva Dionizio, tengo 17 años, soy graduado en Técnico en Informática por la UNESP y soy Front-End Developer y Web Designer con experiencia en HTML, CSS, JavaScript, Git, GitHub, creación de layouts y sitios web, mantenimiento básico de notebooks y PCs, además de utilizar Figma y Canva para desarrollar diseños modernos e intuitivos, siempre enfocándome en la usabilidad y el rendimiento. Apasionado por la tecnología, siempre estoy buscando aprender y evolucionar.",
+    "Hola, mi nombre es Éryck Borges da Silva Dionizio, tengo 18 años, soy graduado en Técnico en Informática por la UNESP y soy Front-End Developer y Web Designer con experiencia en HTML, CSS, JavaScript, Git, GitHub, creación de layouts y sitios web, mantenimiento básico de notebooks y PCs, además de utilizar Figma y Canva para desarrollar diseños modernos e intuitivos, siempre enfocándome en la usabilidad y el rendimiento. Apasionado por la tecnología, siempre estoy buscando aprender y evolucionar.",
     meusProjetos: "Mis Proyectos",
     clientProjetos: "Portafolio de Clientes",    
   visualizar: "Vista",
@@ -422,7 +422,7 @@ cookie: 'Politique de Cookies',
 privacity: 'Confidentialité',
   sobreMim: "Sur Moi",
   contMim:
-    "Bonjour, je m'appelle Éryck Borges da Silva Dionizio, j'ai 17 ans, je suis diplômé en Technicien en Informatique de l'UNESP et je suis Front-End Developer et Web Designer avec de l'expérience en HTML, CSS, JavaScript, Git, GitHub, création de layouts et de sites web, maintenance de base de notebooks et de PC, ainsi qu'en utilisant Figma et Canva pour développer des designs modernes et intuitifs, toujours en me concentrant sur l'ergonomie et la performance. Passionné par la technologie, je suis constamment à la recherche d'apprendre et d'évoluer.",
+    "Bonjour, je m'appelle Éryck Borges da Silva Dionizio, j'ai 18 ans, je suis diplômé en Technicien en Informatique de l'UNESP et je suis Front-End Developer et Web Designer avec de l'expérience en HTML, CSS, JavaScript, Git, GitHub, création de layouts et de sites web, maintenance de base de notebooks et de PC, ainsi qu'en utilisant Figma et Canva pour développer des designs modernes et intuitifs, toujours en me concentrant sur l'ergonomie et la performance. Passionné par la technologie, je suis constamment à la recherche d'apprendre et d'évoluer.",
     meusProjetos: "Mes Projets",
     clientProjetos: "Portefeuille de Clients",    
   visualizar: "Voir",
@@ -532,7 +532,7 @@ cookie: 'Cookie 政策',
 privacity: '隐私政策',
   sobreMim: "关于我",
   contMim:
-    "你好，我叫Éryck Borges da Silva Dionizio，今年17岁，毕业于UNESP的计算机技术专业，我是前端开发者和Web设计师，具有HTML、CSS、JavaScript、Git、GitHub经验，擅长布局和网站创建、笔记本电脑和PC的基础维护，并使用Figma和Canva开发现代化且直观的设计，始终关注可用性和性能。我热爱技术，始终在寻求学习和进步。 ",
+    "你好，我叫Éryck Borges da Silva Dionizio，今年18岁，毕业于UNESP的计算机技术专业，我是前端开发者和Web设计师，具有HTML、CSS、JavaScript、Git、GitHub经验，擅长布局和网站创建、笔记本电脑和PC的基础维护，并使用Figma和Canva开发现代化且直观的设计，始终关注可用性和性能。我热爱技术，始终在寻求学习和进步。 ",
     meusProjetos: "我的项目",
     clientProjetos: "客户作品集",    
   visualizar: "看法",
@@ -1243,7 +1243,7 @@ const ingles = () => {
   alternarIdioma("Eu");
   animacaoTyped(".typedEu", [
     "Hello, my name is Eryck Borges",
-    "I am 17 years old",
+    "I am 18 years old",
     "I am a Front-end Developer",
     "and Web Designer",
     "I am from São Paulo-BR",
@@ -1385,7 +1385,7 @@ const portugues = () => {
   alternarIdioma("Br");
   animacaoTyped(".typedBr", [
     "Olá, meu nome é Eryck Borges",
-    "Tenho 17 anos de idade",
+    "Tenho 18 anos de idade",
     "Sou um Front-end Developer",
     "e Web Designer",
     "Sou de São Paulo-BR",
@@ -1525,7 +1525,7 @@ const espanha = () => {
   alternarIdioma("Es");
   animacaoTyped(".typedEs", [
     "Hola, mi nombre es Éryck Borges",
-    "Tengo 17 años",
+    "Tengo 18 años",
     "Soy Desarrollador Front-end",
     "y Diseñador Web",
     "Soy de São Paulo-BR",
@@ -1666,7 +1666,7 @@ const frances = () => {
   alternarIdioma("Fr");
   animacaoTyped(".typedFr", [
     "Bonjour, je m'appelle Éryck Borges",
-    "J'ai 17 ans",
+    "J'ai 18 ans",
     "Je suis Développeur Front-end",
     "et Designer Web",
     "Je viens de São Paulo-BR",
@@ -1806,7 +1806,7 @@ const chines = () => {
   alternarIdioma("Ch");
   animacaoTyped(".typedCh", [
     "你好，我的名字是 Éryck Borges",
-    "我今年17岁",
+    "我今年18岁",
     "我是前端开发者",
     "也是网页设计师",
     "我来自巴西圣保罗",
