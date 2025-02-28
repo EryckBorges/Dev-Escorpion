@@ -214,3 +214,28 @@ body{
     margin-left:0vw;    
 }
 
+.shinyStar {
+    opacity: 0;
+    transition: 0.5s linear;
+    width: 20%;
+    height: 20%;
+    bottom: 30%;
+    position: absolute;
+    object-fit: contain;
+}
+
+.shinyStar > img, .nuvem > img {
+    width: 100%;
+    height: 100%;
+}
+
+.nuvem {
+    opacity: 0;
+    transition: 0.5s linear;
+    width: 35%;
+    height: 25%;
+    top: 30%;
+    position: absolute;
+    object-fit: contain;
+}
+
