@@ -68,11 +68,26 @@ const app = {
             const lang = localStorage.getItem("lang");
           
             if (lang === "eu") {
-             
+                for (let tipo of pokemon.tipoEua) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                desc += `<br/>${pokemon.descricaoEua}`;
+                this.dad.innerHTML = desc;
+                this.titulo.innerHTML = tit;
             } else if (lang === "es") {
-              
+                for (let tipo of pokemon.tipoEsp) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                desc += `<br/>${pokemon.descricaoEsp}`;
+                this.dad.innerHTML = desc;
+                this.titulo.innerHTML = tit;
             } else if (lang === "fr") {
-             
+                for (let tipo of pokemon.tipoFra) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                desc += `<br/>${pokemon.descricaoFra}`;
+                this.dad.innerHTML = desc;
+                this.titulo.innerHTML = tit;
             } else if (lang === "ch") {
                 for (let tipo of pokemon.tipoChn) {
                     tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
