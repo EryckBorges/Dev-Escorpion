@@ -112,6 +112,10 @@ const app = {
         const gigantamaxShiny = document.querySelector('.gigantamaxShiny');
         const megaShiny = document.querySelector('.megaShiny');
         const shinyStar = document.querySelector('.shinyStar');
+        const megax = document.querySelector('.x');
+        const megay = document.querySelector('.y');
+        const megaxShiny = document.querySelector('.xShiny');
+        const megayShiny = document.querySelector('.yShiny');
 
         const shinyAudio = () => {
             audio.play();
@@ -162,6 +166,18 @@ const app = {
                 mega.style.display = 'none';
                 megaShiny.style.display = 'none';
             }
+            if (pokemon.imgMegaX) {
+                megax.style.display = 'flex';
+                megay.style.display = 'flex';
+                megaxShiny.style.display = 'flex';
+                megayShiny.style.display = 'flex';
+            }else {
+                megax.style.display = 'none';
+                megay.style.display = 'none';
+                megaxShiny.style.display = 'none';
+                megayShiny.style.display = 'none';
+            }
+            
         }
 
         verificaVersion();
@@ -220,7 +236,78 @@ const app = {
             let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgGigantamaxShiny}" alt="${pokemon.nomeGigantamax}"/>`;
             this.imagem.innerHTML = img;
         });
-        },
+
+        mega.addEventListener('click', () => {
+
+            this.nuvem.style.opacity = '0';
+            this.nuvem.style.transition = '0.5s linear';
+                let nome = `<big>${pokemon.nro} - ${pokemon.nomeMega}</big>`;
+                this.pokedad.innerHTML = nome;
+                let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgMega}" alt="${pokemon.nomeMega}"/>`;
+                this.imagem.innerHTML = img;
+        });
+
+        megaShiny.addEventListener('click', () => {
+            megaValue = false;
+            megaValueShiny = true;
+            this.nuvem.style.opacity = '0';
+            this.nuvem.style.transition = '0.5s linear';
+            if (pokemon.imgMegaShinyX) {
+                typeMega.style.opacity = '1'
+                typeMega.style.transition = '0.5s linear';
+                let nome = `<big>${pokemon.nro} - ${pokemon.nome}</big>`;
+                this.pokedad.innerHTML = nome;
+                let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgShiny}" alt="${pokemon.nome}"/>`;
+                this.imagem.innerHTML = img;
+            }else {
+                shinyAudio();
+                let nomeMega = `<big>${pokemon.nro} - ${pokemon.nomeMega}</big>`;
+                this.pokedad.innerHTML = nomeMega;
+                let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgMegaShiny}" alt="${pokemon.nomeMega}"/>`;
+                this.imagem.innerHTML = img;
+            }
+        });
+
+        megax.addEventListener('click', () => {
+            this.nuvem.style.opacity = '0';
+            this.nuvem.style.transition = '0.5s linear';
+            let nome = `<big>${pokemon.nro} - ${pokemon.nomeMega}</big>`;
+            this.pokedad.innerHTML = nome;
+            let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgMegaX}" alt="${pokemon.nomeMega}"/>`;
+            this.imagem.innerHTML = img;
+        });
+
+        megay.addEventListener('click', () => {
+
+            this.nuvem.style.opacity = '0';
+            this.nuvem.style.transition = '0.5s linear';
+            let nome = `<big>${pokemon.nro} - ${pokemon.nomeMega}</big>`;
+            this.pokedad.innerHTML = nome;
+            let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgMegaY}" alt="${pokemon.nomeMega}"/>`;
+            this.imagem.innerHTML = img;
+        });
+
+        megaxShiny.addEventListener('click', () => {
+            this.nuvem.style.opacity = '0';
+            this.nuvem.style.transition = '0.5s linear';
+            let nome = `<big>${pokemon.nro} - ${pokemon.nomeMega}</big>`;
+            this.pokedad.innerHTML = nome;
+            let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgMegaShinyX}" alt="${pokemon.nomeMega}"/>`;
+            this.imagem.innerHTML = img;
+        });
+
+        megayShiny.addEventListener('click', () => {
+
+            this.nuvem.style.opacity = '0';
+            this.nuvem.style.transition = '0.5s linear';
+            let nome = `<big>${pokemon.nro} - ${pokemon.nomeMega}</big>`;
+            this.pokedad.innerHTML = nome;
+            let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgMegaShinyY}" alt="${pokemon.nomeMega}"/>`;
+            this.imagem.innerHTML = img;
+        });
+
+        
+    },
 
     onSearch: function(event) {
         let pokeFind = event.target.value;
