@@ -103,10 +103,10 @@ const app = {
                 this.dad.innerHTML = desc;
                 this.titulo.innerHTML = tit;
             }
-          };
-          
-          // Executa ao carregar a página
-          langPage();
+        };
+    
+        // Executa ao carregar a página
+        langPage();
 
         // Exibe a Imagem do Pokémon
         this.imagem.innerHTML = img;
@@ -198,6 +198,49 @@ const app = {
         verificaVersion();
 
         alola.addEventListener('click', () => {
+            desc = '';
+            tit = '';
+            const lang = localStorage.getItem("lang");
+
+            if (lang === "eu") {
+                for (let tipo of pokemon.tipoAlolaEua) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoAlolaEua}`;
+                this.dad.innerHTML = desc;
+        
+            }else if (lang === "ch") {
+                
+                for (let tipo of pokemon.tipoAlolaChn) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoAlolaChn}`;
+                this.dad.innerHTML = desc;
+            }else if (lang === "es") {
+                for (let tipo of pokemon.tipoAlolaEsp) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                this.titulo.innerHTML = tit;
+
+                desc += `<br/>${pokemon.descricaoAlolaEsp}`;
+                this.dad.innerHTML = desc;
+            }else if (lang === "fr") {
+                for (let tipo of pokemon.tipoAlolaFra) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoAlolaFra}`;
+                this.dad.innerHTML = desc;
+            }else {
+                for (let tipo of pokemon.tipoAlola) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoAlola}`;
+                this.dad.innerHTML = desc;
+            }
                 let nomeAlola = `<big>${pokemon.nro} - ${pokemon.nomeAlola}${pokemon.generoAlola }</big>`;
                 this.pokedad.innerHTML = nomeAlola;
                 let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgAlola}" alt="${pokemon.nomeAlola}"/>`;
@@ -205,6 +248,34 @@ const app = {
         });
 
         alolaShiny.addEventListener('click', () => {
+            desc = '';
+            tit = '';
+            const lang = localStorage.getItem("lang");
+
+            if (lang === "eu") {
+               
+                desc += `<br/>${pokemon.descricaoAlolaEua}`;
+                this.dad.innerHTML = desc;
+        
+            }else if (lang === "ch") {
+                
+                
+                desc += `<br/>${pokemon.descricaoAlolaChn}`;
+                this.dad.innerHTML = desc;
+            }else if (lang === "es") {
+                
+
+                desc += `<br/>${pokemon.descricaoAlolaEsp}`;
+                this.dad.innerHTML = desc;
+            }else if (lang === "fr") {
+                
+                desc += `<br/>${pokemon.descricaoAlolaFra}`;
+                this.dad.innerHTML = desc;
+            }else {
+                
+                desc += `<br/>${pokemon.descricaoAlola}`;
+                this.dad.innerHTML = desc;
+            }
             this.nuvem.style.opacity = '0';
             this.nuvem.style.transition = '0.5s linear';
             shinyAudio();
@@ -234,6 +305,34 @@ const app = {
         });
 
         gigantamax.addEventListener('click', () => { 
+            desc = '';
+            tit = '';
+            const lang = localStorage.getItem("lang");
+
+            if (lang === "eu") {
+               
+                desc += `<br/>${pokemon.descricaoGigantamaxEua}`;
+                this.dad.innerHTML = desc;
+        
+            }else if (lang === "ch") {
+                
+                
+                desc += `<br/>${pokemon.descricaoGigantamaxChn}`;
+                this.dad.innerHTML = desc;
+            }else if (lang === "es") {
+                
+
+                desc += `<br/>${pokemon.descricaoGigantamaxEsp}`;
+                this.dad.innerHTML = desc;
+            }else if (lang === "fr") {
+                
+                desc += `<br/>${pokemon.descricaoGigantamaxFra}`;
+                this.dad.innerHTML = desc;
+            }else {
+                
+                desc += `<br/>${pokemon.descricaoGigantamax}`;
+                this.dad.innerHTML = desc;
+            }
             this.nuvem.style.opacity = '1';
             this.nuvem.style.transition = '0.5s linear';
             let nomeGigantamax = `<big>${pokemon.nro} - ${pokemon.nomeGigantamax}</big>`;
@@ -243,6 +342,34 @@ const app = {
         });
 
         gigantamaxShiny.addEventListener('click', () => {
+            desc = '';
+            tit = '';
+            const lang = localStorage.getItem("lang");
+
+            if (lang === "eu") {
+               
+                desc += `<br/>${pokemon.descricaoGigantamaxEua}`;
+                this.dad.innerHTML = desc;
+        
+            }else if (lang === "ch") {
+                
+                
+                desc += `<br/>${pokemon.descricaoGigantamaxChn}`;
+                this.dad.innerHTML = desc;
+            }else if (lang === "es") {
+                
+
+                desc += `<br/>${pokemon.descricaoGigantamaxEsp}`;
+                this.dad.innerHTML = desc;
+            }else if (lang === "fr") {
+                
+                desc += `<br/>${pokemon.descricaoGigantamaxFra}`;
+                this.dad.innerHTML = desc;
+            }else {
+                
+                desc += `<br/>${pokemon.descricaoGigantamax}`;
+                this.dad.innerHTML = desc;
+            }
             shinyAudio();
             this.nuvem.style.opacity = '1';
             this.nuvem.style.transition = '0.5s linear';
@@ -253,13 +380,52 @@ const app = {
         });
 
         mega.addEventListener('click', () => {
+            desc = '';
+            tit = '';
+            const lang = localStorage.getItem("lang");
 
+            if (lang === "eu") {
+                for (let tipo of pokemon.tipoMegaEua) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                desc += `<br/>${pokemon.descricaoMegaEua}`;
+                this.dad.innerHTML = desc;
+                this.titulo.innerHTML = tit;
+            }else if (lang === "ch") {
+                for (let tipo of pokemon.tipoMegaChn) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoMegaChn}`;
+                this.dad.innerHTML = desc;
+            }else if (lang === "es") {
+                for (let tipo of pokemon.tipoMegaEsp) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoMegaEsp}`;
+                this.dad.innerHTML = desc;
+            }else if (lang === "fr") {
+                for (let tipo of pokemon.tipoMegaFra) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoMegaFra}`;
+                this.dad.innerHTML = desc;
+            }else {
+                for (let tipo of pokemon.tipoMega) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoMega}`;
+                this.dad.innerHTML = desc;
+            }
             this.nuvem.style.opacity = '0';
             this.nuvem.style.transition = '0.5s linear';
-                let nome = `<big>${pokemon.nro} - ${pokemon.nomeMega}</big>`;
-                this.pokedad.innerHTML = nome;
-                let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgMega}" alt="${pokemon.nomeMega}"/>`;
-                this.imagem.innerHTML = img;
+            let nome = `<big>${pokemon.nro} - ${pokemon.nomeMega}</big>`;
+            this.pokedad.innerHTML = nome;
+            let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgMega}" alt="${pokemon.nomeMega}"/>`;
+            this.imagem.innerHTML = img;
         });
 
         megaShiny.addEventListener('click', () => {
@@ -267,6 +433,46 @@ const app = {
             megaValueShiny = true;
             this.nuvem.style.opacity = '0';
             this.nuvem.style.transition = '0.5s linear';
+            desc = '';
+            tit = '';
+            const lang = localStorage.getItem("lang");
+
+            if (lang === "eu") {
+                for (let tipo of pokemon.tipoMegaEua) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                desc += `<br/>${pokemon.descricaoMegaEua}`;
+                this.dad.innerHTML = desc;
+                this.titulo.innerHTML = tit;
+            }else if (lang === "ch") {
+                for (let tipo of pokemon.tipoMegaChn) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoMegaChn}`;
+                this.dad.innerHTML = desc;
+            }else if (lang === "es") {
+                for (let tipo of pokemon.tipoMegaEsp) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoMegaEsp}`;
+                this.dad.innerHTML = desc;
+            }else if (lang === "fr") {
+                for (let tipo of pokemon.tipoMegaFra) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoMegaFra}`;
+                this.dad.innerHTML = desc;
+            }else {
+                for (let tipo of pokemon.tipoMega) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoMega}`;
+                this.dad.innerHTML = desc;
+            }
             if (pokemon.imgMegaShinyX) {
                 typeMega.style.opacity = '1'
                 typeMega.style.transition = '0.5s linear';
@@ -284,6 +490,46 @@ const app = {
         });
 
         megax.addEventListener('click', () => {
+            desc = '';
+            tit = '';
+            const lang = localStorage.getItem("lang");
+
+            if (lang === "eu") {
+                for (let tipo of pokemon.tipoMegaEuaX) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                desc += `<br/>${pokemon.descricaoMegaEuaX}`;
+                this.dad.innerHTML = desc;
+                this.titulo.innerHTML = tit;
+            }else if (lang === "ch") {
+                for (let tipo of pokemon.tipoMegaChnX) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                desc += `<br/>${pokemon.descricaoMegaChnX}`;
+                this.dad.innerHTML = desc;
+                this.titulo.innerHTML = tit;
+            }else if (lang === "es") {
+                for (let tipo of pokemon.tipoMegaEspX) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                desc += `<br/>${pokemon.descricaoMegaEspX}`;
+                this.dad.innerHTML = desc;
+                this.titulo.innerHTML = tit;
+            }else if (lang === "fr") {
+                for (let tipo of pokemon.tipoMegaFraX) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                desc += `<br/>${pokemon.descricaoMegaFraX}`;
+                this.dad.innerHTML = desc;
+                this.titulo.innerHTML = tit;
+            }else {
+                for (let tipo of pokemon.tipoMegaX) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                desc += `<br/>${pokemon.descricaoMegaX}`;
+                this.dad.innerHTML = desc;
+                this.titulo.innerHTML = tit;
+            }
             this.nuvem.style.opacity = '0';
             this.nuvem.style.transition = '0.5s linear';
             let nome = `<big>${pokemon.nro} - ${pokemon.nomeMega}</big>`;
@@ -293,7 +539,46 @@ const app = {
         });
 
         megay.addEventListener('click', () => {
+            desc = '';
+            tit = '';
+            const lang = localStorage.getItem("lang");
 
+            if (lang === "eu") {
+                for (let tipo of pokemon.tipoMegaEuaY) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoMegaEuaY}`;
+                this.dad.innerHTML = desc;
+            }else if (lang === "ch") {
+                for (let tipo of pokemon.tipoMegaChnY) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoMegaChnY}`;
+                this.dad.innerHTML = desc;
+            }else if (lang === "es") {
+                for (let tipo of pokemon.tipoMegaEspY) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoMegaEspY}`;
+                this.dad.innerHTML = desc;
+            }else if (lang === "fr") {
+                for (let tipo of pokemon.tipoMegaFraY) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoMegaFraY}`;
+                this.dad.innerHTML = desc;
+            }else {
+                for (let tipo of pokemon.tipoMegaY) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoMegaY}`;
+                this.dad.innerHTML = desc;
+            }
             this.nuvem.style.opacity = '0';
             this.nuvem.style.transition = '0.5s linear';
             let nome = `<big>${pokemon.nro} - ${pokemon.nomeMega}</big>`;
@@ -303,6 +588,46 @@ const app = {
         });
 
         megaxShiny.addEventListener('click', () => {
+            desc = '';
+            tit = '';
+            const lang = localStorage.getItem("lang");
+
+            if (lang === "eu") {
+                for (let tipo of pokemon.tipoMegaEuaX) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoMegaEuaX}`;
+                this.dad.innerHTML = desc;
+            }else if (lang === "ch") {
+                for (let tipo of pokemon.tipoMegaChnX) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoMegaChnX}`;
+                this.dad.innerHTML = desc;
+            }else if (lang === "es") {
+                for (let tipo of pokemon.tipoMegaEspX) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoMegaEspX}`;
+                this.dad.innerHTML = desc;
+            }else if (lang === "fr") {
+                for (let tipo of pokemon.tipoMegaFraX) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoMegaFraX}`;
+                this.dad.innerHTML = desc;
+            }else {
+                for (let tipo of pokemon.tipoMegaX) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoMegaX}`;
+                this.dad.innerHTML = desc;
+            }
             this.nuvem.style.opacity = '0';
             this.nuvem.style.transition = '0.5s linear';
             let nome = `<big>${pokemon.nro} - ${pokemon.nomeMega}</big>`;
@@ -312,7 +637,46 @@ const app = {
         });
 
         megayShiny.addEventListener('click', () => {
+            desc = '';
+            tit = '';
+            const lang = localStorage.getItem("lang");
 
+            if (lang === "eu") {
+                for (let tipo of pokemon.tipoMegaEuaY) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoMegaEuaY}`;
+                this.dad.innerHTML = desc;
+            }else if (lang === "ch") {
+                for (let tipo of pokemon.tipoMegaChnY) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoMegaChnY}`;
+                this.dad.innerHTML = desc;
+            }else if (lang === "es") {
+                for (let tipo of pokemon.tipoMegaEspY) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoMegaEspY}`;
+                this.dad.innerHTML = desc;
+            }else if (lang === "fr") {
+                for (let tipo of pokemon.tipoMegaFraY) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoMegaFraY}`;
+                this.dad.innerHTML = desc;
+            }else {
+                for (let tipo of pokemon.tipoMegaY) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+                this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoMegaY}`;
+                this.dad.innerHTML = desc;
+            }
             this.nuvem.style.opacity = '0';
             this.nuvem.style.transition = '0.5s linear';
             let nome = `<big>${pokemon.nro} - ${pokemon.nomeMega}</big>`;
@@ -321,7 +685,58 @@ const app = {
             this.imagem.innerHTML = img;
         });
 
-        
+        //Função de slide de projetos e serviços
+const slider = document.querySelector(".versions");
+let isDown = false;
+let startX;
+let scrollLeft;
+
+// Eventos de mouse
+slider.addEventListener("mousedown", (e) => {
+  isDown = true;
+  slider.classList.add("active");
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener("mouseleave", () => {
+  isDown = false;
+  slider.classList.remove("active");
+});
+
+slider.addEventListener("mouseup", () => {
+  isDown = false;
+  slider.classList.remove("active");
+});
+
+slider.addEventListener("mousemove", (e) => {
+  if (!isDown) return; // Parar se o mouse não estiver pressionado
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 2; // Multiplica para ajustar a velocidade
+  slider.scrollLeft = scrollLeft - walk;
+});
+
+// Eventos de toque
+slider.addEventListener("touchstart", (e) => {
+  isDown = true;
+  slider.classList.add("active");
+  startX = e.touches[0].pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener("touchend", () => {
+  isDown = false;
+  slider.classList.remove("active");
+});
+
+slider.addEventListener("touchmove", (e) => {
+  if (!isDown) return; // Parar se não houver toque ativo
+  e.preventDefault();
+  const x = e.touches[0].pageX - slider.offsetLeft;
+  const walk = (x - startX) * 2; // Multiplica para ajustar a velocidade
+  slider.scrollLeft = scrollLeft - walk;
+});
     },
 
     onSearch: function(event) {
