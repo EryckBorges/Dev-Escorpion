@@ -223,7 +223,21 @@ body{
 }
 
 .pok-img4{
+    height:20vh;
+    position:fixed;
+    margin-top:-15vh;
+    margin-left:0vw;    
+}
+
+.pok-img5{
     height:30vh;
+    position:fixed;
+    margin-top:-15vh;
+    margin-left:0vw;    
+}
+
+.pok-img6{
+    height:40vh;
     position:fixed;
     margin-top:-15vh;
     margin-left:0vw;    
@@ -247,9 +261,9 @@ body{
 .nuvem {
     opacity: 0;
     transition: 0.5s linear;
-    width: 35%;
-    height: 25%;
-    top: 30%;
+    width: 45%;
+    height: 35%;
+    top: 0%;
     position: absolute;
     object-fit: contain;
 }

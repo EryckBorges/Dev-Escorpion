@@ -245,7 +245,7 @@ const app = {
             }
             let nomeAlola = `<big class="center over">${pokemon.nro} - ${pokemon.nomeAlola} <img class='iconName' src="./image/alola.png" alt="Alola"></big>`;
                 this.pokedad.innerHTML = nomeAlola;
-                let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgAlola}" alt="${pokemon.nomeAlola}"/>`;
+                let img = `<img class="pok-img${pokemon.tamanhoAlola}" src="${pokemon.imgAlola}" alt="${pokemon.nomeAlola}"/>`;
                 this.imagem.innerHTML = img;
         });
 
@@ -283,7 +283,7 @@ const app = {
             shinyAudio();
             let nomeAlola = `<big class="center over">${pokemon.nro} - ${pokemon.nomeAlola} <img class='iconName' src="./image/alolaShiny.png" alt="Alola"></big>`;
             this.pokedad.innerHTML = nomeAlola;
-                let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgAlolaShiny}" alt="${pokemon.nomeAlola}"/>`;
+                let img = `<img class="pok-img${pokemon.tamanhoAlola}" src="${pokemon.imgAlolaShiny}" alt="${pokemon.nomeAlola}"/>`;
                 this.imagem.innerHTML = img;
         });
 
@@ -335,7 +335,7 @@ this.titulo.innerHTML = tit;
             this.nuvem.style.transition = '0.5s linear';
             let nomeGalar = `<big class="center over">${pokemon.nro} - ${pokemon.nomeGalar} <img class='iconName' src="./image/galar.png" alt="Galar"></big>`;
                 this.pokedad.innerHTML = nomeGalar;
-                let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgGalar}" alt="${pokemon.nomeGalar}"/>`;
+                let img = `<img class="pok-img${pokemon.tamanhoGalar}" src="${pokemon.imgGalar}" alt="${pokemon.nomeGalar}"/>`;
                 this.imagem.innerHTML = img;
         });
 
@@ -388,7 +388,7 @@ this.titulo.innerHTML = tit;
             shinyAudio();
             let nomeGalar = `<big class="center over">${pokemon.nro} - ${pokemon.nomeGalar} <img class='iconName' src="./image/galarShiny.png" alt="Galar"></big>`;
                 this.pokedad.innerHTML = nomeGalar;
-                let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgGalarShiny}" alt="${pokemon.nomeGalar}"/>`;
+                let img = `<img class="pok-img${pokemon.tamanhoGalar}" src="${pokemon.imgGalarShiny}" alt="${pokemon.nomeGalar}"/>`;
                 this.imagem.innerHTML = img;
         });
 
@@ -425,7 +425,7 @@ this.titulo.innerHTML = tit;
             this.nuvem.style.transition = '0.5s linear';
             let nomeGigantamax = `<big class="center over">${pokemon.nro} - ${pokemon.nomeGigantamax} <img class='iconName' src="./image/gigantama.png" alt="Gigantamax"></big>`;
             this.pokedad.innerHTML = nomeGigantamax;
-            let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgGigantamax}" alt="${pokemon.nomeGigantamax}"/>`;
+            let img = `<img class="pok-img${pokemon.tamanhoGigantamax}" src="${pokemon.imgGigantamax}" alt="${pokemon.nomeGigantamax}"/>`;
             this.imagem.innerHTML = img;
         });
 
@@ -463,7 +463,7 @@ this.titulo.innerHTML = tit;
             this.nuvem.style.transition = '0.5s linear';
             let nomeGigantamax = `<big class="center over">${pokemon.nro} - ${pokemon.nomeGigantamax} <img class='iconName' src="./image/gigantamaxShiny.png" alt="Gigantamax"></big>`;
             this.pokedad.innerHTML = nomeGigantamax;
-            let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgGigantamaxShiny}" alt="${pokemon.nomeGigantamax}"/>`;
+            let img = `<img class="pok-img${pokemon.tamanhoGigantamax}" src="${pokemon.imgGigantamaxShiny}" alt="${pokemon.nomeGigantamax}"/>`;
             this.imagem.innerHTML = img;
         });
 
@@ -512,7 +512,7 @@ this.titulo.innerHTML = tit;
             this.nuvem.style.transition = '0.5s linear';
             let nome = `<big class="center over">${pokemon.nro} - ${pokemon.nomeMega} <img class='iconName' src="./image/mega.png" alt="Mega Evolution"></big>`;
             this.pokedad.innerHTML = nome;
-            let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgMega}" alt="${pokemon.nomeMega}"/>`;
+            let img = `<img class="pok-img${pokemon.tamanhoMega}" src="${pokemon.imgMega}" alt="${pokemon.nomeMega}"/>`;
             this.imagem.innerHTML = img;
         });
 
@@ -566,13 +566,13 @@ this.titulo.innerHTML = tit;
                 typeMega.style.transition = '0.5s linear';
                 let nome = `<big>${pokemon.nro} - ${pokemon.nome}</big>`;
                 this.pokedad.innerHTML = nome;
-                let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgShiny}" alt="${pokemon.nome}"/>`;
+                let img = `<img class="pok-img${pokemon.tamanhoMega}" src="${pokemon.imgShiny}" alt="${pokemon.nome}"/>`;
                 this.imagem.innerHTML = img;
             }else {
                 shinyAudio();
                 let nomeMega = `<big class="center over">${pokemon.nro} - ${pokemon.nomeMega} <img class='iconName' src="./image/megaShiny.png" alt="Mega Evolution"></big>`
                 this.pokedad.innerHTML = nomeMega;
-                let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgMegaShiny}" alt="${pokemon.nomeMega}"/>`;
+                let img = `<img class="pok-img${pokemon.tamanhoMega}" src="${pokemon.imgMegaShiny}" alt="${pokemon.nomeMega}"/>`;
                 this.imagem.innerHTML = img;
             }
         });
@@ -622,7 +622,7 @@ this.titulo.innerHTML = tit;
             this.nuvem.style.transition = '0.5s linear';
             let nome = `<big class="center over">${pokemon.nro} - ${pokemon.nomeMega} <img class='iconName' src="./image/x.png" alt="Mega Evolution"></big>`;
             this.pokedad.innerHTML = nome;
-            let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgMegaX}" alt="${pokemon.nomeMega}"/>`;
+            let img = `<img class="pok-img${pokemon.tamanhoMega}" src="${pokemon.imgMegaX}" alt="${pokemon.nomeMega}"/>`;
             this.imagem.innerHTML = img;
         });
 
@@ -671,7 +671,7 @@ this.titulo.innerHTML = tit;
             this.nuvem.style.transition = '0.5s linear';
             let nome = `<big class="center over">${pokemon.nro} - ${pokemon.nomeMega} <img class='iconName' src="./image/y.png" alt="Mega Evolution"></big>`;
             this.pokedad.innerHTML = nome;
-            let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgMegaY}" alt="${pokemon.nomeMega}"/>`;
+            let img = `<img class="pok-img${pokemon.tamanhoMega}" src="${pokemon.imgMegaY}" alt="${pokemon.nomeMega}"/>`;
             this.imagem.innerHTML = img;
         });
 
@@ -720,7 +720,7 @@ this.titulo.innerHTML = tit;
             this.nuvem.style.transition = '0.5s linear';
             let nome = `<big class="center over">${pokemon.nro} - ${pokemon.nomeMega} <img class='iconName' src="./image/xShiny.png" alt="Mega Evolution"></big>`;
             this.pokedad.innerHTML = nome;
-            let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgMegaShinyX}" alt="${pokemon.nomeMega}"/>`;
+            let img = `<img class="pok-img${pokemon.tamanhoMega}" src="${pokemon.imgMegaShinyX}" alt="${pokemon.nomeMega}"/>`;
             this.imagem.innerHTML = img;
         });
 
@@ -769,7 +769,7 @@ this.titulo.innerHTML = tit;
             this.nuvem.style.transition = '0.5s linear';
             let nome = `<big class="center over">${pokemon.nro} - ${pokemon.nomeMega} <img class='iconName' src="./image/yShiny.png" alt="Mega Evolution"></big>`;
             this.pokedad.innerHTML = nome;
-            let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgMegaShinyY}" alt="${pokemon.nomeMega}"/>`;
+            let img = `<img class="pok-img${pokemon.tamanhoMega}" src="${pokemon.imgMegaShinyY}" alt="${pokemon.nomeMega}"/>`;
             this.imagem.innerHTML = img;
         });
 
