@@ -716,6 +716,7 @@ this.titulo.innerHTML = tit;
                 desc += `<br/>${pokemon.descricaoMegaX}`;
                 this.dad.innerHTML = desc;
             }
+            shinyAudio();
             this.nuvem.style.opacity = '0';
             this.nuvem.style.transition = '0.5s linear';
             let nome = `<big class="center over">${pokemon.nro} - ${pokemon.nomeMega} <img class='iconName' src="./image/xShiny.png" alt="Mega Evolution"></big>`;
@@ -765,6 +766,7 @@ this.titulo.innerHTML = tit;
                 desc += `<br/>${pokemon.descricaoMegaY}`;
                 this.dad.innerHTML = desc;
             }
+            shinyAudio();
             this.nuvem.style.opacity = '0';
             this.nuvem.style.transition = '0.5s linear';
             let nome = `<big class="center over">${pokemon.nro} - ${pokemon.nomeMega} <img class='iconName' src="./image/yShiny.png" alt="Mega Evolution"></big>`;
