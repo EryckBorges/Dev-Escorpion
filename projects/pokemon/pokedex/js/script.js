@@ -288,6 +288,49 @@ const app = {
         });
 
         galar.addEventListener('click', () => {
+             desc = '';
+            tit = '';
+            const lang = localStorage.getItem("lang");
+
+            if (lang === "eu") {
+                for (let tipo of pokemon.tipoGalarEua) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoGalarEua}`;
+                this.dad.innerHTML = desc;
+        
+            }else if (lang === "ch") {
+                for (let tipo of pokemon.tipoGalarChn) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+this.titulo.innerHTML = tit;
+                
+                desc += `<br/>${pokemon.descricaoGalarChn}`;
+                this.dad.innerHTML = desc;
+            }else if (lang === "es") {
+                
+                for (let tipo of pokemon.tipoGalarEsp) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoGalarEsp}`;
+                this.dad.innerHTML = desc;
+            }else if (lang === "fr") {
+                for (let tipo of pokemon.tipoGalarFra) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoGalarFra}`;
+                this.dad.innerHTML = desc;
+            }else {
+                for (let tipo of pokemon.tipoGalar) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoGalar}`;
+                this.dad.innerHTML = desc;
+            }
             this.nuvem.style.opacity = '0';
             this.nuvem.style.transition = '0.5s linear';
             let nomeGalar = `<big class="center over">${pokemon.nro} - ${pokemon.nomeGalar} <img class='iconName' src="./image/galar.png" alt="Galar"></big>`;
@@ -297,6 +340,49 @@ const app = {
         });
 
         galarShiny.addEventListener('click', () => {
+            desc = '';
+            tit = '';
+            const lang = localStorage.getItem("lang");
+
+            if (lang === "eu") {
+                for (let tipo of pokemon.tipoGalarEua) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoGalarEua}`;
+                this.dad.innerHTML = desc;
+        
+            }else if (lang === "ch") {
+                for (let tipo of pokemon.tipoGalarChn) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+this.titulo.innerHTML = tit;
+                
+                desc += `<br/>${pokemon.descricaoGalarChn}`;
+                this.dad.innerHTML = desc;
+            }else if (lang === "es") {
+                
+                for (let tipo of pokemon.tipoGalarEsp) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoGalarEsp}`;
+                this.dad.innerHTML = desc;
+            }else if (lang === "fr") {
+                for (let tipo of pokemon.tipoGalarFra) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoGalarFra}`;
+                this.dad.innerHTML = desc;
+            }else {
+                for (let tipo of pokemon.tipoGalar) {
+                    tit += `<img class='icon' src="${tipos[tipo]}" alt="${tipo}"> ${tipo.toUpperCase()} `;
+                }
+this.titulo.innerHTML = tit;
+                desc += `<br/>${pokemon.descricaoGalar}`;
+                this.dad.innerHTML = desc;
+            }
             this.nuvem.style.opacity = '0';
             this.nuvem.style.transition = '0.5s linear';
             shinyAudio();
