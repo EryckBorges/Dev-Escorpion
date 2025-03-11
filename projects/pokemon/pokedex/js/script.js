@@ -3,8 +3,7 @@ const app = {
     permitirSom: false, // Som só toca após interação do usuário
 
     init: function() {
-        
-
+    
         // Obtém os elementos HTML
         this.titulo = document.querySelector(".tit");
         let prev = document.querySelector("#prev");
@@ -118,6 +117,7 @@ const app = {
         audio.src = './audio/shiny.mp3';
 
         const shiny = document.querySelector('.shiny');
+        const normal = document.querySelector('.normal');
         const alola = document.querySelector('.alola');
         const galar = document.querySelector('.galar');
         const mega = document.querySelector('.mega');
@@ -144,10 +144,26 @@ const app = {
             }, 1200);
         }
 
+        normal.addEventListener('click', () => {
+            this.nuvem.style.opacity = '0';
+            this.nuvem.style.transition = '0.5s linear';
+            let nome = `<big class="center over">${pokemon.nro} - ${pokemon.nome}`;
+            let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.img}" alt="${pokemon.nome}"/>`;
+            if (pokemon.som !== undefined && this.permitirSom) {
+                if (this.som !== null && !this.som.paused) {
+                    this.som.pause();
+                }
+                this.som = new Audio(pokemon.som);
+                this.som.play().catch(err => console.warn("Erro ao tentar reproduzir áudio:", err));
+            }
+            this.imagem.innerHTML = img;
+            this.pokedad.innerHTML = nome;
+        });
+
         shiny.addEventListener('click', () => {
             this.nuvem.style.opacity = '0';
             this.nuvem.style.transition = '0.5s linear';
-            let nome = `<big class="center over">${pokemon.nro} - ${pokemon.nome} <img class='iconName' src="./image/shiny.png" alt="Alola"></big>`;
+            let nome = `<big class="center over">${pokemon.nro} - ${pokemon.nome} <img class='iconName' src="./image/shiny.png" alt="Shiny"></big>`;
             shinyAudio();
             let img = `<img class="pok-img${pokemon.tamanho}" src="${pokemon.imgShiny}" alt="${pokemon.nome}"/>`;
             this.imagem.innerHTML = img;
@@ -830,6 +846,8 @@ slider.addEventListener("touchmove", (e) => {
     },
 
     onSearch: function(event) {
+        this.nuvem.style.opacity = '0';
+        this.nuvem.style.transition = '0.5s linear';
         let pokeFind = event.target.value;
         if (Number.isNaN(parseInt(pokeFind)) && pokeFind.length > 3) {
             for (let i = 0; i < dados.length; i++) {

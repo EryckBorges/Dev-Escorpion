@@ -282,8 +282,6 @@ capaPokemon.forEach((audios) => {
   });
 })
   
-
-
 scarlet.forEach((scarlets) => {
   scarlets.addEventListener('click', () => {
     gameDesc = "scarlet";
@@ -651,7 +649,6 @@ let praBaixo = false;
 let startXY;
 let scrollEsquerda;
 
-// Eventos de mouse
 avalia.addEventListener("mousedown", (e) => {
   praBaixo = true;
   avalia.classList.add("active");
@@ -673,11 +670,10 @@ avalia.addEventListener("mousemove", (e) => {
   if (!praBaixo) return;
   e.preventDefault();
   const x = e.pageX - avalia.scrollLeft;
-  const walk = (x - startXY) * 0.5; // Multiplica para ajustar a velocidade
+  const walk = (x - startXY) * 0.5;
   avalia.scrollLeft = scrollEsquerda - walk;
 });
 
-// Eventos de toque
 avalia.addEventListener("touchstart", (e) => {
   praBaixo = true;
   avalia.classList.add("active");
@@ -694,9 +690,19 @@ avalia.addEventListener("touchmove", (e) => {
   if (!praBaixo) return;
   e.preventDefault();
   const x = e.touches[0].pageX - avalia.scrollLeft;
-  const walk = (x - startXY) * 0.5; // Multiplica para ajustar a velocidade
+  const walk = (x - startXY) * 0.5;
   avalia.scrollLeft = scrollEsquerda - walk;
 });
+
+avalia.addEventListener("wheel", (e) => {
+  if (e.deltaY !== 0) {
+    return;
+  }
+  
+  e.preventDefault();
+  avalia.scrollLeft += e.deltaX || e.deltaY;
+});
+
 
 const ingles = () => {
   elementos.inicio.forEach((inicioText) => {
