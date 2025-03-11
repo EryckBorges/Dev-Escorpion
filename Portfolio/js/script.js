@@ -2062,6 +2062,15 @@ slider.addEventListener("touchmove", (e) => {
   slider.scrollLeft = scrollLeft - walk;
 });
 
+slider.addEventListener("wheel", (e) => {
+  if (e.deltaY !== 0) {
+    return;
+  }
+  
+  e.preventDefault();
+  slider.scrollLeft += e.deltaX || e.deltaY;
+});
+
 // Função de slide de avaliação
 const avalia = document.querySelector(".avalia");
 let praBaixo = false;
@@ -2114,6 +2123,16 @@ avalia.addEventListener("touchmove", (e) => {
   const walk = (x - startXY) * 0.5; // Multiplica para ajustar a velocidade
   avalia.scrollLeft = scrollEsquerda - walk;
 });
+
+avalia.addEventListener("wheel", (e) => {
+  if (e.deltaY !== 0) {
+    return;
+  }
+  
+  e.preventDefault();
+  avalia.scrollLeft += e.deltaX || e.deltaY;
+});
+
 //Função de slide de projetos e serviços
 const sliderServices = document.querySelector(".swiperServices");
 let isDownServices = false;
@@ -2165,6 +2184,15 @@ sliderServices.addEventListener("touchmove", (evms) => {
   const x = evms.touches[0].pageX - sliderServices.offsetLeft;
   const walk = (x - startXServices) * 2; // Multiplica para ajustar a velocidade
   sliderServices.scrollLeft = scrollLeftServices - walk;
+});
+
+sliderServices.addEventListener("wheel", (e) => {
+  if (e.deltaY !== 0) {
+    return;
+  }
+  
+  e.preventDefault();
+  sliderServices.scrollLeft += e.deltaX || e.deltaY;
 });
 
 //Função mostrar mais certificados

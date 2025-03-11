@@ -306,6 +306,16 @@ document.addEventListener("DOMContentLoaded", () => {
         const walk = (x - startX) * 2;
         slider.scrollLeft = scrollLeft - walk;
     });
+
+    slider.addEventListener("wheel", (e) => {
+      if (e.deltaY !== 0) {
+        return;
+      }
+      
+      e.preventDefault();
+      slider.scrollLeft += e.deltaX || e.deltaY;
+    });
+    
 });
 
 const sabores = document.querySelector('.sabores');
