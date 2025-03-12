@@ -1,0 +1,3022 @@
+/*Responsividade Celular*/
+
+@media screen and (max-width: 767px) {
+    body {
+        background:black;
+        background-size: cover;
+        background-attachment: fixed;
+        overflow:hidden;
+    }
+    
+    #fundo {
+        width:100vw;
+        height:100vh;
+        overflow:hidden;
+    }
+    
+    #fundo #img {
+        width:100%;
+        height: 100%;
+        position: absolute;
+        top:0;
+        right: 0;
+        border:none;
+        overflow:hidden;
+    }
+    
+    #fundo #img::after {
+        content:"";
+        position:absolute;
+        top:0;
+        left:0;
+        height:50vh;
+        width:100%;
+        background:linear-gradient(-180deg, #000 35%, rgba(0, 0, 0, 0) 70%) no-repeat;
+        z-index:1;
+    }
+    
+    #fundo #img video {
+        width:120%;
+        height:100%;
+        position:fixed;
+        top:-6vh;
+    }
+
+    #fundo #menu {
+        border-radius: 5px;
+        overflow:hidden;
+        position:absolute;
+        top:1vh;
+        right:0;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:100vw;
+        height:8vh;
+        z-index:2;
+    }
+    
+    #fundo #menu #user {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:50%;
+        height:100%;
+    }
+    
+    #fundo #menu #user img {
+        margin:0px 15px;
+        width:30%;
+        height:100%;
+        border-radius:50%;
+        background:none;
+    }
+    
+    #fundo #menu #user p {
+        color:white;
+        font-size:10pt;
+        font-weight: 600;
+    }
+    
+    #fundo #compras {
+        width:12%;
+        height:100%;
+        margin-right:10px;
+        background:none;
+        border:none;
+    }
+    
+    #fundo #compras img {
+        width:60%;
+        height:60%;
+    }
+    
+    #pont {
+        display:flex;
+        align-items: center;
+        width:40vw;
+        height:5vh;
+        border-radius:10px;
+        border:1px solid gray;
+        overflow:hidden;
+        background:#161616de;
+        margin-right:5px;
+    }
+    
+    #pont input {
+        background-color: transparent;
+        border:none;
+        text-align: center;
+        width:76%;
+        height:100%;
+        outline:none;
+    }
+    
+    #pont input::placeholder {
+        font-size: 10pt;
+        font-weight: 550;
+        color:white;
+    }
+    
+    #pont img {
+        width:26%;
+        height:100%;
+        background:transparent;
+    }
+    
+    #cont {
+        width: 100%;
+        height:40vh;
+        background:linear-gradient(to top, black, rgba(0,0,0,0.8), rgba(0,0,0,0.0));
+        position: fixed;
+        bottom:0;
+        z-index:2;
+    }
+    
+    #cont #paimon {
+        width:30vw;
+        height:100%;
+        position: relative;
+        left:0;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #cont #paimon img {
+        width:100%;
+        height:60%;
+    }
+    
+    #cont #pergunta {
+        width:70vw;
+        height:85%;
+        position: absolute;
+        right:0;
+        top:0vh;
+    }
+    
+    #cont #pergunta p {
+        width: 96%;
+        height:22vh;
+        font-size:10pt;
+        font-weight: bold;
+        color:white;
+        overflow-x:hidden;
+        overflow-y:auto;
+    }
+    
+    #cont #pergunta input {
+        outline: none;
+        text-align: center;
+        border-top-left-radius:10px;
+        border-bottom-left-radius:10px;
+        border:2px solid black;
+        background:#161616;
+        color:white;
+        width:45vw;
+        height:4vh;
+    }
+    
+    #cont #pergunta #btns {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+        height:8vh;
+    }
+    
+    #cont #pergunta #btns #btn {
+        border-top-right-radius:10px;
+        border-bottom-right-radius:10px;
+        border:2px solid black;
+        background:purple;
+        width:10vw;
+        height:4.6vh;
+        overflow:hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #cont #pergunta #btns #btn img {
+        width:60%;
+        height:100%;
+    }
+    
+    #cont #pergunta #btns #btnDica {
+        display:none;
+        cursor:pointer;
+        margin:0px 10px;
+        width:8vw;
+        height:5.5vh;
+        background:none;
+        border:none;
+    }
+    
+    #cont #pergunta #btns #btnDica img {
+        width:100%;
+        height:100%;
+    }
+    
+    #cont #pergunta #btns #btn:disabled {
+        background:rgba(66, 0, 66, 0.822);
+    }
+    
+    #cont #pergunta #btnAgain {
+        display:none;
+        cursor:pointer;
+        border:2px solid black;
+        background:purple;
+        border-radius:5px;
+        color:white;
+        position:absolute;
+        width:35vw;
+        height:6vh;
+        left:26%;
+        overflow:hidden;
+    }
+    
+    #cont #pergunta #vidas {
+        width:100%;
+        height:6vh;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #cont #pergunta #vidas img {
+        width:8vw;
+        height:5vh;
+        margin:0 10px;
+    }
+    
+    #comprar {
+        display:none;
+        width:100%;
+        height:100%;
+        background:#161616;
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:2;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    
+    #comprar::-webkit-scrollbar {
+        width: 6px;
+    }
+      
+    #comprar::-webkit-scrollbar-thumb {
+        border: 1px solid black; 
+        background:#dd1440;
+        border-radius: 6px; 
+    }
+      
+    #comprar::-webkit-scrollbar-track {
+        background-color:transparent;
+    }
+    
+    #comprar #title {
+        width:100%;
+        height:10vh;
+        text-align: center;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom:2px solid #dd1440;
+    }
+    
+    #comprar #title p {
+        color:white;
+        font-size:18pt;
+        font-weight: 600;
+    }
+    
+    #comprar #title button {
+        background:none;
+        border:none;
+        font-size:18pt;
+        position: fixed;
+        font-weight: bold;
+        right:8vw;
+        width:4vw;
+        height:5vh;
+        top:2vh;
+        color:#dd1440;
+    }
+    
+    #comprar #itens {
+        margin-top:5vh;
+        width:100%;
+        height:90%;
+        
+    }
+    
+    #comprar #itens #comprarVidas {
+        width:100%;
+        height:34vh;
+        margin-top:6vh;
+        overflow:hidden;
+        display:flex;
+        justify-content: center;
+    }
+    
+    #comprar #itens #comprarVidas .restVida {
+        width:25%;
+        margin: 0px 2px;
+        height:100%;
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        flex-direction: column;
+        overflow:hidden;
+        text-align: center;
+    }
+    
+    #comprar #itens #comprarVidas .restVida img {
+        width:100%;
+        height:35%;
+    }
+    
+    .overCora {
+        margin-bottom: -25vh;
+        animation:overCora 1.5s linear;
+    }
+    
+    
+    #comprar #itens #comprarVidas .restVida p {
+        font-size:10pt;
+        font-weight: 600;
+        color:white;
+        width:90%;
+        height:30%;
+        margin-top:10px;
+        margin-bottom:10px;
+        overflow:hidden;
+    }
+    
+    #comprar #itens #comprarVidas .restVida button {
+        width:95%;
+        overflow: hidden;
+        height:12%;
+        border-radius: 10px;
+        border: 2px solid #dd1440;
+        color:white;
+        font-weight: 600;
+        font-size:8pt;
+    }
+    
+    #contUser {
+        display:none;
+        width:100%;
+        height:100%;
+        background:#161616;
+        position: absolute;
+        left:0;
+        top:0;
+        z-index:2;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    
+    #contUser::-webkit-scrollbar {
+        width: 6px;
+    }
+      
+    #contUser::-webkit-scrollbar-thumb {
+        border: 1px solid black; 
+        background:#dd1440;
+        border-radius: 6px; 
+    }
+      
+    #contUser::-webkit-scrollbar-track {
+        background-color:transparent; 
+    }
+
+    #comprar::-webkit-scrollbar {
+        width: 6px;
+    }
+      
+    #comprar::-webkit-scrollbar-thumb {
+        border: 1px solid black; 
+        background:#dd1440;
+        border-radius: 6px; 
+    }
+      
+    #comprar::-webkit-scrollbar-track {
+        background-color:transparent;
+    }
+
+    #dica::-webkit-scrollbar {
+        width: 6px;
+    }
+      
+    #dica::-webkit-scrollbar-thumb {
+        border:none;
+        background:transparent;
+        border-radius: 6px; 
+    }
+      
+    #dica::-webkit-scrollbar-track {
+        background-color:transparent;
+    }
+    
+    
+    #contUser #editPerfil {
+        color:white;
+        font-size:18pt;
+        width:100%;
+        height:10vh;
+        text-align: center;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom:2px solid #dd1440;
+    }
+    
+    #contUser #editPerfil p {
+        color:white;
+        font-size:18pt;
+        font-weight: 600;
+    }
+    
+    #contUser #editPerfil button {
+        background:none;
+        border:none;
+        font-size:18pt;
+        font-weight: bold;
+        position: fixed;
+        right:8vw;
+        width:4vw;
+        height:5vh;
+        top:2vh;
+        color:#dd1440;
+    }
+    
+    #contUser #imgPerfil {
+        margin-top:5vh;
+        overflow: hidden;
+        width:100%;
+        height:25vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #contUser #imgPerfil img {
+        min-width:40%;
+        max-width: 40%;
+        min-height:80%;
+        max-height:90%;
+        border: 2px solid #dd1440;
+        border-radius:10px;
+    }
+    
+    #contUser #editName {
+        width:100%;
+        height:8vh;
+        margin-top:15px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #contUser #nickName {
+        width:60%;
+        height:4vh;
+        margin:0px 10px;
+        background:#030303;
+        border:1px solid white;
+        color:white;
+        text-align: center;
+        border-radius:15px;
+        font-size:10pt;
+        font-weight: bold;
+        outline: none;
+    }
+    
+    #contUser #color {
+        width:10%;
+        height:4vh;
+        border-radius:5px;
+        outline: none;
+        background:#030303;
+        border:1px solid white;
+    }
+    
+    #selectImg {
+        width:100%;
+        height:100vh;
+        margin-top:5vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        border-top:2px solid #dd1440;
+        border-bottom:2px solid #dd1440;
+    }
+    
+    #selectImg::-webkit-scrollbar {
+        width: 6px;
+    }
+      
+    #selectImg::-webkit-scrollbar-thumb {
+        background-color: transparent; /* Cor da parte móvel da barra de rolagem */
+        border-radius: 6px; /* Borda arredondada da parte móvel */
+    }
+      
+    #selectImg::-webkit-scrollbar-track {
+        background-color:transparent; /* Cor de fundo da barra de rolagem */
+    }
+    
+    #selectImg .personagens {
+        width:100%;
+        height:14vh;
+        margin-bottom:2vh;
+        overflow: hidden;
+        display:flex;
+        justify-content: center;
+        overflow: hidden;
+        align-items: center;
+    }
+    
+    #selectImg .personagens .card {
+        width:25%;
+        height:90%;
+        margin:0px 2px;
+        overflow: hidden;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #dd1440;
+        background:linear-gradient(90deg, rgb(90, 80, 37),rgb(194, 162, 56), rgb(228, 193, 79));
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    #selectImg .personagens .disabled img {
+        filter: grayscale(1);
+    }
+    
+    #selectImg .personagens .card img {
+        width:140%;
+        height:100%;
+    }
+    
+    #btnPerfil {
+        width:100%;
+        height:5vh;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-top:5vh;
+        margin-bottom:5vh;
+        overflow: hidden;
+    }
+    
+    #cancelar {
+        background:#000000;
+        border:2px solid #06162c;
+        border-radius:5px;
+        color:white;
+        font-size: 10pt;
+        font-weight: bold;
+        width:20vw;
+        height:100%;
+        margin-right:50vw;
+        overflow: hidden;
+    }
+    
+    #salvar {
+        color:white;
+        background:#dd1440;
+        border:2px solid rgb(54, 3, 3);
+        border-radius:5px;
+        font-size: 10pt;
+        font-weight: bold;
+        width:20vw;
+        height:100%;
+        overflow: hidden;
+    }
+
+    #init #initImg {
+        position:absolute;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%, -50%);
+        width:70vw;
+        height:22vh;
+        opacity: 0;
+    }
+    
+    #init #initImg2 {
+        position:absolute;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%, -50%);
+        width:70vw;
+        height:14vh;
+        opacity: 0;
+    }
+
+    #selectImg #city {
+        width:100%;
+        height:20vh;
+        margin:25px 0px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #selectImg #city img {
+        width:20vw;
+        height:10vh;
+        margin-right:2vw;
+    }
+    
+    #selectImg #city p {
+        font-size:24pt;
+        font-weight: bold;
+        color:white;
+    }
+
+    #selectImg .personagens .card4 {
+        width:25%;
+        height:90%;
+        margin:0px 2px;
+        overflow: hidden;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #dd1440;
+        background:linear-gradient(90deg, rgb(66, 35, 83),rgb(135, 98, 165), rgb(162, 134, 228));
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    #selectImg .personagens .card6 {
+        width:25%;
+        height:90%;
+        margin:0px 2px;
+        overflow: hidden;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #dd1440;
+        background:linear-gradient(90deg, #8a1830, #da153f, #e7234d);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    #selectImg .personagens .card4 img {
+        width:100%;
+        height:98%;
+    }
+    
+    #selectImg .personagens .card6 img {
+        width:100%;
+        height:98%;
+    }
+
+    #divCompra {
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100vh;
+        background:rgba(0, 0, 0, 0.884);
+        z-index:2;
+        display:none;
+    }
+    
+    #divCompra #caracter {
+        width: 100%;
+        height:100%;
+    }
+    
+    #divCompra #caracter button {
+        background:transparent;
+        font-size:20pt;
+        text-align: center;
+        width:4vw;
+        height:6vh;
+        color:white;
+        position:fixed;
+        border:none;
+        right:4vw;
+        top:2vh;
+    }
+    
+    #divCompra #caracter #imgCaracter {
+        position:fixed;
+        left:50%;
+        top:45%;
+        transform: translate(-50%, -50%);
+        width:180%;
+        height:65%;
+        animation:openPerson 0.5s linear;
+    }
+    
+    #divCompra #caracter #element {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:100vw;
+        height:20vh;
+        position:absolute;
+        left:50%;
+        top:85%;
+        transform: translate(-50%, -50%);
+        overflow:hidden;
+    }
+    
+    #divCompra #caracter #element #imgElement {
+        position:fixed;
+        left:0;
+        width:28%;
+        height:70%;
+        animation: openIcon 0.5s linear;
+    }
+    
+    #divCompra #caracter #element #text {
+        position:absolute;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction:column ;
+        text-align: center;
+        width:90%;
+        height:100%;
+        right:0;
+    }
+    
+    #divCompra #caracter #element #text #nomeCaracter {
+        font-size:28pt;
+        color:white;
+        overflow: hidden;
+    }
+    
+    #divCompra #caracter #element #text p {
+        font-size:14pt;
+    }
+    
+}
+
+@media screen and (max-height: 400px) {
+    body {
+        background:black;
+        background-size: cover;
+        background-attachment: fixed;
+        overflow:hidden;
+    }
+    
+    #fundo {
+        width:100vw;
+        height:100vh;
+        overflow:hidden;
+    }
+    
+    #fundo #img {
+        width:100%;
+        height: 100%;
+        position: absolute;
+        top:0;
+        right: 0;
+        border:none;
+        overflow:hidden;
+    }
+    
+    #fundo #img::after {
+        content:"";
+        position:absolute;
+        top:0;
+        left:0;
+        height:100vh;
+        width:50%;
+        background:linear-gradient(-243deg, #000000 35%, rgba(0, 0, 0, 0) 70%) no-repeat;
+        z-index:1;
+    }
+    
+    #fundo #img video {
+        width:120%;
+        height:100%;
+        position:fixed;
+        top:-6vh;
+    }
+    
+    #fundo #menu {
+        border-radius: 5px;
+        overflow:hidden;
+        position:absolute;
+        top:1vh;
+        right:0;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:50vw;
+        height:8vh;
+        z-index:2;
+    }
+    
+    #fundo #menu #user {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:50%;
+        height:100%;
+    }
+    
+    #fundo #menu #user img {
+        margin:0px 15px;
+        width:28%;
+        height:100%;
+        border-radius:50%;
+        background:none;
+    }
+    
+    #fundo #menu #user p {
+        color:white;
+        font-size:12pt;
+        font-weight: 600;
+    }
+    
+    #fundo #compras {
+        width:14%;
+        height:100%;
+        margin-right:10px;
+        background:none;
+        border:none;
+    }
+    
+    #fundo #compras img {
+        width:60%;
+        height:60%;
+    }
+    
+    #pont {
+        display:flex;
+        align-items: center;
+        width:25vw;
+        height:6vh;
+        border-radius:10px;
+        border:1px solid gray;
+        overflow:hidden;
+        background:#161616de;
+        margin-right:5px;
+    }
+    
+    #pont input {
+        background-color: transparent;
+        border:none;
+        text-align: center;
+        width:76%;
+        height:100%;
+        outline:none;
+    }
+    
+    #pont input::placeholder {
+        font-size: 10pt;
+        font-weight: 550;
+        color:white;
+    }
+    
+    #pont img {
+        width:20%;
+        height:100%;
+        background:transparent;
+    }
+    
+    #cont {
+
+        width: 100%;
+        height:40vh;
+        background:linear-gradient(to top, black, rgba(0,0,0,0.8), rgba(0,0,0,0.0));
+        position: fixed;
+        bottom:0;
+        z-index:2;
+    }
+    
+    #cont #paimon {
+        width:25vw;
+        height:100%;
+        position: relative;
+        left:0;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #cont #paimon img {
+        width:80%;
+        height:100%;
+    }
+    
+    #cont #pergunta {
+        width:75vw;
+        height:80%;
+        position: absolute;
+        right:0;
+        top:2vh;
+    }
+    
+    #cont #pergunta p {
+        margin-top:0vh;
+        width: 96%;
+        height:20vh;
+        font-size:10pt;
+        font-weight: bold;
+        color:white;
+        overflow-x:hidden;
+        overflow-y:auto;
+    }
+    
+    #cont #pergunta input {
+        outline: none;
+        text-align: center;
+        border-top-left-radius:10px;
+        border-bottom-left-radius:10px;
+        border:2px solid black;
+        background:#161616;
+        color:white;
+        width:45vw;
+        height:5vh;
+    }
+    
+    #cont #pergunta #btns {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+        height:8vh;
+    }
+    
+    #cont #pergunta #btns #btn {
+        border-top-right-radius:10px;
+        border-bottom-right-radius:10px;
+        border:2px solid black;
+        background:purple;
+        width:6vw;
+        height:6vh;
+        overflow:hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #cont #pergunta #btns #btn img {
+        width:60%;
+        height:100%;
+    }
+    
+    #cont #pergunta #btns #btnDica {
+        display:none;
+        cursor:pointer;
+        margin:0px 10px;
+        width:6vw;
+        height:6vh;
+        background:none;
+        border:none;
+    }
+    
+    #cont #pergunta #btns #btnDica img {
+        width:100%;
+        height:100%;
+    }
+    
+    #cont #pergunta #btns #btn:disabled {
+        background:rgba(66, 0, 66, 0.822);
+    }
+    
+    #cont #pergunta #btnAgain {
+        display:none;
+        cursor:pointer;
+        border:2px solid black;
+        background:purple;
+        border-radius:10px;
+        color:white;
+        position:absolute;
+        width:28vw;
+        height:8vh;
+        left:33%;
+        overflow:hidden;
+    }
+    
+    #cont #pergunta #vidas {
+        width:100%;
+        height:6vh;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #cont #pergunta #vidas img {
+        width:5vw;
+        height:6vh;
+        margin:0 10px;
+    }
+    
+    #comprar {
+        display:none;
+        width:100%;
+        height:100%;
+        background:#161616;
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:2;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    
+    #comprar::-webkit-scrollbar {
+        width: 6px;
+    }
+      
+    #comprar::-webkit-scrollbar-thumb {
+        border: 1px solid black; 
+        background:#dd1440;
+        border-radius: 6px; 
+    }
+      
+    #comprar::-webkit-scrollbar-track {
+        background-color:transparent;
+    }
+    
+    #comprar #title {
+        width:100%;
+        height:10vh;
+        text-align: center;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom:2px solid #dd1440;
+    }
+    
+    #comprar #title p {
+        color:white;
+        font-size:18pt;
+        font-weight: 600;
+    }
+    
+    #comprar #title button {
+        background:none;
+        border:none;
+        font-size:18pt;
+        position: fixed;
+        font-weight: bold;
+        right:6vw;
+        width:4vw;
+        height:5vh;
+        top:0vh;
+        color:#dd1440;
+    }
+    
+    #comprar #itens {
+        margin-top:5vh;
+        width:100%;
+        height:90%;
+        
+    }
+    
+    #comprar #itens #comprarVidas {
+        width:100%;
+        height:65vh;
+        margin-top:6vh;
+        overflow:hidden;
+        display:flex;
+        justify-content: center;
+    }
+    
+    #comprar #itens #comprarVidas .restVida {
+        width:25%;
+        margin: 0px 2px;
+        height:100%;
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        flex-direction: column;
+        overflow:hidden;
+        text-align: center;
+    }
+    
+    #comprar #itens #comprarVidas .restVida img {
+        width:70%;
+        height:50%;
+    }
+    
+    .overCora {
+        margin-bottom: -25vh;
+        animation:overCora 1.5s linear;
+    }
+    
+    
+    #comprar #itens #comprarVidas .restVida p {
+        font-size:10pt;
+        font-weight: 600;
+        color:white;
+        width:90%;
+        height:30%;
+        margin-top:10px;
+        margin-bottom:10px;
+        overflow:hidden;
+    }
+    
+    #comprar #itens #comprarVidas .restVida button {
+        width:90%;
+        overflow: hidden;
+        height:14%;
+        border-radius: 10px;
+        border: 2px solid #dd1440;
+        color:white;
+        font-weight: 600;
+        font-size:8pt;
+    }
+    
+    #contUser {
+        display:none;
+        width:100%;
+        height:100%;
+        background:#161616;
+        position: absolute;
+        left:0;
+        top:0;
+        z-index:2;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    
+    #contUser::-webkit-scrollbar {
+        width: 6px;
+    }
+      
+    #contUser::-webkit-scrollbar-thumb {
+        border: 1px solid black; /* Cor da parte móvel da barra de rolagem */
+        background:#dd1440;
+        border-radius: 6px; /* Borda arredondada da parte móvel */
+    }
+      
+    #contUser::-webkit-scrollbar-track {
+        background-color:transparent; /* Cor de fundo da barra de rolagem */
+    }
+    
+    #contUser #editPerfil {
+        color:white;
+        font-size:18pt;
+        width:100%;
+        height:10vh;
+        text-align: center;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom:2px solid #dd1440;
+    }
+    
+    #contUser #editPerfil p {
+        color:white;
+        font-size:18pt;
+        font-weight: 600;
+    }
+    
+    #contUser #editPerfil button {
+        background:none;
+        border:none;
+        font-size:18pt;
+        font-weight: bold;
+        position: fixed;
+        right:6vw;
+        width:4vw;
+        height:5vh;
+        top:0vh;
+        color:#dd1440;
+    }
+    
+    #contUser #imgPerfil {
+        margin-top:5vh;
+        overflow: hidden;
+        width:90%;
+        height:50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #contUser #imgPerfil img {
+        min-width:28%;
+        max-width: 40%;
+        min-height:90%;
+        max-height:90%;
+        border: 2px solid #dd1440;
+        border-radius:10px;
+    }
+    
+    #contUser #editName {
+        width:100%;
+        height:10vh;
+        margin-top:15px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #contUser #nickName {
+        width:60%;
+        height:6vh;
+        margin:0px 10px;
+        background:#030303;
+        border:1px solid white;
+        color:white;
+        text-align: center;
+        border-radius:15px;
+        font-size:10pt;
+        font-weight: bold;
+        outline: none;
+    }
+    
+    #contUser #color {
+        width:8%;
+        height:6vh;
+        border-radius:5px;
+        outline: none;
+        background:#030303;
+        border:1px solid white;
+    }
+    
+    #selectImg {
+        width:100%;
+        height:100vh;
+        margin-top:5vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        border-top:2px solid #dd1440;
+        border-bottom:2px solid #dd1440;
+    }
+    
+    #selectImg::-webkit-scrollbar {
+        width: 6px;
+    }
+      
+    #selectImg::-webkit-scrollbar-thumb {
+        background-color: transparent; /* Cor da parte móvel da barra de rolagem */
+        border-radius: 6px; /* Borda arredondada da parte móvel */
+    }
+      
+    #selectImg::-webkit-scrollbar-track {
+        background-color:transparent; /* Cor de fundo da barra de rolagem */
+    }
+    
+    #selectImg .personagens {
+        width:100%;
+        height:45vh;
+        margin-bottom:2vh;
+        overflow: hidden;
+        display:flex;
+        justify-content: center;
+        overflow: hidden;
+        align-items: center;
+    }
+    
+    #selectImg .personagens .card {
+        width:25%;
+        height:90%;
+        margin:0px 2px;
+        overflow: hidden;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #dd1440;
+        background:linear-gradient(90deg, rgb(90, 80, 37),rgb(194, 162, 56), rgb(228, 193, 79));
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    #selectImg .personagens .disabled img {
+        filter: grayscale(1);
+    }
+    
+    #selectImg .personagens .card img {
+        width:100%;
+        height:100%;
+    }
+    
+    #btnPerfil {
+        width:100%;
+        height:8vh;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-top:5vh;
+        margin-bottom:5vh;
+        overflow: hidden;
+    }
+    
+    #cancelar {
+        background:#000000;
+        border:2px solid #06162c;
+        border-radius:5px;
+        color:white;
+        font-size: 10pt;
+        font-weight: bold;
+        width:15vw;
+        height:100%;
+        margin-right:50vw;
+        overflow: hidden;
+    }
+    
+    #salvar {
+        color:white;
+        background:#dd1440;
+        border:2px solid rgb(54, 3, 3);
+        border-radius:5px;
+        font-size: 10pt;
+        font-weight: bold;
+        width:15vw;
+        height:100%;
+        overflow: hidden;
+    }
+
+    #init #initImg {
+        position:absolute;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%, -50%);
+        width:30vw;
+        height:30vh;
+        opacity: 0;
+    }
+    
+    #init #initImg2 {
+        position:absolute;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%, -50%);
+        width:23vw;
+        height:16vh;
+        opacity: 0;
+    }
+
+    #selectImg #city {
+        width:100%;
+        height:20vh;
+        margin:30px 0px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #selectImg #city img {
+        width:14vw;
+        height:20vh;
+        margin-right:2vw;
+    }
+    
+    #selectImg #city p {
+        font-size:30pt;
+        font-weight: bold;
+        color:white;
+    }
+
+    #selectImg .personagens .card4 {
+        width:25%;
+        height:90%;
+        margin:0px 2px;
+        overflow: hidden;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #dd1440;
+        background:linear-gradient(90deg, rgb(66, 35, 83),rgb(135, 98, 165), rgb(162, 134, 228));
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    #selectImg .personagens .card6 {
+        width:25%;
+        height:90%;
+        margin:0px 2px;
+        overflow: hidden;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #dd1440;
+        background:linear-gradient(90deg, #8a1830, #da153f, #e7234d);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    #selectImg .personagens .card4 img {
+        width:100%;
+        height:100%;
+    }
+    
+    #selectImg .personagens .card6 img {
+        width:100%;
+        height:100%;
+    }
+
+    #divCompra {
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100vh;
+        background:rgba(0, 0, 0, 0.884);
+        z-index:2;
+        display:none;
+    }
+    
+    #divCompra #caracter {
+        width: 100%;
+        height:100%;
+    }
+    
+    #divCompra #caracter button {
+        background:transparent;
+        font-size:20pt;
+        text-align: center;
+        width:4vw;
+        height:6vh;
+        color:white;
+        position:fixed;
+        border:none;
+        right:4vw;
+        top:2vh;
+    }
+    
+    #divCompra #caracter #imgCaracter {
+        position:fixed;
+        left:50%;
+        top:52%;
+        transform: translate(-50%, -50%);
+        width:88%;
+        height:100%;
+        animation:openPerson 0.5s linear;
+    }
+    
+    #divCompra #caracter #element {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:30vw;
+        height:20vh;
+        position:absolute;
+        left:30%;
+        top:50%;
+        transform: translate(-50%, -50%);
+        overflow:hidden;
+    }
+    
+    #divCompra #caracter #element #imgElement {
+        position:fixed;
+        left:0;
+        width:25%;
+        height:70%;
+        animation: openIcon 0.5s linear;
+    }
+    
+    #divCompra #caracter #element #text {
+        position:absolute;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction:column ;
+        text-align: center;
+        width:90%;
+        height:100%;
+        right:0;
+    }
+    
+    #divCompra #caracter #element #text #nomeCaracter {
+        font-size:24pt;
+        color:white;
+        overflow: hidden;
+    }
+    
+    #divCompra #caracter #element #text p {
+        font-size:14pt;
+    }
+    
+}
+
+@media screen and (max-height: 200px) {
+    body {
+        background:black;
+        background-size: cover;
+        background-attachment: fixed;
+        overflow:hidden;
+    }
+    
+    #fundo {
+        width:100vw;
+        height:100vh;
+        overflow:hidden;
+    }
+    
+    #fundo #img {
+        width:100%;
+        height: 100%;
+        position: absolute;
+        top:0;
+        right: 0;
+        border:none;
+        overflow:hidden;
+    }
+    
+    #fundo #img::after {
+        content:"";
+        position:absolute;
+        top:0;
+        left:0;
+        height:100vh;
+        width:50%;
+        background:linear-gradient(-243deg, #000000 35%, rgba(0, 0, 0, 0) 70%) no-repeat;
+        z-index:1;
+    }
+    
+    #fundo #img video {
+        width:100%;
+        height:100%;
+        position:fixed;
+        top:-6vh;
+    }
+    
+    #fundo #menu {
+        border-radius: 5px;
+        overflow:hidden;
+        position:absolute;
+        top:1vh;
+        right:0;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:50vw;
+        height:20vh;
+        z-index:2;
+    }
+    
+    #fundo #menu #user {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:50%;
+        height:100%;
+    }
+    
+    #fundo #menu #user img {
+        margin:0px 15px;
+        width:28%;
+        height:100%;
+        border-radius:50%;
+        background:none;
+    }
+    
+    #fundo #menu #user p {
+        color:white;
+        font-size:12pt;
+        font-weight: 600;
+    }
+    
+    #fundo #compras {
+        width:14%;
+        height:100%;
+        margin-right:10px;
+        background:none;
+        border:none;
+    }
+    
+    #fundo #compras img {
+        width:60%;
+        height:60%;
+    }
+    
+    #pont {
+        display:flex;
+        align-items: center;
+        width:25vw;
+        height:14vh;
+        border-radius:10px;
+        border:1px solid gray;
+        overflow:hidden;
+        background:#161616de;
+        margin-right:5px;
+    }
+    
+    #pont input {
+        background-color: transparent;
+        border:none;
+        text-align: center;
+        width:76%;
+        height:100%;
+        outline:none;
+    }
+    
+    #pont input::placeholder {
+        font-size: 10pt;
+        font-weight: 550;
+        color:white;
+    }
+    
+    #pont img {
+        width:20%;
+        height:100%;
+        background:transparent;
+    }
+    
+    #cont {
+        width: 100%;
+        height:75vh;
+        background:linear-gradient(to top, black, rgba(0,0,0,0.8), rgba(0,0,0,0.0));
+        position: fixed;
+        bottom:0;
+        z-index:2;
+    }
+    
+    #cont #paimon {
+        width:15vw;
+        height:100%;
+        position: relative;
+        left:0;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #cont #paimon img {
+        width:100%;
+        height:100%;
+    }
+    
+    #cont #pergunta {
+        width:75vw;
+        height:80%;
+        position: absolute;
+        right:0;
+        top:2vh;
+    }
+    
+    #cont #pergunta p {
+        margin-top:0vh;
+        width: 96%;
+        height:30vh;
+        font-size:12pt;
+        font-weight: bold;
+        color:white;
+        overflow-x:hidden;
+        overflow-y:auto;
+    }
+    
+    #cont #pergunta input {
+        outline: none;
+        text-align: center;
+        border-top-left-radius:10px;
+        border-bottom-left-radius:10px;
+        border:2px solid black;
+        background:#161616;
+        color:white;
+        width:45vw;
+        height:6vh;
+    }
+    
+    #cont #pergunta #btns {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+        height:14vh;
+    }
+    
+    #cont #pergunta #btns #btn {
+        border-top-right-radius:10px;
+        border-bottom-right-radius:10px;
+        border:2px solid black;
+        background:purple;
+        width:6vw;
+        height:10vh;
+        overflow:hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #cont #pergunta #btns #btn img {
+        width:40%;
+        height:100%;
+    }
+    
+    #cont #pergunta #btns #btnDica {
+        display:none;
+        cursor:pointer;
+        margin:0px 10px;
+        width:6vw;
+        height:6vh;
+        background:none;
+        border:none;
+    }
+    
+    #cont #pergunta #btns #btnDica img {
+        width:100%;
+        height:100%;
+    }
+    
+    #cont #pergunta #btns #btn:disabled {
+        background:rgba(66, 0, 66, 0.822);
+    }
+    
+    #cont #pergunta #btnAgain {
+        display:none;
+        cursor:pointer;
+        border:2px solid black;
+        background:purple;
+        border-radius:10px;
+        color:white;
+        position:absolute;
+        width:18vw;
+        height:15vh;
+        left:33%;
+        overflow:hidden;
+    }
+    
+    #cont #pergunta #vidas {
+        width:100%;
+        height:10vh;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #cont #pergunta #vidas img {
+        width:4vw;
+        height:100%;
+        margin:0 10px;
+    }
+    
+    #comprar {
+        display:none;
+        width:100%;
+        height:100%;
+        background:#161616;
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:2;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    
+    #comprar::-webkit-scrollbar {
+        width: 6px;
+    }
+      
+    #comprar::-webkit-scrollbar-thumb {
+        border: 1px solid black; 
+        background:#dd1440;
+        border-radius: 6px; 
+    }
+      
+    #comprar::-webkit-scrollbar-track {
+        background-color:transparent;
+    }
+    
+    #comprar #title {
+        width:100%;
+        height:10vh;
+        text-align: center;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom:2px solid #dd1440;
+    }
+    
+    #comprar #title p {
+        color:white;
+        font-size:18pt;
+        font-weight: 600;
+    }
+    
+    #comprar #title button {
+        background:none;
+        border:none;
+        font-size:18pt;
+        position: fixed;
+        font-weight: bold;
+        right:6vw;
+        width:4vw;
+        height:5vh;
+        top:0vh;
+        color:#dd1440;
+    }
+    
+    #comprar #itens {
+        margin-top:5vh;
+        width:100%;
+        height:90%;
+        
+    }
+    
+    #comprar #itens #comprarVidas {
+        width:100%;
+        height:55vh;
+        margin-top:6vh;
+        overflow:hidden;
+        display:flex;
+        justify-content: center;
+    }
+    
+    #comprar #itens #comprarVidas .restVida {
+        width:25%;
+        margin: 0px 2px;
+        height:100%;
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        flex-direction: column;
+        overflow:hidden;
+        text-align: center;
+    }
+    
+    #comprar #itens #comprarVidas .restVida img {
+        width:65%;
+        height:45%;
+    }
+    
+    .overCora {
+        margin-bottom: -25vh;
+        animation:overCora 1.5s linear;
+    }
+    
+    
+    #comprar #itens #comprarVidas .restVida p {
+        font-size:10pt;
+        font-weight: 600;
+        color:white;
+        width:90%;
+        height:30%;
+        margin-top:10px;
+        margin-bottom:10px;
+        overflow:hidden;
+    }
+    
+    #comprar #itens #comprarVidas .restVida button {
+        width:90%;
+        overflow: hidden;
+        height:12%;
+        border-radius: 10px;
+        border: 2px solid #dd1440;
+        color:white;
+        font-weight: 600;
+        font-size:8pt;
+    }
+    
+    #contUser {
+        display:none;
+        width:100%;
+        height:100%;
+        background:#161616;
+        position: absolute;
+        left:0;
+        top:0;
+        z-index:2;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    
+    #contUser::-webkit-scrollbar {
+        width: 6px;
+    }
+      
+    #contUser::-webkit-scrollbar-thumb {
+        border: 1px solid black; /* Cor da parte móvel da barra de rolagem */
+        background:#dd1440;
+        border-radius: 6px; /* Borda arredondada da parte móvel */
+    }
+      
+    #contUser::-webkit-scrollbar-track {
+        background-color:transparent; /* Cor de fundo da barra de rolagem */
+    }
+    
+    #contUser #editPerfil {
+        color:white;
+        font-size:18pt;
+        width:100%;
+        height:10vh;
+        text-align: center;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom:2px solid #dd1440;
+    }
+    
+    #contUser #editPerfil p {
+        color:white;
+        font-size:18pt;
+        font-weight: 600;
+    }
+    
+    #contUser #editPerfil button {
+        background:none;
+        border:none;
+        font-size:18pt;
+        font-weight: bold;
+        position: fixed;
+        right:6vw;
+        width:4vw;
+        height:5vh;
+        top:0vh;
+        color:#dd1440;
+    }
+    
+    #contUser #imgPerfil {
+        margin-top:5vh;
+        overflow: hidden;
+        width:50%;
+        height:30vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #contUser #imgPerfil img {
+        min-width:38%;
+        max-width: 40%;
+        min-height:80%;
+        max-height:90%;
+        border: 2px solid #dd1440;
+        border-radius:10px;
+    }
+    
+    #contUser #editName {
+        width:100%;
+        height:8vh;
+        margin-top:15px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #contUser #nickName {
+        width:60%;
+        height:6vh;
+        margin:0px 10px;
+        background:#030303;
+        border:1px solid white;
+        color:white;
+        text-align: center;
+        border-radius:15px;
+        font-size:10pt;
+        font-weight: bold;
+        outline: none;
+    }
+    
+    #contUser #color {
+        width:8%;
+        height:6vh;
+        border-radius:5px;
+        outline: none;
+        background:#030303;
+        border:1px solid white;
+    }
+    
+    #selectImg {
+        width:100%;
+        height:100vh;
+        margin-top:5vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        border-top:2px solid #dd1440;
+        border-bottom:2px solid #dd1440;
+    }
+    
+    #selectImg::-webkit-scrollbar {
+        width: 6px;
+    }
+      
+    #selectImg::-webkit-scrollbar-thumb {
+        background-color: transparent; /* Cor da parte móvel da barra de rolagem */
+        border-radius: 6px; /* Borda arredondada da parte móvel */
+    }
+      
+    #selectImg::-webkit-scrollbar-track {
+        background-color:transparent; /* Cor de fundo da barra de rolagem */
+    }
+    
+    #selectImg .personagens {
+        width:100%;
+        height:35vh;
+        margin-bottom:2vh;
+        overflow: hidden;
+        display:flex;
+        justify-content: center;
+        overflow: hidden;
+        align-items: center;
+    }
+    
+    #selectImg .personagens .card {
+        width:25%;
+        height:90%;
+        margin:0px 2px;
+        overflow: hidden;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #dd1440;
+        background:linear-gradient(90deg, rgb(90, 80, 37),rgb(194, 162, 56), rgb(228, 193, 79));
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    #selectImg .personagens .disabled img {
+        filter: grayscale(1);
+    }
+    
+    #selectImg .personagens .card img {
+        width:140%;
+        height:100%;
+    }
+    
+    #btnPerfil {
+        width:100%;
+        height:8vh;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-top:5vh;
+        margin-bottom:5vh;
+        overflow: hidden;
+    }
+    
+    #cancelar {
+        background:#000000;
+        border:2px solid #06162c;
+        border-radius:5px;
+        color:white;
+        font-size: 10pt;
+        font-weight: bold;
+        width:15vw;
+        height:100%;
+        margin-right:50vw;
+        overflow: hidden;
+    }
+    
+    #salvar {
+        color:white;
+        background:#dd1440;
+        border:2px solid rgb(54, 3, 3);
+        border-radius:5px;
+        font-size: 10pt;
+        font-weight: bold;
+        width:15vw;
+        height:100%;
+        overflow: hidden;
+    }
+
+    #init #initImg {
+        position:absolute;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%, -50%);
+        width:30vw;
+        height:30vh;
+        opacity: 0;
+    }
+    
+    #init #initImg2 {
+        position:absolute;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%, -50%);
+        width:23vw;
+        height:16vh;
+        opacity: 0;
+    }
+
+    #selectImg #city {
+        width:100%;
+        height:20vh;
+        margin:30px 0px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #selectImg #city img {
+        width:12vw;
+        height:16vh;
+        margin-right:2vw;
+    }
+    
+    #selectImg #city p {
+        font-size:30pt;
+        font-weight: bold;
+        color:white;
+    }
+
+    #selectImg .personagens .card4 {
+        width:25%;
+        height:90%;
+        margin:0px 2px;
+        overflow: hidden;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #dd1440;
+        background:linear-gradient(90deg, rgb(66, 35, 83),rgb(135, 98, 165), rgb(162, 134, 228));
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    #selectImg .personagens .card6 {
+        width:25%;
+        height:90%;
+        margin:0px 2px;
+        overflow: hidden;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #dd1440;
+        background:linear-gradient(90deg, #8a1830, #da153f, #e7234d);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    #selectImg .personagens .card4 img {
+        width:100%;
+        height:100%;
+    }
+    
+    #selectImg .personagens .card6 img {
+        width:100%;
+        height:100%;
+    }
+
+    #divCompra {
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100vh;
+        background:rgba(0, 0, 0, 0.884);
+        z-index:2;
+        display:none;
+    }
+    
+    #divCompra #caracter {
+        width: 100%;
+        height:100%;
+    }
+    
+    #divCompra #caracter button {
+        background:transparent;
+        font-size:20pt;
+        text-align: center;
+        width:4vw;
+        height:6vh;
+        color:white;
+        position:fixed;
+        border:none;
+        right:4vw;
+        top:2vh;
+    }
+    
+    #divCompra #caracter #imgCaracter {
+        position:fixed;
+        left:50%;
+        top:52%;
+        transform: translate(-50%, -50%);
+        width:88%;
+        height:100%;
+        animation:openPerson 0.5s linear;
+    }
+    
+    #divCompra #caracter #element {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:30vw;
+        height:20vh;
+        position:absolute;
+        left:30%;
+        top:50%;
+        transform: translate(-50%, -50%);
+        overflow:hidden;
+    }
+    
+    #divCompra #caracter #element #imgElement {
+        position:fixed;
+        left:0;
+        width:25%;
+        height:70%;
+        animation: openIcon 0.5s linear;
+    }
+    
+    #divCompra #caracter #element #text {
+        position:absolute;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction:column ;
+        text-align: center;
+        width:90%;
+        height:100%;
+        right:0;
+    }
+    
+    #divCompra #caracter #element #text #nomeCaracter {
+        font-size:24pt;
+        color:white;
+        overflow: hidden;
+    }
+    
+    #divCompra #caracter #element #text p {
+        font-size:14pt;
+    }
+    
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    body {
+        background:black;
+        background-size: cover;
+        background-attachment: fixed;
+        overflow:hidden;
+    }
+    
+    #fundo {
+        width:100vw;
+        height:100vh;
+        overflow:hidden;
+    }
+    
+    #fundo #img {
+        width:100%;
+        height: 100%;
+        position: absolute;
+        top:0;
+        right: 0;
+        border:none;
+        overflow:hidden;
+    }
+    
+    #fundo #img::after {
+        content:"";
+        position:absolute;
+        top:0;
+        left:0;
+        height:50vh;
+        width:100%;
+        background:linear-gradient(-180deg, #000 35%, rgba(0, 0, 0, 0) 70%) no-repeat;
+        z-index:1;
+    }
+    
+    #fundo #img video {
+        width:120%;
+        height:100%;
+        position:fixed;
+        top:-6vh;
+    }
+
+    #fundo #menu {
+        border-radius: 5px;
+        overflow:hidden;
+        position:absolute;
+        top:1vh;
+        right:0;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:100vw;
+        height:8vh;
+        z-index:2;
+    }
+    
+    #fundo #menu #user {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:50%;
+        height:100%;
+    }
+    
+    #fundo #menu #user img {
+        margin:0px 15px;
+        width:30%;
+        height:100%;
+        border-radius:50%;
+        background:none;
+    }
+    
+    #fundo #menu #user p {
+        color:white;
+        font-size:18pt;
+        font-weight: 600;
+    }
+    
+    #fundo #compras {
+        width:12%;
+        height:100%;
+        margin-right:10px;
+        background:none;
+        border:none;
+    }
+    
+    #fundo #compras img {
+        width:60%;
+        height:60%;
+    }
+    
+    #pont {
+        display:flex;
+        align-items: center;
+        width:40vw;
+        height:5vh;
+        border-radius:10px;
+        border:1px solid gray;
+        overflow:hidden;
+        background:#161616de;
+        margin-right:5px;
+    }
+    
+    #pont input {
+        background-color: transparent;
+        border:none;
+        text-align: center;
+        width:76%;
+        height:100%;
+        outline:none;
+    }
+    
+    #pont input::placeholder {
+        font-size: 20pt;
+        font-weight: 550;
+        color:white;
+    }
+    
+    #pont img {
+        width:26%;
+        height:100%;
+        background:transparent;
+    }
+    
+    #cont {
+        width: 100%;
+        height:40vh;
+        background:linear-gradient(to top, black, rgba(0,0,0,0.8), rgba(0,0,0,0.0));
+        position: fixed;
+        bottom:0;
+        z-index:2;
+    }
+    
+    #cont #paimon {
+        width:30vw;
+        height:100%;
+        position: relative;
+        left:0;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #cont #paimon img {
+        width:100%;
+        height:70%;
+    }
+    
+    #cont #pergunta {
+        width:70vw;
+        height:80%;
+        position: absolute;
+        right:0;
+        top:2vh;
+    }
+    
+    #cont #pergunta p {
+        width: 96%;
+        height:20vh;
+        font-size:18pt;
+        font-weight: bold;
+        color:white;
+        overflow-x:hidden;
+        overflow-y:auto;
+    }
+    
+    #cont #pergunta input {
+        outline: none;
+        text-align: center;
+        border-top-left-radius:10px;
+        border-bottom-left-radius:10px;
+        border:2px solid black;
+        background:#161616;
+        color:white;
+        width:45vw;
+        height:4vh;
+        font-size:18pt;
+    }
+    
+    #cont #pergunta #btns {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+        height:8vh;
+    }
+    
+    #cont #pergunta #btns #btn {
+        border-top-right-radius:10px;
+        border-bottom-right-radius:10px;
+        border:2px solid black;
+        background:purple;
+        width:10vw;
+        height:4.6vh;
+        overflow:hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #cont #pergunta #btns #btn img {
+        width:60%;
+        height:100%;
+    }
+    
+    #cont #pergunta #btns #btnDica {
+        display:none;
+        cursor:pointer;
+        margin:0px 10px;
+        width:8vw;
+        height:5.5vh;
+        background:none;
+        border:none;
+    }
+    
+    #cont #pergunta #btns #btnDica img {
+        width:100%;
+        height:100%;
+    }
+    
+    #cont #pergunta #btns #btn:disabled {
+        background:rgba(66, 0, 66, 0.822);
+    }
+    
+    #cont #pergunta #btnAgain {
+        display:none;
+        cursor:pointer;
+        border:2px solid black;
+        background:purple;
+        border-radius:5px;
+        color:white;
+        position:absolute;
+        width:35vw;
+        height:6vh;
+        left:26%;
+        overflow:hidden;
+    }
+    
+    #cont #pergunta #vidas {
+        width:100%;
+        height:6vh;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #cont #pergunta #vidas img {
+        width:8vw;
+        height:5vh;
+        margin:0 10px;
+    }
+    
+    #comprar {
+        display:none;
+        width:100%;
+        height:100%;
+        background:#161616;
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:2;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    
+    #comprar::-webkit-scrollbar {
+        width: 6px;
+    }
+      
+    #comprar::-webkit-scrollbar-thumb {
+        border: 1px solid black; 
+        background:#dd1440;
+        border-radius: 6px; 
+    }
+      
+    #comprar::-webkit-scrollbar-track {
+        background-color:transparent;
+    }
+    
+    #comprar #title {
+        width:100%;
+        height:10vh;
+        text-align: center;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom:2px solid #dd1440;
+    }
+    
+    #comprar #title p {
+        color:white;
+        font-size:28pt;
+        font-weight: 600;
+    }
+    
+    #comprar #title button {
+        background:none;
+        border:none;
+        font-size:28pt;
+        position: fixed;
+        font-weight: bold;
+        right:8vw;
+        width:4vw;
+        height:5vh;
+        top:2vh;
+        color:#dd1440;
+    }
+    
+    #comprar #itens {
+        margin-top:5vh;
+        width:100%;
+        height:90%;
+        
+    }
+    
+    #comprar #itens #comprarVidas {
+        width:100%;
+        height:34vh;
+        margin-top:6vh;
+        overflow:hidden;
+        display:flex;
+        justify-content: center;
+    }
+    
+    #comprar #itens #comprarVidas .restVida {
+        width:25%;
+        margin: 0px 2px;
+        height:100%;
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        flex-direction: column;
+        overflow:hidden;
+        text-align: center;
+    }
+    
+    #comprar #itens #comprarVidas .restVida img {
+        width:70%;
+        height:38%;
+    }
+    
+    .overCora {
+        margin-bottom: -25vh;
+        animation:overCora 1.5s linear;
+    }
+    
+    #comprar #itens #comprarVidas .restVida p {
+        font-size:16pt;
+        font-weight: 600;
+        color:white;
+        width:90%;
+        height:30%;
+        margin-top:10px;
+        margin-bottom:10px;
+        overflow:hidden;
+    }
+    
+    #comprar #itens #comprarVidas .restVida button {
+        width:90%;
+        overflow: hidden;
+        height:12%;
+        border-radius: 10px;
+        border: 2px solid #dd1440;
+        color:white;
+        font-weight: 600;
+        font-size:14pt;
+    }
+    
+    #contUser {
+        display:none;
+        width:100%;
+        height:100%;
+        background:#161616;
+        position: absolute;
+        left:0;
+        top:0;
+        z-index:2;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    
+    #contUser::-webkit-scrollbar {
+        width: 6px;
+    }
+      
+    #contUser::-webkit-scrollbar-thumb {
+        border: 1px solid black; 
+        background:#dd1440;
+        border-radius: 6px; 
+    }
+      
+    #contUser::-webkit-scrollbar-track {
+        background-color:transparent; 
+    }
+
+    #comprar::-webkit-scrollbar {
+        width: 6px;
+    }
+      
+    #comprar::-webkit-scrollbar-thumb {
+        border: 1px solid black; 
+        background:#dd1440;
+        border-radius: 6px; 
+    }
+      
+    #comprar::-webkit-scrollbar-track {
+        background-color:transparent;
+    }
+
+    #dica::-webkit-scrollbar {
+        width: 6px;
+    }
+      
+    #dica::-webkit-scrollbar-thumb {
+        border:none;
+        background:transparent;
+        border-radius: 6px; 
+    }
+      
+    #dica::-webkit-scrollbar-track {
+        background-color:transparent;
+    }
+    
+    #contUser #editPerfil {
+        color:white;
+        font-size:18;
+        width:100%;
+        height:10vh;
+        text-align: center;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom:2px solid #dd1440;
+    }
+    
+    #contUser #editPerfil p {
+        color:white;
+        font-size:28pt;
+        font-weight: 600;
+    }
+    
+    #contUser #editPerfil button {
+        background:none;
+        border:none;
+        font-size:28pt;
+        font-weight: bold;
+        position: fixed;
+        right:8vw;
+        width:4vw;
+        height:5vh;
+        top:2vh;
+        color:#dd1440;
+    }
+    
+    #contUser #imgPerfil {
+        margin-top:5vh;
+        overflow: hidden;
+        width:100%;
+        height:25vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #contUser #imgPerfil img {
+        min-width:38%;
+        max-width: 40%;
+        min-height:80%;
+        max-height:90%;
+        border: 2px solid #dd1440;
+        border-radius:10px;
+    }
+    
+    #contUser #editName {
+        width:100%;
+        height:8vh;
+        margin-top:15px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #contUser #nickName {
+        width:60%;
+        height:4vh;
+        margin:0px 10px;
+        background:#030303;
+        border:1px solid white;
+        color:white;
+        text-align: center;
+        border-radius:15px;
+        font-size:20pt;
+        font-weight: 550;
+        outline: none;
+    }
+    
+    #contUser #color {
+        width:10%;
+        height:4vh;
+        border-radius:5px;
+        outline: none;
+        background:#030303;
+        border:1px solid white;
+    }
+    
+    #selectImg {
+        width:100%;
+        height:100vh;
+        margin-top:5vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        border-top:2px solid #dd1440;
+        border-bottom:2px solid #dd1440;
+    }
+    
+    #selectImg::-webkit-scrollbar {
+        width: 6px;
+    }
+      
+    #selectImg::-webkit-scrollbar-thumb {
+        background-color: transparent; /* Cor da parte móvel da barra de rolagem */
+        border-radius: 6px; /* Borda arredondada da parte móvel */
+    }
+      
+    #selectImg::-webkit-scrollbar-track {
+        background-color:transparent; /* Cor de fundo da barra de rolagem */
+    }
+    
+    #selectImg .personagens {
+        width:100%;
+        height:18vh;
+        margin-bottom:2vh;
+        overflow: hidden;
+        display:flex;
+        justify-content: center;
+        overflow: hidden;
+        align-items: center;
+    }
+    
+    #selectImg .personagens .card {
+        width:25%;
+        height:90%;
+        margin:0px 2px;
+        overflow: hidden;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #dd1440;
+        background:linear-gradient(90deg, rgb(90, 80, 37),rgb(194, 162, 56), rgb(228, 193, 79));
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    #selectImg .personagens .disabled img {
+        filter: grayscale(1);
+    }
+    
+    #selectImg .personagens .card img {
+        width:140%;
+        height:100%;
+    }
+    
+    #btnPerfil {
+        width:100%;
+        height:5vh;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-top:5vh;
+        margin-bottom:5vh;
+        overflow: hidden;
+    }
+    
+    #cancelar {
+        background:#000000;
+        border:2px solid #06162c;
+        border-radius:5px;
+        color:white;
+        font-size: 18pt;
+        font-weight: bold;
+        width:25vw;
+        height:100%;
+        margin-right:40vw;
+        overflow: hidden;
+    }
+    
+    #salvar {
+        color:white;
+        background:#dd1440;
+        border:2px solid rgb(54, 3, 3);
+        border-radius:5px;
+        font-size: 18pt;
+        font-weight: bold;
+        width:25vw;
+        height:100%;
+        overflow: hidden;
+    }
+
+    #init #initImg {
+        position:absolute;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%, -50%);
+        width:65vw;
+        height:30vh;
+        opacity: 0;
+    }
+    
+    #init #initImg2 {
+        position:absolute;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%, -50%);
+        width:65vw;
+        height:16vh;
+        opacity: 0;
+    }
+
+    #selectImg #city {
+        width:100%;
+        height:22vh;
+        margin:30px 0px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #selectImg #city img {
+        width:25vw;
+        height:16vh;
+        margin-right:2vw;
+    }
+    
+    #selectImg #city p {
+        font-size:32pt;
+        font-weight: bold;
+        color:white;
+    }
+
+    #selectImg .personagens .card4 {
+        width:25%;
+        height:90%;
+        margin:0px 2px;
+        overflow: hidden;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #dd1440;
+        background:linear-gradient(90deg, rgb(66, 35, 83),rgb(135, 98, 165), rgb(162, 134, 228));
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    #selectImg .personagens .card6 {
+        width:25%;
+        height:90%;
+        margin:0px 2px;
+        overflow: hidden;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #dd1440;
+        background:linear-gradient(90deg, #8a1830, #da153f, #e7234d);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    #selectImg .personagens .card4 img {
+        width:100%;
+        height:100%;
+    }
+    
+    #selectImg .personagens .card6 img {
+        width:100%;
+        height:100%;
+    }
+
+    #divCompra {
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100vh;
+        background:rgba(0, 0, 0, 0.884);
+        z-index:2;
+        display:none;
+    }
+    
+    #divCompra #caracter {
+        width: 100%;
+        height:100%;
+    }
+    
+    #divCompra #caracter button {
+        background:transparent;
+        font-size:28pt;
+        text-align: center;
+        width:4vw;
+        height:6vh;
+        color:white;
+        position:fixed;
+        border:none;
+        right:4vw;
+        top:2vh;
+    }
+    
+    #divCompra #caracter #imgCaracter {
+        position:fixed;
+        left:50%;
+        top:45%;
+        transform: translate(-50%, -50%);
+        width:150%;
+        height:65%;
+        animation:openPerson 0.5s linear;
+    }
+    
+    #divCompra #caracter #element {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:100vw;
+        height:20vh;
+        position:absolute;
+        left:50%;
+        top:82%;
+        transform: translate(-50%, -50%);
+        overflow:hidden;
+    }
+    
+    #divCompra #caracter #element #imgElement {
+        position:fixed;
+        left:5vw;
+        width:20%;
+        height:70%;
+        animation: openIcon 0.5s linear;
+    }
+    
+    #divCompra #caracter #element #text {
+        position:absolute;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction:column ;
+        text-align: center;
+        width:90%;
+        height:100%;
+        right:0;
+    }
+    
+    #divCompra #caracter #element #text #nomeCaracter {
+        font-size:40pt;
+        color:white;
+        overflow: hidden;
+    }
+    
+    #divCompra #caracter #element #text p {
+        font-size:24pt;
+    }
+    
+}
+

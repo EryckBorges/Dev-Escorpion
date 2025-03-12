@@ -141,6 +141,7 @@ main {
     position: absolute;
     top: 5vh;
     width: 100%;
+    z-index: 3;
   }
 
   .sololeveling > p {
@@ -170,6 +171,19 @@ main {
   .project > img {
     width: 100%;
     height: 100%;
+    z-index: 2;
+  }
+
+  .project > video {
+    width: 64%;
+    height: 42%;
+    position: absolute;
+    top:25%;
+    left: 12%;
+    z-index: 1;
+    object-fit: cover;
+    filter: none !important;
+  backdrop-filter: none !important;
   }
 
   .service > img {

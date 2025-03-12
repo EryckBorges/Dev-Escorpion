@@ -1,0 +1,106 @@
+@media screen and (width <= 767px) {
+.content {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.336);
+}
+
+.logoAumigos > h1 {
+    font-size: 1.6em;
+}
+
+.logoAumigos > img {
+    width: 60px;
+    height: 60px;
+}
+
+.content > p {
+    font-size: 1em;
+}
+
+.content > button {
+    width: 50%;
+    height: 7vh;
+}
+}
+
+@media screen and (width >= 767px) and (width <= 1023px) {
+    .content {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.336);
+    }
+    
+    .logoAumigos > h1 {
+        font-size: 2em;
+    }
+    
+    .logoAumigos > img {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .content > p {
+        font-size: 1.3em;
+    }
+    
+    .content > button {
+        width: 30%;
+        height: 6vh;
+        font-size: 1.2em;
+    }  
+}
+
+@media screen and (height <= 500px) {
+
+    .imgBack {
+        height: 150vh !important;
+    }
+
+    .content {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.336);
+    }
+    
+    .logoAumigos > h1 {
+        font-size: 1.4em;
+    }
+    
+    .logoAumigos > img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .content > p {
+        font-size: 1em;
+    }
+    
+    .content > button {
+        width: 30%;
+        height: 15vh;
+        font-size: 1.2em;
+    }  
+}
+
+@media screen and (width <= 350px) {
+    .content {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.336);
+    }
+    
+    .logoAumigos > h1 {
+        font-size: 1.4em;
+    }
+    
+    .logoAumigos > img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .content > p {
+        font-size: 0.8em;
+    }
+    
+    .content > button {
+        width: 50%;
+        height: 7vh;
+    }
+}
