@@ -250,73 +250,59 @@ const langPage = () => {
   
   // Executa ao carregar a página
   langPage();
-
-document.addEventListener("DOMContentLoaded", () => {
-  const slider = document.querySelector(".images");
-
-let isDraggingSlider = false;
-let startXSlider, scrollLeftSlider;
-
-// 🔹 MOUSE: Arrasta horizontalmente quando pressionado
-slider.addEventListener("mousedown", (e) => {
-    isDraggingSlider = true;
-    slider.classList.add("active");
-    startXSlider = e.pageX - slider.offsetLeft;
-    scrollLeftSlider = slider.scrollLeft;
-});
-
-slider.addEventListener("mouseleave", () => {
-    isDraggingSlider = false;
-    slider.classList.remove("active");
-});
-
-slider.addEventListener("mouseup", () => {
-    isDraggingSlider = false;
-    slider.classList.remove("active");
-});
-
-slider.addEventListener("mousemove", (e) => {
-    if (!isDraggingSlider) return;
-    e.preventDefault(); // Impede o comportamento padrão
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startXSlider) * 5; // Ajuste a velocidade do deslize
-    slider.scrollLeft = scrollLeftSlider - walk;
-});
-
-// 🔹 TOUCH: Arrasta horizontalmente quando tocado
-slider.addEventListener("touchstart", (e) => {
-    isDraggingSlider = true;
-    slider.classList.add("active");
-    startXSlider = e.touches[0].pageX - slider.offsetLeft;
-    scrollLeftSlider = slider.scrollLeft;
-});
-
-slider.addEventListener("touchend", () => {
-    isDraggingSlider = false;
-    slider.classList.remove("active");
-});
-
-slider.addEventListener("touchmove", (e) => {
-    if (!isDraggingSlider) return;
-    e.preventDefault(); // Impede o comportamento padrão
-    const x = e.touches[0].pageX - slider.offsetLeft;
-    const walk = (x - startXSlider) * 2; // Ajuste a velocidade do deslize
-    slider.scrollLeft = scrollLeftSlider - walk;
-});
-
-// 🔹 RODA DE MOUSE: Permite rolagem vertical
-slider.addEventListener("wheel", (e) => {
-    if (e.deltaY !== 0) {
-        // Rolagem vertical normal com a roda do mouse
-        return;
-    }
-
-    e.preventDefault(); // Impede o comportamento padrão
-    slider.scrollLeft += e.deltaX || e.deltaY; // Rolagem horizontal
-}, { passive: false });
-
-    
-});
+  document.addEventListener("DOMContentLoaded", () => {
+    const sliderImages = document.querySelector(".images");
+  
+    let isDraggingImages = false;
+    let startXImages, scrollLeftImages;
+  
+    // 🔹 MOUSE: Arrasta horizontalmente quando pressionado
+    sliderImages.addEventListener("mousedown", (e) => {
+      isDraggingImages = true;
+      sliderImages.classList.add("active");
+      startXImages = e.pageX - sliderImages.offsetLeft;
+      scrollLeftImages = sliderImages.scrollLeft;
+    });
+  
+    document.addEventListener("mouseup", () => {
+      isDraggingImages = false;
+      sliderImages.classList.remove("active");
+    });
+  
+    document.addEventListener("mousemove", (e) => {
+      if (!isDraggingImages) return;
+      e.preventDefault();
+      const x = e.pageX - sliderImages.offsetLeft;
+      const walk = (x - startXImages) * 5; // Ajuste a velocidade do deslize
+      sliderImages.scrollLeft = scrollLeftImages - walk;
+    });
+  
+    // 🔹 TOUCH: Arrasta horizontalmente quando tocado
+    sliderImages.addEventListener("touchstart", (e) => {
+      isDraggingImages = true;
+      startXImages = e.touches[0].pageX;
+      scrollLeftImages = sliderImages.scrollLeft;
+    }, { passive: true });
+  
+    sliderImages.addEventListener("touchmove", (e) => {
+      if (!isDraggingImages) return;
+      const moveX = e.touches[0].pageX - startXImages;
+      sliderImages.scrollLeft = scrollLeftImages - moveX;
+    }, { passive: true });
+  
+    sliderImages.addEventListener("touchend", () => {
+      isDraggingImages = false;
+    });
+  
+    // 🔹 RODA DE MOUSE: Permite rolagem vertical e horizontal
+    sliderImages.addEventListener("wheel", (e) => {
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        return; // Permite a rolagem vertical
+      }
+      e.preventDefault();
+      sliderImages.scrollLeft += e.deltaX || e.deltaY;
+    }, { passive: false });
+  });
 
 const sabores = document.querySelector('.sabores');
 

@@ -2115,67 +2115,55 @@ avalia.addEventListener("touchend", () => {
   isDragging = false;
 });
 
-
-//Função de slide de projetos e serviços
 const sliderServices = document.querySelector(".swiperServices");
-let isDownServices = false;
-let startXServices;
-let scrollLeftServices;
+let isDraggingServices = false;
+let startXServices, scrollLeftServices;
 
-// Eventos de mouse
-sliderServices.addEventListener("mousedown", (ev) => {
-  isDownServices = true;
+// 🔹 MOUSE: Somente arrasta horizontalmente quando pressionado
+sliderServices.addEventListener("mousedown", (e) => {
+  isDraggingServices = true;
   sliderServices.classList.add("active");
-  startXServices = ev.pageX - sliderServices.offsetLeft;
+  startXServices = e.pageX - sliderServices.offsetLeft;
   scrollLeftServices = sliderServices.scrollLeft;
 });
 
-sliderServices.addEventListener("mouseleave", () => {
-  isDownServices = false;
+document.addEventListener("mouseup", () => {
+  isDraggingServices = false;
   sliderServices.classList.remove("active");
 });
 
-sliderServices.addEventListener("mouseup", () => {
-  isDownServices = false;
-  sliderServices.classList.remove("active");
+document.addEventListener("mousemove", (e) => {
+  if (!isDraggingServices) return;
+  e.preventDefault();
+  const x = e.pageX - sliderServices.offsetLeft;
+  const walkX = (x - startXServices) * 2; // Ajuste da velocidade
+  sliderServices.scrollLeft = scrollLeftServices - walkX;
 });
 
-sliderServices.addEventListener("mousemove", (evs) => {
-  if (!isDownServices) return; // Parar se o mouse não estiver pressionado
-  evs.preventDefault();
-  const x = evs.pageX - sliderServices.offsetLeft;
-  const walk = (x - startXServices) * 2; // Multiplica para ajustar a velocidade
-  sliderServices.scrollLeft = scrollLeftServices - walk;
-});
-
-// Eventos de toque
-sliderServices.addEventListener("touchstart", (evsm) => {
-  isDownServices = true;
-  sliderServices.classList.add("active");
-  startXServices = evsm.touches[0].pageX - sliderServices.offsetLeft;
-  scrollLeftServices = sliderServices.scrollLeft;
-});
-
-sliderServices.addEventListener("touchend", () => {
-  isDownServices = false;
-  sliderServices.classList.remove("active");
-});
-
-sliderServices.addEventListener("touchmove", (evms) => {
-  if (!isDownServices) return; // Parar se não houver toque ativo
-  evms.preventDefault();
-  const x = evms.touches[0].pageX - sliderServices.offsetLeft;
-  const walk = (x - startXServices) * 2; // Multiplica para ajustar a velocidade
-  sliderServices.scrollLeft = scrollLeftServices - walk;
-});
-
+// 🔹 MOUSE SCROLL: Mantém rolagem vertical normalmente
 sliderServices.addEventListener("wheel", (e) => {
-  if (e.deltaY !== 0) {
-    return;
-  }
+  if (Math.abs(e.deltaY) > 0) return; // Permite rolagem vertical normalmente
   
   e.preventDefault();
-  sliderServices.scrollLeft += e.deltaX || e.deltaY;
+  sliderServices.scrollLeft += e.deltaX;
+}, { passive: false });
+
+// 🔹 TOUCH: Somente rola horizontalmente quando segurado
+sliderServices.addEventListener("touchstart", (e) => {
+  isDraggingServices = true;
+  startXServices = e.touches[0].pageX;
+  scrollLeftServices = sliderServices.scrollLeft;
+}, { passive: true });
+
+sliderServices.addEventListener("touchmove", (e) => {
+  if (!isDraggingServices) return;
+  
+  const moveX = e.touches[0].pageX - startXServices;
+  sliderServices.scrollLeft = scrollLeftServices - moveX;
+}, { passive: true });
+
+sliderServices.addEventListener("touchend", () => {
+  isDraggingServices = false;
 });
 
 //Função mostrar mais certificados
