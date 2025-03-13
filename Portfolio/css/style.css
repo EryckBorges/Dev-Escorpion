@@ -48,7 +48,7 @@ main {
     font-size:1.8em;
     justify-content: left !important;
     width:100%;
-    margin-bottom:0px;
+    margin-bottom:5px;
 }
 
 .cont > p {
@@ -58,6 +58,7 @@ main {
     width:100%;
     font-size: 1.2em;
     color: var(--branco);
+    margin-bottom:0px;
 }
 
 .minhaFoto {

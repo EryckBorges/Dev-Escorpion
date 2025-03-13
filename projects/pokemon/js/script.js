@@ -645,64 +645,63 @@ btnNintendo.forEach((btn) => {
 
 // Função de slide de avaliação
 const avalia = document.querySelector(".games");
-let praBaixo = false;
-let startXY;
-let scrollEsquerda;
+let isDraggingAv = false;
+let startXAv, scrollLeftAv;
 
+// 🔹 MOUSE: Somente arrasta horizontalmente quando pressionado
 avalia.addEventListener("mousedown", (e) => {
-  praBaixo = true;
+  isDraggingAv = true;
   avalia.classList.add("active");
-  startXY = e.pageX - avalia.scrollLeft;
-  scrollEsquerda = avalia.scrollLeft;
+  startXAv = e.pageX - avalia.scrollLeft;
+  scrollLeftAv = avalia.scrollLeft;
 });
 
 avalia.addEventListener("mouseleave", () => {
-  praBaixo = false;
+  isDraggingAv = false;
   avalia.classList.remove("active");
 });
 
 avalia.addEventListener("mouseup", () => {
-  praBaixo = false;
+  isDraggingAv = false;
   avalia.classList.remove("active");
 });
 
 avalia.addEventListener("mousemove", (e) => {
-  if (!praBaixo) return;
+  if (!isDraggingAv) return;
   e.preventDefault();
   const x = e.pageX - avalia.scrollLeft;
-  const walk = (x - startXY) * 0.5;
-  avalia.scrollLeft = scrollEsquerda - walk;
+  const walk = (x - startXAv) * 0.5;
+  avalia.scrollLeft = scrollLeftAv - walk;
 });
 
+// 🔹 TOUCH: Somente rola horizontalmente quando segurado
 avalia.addEventListener("touchstart", (e) => {
-  praBaixo = true;
+  isDraggingAv = true;
   avalia.classList.add("active");
-  startXY = e.touches[0].pageX - avalia.scrollLeft;
-  scrollEsquerda = avalia.scrollLeft;
+  startXAv = e.touches[0].pageX - avalia.scrollLeft;
+  scrollLeftAv = avalia.scrollLeft;
 });
 
 avalia.addEventListener("touchend", () => {
-  praBaixo = false;
+  isDraggingAv = false;
   avalia.classList.remove("active");
 });
 
 avalia.addEventListener("touchmove", (e) => {
-  if (!praBaixo) return;
+  if (!isDraggingAv) return;
   e.preventDefault();
   const x = e.touches[0].pageX - avalia.scrollLeft;
-  const walk = (x - startXY) * 0.5;
-  avalia.scrollLeft = scrollEsquerda - walk;
+  const walk = (x - startXAv) * 0.5;
+  avalia.scrollLeft = scrollLeftAv - walk;
 });
 
+// 🔹 RODA DE MOUSE: Mantém rolagem vertical
 avalia.addEventListener("wheel", (e) => {
-  if (e.deltaY !== 0) {
-    return;
-  }
-  
+  if (Math.abs(e.deltaY) > 0) return; // Permite rolagem vertical normalmente
+
   e.preventDefault();
   avalia.scrollLeft += e.deltaX || e.deltaY;
-});
-
+}, { passive: false });
 
 const ingles = () => {
   elementos.inicio.forEach((inicioText) => {
@@ -856,6 +855,7 @@ const portugues = () => {
   elementos.privacity.innerHTML = brasil.privacity;
   elementos.cookie.innerHTML = brasil.cookie;
   elementos.descPokemon.innerHTML = brasil.descPokemon;
+  elementos.descPokemonMobile.innerHTML = brasil.descPokemon;
   switch (gameDesc) {
     case 'scarlet':
       elementos.descPokemon.innerHTML = brasil.descScarlet;
@@ -983,6 +983,7 @@ const espanha = () => {
   elementos.privacity.innerHTML = spain.privacity;
   elementos.cookie.innerHTML = spain.cookie;
   elementos.descPokemon.innerHTML = spain.descPokemon;
+  elementos.descPokemonMobile.innerHTML = spain.descPokemon;
   switch (gameDesc) {
     case 'scarlet':
       elementos.descPokemon.innerHTML = spain.descScarlet;
@@ -1106,6 +1107,7 @@ const frances = () => {
   elementos.privacity.innerHTML = franca.privacity;
   elementos.cookie.innerHTML = franca.cookie;
   elementos.descPokemon.innerHTML = franca.descPokemon;
+  elementos.descPokemonMobile.innerHTML = franca.descPokemon;
   switch (gameDesc) {
     case 'scarlet':
       elementos.descPokemon.innerHTML = franca.descScarlet;
@@ -1229,6 +1231,7 @@ const chines = () => {
   elementos.privacity.innerHTML = china.privacity;
   elementos.cookie.innerHTML = china.cookie;
   elementos.descPokemon.innerHTML = china.descPokemon;
+  elementos.descPokemonMobile.innerHTML = china.descPokemon;
   switch (gameDesc) {
     case 'scarlet':
       elementos.descPokemon.innerHTML = china.descScarlet;

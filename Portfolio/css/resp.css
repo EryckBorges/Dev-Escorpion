@@ -329,6 +329,7 @@
     .cont {
         width:90%;
         height:100%;
+        gap:0px;
     }
 
     .cont > h1 {
@@ -615,6 +616,24 @@
 .buttonAllProjects:hover {
     width: 60%;
     height: 60%;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: #000;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 4px solid #1b1b1b;
+    transition: all 0.3s ease;
+    transform: rotate3d(20, -10, 1, 60deg);
 }
 
 

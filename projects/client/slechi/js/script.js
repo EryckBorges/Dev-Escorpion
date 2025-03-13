@@ -252,69 +252,69 @@ const langPage = () => {
   langPage();
 
 document.addEventListener("DOMContentLoaded", () => {
-    const slider = document.querySelector(".images");
-    if (!slider) {
-        console.error("Elemento .images não encontrado!");
+  const slider = document.querySelector(".images");
+
+let isDraggingSlider = false;
+let startXSlider, scrollLeftSlider;
+
+// 🔹 MOUSE: Arrasta horizontalmente quando pressionado
+slider.addEventListener("mousedown", (e) => {
+    isDraggingSlider = true;
+    slider.classList.add("active");
+    startXSlider = e.pageX - slider.offsetLeft;
+    scrollLeftSlider = slider.scrollLeft;
+});
+
+slider.addEventListener("mouseleave", () => {
+    isDraggingSlider = false;
+    slider.classList.remove("active");
+});
+
+slider.addEventListener("mouseup", () => {
+    isDraggingSlider = false;
+    slider.classList.remove("active");
+});
+
+slider.addEventListener("mousemove", (e) => {
+    if (!isDraggingSlider) return;
+    e.preventDefault(); // Impede o comportamento padrão
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startXSlider) * 5; // Ajuste a velocidade do deslize
+    slider.scrollLeft = scrollLeftSlider - walk;
+});
+
+// 🔹 TOUCH: Arrasta horizontalmente quando tocado
+slider.addEventListener("touchstart", (e) => {
+    isDraggingSlider = true;
+    slider.classList.add("active");
+    startXSlider = e.touches[0].pageX - slider.offsetLeft;
+    scrollLeftSlider = slider.scrollLeft;
+});
+
+slider.addEventListener("touchend", () => {
+    isDraggingSlider = false;
+    slider.classList.remove("active");
+});
+
+slider.addEventListener("touchmove", (e) => {
+    if (!isDraggingSlider) return;
+    e.preventDefault(); // Impede o comportamento padrão
+    const x = e.touches[0].pageX - slider.offsetLeft;
+    const walk = (x - startXSlider) * 2; // Ajuste a velocidade do deslize
+    slider.scrollLeft = scrollLeftSlider - walk;
+});
+
+// 🔹 RODA DE MOUSE: Permite rolagem vertical
+slider.addEventListener("wheel", (e) => {
+    if (e.deltaY !== 0) {
+        // Rolagem vertical normal com a roda do mouse
         return;
     }
 
-    let isDown = false;
-    let startX;
-    let scrollLeft;
+    e.preventDefault(); // Impede o comportamento padrão
+    slider.scrollLeft += e.deltaX || e.deltaY; // Rolagem horizontal
+}, { passive: false });
 
-    slider.addEventListener("mousedown", (e) => {
-        isDown = true;
-        slider.classList.add("active");
-        startX = e.pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
-    });
-
-    slider.addEventListener("mouseleave", () => {
-        isDown = false;
-        slider.classList.remove("active");
-    });
-
-    slider.addEventListener("mouseup", () => {
-        isDown = false;
-        slider.classList.remove("active");
-    });
-
-    slider.addEventListener("mousemove", (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 5;
-        slider.scrollLeft = scrollLeft - walk;
-    });
-
-    slider.addEventListener("touchstart", (e) => {
-        isDown = true;
-        slider.classList.add("active");
-        startX = e.touches[0].pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
-    });
-
-    slider.addEventListener("touchend", () => {
-        isDown = false;
-        slider.classList.remove("active");
-    });
-
-    slider.addEventListener("touchmove", (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.touches[0].pageX - slider.offsetLeft;
-        const walk = (x - startX) * 2;
-        slider.scrollLeft = scrollLeft - walk;
-    });
-
-    slider.addEventListener("wheel", (e) => {
-      if (e.deltaY !== 0) {
-        return;
-      }
-      
-      e.preventDefault();
-      slider.scrollLeft += e.deltaX || e.deltaY;
-    });
     
 });
 

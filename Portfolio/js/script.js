@@ -2009,129 +2009,112 @@ const langPage = () => {
 // Executa ao carregar a página
 langPage();
 
-//Função de slide de projetos e serviços
 const slider = document.querySelector(".swiper");
-let isDown = false;
-let startX;
-let scrollLeft;
+let isDraggingSlider = false;
+let startXSlider, scrollLeftSlider;
 
-// Eventos de mouse
+// 🔹 MOUSE: Somente arrasta horizontalmente quando pressionado
 slider.addEventListener("mousedown", (e) => {
-  isDown = true;
+  isDraggingSlider = true;
   slider.classList.add("active");
-  startX = e.pageX - slider.offsetLeft;
-  scrollLeft = slider.scrollLeft;
+  startXSlider = e.pageX - slider.offsetLeft;
+  scrollLeftSlider = slider.scrollLeft;
 });
 
-slider.addEventListener("mouseleave", () => {
-  isDown = false;
+document.addEventListener("mouseup", () => {
+  isDraggingSlider = false;
   slider.classList.remove("active");
 });
 
-slider.addEventListener("mouseup", () => {
-  isDown = false;
-  slider.classList.remove("active");
-});
-
-slider.addEventListener("mousemove", (e) => {
-  if (!isDown) return; // Parar se o mouse não estiver pressionado
+document.addEventListener("mousemove", (e) => {
+  if (!isDraggingSlider) return;
   e.preventDefault();
   const x = e.pageX - slider.offsetLeft;
-  const walk = (x - startX) * 2; // Multiplica para ajustar a velocidade
-  slider.scrollLeft = scrollLeft - walk;
+  const walkX = (x - startXSlider) * 2; // Ajuste da velocidade
+  slider.scrollLeft = scrollLeftSlider - walkX;
 });
 
-// Eventos de toque
+// 🔹 MOUSE SCROLL: Mantém rolagem vertical normalmente
+slider.addEventListener("wheel", (e) => {
+  if (Math.abs(e.deltaY) > 0) return; // Permite rolagem vertical normalmente
+  
+  e.preventDefault();
+  slider.scrollLeft += e.deltaX;
+}, { passive: false });
+
+// 🔹 TOUCH: Somente rola horizontalmente quando segurado
 slider.addEventListener("touchstart", (e) => {
-  isDown = true;
-  slider.classList.add("active");
-  startX = e.touches[0].pageX - slider.offsetLeft;
-  scrollLeft = slider.scrollLeft;
-});
-
-slider.addEventListener("touchend", () => {
-  isDown = false;
-  slider.classList.remove("active");
-});
+  isDraggingSlider = true;
+  startXSlider = e.touches[0].pageX;
+  scrollLeftSlider = slider.scrollLeft;
+}, { passive: true });
 
 slider.addEventListener("touchmove", (e) => {
-  if (!isDown) return; // Parar se não houver toque ativo
-  e.preventDefault();
-  const x = e.touches[0].pageX - slider.offsetLeft;
-  const walk = (x - startX) * 2; // Multiplica para ajustar a velocidade
-  slider.scrollLeft = scrollLeft - walk;
+  if (!isDraggingSlider) return;
+
+  const moveX = e.touches[0].pageX - startXSlider;
+  slider.scrollLeft = scrollLeftSlider - moveX;
+}, { passive: true });
+
+slider.addEventListener("touchend", () => {
+  isDraggingSlider = false;
 });
 
-slider.addEventListener("wheel", (e) => {
-  if (e.deltaY !== 0) {
-    return;
-  }
-  
-  e.preventDefault();
-  slider.scrollLeft += e.deltaX || e.deltaY;
-});
 
-// Função de slide de avaliação
 const avalia = document.querySelector(".avalia");
-let praBaixo = false;
-let startXY;
-let scrollEsquerda;
+let isDragging = false;
+let startX, scrollLeft;
 
-// Eventos de mouse
+// 🔹 MOUSE: Somente arrasta horizontalmente quando pressionado
 avalia.addEventListener("mousedown", (e) => {
-  praBaixo = true;
+  isDragging = true;
   avalia.classList.add("active");
-  startXY = e.pageX - avalia.scrollLeft;
-  scrollEsquerda = avalia.scrollLeft;
+  startX = e.pageX - avalia.offsetLeft;
+  scrollLeft = avalia.scrollLeft;
 });
 
-avalia.addEventListener("mouseleave", () => {
-  praBaixo = false;
+document.addEventListener("mouseup", () => {
+  isDragging = false;
   avalia.classList.remove("active");
 });
 
-avalia.addEventListener("mouseup", () => {
-  praBaixo = false;
-  avalia.classList.remove("active");
-});
-
-avalia.addEventListener("mousemove", (e) => {
-  if (!praBaixo) return;
+document.addEventListener("mousemove", (e) => {
+  if (!isDragging) return;
   e.preventDefault();
-  const x = e.pageX - avalia.scrollLeft;
-  const walk = (x - startXY) * 0.5; // Multiplica para ajustar a velocidade
-  avalia.scrollLeft = scrollEsquerda - walk;
+  const x = e.pageX - avalia.offsetLeft;
+  const walkX = (x - startX) * 0.5; // Ajuste da velocidade
+  avalia.scrollLeft = scrollLeft - walkX;
 });
 
-// Eventos de toque
+// 🔹 MOUSE SCROLL: Mantém rolagem vertical normalmente
+avalia.addEventListener("wheel", (e) => {
+  // Se houver rolagem na vertical, permite normalmente
+  if (Math.abs(e.deltaY) > 0) return;
+  
+  // Impede a rolagem vertical e move horizontalmente se necessário
+  e.preventDefault();
+  avalia.scrollLeft += e.deltaX;
+}, { passive: false });
+
+// 🔹 TOUCH: Somente rola horizontalmente quando segurado
 avalia.addEventListener("touchstart", (e) => {
-  praBaixo = true;
-  avalia.classList.add("active");
-  startXY = e.touches[0].pageX - avalia.scrollLeft;
-  scrollEsquerda = avalia.scrollLeft;
-});
-
-avalia.addEventListener("touchend", () => {
-  praBaixo = false;
-  avalia.classList.remove("active");
-});
+  isDragging = true;
+  startX = e.touches[0].pageX;
+  scrollLeft = avalia.scrollLeft;
+}, { passive: true });
 
 avalia.addEventListener("touchmove", (e) => {
-  if (!praBaixo) return;
-  e.preventDefault();
-  const x = e.touches[0].pageX - avalia.scrollLeft;
-  const walk = (x - startXY) * 0.5; // Multiplica para ajustar a velocidade
-  avalia.scrollLeft = scrollEsquerda - walk;
+  if (!isDragging) return;
+
+  // 🔥 Somente move horizontalmente se estiver pressionando
+  const moveX = e.touches[0].pageX - startX;
+  avalia.scrollLeft = scrollLeft - moveX;
+}, { passive: true });
+
+avalia.addEventListener("touchend", () => {
+  isDragging = false;
 });
 
-avalia.addEventListener("wheel", (e) => {
-  if (e.deltaY !== 0) {
-    return;
-  }
-  
-  e.preventDefault();
-  avalia.scrollLeft += e.deltaX || e.deltaY;
-});
 
 //Função de slide de projetos e serviços
 const sliderServices = document.querySelector(".swiperServices");
