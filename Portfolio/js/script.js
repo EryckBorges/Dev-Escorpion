@@ -177,6 +177,7 @@ privacity: 'Privacy',
   titleGenshin: "Genshin Impact Divination",
   titlePokemon: "Pokedex and Games",
   titleSlechi: "Ice Cream Catalog",
+  titleAumigos: "Graduation Project - AuMigos Pet's",
   toastAlertDesenvolvi: "In Development",
   btnAllProject: "See all projects",
   allConhecimento: "of my knowledge",
@@ -290,6 +291,7 @@ const brasil = {
   titlePokemon: "Pokedex e Jogos",
   titleGenshin: "Adivinhação de Genshin Impact",
   titleSlechi: "Catalogo de Sorvetes",
+  titleAumigos: "TCC - AuMigos Pet's",
   toastAlertDesenvolvi: "Em Desenvolvimento",
   btnAllProject: "Veja todos os projetos",
   allConhecimento: 'de meu conhecimento',
@@ -400,6 +402,7 @@ privacity: 'Privacidad',
   titleGenshin: "Adivinación de Genshin Impact",
   titlePokemon: "Pokedex y Juegos",
   titleSlechi: "Catálogo de Helados",
+  titleAumigos: "Trabajo de Fin de Curso - AuMigos Pet's",
   toastAlertDesenvolvi: "En Desarrollo",
   btnAllProject: "Ver todos los proyectos",
   allConhecimento: "de mi conocimiento",
@@ -510,6 +513,7 @@ privacity: 'Confidentialité',
   titlePokemon: "Pokedex et Jeux",
   titleGenshin: "Divination de Genshin Impact",
   titleSlechi: "Catalogue de Glaces",
+  titleAumigos: "Projet de Fin d'Études - AuMigos Pet's",
   toastAlertDesenvolvi: "En Développement",
   btnAllProject: "Voir tous les projets",
   allConhecimento: "de ma connaissance",
@@ -620,6 +624,7 @@ privacity: '隐私政策',
   titleGenshin: "原神占卜",
   titleSlechi: "冰淇淋目录",
   titlePokemon: "宝可梦图鉴与游戏",
+  titleAumigos: "毕业项目 - AuMigos Pet's",
   toastAlertDesenvolvi: "开发中",
   btnAllProject: "查看所有项目",
   allConhecimento: "我的知识",
@@ -655,6 +660,7 @@ const elementos = {
   titleGenshin: document.querySelector(".genshin p"),
   titlePokemon: document.querySelector(".pokemon p"),
   titleSlechi: document.querySelector(".slechi p"),
+  titleAumigos: document.querySelector(".aumigos p"),
   toastAlertDesenvolvi: document.querySelector(".textToast"),
   btnAllProject: document.querySelectorAll(".btnAllProject"),
   allConhecimento: document.querySelector('.conhecimento'),
@@ -1333,6 +1339,7 @@ const ingles = () => {
   elementos.titleRelogio.innerHTML = eua.titleRelogio;
   elementos.titleGenshin.innerHTML = eua.titleGenshin;
   elementos.titlePokemon.innerHTML = eua.titlePokemon;
+  elementos.titleAumigos.innerHTML = eua.titleAumigos;
   elementos.toastAlertDesenvolvi.innerHTML = eua.toastAlertDesenvolvi;
   elementos.btnAllProject.forEach((btnAllProjectText) => {
     btnAllProjectText.innerHTML = eua.btnAllProject;
@@ -1475,6 +1482,7 @@ const portugues = () => {
   elementos.titleRelogio.innerHTML = brasil.titleRelogio;
   elementos.titleGenshin.innerHTML = brasil.titleGenshin;
   elementos.titlePokemon.innerHTML = brasil.titlePokemon;
+  elementos.titleAumigos.innerHTML = brasil.titleAumigos;
   elementos.toastAlertDesenvolvi.innerHTML = brasil.toastAlertDesenvolvi;
   elementos.btnAllProject.forEach((btnAllProjectText) => {
     btnAllProjectText.innerHTML = brasil.btnAllProject;
@@ -1615,6 +1623,7 @@ const espanha = () => {
   elementos.titleGenshin.innerHTML = spain.titleGenshin;
   elementos.titlePokemon.innerHTML = spain.titlePokemon;
   elementos.titleSlechi.innerHTML = spain.titleSlechi;
+  elementos.titleAumigos.innerHTML = spain.titleAumigos;
   elementos.toastAlertDesenvolvi.innerHTML = spain.toastAlertDesenvolvi;
   elementos.btnAllProject.forEach((btnAllProjectText) => {
     btnAllProjectText.innerHTML = spain.btnAllProject;
@@ -1756,6 +1765,7 @@ const frances = () => {
   elementos.titleGenshin.innerHTML = franca.titleGenshin;
   elementos.titlePokemon.innerHTML = franca.titlePokemon;
   elementos.titleSlechi.innerHTML = franca.titleSlechi;
+  elementos.titleAumigos.innerHTML = franca.titleAumigos;
   elementos.toastAlertDesenvolvi.innerHTML = franca.toastAlertDesenvolvi;
   elementos.btnAllProject.forEach((btnAllProjectText) => {
     btnAllProjectText.innerHTML = franca.btnAllProject;
@@ -1896,6 +1906,7 @@ const chines = () => {
   elementos.titleGenshin.innerHTML = china.titleGenshin;
   elementos.titlePokemon.innerHTML = china.titlePokemon;
   elementos.titleSlechi.innerHTML = china.titleSlechi;
+  elementos.titleAumigos.innerHTML = china.titleAumigos;
   elementos.toastAlertDesenvolvi.innerHTML = china.toastAlertDesenvolvi;
   elementos.btnAllProject.forEach((btnAllProjectText) => {
     btnAllProjectText.innerHTML = china.btnAllProject;

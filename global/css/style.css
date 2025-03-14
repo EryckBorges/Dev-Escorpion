@@ -350,14 +350,14 @@ footer {
 }
 
 .redesFooter1, .redesFooter2 {
-    height: 50%;
+    height: 40%;
     width: 100%;
     gap: 40px;
 }
 
 .redesFooter1 > img, .redesFooter2 > img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 }
 
 .contFooter {
@@ -380,15 +380,16 @@ footer {
     text-decoration: none;
 }
 
-.copyRight {
-    height: 20%;
+.copyRight > p{
+    height: auto;
     width: 100%;
     justify-content: left !important;
-    font-size: 1.2em;
+    
     color: #1b1b1b;
     font-weight: bold;
 }
 
 .copyRight > p {
     margin-inline: 30px;
+    font-size: 1.2em;
 }
