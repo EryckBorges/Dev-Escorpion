@@ -1,0 +1,168 @@
+@media screen and (width <= 767px) {
+    .cont {
+        width: 100%;
+        height: 80%;
+        padding-left: 10px;
+    }
+
+    .buttons {
+        width: 90%;
+        height: 25%;
+        flex-direction: row;
+    }
+
+    .grade {
+        height: 100%;
+        width: 50%;
+        flex-direction: column;
+    }
+
+    .grade > button {
+        width: auto;
+        height: 55%;
+    }
+
+    .conteudoGenshin > h1 {
+        font-size: 1.6em;
+        color: #E4C796;
+        width: 95%;
+    }
+
+    .conteudoGenshin > p {
+        font-size: 1.1em;
+        width: 95%;
+    }
+
+    .conteudoGenshin > img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (width >= 767px) and (width <= 1023px) {
+    .cont {
+        width: 70%;
+        height: 80%;
+    }
+
+    .conteudoGenshin {
+        height: 50%;
+    }
+
+    .conteudoGenshin > h1 {
+        font-size: 2.2em;
+        width: 95%;
+    }
+
+    .conteudoGenshin > p {
+        font-size: 1.6em;
+        width: 95%;
+    }
+
+    .buttons {
+        width: 90%;
+        height: 25%;
+        flex-direction: row;
+    }
+
+    .grade {
+        height: 100%;
+        width: 50%;
+        flex-direction: column;
+    }
+
+    .grade > button {
+        width: auto;
+        height: 55%;
+    }
+}
+
+@media screen and (height <= 500px) {
+    header > video, header {
+        height: 130vh !important;
+    }
+
+    .cont {
+        margin-left: -150px !important;
+        position: relative;
+        width: 70%;
+        height: 100%;
+    }
+
+    .conteudoGenshin {
+        height: 100%;
+    }
+
+    .conteudoGenshin > h1 {
+        font-size: 1.4em;
+        width: 95%;
+    }
+
+    .conteudoGenshin > p {
+        font-size: 0.8em;
+        width: 95%;
+    }
+
+    .buttons {
+        width: 100%;
+        height: 45%;
+        flex-direction: column;
+    }
+
+    .grade {
+        height: 50%;
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .grade > button {
+        width: auto;
+        height: 55%;
+    }
+
+    .conteudoGenshin > img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (width <= 350px) {
+    .cont {
+        width: 100%;
+        height: 80%;
+        padding-left: 10px;
+    }
+
+    .buttons {
+        width: 90%;
+        height: 25%;
+        flex-direction: row;
+    }
+
+    .grade {
+        height: 100%;
+        width: 50%;
+        flex-direction: column;
+    }
+
+    .grade > button {
+        width: auto;
+        height: 30%;
+    }
+
+    .conteudoGenshin > h1 {
+        font-size: 1.2em;
+        color: #E4C796;
+        width: 95%;
+    }
+
+    .conteudoGenshin > p {
+        font-size:0.8em;
+        width: 95%;
+    }
+
+    .conteudoGenshin > img {
+        width: 100px;
+        height: 100px;
+    }
+}

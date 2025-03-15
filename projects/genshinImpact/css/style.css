@@ -1,0 +1,81 @@
+header > video {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    object-fit: cover;
+}
+
+.cont {
+    justify-content: left !important;
+    align-items: baseline !important;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    width: 50%;
+    height: 90%;
+    flex-direction: column;
+    gap:20px;
+    padding-left: 30px;
+}
+
+.conteudoGenshin {
+    align-items: baseline !important;
+    position: relative;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    height: 60%;
+    flex-direction: column;
+    gap:20px;
+}
+
+.conteudoGenshin > h1 {
+    font-size: 2em;
+    color: #E4C796;
+    width: 80%;
+}
+
+.conteudoGenshin > p {
+    font-size: 1.2em;
+    color: var(--branco);
+    width: 80%;
+}
+
+.conteudoGenshin > img {
+    border-radius: 20px;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    left: 0;
+    object-fit: cover !important;
+}
+
+.buttons {
+    width: 80%;
+    height: 20%;
+    flex-direction: column;
+}
+
+.grade {
+    justify-content: left !important;
+    flex-direction: row;
+    width: 100%;
+    height: 50%;
+    gap:10px;
+}
+
+.grade > button {
+    width: auto;
+    height: 70%;
+    border-radius: 10px;
+    background: var(--preto);
+}
+
+.grade > button > img {
+    object-fit: cover;
+    width: auto;
+    height:100%;
+}

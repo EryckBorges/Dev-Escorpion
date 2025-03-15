@@ -30,6 +30,8 @@ body {
 }
 
 .button {
+    cursor:pointer;
+    border:none;
     -webkit-tap-highlight-color: transparent;
 }
 
