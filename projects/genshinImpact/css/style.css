@@ -1,3 +1,11 @@
+* {
+    cursor: url('../icon/cursor.png'), auto;
+}
+
+:root {
+    --genshin: #E4C796;
+}
+
 header > video {
     position: absolute;
     top: 0;
@@ -34,7 +42,7 @@ header > video {
 
 .conteudoGenshin > h1 {
     font-size: 2em;
-    color: #E4C796;
+    color: var(--genshin);
     width: 80%;
 }
 
@@ -78,4 +86,61 @@ header > video {
     object-fit: cover;
     width: auto;
     height:100%;
+}
+
+.regioes {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.regioes > video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.regiao {
+    position: absolute;
+    right: 0;
+    width: 15%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.678), transparent);
+    flex-direction: column;
+
+}
+
+.regiao > img {
+    width:100px;
+    height: 100px;
+}
+
+.contentRegiao {
+    align-items: baseline !important;
+    padding-left: 20px;
+    width: 50%;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.836), transparent);
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contentRegiao > img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.contentRegiao > h1 {
+    font-size: 2em;
+    color: var(--genshin);
+    font-weight: bold;
+}
+
+.contentRegiao > p {
+    width: 90%;
+    font-size: 1.2em;
+    color: var(--branco);
 }
