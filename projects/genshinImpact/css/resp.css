@@ -68,6 +68,31 @@
         height: 100%;
         gap: 20px;
     }
+    
+/* Game */
+
+.game3d {
+    background: url('../image/backGame.jpg') center / cover no-repeat;
+    top:0;
+    width: 100%;
+    height: 50%;
+}
+
+.dadosGame {
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    gap: 30px;
+}
+
+.dadosGame > h1 {
+    font-size: 1.6em;
+}
+
+.dadosGame > p {
+    font-size: 1.1em;
+}
+
 }
 
 @media screen and (width >= 767px) and (width <= 1023px) {
@@ -111,7 +136,7 @@
 
     .personagens {
         height: 120vh;
-        flex-direction: column;
+        flex-direction: column-reverse;
         position: relative;
     }
 
@@ -159,6 +184,30 @@
     .btnPrev > button > span {
         font-size: 3em;
     }
+       
+/* Game */
+
+.game3d {
+    background: url('../image/backGame.jpg') center / cover no-repeat;
+    top:0;
+    width: 100%;
+    height: 50%;
+}
+
+.dadosGame {
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    gap: 40px;
+}
+
+.dadosGame > h1 {
+    font-size: 2.5em;
+}
+
+.dadosGame > p {
+    font-size: 1.6em;
+}
 }
 
 @media screen and (height <= 500px) {
@@ -183,7 +232,7 @@
     }
 
     .conteudoGenshin > p {
-        font-size: 0.8em;
+        font-size: 1em;
         width: 95%;
     }
 
@@ -209,8 +258,13 @@
         height: 100px;
     }
 
+    .personagens {
+        flex-direction: row;
+    }
+
     .dadosPerson {
         width:40%;
+        height: 100%;
     }
 
     .contPerson {
@@ -230,7 +284,33 @@
         height: 10vh;
     }
 
+    .personagem {
+        width: 70%;
+        height: 100%;
+    }
+
     .btnPrev {
+        height: 14vh;
+    }
+
+    .btnPrev > button > span {
+        font-size: 1.6em;
+    }
+
+
+    .game3d {
+        background: url('../image/backGame.jpg') center / cover no-repeat;
+    }
+
+    .dadosGame > h1 {
+        font-size: 1.6em;
+    }
+
+    .dadosGame > p {
+        font-size: 1em;
+    }
+
+    .dadosGame > button {
         height: 10vh;
     }
 }
@@ -314,4 +394,38 @@
     .contPerson > p {
         font-size: 1em;
     }
+
+    /* Game */
+
+    .game {
+        height: 120vh;
+    }
+
+.game3d {
+    background: url('../image/backGame.jpg') center / cover no-repeat;
+    top:0;
+    width: 100%;
+    height: 50%;
+}
+
+.dadosGame {
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    gap: 30px;
+}
+
+.dadosGame > h1 {
+    font-size: 1.4em;
+}
+
+.dadosGame > p {
+    font-size: 1em;
+}
+
+.dadosGame > button {
+    width: 90%;
+    height: 6vh;
+    font-size: 1.2em;
+}
 }
