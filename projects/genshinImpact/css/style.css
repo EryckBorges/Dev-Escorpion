@@ -15,6 +15,10 @@ header > video {
     object-fit: cover;
 }
 
+main {
+    flex-direction: column;
+}
+
 .cont {
     justify-content: left !important;
     align-items: baseline !important;
@@ -88,6 +92,102 @@ header > video {
     height:100%;
 }
 
+/* Personagens */
+
+.personagens {
+    width: 100%;
+    height: 120vh;
+    flex-direction: row;
+    position: relative;
+    background: url('../image/backPersons.svg') center / cover  no-repeat;
+}
+
+.dadosPerson {
+    width: 30%;
+    height: 100%;
+    flex-direction: column;
+    position: relative;
+}
+
+.tipoPerson {
+    position: absolute;
+    top:0;
+    z-index: 1;
+    height: 60%;
+    width: 100%;
+}
+
+.tipoPerson > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contPerson {
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    height: 60%;
+    width: 100%;
+    z-index: 2;
+    gap: 20px;
+}
+
+.contPerson > h1 {
+    font-size: 2em;
+    color: var(--genshin);
+    font-weight: bold;
+    width: 90%;
+}
+
+.contPerson > p {
+    width: 90%;
+    color: var(--branco);
+    font-size: 1.2em;
+}
+
+.contPerson > button {
+    width: 90%;
+    background-color: var(--genshin);
+    border-radius: 15px;
+    height: 6vh;
+}
+
+.personagem {
+    width: 70%;
+    height: 100%;
+}
+
+.personagem > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btnPrev {
+    width: 90%;
+    height: 8vh;
+    position: relative;
+}
+
+.next, .back {
+    width: 30%;
+    height: 80%;
+    border-radius: 20px;
+    background-color: var(--genshin);
+    position: absolute;
+}
+
+.next {
+    right: 0;
+}
+
+.back {
+    left: 0;
+}
+
+/* Regiões */
+
 .regioes {
     position: relative;
     width: 100%;
@@ -143,4 +243,34 @@ header > video {
     width: 90%;
     font-size: 1.2em;
     color: var(--branco);
+}
+
+/* Game */
+
+
+.game {
+    width: 100%;
+    height: 100vh;
+    flex-direction: row;
+    position: relative;
+}
+
+.game3d {
+    background: url('../image/backGame.jpg') center / contain   no-repeat;
+    position: absolute;
+    left:0;
+    z-index: 1;
+    width: 50%;
+    height: 100%;
+    justify-content: left !important;
+    align-items: baseline !important;
+}
+
+.dadosGame {
+    background-color: var(--preto);
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 2;
 }

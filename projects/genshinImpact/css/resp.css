@@ -37,6 +37,37 @@
         width: 100px;
         height: 100px;
     }
+
+    /* Personagens */
+
+    .personagens {
+        height: 120vh;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .personagem {
+        width: 100%;
+        height: 50%;
+    }
+
+    .dadosPerson {
+        width: 100%;
+        height: 50%;
+        top: 3vh;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .tipoPerson {
+        height: 80%;
+    }
+
+    .contPerson {
+        background-color: rgba(0, 0, 0, 0.473);
+        height: 100%;
+        gap: 20px;
+    }
 }
 
 @media screen and (width >= 767px) and (width <= 1023px) {
@@ -74,6 +105,59 @@
     .grade > button {
         width: auto;
         height: 55%;
+    }
+
+      /* Personagens */
+
+    .personagens {
+        height: 120vh;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .personagem {
+        width: 100%;
+        height: 60%;
+    }
+
+    .dadosPerson {
+        width: 100%;
+        height: 40%;
+        top: 0vh;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .tipoPerson {
+        height: 80%;
+    }
+
+    .contPerson {
+        background-color: rgba(0, 0, 0, 0.473);
+        height: 100%;
+        gap: 20px;
+    }
+
+    .tipoPerson {
+        height: 100%;
+    }
+
+    .tipoPerson > img {
+        width: 100%;
+        height: 100%;
+        object-fit:contain;
+    }
+
+    .contPerson > h1 {
+        font-size: 2.5em;
+    }
+
+    .contPerson > p {
+        font-size: 1.6em;
+    }
+
+    .btnPrev > button > span {
+        font-size: 3em;
     }
 }
 
@@ -124,6 +208,31 @@
         width: 100px;
         height: 100px;
     }
+
+    .dadosPerson {
+        width:40%;
+    }
+
+    .contPerson {
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.473);
+    }
+
+    .contPerson > h1 {
+        font-size: 1.6em;
+    }
+
+    .contPerson > p {
+        font-size: 1em;
+    }
+
+    .contPerson > button {
+        height: 10vh;
+    }
+
+    .btnPrev {
+        height: 10vh;
+    }
 }
 
 @media screen and (width <= 350px) {
@@ -164,5 +273,45 @@
     .conteudoGenshin > img {
         width: 100px;
         height: 100px;
+    }
+
+    /* Personagens */
+
+    .personagens {
+        height: 150vh;
+        flex-direction: column;
+        position: relative;
+        background-color: red;
+    }
+
+    .personagem {
+        width: 100%;
+        height: 50%;
+    }
+
+    .dadosPerson {
+        width: 100%;
+        height: 50%;
+        top: 3vh;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .tipoPerson {
+        height: 80%;
+    }
+
+    .contPerson {
+        background-color: rgba(0, 0, 0, 0.473);
+        height: 100%;
+        gap: 20px;
+    }
+
+    .contPerson > h1 {
+        font-size: 1.6em;
+    }
+
+    .contPerson > p {
+        font-size: 1em;
     }
 }
