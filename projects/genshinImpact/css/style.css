@@ -103,10 +103,12 @@ main {
 }
 
 .dadosPerson {
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 30%;
     height: 100%;
     flex-direction: column;
-    position: relative;
 }
 
 .tipoPerson {
@@ -146,20 +148,38 @@ main {
     font-size: 1.2em;
 }
 
-.contPerson > button {
+.audioBtn {
     width: 90%;
     background-color: var(--genshin);
+    flex-direction: row;
     border-radius: 15px;
     height: 6vh;
 }
 
-.personagem {
+.play, .pause {
     width: 70%;
     height: 100%;
+    background-color: var(--genshin);
+}
+
+.langAudio {
+    border-left: 1px solid var(--preto);
+    background-color: var(--genshin);
+    width: 30%;
+    height: 100%;
+    font-weight: bold;
+}
+
+.personagem {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: right !important;
 }
 
 .personagem > img {
-    width: 100%;
+    width: 90%;
     height: 100%;
     object-fit: cover;
 }
@@ -295,4 +315,35 @@ main {
     border-radius: 30px;
     background-color: var(--genshin);
     font-size: 1.2em;
+}
+
+.dadosGame > button > a {
+    text-decoration: none;
+    color:var(--preto);
+}
+
+/* Animações */
+
+.entradaTipo {
+    animation: fadeInDown 0.5s;
+}
+
+.saidaTipo {
+    animation: fadeOutUp 0.5s;
+}
+
+.entradaPerson {
+    animation: fadeInRight 0.5s;
+}
+
+.saidaPerson {
+    animation: fadeOutRight 0.5s;
+}
+
+.entradaRegiao {
+    animation: fadeInLeft 0.5s;
+}
+
+.saidaRegiao {
+    animation: fadeOutLeft 0.5s;
 }
