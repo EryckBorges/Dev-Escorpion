@@ -4,7 +4,7 @@ const personagens = [
     //Natlan
     {
         nome: "MUALANI",
-        img: 'mualani.png',
+        img: 'https://eryckborges.github.io/Dev-Escorpion/projects/genshinImpact/image/mualani.png',
         tipo: 'Hydro.png',
         descricao: "Uma renomada guia de nova geração do Povo das Termas. Se você quer conhecer Natlan, ela é a sua melhor companheira.",
         descEua: "A renowned next-generation guide of the People of the Hot Springs. If you want to explore Natlan, she is your best companion.",
@@ -16,7 +16,7 @@ const personagens = [
     }, 
     {
         nome: "KACHINA",
-        img: 'kachina.png',
+        img: 'https://eryckborges.github.io/Dev-Escorpion/projects/genshinImpact/image/kachina.png',
         tipo: 'Geo.png',
         descricao: "Uma jovem guerreira dos Filhos dos Ecos, condecorada com o Nome Antigo 'Uthabiti'. É uma jovem garota otimista que nunca para de crescer no meio das adversidades.",
         descEua: "A young warrior of the Children of Echoes, decorated with the Ancient Name 'Uthabiti'. She is an optimistic young girl who never stops growing amidst adversity.",
@@ -28,7 +28,7 @@ const personagens = [
     },
     {
         nome: "KINICH",
-        img: 'kinich.png',
+        img: 'https://eryckborges.github.io/Dev-Escorpion/projects/genshinImpact/image/kinich.png',
         tipo: 'Dendro.png',
         descricao: "Um caçador de Saurianos que viaja com o autoproclamado 'Dragão Soberano'. Só aceita comissões pouco populares, e é um especialista em calcular o preço das coisas.",
         descEua: "A Saurian hunter who travels with the self-proclaimed 'Sovereign Dragon'. He only accepts unpopular commissions and is an expert in calculating the price of things.",
@@ -40,7 +40,7 @@ const personagens = [
     },
     {
         nome: "XILONEN",
-        img: 'Xilonen.png',
+        img: 'https://eryckborges.github.io/Dev-Escorpion/projects/genshinImpact/image/xilonen.png',
         tipo: 'Geo.png',
         descricao: "Uma ferreira de Nanatzcayan, ela é especialmente habilidosa em encontrar um bom equilíbrio entre as pesadas responsabilidades de seu trabalho e viver bem.",
         descEua: "A blacksmith from Nanatzcayan, she is especially skilled at finding a good balance between the heavy responsibilities of her work and living well.",
@@ -52,7 +52,7 @@ const personagens = [
     },
     {
         nome: "CHASCA",
-        img: 'chasca.png',
+        img: 'https://eryckborges.github.io/Dev-Escorpion/projects/genshinImpact/image/chasca.png',
         tipo: 'Anemo.png',
         descricao: "A Pacificadora de Tlalocan, seja nos 'conflitos' provocados por humanos ou Saurianos, seja 'mediando' com palavras ou munição, encerra todos os conflitos aqui.",
         descEua: "The Peacemaker of Tlalocan, whether in 'conflicts' caused by humans or Saurians, whether 'mediating' with words or ammunition, ends all conflicts here.",
@@ -64,7 +64,7 @@ const personagens = [
     },
     {
         nome: "ORORON",
-        img: 'ororon.png',
+        img: 'https://eryckborges.github.io/Dev-Escorpion/projects/genshinImpact/image/ororon.png',
         tipo: 'Electro.png',
         descricao: "Dos 'Mestres do Vento Noturno', vem esse jovem de expressão sempre serena. Para capturá-lo, será preciso um bom esforço.",
         descEua: "From the 'Masters of the Night Wind', comes this young man with a always serene expression. Capturing him will require a good effort.",
@@ -76,7 +76,7 @@ const personagens = [
     },
     {
         nome: "CITLALI",
-        img: 'citlali.png',
+        img: 'https://eryckborges.github.io/Dev-Escorpion/projects/genshinImpact/image/citlali.png',
         tipo: 'Cryo.png',
         descricao: "A lendária xamã dos Mestres do Vento Noturno, conhecida em toda Natlan como a eminente 'Vovó Itztli'. Não é alguém com quem se deve brincar, mas também é a primeira pessoa a quem todos recorrem quando surgem problemas.",
         descEua: "The legendary shaman of the Masters of the Night Wind, known throughout Natlan as the eminent 'Grandma Itztli'. She is not someone to be trifled with, but she is also the first person everyone turns to when problems arise.",
@@ -88,7 +88,7 @@ const personagens = [
     },
     {
         nome: "MAVUIKA",
-        img: 'mavuika.png',
+        img: 'https://eryckborges.github.io/Dev-Escorpion/projects/genshinImpact/image/mavuika.png',
         tipo: 'Pyro.png',
         descricao: "Arconte e líder de Natlan, a chama eterna que concede esperança aos vivos e o fogo purificador que faz tremer os perversos.",
         descEua: "Archon and leader of Natlan, the eternal flame that grants hope to the living and the purifying fire that makes the wicked tremble.",
@@ -559,8 +559,8 @@ btnNext.addEventListener('click', () => {
         setTimeout(() => {
             tipoPerson.classList.remove('saidaTipo');
             imgPerson.classList.remove('saidaPerson');
+            img.src = personagens[personagemAtual].img;
             tipo.src = `./icon/Element_${personagens[personagemAtual].tipo}`;
-            img.src = `./image/${personagens[personagemAtual].img}`;
             tipoPerson.classList.add('entradaTipo');
             imgPerson.classList.add('entradaPerson');
         }, 400);
@@ -590,8 +590,8 @@ btnBack.addEventListener('click', () => {
         setTimeout(() => {
             tipoPerson.classList.remove('saidaTipo');
             imgPerson.classList.remove('saidaPerson');
+            img.src = personagens[personagemAtual].img;
             tipo.src = `./icon/Element_${personagens[personagemAtual].tipo}`;
-            img.src = `./image/${personagens[personagemAtual].img}`;
             tipoPerson.classList.add('entradaTipo');
             imgPerson.classList.add('entradaPerson');
         }, 400);
