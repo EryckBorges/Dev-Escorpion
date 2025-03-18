@@ -132,7 +132,7 @@ const regioes = [
     {
         nomeRegiao: 'MONDSTADT',
         videoRegiao: 'mondstadt.mp4',
-        iconeRegiao: 'Mondstadt.png',
+        iconeRegiao: 'https://eryckborges.github.io/Dev-Escorpion/projects/genshinImpact/icon/Emblema_Mondstadt.png',
         desc: 'A capital da liberdade, ao nordeste de Teyvat. Entre cadeias de montanhas e as vastas planícies, o vento da liberdade traz consigo o aroma de Dandelion e acaricia o lago de Cidra, trazendo à cidade, no meio do lago, a bênção de Barbatos.',
         descEua: 'The capital of freedom, located in the northeast of Teyvat. Among mountain ranges and vast plains, the wind of freedom carries the scent of Dandelion and caresses Cider Lake, bringing the blessing of Barbatos to the city in the middle of the lake.',
         descEsp: 'La capital de la libertad, ubicada en el noreste de Teyvat. Entre cadenas montañosas y vastas llanuras, el viento de la libertad trae consigo el aroma de Dandelion y acaricia el Lago de Sidra, llevando la bendición de Barbatos a la ciudad en medio del lago.',
@@ -142,7 +142,7 @@ const regioes = [
     {
         nomeRegiao: 'LIYUE',
         videoRegiao: 'liyue.mp4',
-        iconeRegiao: 'liyue.png',
+        iconeRegiao: 'https://eryckborges.github.io/Dev-Escorpion/projects/genshinImpact/icon/Emblema_Liyue.png',
         desc: 'Um porto próspero localizado ao leste de Teyvat. Liyue está localizada entre o sopé da Floresta de Pedra, das planícies grossas e um litoral cheio de vida, com mudanças sazonais claramente definidas e coloridas. Quantos presentes do Deus da Pedra estão escondidas entre suas montanhas?',
         descEua: 'A prosperous port located in the east of Teyvat. Liyue is situated between the foothills of the Stone Forest, vast plains, and a lively coastline, with clearly defined and colorful seasonal changes. How many gifts from the God of Stone are hidden among its mountains?',
         descEsp: 'Un próspero puerto ubicado al este de Teyvat. Liyue se encuentra entre las estribaciones del Bosque de Piedra, extensas llanuras y una costa llena de vida, con cambios estacionales claramente definidos y coloridos. ¿Cuántos regalos del Dios de la Piedra están escondidos entre sus montañas?',
@@ -152,7 +152,7 @@ const regioes = [
     {
         nomeRegiao: 'INAZUMA',
         videoRegiao: 'inazuma.mp4',
-        iconeRegiao: 'inazuma.png',
+        iconeRegiao: 'https://eryckborges.github.io/Dev-Escorpion/projects/genshinImpact/icon/Emblema_Inazuma.png',
         desc: 'Ilhas Isoladas no Extremo Oriente de Teyvat. Supere tempestades sem fim, entre na ilha das flores de Sakura e testemunhe nos penhascos verticais e florestas densas a Eternidade perseguida por Narukami Ogosho Toda-Poderosa',
         descEua: 'Isolated islands in the Far East of Teyvat. Overcome endless storms, step onto the island of Sakura blossoms, and witness in the steep cliffs and dense forests the Eternity pursued by the Almighty Narukami Ogosho.',
         descEsp: 'Islas aisladas en el Lejano Oriente de Teyvat. Supera tormentas interminables, pisa la isla de las flores de Sakura y presencia en los acantilados escarpados y densos bosques la Eternidad perseguida por la Todopoderosa Narukami Ogosho.',
@@ -162,7 +162,7 @@ const regioes = [
     {
         nomeRegiao: 'SUMERU',
         videoRegiao: 'sumeru.mp4',
-        iconeRegiao: 'sumeru.png',
+        iconeRegiao: 'https://eryckborges.github.io/Dev-Escorpion/projects/genshinImpact/icon/Emblema_Sumeru.png',
         desc: 'Capital da Cidade dos Eruditos Localizada no Oeste de Teyvat. Uma nação exótica com florestas tropicais exuberantes e desertos áridos coexistindo simultaneamente, onde inúmeros frutos da sabedoria crescem e murcham. Seja atravessando as florestas até os degraus da Cidade dos Eruditos ou cavando as ruínas nos confins do deserto, Viajantes de longe poderão obter conhecimentos valiosos aqui.',
         descEua: 'Capital of the City of Scholars, located in the West of Teyvat. An exotic nation where lush rainforests and arid deserts coexist simultaneously, where countless fruits of wisdom grow and wither. Whether traversing the forests to the steps of the City of Scholars or exploring the ruins in the depths of the desert, Travelers from afar can gain valuable knowledge here.',
         descEsp: 'Capital de la Ciudad de los Eruditos, ubicada en el Oeste de Teyvat. Una nación exótica donde exuberantes selvas tropicales y áridos desiertos coexisten simultáneamente, donde innumerables frutos de la sabiduría crecen y se marchitan. Ya sea atravesando los bosques hasta los escalones de la Ciudad de los Eruditos o explorando las ruinas en los confines del desierto, los Viajeros de lejos pueden obtener conocimientos valiosos aquí.',
@@ -172,7 +172,7 @@ const regioes = [
     {
         nomeRegiao: 'FONTAINE',
         videoRegiao: 'fontaine.mp4',
-        iconeRegiao: 'fontaine.png',
+        iconeRegiao: 'https://eryckborges.github.io/Dev-Escorpion/projects/genshinImpact/icon/Emblema_Fontaine.png',
         desc: 'Um mar sobre as terras localizado no centro de Teyvat. Ao seguir a direção das correntes puras, atravessando a natureza selvagem, as profundezas das florestas e a vastidão do mar de areia, é possível chegar à origem de todas as águas do continente. No topo da cachoeira, nas profundezas da capital sobre o mar terrestre, histórias nunca antes ouvidas e lendas há muito esquecidas anseiam por Viajantes como uma terra perdida submersa no fundo do mar.',
         descEua: 'A sea above the lands, located in the center of Teyvat. By following the direction of pure currents, traversing the wilderness, the depths of forests, and the vastness of the sea of sand, one can reach the origin of all the waters on the continent. At the top of the waterfall, in the depths of the capital above the terrestrial sea, unheard stories and long-forgotten legends await Travelers like a lost land submerged in the depths of the ocean.',
         descEsp: 'Un mar sobre las tierras, ubicado en el centro de Teyvat. Siguiendo la dirección de las corrientes puras, atravesando la naturaleza salvaje, las profundidades de los bosques y la inmensidad del mar de arena, se puede llegar al origen de todas las aguas del continente. En la cima de la cascada, en las profundidades de la capital sobre el mar terrestre, historias nunca antes oídas y leyendas olvidadas desde hace mucho tiempo esperan a los Viajeros, como una tierra perdida sumergida en las profundidades del océano.',
@@ -182,7 +182,7 @@ const regioes = [
     {
         nomeRegiao: 'NATLAN',
         videoRegiao: 'natlan.mp4',
-        iconeRegiao: 'natlan.webp',
+        iconeRegiao: 'https://eryckborges.github.io/Dev-Escorpion/projects/genshinImpact/icon/Emblema_Natlan.webp',
         desc: 'Localizada no oeste do continente de Teyvat, a Nação dos Juramentos. Seguindo a orientação da chama, atravesse longos desfiladeiros e vales, até a terra onde as tochas ardentes brilham intensamente, onde todas as chamas se convergem. Nesta vasta planície incendiada por dragões, testemunhe o fim da antiga guerra junto aos guerreiros que resistem à escuridão.',
         descEua: 'Located in the west of the Teyvat continent, the Nation of Oaths. Following the guidance of the flame, cross long canyons and valleys to the land where blazing torches shine brightly, where all flames converge. In this vast plain set ablaze by dragons, witness the end of the ancient war alongside warriors who resist the darkness.',
         descEsp: 'Ubicada en el oeste del continente de Teyvat, la Nación de los Juramentos. Siguiendo la guía de la llama, atraviesa largos cañones y valles hasta la tierra donde las antorchas ardientes brillan intensamente, donde todas las llamas convergen. En esta vasta llanura incendiada por dragones, presencia el final de la antigua guerra junto a los guerreros que resisten la oscuridad.',        
@@ -631,7 +631,7 @@ mondstadt.addEventListener('click', () => {
     regiaoAtual = 0;
     langRegiao();    
     regiao.innerHTML = regioes[regiaoAtual].nomeRegiao;
-    tipoRegiao.src = `./icon/Emblema_${regioes[regiaoAtual].iconeRegiao}`;
+    tipoRegiao.src = regioes[regiaoAtual].iconeRegiao;
     videoRegiao.src = `./video/${regioes[regiaoAtual].videoRegiao}`;
 })
 
@@ -639,7 +639,7 @@ liyue.addEventListener('click', () => {
     regiaoAtual = 1;
     langRegiao();    
     regiao.innerHTML = regioes[regiaoAtual].nomeRegiao;
-    tipoRegiao.src = `./icon/Emblema_${regioes[regiaoAtual].iconeRegiao}`;
+    tipoRegiao.src = regioes[regiaoAtual].iconeRegiao;
     videoRegiao.src = `./video/${regioes[regiaoAtual].videoRegiao}`;
 });
 
@@ -647,7 +647,7 @@ inazuma.addEventListener('click', () => {
     regiaoAtual = 2;
     langRegiao();    
     regiao.innerHTML = regioes[regiaoAtual].nomeRegiao;
-    tipoRegiao.src = `./icon/Emblema_${regioes[regiaoAtual].iconeRegiao}`;
+    tipoRegiao.src = regioes[regiaoAtual].iconeRegiao;
     videoRegiao.src = `./video/${regioes[regiaoAtual].videoRegiao}`;
 });
 
@@ -655,7 +655,7 @@ sumeru.addEventListener('click', () => {
     regiaoAtual = 3;
     langRegiao();    
     regiao.innerHTML = regioes[regiaoAtual].nomeRegiao;
-    tipoRegiao.src = `./icon/Emblema_${regioes[regiaoAtual].iconeRegiao}`;
+    tipoRegiao.src = regioes[regiaoAtual].iconeRegiao;
     videoRegiao.src = `./video/${regioes[regiaoAtual].videoRegiao}`;
 });
 
@@ -663,7 +663,7 @@ fontaine.addEventListener('click', () => {
     regiaoAtual = 4;
     langRegiao();    
     regiao.innerHTML = regioes[regiaoAtual].nomeRegiao;
-    tipoRegiao.src = `./icon/Emblema_${regioes[regiaoAtual].iconeRegiao}`;
+    tipoRegiao.src = regioes[regiaoAtual].iconeRegiao;
     videoRegiao.src = `./video/${regioes[regiaoAtual].videoRegiao}`;
 });
 
@@ -671,7 +671,7 @@ natlan.addEventListener('click', () => {
     regiaoAtual = 5;
     langRegiao();    
     regiao.innerHTML = regioes[regiaoAtual].nomeRegiao;
-    tipoRegiao.src = `./icon/Emblema_${regioes[regiaoAtual].iconeRegiao}`;
+    tipoRegiao.src = regioes[regiaoAtual].iconeRegiao;
     videoRegiao.src = `./video/${regioes[regiaoAtual].videoRegiao}`;
 });
 

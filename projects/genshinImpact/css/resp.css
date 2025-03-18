@@ -47,16 +47,18 @@
     }
 
     .personagem {
-        width: 100%;
+        bottom: 0;
         height: 50%;
+    }
+
+    .personagem > img {
+        width: 100%;
     }
 
     .dadosPerson {
         width: 100%;
         height: 50%;
         top: 3vh;
-        flex-direction: column;
-        position: relative;
     }
 
     .tipoPerson {
@@ -93,12 +95,50 @@
     font-size: 1.1em;
 }
 
+/* Regiões */
+
+.regioes {
+    height: 130vh;
+}
+
+.regioes > video {
+    height: 60%;
+    position: absolute;
+    top: 0;
+}
+
+.regiao {
+    top: 0;
+    width: 25%;
+    height: 60%;
+}
+
+.contentRegiao {
+    width: 100%;
+    height: 40%;
+    bottom: 0;
+}
+
+.contentRegiao > img {
+    width: 130px;
+    height: 130px;
+}
+
+.contentRegiao > h1 {
+    font-size: 1.6em;
+}
+
+.contentRegiao > p {
+    font-size: 1em;
+}
+
 }
 
 @media screen and (width >= 767px) and (width <= 1023px) {
     .cont {
+        top: 20vh;
         width: 70%;
-        height: 80%;
+        height: 90%;
     }
 
     .conteudoGenshin {
@@ -119,6 +159,7 @@
         width: 90%;
         height: 25%;
         flex-direction: row;
+        gap:10px;
     }
 
     .grade {
@@ -143,14 +184,25 @@
     .personagem {
         width: 100%;
         height: 60%;
+        bottom:0;
+    }
+
+    .personagem > img {
+        width: 100%;
     }
 
     .dadosPerson {
         width: 100%;
         height: 40%;
         top: 0vh;
-        flex-direction: column;
-        position: relative;
+    }
+
+    .langAudio {
+        font-size: 1.8em;
+    }
+
+    #play > span {
+        font-size: 4em !important;
     }
 
     .tipoPerson {
@@ -208,11 +260,20 @@
 .dadosGame > p {
     font-size: 1.6em;
 }
+
+.regiao > img {
+    width:120px;
+    height: 120px;
+}
+
+.contentRegiao > p {
+    font-size: 1.4em;
+}
 }
 
 @media screen and (height <= 500px) {
     header > video, header {
-        height: 130vh !important;
+        height: 150vh !important;
     }
 
     .cont {
@@ -223,7 +284,7 @@
     }
 
     .conteudoGenshin {
-        height: 100%;
+        height: 50%;
     }
 
     .conteudoGenshin > h1 {
@@ -238,19 +299,21 @@
 
     .buttons {
         width: 100%;
-        height: 45%;
+        height: 30%;
         flex-direction: column;
+        margin-bottom: 4vh;
     }
 
     .grade {
-        height: 50%;
+    
+        height: 30%;
         width: 100%;
         flex-direction: row;
     }
 
     .grade > button {
         width: auto;
-        height: 55%;
+        height: 100%;
     }
 
     .conteudoGenshin > img {
@@ -280,8 +343,16 @@
         font-size: 1em;
     }
 
-    .contPerson > button {
-        height: 10vh;
+    .audioBtn {
+        height: 12vh;
+    }
+
+    .langAudio {
+        font-size: 1.2em;
+    }
+
+    #play  {
+        font-size: 0.6em;
     }
 
     .personagem {
@@ -297,9 +368,22 @@
         font-size: 1.6em;
     }
 
+    .game {
+        height: 150vh;
+        flex-direction: row;
+    }
 
     .game3d {
         background: url('../image/backGame.jpg') center / cover no-repeat;
+        left: 0;
+        width: 50%;
+        height: 100%;
+    }
+    
+    .dadosGame {
+        width: 50%;
+        height: 100%;
+        right: 0;
     }
 
     .dadosGame > h1 {
@@ -312,6 +396,12 @@
 
     .dadosGame > button {
         height: 10vh;
+    }
+
+    .regioes {
+        position: relative;
+        width: 100%;
+        height: 220vh;
     }
 }
 
@@ -361,20 +451,18 @@
         height: 150vh;
         flex-direction: column;
         position: relative;
-        background-color: red;
     }
 
     .personagem {
         width: 100%;
         height: 50%;
+        bottom:0;
     }
 
     .dadosPerson {
         width: 100%;
         height: 50%;
         top: 3vh;
-        flex-direction: column;
-        position: relative;
     }
 
     .tipoPerson {
@@ -398,7 +486,7 @@
     /* Game */
 
     .game {
-        height: 120vh;
+        height: 150vh;
     }
 
 .game3d {
@@ -427,5 +515,47 @@
     width: 90%;
     height: 6vh;
     font-size: 1.2em;
+}
+
+/* Regiões */
+
+.regioes {
+    height: 150vh;
+}
+
+.regioes > video {
+    height: 60%;
+    position: absolute;
+    top: 0;
+}
+
+.regiao {
+    top: 0;
+    width: 25%;
+    height: 60%;
+}
+
+.regiao > img {
+    width:70px;
+    height: 70px;
+}
+
+.contentRegiao {
+    width: 100%;
+    height: 40%;
+    bottom: 0;
+}
+
+.contentRegiao > img {
+    width: 100px;
+    height: 100px;
+}
+
+.contentRegiao > h1 {
+    font-size: 1.4em;
+}
+
+.contentRegiao > p {
+    font-size: 0.8em;
 }
 }
