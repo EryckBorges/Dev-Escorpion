@@ -153,7 +153,7 @@ const regioes = [
         nomeRegiao: 'INAZUMA',
         videoRegiao: 'inazuma.mp4',
         iconeRegiao: 'inazuma.png',
-        desc: 'Um porto próspero localizado ao leste de Teyvat. Liyue está localizada entre o sopé da Floresta de Pedra, das planícies grossas e um litoral cheio de vida, com mudanças sazonais claramente definidas e coloridas. Quantos presentes do Deus da Pedra estão escondidas entre suas montanhas?',
+        desc: 'Ilhas Isoladas no Extremo Oriente de Teyvat. Supere tempestades sem fim, entre na ilha das flores de Sakura e testemunhe nos penhascos verticais e florestas densas a Eternidade perseguida por Narukami Ogosho Toda-Poderosa',
         descEua: 'Isolated islands in the Far East of Teyvat. Overcome endless storms, step onto the island of Sakura blossoms, and witness in the steep cliffs and dense forests the Eternity pursued by the Almighty Narukami Ogosho.',
         descEsp: 'Islas aisladas en el Lejano Oriente de Teyvat. Supera tormentas interminables, pisa la isla de las flores de Sakura y presencia en los acantilados escarpados y densos bosques la Eternidad perseguida por la Todopoderosa Narukami Ogosho.',
         descFra: 'Îles isolées à l’Extrême-Orient de Teyvat. Surmontez des tempêtes sans fin, posez le pied sur l’île des fleurs de Sakura et témoignez, sur les falaises escarpées et dans les forêts denses, de l’Éternité poursuivie par la Toute-Puissante Narukami Ogosho.',
@@ -451,6 +451,12 @@ const langPage = () => {
 }
 
 langPage();
+
+//Botão para jogar genshin impact divination
+
+elementos.btnDivination.addEventListener('click', () => {
+    window.location.href = 'https://eryckborges.github.io/Dev-Escorpion/projects/genshin/';
+})
 
 //Botões para o download de Genshin Impact
 
