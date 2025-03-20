@@ -1,4 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
+* {
+    margin:0;
+    padding:0;
+    user-select:none;
+    font-family:'Kanit', sans-serif;
+    letter-spacing: 0.5px;
+    cursor: url("/icon/cursor.png"), auto;
+}
+
+:root {
+    --genshin: #E4C796;
+    --purple: linear-gradient(to bottom, #5d578a,#a075b8, #a075b8);;
+    --ouro: linear-gradient(90deg, #97755a, #c1975e, #c1975e);
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     background:black;
@@ -251,11 +271,12 @@ body {
     margin:0 10px;
 }
 
-#comprar {
-    display:none;
+/*Lojinha da Paimon*/
+
+.lojaPaimon {
     width:100%;
     height:100%;
-    background:#161616;
+    background: url('../image/fundo.webp') center / cover no-repeat;
     position:absolute;
     top:0;
     left:0;
@@ -278,64 +299,161 @@ body {
     background-color:transparent;
 }
 
-#comprar #title {
-    width:100%;
-    height:10vh;
-    text-align: center;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom:2px solid #dd1440;
+.titleLojinha {
+    width:20%;
+    height:100%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.26);
+    position:fixed;
+    left:0;
+    top:0;
 }
 
-#comprar #title p {
-    color:white;
-    font-size:20pt;
-    font-weight: 600;
+.contBarraLojinha {
+    background:#4c5566;
+    width:80%;
+    height:100%;
+    overflow-y: auto !important;
+    flex-direction: column;
+    border-left: 2px #707478 solid;
+    border-right: 2px #707478 solid;
+    position: relative;
+    top:0;
 }
 
-#comprar #title button {
-    background:none;
-    border:none;
-    font-size:18pt;
-    position: fixed;
-    right:2vw;
-    width:4vw;
-    height:5vh;
-    top:2vh;
-    color:#dd1440;
+.fundoTop {
+    height: 15%;
+    width: 100%;
+    background:#3b4255;
+    position: absolute;
+    top: 0vh;
+    justify-content: left !important;
 }
 
-#comprar #itens {
-    margin-top:5vh;
-    width:100%;
-    height:90%;
+.fundoTop > h1 {
+    position: absolute;
+    color: var(--genshin);
+    background:rgba(57, 78, 117, 0.664);
+    width: 80%;
+    height: 100%;
+    padding-inline: 20px;
+    justify-content: left !important;
+    font-size: 2.5em;
 }
 
-#comprar #itens #comprarVidas {
-    width:100%;
+.fundoTop > span {
+    margin-top:20px;
+    font-size: 7em;
+    color: var(--genshin);
+}
+
+.secoesLojinha {
+    width: 100%;
+    height: auto !important;
+    align-items: baseline !important;
+    justify-content: left !important;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contBarraLojinha::-webkit-scrollbar {
+    display: none;
+  }
+
+.secao:first-child {
+    margin-top:75vh;
+}
+
+.secao:last-child {
+    margin-bottom:8vh
+}
+
+.secao {
+    cursor:pointer;
+    width: 100%;
+    height: 12vh;
+    font-size: 1.2em;
+    color: var(--branco);
+    flex-direction: row;
+    font-weight: bold;
+    justify-content: left !important;
+}
+
+.secao > img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 20px;
+    margin-left:10px;
+}
+
+.secao > a {
+    width: 100%;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: var(--branco);
+    cursor: pointer;
+}
+
+.actived {
+    cursor:pointer;
+    margin-top:20px;
+    width: 100%;
+    height: 12vh;
+    font-size: 1.2em;
+    color: rgb(16, 35, 70);
+    flex-direction: row;
+    background:#ece5d9;
+    font-weight: bold;
+    border-top: 2px solid #977f73;
+    border-bottom: 2px solid #977f73;
+}
+
+.secao > span {
+    font-size: 2em;
+    margin-right: 20px;
+    margin-left:10px;
+}
+
+.itens {
+    position:absolute;
+    top:0;
+    right:0;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.26);
+    width:80%;
+    height:auto;
+    flex-direction: column;
+    overflow-y:auto !important;
+}
+
+.itensPerson {
+    width:95%;
     height:45vh;
     margin-top:6vh;
-    overflow:hidden;
-    display:flex;
-    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
 }
 
-#comprar #itens #comprarVidas .restVida {
-    width:16%;
-    margin: 0px 10px;
-    height:100%;
-    display:flex;
-    justify-content: center;
+.item {
+    width:25%;
     flex-direction: column;
-    align-items: center;
-    overflow:hidden;
-    text-align: center;
+    background:var(--ouro);
+    height:90%;
+    border-radius:20px;
+    position: relative;
 }
 
-#comprar #itens #comprarVidas .restVida img {
-    width:55%;
-    height:40%;
+.item.purple {
+    background:var(--purple);
+}
+
+.item > img {
+    position: absolute;
+    top:2vh;
+    width:60%;
+    height:auto;
+    object-fit: cover;
 }
 
 .overCora {
@@ -343,25 +461,55 @@ body {
     animation:overCora 1.5s linear;
 }
 
-#comprar #itens #comprarVidas .restVida p {
-    font-size:12pt;
-    font-weight: 600;
-    color:white;
+.item > p {
+    font-size:1.4em;
+    font-weight: bold;
+    color:var(--branco);
     width:90%;
-    height:20%;
-    margin:8px 0px;
+    text-align: center;
+    margin-block:10px;
+    position: absolute;
+    bottom: 10vh;
+
 }
 
-#comprar #itens #comprarVidas .restVida button {
-    width:75%;
-    overflow: hidden;
-    height:16%;
-    background:black;
-    border-radius: 10px;
-    border: 2px solid #dd1440;
-    color:white;
-    font-weight: 600;
+.item > button {
+    width:100%;
+    height:20%;
+    background:#586680;
+    border:none;
+    color:var(--branco);
+    font-weight: bold;
     margin-top:10px;
+    position: absolute;
+    bottom:0;
+    flex-direction: row;
+    cursor:pointer;
+    font-size: 1.3em;
+}
+
+.item > button > img {
+    width: 60px;
+    height: 60px;
+}
+
+.logoRegiao {
+    width:100%;
+    height:30vh;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.logoRegiao > img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.logoRegiao > h1 {
+    font-size: 2.5em;
+    color: var(--genshin);
+    font-weight: bold;
 }
 
 #contUser {
