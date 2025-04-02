@@ -285,18 +285,17 @@ body {
     overflow-y: auto;
 }
 
-#comprar::-webkit-scrollbar {
-    width: 6px;
+.lojaPaimon::-webkit-scrollbar {
+    width: 5px;
 }
   
-#comprar::-webkit-scrollbar-thumb {
-    border: 1px solid black; 
-    background:#dd1440;
+.lojaPaimon::-webkit-scrollbar-thumb {
+    background:gray;
     border-radius: 6px; 
 }
   
-#comprar::-webkit-scrollbar-track {
-    background-color:transparent;
+.lojaPaimon::-webkit-scrollbar-track {
+    background-color:rgb(59, 59, 59);
 }
 
 .titleLojinha {
@@ -358,7 +357,7 @@ body {
 
 .contBarraLojinha::-webkit-scrollbar {
     display: none;
-  }
+}
 
 .secao:first-child {
     margin-top:75vh;
@@ -425,6 +424,44 @@ body {
     height:auto;
     flex-direction: column;
     overflow-y:auto !important;
+}
+
+.menuLojinha {
+    height: 15vh;
+    width:100%;
+    justify-content: right !important;
+}
+
+.quantMoney {
+    width:auto;
+    height: 6vh;
+    border-radius: 50px;
+    background:rgb(54, 54, 54);
+    border:4px rgba(177, 177, 177, 0.685) solid ;
+}
+
+.quantMoney > img {
+    width:50px;
+    height:50px;
+}
+
+.quantMoney > p {
+    padding-inline-end:40px;
+    padding-inline-start:20px;
+    color: var(--branco);
+    font-weight: bold;
+}
+
+.closeLojinha {
+    border:5px solid rgba(177, 177, 177, 0.685);
+    width:50px;
+    height: 50px;
+    border-radius:50%;
+    margin-inline:20px;
+}
+
+.closeLojinha > span {
+    cursor: pointer;
 }
 
 .itensPerson {

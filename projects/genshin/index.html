@@ -30,10 +30,6 @@
             <button draggable="false" id="compras">
                 <img src="icon/carrinho.png" alt="Carrinho" draggable="false">
             </button>
-            <div id="pont">
-                <img src="icon/mora.png" alt="Mora" draggable="false">
-                <input id="input-pont" type="number" readonly placeholder="R$ 0,00">
-            </div>
         </div>
     </div>
     <div id="cont">
@@ -111,32 +107,43 @@
             </div>
         </div>
         <div class="center itens">
+            <div class="center over menuLojinha">
+                <div class="center over quantMoney">
+                    <img src="./icon/mora.png" draggable="false" alt="Money">
+                    <p class="center over title">0</p>
+                </div>
+                <button class="button closeLojinha center over">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </button>
+            </div>
             <div class="center over itensPerson">
-                <div class="center over item" id="rest">
+                <div class="center over item">
                     <img src="./icon/vida.png" alt="Vida" draggable="false">
                     <p>Restaura 1 vida</p>
-                    <button class="btnrest center over" id="btnrest">
+                    <button class="btnrest center over" id="restaura">
                         <img src="./icon/mora.png" draggable="false" alt="Mora">100
                     </button>
                 </div>
-                <div class="center over item" id="rest2">
+                <div class="center over item">
                     <img src="./icon/vida2.png" alt="Vida" draggable="false">
                     <p>Restaura 2 vidas</p>
-                    <button class="btnrest center over" id="btnrest">
+                    <button class="btnrest center over" id="restaura2">
                         <img src="./icon/mora.png" draggable="false" alt="Mora">200
                     </button>
                 </div>
-                <div class="center over item" id="rest3">
+                <div class="center over item">
                     <img src="./icon/vida3.png" alt="Vida" draggable="false">
                     <p>Restaura 3 vidas</p>
-                    <button class="btnrest center over" id="btnrest">
+                    <button class="btnrest center over" id="restaura3">
                         <img src="./icon/mora.png" draggable="false" alt="Mora">300
                     </button>
                 </div>
-                <div class="center over item" id="rest">
+                <div class="center over item">
                     <img src="./icon/dica.png" alt="Dica Bônus" draggable="false">
                     <p>Dica Extra</p>
-                    <button class="btnrest center over" id="btnrest">
+                    <button class="btnrest center over" id="dicaBonus">
                         <img src="./icon/mora.png" draggable="false" alt="Mora">200
                     </button>
                 </div>

@@ -105,69 +105,6 @@
         text-align: center;
     }
 
-    .more {
-        height: 80vh;
-    }
-
-    .iconMore > img {
-        width:60px;
-        height: 60px;
-        margin-inline:10px;
-    }
-
-    .iconMore > h1 {
-        text-align: center;
-        font-size: 1.2em;
-    }
-
-    .iconMore > button {
-        width:60px;
-        height: 60px;
-        margin-inline:10px;
-        font-size: 3em;
-    }
-    
-    .porcentagem::before, .porcentagem::after {
-        width:10%;
-    }
-
-    .conteudoConhecimento {
-        height: 65%;
-        flex-direction: column;
-    }
-
-    .dadosConhecimento {
-        width: 100%;
-        height: 25%;
-        flex-direction: row;
-    }
-
-    .dadosConhecimento::after {
-        bottom: 0;
-        width: 95%;
-        margin-inline:10px;
-        height: 2px;
-    }
-
-    .dadosConhecimento > .conhecimento, .naoConhecimento {
-        width: 45%;
-        height: 100%;
-    }
-
-    .conhecimentos {
-        width:100%;
-        height: 75%;
-        text-align: center;
-    }
-
-    .carregamento > p {
-        font-size: 1em;
-    }
-
-    .porcento {
-        width:70%;
-    }
-
     /*Certificados e Conquistas*/
 
 .certificados > h1 {
@@ -391,78 +328,6 @@
     width: 100%;
     font-size: 2em;
     text-align: center;
-}
-
-.more {
-    height: 80vh;
-}
-
-.iconMore > img {
-    width:100px;
-    height: 100px;
-    margin-inline:20px;
-}
-
-.iconMore > h1 {
-    text-align: center;
-    font-size: 1.6em;
-}
-
-.iconMore > button {
-    width:80px;
-    height: 80px;
-    margin-inline:10px;
-}
-
-.iconMore > button > span {
-    font-size: 3em;
-}
-
-.porcentagem::before, .porcentagem::after {
-    width:10%;
-}
-
-.conteudoConhecimento {
-    height: 65%;
-    flex-direction: column;
-
-}
-
-.dadosConhecimento {
-    width: 100%;
-    height: 25%;
-    flex-direction: row;
-}
-
-.conhecimento, .naoConhecimento {
-    font-size: 1.4em;
-}
-
-.dadosConhecimento::after {
-    bottom: 0;
-    width: 95%;
-    margin-inline:10px;
-    height: 2px;
-}
-
-.dadosConhecimento > .conhecimento, .naoConhecimento {
-    width: 45%;
-    height: 100%;
-}
-
-.conhecimentos {
-    width:100%;
-    height: 75%;
-    text-align: center;
-    font-size: 1.4em;
-}
-
-.carregamento > p {
-    font-size: 1.2em;
-}
-
-.porcento {
-    width:70%;
 }
 
 .certificados {
@@ -705,10 +570,6 @@
         height: 90%;
     }
 
-    .more {
-        height: 200vh;
-    }
-
     .icons > img {
         width:70px;
         height:70px;
@@ -839,74 +700,6 @@
         width: 100%;
         font-size: 1.2em;
         text-align: center;
-    }
-
-    .more {
-        height: 100vh;
-    }
-
-    .iconMore > img {
-        width:50px;
-        height: 50px;
-        margin-inline:10px;
-    }
-
-    .iconMore > h1 {
-        text-align: center;
-        font-size: 1em;
-    }
-
-    .iconMore > button {
-        width:60px;
-        height: 60px;
-        margin-inline:10px;
-        font-size: 3em;
-    }
-    
-    .porcentagem::before, .porcentagem::after {
-        width:10%;
-    }
-
-    .conteudoConhecimento {
-        height: 65%;
-        flex-direction: column;
-        font-size: 0.8em;
-    }
-
-    .dadosConhecimento {
-        width: 100%;
-        height: 25%;
-        flex-direction: row;
-    }
-
-    .dadosConhecimento::after {
-        bottom: 0;
-        width: 95%;
-        margin-inline:10px;
-        height: 2px;
-    }
-
-    .dadosConhecimento > .conhecimento, .naoConhecimento {
-        width: 45%;
-        height: 100%;
-    }
-
-    .conhecimentos {
-        width:100%;
-        height: 75%;
-        text-align: center;
-    }
-
-    .carregamento > p {
-        font-size: 0.8em;
-    }
-
-    .porcento {
-        width:70%;
-    }
-
-    .dadosConhecimento {
-        font-size: 0.9em;
     }
 
     /*Certificados e Conquistas*/
