@@ -229,7 +229,7 @@ const elementos = {
   visualizar: document.querySelectorAll(".project button a"),
   ferramentas: document.querySelector(".ferramentas h1"),
   tecnologias: document.querySelector(".estudos h1"),
-  certificado: document.querySelector(".certificados h1"),
+  certificado: document.querySelector(".certificados_section h1"),
   avaliacaoTitle: document.querySelector(".avaliacao h1"),
   contact: document.querySelector(".qrCode h1"),
   titleRelogio: document.querySelector(".relogio p"),
@@ -819,41 +819,10 @@ sliderServices.addEventListener("touchend", () => {
 //Função mostrar mais certificados
 const buttonCertificado = document.querySelector(".certificados button");
 const certificados = document.querySelector(".certificados");
-const certificadosOcultos = document.querySelectorAll(".certificadoOculto");
 const buttonSpan = document.querySelector(".certificados button span");
 
 let isExpanded = false;
 
-buttonCertificado.addEventListener("click", () => {
-  if (!isExpanded) {
-    // Expande os certificados
-    const fullHeight = "auto";
-    certificados.style.height = fullHeight;
-
-    certificadosOcultos.forEach((certificado) => {
-      setTimeout(() => {
-        certificado.classList.remove("certificadoOculto");
-        certificado.classList.add("certificado");
-      }, 100);
-    });
-
-    buttonSpan.innerHTML = "keyboard_arrow_up";
-    isExpanded = true;
-  } else {
-    // Colapsa os certificados
-    certificados.style.height = "150vh"; // Altura reduzida fixa
-
-    certificadosOcultos.forEach((certificado) => {
-      setTimeout(() => {
-        certificado.classList.add("certificadoOculto");
-        certificado.classList.remove("certificado");
-      }, 100);
-    });
-
-    buttonSpan.innerHTML = "keyboard_arrow_down";
-    isExpanded = false;
-  }
-});
 
 //Redirecionamento dos projetos
 
@@ -873,6 +842,12 @@ const pokemon = document.querySelector(".pokemon");
 
 pokemon.addEventListener("click", () => {
   window.location.href = "https://eryckborges.github.io/Dev-Escorpion/projects/pokemon/";
+});
+
+const aumigos = document.querySelector(".aumigos");
+
+aumigos.addEventListener("click", () => {
+  window.location.href = "https://eryckborges.github.io/Dev-Escorpion/projects/aumigosPets/";
 });
 
 let toast = document.querySelector(".toast");

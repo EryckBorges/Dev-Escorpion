@@ -32,8 +32,8 @@
                 <a href="" class="hvr-underline-from-center cursos">Cursos</a>
                 <a href="" class="hvr-underline-from-center jogos">Jogos</a>
                 <a href="https://eryckborges.github.io/Dev-Escorpion/Portfolio/" class="hvr-underline-from-center portfolio">Portfolio</a>
-                <a href="https://eryckborges.github.io/Dev-Escorpion/Portfolio/" class="hvr-underline-from-center contato">Contato</a>
-                <a href="https://eryckborges.github.io/Dev-Escorpion/Portfolio/" class="hvr-underline-from-center sobre">Sobre</a>
+                <a href="#contact" class="hvr-underline-from-center contato">Contato</a>
+                <a href="#sobre" class="hvr-underline-from-center sobre">Sobre</a>
                 <div class="flagsSelecionada button center over">
                     <p class="idiomaSelecionada center over">BR</p>
                     <img src="./image/brasil.png" draggable="false" alt="Flags">
@@ -141,13 +141,13 @@
                   <span class="material-symbols-outlined">
                     mail
                   </span>
-                  <a href="https://eryckborges.github.io/Dev-Escorpion/Portfolio/" class="contato">Contato</a>
+                  <a href="#contato" class="contato">Contato</a>
                 </div>
                 <div class="linkMenu center over">
                   <span class="material-symbols-outlined">
                     info
                   </span>
-                  <a href="https://eryckborges.github.io/Dev-Escorpion/Portfolio/" class="sobre">Sobre</a>
+                  <a href="#sobre" class="sobre">Sobre</a>
                 </div>
               </div>
             </div>
@@ -160,7 +160,7 @@
             <div class="triangulo center over"></div>
             <div class="triangulo center over"></div>          
         </section>
-        <section class="sobreMim center over">
+        <section class="sobreMim center over" id="sobre">
             <div class="cont center over">
                 <h1 class="title center over animate-on-scroll" data-animation="fadeInLeftBig">Sobre Mim</h1>
                 <p class="text center over animate-on-scroll" data-animation="fadeInLeftBig">
@@ -224,17 +224,17 @@
                 <div class="project center over sololeveling">
                   <p class="title center over"></p>
                   <img src="./image/sololeveling.png" alt="sololeveling" draggable="false">
-                  <video src="./video/sololeveling.mp4" muted autoplay></video>
+                  <video src="./video/sololeveling.mp4" muted autoplay loop></video>
                 </div>
                 <div class="project center over relogio">
                   <p class="title center over"></p>
                   <img src="./image/relogio.png" alt="relogio" draggable="false">
-                  <video src="./video/relogio.mp4" muted autoplay></video>
+                  <video src="./video/relogio.mp4" muted autoplay loop></video>
                 </div>
                 <div class="project center over pokemon">
                   <p class="title center over"></p>
                     <img src="./image/mockupPokemon.png" alt="pokemon" draggable="false">
-                    <video src="./video/pokemon.mp4" muted autoplay></video>
+                    <video src="./video/pokemon.mp4" muted autoplay loop></video>
                 </div>
                
                 <div class="project center over genshin">
@@ -327,23 +327,27 @@
               </div>
           </div>
         </section>
-        <section class="certificados center over">
-          <h1 class="title center over animate__animated animate__fadeIn">Certificados e Conquistas</h1>
-          <div class="certificado center over">
-            <img src="./image/certificado1.jpg" class="animate__animated animate-on-scroll imagemLeftCertificado" alt="Certificado" draggable="false" data-animation="fadeInLeftBig">
-            <img src="./image/certificado2.jpg" class="animate__animated animate-on-scroll imagemRightCertificado" alt="Certificado" draggable="false" data-animation="fadeInRightBig">
+        <section class="certificados_section center over">
+          <h1 class="title center over animate__animated animate__fadeRightIn">Certificados e Conquistas</h1>
+          <div class="certificados center over">
+            <div class="center over certificado animate__animated animate-on-scroll" data-animation="fadeInLeftBig">
+              <img src="./image/certificados/cotuca.png" class="img-certificado" alt="Certificado" draggable="false">
+              <img src="./image/icon/cnpq.png" class="logo-certificado" draggable="false" alt="Logo Certificado">
+            </div>   
+            <div class="center over certificado animate__animated animate-on-scroll" data-animation="fadeInRightBig">
+              <img src="./image/certificados/unesp-front.png" class="img-certificado" alt="Certificado" draggable="false">
+              <img src="./image/icon/unesp.png" class="logo-certificado" draggable="false" alt="Logo Certificado">
+            </div>   
           </div>
-          <div class="certificado center over" style="display: none;">
-            <img src="./image/certificado.png" class="animate__animated animate-on-scroll" alt="Certificado" draggable="false" data-animation="fadeInLeftBig">
-            <img src="./image/certificado.png" class="animate__animated animate-on-scroll" alt="Certificado" draggable="false" data-animation="fadeInRightBig">
-          </div>
-          <div class="certificadoOculto center over">
-            <img src="./image/certificado.png" class="animate__animated animate-on-scroll" alt="Certificado" draggable="false" data-animation="fadeInLeftBig">
-            <img src="./image/certificado.png" class="animate__animated animate-on-scroll" alt="Certificado" draggable="false" data-animation="fadeInRightBig">
-          </div>
-          <div class="certificadoOculto center over">
-            <img src="./image/certificado.png" class="animate__animated animate-on-scroll" alt="Certificado" draggable="false" data-animation="fadeInLeftBig">
-            <img src="./image/certificado.png" class="animate__animated animate-on-scroll" alt="Certificado" draggable="false" data-animation="fadeInRightBig">
+          <div class="certificados center over">
+            <div class="center over certificado animate__animated animate-on-scroll" data-animation="fadeInLeftBig">
+              <img src="./image/certificados/setinf-front.png" class="img-certificado" alt="Certificado" draggable="false">
+              <img src="./image/icon/unesp-black.png" class="logo-certificado" draggable="false" alt="Logo Certificado">
+            </div>   
+            <div class="center over certificado animate__animated animate-on-scroll" data-animation="fadeInRightBig">
+              <img src="./image/certificados/plenus.png" class="img-certificado" alt="Certificado" draggable="false">
+              <img src="./image/icon/plenus.png" class="logo-certificado" draggable="false" alt="Logo Certificado">
+            </div>   
           </div>
           <button class="center over button hvr-outline-out animate-on-scroll" data-animation="fadeInDownBig">
             <span class="material-symbols-outlined over">
@@ -351,7 +355,7 @@
               </span>
           </button>
         </section>
-        <section class="avaliacao center over">
+        <section class="avaliacao center over" >
             <h1 class="center over title animate__animated animate-on-scroll" data-animation="fadeIn">
               Feedbacks e Avaliações Profissionais
             </h1>
@@ -359,7 +363,7 @@
               <div class="avaliacoes center over">
                 <div class="center over avaliacaoCard">
                   <div class="center over avaliadorPhoto">
-                    <img src="./image/jumelo.jpeg" draggable="false" alt="Avaliador Photo">
+                    <img src="./image/peoples/jumelo.jpeg" draggable="false" alt="Avaliador Photo">
                     <button class="center over btnTraduz button" title="Traduzir">
                       <span class="material-symbols-outlined">
                         g_translate
@@ -383,7 +387,7 @@
               <div class="avaliacoes center over">
                 <div class="center over avaliacaoCard">
                   <div class="center over avaliadorPhoto">
-                    <img src="./image/otavio.jpg" draggable="false" alt="Avaliador Photo">
+                    <img src="./image/peoples/otavio.jpg" draggable="false" alt="Avaliador Photo">
                     <button class="center over btnTraduz button" title="Traduzir">
                       <span class="material-symbols-outlined">
                         g_translate
@@ -407,7 +411,7 @@
               <div class="avaliacoes center over">
                 <div class="center over avaliacaoCard">
                   <div class="center over avaliadorPhoto">
-                    <img src="./image/marcos.jpg" draggable="false" alt="Avaliador Photo">
+                    <img src="./image/peoples/marcos.jpg" draggable="false" alt="Avaliador Photo">
                     <button class="center over btnTraduz button" title="Traduzir">
                       <span class="material-symbols-outlined">
                         g_translate
@@ -431,7 +435,7 @@
               <div class="avaliacoes center over">
                 <div class="center over avaliacaoCard">
                   <div class="center over avaliadorPhoto">
-                    <img src="https://github.com/EryckBorges/Dev-Escorpion/blob/master/Portfolio/image/felipe.JPG?raw=true" draggable="false" alt="Avaliador Photo">
+                    <img src="./image/peoples/felipe.JPG" draggable="false" alt="Avaliador Photo">
                     <button class="center over btnTraduz button" title="Traduzir">
                       <span class="material-symbols-outlined">
                         g_translate
@@ -453,10 +457,10 @@
                 </div>
               </div>
         </section>
-        <section class="contactRedes center over">
+        <section class="contactRedes center over" id="contact">
           <div class="center over qrCode">
             <h1 class="title center over"></h1>
-            <img src="./image/qrcode.svg" draggable="false" loading="lazy" alt="Qr code">
+            <img src="./image/qrcode.png" draggable="false" loading="lazy" alt="Qr code">
           </div>
           <div class="center over redesContact">
             <a href="https://wa.me/5516988023473?text=Olá,+gostaria+de+saber+mais+sobre+seus+serviços" class="center over whatsapp animate-on-scroll" data-animation="fadeInRightBig">
@@ -478,7 +482,7 @@
         </section>
         <div class="toast center over">
           <div class="center over imgToast">
-            <img class="imageToast" src="../global/icon/atencao.png" draggable="false" alt="" loading="lazy">
+            <img class="imageToast" src="../global/icon/atencao.png" draggable="false" alt="Warning" loading="lazy">
           </div>
           <div class="center over pToast">
             <p class="title textToast"></p>
