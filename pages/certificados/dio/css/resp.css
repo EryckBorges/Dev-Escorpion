@@ -1,0 +1,606 @@
+@media screen and (width <= 767px) {
+    header {
+        height: 100dvh;
+        zoom:1;
+    }
+    .hidden {
+        display: none !important;
+        opacity: 0 !important;
+    }
+
+    .logos {
+        width:90%;
+        padding-inline:20px;
+    }
+
+    .courses > button > img {
+        width: 100%;
+        height: 80%;
+    }
+
+    .scroll {
+        display: none;
+        top: 1vh;
+    }
+
+    .viewProject {
+        display: flex !important;
+        width: auto;
+        height: 50px;
+        position: absolute;
+        top: 2vh;
+        z-index: 90;
+        right: 2vw;
+        border-radius: 20px;
+        background: linear-gradient(45deg, var(--vermelhoPadrao), var(--preto));
+        font-size: 1em;
+        color: var(--branco);
+        padding: 20px 10px;
+        font-weight: bold;
+    }
+
+    .allLogos {
+        display: none;
+    }
+
+    .certifica {
+        width: 100%;
+        height: 100%;
+        gap: 40px;
+    }
+
+    /* Certificados */
+
+    .certificado {
+        width: 90%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+    }
+
+    .certificado > img {
+        width: 90%;
+        object-fit: contain;
+        height: 90%;
+    }
+    
+    .nextCertificados {
+        width: 50%;
+        height: 20%;
+        right: 0;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .backCertificados {
+        width: 50%;
+        height: 20%;
+        left: 0;
+        position: absolute;
+        bottom: 0;
+    }
+
+    /* Projects */
+
+    .backProjects {
+        padding-inline: 20px;
+    }
+
+    .titleGit > h1 {
+        font-size: 1.4em;
+        color: var(--branco);
+    }
+
+    .titleGit > img {
+        margin-left: 20px;
+        width: 65px;
+        height: 65px;
+    }
+
+    .allprojects {
+        padding-inline: 10px;
+    }
+
+    .project {
+        width: 75%;
+    }
+
+    .project > h1 {
+        font-size: 1.6em;
+    }
+
+    .contentProject {
+        width: 100%;
+        height: 25%;
+        bottom: 0;
+    }
+
+    .contentLg {
+        top: 0;
+    }
+
+    .contentProject > button {
+        width: 100%;
+        height: 50%;
+        bottom: 0;
+    }
+}
+
+@media screen and (width >= 767px) and (width <= 1023px) {
+    header {
+        height: 100dvh;
+        zoom:1;
+    }
+
+    .hidden {
+        display: none !important;
+        opacity: 0 !important;
+    }
+
+    .logos {
+        width:90%;
+        padding-inline:40px;
+        gap: 40px;
+    }
+
+    .logos > img {
+        width: 400px;
+        height: 160px;
+    }
+
+    .logos > p {
+        font-size: 2em;
+    }
+
+    .courses > button > img {
+        width: 100%;
+        height: 80%;
+    }
+
+    .scroll {
+        display: none;
+        top: 1vh;
+    }
+
+    .viewProject {
+        display: flex !important;
+        width: auto;
+        height: 50px;
+        position: absolute;
+        top: 2vh;
+        z-index: 90;
+        right: 2vw;
+        border-radius: 20px;
+        background: linear-gradient(45deg, var(--vermelhoPadrao), var(--preto));
+        font-size: 1.4em;
+        color: var(--branco);
+        padding: 20px 10px;
+        font-weight: bold;
+    }
+
+    .allLogos {
+        display: none;
+    }
+
+    .certifica {
+        width: 100%;
+        height: 100%;
+        gap: 40px;
+    }
+
+    /* Certificados */
+
+    .certificado {
+        width: 90%;
+        height: 90%;
+        position: absolute;
+        top: 0;
+    }
+
+    .certificado > img {
+        width: 90%;
+        object-fit: contain;
+        height: 65%;
+    }
+    
+    .nextCertificados {
+        width: 50%;
+        height: 20%;
+        right: 0;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .backCertificados {
+        width: 50%;
+        height: 20%;
+        left: 0;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .certificado-01, .certificado-02, .certificado-03 {
+        width:28% !important;
+    }
+
+    .certificado-04 {
+        display: none;
+    }
+
+    /* Projects */
+
+    .backProjects {
+        padding-inline: 40px;
+    }
+
+    .titleGit > h1 {
+        font-size: 2em;
+    }
+
+    .titleGit > img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .allprojects {
+        padding-inline: 40px;
+    }
+
+    .project {
+        width: 75%;
+    }
+
+    .project > h1 {
+        font-size: 2em;
+    }
+
+    .project > p {
+        font-size: 1.4em;
+    }
+
+    .contentProject {
+        width: 100%;
+        height: 25%;
+        bottom: 0;
+    }
+
+    .contentLg {
+        top: 0;
+    }
+
+    .contentLg > p {
+        font-size: 1.4em;
+    }
+
+    .contentProject > button {
+        width: 100%;
+        height: 50%;
+        bottom: 0;
+    }
+}
+
+@media screen and (height <= 500px) {
+    header {
+        height: 100dvh;
+        zoom:1;
+    }
+    .hidden {
+        display: none !important;
+        opacity: 0 !important;
+    }
+
+    .logos {
+        width:90%;
+        padding-inline:20px;
+        gap: 5px;
+    }
+
+    .logos > img {
+        width: 200px;
+    }
+
+    .logos > p {
+        font-size: 1.2em;
+    }
+
+    .courses > button > img {
+        width: 100%;
+        height: 80%;
+    }
+
+    .scroll {
+        display: none;
+        top: 1vh;
+    }
+
+    .viewProject {
+        display: flex !important;
+        width: auto;
+        height: 50px;
+        position: absolute;
+        top: 2vh;
+        z-index: 90;
+        right: 2vw;
+        border-radius: 20px;
+        background: linear-gradient(45deg, var(--vermelhoPadrao), var(--preto));
+        font-size: 1em;
+        color: var(--branco);
+        padding: 20px 10px;
+        font-weight: bold;
+    }
+
+    .allLogos {
+        display: none;
+    }
+
+    .certifica {
+        width: 100%;
+        height: 100%;
+        gap: 40px;
+    }
+
+    /* Certificados */
+
+    .certificados {
+        width: 100%;
+        height: 100%;
+    }
+
+    .certificado {
+        width: 90%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        align-items: end !important;
+    }
+
+    .certificado > img {
+        width: 90%;
+        object-fit: contain;
+        height: 70%;
+    }
+    
+    .nextCertificados {
+        width: 50%;
+        height: 20%;
+        right: -15vw;
+        position: absolute;
+    }
+
+    .backCertificados {
+        width: 50%;
+        height: 20%;
+        left: -15vw;
+        position: absolute;
+    }
+
+    .allCertificados {
+        display: none;
+    }
+
+    .backContent, .viewProject {
+        position: absolute;
+        top: 30vh;
+    }
+
+    /* Projects */
+
+    .backProjects {
+        padding-inline: 20px;
+        position: absolute;
+        right: 2vw;
+        top:5vh;
+        font-size: 1.2em;
+    }
+
+    .titleGit > h1 {
+        font-size: 1.2em;
+    }
+
+    .titleGit > img {
+        margin-left: 20px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .allprojects {
+        padding-inline: 10px;
+    }
+
+    .project {
+        width: 30%;
+        padding: 5px 30px;
+    }
+
+    .project > h1 {
+        font-size: 1.2em;
+    }
+
+    .project > p {
+        display: none;
+    }
+
+    .contentProject {
+        width: 100%;
+        height: 50%;
+        bottom: 0;
+    }
+
+    .contentLg {
+        top: 0;
+    }
+
+    .contentLg > p {
+        font-size: 0.8em;
+    }
+
+    .contentProject > button {
+        width: 100%;
+        height: 50%;
+        bottom: 0;
+    }
+}
+
+@media screen and (width <= 350px) {
+    header {
+        height: 100dvh;
+        zoom:1;
+    }
+
+    .hidden {
+        display: none !important;
+        opacity: 0 !important;
+    }
+
+    .logos {
+        width:90%;
+        padding-inline:20px;
+    }
+
+    .logos > img {
+        width: 250px;
+    }
+
+    .logos > p {
+        font-size: 1.2em;
+    }
+
+    .courses > button > img {
+        width: 100%;
+        height: 80%;
+    }
+
+    .scroll {
+        display: none;
+        top: 1vh;
+    }
+
+    .viewProject {
+        display: flex !important;
+        width: auto;
+        height: 50px;
+        position: absolute;
+        top: 1vh;
+        z-index: 90;
+        right: 2vw;
+        border-radius: 20px;
+        background: linear-gradient(45deg, var(--vermelhoPadrao), var(--preto));
+        font-size: 1em;
+        color: var(--branco);
+        padding: 20px 10px;
+        font-weight: bold;
+    }
+
+    .allLogos {
+        display: none;
+    }
+
+    .certifica {
+        width: 100%;
+        height: 100%;
+        gap: 40px;
+    }
+
+    /* Certificados */
+
+    .certificado {
+        width: 90%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+    }
+
+    .certificado > img {
+        width: 90%;
+        object-fit: contain;
+        height: 90%;
+    }
+    
+    .nextCertificados {
+        width: 50%;
+        height: 20%;
+        right: 0;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .backCertificados {
+        width: 50%;
+        height: 20%;
+        left: 0;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .nextCertificados > button > img, .backCertificados > button > img {
+        width: 50%;
+        height: 30%;
+    }
+
+    .backContent {
+        font-size: 1.4em;
+    }
+
+    .backContent > span, .backProjects > span {
+        font-size: 1em;
+    }
+
+    /* Projects */
+
+    .backProjects {
+        padding-inline: 20px;
+        font-size: 1.4em;
+    }
+
+    .titleGit > h1 {
+        font-size: 1em;
+    }
+
+    .titleGit > img {
+        margin-left: 20px;
+        width: 55px;
+        height: 55px;
+    }
+
+    .allprojects {
+        padding-inline: 10px;
+    }
+
+    .project {
+        width: 65%;
+        padding: 10px 40px;
+    }
+
+    .project > h1 {
+        font-size: 1.2em;
+        height: auto;
+    }
+
+    .project > p {
+        font-size: 0.8em;
+    }
+
+    .titleGit {
+        gap: 10px;
+    }
+
+    .contentProject {
+        width: 100%;
+        height: 25%;
+        bottom: 0;
+    }
+
+    .contentLg {
+        top: 0;
+    }
+
+    .contentLg > p {
+        font-size: 0.8em;
+    }
+
+    .contentProject > button {
+        width: 100%;
+        height: 50%;
+        bottom: 0;
+    }
+}
