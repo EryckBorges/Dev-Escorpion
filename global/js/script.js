@@ -70,6 +70,8 @@ closeMenuBtn.addEventListener('click', () => {
 
 // Abre as seleção de linguagens
 
+let langSelecionada = document.querySelector(".idiomaSelecionada");
+let flagSelecionada = document.querySelector(".flagsSelecionada img");
 const flagsSelecionada = document.querySelector(".flagsSelecionada");
 const langs = document.querySelector('.lang');
 
