@@ -468,72 +468,47 @@ main {
     animation-duration: 1s;
 }
 
-.certificados_section > button {
-    display: none !important;
-    margin-block:30px;
-    width: 60px;
-    height: 60px;
-    background:var(--vermelhoPadrao);
-    border-radius: 50%;
-    border:none;
-    cursor: pointer;
+.instituicoes {
+    width: 95%;
+    height: 15vh;
+    background-color: var(--cinza);
+    margin-block: 10px;
+    border-radius: 20px;
+    position: relative;
 }
 
-.certificados {
-    width:100%;
-    height: 60vh;
-    flex-direction: row;
-    gap:50px;
-}
-
-.certificados > .certificado {
-    width: 40%;
-    height: 90%;
-    background-color: transparent;
-    position:relative;
-}
-
-.img-certificado {
-    width: 90%;
-    height: 90%;
+.instituicoes > img {
     position: absolute;
-    box-shadow: 0px 0px 10px 2px rgb(17, 17, 17);
+    left: 2vw;
+    width: 100px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.instituicoes > span {
+    font-size: 1.2em;
+    color: var(--branco);
+    font-weight: bold;
+}
+
+.instituicoes > button {
+    position: absolute;
     right: 2vw;
-    top:0;
-    border: 10px solid var(--preto);
+    height: 60%;
+    width: 200px;
+    border-radius: 20px;
+    background-color: var(--vermelhoPadrao);
 }
 
-.logo-certificado {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: auto;
-    height: 100px;
+.instituicoes > button > a {
+    color: var(--branco);
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-.certificados > button {
-    border:4px solid var(--preto);
-    transition: 0.5s linear;
-    background-color: blue;
-    position: absolute;
-}
-
-.certificados > button:hover {
-    border:0px solid transparent;
-    transition: 0.5s linear;
-}
-
-.certificados > button > span {
-    color: var(--backgroundCinza);
-    font-size: 3em;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.certificadoOculto {
-    display: none;
+.instituicoes > button:hover > a {
+    color: var(--preto);
 }
 
 /*Avaliações*/

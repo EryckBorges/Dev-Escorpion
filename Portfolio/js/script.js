@@ -1,5 +1,6 @@
 let typedInstance; // Variável global para armazenar a instância de Typed.js
 
+// Função da animação de apresentação
 const animacaoTyped = (elementSelector, strings) => {
   const typedElement = document.querySelector(elementSelector);
   typedElement.innerHTML = ""; // Limpa o conteúdo anterior
@@ -558,10 +559,7 @@ const chines = () => {
     btnTranslate.setAttribute("title", "翻译成中文");
   });
 };
-//Muda a linguagem do site
 
-let langSelecionada = document.querySelector(".idiomaSelecionada");
-let flagSelecionada = document.querySelector(".flagsSelecionada img");
 // Função para traduzir o texto usando a API do Google Translate
 const traduzirAvaliacao = async (texto, targetLang) => {
   try {
