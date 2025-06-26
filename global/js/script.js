@@ -1,4 +1,3 @@
-
 //Animação ao rolar o scrool
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -46,9 +45,6 @@ const mobile = document.querySelector('.mobile');
 const closeMenuBtn = document.querySelector('.closeMenuBtn');
 
 //Função do OpenMenu
-
-//Todas as variaveis estão acima para funcionar a tradução
-
 btnMenu.addEventListener('click', () => {
   menuMobile.classList.remove('fadeOutMenu');
   mobile.classList.remove('fadeOutRightMenu');
@@ -58,13 +54,14 @@ btnMenu.addEventListener('click', () => {
   langPage();
 });
 
+// Fecha o Menu
 closeMenuBtn.addEventListener('click', () => {
   menuMobile.classList.remove('fadeInMenu');
   mobile.classList.remove('fadeInRightMenu');    
   mobile.classList.add('fadeOutRightMenu');
   menuMobile.classList.add('fadeOutMenu');
   setTimeout(() => {
-      menuMobile.classList.remove('activedMenu');
+    menuMobile.classList.remove('activedMenu');
   }, 500);
 });
 
@@ -110,46 +107,47 @@ function closeLang() {
 //Função dos cliques para mudar de idioma
 
 const eu = document.querySelector('.eua');
-
-eu.addEventListener('click', () => {
-    langSelecionada.innerHTML = "EN";
-    flagSelecionada.src = "https://eryckborges.github.io/Dev-Escorpion/global/icon/eua.png"
-    localStorage.setItem('lang', 'eu');
-    ingles();
-});
-
 const es = document.querySelector('.spain');
-
-es.addEventListener('click', () => {
-    langSelecionada.innerHTML = "ES";
-    flagSelecionada.src = "https://eryckborges.github.io/Dev-Escorpion/global/icon/spain.png"
-    localStorage.setItem('lang', 'es');
-    espanha();
-});
-
 const br = document.querySelector('.brasil');
-
-br.addEventListener('click', () => {
-    langSelecionada.innerHTML = "PT";
-    flagSelecionada.src = "https://eryckborges.github.io/Dev-Escorpion/global/icon/brasil.png"
-    localStorage.setItem('lang', 'br');
-    portugues();
-});
-
 const fr = document.querySelector('.franca');
-
-fr.addEventListener('click', () => {
-    langSelecionada.innerHTML = "FR";
-    flagSelecionada.src = "https://eryckborges.github.io/Dev-Escorpion/global/icon/franca.png"
-    localStorage.setItem('lang', 'fr');
-    frances();
-});
-
 const ch = document.querySelector('.china');
 
+// Inglês
+eu.addEventListener('click', () => {
+  langSelecionada.innerHTML = "EN";
+  flagSelecionada.src = "https://eryckborges.github.io/Dev-Escorpion/global/icon/eua.png"
+  localStorage.setItem('lang', 'eu');
+  ingles();
+});
+
+// Espanhol
+es.addEventListener('click', () => {
+  langSelecionada.innerHTML = "ES";
+  flagSelecionada.src = "https://eryckborges.github.io/Dev-Escorpion/global/icon/spain.png"
+  localStorage.setItem('lang', 'es');
+  espanha();
+});
+
+// Português Brasil
+br.addEventListener('click', () => {
+  langSelecionada.innerHTML = "PT";
+  flagSelecionada.src = "https://eryckborges.github.io/Dev-Escorpion/global/icon/brasil.png"
+  localStorage.setItem('lang', 'br');
+  portugues();
+});
+
+// Francês
+fr.addEventListener('click', () => {
+  langSelecionada.innerHTML = "FR";
+  flagSelecionada.src = "https://eryckborges.github.io/Dev-Escorpion/global/icon/franca.png"
+  localStorage.setItem('lang', 'fr');
+  frances();
+});
+
+// Chinês
 ch.addEventListener('click', () => {
-    langSelecionada.innerHTML = "ZH";
-    flagSelecionada.src = "https://eryckborges.github.io/Dev-Escorpion/global/icon/china.png"
-    localStorage.setItem('lang', 'ch');
-    chines();
+  langSelecionada.innerHTML = "ZH";
+  flagSelecionada.src = "https://eryckborges.github.io/Dev-Escorpion/global/icon/china.png"
+  localStorage.setItem('lang', 'ch');
+  chines();
 });
