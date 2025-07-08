@@ -461,6 +461,12 @@ let certificado_santander = [
         img: [
             'Santander-Certificado-14',
         ]
+    }, {
+        certificado: 'js',
+        icon: '../../../global/icon/js.png',
+        img: [
+            'Santander-Certificado-15',
+        ]
     }
 ]
 
