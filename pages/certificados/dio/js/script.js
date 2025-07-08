@@ -432,53 +432,88 @@ elementos.backProjects.addEventListener('click', () => {
 // Certificações
 
 let certificado_santander = [
-    'Santander-Certificado-01.png', 'Santander-Certificado-02.png', 'Santander-Certificado-03.png', 
-    'Santander-Certificado-04.png', 'Santander-Certificado-05.png', 'Santander-Certificado-06.png', 
-    'Santander-Certificado-07.png', 'Santander-Certificado-08.png', 'Santander-Certificado-09.png',  
-    'Santander-Certificado-10.png',  
+    {
+        certificado: 'github e git',
+        icon: '../../../global/icon/github.png',
+        img: [
+            'Santander-Certificado-01',
+            'Santander-Certificado-02',
+            'Santander-Certificado-03',
+            'Santander-Certificado-04',
+            'Santander-Certificado-05',
+        ]
+    }, {
+        certificado: 'html',
+        icon: '../../../global/icon/html.png',
+        img: [
+            'Santander-Certificado-06',
+            'Santander-Certificado-07',
+            'Santander-Certificado-08',
+            'Santander-Certificado-09',
+            'Santander-Certificado-10',
+            'Santander-Certificado-11',
+            'Santander-Certificado-12',
+            'Santander-Certificado-13',
+        ]
+    }, {
+        certificado: 'css',
+        icon: '../../../global/icon/css.png',
+        img: [
+            'Santander-Certificado-14',
+        ]
+    }
 ]
 
-let certificado_img = document.querySelector('.certificado img');
-let quantCertificado = 0;
+let imagensCertificados = [];
 
+certificado_santander.forEach(grupo => {
+    grupo.img.forEach(img => {
+        imagensCertificados.push({
+            nome: img,
+            icon: grupo.icon
+        });
+    });
+});
+
+let certificado_img = document.querySelector('.certificado img');
+let iconCertificado = document.querySelector('.iconCertificado');
 let certificado_01 = document.querySelector('.certificado-01');
 let certificado_02 = document.querySelector('.certificado-02');
 let certificado_03 = document.querySelector('.certificado-03');
 let certificado_04 = document.querySelector('.certificado-04');
 
+let quantCertificado = 0;
+let total = imagensCertificados.length;
+
 nextCertificados.addEventListener('click', () => {
-    quantCertificado = (quantCertificado + 1) % certificado_santander.length;
+    quantCertificado = (quantCertificado + 1) % total;
 
-    let total = certificado_santander.length;
+    let atual = imagensCertificados[quantCertificado];
 
-    // Atualiza os da barra inferior com rotação
-    certificado_01.src = `./image/${certificado_santander[quantCertificado % total]}`
-    certificado_02.src = `./image/${certificado_santander[(quantCertificado + 1) % total]}`
-    certificado_03.src = `./image/${certificado_santander[(quantCertificado + 2) % total]}`
-    certificado_04.src = `./image/${certificado_santander[(quantCertificado + 3) % total]}`
+    // Atualiza imagem principal
+    certificado_img.src = `./image/${atual.nome}.png`;
+    iconCertificado.src = `${atual.icon}`;
 
-    // Atualiza o principal
-    certificado_img.src = `./image/${certificado_santander[quantCertificado]}`
+    // Atualiza barra inferior com rotação
+    certificado_01.src = `./image/${imagensCertificados[(quantCertificado + 0) % total].nome}.png`;
+    certificado_02.src = `./image/${imagensCertificados[(quantCertificado + 1) % total].nome}.png`;
+    certificado_03.src = `./image/${imagensCertificados[(quantCertificado + 2) % total].nome}.png`;
+    certificado_04.src = `./image/${imagensCertificados[(quantCertificado + 3) % total].nome}.png`;
 });
 
-backCertificados.addEventListener('click', () => {
-    let total = certificado_santander.length;
 
-    // Garante valor positivo com somatório do total
+backCertificados.addEventListener('click', () => {
     quantCertificado = (quantCertificado - 1 + total) % total;
 
-    // Atualiza os da barra inferior com rotação reversa
-    certificado_01.src = `./image/${certificado_santander[quantCertificado % total]}`
-    certificado_02.src = `./image/${certificado_santander[(quantCertificado + 1) % total]}`
-    certificado_03.src = `./image/${certificado_santander[(quantCertificado + 2) % total]}`
-    certificado_04.src = `./image/${certificado_santander[(quantCertificado + 3) % total]}`
+    let atual = imagensCertificados[quantCertificado];
 
-    // Atualiza o principal
-    certificado_img.src = `./image/${certificado_santander[quantCertificado]}`
-    // Atualiza o principal
-    certificado_img.src = `./image/${certificado_santander[quantCertificado]}`
-    if (quantCertificado < 0) {
-        quantCertificado = 0
-        certificado_img.src = `./image/${certificado_santander[quantCertificado]}`;
-    }
+    // Atualiza imagem principal
+    certificado_img.src = `./image/${atual.nome}.png`;
+    iconCertificado.src = `${atual.icon}`;
+
+    // Atualiza barra inferior com rotação
+    certificado_01.src = `./image/${imagensCertificados[(quantCertificado + 0) % total].nome}.png`;
+    certificado_02.src = `./image/${imagensCertificados[(quantCertificado + 1) % total].nome}.png`;
+    certificado_03.src = `./image/${imagensCertificados[(quantCertificado + 2) % total].nome}.png`;
+    certificado_04.src = `./image/${imagensCertificados[(quantCertificado + 3) % total].nome}.png`;
 });
