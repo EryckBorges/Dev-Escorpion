@@ -78,12 +78,22 @@ header {
 .certificado {
     width: 60%;
     height: 100%;
+    position: relative;
 }
 
 .certificado > img {
     width: 80%;
     object-fit: contain;
     height: 90%;
+}
+
+.iconCertificado {
+    width: 100px !important;
+    height: 100px !important;
+    position: absolute;
+    left: 30px;
+    bottom: 20px;
+    object-fit: cover;
 }
 
 .backContent {
