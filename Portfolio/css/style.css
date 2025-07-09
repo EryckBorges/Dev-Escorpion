@@ -668,6 +668,16 @@ main {
     width:100%;
     height: 70%;
     font-size: 1.1em;
+    overflow-y: auto !important;
+}
+
+.descAvaliacao::-webkit-scrollbar {
+    width: 8px; 
+    height: 12px;
+}
+
+.descAvaliacao::-webkit-scrollbar-track {
+    border-radius: 20px;
 }
 
 /* Contato */
