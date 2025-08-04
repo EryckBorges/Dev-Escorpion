@@ -252,10 +252,11 @@ header {
     padding: 5px;
     opacity: 0;
     border: 1px solid yellow;
-    animation: closeToast 0.5s linear;
+    display: none;
 }
 
-.toastOpen {
+.toast.toastOpen {
+    display: flex;
     opacity: 1;
     width: 30%;
     animation: openToast 0.5s linear;
@@ -281,7 +282,6 @@ header {
     color: var(--branco);
     font-size: 1em;
     font-weight: bold;
-    display: none;
     margin-inline: 8px;
     text-align: center;
     width: 80%;

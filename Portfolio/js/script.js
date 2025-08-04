@@ -1,3 +1,25 @@
+// Importações
+import { ToastFunction } from "../../global/js/script.js";
+
+// Assim que carregar a página já cria um toast e adiciona a própria página para poder ser manipulado pelo DOM
+document.addEventListener('DOMContentLoaded', () => {
+
+  // Cria um toast para quando precisar exibir uma mensagem 
+  const toastElement = new ToastFunction(localStorage.getItem("lang"));
+  toastElement.createToast();
+
+  let toast = document.querySelector(".toast");
+
+  const genshin = document.querySelector(".genshin");
+
+  genshin.addEventListener("click", () => {
+    toastElement.openToast();
+  });
+}); 
+
+
+
+
 let typedInstance; // Variável global para armazenar a instância de Typed.js
 
 // Função da animação de apresentação
@@ -65,7 +87,6 @@ privacity: 'Privacy',
   titlePokemon: "Pokedex and Games",
   titleSlechi: "Ice Cream Catalog",
   titleAumigos: "Graduation Project - AuMigos Pet's",
-  toastAlertDesenvolvi: "In Development",
   btnAllProject: "See all projects",
 yourNumber: 'Your number, your Multiplication Table',
 servicePrest: 'Discover the Services I Offer',
@@ -100,7 +121,6 @@ const brasil = {
   titleGenshin: "Adivinhação de Genshin Impact",
   titleSlechi: "Catalogo de Sorvetes",
   titleAumigos: "TCC - AuMigos Pet's",
-  toastAlertDesenvolvi: "Em Desenvolvimento",
   btnAllProject: "Veja todos os projetos",
   yourNumber: 'Seu número, sua Tabuada',
   servicePrest: 'Conheça os Serviços que Ofereço',
@@ -135,7 +155,6 @@ privacity: 'Privacidad',
   titlePokemon: "Pokedex y Juegos",
   titleSlechi: "Catálogo de Helados",
   titleAumigos: "Trabajo de Fin de Curso - AuMigos Pet's",
-  toastAlertDesenvolvi: "En Desarrollo",
   btnAllProject: "Ver todos los proyectos",
 yourNumber: 'Tu número, tu Tabla de Multiplicar',
 servicePrest: 'Descubre los Servicios que Ofrezco',
@@ -170,7 +189,6 @@ privacity: 'Confidentialité',
   titleGenshin: "Divination de Genshin Impact",
   titleSlechi: "Catalogue de Glaces",
   titleAumigos: "Projet de Fin d'Études - AuMigos Pet's",
-  toastAlertDesenvolvi: "En Développement",
 notConhecimento: "de connaissance <br> que je ne possède pas",
 yourNumber: 'Votre numéro, votre Table de Multiplication',
 servicePrest: 'Découvrez les services que j’offre',
@@ -205,7 +223,6 @@ privacity: '隐私政策',
   titleSlechi: "冰淇淋目录",
   titlePokemon: "宝可梦图鉴与游戏",
   titleAumigos: "毕业项目 - AuMigos Pet's",
-  toastAlertDesenvolvi: "开发中",
   btnAllProject: "查看所有项目",
 yourNumber: '你的数字，你的乘法表',
 servicePrest: '发现我提供的服务',
@@ -239,7 +256,6 @@ const elementos = {
   titlePokemon: document.querySelector(".pokemon p"),
   titleSlechi: document.querySelector(".slechi p"),
   titleAumigos: document.querySelector(".aumigos p"),
-  toastAlertDesenvolvi: document.querySelector(".textToast"),
   btnAllProject: document.querySelectorAll(".btnAllProject"),
   yourNumber: document.querySelector('.tabuada p'),
   servicePrest: document.querySelector('.servicePrest'),
@@ -297,7 +313,6 @@ const ingles = () => {
   elementos.titleGenshin.innerHTML = eua.titleGenshin;
   elementos.titlePokemon.innerHTML = eua.titlePokemon;
   elementos.titleAumigos.innerHTML = eua.titleAumigos;
-  elementos.toastAlertDesenvolvi.innerHTML = eua.toastAlertDesenvolvi;
   elementos.btnAllProject.forEach((btnAllProjectText) => {
     btnAllProjectText.innerHTML = eua.btnAllProject;
   });
@@ -360,7 +375,6 @@ const portugues = () => {
   elementos.titleGenshin.innerHTML = brasil.titleGenshin;
   elementos.titlePokemon.innerHTML = brasil.titlePokemon;
   elementos.titleAumigos.innerHTML = brasil.titleAumigos;
-  elementos.toastAlertDesenvolvi.innerHTML = brasil.toastAlertDesenvolvi;
   elementos.btnAllProject.forEach((btnAllProjectText) => {
     btnAllProjectText.innerHTML = brasil.btnAllProject;
   });
@@ -423,7 +437,6 @@ const espanha = () => {
   elementos.titlePokemon.innerHTML = spain.titlePokemon;
   elementos.titleSlechi.innerHTML = spain.titleSlechi;
   elementos.titleAumigos.innerHTML = spain.titleAumigos;
-  elementos.toastAlertDesenvolvi.innerHTML = spain.toastAlertDesenvolvi;
   elementos.btnAllProject.forEach((btnAllProjectText) => {
     btnAllProjectText.innerHTML = spain.btnAllProject;
   });
@@ -486,7 +499,6 @@ const frances = () => {
   elementos.titlePokemon.innerHTML = franca.titlePokemon;
   elementos.titleSlechi.innerHTML = franca.titleSlechi;
   elementos.titleAumigos.innerHTML = franca.titleAumigos;
-  elementos.toastAlertDesenvolvi.innerHTML = franca.toastAlertDesenvolvi;
   elementos.btnAllProject.forEach((btnAllProjectText) => {
     btnAllProjectText.innerHTML = franca.btnAllProject;
   });
@@ -548,7 +560,6 @@ const chines = () => {
   elementos.titlePokemon.innerHTML = china.titlePokemon;
   elementos.titleSlechi.innerHTML = china.titleSlechi;
   elementos.titleAumigos.innerHTML = china.titleAumigos;
-  elementos.toastAlertDesenvolvi.innerHTML = china.toastAlertDesenvolvi;
   elementos.btnAllProject.forEach((btnAllProjectText) => {
     btnAllProjectText.innerHTML = china.btnAllProject;
   });
@@ -848,9 +859,6 @@ aumigos.addEventListener("click", () => {
   window.location.href = "https://eryckborges.github.io/Dev-Escorpion/projects/aumigosPets/";
 });
 
-let toast = document.querySelector(".toast");
-let textToast = document.querySelector(".pToast");
-let imageToast = document.querySelector(".toast img");
 
 const toastNotification = new Audio();
 toastNotification.src = "../global/music/toastNotification.mp3";
@@ -873,36 +881,12 @@ const toastFunction = () => {
   }
 };
 
-const genshin = document.querySelector(".genshin");
+
 const slechi = document.querySelector(".slechi");
 const tabuada = document.querySelector(".tabuada");
 const allButtonProject = document.querySelector(".buttonAllProjects");
 
-genshin.addEventListener("click", () => {
-  toastNotification.play();
-  toast.style.display = "flex";
-  toast.style.opacity = "1";
-  setTimeout(() => {
-    toast.classList.add("toastOpen");
-    toast.style.animation = "openToast 1s";
-    setTimeout(() => {
-      textToast.style.display = "flex";
-      toastFunction();
-    }, 200);
-  }, 200);
-  setTimeout(() => {
-    toast.classList.remove("toastOpen");
-    toast.style.animation = "closeToast 500ms";
-    setTimeout(() => {
-      textToast.style.display = "none";
-      setTimeout(() => {
-        toast.style.opacity = "0";
-        toast.style.display = "none";
-        toast.style.animation = "none";
-      }, 500);
-    }, 200);
-  }, 5000);
-});
+
 
 allButtonProject.addEventListener("click", () => {
   toastNotification.play();
@@ -960,17 +944,5 @@ tabuada.addEventListener("click", () => {
   }, 5000);
 });
 
-toast.addEventListener("click", () => {
-  toast.classList.remove("toastOpen");
-  toast.style.animation = "closeToast 500ms";
-  setTimeout(() => {
-    textToast.style.display = "none";
-    setTimeout(() => {
-      toast.style.opacity = "0";
-      toast.style.display = "none";
-      toast.style.animation = "none";
-    }, 500);
-  }, 200);
-});
 
 

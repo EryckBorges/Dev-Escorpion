@@ -1,3 +1,31 @@
+// Linguagens e elementos
+
+const eua = {
+  toastAlertDesenvolvi: "In Development",
+};
+
+const brasil = {
+  toastAlertDesenvolvi: "Em Desenvolvimento",
+};
+
+const spain = {
+  toastAlertDesenvolvi: "En Desarrollo",
+};
+
+const franca = {
+  toastAlertDesenvolvi: "En Développement",
+};
+
+const china = {
+  toastAlertDesenvolvi: "开发中",
+};
+
+const elementos = {
+  toastAlertDesenvolvi: document.querySelector(".textToast"),
+};
+
+
+
 //Animação ao rolar o scrool
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -151,3 +179,89 @@ ch.addEventListener('click', () => {
   localStorage.setItem('lang', 'ch');
   chines();
 });
+
+// Funcionalidade do Toast
+
+export class ToastFunction {
+  constructor(lang) {
+    this.lang = lang;
+    this.toast = null; // Vai guardar o .toast
+    this.textToast = null; // Vai guardar o parágrafo da mensagem
+  }
+
+  createToast() {
+    // Cria os elementos
+    const toastDiv = document.createElement("div");
+    const divForToast = document.createElement("div");
+    const imgToast = document.createElement("img");
+    const divForToast2 = document.createElement("div");
+    const pToast = document.createElement("p");
+
+    // Aponta elementos para uso posterior
+    this.toast = toastDiv;
+    this.textToast = pToast;
+
+    // Adiciona classes e estrutura
+    toastDiv.classList.add("toast", "center", "over");
+
+    const main = document.querySelector("main") || document.body;
+    main.appendChild(toastDiv);
+
+    divForToast.classList.add("imgToast", "center", "over");
+    toastDiv.appendChild(divForToast);
+
+    imgToast.src = "../global/icon/atencao.png";
+    imgToast.alt = "Warning";
+    imgToast.loading = "lazy";
+    imgToast.draggable = false;
+    imgToast.classList.add("imageToast");
+    divForToast.appendChild(imgToast);
+
+    divForToast2.classList.add("center", "over", "pToast");
+    toastDiv.appendChild(divForToast2);
+
+    pToast.classList.add("title", "textToast");
+    divForToast2.appendChild(pToast);
+  }
+
+  verificaLinguagem() {
+    if (this.lang === "eu") {
+      this.textToast.innerHTML = eua.toastAlertDesenvolvi;
+    } else if (this.lang === "es") {
+      this.textToast.innerHTML = spain.toastAlertDesenvolvi;
+    } else if (this.lang === "fr") {
+      this.textToast.innerHTML = franca.toastAlertDesenvolvi;
+    } else if (this.lang === "ch") {
+      this.textToast.innerHTML = china.toastAlertDesenvolvi;
+    } else {
+      this.textToast.innerHTML = brasil.toastAlertDesenvolvi;
+    }
+  }
+
+  openToast() {
+    const toastNotification = new Audio();
+    toastNotification.src = "../global/music/toastNotification.mp3";
+    toastNotification.play();
+
+    setTimeout(() => {
+      this.toast.classList.add("toastOpen");
+
+      setTimeout(() => {
+        this.textToast.style.display = "flex";
+        this.verificaLinguagem();
+      }, 200);
+    }, 200);
+
+    setTimeout(() => {
+      this.toast.style.animation = "closeToast 500ms";
+      this.textToast.style.opacity = "0";
+
+      setTimeout(() => {
+        this.toast.classList.remove("toastOpen");
+        this.toast.style.animation = "openToast 500ms";
+        this.textToast.style.display = "none"; // limpa display depois de fechar
+        this.textToast.style.opacity = "1"; // reseta opacidade
+      }, 450);
+    }, 5000);
+  }
+}
