@@ -1,3 +1,130 @@
+// Importações
+import { ToastFunction, MostrarImagens } from "../../global/js/script.js";
+
+// Assim que carregar a página já cria um toast e adiciona a própria página para poder ser manipulado pelo DOM
+document.addEventListener('DOMContentLoaded', () => {
+  // Cria a caixa para exibição de imagens e outros elementos
+  const boxImages = new MostrarImagens();
+    
+  let jsonImages = {
+     logo: '',
+      title: '',
+      text: [
+        "",
+      ],
+      imagens: [''],
+    
+  };
+  localStorage.setItem('jsonImages', JSON.stringify(jsonImages));
+  // Cria um toast para quando precisar exibir uma mensagem 
+  const toastElement = new ToastFunction(localStorage.getItem("lang"));
+  toastElement.createToast();
+
+  let toast = document.querySelector(".toast");
+
+  const genshin = document.querySelector(".genshin");
+  const tabuada = document.querySelector(".tabuada");
+  const allButtonProject = document.querySelector(".buttonAllProjects");
+
+  let clicks = 0;
+
+  const contClick = () => {
+    clicks++
+    genshin.setAttribute('disabled', '');
+    allButtonProject.setAttribute('disabled', '');
+    tabuada.setAttribute('disabled', '');
+    if(clicks == 1) {
+      toastElement.openToast();
+      setTimeout(() => {
+        genshin.removeAttribute('disabled');
+        allButtonProject.removeAttribute('disabled');
+        tabuada.removeAttribute('disabled');
+        clicks = 0;
+      }, 6000);
+    }
+  }
+
+  genshin.addEventListener("click", () => {
+    contClick();
+  });
+
+  allButtonProject.addEventListener("click", () => {
+    contClick();
+  });
+
+  tabuada.addEventListener("click", () => {
+    contClick();
+  });
+
+  // Função para exibição dos  certificados
+
+  const cnpq = document.querySelector('.btnCnpq');
+  const unesp = document.querySelector('.btnUnesp');
+  const plenus = document.querySelector('.btnPlenus');
+
+  cnpq.addEventListener('click', () => {
+    // Json com os dados que seram exibidos para o usuário
+    let jsonImg = {
+      logo: '../Portfolio/image/icon/cnpq.svg',
+      title: 'Descrição sobre o certificado',
+      text: [
+        "Esse certificado foi conquistado durante o desenvolvimento do nosso projeto de TCC, que consistia na criação de um site voltado para a adoção de pets. A plataforma permitia que usuários adotassem ou colocassem animais para adoção, além de oferecer a opção de assinar uma caixinha surpresa mensal, com produtos personalizados para cada pet. Se tiver mais interesse sobre ele basta acessar o link abaixo <br><br><a href='https://eryckborges.github.io/Dev-Escorpion/projects/aumigosPets/' target='_blank'>AuMigos Pet's ",
+      ],
+      imagens: ['../Portfolio/image/certificados/cotuca.png'],
+    }
+
+    localStorage.setItem('jsonImages', JSON.stringify(jsonImg));
+    boxImages.openBox();
+    boxImages.closedBox();
+    boxImages.nextElement();
+    boxImages.backElement();
+  });
+
+  // Abre a caixa de imagens para exibir os certificados da unesp
+  unesp.addEventListener('click', () => {
+    // Json com os dados que seram exibidos para o usuário
+    let jsonImg = {
+      logo: '../Portfolio/image/icon/unesp.png',
+      title: 'Descrição sobre o certificado',
+      text: [
+        "Esse certificado da UNESP foi conquistado durante uma semana exclusiva sobre tecnologia. Aprendi a criar animações 2D usando o GIMP, integrá-las ao HTML, desenvolver joguinhos e muito mais. Foi uma semana incrível da qual sentirei saudades.", 
+        "Esse certificado da UNESP foi conquistado durante uma semana exclusiva sobre tecnologia. Aprendi a criar animações 2D usando o GIMP, integrá-las ao HTML, desenvolver joguinhos e muito mais. Foi uma semana incrível da qual sentirei saudades.",
+        "Já esse outro certificado foi da SETINF — a Semana de Tecnologia. Durante o evento, tive contato com diversos temas como impressoras 3D, programação em Python e outros recursos bastante interessantes.",
+        "Já esse outro certificado foi da SETINF — a Semana de Tecnologia. Durante o evento, tive contato com diversos temas como impressoras 3D, programação em Python e outros recursos bastante interessantes."
+      ],
+      imagens: ['../Portfolio/image/certificados/unesp-front.png', '../Portfolio/image/certificados/unesp-back.png', '../Portfolio/image/certificados/setinf-front.png', '../Portfolio/image/certificados/setinf-back.png'],
+    };
+  
+    localStorage.setItem('jsonImages', JSON.stringify(jsonImg));
+    boxImages.openBox();
+    boxImages.closedBox();
+    boxImages.nextElement();
+    boxImages.backElement();
+  });
+
+  // Abre a caixa de imagens para exibir os certificados da unesp
+  plenus.addEventListener('click', () => {
+    // Json com os dados que seram exibidos para o usuário
+    let jsonImg = {
+      logo: '../Portfolio/image/icon/plenus.png',
+      title: 'Descrição sobre o certificado',
+      text: [
+        "Conquistei esse certificado para aprofundar meus conhecimentos sobre aplicativos usados em design gráfico — uma área que gosto de explorar e personalizar de várias formas."
+      ],
+      imagens: ['../Portfolio/image/certificados/plenus.png'],
+    };
+  
+    localStorage.setItem('jsonImages', JSON.stringify(jsonImg));
+    boxImages.openBox();
+    boxImages.closedBox();
+    boxImages.nextElement();
+    boxImages.backElement();
+  });
+
+}); 
+
+
+
 let typedInstance; // Variável global para armazenar a instância de Typed.js
 
 // Função da animação de apresentação
@@ -65,7 +192,6 @@ privacity: 'Privacy',
   titlePokemon: "Pokedex and Games",
   titleSlechi: "Ice Cream Catalog",
   titleAumigos: "Graduation Project - AuMigos Pet's",
-  toastAlertDesenvolvi: "In Development",
   btnAllProject: "See all projects",
 yourNumber: 'Your number, your Multiplication Table',
 servicePrest: 'Discover the Services I Offer',
@@ -100,7 +226,6 @@ const brasil = {
   titleGenshin: "Adivinhação de Genshin Impact",
   titleSlechi: "Catalogo de Sorvetes",
   titleAumigos: "TCC - AuMigos Pet's",
-  toastAlertDesenvolvi: "Em Desenvolvimento",
   btnAllProject: "Veja todos os projetos",
   yourNumber: 'Seu número, sua Tabuada',
   servicePrest: 'Conheça os Serviços que Ofereço',
@@ -135,7 +260,6 @@ privacity: 'Privacidad',
   titlePokemon: "Pokedex y Juegos",
   titleSlechi: "Catálogo de Helados",
   titleAumigos: "Trabajo de Fin de Curso - AuMigos Pet's",
-  toastAlertDesenvolvi: "En Desarrollo",
   btnAllProject: "Ver todos los proyectos",
 yourNumber: 'Tu número, tu Tabla de Multiplicar',
 servicePrest: 'Descubre los Servicios que Ofrezco',
@@ -170,7 +294,6 @@ privacity: 'Confidentialité',
   titleGenshin: "Divination de Genshin Impact",
   titleSlechi: "Catalogue de Glaces",
   titleAumigos: "Projet de Fin d'Études - AuMigos Pet's",
-  toastAlertDesenvolvi: "En Développement",
 notConhecimento: "de connaissance <br> que je ne possède pas",
 yourNumber: 'Votre numéro, votre Table de Multiplication',
 servicePrest: 'Découvrez les services que j’offre',
@@ -205,7 +328,6 @@ privacity: '隐私政策',
   titleSlechi: "冰淇淋目录",
   titlePokemon: "宝可梦图鉴与游戏",
   titleAumigos: "毕业项目 - AuMigos Pet's",
-  toastAlertDesenvolvi: "开发中",
   btnAllProject: "查看所有项目",
 yourNumber: '你的数字，你的乘法表',
 servicePrest: '发现我提供的服务',
@@ -239,7 +361,6 @@ const elementos = {
   titlePokemon: document.querySelector(".pokemon p"),
   titleSlechi: document.querySelector(".slechi p"),
   titleAumigos: document.querySelector(".aumigos p"),
-  toastAlertDesenvolvi: document.querySelector(".textToast"),
   btnAllProject: document.querySelectorAll(".btnAllProject"),
   yourNumber: document.querySelector('.tabuada p'),
   servicePrest: document.querySelector('.servicePrest'),
@@ -297,7 +418,6 @@ const ingles = () => {
   elementos.titleGenshin.innerHTML = eua.titleGenshin;
   elementos.titlePokemon.innerHTML = eua.titlePokemon;
   elementos.titleAumigos.innerHTML = eua.titleAumigos;
-  elementos.toastAlertDesenvolvi.innerHTML = eua.toastAlertDesenvolvi;
   elementos.btnAllProject.forEach((btnAllProjectText) => {
     btnAllProjectText.innerHTML = eua.btnAllProject;
   });
@@ -360,7 +480,6 @@ const portugues = () => {
   elementos.titleGenshin.innerHTML = brasil.titleGenshin;
   elementos.titlePokemon.innerHTML = brasil.titlePokemon;
   elementos.titleAumigos.innerHTML = brasil.titleAumigos;
-  elementos.toastAlertDesenvolvi.innerHTML = brasil.toastAlertDesenvolvi;
   elementos.btnAllProject.forEach((btnAllProjectText) => {
     btnAllProjectText.innerHTML = brasil.btnAllProject;
   });
@@ -423,7 +542,6 @@ const espanha = () => {
   elementos.titlePokemon.innerHTML = spain.titlePokemon;
   elementos.titleSlechi.innerHTML = spain.titleSlechi;
   elementos.titleAumigos.innerHTML = spain.titleAumigos;
-  elementos.toastAlertDesenvolvi.innerHTML = spain.toastAlertDesenvolvi;
   elementos.btnAllProject.forEach((btnAllProjectText) => {
     btnAllProjectText.innerHTML = spain.btnAllProject;
   });
@@ -486,7 +604,6 @@ const frances = () => {
   elementos.titlePokemon.innerHTML = franca.titlePokemon;
   elementos.titleSlechi.innerHTML = franca.titleSlechi;
   elementos.titleAumigos.innerHTML = franca.titleAumigos;
-  elementos.toastAlertDesenvolvi.innerHTML = franca.toastAlertDesenvolvi;
   elementos.btnAllProject.forEach((btnAllProjectText) => {
     btnAllProjectText.innerHTML = franca.btnAllProject;
   });
@@ -548,7 +665,6 @@ const chines = () => {
   elementos.titlePokemon.innerHTML = china.titlePokemon;
   elementos.titleSlechi.innerHTML = china.titleSlechi;
   elementos.titleAumigos.innerHTML = china.titleAumigos;
-  elementos.toastAlertDesenvolvi.innerHTML = china.toastAlertDesenvolvi;
   elementos.btnAllProject.forEach((btnAllProjectText) => {
     btnAllProjectText.innerHTML = china.btnAllProject;
   });
@@ -848,9 +964,6 @@ aumigos.addEventListener("click", () => {
   window.location.href = "https://eryckborges.github.io/Dev-Escorpion/projects/aumigosPets/";
 });
 
-let toast = document.querySelector(".toast");
-let textToast = document.querySelector(".pToast");
-let imageToast = document.querySelector(".toast img");
 
 const toastNotification = new Audio();
 toastNotification.src = "../global/music/toastNotification.mp3";
@@ -873,104 +986,17 @@ const toastFunction = () => {
   }
 };
 
-const genshin = document.querySelector(".genshin");
+
 const slechi = document.querySelector(".slechi");
-const tabuada = document.querySelector(".tabuada");
-const allButtonProject = document.querySelector(".buttonAllProjects");
-
-genshin.addEventListener("click", () => {
-  toastNotification.play();
-  toast.style.display = "flex";
-  toast.style.opacity = "1";
-  setTimeout(() => {
-    toast.classList.add("toastOpen");
-    toast.style.animation = "openToast 1s";
-    setTimeout(() => {
-      textToast.style.display = "flex";
-      toastFunction();
-    }, 200);
-  }, 200);
-  setTimeout(() => {
-    toast.classList.remove("toastOpen");
-    toast.style.animation = "closeToast 500ms";
-    setTimeout(() => {
-      textToast.style.display = "none";
-      setTimeout(() => {
-        toast.style.opacity = "0";
-        toast.style.display = "none";
-        toast.style.animation = "none";
-      }, 500);
-    }, 200);
-  }, 5000);
-});
-
-allButtonProject.addEventListener("click", () => {
-  toastNotification.play();
-  toast.style.display = "flex";
-  toast.style.opacity = "1";
-  setTimeout(() => {
-    toast.classList.add("toastOpen");
-    toast.style.animation = "openToast 1s";
-    setTimeout(() => {
-      textToast.style.display = "flex";
-      toastFunction();
-    }, 200);
-  }, 200);
-  setTimeout(() => {
-    toast.classList.remove("toastOpen");
-    toast.style.animation = "closeToast 500ms";
-    setTimeout(() => {
-      textToast.style.display = "none";
-      setTimeout(() => {
-        toast.style.opacity = "0";
-        toast.style.display = "none";
-        toast.style.animation = "none";
-      }, 500);
-    }, 200);
-  }, 5000);
-});
 
 slechi.addEventListener("click", () => {
   window.location.href = "https://eryckborges.github.io/Dev-Escorpion/projects/client/slechi/";
 });
 
-tabuada.addEventListener("click", () => {
-  toastNotification.play();
-  toast.style.display = "flex";
-  toast.style.opacity = "1";
-  setTimeout(() => {
-    toast.classList.add("toastOpen");
-    toast.style.animation = "openToast 1s";
-    setTimeout(() => {
-      textToast.style.display = "flex";
-      toastFunction();
-    }, 200);
-  }, 200);
-  setTimeout(() => {
-    toast.classList.remove("toastOpen");
-    toast.style.animation = "closeToast 500ms";
-    setTimeout(() => {
-      textToast.style.display = "none";
-      setTimeout(() => {
-        toast.style.opacity = "0";
-        toast.style.display = "none";
-        toast.style.animation = "none";
-      }, 500);
-    }, 200);
-  }, 5000);
-});
 
-toast.addEventListener("click", () => {
-  toast.classList.remove("toastOpen");
-  toast.style.animation = "closeToast 500ms";
-  setTimeout(() => {
-    textToast.style.display = "none";
-    setTimeout(() => {
-      toast.style.opacity = "0";
-      toast.style.display = "none";
-      toast.style.animation = "none";
-    }, 500);
-  }, 200);
-});
+
+
+
+
 
 

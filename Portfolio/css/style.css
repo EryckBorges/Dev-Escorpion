@@ -498,16 +498,19 @@ main {
     width: 200px;
     border-radius: 20px;
     background-color: var(--vermelhoPadrao);
+    color: var(--branco);
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 .instituicoes > button > a {
     color: var(--branco);
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: bold;
     text-decoration: none;
 }
 
-.instituicoes > button:hover > a {
+.instituicoes > button:hover > a, .instituicoes > button:hover {
     color: var(--preto);
 }
 

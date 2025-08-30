@@ -252,10 +252,11 @@ header {
     padding: 5px;
     opacity: 0;
     border: 1px solid yellow;
-    animation: closeToast 0.5s linear;
+    display: none;
 }
 
-.toastOpen {
+.toast.toastOpen {
+    display: flex;
     opacity: 1;
     width: 30%;
     animation: openToast 0.5s linear;
@@ -281,7 +282,6 @@ header {
     color: var(--branco);
     font-size: 1em;
     font-weight: bold;
-    display: none;
     margin-inline: 8px;
     text-align: center;
     width: 80%;
@@ -394,4 +394,161 @@ footer {
 .copyRight > p {
     margin-inline: 30px;
     font-size: 1.2em;
+}
+
+/* Box para exibição de imagens e afins */
+
+.boxImage {
+    width: 100%;
+    height: 100%;
+    background-color: var(--cinzaOpacity);
+    z-index: 999 !important;
+    position: fixed !important;
+    top:0;
+}
+
+.divContent {
+    width: 70%;
+    height: 80%;
+    background-color: #0a0a0a;
+    border-radius: 20px;
+}
+
+.divContentDesc {
+    width: 35%;
+    height: 100%;
+    background-color: var(--preto);
+    flex-direction: column;
+    padding: 10px 20px;
+}
+
+.divContentImagens {
+    width: 65%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.divLogo {
+    width: 100%;
+    height: 15%;
+    justify-content: left !important;
+}
+
+.divDesc {
+    width: 100%;
+    height: 85%;
+    flex-direction: column;
+    justify-content: left !important;
+    gap: 20px;
+}
+
+.imgLogo {
+    width: auto;
+    height: 50%;
+}
+
+.titleDesc {
+    font-size: 1.2em !important;
+    color: var(--vermelhoPadrao);
+    font-weight: bold;
+    width: 100%;
+}
+
+.textDesc {
+    font-size: 1em !important;
+    color: var(--branco);
+    width: 100%;
+}
+
+.textDesc > a {
+    font-size: 1em;
+    color: var(--vermelhoPadrao);
+    font-weight: bold;
+}
+
+.divImg {
+    width: 100%;
+    height: 80%;
+}
+
+.imgMain {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.divButtons {
+    width: 100%;
+    height: 20%;
+    position: relative;
+}
+
+.backButtonImage, .nextButtonImage {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    color: var(--branco);
+    font-size: 1.8em;
+    cursor:pointer;
+}
+
+.backButtonImage {
+    left: 2vw;
+    background-color: var(--cinza);
+    transition: 0.3s linear;
+}
+
+.nextButtonImage {
+    right: 2vw;
+    background-color: var(--vermelhoPadrao);
+    transition: 0.3s linear;
+}
+
+.nextButtonImage:hover, .backButtonImage:hover {
+    background-color: var(--preto);
+    transition: 0.3s linear;
+}
+
+.closedImage {
+    position: absolute;
+    right: 4vw;
+    top:4vh;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    border: none;
+    color: var(--branco);
+    font-weight: bold;
+    background-color: var(--vermelhoPadrao);
+    cursor: pointer;
+    font-size: 2em !important;
+    transition: 0.3s linear;
+}
+
+.closedImage:hover {
+    background-color: transparent;
+    color: var(--vermelhoPadrao);
+    transition: 0.3s linear;
+}
+
+.closedBox {
+    display: none;
+}
+
+@keyframes fadeOutBox {
+    from {
+        opacity: 1;
+    }to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInBox {
+    from {
+        opacity: 0;
+    }to {
+        opacity: 1;
+    }
 }
