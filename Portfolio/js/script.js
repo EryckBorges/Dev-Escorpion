@@ -1,9 +1,21 @@
 // Importações
-import { ToastFunction } from "../../global/js/script.js";
+import { ToastFunction, MostrarImagens } from "../../global/js/script.js";
 
 // Assim que carregar a página já cria um toast e adiciona a própria página para poder ser manipulado pelo DOM
 document.addEventListener('DOMContentLoaded', () => {
-
+  // Cria a caixa para exibição de imagens e outros elementos
+  const boxImages = new MostrarImagens();
+    
+  let jsonImages = {
+     logo: '',
+      title: '',
+      text: [
+        "",
+      ],
+      imagens: [''],
+    
+  };
+  localStorage.setItem('jsonImages', JSON.stringify(jsonImages));
   // Cria um toast para quando precisar exibir uma mensagem 
   const toastElement = new ToastFunction(localStorage.getItem("lang"));
   toastElement.createToast();
@@ -11,12 +23,105 @@ document.addEventListener('DOMContentLoaded', () => {
   let toast = document.querySelector(".toast");
 
   const genshin = document.querySelector(".genshin");
+  const tabuada = document.querySelector(".tabuada");
+  const allButtonProject = document.querySelector(".buttonAllProjects");
+
+  let clicks = 0;
+
+  const contClick = () => {
+    clicks++
+    genshin.setAttribute('disabled', '');
+    allButtonProject.setAttribute('disabled', '');
+    tabuada.setAttribute('disabled', '');
+    if(clicks == 1) {
+      toastElement.openToast();
+      setTimeout(() => {
+        genshin.removeAttribute('disabled');
+        allButtonProject.removeAttribute('disabled');
+        tabuada.removeAttribute('disabled');
+        clicks = 0;
+      }, 6000);
+    }
+  }
 
   genshin.addEventListener("click", () => {
-    toastElement.openToast();
+    contClick();
   });
-}); 
 
+  allButtonProject.addEventListener("click", () => {
+    contClick();
+  });
+
+  tabuada.addEventListener("click", () => {
+    contClick();
+  });
+
+  // Função para exibição dos  certificados
+
+  const cnpq = document.querySelector('.btnCnpq');
+  const unesp = document.querySelector('.btnUnesp');
+  const plenus = document.querySelector('.btnPlenus');
+
+  cnpq.addEventListener('click', () => {
+    // Json com os dados que seram exibidos para o usuário
+    let jsonImg = {
+      logo: '../Portfolio/image/icon/cnpq.svg',
+      title: 'Descrição sobre o certificado',
+      text: [
+        "Esse certificado foi conquistado durante o desenvolvimento do nosso projeto de TCC, que consistia na criação de um site voltado para a adoção de pets. A plataforma permitia que usuários adotassem ou colocassem animais para adoção, além de oferecer a opção de assinar uma caixinha surpresa mensal, com produtos personalizados para cada pet. Se tiver mais interesse sobre ele basta acessar o link abaixo <br><br><a href='https://eryckborges.github.io/Dev-Escorpion/projects/aumigosPets/' target='_blank'>AuMigos Pet's ",
+      ],
+      imagens: ['../Portfolio/image/certificados/cotuca.png'],
+    }
+
+    localStorage.setItem('jsonImages', JSON.stringify(jsonImg));
+    boxImages.openBox();
+    boxImages.closedBox();
+    boxImages.nextElement();
+    boxImages.backElement();
+  });
+
+  // Abre a caixa de imagens para exibir os certificados da unesp
+  unesp.addEventListener('click', () => {
+    // Json com os dados que seram exibidos para o usuário
+    let jsonImg = {
+      logo: '../Portfolio/image/icon/unesp.png',
+      title: 'Descrição sobre o certificado',
+      text: [
+        "Esse certificado da UNESP foi conquistado durante uma semana exclusiva sobre tecnologia. Aprendi a criar animações 2D usando o GIMP, integrá-las ao HTML, desenvolver joguinhos e muito mais. Foi uma semana incrível da qual sentirei saudades.", 
+        "Esse certificado da UNESP foi conquistado durante uma semana exclusiva sobre tecnologia. Aprendi a criar animações 2D usando o GIMP, integrá-las ao HTML, desenvolver joguinhos e muito mais. Foi uma semana incrível da qual sentirei saudades.",
+        "Já esse outro certificado foi da SETINF — a Semana de Tecnologia. Durante o evento, tive contato com diversos temas como impressoras 3D, programação em Python e outros recursos bastante interessantes.",
+        "Já esse outro certificado foi da SETINF — a Semana de Tecnologia. Durante o evento, tive contato com diversos temas como impressoras 3D, programação em Python e outros recursos bastante interessantes."
+      ],
+      imagens: ['../Portfolio/image/certificados/unesp-front.png', '../Portfolio/image/certificados/unesp-back.png', '../Portfolio/image/certificados/setinf-front.png', '../Portfolio/image/certificados/setinf-back.png'],
+    };
+  
+    localStorage.setItem('jsonImages', JSON.stringify(jsonImg));
+    boxImages.openBox();
+    boxImages.closedBox();
+    boxImages.nextElement();
+    boxImages.backElement();
+  });
+
+  // Abre a caixa de imagens para exibir os certificados da unesp
+  plenus.addEventListener('click', () => {
+    // Json com os dados que seram exibidos para o usuário
+    let jsonImg = {
+      logo: '../Portfolio/image/icon/plenus.png',
+      title: 'Descrição sobre o certificado',
+      text: [
+        "Conquistei esse certificado para aprofundar meus conhecimentos sobre aplicativos usados em design gráfico — uma área que gosto de explorar e personalizar de várias formas."
+      ],
+      imagens: ['../Portfolio/image/certificados/plenus.png'],
+    };
+  
+    localStorage.setItem('jsonImages', JSON.stringify(jsonImg));
+    boxImages.openBox();
+    boxImages.closedBox();
+    boxImages.nextElement();
+    boxImages.backElement();
+  });
+
+}); 
 
 
 
@@ -883,66 +988,15 @@ const toastFunction = () => {
 
 
 const slechi = document.querySelector(".slechi");
-const tabuada = document.querySelector(".tabuada");
-const allButtonProject = document.querySelector(".buttonAllProjects");
-
-
-
-allButtonProject.addEventListener("click", () => {
-  toastNotification.play();
-  toast.style.display = "flex";
-  toast.style.opacity = "1";
-  setTimeout(() => {
-    toast.classList.add("toastOpen");
-    toast.style.animation = "openToast 1s";
-    setTimeout(() => {
-      textToast.style.display = "flex";
-      toastFunction();
-    }, 200);
-  }, 200);
-  setTimeout(() => {
-    toast.classList.remove("toastOpen");
-    toast.style.animation = "closeToast 500ms";
-    setTimeout(() => {
-      textToast.style.display = "none";
-      setTimeout(() => {
-        toast.style.opacity = "0";
-        toast.style.display = "none";
-        toast.style.animation = "none";
-      }, 500);
-    }, 200);
-  }, 5000);
-});
 
 slechi.addEventListener("click", () => {
   window.location.href = "https://eryckborges.github.io/Dev-Escorpion/projects/client/slechi/";
 });
 
-tabuada.addEventListener("click", () => {
-  toastNotification.play();
-  toast.style.display = "flex";
-  toast.style.opacity = "1";
-  setTimeout(() => {
-    toast.classList.add("toastOpen");
-    toast.style.animation = "openToast 1s";
-    setTimeout(() => {
-      textToast.style.display = "flex";
-      toastFunction();
-    }, 200);
-  }, 200);
-  setTimeout(() => {
-    toast.classList.remove("toastOpen");
-    toast.style.animation = "closeToast 500ms";
-    setTimeout(() => {
-      textToast.style.display = "none";
-      setTimeout(() => {
-        toast.style.opacity = "0";
-        toast.style.display = "none";
-        toast.style.animation = "none";
-      }, 500);
-    }, 200);
-  }, 5000);
-});
+
+
+
+
 
 
 

@@ -181,7 +181,6 @@ ch.addEventListener('click', () => {
 });
 
 // Funcionalidade do Toast
-
 export class ToastFunction {
   constructor(lang) {
     this.lang = lang;
@@ -263,5 +262,156 @@ export class ToastFunction {
         this.textToast.style.opacity = "1"; // reseta opacidade
       }, 450);
     }, 5000);
+  }
+}
+
+// Caixa para visualização de imagens
+
+export class MostrarImagens {
+  constructor(imgs) {
+    this.imgs = imgs;
+    this.contElement = 0;
+    localStorage.setItem('contElement', this.contElement);
+  }
+
+  // Cria o elemento usado para exibir as imagens e afins
+  showNewBox() {
+    let dados = JSON.parse(localStorage.getItem('jsonImages')); 
+    let contElement = localStorage.getItem('contElement');
+    
+    const body = document.querySelector('body');
+    const section = document.createElement('section');
+    section.classList.add('center', 'over', 'boxImage', 'closedBox');
+
+    const divContent = document.createElement('div');
+    divContent.classList.add('center', 'over', 'divContent');
+
+    const divContentImagens = document.createElement('div');
+    const divContentDesc = document.createElement('div');
+    divContentImagens.classList.add('center', 'over', 'divContentImagens');
+    divContentDesc.classList.add('center', 'over', 'divContentDesc');
+
+    const divLogo = document.createElement('div');
+    const divDesc = document.createElement('div');
+    divLogo.classList.add('center', 'over', 'divLogo');
+    divDesc.classList.add('center', 'over', 'divDesc');
+
+    const imgLogo = document.createElement('img');
+    imgLogo.src = dados.logo;
+    imgLogo.classList.add('center', 'over', 'imgLogo');
+    imgLogo.setAttribute('draggable', 'false');
+    
+    const h1 = document.createElement('h1');
+    const p = document.createElement('p');
+    h1.classList.add('over', 'title', 'titleDesc');
+    p.classList.add('over', 'text', 'textDesc');
+    h1.innerHTML = dados.title;
+    p.innerHTML = dados.text[contElement];
+
+    const divImage = document.createElement('div');
+    const imgMain = document.createElement('img');
+    divImage.classList.add('center', 'over', 'divImg');
+    imgMain.src = dados.imagens[contElement];
+    imgMain.classList.add('over', 'center', 'imgMain');
+
+    const divButtons = document.createElement('div');
+    divButtons.classList.add('center', 'over', 'title', 'divButtons');
+
+    const nextButtonImage = document.createElement('button');
+    const backButtonImage = document.createElement('button');
+    backButtonImage.classList.add('over', 'center', 'backButtonImage');
+    nextButtonImage.classList.add('over', 'center', 'nextButtonImage');
+    nextButtonImage.innerHTML = '<span class="material-symbols-outlined">arrow_forward</span>';
+    backButtonImage.innerHTML = '<span class="material-symbols-outlined">arrow_back</span>';
+
+    const closedImage = document.createElement('button');
+    closedImage.classList.add('over', 'center', 'closedImage');
+    closedImage.innerHTML = '<span class="material-symbols-outlined">close</span>';
+
+    body.appendChild(section);
+    section.appendChild(divContent);
+    section.appendChild(closedImage);
+    divContent.appendChild(divContentImagens);
+    divContent.appendChild(divContentDesc);
+    divContentDesc.appendChild(divLogo);
+    divContentDesc.appendChild(divDesc);
+    divLogo.appendChild(imgLogo);
+    divDesc.appendChild(h1);
+    divDesc.appendChild(p);
+    divContentImagens.appendChild(divImage);
+    divContentImagens.appendChild(divButtons);
+    divImage.appendChild(imgMain);
+    divButtons.appendChild(nextButtonImage);
+    divButtons.appendChild(backButtonImage);
+  }
+
+  // Fecha e exclui os elementos criados no showNewBox
+  closedBox() {
+    const closeImage = document.querySelector('.closedImage');
+    const boxImages = document.querySelector('.boxImage');
+    closeImage.addEventListener('click', () => {
+      localStorage.setItem('jsonImages', '');
+      boxImages.style.animation = 'fadeOutBox 0.5s';
+      setTimeout(() => {
+        this.contElement = 0;
+        localStorage.setItem('contElement', this.contElement);
+        boxImages.classList.add('closedBox');
+        boxImages.remove();
+      }, 500);
+    });
+  }
+
+  // Cria e Abre a caixa para exibição de imagens 
+  openBox() {
+    this.showNewBox(this.contElement);
+    const boxImages = document.querySelector('.boxImage');  
+    boxImages.style.animation = 'fadeInBox 0.5s';
+    boxImages.classList.remove('closedBox');
+  }
+
+  // Passa para o próximo elemento
+  nextElement() {
+    const nextButtonImage = document.querySelector('.nextButtonImage');
+    const imgMain = document.querySelector('.imgMain');
+    const textDesc = document.querySelector('.textDesc');
+
+    let dados = JSON.parse(localStorage.getItem('jsonImages')); 
+    nextButtonImage.addEventListener('click', () => { 
+      this.contElement++
+      if(dados.imagens.length > this.contElement) {
+        localStorage.setItem('contElement', this.contElement);
+        imgMain.src = dados.imagens[this.contElement];
+        textDesc.innerHTML = dados.text[this.contElement];
+      }else if(dados.imagens.length == this.contElement) {
+        this.contElement = 0;
+        localStorage.setItem('contElement', this.contElement);
+        imgMain.src = dados.imagens[this.contElement];
+        textDesc.innerHTML = dados.text[this.contElement];
+      }
+    })
+  }
+
+  // Passa para o próximo elemento
+  backElement() {
+    const backButtonImage = document.querySelector('.backButtonImage');
+    const imgMain = document.querySelector('.imgMain');
+    const textDesc = document.querySelector('.textDesc');
+
+    let dados = JSON.parse(localStorage.getItem('jsonImages')); 
+    backButtonImage.addEventListener('click', () => { 
+      if(this.contElement == 0) {
+        this.contElement = 0;
+        localStorage.setItem('contElement', this.contElement);
+        imgMain.src = dados.imagens[this.contElement];
+        textDesc.innerHTML = dados.text[this.contElement];
+      } else if(this.contElement <= dados.imagens.length) {
+        this.contElement--
+        console.log("oi");
+        
+        localStorage.setItem('contElement', this.contElement);
+        imgMain.src = dados.imagens[this.contElement];
+        textDesc.innerHTML = dados.text[this.contElement];
+      }
+    })
   }
 }
