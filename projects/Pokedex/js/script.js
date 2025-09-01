@@ -210,7 +210,6 @@ const searchPokemonButton = document.querySelector('.btnSearch');
 const filterSearch = (searchPokemon) => {
     linePokemon.innerHTML = ''
     console.log(searchPokemon);
-    
 
     // Verifica se tem algo na pesquisa
 
@@ -245,11 +244,13 @@ const filterSearch = (searchPokemon) => {
                                     const cardSearchPokemon = constructorNewPokemon(dadoPokemonUrlId);
                                     linePokemon.appendChild(cardSearchPokemon)
                                 })
+
                         })
                 }else {
                     const listAllPokemons = allPokemons.results
                     .map(poke => poke.name)
                     .filter(poke => poke.startsWith(`${searchPokemon}`))                    
+
                     .sort((a, b) => a.localeCompare(b));
                 
                     if (listAllPokemons.length == 0) {
