@@ -6,18 +6,6 @@ const limit = 30;
 let geracaoAtual = 0;
 let offset = 0;
 
-// Estrutura de verificação para exibição de imagens (Pois não achei nenhuma imagem da PokeApi tão legal)
-
-let urlImagesPokemons = (pokemonImage) => {
-    if (pokemonImage < 10) {
-        return url = `https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/00${pokemonImage}.png`
-    }else if (pokemonImage >= 10 && pokemonImage < 100 ) {
-        return url = `https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/0${pokemonImage}.png`
-    }else {
-        return url = `https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/${pokemonImage}.png`
-    }
-}
-
 // Função para adicionar as tipagem de pokemon
 
 let typesPokemons = (types) => {
@@ -27,8 +15,7 @@ let typesPokemons = (types) => {
 // Função para adicionar o pokemon na tela
 
 const constructorNewPokemon = (pokemon) => {  
-    console.log(pokemon);
-    
+    btnMorePokemons.classList.add('rotateAnimation')
     const div = document.createElement('div');    
     div.classList.add("center", "over", "cardPokemon", `${pokemon.types[0].type.name}`, `cardPokemon${pokemon.id}`, "animate__animated", "animate__zoomIn")
 
@@ -41,10 +28,14 @@ const constructorNewPokemon = (pokemon) => {
                     ${typesPokemons(pokemon.types).join('')}
                 </div>
                 <div class="center over pokemon heigth">
-                    <img src="${urlImagesPokemons(pokemon.id)}" draggable="false" alt="${pokemon.name}">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png" draggable="false" alt="${pokemon.name}">
                 </div>
             </div>`
-    
+
+        setTimeout(() => {
+            btnMorePokemons.classList.remove('rotateAnimation')
+        }, 4000);
+            
     div.addEventListener('click', () => {
         const showPokemon = new ShowPokemonDetails(pokemon, pokemon.id);
         showPokemon.createPageDetails(pokemon);        
@@ -209,6 +200,7 @@ const searchPokemonButton = document.querySelector('.btnSearch');
 
 const filterSearch = (searchPokemon) => {
     linePokemon.innerHTML = ''
+    console.log(searchPokemon);
 
     // Verifica se tem algo na pesquisa
 
@@ -226,23 +218,31 @@ const filterSearch = (searchPokemon) => {
         .then((jsonDetailsAllPokemon) => {
             const allPokemons = jsonDetailsAllPokemon;
                 
-            const verificarSearch = () => {
+            const verificarSearch = async () => {
                 if (!isNaN(searchPokemon)) {
                     const listAllPokemons = allPokemons.results[searchPokemon - 1];
-                    const listAllPokemonsUrl = `https://pokeapi.co/api/v2/pokemon/${listAllPokemons.name}/`
+                    console.log(listAllPokemons);
+                    
+                    const listAllPokemonsUrl = `https://pokeapi.co/api/v2/pokemon-species/${listAllPokemons.name}/`
 
                     fetch(listAllPokemonsUrl)
                         .then((resultsUrl) => resultsUrl.json())
                         .then((jsonResultsUrl) => {
-                            const cardSearchPokemon = constructorNewPokemon(jsonResultsUrl);
-                            linePokemon.appendChild(cardSearchPokemon)
+                            const urlIdPokemon = `https://pokeapi.co/api/v2/pokemon/${jsonResultsUrl.id}`
+                            fetch(urlIdPokemon)
+                                .then((resultsIdPokemonUrl) => resultsIdPokemonUrl.json())
+                                .then((dadoPokemonUrlId) => {
+                                    const cardSearchPokemon = constructorNewPokemon(dadoPokemonUrlId);
+                                    linePokemon.appendChild(cardSearchPokemon)
+                                })
+
                         })
                 }else {
                     const listAllPokemons = allPokemons.results
                     .map(poke => poke.name)
-                    .filter(poke => poke.startsWith(`${searchPokemon}`))
-                    .sort((a, b) => a.localeCompare(b));
-                
+                    .filter(poke => poke.startsWith(`${searchPokemon}`))                    
+                    .sort((a, b) => a.localeCompare(b));   
+            
                     if (listAllPokemons.length == 0) {
                         const notFound = document.querySelector('.notFound');
                         notFound.classList.add('open');
@@ -255,15 +255,15 @@ const filterSearch = (searchPokemon) => {
                         }, 2000);
                     }
 
-                    for(let indice = 0; indice <= listAllPokemons.length; indice++){
-                        const listAllPokemonsUrl = `https://pokeapi.co/api/v2/pokemon/${listAllPokemons[indice]}/`
-                        
-                        fetch(listAllPokemonsUrl)
-                            .then((resultsUrl) => resultsUrl.json())
-                            .then((jsonResultsUrl) => {
-                                const cardSearchPokemon = constructorNewPokemon(jsonResultsUrl);
-                                linePokemon.appendChild(cardSearchPokemon)
-                            })
+                    for (const nome of listAllPokemons) {
+                        const listAllPokemonsUrl = `https://pokeapi.co/api/v2/pokemon-species/${nome}/`;
+                        const resultsUrl = await fetch(listAllPokemonsUrl).then(r => r.json());
+
+                        const urlIdPokemon = `https://pokeapi.co/api/v2/pokemon/${resultsUrl.id}`;
+                        const dadoPokemonUrlId = await fetch(urlIdPokemon).then(r => r.json());
+
+                        const cardSearchPokemon = constructorNewPokemon(dadoPokemonUrlId);
+                        linePokemon.appendChild(cardSearchPokemon);
                     }
                 }
             }
@@ -278,13 +278,13 @@ verificaGeracao(geracaoAtual);
 // Pesquisa quando preciona o enter
 
 searchPokemonInput.addEventListener('search', () => { 
-    filterSearch(searchPokemonInput.value)
+    filterSearch(searchPokemonInput.value.toLowerCase())
 })
 
 // Click do botão para pesquisar
 
 searchPokemonButton.addEventListener('click', () => { 
-    filterSearch(searchPokemonInput.value)
+    filterSearch(searchPokemonInput.value.toLowerCase())
 })
 
 class ShowPokemonDetails {
@@ -323,12 +323,20 @@ class ShowPokemonDetails {
     evolutionToPokemon (id) {
         console.log(id);
         
-        let url = `https://pokeapi.co/api/v2/evolution-chain/${id}/`
+        let url = id;
 
         fetch(url) 
             .then((result) => result.json())
             .then((jsonEvolve) => {
                 console.log(jsonEvolve);
+                
+                if (jsonEvolve.chain.evolves_to.length == 1) {
+                    console.log(jsonEvolve.chain.evolves_to[0]);
+                    
+                }else {
+                    console.log("Sem Evolução");
+                    
+                }
                 
             })
     }
@@ -505,7 +513,7 @@ class ShowPokemonDetails {
 
                         evol.addEventListener('click', () => {
                             verificaActive('evol');
-                            this.evolutionToPokemon(details.id)
+                            this.evolutionToPokemon(details.evolution_chain.url)
                         })
 
                         esta.addEventListener('click', () => {
@@ -532,7 +540,7 @@ btnMenu.addEventListener('click', () => {
 closeMenu.addEventListener('click', () => {
     menu.classList.remove('animate__slideInLeft');
     menu.classList.add('animate__slideOutLeft')
-   setTimeout(() => {
-        menu.classList.remove('activeMenu');
-   }, 1000);
+    setTimeout(() => {
+            menu.classList.remove('activeMenu');
+    }, 1000);
 })
