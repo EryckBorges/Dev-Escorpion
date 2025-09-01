@@ -209,6 +209,8 @@ const searchPokemonButton = document.querySelector('.btnSearch');
 
 const filterSearch = (searchPokemon) => {
     linePokemon.innerHTML = ''
+    console.log(searchPokemon);
+    
 
     // Verifica se tem algo na pesquisa
 
@@ -229,18 +231,25 @@ const filterSearch = (searchPokemon) => {
             const verificarSearch = () => {
                 if (!isNaN(searchPokemon)) {
                     const listAllPokemons = allPokemons.results[searchPokemon - 1];
-                    const listAllPokemonsUrl = `https://pokeapi.co/api/v2/pokemon/${listAllPokemons.name}/`
+                    console.log(listAllPokemons);
+                    
+                    const listAllPokemonsUrl = `https://pokeapi.co/api/v2/pokemon-species/${listAllPokemons.name}/`
 
                     fetch(listAllPokemonsUrl)
                         .then((resultsUrl) => resultsUrl.json())
                         .then((jsonResultsUrl) => {
-                            const cardSearchPokemon = constructorNewPokemon(jsonResultsUrl);
-                            linePokemon.appendChild(cardSearchPokemon)
+                            const urlIdPokemon = `https://pokeapi.co/api/v2/pokemon/${jsonResultsUrl.id}`
+                            fetch(urlIdPokemon)
+                                .then((resultsIdPokemonUrl) => resultsIdPokemonUrl.json())
+                                .then((dadoPokemonUrlId) => {
+                                    const cardSearchPokemon = constructorNewPokemon(dadoPokemonUrlId);
+                                    linePokemon.appendChild(cardSearchPokemon)
+                                })
                         })
                 }else {
                     const listAllPokemons = allPokemons.results
                     .map(poke => poke.name)
-                    .filter(poke => poke.startsWith(`${searchPokemon}`))
+                    .filter(poke => poke.startsWith(`${searchPokemon}`))                    
                     .sort((a, b) => a.localeCompare(b));
                 
                     if (listAllPokemons.length == 0) {
@@ -256,13 +265,18 @@ const filterSearch = (searchPokemon) => {
                     }
 
                     for(let indice = 0; indice <= listAllPokemons.length; indice++){
-                        const listAllPokemonsUrl = `https://pokeapi.co/api/v2/pokemon/${listAllPokemons[indice]}/`
-                        
+                        const listAllPokemonsUrl = `https://pokeapi.co/api/v2/pokemon-species/${listAllPokemons[indice]}/`
+                                
                         fetch(listAllPokemonsUrl)
                             .then((resultsUrl) => resultsUrl.json())
                             .then((jsonResultsUrl) => {
-                                const cardSearchPokemon = constructorNewPokemon(jsonResultsUrl);
-                                linePokemon.appendChild(cardSearchPokemon)
+                                const urlIdPokemon = `https://pokeapi.co/api/v2/pokemon/${jsonResultsUrl.id}`
+                                fetch(urlIdPokemon)
+                                    .then((resultsIdPokemonUrl) => resultsIdPokemonUrl.json())
+                                    .then((dadoPokemonUrlId) => {
+                                        const cardSearchPokemon = constructorNewPokemon(dadoPokemonUrlId);
+                                        linePokemon.appendChild(cardSearchPokemon)
+                                    })
                             })
                     }
                 }
@@ -278,13 +292,13 @@ verificaGeracao(geracaoAtual);
 // Pesquisa quando preciona o enter
 
 searchPokemonInput.addEventListener('search', () => { 
-    filterSearch(searchPokemonInput.value)
+    filterSearch(searchPokemonInput.value.toLowerCase())
 })
 
 // Click do botão para pesquisar
 
 searchPokemonButton.addEventListener('click', () => { 
-    filterSearch(searchPokemonInput.value)
+    filterSearch(searchPokemonInput.value.toLowerCase())
 })
 
 class ShowPokemonDetails {
@@ -532,7 +546,7 @@ btnMenu.addEventListener('click', () => {
 closeMenu.addEventListener('click', () => {
     menu.classList.remove('animate__slideInLeft');
     menu.classList.add('animate__slideOutLeft')
-   setTimeout(() => {
-        menu.classList.remove('activeMenu');
-   }, 1000);
+    setTimeout(() => {
+            menu.classList.remove('activeMenu');
+    }, 1000);
 })
