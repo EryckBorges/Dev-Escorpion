@@ -14,9 +14,9 @@ let typesPokemons = (types) => {
 
 // Função para adicionar o pokemon na tela
 
-const constructorNewPokemon = (pokemon) => {  
+const constructorNewPokemon = (pokemon) => {
     btnMorePokemons.classList.add('rotateAnimation')
-    const div = document.createElement('div');    
+    const div = document.createElement('div');
     div.classList.add("center", "over", "cardPokemon", `${pokemon.types[0].type.name}`, `cardPokemon${pokemon.id}`, "animate__animated", "animate__zoomIn")
 
     div.innerHTML = `<div class="over center dados width">
@@ -32,17 +32,17 @@ const constructorNewPokemon = (pokemon) => {
                 </div>
             </div>`
 
-        setTimeout(() => {
-            btnMorePokemons.classList.remove('rotateAnimation')
-        }, 4000);
-            
+    setTimeout(() => {
+        btnMorePokemons.classList.remove('rotateAnimation')
+    }, 4000);
+
     div.addEventListener('click', () => {
         const showPokemon = new ShowPokemonDetails(pokemon, pokemon.id);
-        showPokemon.createPageDetails(pokemon);        
+        showPokemon.createPageDetails(pokemon);
     })
 
     return div
-    
+
 }
 
 // Função para poder ter acesso os dados dos pokemons
@@ -59,7 +59,7 @@ const loadPokemon = (offset, limit, ordem = 'menorNumber') => {
         if (ordem == 'maiorNumber') {
             pokemonsList.reverse();
         }
-        
+
         const list = document.querySelector('.linePokemon');
         pokemonsList.forEach((pokemon) => {
             const card = constructorNewPokemon(pokemon);
@@ -81,14 +81,14 @@ const verificaGeracao = (geracaoAtual) => {
 btnMorePokemons.addEventListener('click', () => {
     offset += limit;
     btnMorePokemons.classList.add('rotateAnimation');
-    
+
     const qnt = offset + limit
 
     if (qnt >= geracoesLimit[geracaoAtual + 1]) {
         const newLimit = geracoesLimit[geracaoAtual + 1] - offset;
         loadPokemon(offset, newLimit)
         btnMorePokemons.setAttribute('disabled', '');
-    }else {
+    } else {
         loadPokemon(offset, limit)
     }
 });
@@ -107,90 +107,90 @@ filterRegiao.addEventListener('change', () => {
             linePokemon.innerHTML = '';
             geracaoAtual = 0;
             verificaGeracao(geracaoAtual);
-        break;
+            break;
         case 1:
             btnMorePokemons.classList.add('rotateAnimation')
             linePokemon.innerHTML = '';
             geracaoAtual = 1;
             verificaGeracao(geracaoAtual);
-        break;
+            break;
         case 2:
             btnMorePokemons.classList.add('rotateAnimation')
             linePokemon.innerHTML = '';
             geracaoAtual = 2;
             verificaGeracao(geracaoAtual);
-        break;
+            break;
         case 3:
             btnMorePokemons.classList.add('rotateAnimation')
             linePokemon.innerHTML = '';
             geracaoAtual = 3;
             verificaGeracao(geracaoAtual);
-        break;
+            break;
         case 4:
             btnMorePokemons.classList.add('rotateAnimation')
             linePokemon.innerHTML = '';
             geracaoAtual = 4;
             verificaGeracao(geracaoAtual);
-        break;
+            break;
         case 5:
             btnMorePokemons.classList.add('rotateAnimation')
             linePokemon.innerHTML = '';
             geracaoAtual = 5;
             verificaGeracao(geracaoAtual);
-        break;
+            break;
         case 6:
             btnMorePokemons.classList.add('rotateAnimation')
             linePokemon.innerHTML = '';
             geracaoAtual = 6;
             verificaGeracao(geracaoAtual);
-        break;
+            break;
         case 7:
             btnMorePokemons.classList.add('rotateAnimation')
             linePokemon.innerHTML = '';
             geracaoAtual = 7;
             verificaGeracao(geracaoAtual);
-        break;
+            break;
         case 8:
             btnMorePokemons.classList.add('rotateAnimation')
             linePokemon.innerHTML = '';
             geracaoAtual = 8;
             verificaGeracao(geracaoAtual);
-        break;
+            break;
         default:
             break;
-    } 
+    }
 });
-    
+
 organizar.addEventListener('change', () => {
     let valueOrganizar = Number(organizar.value)
     switch (valueOrganizar) {
         case 0:
             btnMorePokemons.classList.add('rotateAnimation')
             linePokemon.innerHTML = '';
-            
+
             loadPokemon(offset, limit, 'menorNumber')
-        break;
+            break;
         case 1:
             btnMorePokemons.classList.add('rotateAnimation')
             linePokemon.innerHTML = '';
-            
+
             loadPokemon(geracoesLimit[geracaoAtual + 1] - limit, limit, 'maiorNumber')
-        break;
+            break;
         case 2:
             btnMorePokemons.classList.add('rotateAnimation')
             linePokemon.innerHTML = '';
-            
+
             loadPokemon(offset, limit, 'a-z')
-        break;
+            break;
         case 3:
             btnMorePokemons.classList.add('rotateAnimation')
             linePokemon.innerHTML = '';
-            
+
             loadPokemon(offset, limit, 'z-a')
-        break;
+            break;
         default:
             break;
-    } 
+    }
 });
 
 // Filtro através de pesquisa por nome ou id de pokemon
@@ -214,15 +214,15 @@ const filterSearch = (searchPokemon) => {
     const urlAllPokemons = 'https://pokeapi.co/api/v2/pokemon-species/?offset=0&limit=3000';
 
     fetch(urlAllPokemons)
-        .then((results) => results.json()) 
+        .then((results) => results.json())
         .then((jsonDetailsAllPokemon) => {
             const allPokemons = jsonDetailsAllPokemon;
-                
+
             const verificarSearch = async () => {
                 if (!isNaN(searchPokemon)) {
                     const listAllPokemons = allPokemons.results[searchPokemon - 1];
                     console.log(listAllPokemons);
-                    
+
                     const listAllPokemonsUrl = `https://pokeapi.co/api/v2/pokemon-species/${listAllPokemons.name}/`
 
                     fetch(listAllPokemonsUrl)
@@ -237,12 +237,12 @@ const filterSearch = (searchPokemon) => {
                                 })
 
                         })
-                }else {
+                } else {
                     const listAllPokemons = allPokemons.results
-                    .map(poke => poke.name)
-                    .filter(poke => poke.startsWith(`${searchPokemon}`))                    
-                    .sort((a, b) => a.localeCompare(b));   
-            
+                        .map(poke => poke.name)
+                        .filter(poke => poke.startsWith(`${searchPokemon}`))
+                        .sort((a, b) => a.localeCompare(b));
+
                     if (listAllPokemons.length == 0) {
                         const notFound = document.querySelector('.notFound');
                         notFound.classList.add('open');
@@ -269,7 +269,7 @@ const filterSearch = (searchPokemon) => {
             }
 
             verificarSearch();
-            
+
         })
 }
 
@@ -277,13 +277,13 @@ verificaGeracao(geracaoAtual);
 
 // Pesquisa quando preciona o enter
 
-searchPokemonInput.addEventListener('search', () => { 
+searchPokemonInput.addEventListener('search', () => {
     filterSearch(searchPokemonInput.value.toLowerCase())
 })
 
 // Click do botão para pesquisar
 
-searchPokemonButton.addEventListener('click', () => { 
+searchPokemonButton.addEventListener('click', () => {
     filterSearch(searchPokemonInput.value.toLowerCase())
 })
 
@@ -310,7 +310,7 @@ class ShowPokemonDetails {
         `).join('')
     }
 
-    addDescription (description) {
+    addDescription(description) {
         let i = 0;
 
         while (description.flavor_text_entries[i].language.name != "en") {
@@ -320,28 +320,33 @@ class ShowPokemonDetails {
         return description.flavor_text_entries[i].flavor_text
     }
 
-    evolutionToPokemon (id) {
-        console.log(id);
-        
-        let url = id;
+    evolutionToPokemon(id) {
+    let url = id;
 
-        fetch(url) 
-            .then((result) => result.json())
-            .then((jsonEvolve) => {
-                console.log(jsonEvolve);
-                
-                if (jsonEvolve.chain.evolves_to.length == 1) {
-                    console.log(jsonEvolve.chain.evolves_to[0]);
-                    
-                }else {
-                    console.log("Sem Evolução");
-                    
-                }
-                
-            })
+    fetch(url)
+        .then((result) => result.json())
+        .then((jsonEvolve) => {
+            let allFirstEvolution = jsonEvolve.chain.evolves_to;
+
+            pokeApi.getIdPokemonEvolution(allFirstEvolution).then((pokemonsList) => {
+                // gera todas as imagens
+                let evolves = pokemonsList.map(pokeId => 
+                    `<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokeId}.png" alt="evolution">`
+                ).join('');
+
+                const div = `
+                    <div class="center over evolutions">
+                        ${evolves}
+                    </div>
+                `;
+
+                return div
+            });
+        });
     }
 
-    createPageDetails () {
+
+    createPageDetails() {
         const urlForPokemon = `https://pokeapi.co/api/v2/pokemon-species/${this.id}/`;
 
         fetch(urlForPokemon)
@@ -352,18 +357,24 @@ class ShowPokemonDetails {
                 fetch(urlForPokemonDetails)
                     .then((results) => results.json())
                     .then((jsonDetails) => {
-                        console.log(jsonDetails);
-                        console.log(details);
-                        
                         const criePokemon = jsonDetails.cries.latest;
                         const audio = new Audio(criePokemon);
                         audio.play()
-                        
+
                         const main = document.querySelector('main');
                         const header = document.querySelector('header');
                         const detailsPokemon = document.querySelector('.detailsPokemon');
+                        const backgroundPokemon = document.querySelector('.backgroundPokemon');
+                        const pokemonName = document.querySelector('.pokemonName');
+                        const pokedexDados = document.querySelector('.pokedexDados span');
+                        const pokemonImage = document.querySelector('.pokemonImage img');
+                        const weight = document.querySelector('.weight span');
+                        const typesDetails = document.querySelector('.typesDetails');
+                        const heightPokemon = document.querySelector('.heightPokemon span');
+                        const descPokemons = document.querySelector('.descPokemons p');
+                        const movs = document.querySelector('.movs');
                         const body = document.querySelector('body');
-                        
+
                         body.style.overflow = "hidden";
                         detailsPokemon.classList.remove('animate__animated', 'animate__fadeOutRight');
                         main.classList.remove('animate__animated', 'animate__fadeInLeft');
@@ -371,58 +382,18 @@ class ShowPokemonDetails {
                         main.classList.add('animate__animated', 'animate__fadeOutLeft');
                         header.classList.add('animate__animated', 'animate__fadeOutLeft');
                         detailsPokemon.classList.add('actived', 'animate__animated', 'animate__fadeInRight');
-                        detailsPokemon.innerHTML = `<div class="center over pokemonDados width">
-                            <div class="center over backgroundPokemon width ${jsonDetails.types[0].type.name}">
-                                <div class="center over namePokemon width">
-                                    <button type="button" class="center over backPokemon button">
-                                        <img src="./global/icons/back.svg" draggable="false" alt="Back Button">
-                                    </button>
-                                    <h1 class="center over pokemonName">${details.name.charAt(0).toUpperCase() + details.name.slice(1)}</h1>
-                                    <button type="button" class="center over nextPokemon button">
-                                        <img src="./global/icons/next.svg" draggable="false" alt="Next Button">
-                                    </button>
-                                </div>
-                                <div class="center over pokedexDados width">
-                                    <img src="./global/icons/pokedex.svg" draggable="false" alt="Pokedex Icon">
-                                    <span class="idPokemon center over">#${this.id}</span>
-                                </div>
-                            </div>
-                            <div class="pokemonImage center over width">
-                                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/${this.id}.gif" draggable="false" alt="Pokemon">
-                            </div>
-                        </div>
-                        <div class="center over dadosPokemon width column">
-                            <div class="center over width height_weight_type">
-                                <div class="center over weight column">
-                                    <img src="./global/icons/weight.svg" draggable="false" alt="Icone de Peso">
-                                    <span>${jsonDetails.weight/10} Kg</span>
-                                </div>
-                                <div class="center over typesDetails">
-                                    ${this.addTypePokemon(jsonDetails.types)}
-                                </div>
-                                <div class="center over heightPokemon column">
-                                    <img src="./global/icons/height.svg" draggable="false" alt="Icone de Altura">
-                                    <span>${jsonDetails.height/10} M</span>
-                                </div>
-                            </div> 
-                            <div class="center over topics width">
-                                <div class="center over info active">Information</div>
-                                <div class="center over esta">Statistics</div>
-                                <div class="center over form">Forms</div>
-                                <div class="center over evol">Evolutions</div>
-                            </div>
-                            <div class="center over desc width column">
-                                <h1 class="descPokemon center over">Pokédex Description</h1>
-                                <p>${this.addDescription(details)}</p>
-                            </div>
-                            <div class="center over mov width column">
-                                <h1 class="descPokemon center">Movements</h1>
-                                <div class="center over movs width">
-                                    ${this.addMovsPokemon(jsonDetails)}
-                                </div>
-                            </div>
-                        </div>`
-        
+                    
+                        backgroundPokemon.classList.add(jsonDetails.types[0].type.name);
+                        pokemonName.innerHTML = details.name.charAt(0).toUpperCase() + details.name.slice(1);
+                        pokedexDados.innerHTML = this.id;
+                        pokemonImage.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/${this.id}.gif`;     
+                    
+                        weight.innerHTML = jsonDetails.weight / 10 + "Kg";
+                        typesDetails.innerHTML = this.addTypePokemon(jsonDetails.types);
+                        heightPokemon.innerHTML = jsonDetails.height / 10 + "M";
+                        descPokemons.innerHTML = this.addDescription(details);
+                        movs.innerHTML = this.addMovsPokemon(jsonDetails);
+                        
                         // Funcionalidade Para quando o usuário quiser voltar para a tela anterior
                         history.pushState(null, "", location.href);
                         window.addEventListener('popstate', () => {
@@ -437,23 +408,23 @@ class ShowPokemonDetails {
                             setTimeout(() => {
                                 detailsPokemon.classList.remove('actived');
                             }, 1000);
-                            
+
                         });
 
                         // Funcionalidade para mostrar o próximo pokemon ou pokemon anterior
                         const nextBtnPokemon = document.querySelector('.nextPokemon');
                         const backBtnPokemon = document.querySelector('.backPokemon');
-        
+
                         nextBtnPokemon.addEventListener('click', () => {
                             let nextId = this.id + 1
                             const newPokemon = new ShowPokemonDetails(this.pokemon, nextId)
-                            newPokemon.createPageDetails();      
+                            newPokemon.createPageDetails();
                         })
-        
+
                         backBtnPokemon.addEventListener('click', () => {
                             let backId = this.id - 1
                             const newPokemon = new ShowPokemonDetails(this.pokemon, backId)
-                            newPokemon.createPageDetails();      
+                            newPokemon.createPageDetails();
                         })
 
                         // Função para mostrar as estatisticas di pokemon
@@ -462,39 +433,39 @@ class ShowPokemonDetails {
                         const esta = document.querySelector(".esta");
                         const form = document.querySelector(".form");
                         const evol = document.querySelector(".evol");
-                        
+
                         const verificaActive = (indice) => {
                             if (indice == 'info') {
                                 if (info.classList.contains('active')) {
                                     info.classList.add('active');
-                                }else {
+                                } else {
                                     esta.classList.remove('active');
                                     form.classList.remove('active');
                                     evol.classList.remove('active');
                                     info.classList.add('active');
                                 }
-                            }else if (indice == 'esta') {
+                            } else if (indice == 'esta') {
                                 if (esta.classList.contains('active')) {
                                     esta.classList.add('active');
-                                }else {
+                                } else {
                                     info.classList.remove('active');
                                     form.classList.remove('active');
                                     evol.classList.remove('active');
                                     esta.classList.add('active');
                                 }
-                            }if (indice == 'form') {
+                            } if (indice == 'form') {
                                 if (form.classList.contains('active')) {
                                     form.classList.add('active');
-                                }else {
+                                } else {
                                     esta.classList.remove('active');
                                     info.classList.remove('active');
                                     evol.classList.remove('active');
                                     form.classList.add('active');
                                 }
-                            }if (indice == 'evol') {
+                            } if (indice == 'evol') {
                                 if (evol.classList.contains('active')) {
                                     evol.classList.add('active');
-                                }else {
+                                } else {
                                     esta.classList.remove('active');
                                     form.classList.remove('active');
                                     info.classList.remove('active');
@@ -541,6 +512,6 @@ closeMenu.addEventListener('click', () => {
     menu.classList.remove('animate__slideInLeft');
     menu.classList.add('animate__slideOutLeft')
     setTimeout(() => {
-            menu.classList.remove('activeMenu');
+        menu.classList.remove('activeMenu');
     }, 1000);
 })

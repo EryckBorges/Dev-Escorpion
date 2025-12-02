@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="./global/css/style.css">
+    <link rel="stylesheet" href="./global/css/resp.css">
     <link rel="stylesheet" href="./css/styleForPokemons.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/resp.css">
     <script src="./js/pokeApi.js" defer></script>
     <script src="./js/script.js" defer></script>
 </head>
 <body>
     <header class="center over width"> 
-        <div class="center over pokeballHeader width">
-            <img src="./element/Hearder.svg" draggable="false" alt="Metade de uma Pokebola">
-        </div>
+        <div class="center over pokeballHeader width"></div>
         <div class="center over btnHeader width">
             <button type="button" class="center over button btnMenu">
                 <span class="material-symbols-outlined">menu</span>
@@ -131,7 +131,67 @@
             </ul>
         </nav>
     </section>
-    <section class="detailsPokemon center over animate__animated width height"></section>
+    <section class="detailsPokemon center over animate__animated width height">
+        <div class="center over pokemonDados width">
+            <div class="center over backgroundPokemon width">
+                <div class="center over namePokemon width">
+                    <button type="button" class="center over backPokemon button">
+                        <img src="./global/icons/back.svg" draggable="false" alt="Back Button">
+                    </button>
+                    <h1 class="center over pokemonName"></h1>
+                    <button type="button" class="center over nextPokemon button">
+                        <img src="./global/icons/next.svg" draggable="false" alt="Next Button">
+                    </button>
+                </div>
+                <div class="center over pokedexDados width">
+                    <img src="./global/icons/pokedex.svg" draggable="false" alt="Pokedex Icon">
+                    <span class="idPokemon center over"></span>
+                </div>
+            </div>
+            <div class="pokemonImage center over width">
+                <img src="" draggable="false" alt="Pokemon">
+            </div>
+        </div>
+        <div class="center over dadosPokemon width column">
+            <div class="center over width height_weight_type">
+                <div class="center over weight column">
+                    <img src="./global/icons/weight.svg" draggable="false" alt="Icone de Peso">
+                    <span></span>
+                </div>
+                <div class="center over typesDetails"></div>
+                <div class="center over heightPokemon column">
+                    <img src="./global/icons/height.svg" draggable="false" alt="Icone de Altura">
+                    <span></span>
+                </div>
+            </div> 
+            <div class="center over topics width">
+                <div class="center over info active">Information</div>
+                <div class="center over esta">Statistics</div>
+                <div class="center over form">Forms</div>
+                <div class="center over evol">Evolutions</div>
+            </div>
+            <div class="center over infoPokemon width">
+                <div class="center over desc width column descPokemons">
+                    <h1 class="descPokemon center over">Pokédex Description</h1>
+                    <p></p>
+                </div>
+                <div class="center over mov width column">
+                    <h1 class="descPokemon center">Movements</h1>
+                    <div class="center over movs width"></div>
+                </div> 
+            </div>
+            <div class="center over evolutionPokemon width">
+                <div class="center over desc width column descPokemons">
+                    <h1 class="descPokemon center over">Evolution</h1>
+                    <p></p>
+                </div>
+                <div class="center over mov width column">
+                    <h1 class="descPokemon center">Movements</h1>
+                    <div class="center over movs width"></div>
+                </div> 
+            </div>
+        </div>
+    </section>
     <footer class="footer width center over">
 
     </footer>

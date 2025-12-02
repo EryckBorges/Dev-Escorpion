@@ -13,3 +13,19 @@ pokeApi.getPokemon = async (offset, limit) => {
         .then((detailsRequest) => Promise.all(detailsRequest))
         .then((pokemons) => pokemons)
 }
+
+pokeApi.getIdPokemonEvolution = async (pokemonList) => {
+    console.log(pokemonList);
+
+    const promises = pokemonList.map(async (p, i) => {
+        const url = p.species.url;
+        console.log(url, i);
+
+        const response = await fetch(url);
+        const data = await response.json();
+        return data.id;
+    });
+
+    return Promise.all(promises);
+};
+
