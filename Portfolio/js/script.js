@@ -22,37 +22,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let toast = document.querySelector(".toast");
 
-  const genshin = document.querySelector(".genshin");
-  const tabuada = document.querySelector(".tabuada");
   const allButtonProject = document.querySelector(".buttonAllProjects");
 
   let clicks = 0;
 
   const contClick = () => {
     clicks++
-    genshin.setAttribute('disabled', '');
     allButtonProject.setAttribute('disabled', '');
-    tabuada.setAttribute('disabled', '');
     if(clicks == 1) {
       toastElement.openToast();
       setTimeout(() => {
-        genshin.removeAttribute('disabled');
         allButtonProject.removeAttribute('disabled');
-        tabuada.removeAttribute('disabled');
         clicks = 0;
       }, 6000);
     }
   }
 
-  genshin.addEventListener("click", () => {
-    contClick();
-  });
-
   allButtonProject.addEventListener("click", () => {
-    contClick();
-  });
-
-  tabuada.addEventListener("click", () => {
     contClick();
   });
 
@@ -188,12 +174,10 @@ privacity: 'Privacy',
   contact: "Talk to me, and let's create something amazing together!",
   titleSolo: "Solo Leveling RPG Generator",
   titleRelogio: "Clocks and Stopwatch",
-  titleGenshin: "Genshin Impact Divination",
   titlePokemon: "Pokedex and Games",
   titleSlechi: "Ice Cream Catalog",
   titleAumigos: "Graduation Project - AuMigos Pet's",
-  btnAllProject: "See all projects",
-yourNumber: 'Your number, your Multiplication Table',
+  // btnAllProject: "See all projects",
 servicePrest: 'Discover the Services I Offer',
 servicePrestText: "I offer computer and laptop repair and maintenance services, as well as PC assembly and upgrades, helping you choose the best parts for performance and cost-effectiveness. I also work in web application development, creating modern and responsive websites using HTML, CSS, JavaScript, Git, GitHub, Figma, and Canva. Get in touch and take your technology to the next level! Let's Code!",
 };
@@ -223,11 +207,9 @@ const brasil = {
   titleSolo: "Gerador RPG Solo Leveling",
   titleRelogio: "Relógios e Cronômetro",
   titlePokemon: "Pokedex e Jogos",
-  titleGenshin: "Adivinhação de Genshin Impact",
   titleSlechi: "Catalogo de Sorvetes",
   titleAumigos: "TCC - AuMigos Pet's",
-  btnAllProject: "Veja todos os projetos",
-  yourNumber: 'Seu número, sua Tabuada',
+  // btnAllProject: "Veja todos os projetos",
   servicePrest: 'Conheça os Serviços que Ofereço',
 servicePrestText: "Ofereço serviços de conserto e manutenção de computadores e notebooks, além de montagem e upgrade de PCs, ajudando a escolher as melhores peças para desempenho e custo-benefício. Também atuo no desenvolvimento de aplicações web, criando sites modernos e responsivos com HTML, CSS, JavaScript, Git, GitHub, Figma e Canva. Entre em contato e leve sua tecnologia para o próximo nível! Let's Code!",
 };
@@ -256,12 +238,10 @@ privacity: 'Privacidad',
   contact: "¡Habla conmigo y creemos algo increíble juntos!",
   titleSolo: "Generador RPG Solo Leveling",
   titleRelogio: "Relojes y Cronómetro",
-  titleGenshin: "Adivinación de Genshin Impact",
   titlePokemon: "Pokedex y Juegos",
   titleSlechi: "Catálogo de Helados",
   titleAumigos: "Trabajo de Fin de Curso - AuMigos Pet's",
-  btnAllProject: "Ver todos los proyectos",
-yourNumber: 'Tu número, tu Tabla de Multiplicar',
+  // btnAllProject: "Ver todos los proyectos",
 servicePrest: 'Descubre los Servicios que Ofrezco',
 servicePrestText: "Ofrezco servicios de reparación y mantenimiento de computadoras y laptops, así como ensamblaje y actualización de PC, ayudándote a elegir las mejores piezas para rendimiento y costo-beneficio. También me dedico al desarrollo de aplicaciones web, creando sitios modernos y responsivos con HTML, CSS, JavaScript, Git, GitHub, Figma y Canva. ¡Ponte en contacto y lleva tu tecnología al siguiente nivel! ¡Let's Code!",
 };
@@ -291,11 +271,9 @@ privacity: 'Confidentialité',
   titleSolo: "Générateur RPG Solo Leveling",
   titleRelogio: "Horloges et Chronomètre",
   titlePokemon: "Pokedex et Jeux",
-  titleGenshin: "Divination de Genshin Impact",
   titleSlechi: "Catalogue de Glaces",
   titleAumigos: "Projet de Fin d'Études - AuMigos Pet's",
 notConhecimento: "de connaissance <br> que je ne possède pas",
-yourNumber: 'Votre numéro, votre Table de Multiplication',
 servicePrest: 'Découvrez les services que j’offre',
 servicePrestText: "J'offre des services de réparation et de maintenance d'ordinateurs et d'ordinateurs portables, ainsi que l'assemblage et la mise à niveau de PC, en vous aidant à choisir les meilleures pièces pour la performance et le rapport qualité-prix. Je travaille également dans le développement d'applications web, en créant des sites modernes et responsifs avec HTML, CSS, JavaScript, Git, GitHub, Figma et Canva. Contactez-moi et faites passer votre technologie au niveau supérieur ! Let's Code ",
 };
@@ -324,12 +302,10 @@ privacity: '隐私政策',
   contact: "和我聊聊，让我们一起创造一些令人惊叹的东西！",
   titleSolo: "Solo Leveling RPG 生成器",
   titleRelogio: "时钟和计时器",
-  titleGenshin: "原神占卜",
   titleSlechi: "冰淇淋目录",
   titlePokemon: "宝可梦图鉴与游戏",
   titleAumigos: "毕业项目 - AuMigos Pet's",
-  btnAllProject: "查看所有项目",
-yourNumber: '你的数字，你的乘法表',
+  // btnAllProject: "查看所有项目",
 servicePrest: '发现我提供的服务',
 servicePrestText: "我提供电脑和笔记本电脑的维修和维护服务，以及PC组装和升级，帮助您选择最佳配件，以提高性能并优化成本。我还从事Web应用开发，使用HTML、CSS、JavaScript、Git、GitHub、Figma和Canva创建现代化、响应式的网站。欢迎联系我们，让您的技术更上一层楼！Let's Code!",
 };
@@ -357,12 +333,10 @@ const elementos = {
   contact: document.querySelector(".qrCode h1"),
   titleRelogio: document.querySelector(".relogio p"),
   titleSolo: document.querySelector(".sololeveling p"),
-  titleGenshin: document.querySelector(".genshin p"),
   titlePokemon: document.querySelector(".pokemon p"),
   titleSlechi: document.querySelector(".slechi p"),
   titleAumigos: document.querySelector(".aumigos p"),
-  btnAllProject: document.querySelectorAll(".btnAllProject"),
-  yourNumber: document.querySelector('.tabuada p'),
+  // btnAllProject: document.querySelectorAll(".btnAllProject"),
   servicePrest: document.querySelector('.servicePrest'),
 servicePrestText: document.querySelector('.servicePrestText'),
 };
@@ -415,13 +389,11 @@ const ingles = () => {
   elementos.titleSolo.innerHTML = eua.titleSolo;
   elementos.titleSlechi.innerHTML = eua.titleSlechi;
   elementos.titleRelogio.innerHTML = eua.titleRelogio;
-  elementos.titleGenshin.innerHTML = eua.titleGenshin;
   elementos.titlePokemon.innerHTML = eua.titlePokemon;
   elementos.titleAumigos.innerHTML = eua.titleAumigos;
-  elementos.btnAllProject.forEach((btnAllProjectText) => {
-    btnAllProjectText.innerHTML = eua.btnAllProject;
-  });
-  elementos.yourNumber.innerHTML = eua.yourNumber;
+  // elementos.btnAllProject.forEach((btnAllProjectText) => {
+  //   btnAllProjectText.innerHTML = eua.btnAllProject;
+  // });
   elementos.servicePrest.innerHTML = eua.servicePrest;
   elementos.servicePrestText.innerHTML = eua.servicePrestText;
   titleButtonTranslate.forEach((btnTranslate) => {
@@ -477,13 +449,11 @@ const portugues = () => {
   elementos.contact.innerHTML = brasil.contact;
   elementos.titleSolo.innerHTML = brasil.titleSolo;
   elementos.titleRelogio.innerHTML = brasil.titleRelogio;
-  elementos.titleGenshin.innerHTML = brasil.titleGenshin;
   elementos.titlePokemon.innerHTML = brasil.titlePokemon;
   elementos.titleAumigos.innerHTML = brasil.titleAumigos;
-  elementos.btnAllProject.forEach((btnAllProjectText) => {
-    btnAllProjectText.innerHTML = brasil.btnAllProject;
-  });
-  elementos.yourNumber.innerHTML = brasil.yourNumber;
+  // elementos.btnAllProject.forEach((btnAllProjectText) => {
+  //   btnAllProjectText.innerHTML = brasil.btnAllProject;
+  // });
   elementos.servicePrest.innerHTML = brasil.servicePrest;
   elementos.servicePrestText.innerHTML = brasil.servicePrestText;
   titleButtonTranslate.forEach((btnTranslate) => {
@@ -538,14 +508,12 @@ const espanha = () => {
   elementos.contact.innerHTML = spain.contact;
   elementos.titleSolo.innerHTML = spain.titleSolo;
   elementos.titleRelogio.innerHTML = spain.titleRelogio;
-  elementos.titleGenshin.innerHTML = spain.titleGenshin;
   elementos.titlePokemon.innerHTML = spain.titlePokemon;
   elementos.titleSlechi.innerHTML = spain.titleSlechi;
   elementos.titleAumigos.innerHTML = spain.titleAumigos;
-  elementos.btnAllProject.forEach((btnAllProjectText) => {
-    btnAllProjectText.innerHTML = spain.btnAllProject;
-  });
-  elementos.yourNumber.innerHTML = spain.yourNumber;
+  // elementos.btnAllProject.forEach((btnAllProjectText) => {
+  //   btnAllProjectText.innerHTML = spain.btnAllProject;
+  // });
   elementos.servicePrest.innerHTML = spain.servicePrest;
   elementos.servicePrestText.innerHTML = spain.servicePrestText;
   titleButtonTranslate.forEach((btnTranslate) => {
@@ -600,14 +568,12 @@ const frances = () => {
   elementos.contact.innerHTML = franca.contact;
   elementos.titleSolo.innerHTML = franca.titleSolo;
   elementos.titleRelogio.innerHTML = franca.titleRelogio;
-  elementos.titleGenshin.innerHTML = franca.titleGenshin;
   elementos.titlePokemon.innerHTML = franca.titlePokemon;
   elementos.titleSlechi.innerHTML = franca.titleSlechi;
   elementos.titleAumigos.innerHTML = franca.titleAumigos;
-  elementos.btnAllProject.forEach((btnAllProjectText) => {
-    btnAllProjectText.innerHTML = franca.btnAllProject;
-  });
-  elementos.yourNumber.innerHTML = franca.yourNumber;
+  // elementos.btnAllProject.forEach((btnAllProjectText) => {
+  //   btnAllProjectText.innerHTML = franca.btnAllProject;
+  // });
   elementos.servicePrest.innerHTML = franca.servicePrest;
   elementos.servicePrestText.innerHTML = franca.servicePrestText;
   titleButtonTranslate.forEach((btnTranslate) => {
@@ -661,14 +627,12 @@ const chines = () => {
   elementos.contact.innerHTML = china.contact;
   elementos.titleSolo.innerHTML = china.titleSolo;
   elementos.titleRelogio.innerHTML = china.titleRelogio;
-  elementos.titleGenshin.innerHTML = china.titleGenshin;
   elementos.titlePokemon.innerHTML = china.titlePokemon;
   elementos.titleSlechi.innerHTML = china.titleSlechi;
   elementos.titleAumigos.innerHTML = china.titleAumigos;
-  elementos.btnAllProject.forEach((btnAllProjectText) => {
-    btnAllProjectText.innerHTML = china.btnAllProject;
-  });
-  elementos.yourNumber.innerHTML = china.yourNumber;
+  // elementos.btnAllProject.forEach((btnAllProjectText) => {
+  //   btnAllProjectText.innerHTML = china.btnAllProject;
+  // });
   elementos.servicePrest.innerHTML = china.servicePrest;
   elementos.servicePrestText.innerHTML = china.servicePrestText;
   titleButtonTranslate.forEach((btnTranslate) => {

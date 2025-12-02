@@ -126,8 +126,8 @@ main {
     gap: 20px;
     user-select: none; /* Impede a seleção de texto ao arrastar */
 }
-  
-  .project, .service {
+
+.project, .service {
     flex-shrink: 0;
     width: 450px;
     height: 90%;
@@ -138,15 +138,14 @@ main {
     cursor: pointer;
     transition:0.5s linear;
     position: relative;
-  }
+}
 
   .project > p, .service > p {
     font-size: 1.6em;
     font-weight: bold;
-    position: absolute;
-    top: 5vh;
     width: 100%;
     z-index: 3;
+    margin-block: 20px;
   }
 
   .sololeveling > p {
@@ -176,24 +175,16 @@ main {
   .aumigos > p {
     color: #328266;
   }
-  
-  .project > img {
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-  }
 
-  .project > video, .service > video {
-    width: 64%;
-    height: 42%;
-    position: absolute;
-    top:25%;
-    left: 12%;
+.project > video, .service > video {
+    width: 90%;
+    height: 70%;
     z-index: 1;
+    border-radius: 20px;
     object-fit: cover;
     filter: none !important;
-  backdrop-filter: none !important;
-  }
+    backdrop-filter: none !important;
+}
 
   .service:first-child > img{
     width: 100%;
