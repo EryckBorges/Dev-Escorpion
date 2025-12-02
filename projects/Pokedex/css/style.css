@@ -10,17 +10,12 @@ main {
 }
 
 .pokeballHeader {
+    background: url('../element/Hearder.svg') center / cover no-repeat;
     height: 60%;
     align-items: baseline !important;
     position: absolute;
     top: 0;
     z-index: 99;
-}
-
-.pokeballHeader > img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
 }
 
 .btnHeader {
@@ -290,6 +285,7 @@ select {
 
 .heightPokemon, .weight, .typesDetails {
     width: 35%;
+    padding-block: 10px;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
@@ -332,10 +328,20 @@ select {
     color: var(--preto);
 }
 
+.infoPokemon {
+    display: none !important;
+}
+
+.infoPokemon, .evolutionPokemon {
+    height: 90%;
+    flex-direction: column;
+    justify-content: left !important;
+}
+
 .desc {
     margin-top: 10px;
-    height: auto;
-    padding-inline: 10px;
+    height: 40%;
+    padding: 10px 10px;
     gap: 10px;
 }
 
@@ -349,7 +355,7 @@ select {
 }
 
 .mov {
-    height: 50%;
+    height: 60%;
     justify-content: left !important; 
 }
 

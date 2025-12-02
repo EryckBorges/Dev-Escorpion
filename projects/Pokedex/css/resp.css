@@ -1,0 +1,41 @@
+@media screen and (width > 1024px) {
+
+    header {
+        height: 30vh !important;
+    }
+
+    .btnHeader {
+        height: 30% !important;
+    }
+
+    .pokeballHeader {
+        background: url('../element/headerDesktop.svg') center / cover no-repeat !important;
+        height: 60% !important;
+    }
+
+    .pokeballHeader > img {
+        height: auto !important;
+        object-fit: contain !important;
+    }
+
+    .linePokemon {
+        grid-template-columns: repeat(7, 1fr) !important; 
+    }
+
+.cardPokemon {
+    width: 100%;
+    height: 25vh;
+    border-radius: 20px;
+    padding: 10px 6px;
+    flex-direction: column;
+}
+
+.dados {
+    height: 20%;
+    font-size: 0.8em;
+    color: var(--branco);
+    font-weight: bold;
+    position: relative;
+}
+
+}

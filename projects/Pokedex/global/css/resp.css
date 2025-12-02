@@ -1,0 +1,19 @@
+@media screen and (width > 1024px) {
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 35% !important;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 999;
+        background: url('../../global/image/menu.png') center / cover no-repeat;
+        justify-content: baseline !important;
+        align-items: baseline !important;
+    }
+
+    .btnHeader > input {
+        height: 60% !important;
+    }
+}
