@@ -1,9 +1,3 @@
-// Importações
-import { ToastFunction, MostrarImagens } from "../../global/js/script.js";
-const toastElement = new ToastFunction(localStorage.getItem("lang"));
-  toastElement.createToast();
-
-
 const eua = {
     inicio: "Home",
     cursos: "Courses",
