@@ -248,21 +248,21 @@ const langPage = () => {
   // Obtém a linguagem salva no localStorage
   const lang = localStorage.getItem("lang");
 
-  if (lang === "eu") {
-    langSelecionada.innerHTML = "EN";
-    flagSelecionada.src = "../../../global/icon/eua.png";
-    titleButtonTranslate.forEach((btnTranslate) => {
-      btnTranslate.setAttribute("title", "Translate to English");
-    });
-    ingles();
-  } else if (lang === "es") {
-    langSelecionada.innerHTML = "ES";
-    flagSelecionada.src = "../../../global/icon/spain.png";
-    titleButtonTranslate.forEach((btnTranslate) => {
-      btnTranslate.setAttribute("title", "Traducir al español");
-    });
-    espanha();
-  } else if (lang === "fr") {
+    if (lang === "eu") {
+        langSelecionada.innerHTML = "EN";
+        flagSelecionada.src = "../../../global/icon/eua.png";
+        titleButtonTranslate.forEach((btnTranslate) => {
+        btnTranslate.setAttribute("title", "Translate to English");
+        });
+        ingles();
+    } else if (lang === "es") {
+        langSelecionada.innerHTML = "ES";
+        flagSelecionada.src = "../../../global/icon/spain.png";
+        titleButtonTranslate.forEach((btnTranslate) => {
+        btnTranslate.setAttribute("title", "Traducir al español");
+        });
+        espanha();
+    } else if (lang === "fr") {
     langSelecionada.innerHTML = "FR";
     flagSelecionada.src = "../../../global/icon/franca.png";
     titleButtonTranslate.forEach((btnTranslate) => {
