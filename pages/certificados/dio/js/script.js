@@ -432,40 +432,89 @@ elementos.backProjects.addEventListener('click', () => {
 // Certificações
 
 let certificado_santander = [
+    // Github and Git
     {
         certificado: 'github e git',
         icon: '../../../global/icon/github.png',
         img: [
-            'Santander-Certificado-01',
-            'Santander-Certificado-02',
-            'Santander-Certificado-03',
-            'Santander-Certificado-04',
-            'Santander-Certificado-05',
+            '../image/github/Santander-Certificado-01.png',
+            '../image/github/Santander-Certificado-02.png',
+            '../image/github/Santander-Certificado-03.png',
+            '../image/github/Santander-Certificado-04.png',
+            '../image/github/Santander-Certificado-05.png',
+            '../image/github/Santander-Certificado-06.png',
         ]
-    }, {
+    }, 
+    // Html
+    {
         certificado: 'html',
         icon: '../../../global/icon/html.png',
         img: [
-            'Santander-Certificado-06',
-            'Santander-Certificado-07',
-            'Santander-Certificado-08',
-            'Santander-Certificado-09',
-            'Santander-Certificado-10',
-            'Santander-Certificado-11',
-            'Santander-Certificado-12',
-            'Santander-Certificado-13',
+            '../image/html/Santander-Certificado-01.png',
+            '../image/html/Santander-Certificado-02.png',
+            '../image/html/Santander-Certificado-03.png',
+            '../image/html/Santander-Certificado-04.png',
+            '../image/html/Santander-Certificado-05.png',
+            '../image/html/Santander-Certificado-06.png',
+            '../image/html/Santander-Certificado-07.png',
+            '../image/html/Santander-Certificado-08.png',
+            '../image/html/Santander-Certificado-09.png',
+            '../image/html/Santander-Certificado-10.png',
+            '../image/html/Santander-Certificado-11.png',
+            '../image/html/Santander-Certificado-12.png',
+            '../image/html/Santander-Certificado-13.png',
         ]
-    }, {
+    }, 
+    // Css
+    {
         certificado: 'css',
         icon: '../../../global/icon/css.png',
         img: [
-            'Santander-Certificado-14',
+            '../image/css/Santander-Certificado-01.png',
+            '../image/css/Santander-Certificado-02.png',
+            '../image/css/Santander-Certificado-03.png',
+            '../image/css/Santander-Certificado-04.png',
+            '../image/css/Santander-Certificado-05.png',
+            '../image/css/Santander-Certificado-06.png',
+            '../image/css/Santander-Certificado-07.png',
+            '../image/css/Santander-Certificado-08.png',
+            '../image/css/Santander-Certificado-09.png',
+            '../image/css/Santander-Certificado-10.png',
         ]
-    }, {
+    }, 
+    // JavaScript
+    {
         certificado: 'js',
         icon: '../../../global/icon/js.png',
         img: [
-            'Santander-Certificado-15',
+            '../image/javaScript/Santander-Certificado-01.png',
+            '../image/javaScript/Santander-Certificado-02.png',
+            '../image/javaScript/Santander-Certificado-03.png',
+            '../image/javaScript/Santander-Certificado-04.png',
+            '../image/javaScript/Santander-Certificado-05.png',
+            '../image/javaScript/Santander-Certificado-06.png',
+            '../image/javaScript/Santander-Certificado-07.png',
+            '../image/javaScript/Santander-Certificado-08.png',
+            '../image/javaScript/Santander-Certificado-09.png',
+            '../image/javaScript/Santander-Certificado-10.png',
+            '../image/javaScript/Santander-Certificado-11.png',
+            '../image/javaScript/Santander-Certificado-12.png',
+            '../image/javaScript/Santander-Certificado-13.png',
+            '../image/javaScript/Santander-Certificado-14.png',
+            '../image/javaScript/Santander-Certificado-15.png',
+            '../image/javaScript/Santander-Certificado-16.png',
+            '../image/javaScript/Santander-Certificado-17.png',
+            '../image/javaScript/Santander-Certificado-18.png',
+            '../image/javaScript/Santander-Certificado-19.png',
+            '../image/javaScript/Santander-Certificado-20.png',
+            '../image/javaScript/Santander-Certificado-21.png',
+            '../image/javaScript/Santander-Certificado-22.png',
+            '../image/javaScript/Santander-Certificado-23.png',
+            '../image/javaScript/Santander-Certificado-24.png',
+            '../image/javaScript/Santander-Certificado-25.png',
+            '../image/javaScript/Santander-Certificado-26.png',
+            '../image/javaScript/Santander-Certificado-27.png',
+            '../image/javaScript/Santander-Certificado-28.png',
         ]
     }
 ]
