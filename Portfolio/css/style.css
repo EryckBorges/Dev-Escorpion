@@ -62,13 +62,14 @@ main {
 }
 
 .minhaFoto {
+    align-items: baseline !important;
     width:45%;
     height:100%;
 }
 
 .minhaFoto > img {
-    width:70%;
-    height: auto;
+    width: 400px;
+    height: 400px;
     object-fit: cover;
     border-radius: 50%;
     border:2px solid var(--vermelhoPadrao);
@@ -499,6 +500,9 @@ main {
     font-size: 1em;
     font-weight: bold;
     text-decoration: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
 }
 
 .instituicoes > button:hover > a, .instituicoes > button:hover {

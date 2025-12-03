@@ -263,6 +263,10 @@ export class ToastFunction {
       }, 450);
     }, 5000);
   }
+
+  ignore() {
+    
+  }
 }
 
 // Caixa para visualização de imagens
