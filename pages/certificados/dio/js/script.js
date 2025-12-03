@@ -437,12 +437,12 @@ let certificado_santander = [
         certificado: 'github e git',
         icon: '../../../global/icon/github.png',
         img: [
-            '../image/github/Santander-Certificado-01.png',
-            '../image/github/Santander-Certificado-02.png',
-            '../image/github/Santander-Certificado-03.png',
-            '../image/github/Santander-Certificado-04.png',
-            '../image/github/Santander-Certificado-05.png',
-            '../image/github/Santander-Certificado-06.png',
+            './image/github/Santander-Certificado-01.png',
+            './image/github/Santander-Certificado-02.png',
+            './image/github/Santander-Certificado-03.png',
+            './image/github/Santander-Certificado-04.png',
+            './image/github/Santander-Certificado-05.png',
+            './image/github/Santander-Certificado-06.png',
         ]
     }, 
     // Html
@@ -450,19 +450,19 @@ let certificado_santander = [
         certificado: 'html',
         icon: '../../../global/icon/html.png',
         img: [
-            '../image/html/Santander-Certificado-01.png',
-            '../image/html/Santander-Certificado-02.png',
-            '../image/html/Santander-Certificado-03.png',
-            '../image/html/Santander-Certificado-04.png',
-            '../image/html/Santander-Certificado-05.png',
-            '../image/html/Santander-Certificado-06.png',
-            '../image/html/Santander-Certificado-07.png',
-            '../image/html/Santander-Certificado-08.png',
-            '../image/html/Santander-Certificado-09.png',
-            '../image/html/Santander-Certificado-10.png',
-            '../image/html/Santander-Certificado-11.png',
-            '../image/html/Santander-Certificado-12.png',
-            '../image/html/Santander-Certificado-13.png',
+            './image/html/Santander-Certificado-01.png',
+            './image/html/Santander-Certificado-02.png',
+            './image/html/Santander-Certificado-03.png',
+            './image/html/Santander-Certificado-04.png',
+            './image/html/Santander-Certificado-05.png',
+            './image/html/Santander-Certificado-06.png',
+            './image/html/Santander-Certificado-07.png',
+            './image/html/Santander-Certificado-08.png',
+            './image/html/Santander-Certificado-09.png',
+            './image/html/Santander-Certificado-10.png',
+            './image/html/Santander-Certificado-11.png',
+            './image/html/Santander-Certificado-12.png',
+            './image/html/Santander-Certificado-13.png',
         ]
     }, 
     // Css
@@ -470,16 +470,16 @@ let certificado_santander = [
         certificado: 'css',
         icon: '../../../global/icon/css.png',
         img: [
-            '../image/css/Santander-Certificado-01.png',
-            '../image/css/Santander-Certificado-02.png',
-            '../image/css/Santander-Certificado-03.png',
-            '../image/css/Santander-Certificado-04.png',
-            '../image/css/Santander-Certificado-05.png',
-            '../image/css/Santander-Certificado-06.png',
-            '../image/css/Santander-Certificado-07.png',
-            '../image/css/Santander-Certificado-08.png',
-            '../image/css/Santander-Certificado-09.png',
-            '../image/css/Santander-Certificado-10.png',
+            './image/css/Santander-Certificado-01.png',
+            './image/css/Santander-Certificado-02.png',
+            './image/css/Santander-Certificado-03.png',
+            './image/css/Santander-Certificado-04.png',
+            './image/css/Santander-Certificado-05.png',
+            './image/css/Santander-Certificado-06.png',
+            './image/css/Santander-Certificado-07.png',
+            './image/css/Santander-Certificado-08.png',
+            './image/css/Santander-Certificado-09.png',
+            './image/css/Santander-Certificado-10.png',
         ]
     }, 
     // JavaScript
@@ -487,36 +487,44 @@ let certificado_santander = [
         certificado: 'js',
         icon: '../../../global/icon/js.png',
         img: [
-            '../image/javaScript/Santander-Certificado-01.png',
-            '../image/javaScript/Santander-Certificado-02.png',
-            '../image/javaScript/Santander-Certificado-03.png',
-            '../image/javaScript/Santander-Certificado-04.png',
-            '../image/javaScript/Santander-Certificado-05.png',
-            '../image/javaScript/Santander-Certificado-06.png',
-            '../image/javaScript/Santander-Certificado-07.png',
-            '../image/javaScript/Santander-Certificado-08.png',
-            '../image/javaScript/Santander-Certificado-09.png',
-            '../image/javaScript/Santander-Certificado-10.png',
-            '../image/javaScript/Santander-Certificado-11.png',
-            '../image/javaScript/Santander-Certificado-12.png',
-            '../image/javaScript/Santander-Certificado-13.png',
-            '../image/javaScript/Santander-Certificado-14.png',
-            '../image/javaScript/Santander-Certificado-15.png',
-            '../image/javaScript/Santander-Certificado-16.png',
-            '../image/javaScript/Santander-Certificado-17.png',
-            '../image/javaScript/Santander-Certificado-18.png',
-            '../image/javaScript/Santander-Certificado-19.png',
-            '../image/javaScript/Santander-Certificado-20.png',
-            '../image/javaScript/Santander-Certificado-21.png',
-            '../image/javaScript/Santander-Certificado-22.png',
-            '../image/javaScript/Santander-Certificado-23.png',
-            '../image/javaScript/Santander-Certificado-24.png',
-            '../image/javaScript/Santander-Certificado-25.png',
-            '../image/javaScript/Santander-Certificado-26.png',
-            '../image/javaScript/Santander-Certificado-27.png',
-            '../image/javaScript/Santander-Certificado-28.png',
+            './image/javaScript/Santander-Certificado-01.png',
+            './image/javaScript/Santander-Certificado-02.png',
+            './image/javaScript/Santander-Certificado-03.png',
+            './image/javaScript/Santander-Certificado-04.png',
+            './image/javaScript/Santander-Certificado-05.png',
+            './image/javaScript/Santander-Certificado-06.png',
+            './image/javaScript/Santander-Certificado-07.png',
+            './image/javaScript/Santander-Certificado-08.png',
+            './image/javaScript/Santander-Certificado-09.png',
+            './image/javaScript/Santander-Certificado-10.png',
+            './image/javaScript/Santander-Certificado-11.png',
+            './image/javaScript/Santander-Certificado-12.png',
+            './image/javaScript/Santander-Certificado-13.png',
+            './image/javaScript/Santander-Certificado-14.png',
+            './image/javaScript/Santander-Certificado-15.png',
+            './image/javaScript/Santander-Certificado-16.png',
+            './image/javaScript/Santander-Certificado-17.png',
+            './image/javaScript/Santander-Certificado-18.png',
+            './image/javaScript/Santander-Certificado-19.png',
+            './image/javaScript/Santander-Certificado-20.png',
+            './image/javaScript/Santander-Certificado-21.png',
+            './image/javaScript/Santander-Certificado-22.png',
+            './image/javaScript/Santander-Certificado-23.png',
+            './image/javaScript/Santander-Certificado-24.png',
+            './image/javaScript/Santander-Certificado-25.png',
+            './image/javaScript/Santander-Certificado-26.png',
+            './image/javaScript/Santander-Certificado-27.png',
+            './image/javaScript/Santander-Certificado-28.png',
         ]
-    }
+    },
+    // Conclusão
+    {
+        certificado: 'conclusão',
+        icon: './icons/concluido.png',
+        img: [
+            './image/conclusao/Santander-Certificado-01.png',
+        ]
+    }, 
 ]
 
 let imagensCertificados = [];
@@ -546,14 +554,14 @@ nextCertificados.addEventListener('click', () => {
     let atual = imagensCertificados[quantCertificado];
 
     // Atualiza imagem principal
-    certificado_img.src = `./image/${atual.nome}.png`;
+    certificado_img.src = `${atual.nome}`;
     iconCertificado.src = `${atual.icon}`;
 
     // Atualiza barra inferior com rotação
-    certificado_01.src = `./image/${imagensCertificados[(quantCertificado + 0) % total].nome}.png`;
-    certificado_02.src = `./image/${imagensCertificados[(quantCertificado + 1) % total].nome}.png`;
-    certificado_03.src = `./image/${imagensCertificados[(quantCertificado + 2) % total].nome}.png`;
-    certificado_04.src = `./image/${imagensCertificados[(quantCertificado + 3) % total].nome}.png`;
+    certificado_01.src = `${imagensCertificados[(quantCertificado + 0) % total].nome}`;
+    certificado_02.src = `${imagensCertificados[(quantCertificado + 1) % total].nome}`;
+    certificado_03.src = `${imagensCertificados[(quantCertificado + 2) % total].nome}`;
+    certificado_04.src = `${imagensCertificados[(quantCertificado + 3) % total].nome}`;
 });
 
 
@@ -563,12 +571,12 @@ backCertificados.addEventListener('click', () => {
     let atual = imagensCertificados[quantCertificado];
 
     // Atualiza imagem principal
-    certificado_img.src = `./image/${atual.nome}.png`;
+    certificado_img.src = `${atual.nome}`;
     iconCertificado.src = `${atual.icon}`;
 
     // Atualiza barra inferior com rotação
-    certificado_01.src = `./image/${imagensCertificados[(quantCertificado + 0) % total].nome}.png`;
-    certificado_02.src = `./image/${imagensCertificados[(quantCertificado + 1) % total].nome}.png`;
-    certificado_03.src = `./image/${imagensCertificados[(quantCertificado + 2) % total].nome}.png`;
-    certificado_04.src = `./image/${imagensCertificados[(quantCertificado + 3) % total].nome}.png`;
+    certificado_01.src = `${imagensCertificados[(quantCertificado + 0) % total].nome}`;
+    certificado_02.src = `${imagensCertificados[(quantCertificado + 1) % total].nome}`;
+    certificado_03.src = `${imagensCertificados[(quantCertificado + 2) % total].nome}`;
+    certificado_04.src = `${imagensCertificados[(quantCertificado + 3) % total].nome}`;
 });
