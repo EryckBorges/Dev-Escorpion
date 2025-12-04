@@ -1,3 +1,5 @@
+const pokopia = document.querySelectorAll('.pokopia');
+const zA = document.querySelectorAll('.z-a');
 const scarlet = document.querySelectorAll('.scarlet');
 const arceus = document.querySelectorAll('.arceus');
 const diamond = document.querySelectorAll('.diamond');
@@ -30,7 +32,6 @@ const videoPokemonMobile = document.querySelector('.gamesMobile video');
 
 const capaPokemon = document.querySelectorAll('.capaPokemon');
 
-
 let linkJogo;
 let gameDesc;
 
@@ -42,37 +43,37 @@ const eua = {
   contato: "Contact",
   sobre: "About",
   footerProject: 'Projects',
-use: 'Terms of Use',
-cookie: 'Cookie Policy',
-privacity: 'Privacy',
+  use: 'Terms of Use',
+  cookie: 'Cookie Policy',
+  privacity: 'Privacy',
   descSword: "A new generation of Pokémon is coming to the Nintendo Switch™. Choose between Grookey, Scorbunny, or Sobble and embark on a journey through the Galar region, facing Team Yell and uncovering the mysteries of the legendary Zacian and Zamazenta. Explore the Wild Area with free camera control and join cooperative Max Raid Battles against Dynamax Pokémon.",
   textHeader: "Here you will find a complete interactive Pokédex, where you can explore all Pokémon in detail, as well as access the collection of all games in the Pokémon franchise. Discover trivia, abilities, and much more!",
-  btnPokedex: "Pokédex",
   descPokemon: 'Pokémon is a franchise created by Satoshi Tajiri, where players capture, train, and battle with creatures called Pokémon. The goal is to complete the Pokédex and become a Pokémon Champion. Initially released as a game in 1996, the franchise includes TV shows, movies, and various products, making it one of the biggest media phenomena worldwide.',
-  titlePokedex: 'Interactive Pokédex',
-  descPokedex: 'The interactive Pokédex allows you to search and discover detailed information about each Pokémon, including types, abilities, evolutions, and stats. Find your favorite Pokémon and dive into the Pokémon universe like never before!',
+  descPokedex: 'Pokedados is a complete application that brings together all available information on every Pokémon ever released. Search and explore stats, evolutions, forms, shiny variations, descriptions, moves, and much more — all organized in a modern and intuitive Pokédex experience. The app also provides access to every Pokémon game, featuring trailers, detailed descriptions, official images, and direct links to purchase on both Nintendo and Google. The perfect platform for fans who want to dive deep into the Pokémon universe in one place.',
+  descPokopia: "Play as a Ditto transformed into a human-like form! Meet and befriend other Pokémon, build a life of your own, and work alongside Professor Tangrowth to create a city where everyone can live together. Learn moves from other Pokémon to shape the environment, such as Bulbasaur’s Leafage to make wild grass grow, and use special abilities like Lapras’s Surf to transform and explore the world around you.",
+  descZA: "Face real-time battles by commanding your Pokémon freely as you explore wild zones to catch and train your team before competing in the intense battle zones that appear every night. Mixing classic mechanics with modern touches, Pokémon Legends: Z-A delivers a dynamic experience for both new and veteran Trainers, bringing strategy, continuous action, and a new way to experience the Pokémon world.",
   descScarlet: 'Capture, battle, and train Pokémon in the Paldea region, a vast area full of lakes, towering peaks, deserts, villages, and expanding cities. Explore the open world at your own pace and travel across land, water, and air mounted on the legendary Pokémon that changes form (Koraidon in Pokémon Scarlet and Miraidon in Pokémon Violet). Choose between Sprigatito, Fuecoco, or Quaxly to be your first Pokémon partner before embarking on your journey through Paldea.',
-descArceus: 'Get ready for a new great Pokémon adventure in Pokémon™ Legends: Arceus, a completely new game from Game Freak that blends action and exploration with the RPG roots of the Pokémon series. Embark on research missions in the ancient Hisui region. Explore vast natural areas to capture wild Pokémon, learn their behavior, sneak up on them, and throw a well-aimed Poké Ball™.',
-descDiamond: 'Welcome to the Sinnoh region! Rich in nature and with the powerful Mount Coronet at its core, Sinnoh is a land of many myths passed down through generations. Choose Turtwig, Chimchar, or Piplup as your first Pokémon partner, and then embark on your journey to become the Pokémon League Champion. Along the way, you will encounter the mysterious Team Galactic and may come across the Legendary Pokémon Dialga.',
-descPikachu: "In Pokémon™: Let’s Go, Pikachu!, available on Nintendo Switch™, embark on an adventure with Pikachu to capture and collect Pokémon. Battle other Trainers, Gym Leaders, and the evil Team Rocket. Use the Joy-Con controller or Poké Ball™ Plus to catch Pokémon, or play in handheld mode. Connect to Pokémon™ GO to transfer Pokémon from the Kanto region!",
-descUltra: 'Embark on a new and exciting journey in the Alola region with Pokémon™ Ultra Sun and Ultra Moon for the Nintendo 3DS™! Discover an expanded story, new Pokémon, and alternate forms of the legendary Solgaleo and Lunala. Face the threat of Team Rainbow Rocket, use even more powerful Z-moves, and travel through Ultra Wormholes to find rare Pokémon. A grander adventure full of surprises awaits you!',
-descSun: 'Embark on a tropical adventure in the Alola region with Pokémon™ Sun and Moon for the Nintendo 3DS™! Explore lush islands, discover new Pokémon, and take on the Island Challenge instead of traditional Gym battles. Unravel the mysteries of the Legendary Pokémon Solgaleo and Lunala, experience the new Z-moves, and battle the enigmatic Team Skull. An innovative journey full of discoveries awaits you!',
-descOmega: 'Embark on an epic journey in the Hoenn region with Pokémon™ Omega Ruby for the Nintendo 3DS™! Relive the classic adventure with enhanced graphics, new Mega Evolutions, and Groudon\'s Primal Reversion. Battle Team Magma, customize your Super-Secret Base, and trade Pokémon online. An engaging experience for both new and veteran trainers!',
-descY: 'Explore the beautiful Kalos region in Pokémon™ X and Y for the Nintendo 3DS™! With fully 3D graphics, discover new Pokémon, challenge Gym Leaders, and experience the powerful Mega Evolutions. Customize your trainer like never before and embark on an epic journey alongside the legendary Xerneas or Yveltal. With new battle modes and online features, this adventure promises to be unique and full of surprises!',
-descBlack2: 'Return to the Unova region in Pokémon™ Black 2 for the Nintendo DS™ and discover an entirely new story! Two years after the events of Pokémon Black, explore new areas, battle the revamped Team Plasma, and uncover the mystery behind the legendary Kyurem Black. With new challenges, intense tournaments, and enhanced gameplay, this sequel offers one of the most exciting experiences in the Pokémon series!',
-descWhite: 'Explore the Unova region in Pokémon™ Black for the Nintendo DS™ and embark on a journey full of new challenges! Discover over 150 new Pokémon, face the mysterious Team Plasma, and unravel the secrets of the legendary Reshiram. With an engaging story, dynamic battles, and innovations such as Triple Battles, this adventure promises to take your Pokémon experience to a whole new level!',
-descSilver: 'Relive the classic journey in Johto in Pokémon™ SoulSilver for the Nintendo DS™! Explore nostalgic cities and routes with enhanced graphics, capture and train Pokémon as one walks by your side, and face the Elite Four to become the Champion. Challenge Gym Leaders both in Johto and Kanto, discover the secrets of the legendary Lugia, and enjoy new features like the Pokéwalker. An epic adventure awaits you!',
-descPlatinum: 'Relive the classic journey in Johto in Pokémon™ SoulSilver for the Nintendo DS™! Explore nostalgic cities and routes with enhanced graphics, capture and train Pokémon as one walks by your side, and face the Elite Four to become the Champion. Challenge Gym Leaders both in Johto and Kanto, discover the secrets of the legendary Lugia, and enjoy new features like the Pokéwalker. An epic adventure awaits you!',
-descPearl: 'Adventures await in the Sinnoh region in Pokémon™ Pearl for the Nintendo DS™! Explore vast territories, capture new Pokémon, and challenge Gym Leaders to become the Champion. Battle Team Galactic and uncover the secrets of the legendary Palkia, guardian of space. With intense battles, new mechanics, and an engaging story, this journey through the Sinnoh region promises to be unforgettable!',
-descEsmerald: 'Dive into the Hoenn region in Pokémon™ Emerald for the Nintendo DS™ and get ready for a journey full of surprises! Battle the powerful leaders of Team Aqua and Team Magma while uncovering the secrets of Kyogre and Groudon in their Primal forms. The Battle Frontier offers exclusive challenges and epic battles as you aim to become the Champion of Hoenn. A unique adventure with many mysteries and Pokémon to capture!',
-descFireRed: 'Embark on a nostalgic adventure in the Kanto region in Pokémon™ FireRed for the Game Boy Advance! Relive the 1996 classic with enhanced graphics and modern features while capturing, training, and battling to become the best Pokémon Trainer. Challenge Gym Leaders, face off against Team Rocket, and uncover the secrets of the legendary Mewtwo. With new challenges and an updated experience, this journey will captivate both newcomers and longtime fans!',
-descRuby: 'Get ready for a new and exciting journey in the Hoenn region with Pokémon™ Ruby for the Game Boy Advance! Embark on an adventure full of discoveries as you explore vast routes, cities, and mysterious locations. Capture new Pokémon, challenge Gym Leaders, and face Team Aqua, who threatens to dominate the waters of Hoenn. With incredible graphics for its time and more dynamic battles, Pokémon Ruby takes your Pokémon experience to a new level!',
-descCristal: 'In Pokémon™ Crystal for the Game Boy Color, a new era of adventure begins in the Johto region! Explore a land full of mysteries, capture new Pokémon, and battle Team Rocket in their attempt to dominate the Pokémon world. For the first time, you can choose your character\'s gender, customizing your journey. Plus, the legendary Suicune awaits to be discovered on its epic mission. With vibrant graphics and innovative gameplay, Pokémon Crystal is a unique and unforgettable experience!',
-descGold: 'In Pokémon™ Gold for the Game Boy Color, embark on an epic journey through the Johto region! Capture new Pokémon, face challenging Gym Leaders, and unravel the mysteries behind the legendary Ho-Oh and Lugia. Venture through vibrant routes and cities, explore the famous Bellsprout Tower, and battle Team Rocket. With enhanced graphics and an engaging gaming experience, Pokémon Gold takes you on an unforgettable journey full of discoveries and exciting battles!',
-descYellow: 'In Pokémon™ Yellow for the Game Boy, the adventure takes a new perspective! Follow Pikachu as your faithful companion on its journey, who refuses to stay in its Poké Ball, and explore the Kanto region in search of becoming the greatest trainer of all. With a story closer to the anime, face challenging Gym Leaders, battle Team Rocket, and capture legendary Pokémon like Zapdos, Moltres, and Articuno. Pokémon Yellow brings a charming and unforgettable experience for fans of the series!',
-descBlue: 'In Pokémon™ Blue for the Game Boy, begin your journey in the classic Kanto region! Capture, train, and battle with over 150 Pokémon while facing Gym Leaders and challenging the Elite Four. Battle Team Rocket and do everything you can to become the Pokémon League Champion. With groundbreaking graphics for its time and an engaging gaming experience, Pokémon Blue offers a unique and challenging adventure for all fans of the series!',
-descRed: 'In Pokémon™ Red for the Game Boy, the classic adventure begins in the Kanto region! Capture, train, and battle with a wide range of Pokémon while facing Gym Leaders and battling Team Rocket. Face powerful trainers and aim to become the Pokémon League Champion. With captivating gameplay and groundbreaking graphics for its time, Pokémon Red is an epic journey that defined the series and captivated millions of fans worldwide!',
-toastAlertDesenvolvi: "In Development",
+  descArceus: 'Get ready for a new great Pokémon adventure in Pokémon™ Legends: Arceus, a completely new game from Game Freak that blends action and exploration with the RPG roots of the Pokémon series. Embark on research missions in the ancient Hisui region. Explore vast natural areas to capture wild Pokémon, learn their behavior, sneak up on them, and throw a well-aimed Poké Ball™.',
+  descDiamond: 'Welcome to the Sinnoh region! Rich in nature and with the powerful Mount Coronet at its core, Sinnoh is a land of many myths passed down through generations. Choose Turtwig, Chimchar, or Piplup as your first Pokémon partner, and then embark on your journey to become the Pokémon League Champion. Along the way, you will encounter the mysterious Team Galactic and may come across the Legendary Pokémon Dialga.',
+  descPikachu: "In Pokémon™: Let’s Go, Pikachu!, available on Nintendo Switch™, embark on an adventure with Pikachu to capture and collect Pokémon. Battle other Trainers, Gym Leaders, and the evil Team Rocket. Use the Joy-Con controller or Poké Ball™ Plus to catch Pokémon, or play in handheld mode. Connect to Pokémon™ GO to transfer Pokémon from the Kanto region!",
+  descUltra: 'Embark on a new and exciting journey in the Alola region with Pokémon™ Ultra Sun and Ultra Moon for the Nintendo 3DS™! Discover an expanded story, new Pokémon, and alternate forms of the legendary Solgaleo and Lunala. Face the threat of Team Rainbow Rocket, use even more powerful Z-moves, and travel through Ultra Wormholes to find rare Pokémon. A grander adventure full of surprises awaits you!',
+  descSun: 'Embark on a tropical adventure in the Alola region with Pokémon™ Sun and Moon for the Nintendo 3DS™! Explore lush islands, discover new Pokémon, and take on the Island Challenge instead of traditional Gym battles. Unravel the mysteries of the Legendary Pokémon Solgaleo and Lunala, experience the new Z-moves, and battle the enigmatic Team Skull. An innovative journey full of discoveries awaits you!',
+  descOmega: 'Embark on an epic journey in the Hoenn region with Pokémon™ Omega Ruby for the Nintendo 3DS™! Relive the classic adventure with enhanced graphics, new Mega Evolutions, and Groudon\'s Primal Reversion. Battle Team Magma, customize your Super-Secret Base, and trade Pokémon online. An engaging experience for both new and veteran trainers!',
+  descY: 'Explore the beautiful Kalos region in Pokémon™ X and Y for the Nintendo 3DS™! With fully 3D graphics, discover new Pokémon, challenge Gym Leaders, and experience the powerful Mega Evolutions. Customize your trainer like never before and embark on an epic journey alongside the legendary Xerneas or Yveltal. With new battle modes and online features, this adventure promises to be unique and full of surprises!',
+  descBlack2: 'Return to the Unova region in Pokémon™ Black 2 for the Nintendo DS™ and discover an entirely new story! Two years after the events of Pokémon Black, explore new areas, battle the revamped Team Plasma, and uncover the mystery behind the legendary Kyurem Black. With new challenges, intense tournaments, and enhanced gameplay, this sequel offers one of the most exciting experiences in the Pokémon series!',
+  descWhite: 'Explore the Unova region in Pokémon™ Black for the Nintendo DS™ and embark on a journey full of new challenges! Discover over 150 new Pokémon, face the mysterious Team Plasma, and unravel the secrets of the legendary Reshiram. With an engaging story, dynamic battles, and innovations such as Triple Battles, this adventure promises to take your Pokémon experience to a whole new level!',
+  descSilver: 'Relive the classic journey in Johto in Pokémon™ SoulSilver for the Nintendo DS™! Explore nostalgic cities and routes with enhanced graphics, capture and train Pokémon as one walks by your side, and face the Elite Four to become the Champion. Challenge Gym Leaders both in Johto and Kanto, discover the secrets of the legendary Lugia, and enjoy new features like the Pokéwalker. An epic adventure awaits you!',
+  descPlatinum: 'Relive the classic journey in Johto in Pokémon™ SoulSilver for the Nintendo DS™! Explore nostalgic cities and routes with enhanced graphics, capture and train Pokémon as one walks by your side, and face the Elite Four to become the Champion. Challenge Gym Leaders both in Johto and Kanto, discover the secrets of the legendary Lugia, and enjoy new features like the Pokéwalker. An epic adventure awaits you!',
+  descPearl: 'Adventures await in the Sinnoh region in Pokémon™ Pearl for the Nintendo DS™! Explore vast territories, capture new Pokémon, and challenge Gym Leaders to become the Champion. Battle Team Galactic and uncover the secrets of the legendary Palkia, guardian of space. With intense battles, new mechanics, and an engaging story, this journey through the Sinnoh region promises to be unforgettable!',
+  descEsmerald: 'Dive into the Hoenn region in Pokémon™ Emerald for the Nintendo DS™ and get ready for a journey full of surprises! Battle the powerful leaders of Team Aqua and Team Magma while uncovering the secrets of Kyogre and Groudon in their Primal forms. The Battle Frontier offers exclusive challenges and epic battles as you aim to become the Champion of Hoenn. A unique adventure with many mysteries and Pokémon to capture!',
+  descFireRed: 'Embark on a nostalgic adventure in the Kanto region in Pokémon™ FireRed for the Game Boy Advance! Relive the 1996 classic with enhanced graphics and modern features while capturing, training, and battling to become the best Pokémon Trainer. Challenge Gym Leaders, face off against Team Rocket, and uncover the secrets of the legendary Mewtwo. With new challenges and an updated experience, this journey will captivate both newcomers and longtime fans!',
+  descRuby: 'Get ready for a new and exciting journey in the Hoenn region with Pokémon™ Ruby for the Game Boy Advance! Embark on an adventure full of discoveries as you explore vast routes, cities, and mysterious locations. Capture new Pokémon, challenge Gym Leaders, and face Team Aqua, who threatens to dominate the waters of Hoenn. With incredible graphics for its time and more dynamic battles, Pokémon Ruby takes your Pokémon experience to a new level!',
+  descCristal: 'In Pokémon™ Crystal for the Game Boy Color, a new era of adventure begins in the Johto region! Explore a land full of mysteries, capture new Pokémon, and battle Team Rocket in their attempt to dominate the Pokémon world. For the first time, you can choose your character\'s gender, customizing your journey. Plus, the legendary Suicune awaits to be discovered on its epic mission. With vibrant graphics and innovative gameplay, Pokémon Crystal is a unique and unforgettable experience!',
+  descGold: 'In Pokémon™ Gold for the Game Boy Color, embark on an epic journey through the Johto region! Capture new Pokémon, face challenging Gym Leaders, and unravel the mysteries behind the legendary Ho-Oh and Lugia. Venture through vibrant routes and cities, explore the famous Bellsprout Tower, and battle Team Rocket. With enhanced graphics and an engaging gaming experience, Pokémon Gold takes you on an unforgettable journey full of discoveries and exciting battles!',
+  descYellow: 'In Pokémon™ Yellow for the Game Boy, the adventure takes a new perspective! Follow Pikachu as your faithful companion on its journey, who refuses to stay in its Poké Ball, and explore the Kanto region in search of becoming the greatest trainer of all. With a story closer to the anime, face challenging Gym Leaders, battle Team Rocket, and capture legendary Pokémon like Zapdos, Moltres, and Articuno. Pokémon Yellow brings a charming and unforgettable experience for fans of the series!',
+  descBlue: 'In Pokémon™ Blue for the Game Boy, begin your journey in the classic Kanto region! Capture, train, and battle with over 150 Pokémon while facing Gym Leaders and challenging the Elite Four. Battle Team Rocket and do everything you can to become the Pokémon League Champion. With groundbreaking graphics for its time and an engaging gaming experience, Pokémon Blue offers a unique and challenging adventure for all fans of the series!',
+  descRed: 'In Pokémon™ Red for the Game Boy, the classic adventure begins in the Kanto region! Capture, train, and battle with a wide range of Pokémon while facing Gym Leaders and battling Team Rocket. Face powerful trainers and aim to become the Pokémon League Champion. With captivating gameplay and groundbreaking graphics for its time, Pokémon Red is an epic journey that defined the series and captivated millions of fans worldwide!',
+  toastAlertDesenvolvi: "In Development",
 }
 
 const brasil = {
@@ -87,16 +88,16 @@ const brasil = {
   cookie: 'Politica de Cookies',
   privacity: 'Privacidade',
   textHeader: 'Aqui você encontrará uma Pokédex interativa completa, onde poderá explorar todos os Pokémon em detalhes, além de acessar a coleção de todos os jogos da franquia Pokémon. Descubra curiosidades, habilidades e muito mais!',
-  btnPokedex: 'Pokedex',
-  titlePokedex: 'Pokédex Interativa',
-  descPokedex: 'A Pokédex interativa permite que você pesquise e descubra informações detalhadas sobre cada Pokémon, incluindo tipos, habilidades, evoluções e estatísticas. Encontre seu Pokémon favorito e mergulhe no universo Pokémon como nunca antes!',
+  descPokedex: 'O Pokedados é um aplicativo completo que reúne todas as informações sobre cada Pokémon já lançado. Pesquise e explore status, evoluções, formas, versões shiny, descrições, ataques e muito mais — tudo organizado como uma Pokédex moderna e intuitiva. Além disso, o app oferece acesso a todos os jogos da franquia Pokémon, incluindo trailers, descrições detalhadas, imagens oficiais e links diretos para compra tanto na Nintendo quanto no Google. Uma plataforma ideal para fãs que desejam conhecer profundamente o universo Pokémon em um só lugar.',
   descPokemon: 'Pokémon é uma franquia criada por Satoshi Tajiri, onde jogadores capturam, treinam e batalham com criaturas chamadas Pokémon. O objetivo é completar a Pokédex e se tornar um Campeão Pokémon. Lançada inicialmente como um jogo em 1996, a franquia inclui desenhos, filmes e produtos diversos, sendo um dos maiores fenômenos de mídia mundial.',
+  descPokopia: "Jogue como um Ditto que se transformou para parecer com um humano! Encontre e faça amizade com outros Pokémon, construa uma vida para si e trabalhe em equipe com o Professor Tangrowth para criar uma cidade onde todos possam viver. Aprenda movimentos de outros Pokémon para modificar o cenário, como o Leafage do Bulbasaur para fazer a wild grass crescer, e use habilidades especiais como o Surf do Lapras para transformar e explorar o mundo ao seu redor.",
+  descZA: "Enfrente batalhas em tempo real comandando seus Pokémon livremente enquanto explora wild zones para capturar e treinar sua equipe antes de competir nas intensas battle zones que surgem todas as noites. Com uma combinação de mecânicas clássicas e toques modernos, Pokémon Legends: Z-A oferece uma experiência dinâmica para novos e veteranos Treinadores, trazendo estratégia, ação contínua e uma nova forma de viver o mundo Pokémon.",
   descScarlet: 'Capture, lute e treine Pokémon na região de Paldea, uma vasta área cheia de lagos, picos imponentes, desertos, vilarejos e cidades em expansão. Explore o mundo aberto no seu próprio ritmo e atravesse terra, água e ar montado no Pokémon lendário que muda de forma (Koraidon no Pokémon Scarlet e Miraidon no Pokémon Violet). Escolha entre Sprigatito, Fuecoco ou Quaxly para ser seu primeiro parceiro Pokémon antes de partir em sua jornada por Paldea.',
   descArceus: 'Prepare-se para uma nova grande aventura Pokémon em Pokémon™ Legends: Arceus, um jogo totalmente novo da Game Freak que combina ação e exploração com as raízes de RPG da série Pokémon. Embarque em missões de pesquisa na antiga região de Hisui. Explore extensões naturais para capturar Pokémon selvagens, aprendendo seu comportamento, aproximando-se sorrateiramente e jogando uma Poké Ball™ bem direcionada.',
   descDiamond: 'Bem-vindo à região de Sinnoh! Rica em natureza e com o poderoso Mount Coronet em seu núcleo, Sinnoh é uma terra de muitos mitos passados de geração em geração. Você poderá escolher Turtwig, Chimchar ou Piplup para ser seu primeiro parceiro Pokémon e, em seguida, partir em sua jornada para se tornar o campeão da Pokémon League. Ao longo do caminho, você irá se deparar com a misteriosa organização Team Galactic e poderá encontrar o Legendary Pokémon Dialga.',
-   descSword: "Uma nova geração Pokémon chega ao Nintendo Switch™. Escolha entre Grookey, Scorbunny ou Sobble e embarque na jornada pela região de Galar, enfrentando a Equipe Yell e desvendando os mistérios dos lendários Zacian e Zamazenta. Explore a Área Wild com câmera livre e participe de batalhas cooperativas Max Raid contra Pokémon Dynamax.",
+  descSword: "Uma nova geração Pokémon chega ao Nintendo Switch™. Escolha entre Grookey, Scorbunny ou Sobble e embarque na jornada pela região de Galar, enfrentando a Equipe Yell e desvendando os mistérios dos lendários Zacian e Zamazenta. Explore a Área Wild com câmera livre e participe de batalhas cooperativas Max Raid contra Pokémon Dynamax.",
   descPikachu: "Em Pokémon™: Let’s Go, Pikachu!, disponível para Nintendo Switch™, aventure-se ao lado de Pikachu para capturar e colecionar Pokémon. Enfrente outros Treinadores, Líderes de Ginásio e a Equipe Rocket. Use o controle Joy-Con ou Poké Ball™ Plus para capturar Pokémon, ou jogue no modo portátil. Conecte-se ao Pokémon™ GO para transferir Pokémon da região de Kanto!",
-   descUltra: 'Explore uma nova e emocionante jornada na região de Alola com Pokémon™ Ultra Sun and Ultra Moon para o Nintendo 3DS™! Descubra uma história expandida, novos Pokémon e formas alternativas dos lendários Solgaleo e Lunala. Enfrente a ameaça da Equipe Rainbow Rocket, use movimentos Z ainda mais poderosos e viaje por Ultra Wormholes para encontrar Pokémon raros. Uma aventura ainda mais grandiosa e repleta de surpresas espera por você!',
+  descUltra: 'Explore uma nova e emocionante jornada na região de Alola com Pokémon™ Ultra Sun and Ultra Moon para o Nintendo 3DS™! Descubra uma história expandida, novos Pokémon e formas alternativas dos lendários Solgaleo e Lunala. Enfrente a ameaça da Equipe Rainbow Rocket, use movimentos Z ainda mais poderosos e viaje por Ultra Wormholes para encontrar Pokémon raros. Uma aventura ainda mais grandiosa e repleta de surpresas espera por você!',
   descSun: 'Embarque em uma aventura tropical na região de Alola com Pokémon™ Sun and Moon para o Nintendo 3DS™! Explore ilhas exuberantes, descubra novos Pokémon e enfrente o Desafio da Ilha em vez dos tradicionais ginásios. Desvende os mistérios dos Pokémon Lendários Solgaleo e Lunala, experimente os novos movimentos Z e enfrente a enigmática Equipe Skull. Uma jornada inovadora e repleta de descobertas aguarda você!',
   descOmega: 'Embarque em uma jornada épica na região de Hoenn com Pokémon™ Omega Ruby para o Nintendo 3DS™! Reviva a clássica aventura com gráficos aprimorados, novas Mega Evoluções e a Primal Reversion de Groudon. Enfrente a Equipe Magma, personalize sua Super-Secret Base e troque Pokémon online. Uma experiência envolvente para novos e veteranos treinadores!',
   descY: 'Explore a bela região de Kalos em Pokémon™ X and Y para o Nintendo 3DS™! Com gráficos totalmente em 3D, descubra novos Pokémon, desafie Líderes de Ginásio e experimente as poderosas Mega Evoluções. Personalize seu treinador como nunca antes e embarque em uma jornada épica ao lado do lendário Xerneas ou Yveltal. Com novos modos de batalha e recursos online, esta aventura promete ser única e cheia de surpresas!',
@@ -124,37 +125,37 @@ const spain = {
   contato: "Contacto",
   sobre: "En",
   footerProject: 'Proyectos',
-use: 'Términos de Uso',
-cookie: 'Política de Cookies',
-privacity: 'Privacidad',
+  use: 'Términos de Uso',
+  cookie: 'Política de Cookies',
+  privacity: 'Privacidad',
   textHeader: "Aquí encontrarás una Pokédex interactiva completa, donde podrás explorar todos los Pokémon en detalle, además de acceder a la colección de todos los juegos de la franquicia Pokémon. ¡Descubre curiosidades, habilidades y mucho más!",
-  btnPokedex: "Pokédex",
-  titlePokedex: 'Pokédex Interactiva',
-  descPokedex: 'La Pokédex interactiva te permite buscar y descubrir información detallada sobre cada Pokémon, incluyendo tipos, habilidades, evoluciones y estadísticas. ¡Encuentra tu Pokémon favorito y sumérgete en el universo Pokémon como nunca antes!',
+  descPokedex: 'Pokedados es una aplicación completa que reúne toda la información disponible sobre cada Pokémon lanzado. Busca y explora estadísticas, evoluciones, formas, variantes shiny, descripciones, movimientos y mucho más, todo organizado en una Pokédex moderna e intuitiva. Además, la aplicación ofrece acceso a todos los juegos de Pokémon, con tráilers, descripciones detalladas, imágenes oficiales y enlaces directos para comprar tanto en Nintendo como en Google. La plataforma ideal para los fans que desean conocer a fondo el mundo Pokémon en un solo lugar.',
   descPokemon: 'Pokémon es una franquicia creada por Satoshi Tajiri, donde los jugadores capturan, entrenan y luchan con criaturas llamadas Pokémon. El objetivo es completar la Pokédex y convertirse en un Campeón Pokémon. Originalmente lanzado como un juego en 1996, la franquicia incluye programas de televisión, películas y varios productos, convirtiéndola en uno de los fenómenos mediáticos más grandes a nivel mundial.',
+  descPokopia: "¡Juega como un Ditto que se ha transformado para parecer un humano! Conoce y haz amistad con otros Pokémon, crea una vida propia y trabaja junto al Profesor Tangrowth para construir una ciudad donde todos puedan vivir. Aprende movimientos de otros Pokémon para modificar el entorno, como el Leafage de Bulbasaur para hacer crecer la wild grass, y usa habilidades especiales como el Surf de Lapras para transformar y explorar el mundo a tu alrededor.",
+  descZA: "Enfrenta combates en tiempo real comandando a tus Pokémon libremente mientras exploras wild zones para capturar y entrenar a tu equipo antes de competir en las intensas battle zones que aparecen cada noche. Con una mezcla de mecánicas clásicas y toques modernos, Pokémon Legends: Z-A ofrece una experiencia dinámica para Entrenadores nuevos y veteranos, aportando estrategia, acción continua y una nueva manera de vivir el mundo Pokémon.",
   descScarlet: 'Captura, batalla y entrena Pokémon en la región de Paldea, una vasta área llena de lagos, picos imponentes, desiertos, aldeas y ciudades en expansión. Explora el mundo abierto a tu propio ritmo y viaja por tierra, agua y aire montado en el Pokémon legendario que cambia de forma (Koraidon en Pokémon Scarlet y Miraidon en Pokémon Violet). Elige entre Sprigatito, Fuecoco o Quaxly como tu primer compañero Pokémon antes de embarcarte en tu viaje por Paldea.',
-descArceus: 'Prepárate para una nueva gran aventura Pokémon en Pokémon™ Legends: Arceus, un juego completamente nuevo de Game Freak que combina acción y exploración con las raíces RPG de la serie Pokémon. Emprende misiones de investigación en la antigua región de Hisui. Explora vastas áreas naturales para capturar Pokémon salvajes, aprender su comportamiento, acercarte sigilosamente a ellos y lanzar una Poké Ball bien dirigida.',
-descDiamond: '¡Bienvenido a la región de Sinnoh! Rica en naturaleza y con la poderosa Montaña Coronet en su núcleo, Sinnoh es una tierra llena de muchos mitos transmitidos de generación en generación. Elige Turtwig, Chimchar o Piplup como tu primer compañero Pokémon y luego embárcate en tu viaje para convertirte en el Campeón de la Liga Pokémon. En el camino, te encontrarás con el misterioso Team Galactic y podrías encontrar a los Pokémon legendarios Dialga.',
-descSword: "Una nueva generación de Pokémon llega a la consola Nintendo Switch™. Elige entre Grookey, Scorbunny o Sobble y embarca en un viaje por la región de Galar, enfrentando a Team Yell y desentrañando los misterios de los legendarios Zacian y Zamazenta. Explora la Zona Wild con control libre de la cámara y únete a las Batallas de Incursión Max cooperativas contra Pokémon Dynamax.",
-descPikachu: "¡En Pokémon™: Let’s Go, Pikachu!, disponible en Nintendo Switch™, embárcate en una aventura con Pikachu para capturar y coleccionar Pokémon. Lucha contra otros entrenadores, líderes de gimnasio y el malvado equipo Rocket. Usa el controlador Joy-Con o el Poké Ball™ Plus para atrapar Pokémon, o juega en modo portátil. ¡Conéctate con Pokémon™ GO para transferir Pokémon de la región de Kanto!",
-descUltra: '¡Embárcate en una nueva y emocionante aventura en la región de Alola con Pokémon™ Ultra Sun y Ultra Moon para Nintendo 3DS™! Descubre una historia expandida, nuevos Pokémon y formas alternas de los legendarios Solgaleo y Lunala. Enfréntate a la amenaza del Team Rainbow Rocket, usa movimientos Z aún más poderosos y viaja a través de los Ultra Wormholes para encontrar Pokémon raros. ¡Te espera una aventura grandiosa llena de sorpresas!',
-descSun: 'Embárcate en una aventura tropical en la región de Alola con Pokémon™ Sun y Moon para Nintendo 3DS™! Explora islas exuberantes, descubre nuevos Pokémon y realiza el Island Challenge en lugar de los tradicionales combates de Gimnasio. Desvela los misterios de los Pokémon legendarios Solgaleo y Lunala, experimenta los nuevos movimientos Z y lucha contra el enigmático Team Skull. ¡Una aventura innovadora llena de descubrimientos te espera!',
-descOmega: 'Embárcate en un viaje épico en la región de Hoenn con Pokémon™ Omega Ruby para Nintendo 3DS™! Revive la aventura clásica con gráficos mejorados, nuevas Mega Evoluciones y la Reversión Primal de Groudon. Lucha contra el Team Magma, personaliza tu Super-Secret Base y comercia Pokémon en línea. ¡Una experiencia cautivadora tanto para nuevos como veteranos entrenadores!',
-descY: 'Explora la hermosa región de Kalos en Pokémon™ X y Y para Nintendo 3DS™! Con gráficos completamente en 3D, descubre nuevos Pokémon, desafía a los Líderes de Gimnasio y experimenta las poderosas Mega Evoluciones. Personaliza a tu entrenador como nunca antes y emprende una aventura épica junto a los legendarios Xerneas o Yveltal. ¡Con nuevos modos de batalla y características en línea, esta aventura promete ser única y llena de sorpresas!',
-descBlack2: '¡Regresa a la región de Unova en Pokémon™ Black 2 para Nintendo DS™ y descubre una historia completamente nueva! Dos años después de los eventos de Pokémon Black, explora nuevas áreas, enfrenta al renovado Team Plasma y desvela el misterio detrás del legendario Kyurem Black. Con nuevos desafíos, intensos torneos y un gameplay mejorado, ¡esta secuela ofrece una de las experiencias más emocionantes de la serie Pokémon!',
-descWhite: 'Explora la región de Unova en Pokémon™ Black para Nintendo DS™ y emprende un viaje lleno de nuevos desafíos. Descubre más de 150 nuevos Pokémon, enfrenta al misterioso Team Plasma y desvela los secretos del legendario Reshiram. Con una historia cautivadora, batallas dinámicas e innovaciones como las Batallas Triples, ¡esta aventura te llevará la experiencia Pokémon a un nuevo nivel!',
-descSilver: 'Revive la clásica aventura en Johto en Pokémon™ SoulSilver para Nintendo DS™! Explora ciudades y rutas nostálgicas con gráficos mejorados, captura y entrena Pokémon mientras uno camina a tu lado, y enfrenta a la Elite Four para convertirte en el Campeón. Desafía a los Líderes de Gimnasio tanto en Johto como en Kanto, descubre los secretos del legendario Lugia y disfruta de nuevas características como el Pokéwalker. ¡Una aventura épica te espera!',
-descPlatinum: 'Revive la clásica aventura en Johto en Pokémon™ SoulSilver para Nintendo DS™! Explora ciudades y rutas nostálgicas con gráficos mejorados, captura y entrena Pokémon mientras uno camina a tu lado, y enfrenta a la Elite Four para convertirte en el Campeón. Desafía a los Líderes de Gimnasio tanto en Johto como en Kanto, descubre los secretos del legendario Lugia y disfruta de nuevas características como el Pokéwalker. ¡Una aventura épica te espera!',
-descPearl: '¡Las aventuras esperan en la región de Sinnoh en Pokémon™ Pearl para Nintendo DS™! Explora vastos territorios, captura nuevos Pokémon y desafía a los Líderes de Gimnasio para convertirte en el Campeón. Enfréntate al Team Galactic y desvela los secretos del legendario Palkia, guardián del espacio. Con intensas batallas, nuevas mecánicas y una historia cautivadora, ¡este viaje por la región de Sinnoh promete ser inolvidable!',
-descEsmerald: 'Sumérgete en la región de Hoenn en Pokémon™ Emerald para Nintendo DS™ y prepárate para un viaje lleno de sorpresas. Enfréntate a los poderosos líderes del Team Aqua y Team Magma mientras desvelas los secretos de Kyogre y Groudon en sus formas Primal. El Battle Frontier ofrece desafíos exclusivos y épicas batallas mientras aspiras a convertirte en el Campeón de Hoenn. ¡Una aventura única con muchos misterios y Pokémon por capturar!',
-descFireRed: 'Embárcate en una aventura nostálgica en la región de Kanto en Pokémon™ FireRed para Game Boy Advance. Revive el clásico de 1996 con gráficos mejorados y características modernas mientras capturas, entrenas y batallas para convertirte en el mejor Entrenador Pokémon. Desafía a los Líderes de Gimnasio, enfrenta al Team Rocket y descubre los secretos del legendario Mewtwo. Con nuevos desafíos y una experiencia actualizada, ¡este viaje cautivará tanto a los nuevos como a los viejos fanáticos!',
-descRuby: '¡Prepárate para un nuevo y emocionante viaje en la región de Hoenn con Pokémon™ Ruby para Game Boy Advance! Embárcate en una aventura llena de descubrimientos mientras exploras vastas rutas, ciudades y ubicaciones misteriosas. Captura nuevos Pokémon, desafía a los Líderes de Gimnasio y enfrenta al Team Aqua, que amenaza con dominar las aguas de Hoenn. Con gráficos increíbles para su época y batallas más dinámicas, ¡Pokémon Ruby lleva tu experiencia Pokémon a un nuevo nivel!',
-descCristal: 'En Pokémon™ Crystal para Game Boy Color, comienza una nueva era de aventura en la región de Johto. Explora una tierra llena de misterios, captura nuevos Pokémon y combate contra el Team Rocket en su intento de dominar el mundo Pokémon. Por primera vez, puedes elegir el género de tu personaje, personalizando tu viaje. Además, el legendario Suicune te espera para ser descubierto en su misión épica. Con gráficos vibrantes y un gameplay innovador, Pokémon Crystal es una experiencia única e inolvidable.',
-descGold: 'En Pokémon™ Gold para Game Boy Color, emprende un viaje épico a través de la región de Johto. Captura nuevos Pokémon, enfrenta desafiantes Líderes de Gimnasio y desvela los secretos detrás de los legendarios Ho-Oh y Lugia. Viaja por rutas y ciudades vibrantes, explora la famosa Bellsprout Tower y enfrenta al Team Rocket. Con gráficos mejorados y una experiencia de juego cautivadora, Pokémon Gold te lleva a un viaje inolvidable lleno de descubrimientos y batallas emocionantes.',
-descYellow: 'En Pokémon™ Yellow para Game Boy, ¡la aventura toma una nueva perspectiva! Sigue a Pikachu como tu fiel compañero en su viaje, quien se niega a permanecer dentro de su Poké Ball, y explora la región de Kanto en busca de convertirte en el mejor entrenador de todos. Con una historia más cercana al anime, enfréntate a desafiantes Líderes de Gimnasio, combate contra el Team Rocket y captura Pokémon legendarios como Zapdos, Moltres y Articuno. Pokémon Yellow trae una experiencia encantadora e inolvidable para los fanáticos de la serie.',
-descBlue: 'En Pokémon™ Blue para Game Boy, comienza tu viaje en la clásica región de Kanto. Captura, entrena y combate con más de 150 Pokémon mientras enfrentas a los Líderes de Gimnasio y desafías a la Elite Four. Combate contra el Team Rocket y haz todo lo posible por convertirte en el Campeón de la Liga Pokémon. Con gráficos innovadores para su época y una experiencia de juego cautivadora, Pokémon Blue ofrece una aventura única y desafiante para todos los fanáticos de la serie.',
-descRed: 'En Pokémon™ Red para Game Boy, ¡comienza la aventura clásica en la región de Kanto! Captura, entrena y combate con una amplia gama de Pokémon mientras enfrentas a los Líderes de Gimnasio y combates contra el Team Rocket. Enfréntate a entrenadores poderosos y aspira a convertirte en el Campeón de la Liga Pokémon. Con jugabilidad cautivadora y gráficos innovadores para su época, Pokémon Red es un viaje épico que definió la serie y cautivó a millones de fanáticos en todo el mundo.',
-toastAlertDesenvolvi: "En Desarrollo",
+  descArceus: 'Prepárate para una nueva gran aventura Pokémon en Pokémon™ Legends: Arceus, un juego completamente nuevo de Game Freak que combina acción y exploración con las raíces RPG de la serie Pokémon. Emprende misiones de investigación en la antigua región de Hisui. Explora vastas áreas naturales para capturar Pokémon salvajes, aprender su comportamiento, acercarte sigilosamente a ellos y lanzar una Poké Ball bien dirigida.',
+  descDiamond: '¡Bienvenido a la región de Sinnoh! Rica en naturaleza y con la poderosa Montaña Coronet en su núcleo, Sinnoh es una tierra llena de muchos mitos transmitidos de generación en generación. Elige Turtwig, Chimchar o Piplup como tu primer compañero Pokémon y luego embárcate en tu viaje para convertirte en el Campeón de la Liga Pokémon. En el camino, te encontrarás con el misterioso Team Galactic y podrías encontrar a los Pokémon legendarios Dialga.',
+  descSword: "Una nueva generación de Pokémon llega a la consola Nintendo Switch™. Elige entre Grookey, Scorbunny o Sobble y embarca en un viaje por la región de Galar, enfrentando a Team Yell y desentrañando los misterios de los legendarios Zacian y Zamazenta. Explora la Zona Wild con control libre de la cámara y únete a las Batallas de Incursión Max cooperativas contra Pokémon Dynamax.",
+  descPikachu: "¡En Pokémon™: Let’s Go, Pikachu!, disponible en Nintendo Switch™, embárcate en una aventura con Pikachu para capturar y coleccionar Pokémon. Lucha contra otros entrenadores, líderes de gimnasio y el malvado equipo Rocket. Usa el controlador Joy-Con o el Poké Ball™ Plus para atrapar Pokémon, o juega en modo portátil. ¡Conéctate con Pokémon™ GO para transferir Pokémon de la región de Kanto!",
+  descUltra: '¡Embárcate en una nueva y emocionante aventura en la región de Alola con Pokémon™ Ultra Sun y Ultra Moon para Nintendo 3DS™! Descubre una historia expandida, nuevos Pokémon y formas alternas de los legendarios Solgaleo y Lunala. Enfréntate a la amenaza del Team Rainbow Rocket, usa movimientos Z aún más poderosos y viaja a través de los Ultra Wormholes para encontrar Pokémon raros. ¡Te espera una aventura grandiosa llena de sorpresas!',
+  descSun: 'Embárcate en una aventura tropical en la región de Alola con Pokémon™ Sun y Moon para Nintendo 3DS™! Explora islas exuberantes, descubre nuevos Pokémon y realiza el Island Challenge en lugar de los tradicionales combates de Gimnasio. Desvela los misterios de los Pokémon legendarios Solgaleo y Lunala, experimenta los nuevos movimientos Z y lucha contra el enigmático Team Skull. ¡Una aventura innovadora llena de descubrimientos te espera!',
+  descOmega: 'Embárcate en un viaje épico en la región de Hoenn con Pokémon™ Omega Ruby para Nintendo 3DS™! Revive la aventura clásica con gráficos mejorados, nuevas Mega Evoluciones y la Reversión Primal de Groudon. Lucha contra el Team Magma, personaliza tu Super-Secret Base y comercia Pokémon en línea. ¡Una experiencia cautivadora tanto para nuevos como veteranos entrenadores!',
+  descY: 'Explora la hermosa región de Kalos en Pokémon™ X y Y para Nintendo 3DS™! Con gráficos completamente en 3D, descubre nuevos Pokémon, desafía a los Líderes de Gimnasio y experimenta las poderosas Mega Evoluciones. Personaliza a tu entrenador como nunca antes y emprende una aventura épica junto a los legendarios Xerneas o Yveltal. ¡Con nuevos modos de batalla y características en línea, esta aventura promete ser única y llena de sorpresas!',
+  descBlack2: '¡Regresa a la región de Unova en Pokémon™ Black 2 para Nintendo DS™ y descubre una historia completamente nueva! Dos años después de los eventos de Pokémon Black, explora nuevas áreas, enfrenta al renovado Team Plasma y desvela el misterio detrás del legendario Kyurem Black. Con nuevos desafíos, intensos torneos y un gameplay mejorado, ¡esta secuela ofrece una de las experiencias más emocionantes de la serie Pokémon!',
+  descWhite: 'Explora la región de Unova en Pokémon™ Black para Nintendo DS™ y emprende un viaje lleno de nuevos desafíos. Descubre más de 150 nuevos Pokémon, enfrenta al misterioso Team Plasma y desvela los secretos del legendario Reshiram. Con una historia cautivadora, batallas dinámicas e innovaciones como las Batallas Triples, ¡esta aventura te llevará la experiencia Pokémon a un nuevo nivel!',
+  descSilver: 'Revive la clásica aventura en Johto en Pokémon™ SoulSilver para Nintendo DS™! Explora ciudades y rutas nostálgicas con gráficos mejorados, captura y entrena Pokémon mientras uno camina a tu lado, y enfrenta a la Elite Four para convertirte en el Campeón. Desafía a los Líderes de Gimnasio tanto en Johto como en Kanto, descubre los secretos del legendario Lugia y disfruta de nuevas características como el Pokéwalker. ¡Una aventura épica te espera!',
+  descPlatinum: 'Revive la clásica aventura en Johto en Pokémon™ SoulSilver para Nintendo DS™! Explora ciudades y rutas nostálgicas con gráficos mejorados, captura y entrena Pokémon mientras uno camina a tu lado, y enfrenta a la Elite Four para convertirte en el Campeón. Desafía a los Líderes de Gimnasio tanto en Johto como en Kanto, descubre los secretos del legendario Lugia y disfruta de nuevas características como el Pokéwalker. ¡Una aventura épica te espera!',
+  descPearl: '¡Las aventuras esperan en la región de Sinnoh en Pokémon™ Pearl para Nintendo DS™! Explora vastos territorios, captura nuevos Pokémon y desafía a los Líderes de Gimnasio para convertirte en el Campeón. Enfréntate al Team Galactic y desvela los secretos del legendario Palkia, guardián del espacio. Con intensas batallas, nuevas mecánicas y una historia cautivadora, ¡este viaje por la región de Sinnoh promete ser inolvidable!',
+  descEsmerald: 'Sumérgete en la región de Hoenn en Pokémon™ Emerald para Nintendo DS™ y prepárate para un viaje lleno de sorpresas. Enfréntate a los poderosos líderes del Team Aqua y Team Magma mientras desvelas los secretos de Kyogre y Groudon en sus formas Primal. El Battle Frontier ofrece desafíos exclusivos y épicas batallas mientras aspiras a convertirte en el Campeón de Hoenn. ¡Una aventura única con muchos misterios y Pokémon por capturar!',
+  descFireRed: 'Embárcate en una aventura nostálgica en la región de Kanto en Pokémon™ FireRed para Game Boy Advance. Revive el clásico de 1996 con gráficos mejorados y características modernas mientras capturas, entrenas y batallas para convertirte en el mejor Entrenador Pokémon. Desafía a los Líderes de Gimnasio, enfrenta al Team Rocket y descubre los secretos del legendario Mewtwo. Con nuevos desafíos y una experiencia actualizada, ¡este viaje cautivará tanto a los nuevos como a los viejos fanáticos!',
+  descRuby: '¡Prepárate para un nuevo y emocionante viaje en la región de Hoenn con Pokémon™ Ruby para Game Boy Advance! Embárcate en una aventura llena de descubrimientos mientras exploras vastas rutas, ciudades y ubicaciones misteriosas. Captura nuevos Pokémon, desafía a los Líderes de Gimnasio y enfrenta al Team Aqua, que amenaza con dominar las aguas de Hoenn. Con gráficos increíbles para su época y batallas más dinámicas, ¡Pokémon Ruby lleva tu experiencia Pokémon a un nuevo nivel!',
+  descCristal: 'En Pokémon™ Crystal para Game Boy Color, comienza una nueva era de aventura en la región de Johto. Explora una tierra llena de misterios, captura nuevos Pokémon y combate contra el Team Rocket en su intento de dominar el mundo Pokémon. Por primera vez, puedes elegir el género de tu personaje, personalizando tu viaje. Además, el legendario Suicune te espera para ser descubierto en su misión épica. Con gráficos vibrantes y un gameplay innovador, Pokémon Crystal es una experiencia única e inolvidable.',
+  descGold: 'En Pokémon™ Gold para Game Boy Color, emprende un viaje épico a través de la región de Johto. Captura nuevos Pokémon, enfrenta desafiantes Líderes de Gimnasio y desvela los secretos detrás de los legendarios Ho-Oh y Lugia. Viaja por rutas y ciudades vibrantes, explora la famosa Bellsprout Tower y enfrenta al Team Rocket. Con gráficos mejorados y una experiencia de juego cautivadora, Pokémon Gold te lleva a un viaje inolvidable lleno de descubrimientos y batallas emocionantes.',
+  descYellow: 'En Pokémon™ Yellow para Game Boy, ¡la aventura toma una nueva perspectiva! Sigue a Pikachu como tu fiel compañero en su viaje, quien se niega a permanecer dentro de su Poké Ball, y explora la región de Kanto en busca de convertirte en el mejor entrenador de todos. Con una historia más cercana al anime, enfréntate a desafiantes Líderes de Gimnasio, combate contra el Team Rocket y captura Pokémon legendarios como Zapdos, Moltres y Articuno. Pokémon Yellow trae una experiencia encantadora e inolvidable para los fanáticos de la serie.',
+  descBlue: 'En Pokémon™ Blue para Game Boy, comienza tu viaje en la clásica región de Kanto. Captura, entrena y combate con más de 150 Pokémon mientras enfrentas a los Líderes de Gimnasio y desafías a la Elite Four. Combate contra el Team Rocket y haz todo lo posible por convertirte en el Campeón de la Liga Pokémon. Con gráficos innovadores para su época y una experiencia de juego cautivadora, Pokémon Blue ofrece una aventura única y desafiante para todos los fanáticos de la serie.',
+  descRed: 'En Pokémon™ Red para Game Boy, ¡comienza la aventura clásica en la región de Kanto! Captura, entrena y combate con una amplia gama de Pokémon mientras enfrentas a los Líderes de Gimnasio y combates contra el Team Rocket. Enfréntate a entrenadores poderosos y aspira a convertirte en el Campeón de la Liga Pokémon. Con jugabilidad cautivadora y gráficos innovadores para su época, Pokémon Red es un viaje épico que definió la serie y cautivó a millones de fanáticos en todo el mundo.',
+  toastAlertDesenvolvi: "En Desarrollo",
 }
 
 const franca = {
@@ -165,38 +166,37 @@ const franca = {
   contato: "Contact",
   sobre: "Sur",
   footerProject: 'Projets',
-use: 'Conditions d’utilisation',
-cookie: 'Politique de Cookies',
-privacity: 'Confidentialité',
+  use: 'Conditions d’utilisation',
+  cookie: 'Politique de Cookies',
+  privacity: 'Confidentialité',
   textHeader: "Ici, vous trouverez un Pokédex interactif complet, où vous pourrez explorer tous les Pokémon en détail, ainsi que la collection de tous les jeux de la franchise Pokémon. Découvrez des curiosités, des capacités et bien plus encore !",
-  btnPokedex: "Pokédex",
-  titlePokedex: 'Pokédex Interactive',
-  descPokedex: 'Le Pokédex interactif vous permet de rechercher et de découvrir des informations détaillées sur chaque Pokémon, y compris les types, les capacités, les évolutions et les statistiques. Trouvez votre Pokémon préféré et plongez dans l’univers Pokémon comme jamais auparavant !',
+  descPokedex: 'Pokedados est une application complète qui réunit toutes les informations disponibles sur chaque Pokémon jamais publié. Recherchez et explorez les statistiques, évolutions, formes, versions shiny, descriptions, capacités et bien plus encore — le tout présenté dans une Pokédex moderne et intuitive. L’application offre également un accès à tous les jeux Pokémon, avec bandes-annonces, descriptions détaillées, images officielles et liens directs pour acheter sur Nintendo et Google. La plateforme idéale pour les fans souhaitant découvrir l’univers Pokémon en un seul endroit.',
   descPokemon: "Pokémon est une franchise créée par Satoshi Tajiri, où les joueurs capturent, entraînent et combattent avec des créatures appelées Pokémon. L'objectif est de compléter le Pokédex et de devenir un Champion Pokémon. Initialement lancé sous forme de jeu en 1996, la franchise comprend des émissions de télévision, des films et divers produits, faisant d'elle l'un des plus grands phénomènes médiatiques mondiaux.",
+  descPokopia: "Incarnez un Métamorph transformé pour ressembler à un humain ! Rencontrez et liez-vous d’amitié avec d’autres Pokémon, construisez votre propre vie et travaillez avec le Professeur Tangrowth pour créer une ville où tous peuvent vivre ensemble. Apprenez des capacités d’autres Pokémon pour modifier l’environnement, comme le Leafage de Bulbizarre pour faire pousser la wild grass, et utilisez des talents spéciaux tels que le Surf de Lokhlass pour transformer et explorer le monde qui vous entoure.",
+  descZA: "Affrontez des combats en temps réel en commandant librement vos Pokémon tout en explorant les wild zones pour capturer et entraîner votre équipe avant de participer aux battle zones intenses qui apparaissent chaque nuit. Mélangeant des mécaniques classiques et des touches modernes, Pokémon Legends: Z-A offre une expérience dynamique aux Dresseurs débutants comme vétérans, apportant stratégie, action continue et une nouvelle façon de vivre le monde Pokémon.",
   descScarlet: 'Attrapez, battez et entraînez des Pokémon dans la région de Paldea, une vaste zone remplie de lacs, de montagnes imposantes, de déserts, de villages et de villes en expansion. Explorez le monde ouvert à votre rythme et voyagez par terre, mer et air à dos du légendaire Pokémon qui change de forme (Koraidon dans Pokémon Scarlet et Miraidon dans Pokémon Violet). Choisissez Sprigatito, Fuecoco ou Quaxly comme votre premier compagnon Pokémon avant de commencer votre aventure à travers Paldea.',
-descArceus: 'Préparez-vous pour une grande nouvelle aventure Pokémon dans Pokémon™ Legends: Arceus, un jeu totalement inédit de Game Freak qui allie action et exploration avec les racines RPG de la série Pokémon. Menez des missions de recherche dans la région ancienne de Hisui. Explorez de vastes zones naturelles pour attraper des Pokémon sauvages, apprenez leur comportement, approchez-les furtivement et lancez une Poké Ball bien placée.',
-descDiamond: 'Bienvenue dans la région de Sinnoh ! Riche en nature et avec la puissante Montagne Coronet au centre, Sinnoh est une terre pleine de nombreux mythes transmis de génération en génération. Choisissez Turtwig, Chimchar ou Piplup comme votre premier compagnon Pokémon, puis lancez-vous dans votre aventure pour devenir le Champion de la Ligue Pokémon. En chemin, vous rencontrerez le mystérieux Team Galactic et pourrez rencontrer les Pokémon légendaires Dialga.',
-descSword: "Une nouvelle génération de Pokémon arrive sur la console Nintendo Switch™. Choisissez parmi Grookey, Scorbunny ou Sobble et partez à l'aventure dans la région de Galar, affrontant l'Équipe Yell et découvrant les mystères des Pokémon légendaires Zacian et Zamazenta. Explorez la Zone Wild avec un contrôle libre de la caméra et participez aux nouvelles batailles multijoueurs coopératives Max Raid contre des Pokémon Dynamax.",
-descPikachu: "Dans Pokémon™ : Let’s Go, Pikachu !, disponible sur Nintendo Switch™, partez à l'aventure avec Pikachu pour capturer et collectionner des Pokémon. Combattez d'autres entraîneurs, les leaders de gymnase et l'infâme équipe Rocket. Utilisez la manette Joy-Con ou le Poké Ball™ Plus pour attraper des Pokémon, ou jouez en mode portable. Connectez-vous à Pokémon™ GO pour transférer des Pokémon de la région de Kanto !",
-descUltra: 'Partez dans une toute nouvelle aventure passionnante dans la région d’Alola avec Pokémon™ Ultra Sun et Ultra Moon sur Nintendo 3DS™ ! Découvrez une histoire étendue, de nouveaux Pokémon et des formes alternatives des légendaires Solgaleo et Lunala. Affrontez la menace du Team Rainbow Rocket, utilisez des mouvements Z encore plus puissants et voyagez à travers les Ultra Wormholes pour rencontrer des Pokémon rares. Une aventure épique pleine de surprises vous attend !',
-descSun: 'Partez à l’aventure dans la région d’Alola avec Pokémon™ Sun et Moon sur Nintendo 3DS™ ! Explorez des îles luxuriantes, découvrez de nouveaux Pokémon et réalisez le Island Challenge au lieu des traditionnels combats de gymnase. Découvrez les mystères des Pokémon légendaires Solgaleo et Lunala, vivez de nouveaux mouvements Z et combattez le Team Skull mystérieux. Une aventure innovante pleine de découvertes vous attend !',
-descOmega: 'Embarquez pour un voyage épique dans la région de Hoenn avec Pokémon™ Omega Ruby pour Nintendo 3DS™ ! Revivez l’aventure classique avec des graphismes améliorés, de nouvelles Mega Evolutions et la Primal Reversion de Groudon. Combattez le Team Magma, personnalisez votre Super-Secret Base et échangez des Pokémon en ligne. Une expérience captivante tant pour les nouveaux venus que pour les vétérans !',
-descY: 'Explorez la magnifique région de Kalos dans Pokémon™ X et Y pour Nintendo 3DS™ ! Avec des graphismes entièrement en 3D, découvrez de nouveaux Pokémon, défiez les leaders de gymnase et vivez les puissantes Mega Evolutions. Personnalisez votre dresseur comme jamais auparavant et partez pour une aventure épique aux côtés des légendaires Xerneas ou Yveltal. Avec de nouveaux modes de combat et des fonctionnalités en ligne, cette aventure promet d’être unique et pleine de surprises !',
-descBlack2: 'Retournez dans la région d’Unova dans Pokémon™ Black 2 pour Nintendo DS™ et découvrez une toute nouvelle histoire ! Deux ans après les événements de Pokémon Black, explorez de nouvelles zones, affrontez le Team Plasma renouvelé et découvrez les mystères derrière le légendaire Kyurem Black. Avec de nouveaux défis, des tournois intenses et un gameplay amélioré, cette suite propose l’une des expériences les plus excitantes de la série Pokémon !',
-descWhite: 'Explorez la région d’Unova dans Pokémon™ Black pour Nintendo DS™ et embarquez pour un voyage plein de nouveaux défis. Découvrez plus de 150 nouveaux Pokémon, combattez le mystérieux Team Plasma et découvrez les secrets du légendaire Reshiram. Avec une histoire captivante, des combats dynamiques et des innovations comme les Triple Battles, cette aventure vous emmènera à un tout nouveau niveau !',
-descSilver: 'Revivez l’aventure classique dans Johto avec Pokémon™ SoulSilver pour Nintendo DS™ ! Explorez des villes et des routes nostalgiques avec des graphismes améliorés, capturez et entraînez des Pokémon pendant qu’ils marchent à vos côtés, et affrontez les Elite Four pour devenir Champion. Défiez les leaders de gymnase à Johto et à Kanto, découvrez les secrets du légendaire Lugia et profitez de nouvelles fonctionnalités comme le Pokéwalker. Une aventure épique vous attend !',
-descPlatinum: 'Revivez l’aventure classique dans Johto avec Pokémon™ SoulSilver pour Nintendo DS™ ! Explorez des villes et des routes nostalgiques avec des graphismes améliorés, capturez et entraînez des Pokémon pendant qu’ils marchent à vos côtés, et affrontez les Elite Four pour devenir Champion. Défiez les leaders de gymnase à Johto et à Kanto, découvrez les secrets du légendaire Lugia et profitez de nouvelles fonctionnalités comme le Pokéwalker. Une aventure épique vous attend !',
-descPearl: 'Les aventures vous attendent dans la région de Sinnoh dans Pokémon™ Pearl pour Nintendo DS™ ! Explorez des territoires vastes, capturez de nouveaux Pokémon et défiez les leaders de gymnase pour devenir Champion. Affrontez le Team Galactic et découvrez les secrets du légendaire Palkia, gardien de l’espace. Avec des combats intenses, de nouvelles mécaniques et une histoire captivante, ce voyage dans la région de Sinnoh promet d’être inoubliable !',
-descEsmerald: 'Plongez dans la région de Hoenn dans Pokémon™ Emerald pour Nintendo DS™ et préparez-vous pour un voyage plein de surprises. Affrontez les puissants leaders des Teams Aqua et Magma tout en découvrant les secrets de Kyogre et Groudon sous leurs formes Primal. Le Battle Frontier offre des défis exclusifs et des combats épiques pendant que vous aspirez à devenir Champion de Hoenn. Une aventure unique avec de nombreux mystères et des Pokémon à capturer vous attend !',
-descFireRed: 'Partez en aventure dans la région de Kanto dans Pokémon™ FireRed pour Game Boy Advance. Revivez le classique de 1996 avec des graphismes améliorés et des fonctionnalités modernes tout en capturant, entraînant et combattant pour devenir le meilleur dresseur Pokémon. Défiez les leaders de gymnase, affrontez le Team Rocket et découvrez les secrets du légendaire Mewtwo. Avec de nouveaux défis et une expérience mise à jour, ce voyage captivant vous attend !',
-descRuby: 'Préparez-vous pour un voyage passionnant dans la région de Hoenn avec Pokémon™ Ruby pour Game Boy Advance ! Embarquez pour une aventure pleine de découvertes tout en explorant des routes vastes, des villes et des lieux mystérieux. Capturez de nouveaux Pokémon, défiez les leaders de gymnase et affrontez le Team Aqua qui menace de dominer les eaux de Hoenn. Avec des graphismes impressionnants pour l’époque et des combats plus dynamiques, Pokémon Ruby élève votre expérience Pokémon à un tout nouveau niveau !',
-descCristal: 'Dans Pokémon™ Crystal pour Game Boy Color, commencez une nouvelle ère d’aventure dans la région de Johto. Explorez une terre pleine de mystères, capturez de nouveaux Pokémon et combattez le Team Rocket dans leur tentative de dominer le monde Pokémon. Pour la première fois, vous pouvez choisir le sexe de votre personnage et personnaliser votre voyage. De plus, le légendaire Suicune vous attend pour être découvert dans sa quête épique. Avec des graphismes vibrants et un gameplay innovant, Pokémon Crystal est une expérience unique et inoubliable.',
-descGold: 'Dans Pokémon™ Gold pour Game Boy Color, embarquez pour un voyage épique à travers la région de Johto. Capturez de nouveaux Pokémon, affrontez des leaders de gymnase redoutables et découvrez les secrets des légendaires Ho-Oh et Lugia. Voyagez à travers des routes et des villes vibrantes, explorez la fameuse Bellsprout Tower et combattez le Team Rocket. Avec des graphismes améliorés et une expérience captivante, Pokémon Gold vous emmène dans un voyage inoubliable rempli de découvertes et de combats excitants.',
-descYellow: 'Dans Pokémon™ Yellow pour Game Boy, l’aventure prend une nouvelle perspective ! Suivez Pikachu comme compagnon fidèle dans son voyage, qui refuse de rester dans sa Poké Ball, et explorez la région de Kanto pour devenir le meilleur dresseur de tous les temps. Avec une histoire plus proche de l’anime, affrontez des leaders de gymnase difficiles, combattez le Team Rocket et capturez des Pokémon légendaires comme Zapdos, Moltres et Articuno. Pokémon Yellow offre une expérience charmante et inoubliable pour les fans de la série.',
-descBlue: 'Dans Pokémon™ Blue pour Game Boy, commencez votre voyage dans la classique région de Kanto. Capturez, entraînez et combattez pour devenir le meilleur dresseur Pokémon. Défiez les leaders de gymnase, affrontez le redoutable Team Rocket et capturez les légendaires Mewtwo et Mew. Ce jeu est le point de départ d’une aventure épique pleine de souvenirs et de défis pour les amateurs de Pokémon.',
-descRed: 'Dans Pokémon™ Red pour Game Boy, commencez votre aventure dans la région classique de Kanto. Capturez, entraînez et combattez pour devenir le meilleur dresseur Pokémon. Défiez les leaders de gymnase, affrontez le redoutable Team Rocket et capturez les légendaires Mewtwo et Mew. Ce jeu est le point de départ d’une aventure épique pleine de souvenirs et de défis pour les amateurs de Pokémon.',
-toastAlertDesenvolvi: "En Développement",
-
+  descArceus: 'Préparez-vous pour une grande nouvelle aventure Pokémon dans Pokémon™ Legends: Arceus, un jeu totalement inédit de Game Freak qui allie action et exploration avec les racines RPG de la série Pokémon. Menez des missions de recherche dans la région ancienne de Hisui. Explorez de vastes zones naturelles pour attraper des Pokémon sauvages, apprenez leur comportement, approchez-les furtivement et lancez une Poké Ball bien placée.',
+  descDiamond: 'Bienvenue dans la région de Sinnoh ! Riche en nature et avec la puissante Montagne Coronet au centre, Sinnoh est une terre pleine de nombreux mythes transmis de génération en génération. Choisissez Turtwig, Chimchar ou Piplup comme votre premier compagnon Pokémon, puis lancez-vous dans votre aventure pour devenir le Champion de la Ligue Pokémon. En chemin, vous rencontrerez le mystérieux Team Galactic et pourrez rencontrer les Pokémon légendaires Dialga.',
+  descSword: "Une nouvelle génération de Pokémon arrive sur la console Nintendo Switch™. Choisissez parmi Grookey, Scorbunny ou Sobble et partez à l'aventure dans la région de Galar, affrontant l'Équipe Yell et découvrant les mystères des Pokémon légendaires Zacian et Zamazenta. Explorez la Zone Wild avec un contrôle libre de la caméra et participez aux nouvelles batailles multijoueurs coopératives Max Raid contre des Pokémon Dynamax.",
+  descPikachu: "Dans Pokémon™ : Let’s Go, Pikachu !, disponible sur Nintendo Switch™, partez à l'aventure avec Pikachu pour capturer et collectionner des Pokémon. Combattez d'autres entraîneurs, les leaders de gymnase et l'infâme équipe Rocket. Utilisez la manette Joy-Con ou le Poké Ball™ Plus pour attraper des Pokémon, ou jouez en mode portable. Connectez-vous à Pokémon™ GO pour transférer des Pokémon de la région de Kanto !",
+  descUltra: 'Partez dans une toute nouvelle aventure passionnante dans la région d’Alola avec Pokémon™ Ultra Sun et Ultra Moon sur Nintendo 3DS™ ! Découvrez une histoire étendue, de nouveaux Pokémon et des formes alternatives des légendaires Solgaleo et Lunala. Affrontez la menace du Team Rainbow Rocket, utilisez des mouvements Z encore plus puissants et voyagez à travers les Ultra Wormholes pour rencontrer des Pokémon rares. Une aventure épique pleine de surprises vous attend !',
+  descSun: 'Partez à l’aventure dans la région d’Alola avec Pokémon™ Sun et Moon sur Nintendo 3DS™ ! Explorez des îles luxuriantes, découvrez de nouveaux Pokémon et réalisez le Island Challenge au lieu des traditionnels combats de gymnase. Découvrez les mystères des Pokémon légendaires Solgaleo et Lunala, vivez de nouveaux mouvements Z et combattez le Team Skull mystérieux. Une aventure innovante pleine de découvertes vous attend !',
+  descOmega: 'Embarquez pour un voyage épique dans la région de Hoenn avec Pokémon™ Omega Ruby pour Nintendo 3DS™ ! Revivez l’aventure classique avec des graphismes améliorés, de nouvelles Mega Evolutions et la Primal Reversion de Groudon. Combattez le Team Magma, personnalisez votre Super-Secret Base et échangez des Pokémon en ligne. Une expérience captivante tant pour les nouveaux venus que pour les vétérans !',
+  descY: 'Explorez la magnifique région de Kalos dans Pokémon™ X et Y pour Nintendo 3DS™ ! Avec des graphismes entièrement en 3D, découvrez de nouveaux Pokémon, défiez les leaders de gymnase et vivez les puissantes Mega Evolutions. Personnalisez votre dresseur comme jamais auparavant et partez pour une aventure épique aux côtés des légendaires Xerneas ou Yveltal. Avec de nouveaux modes de combat et des fonctionnalités en ligne, cette aventure promet d’être unique et pleine de surprises !',
+  descBlack2: 'Retournez dans la région d’Unova dans Pokémon™ Black 2 pour Nintendo DS™ et découvrez une toute nouvelle histoire ! Deux ans après les événements de Pokémon Black, explorez de nouvelles zones, affrontez le Team Plasma renouvelé et découvrez les mystères derrière le légendaire Kyurem Black. Avec de nouveaux défis, des tournois intenses et un gameplay amélioré, cette suite propose l’une des expériences les plus excitantes de la série Pokémon !',
+  descWhite: 'Explorez la région d’Unova dans Pokémon™ Black pour Nintendo DS™ et embarquez pour un voyage plein de nouveaux défis. Découvrez plus de 150 nouveaux Pokémon, combattez le mystérieux Team Plasma et découvrez les secrets du légendaire Reshiram. Avec une histoire captivante, des combats dynamiques et des innovations comme les Triple Battles, cette aventure vous emmènera à un tout nouveau niveau !',
+  descSilver: 'Revivez l’aventure classique dans Johto avec Pokémon™ SoulSilver pour Nintendo DS™ ! Explorez des villes et des routes nostalgiques avec des graphismes améliorés, capturez et entraînez des Pokémon pendant qu’ils marchent à vos côtés, et affrontez les Elite Four pour devenir Champion. Défiez les leaders de gymnase à Johto et à Kanto, découvrez les secrets du légendaire Lugia et profitez de nouvelles fonctionnalités comme le Pokéwalker. Une aventure épique vous attend !',
+  descPlatinum: 'Revivez l’aventure classique dans Johto avec Pokémon™ SoulSilver pour Nintendo DS™ ! Explorez des villes et des routes nostalgiques avec des graphismes améliorés, capturez et entraînez des Pokémon pendant qu’ils marchent à vos côtés, et affrontez les Elite Four pour devenir Champion. Défiez les leaders de gymnase à Johto et à Kanto, découvrez les secrets du légendaire Lugia et profitez de nouvelles fonctionnalités comme le Pokéwalker. Une aventure épique vous attend !',
+  descPearl: 'Les aventures vous attendent dans la région de Sinnoh dans Pokémon™ Pearl pour Nintendo DS™ ! Explorez des territoires vastes, capturez de nouveaux Pokémon et défiez les leaders de gymnase pour devenir Champion. Affrontez le Team Galactic et découvrez les secrets du légendaire Palkia, gardien de l’espace. Avec des combats intenses, de nouvelles mécaniques et une histoire captivante, ce voyage dans la région de Sinnoh promet d’être inoubliable !',
+  descEsmerald: 'Plongez dans la région de Hoenn dans Pokémon™ Emerald pour Nintendo DS™ et préparez-vous pour un voyage plein de surprises. Affrontez les puissants leaders des Teams Aqua et Magma tout en découvrant les secrets de Kyogre et Groudon sous leurs formes Primal. Le Battle Frontier offre des défis exclusifs et des combats épiques pendant que vous aspirez à devenir Champion de Hoenn. Une aventure unique avec de nombreux mystères et des Pokémon à capturer vous attend !',
+  descFireRed: 'Partez en aventure dans la région de Kanto dans Pokémon™ FireRed pour Game Boy Advance. Revivez le classique de 1996 avec des graphismes améliorés et des fonctionnalités modernes tout en capturant, entraînant et combattant pour devenir le meilleur dresseur Pokémon. Défiez les leaders de gymnase, affrontez le Team Rocket et découvrez les secrets du légendaire Mewtwo. Avec de nouveaux défis et une expérience mise à jour, ce voyage captivant vous attend !',
+  descRuby: 'Préparez-vous pour un voyage passionnant dans la région de Hoenn avec Pokémon™ Ruby pour Game Boy Advance ! Embarquez pour une aventure pleine de découvertes tout en explorant des routes vastes, des villes et des lieux mystérieux. Capturez de nouveaux Pokémon, défiez les leaders de gymnase et affrontez le Team Aqua qui menace de dominer les eaux de Hoenn. Avec des graphismes impressionnants pour l’époque et des combats plus dynamiques, Pokémon Ruby élève votre expérience Pokémon à un tout nouveau niveau !',
+  descCristal: 'Dans Pokémon™ Crystal pour Game Boy Color, commencez une nouvelle ère d’aventure dans la région de Johto. Explorez une terre pleine de mystères, capturez de nouveaux Pokémon et combattez le Team Rocket dans leur tentative de dominer le monde Pokémon. Pour la première fois, vous pouvez choisir le sexe de votre personnage et personnaliser votre voyage. De plus, le légendaire Suicune vous attend pour être découvert dans sa quête épique. Avec des graphismes vibrants et un gameplay innovant, Pokémon Crystal est une expérience unique et inoubliable.',
+  descGold: 'Dans Pokémon™ Gold pour Game Boy Color, embarquez pour un voyage épique à travers la région de Johto. Capturez de nouveaux Pokémon, affrontez des leaders de gymnase redoutables et découvrez les secrets des légendaires Ho-Oh et Lugia. Voyagez à travers des routes et des villes vibrantes, explorez la fameuse Bellsprout Tower et combattez le Team Rocket. Avec des graphismes améliorés et une expérience captivante, Pokémon Gold vous emmène dans un voyage inoubliable rempli de découvertes et de combats excitants.',
+  descYellow: 'Dans Pokémon™ Yellow pour Game Boy, l’aventure prend une nouvelle perspective ! Suivez Pikachu comme compagnon fidèle dans son voyage, qui refuse de rester dans sa Poké Ball, et explorez la région de Kanto pour devenir le meilleur dresseur de tous les temps. Avec une histoire plus proche de l’anime, affrontez des leaders de gymnase difficiles, combattez le Team Rocket et capturez des Pokémon légendaires comme Zapdos, Moltres et Articuno. Pokémon Yellow offre une expérience charmante et inoubliable pour les fans de la série.',
+  descBlue: 'Dans Pokémon™ Blue pour Game Boy, commencez votre voyage dans la classique région de Kanto. Capturez, entraînez et combattez pour devenir le meilleur dresseur Pokémon. Défiez les leaders de gymnase, affrontez le redoutable Team Rocket et capturez les légendaires Mewtwo et Mew. Ce jeu est le point de départ d’une aventure épique pleine de souvenirs et de défis pour les amateurs de Pokémon.',
+  descRed: 'Dans Pokémon™ Red pour Game Boy, commencez votre aventure dans la région classique de Kanto. Capturez, entraînez et combattez pour devenir le meilleur dresseur Pokémon. Défiez les leaders de gymnase, affrontez le redoutable Team Rocket et capturez les légendaires Mewtwo et Mew. Ce jeu est le point de départ d’une aventure épique pleine de souvenirs et de défis pour les amateurs de Pokémon.',
+  toastAlertDesenvolvi: "En Développement",
 }
 
 const china = {
@@ -211,35 +211,34 @@ const china = {
   cookie: 'Cookie 政策',
   privacity: '隐私政策',
   sobreMim: "关于我",
-    textHeader: "在这里，您将找到一个完整的互动宝可梦图鉴，您可以详细探索所有宝可梦，并访问宝可梦系列所有游戏的合集。发现更多有趣的内容、技能等！",
-  btnPokedex: "宝可梦图鉴",
-  titlePokedex: '互动图鉴',
-  descPokedex: '互动式宝可梦图鉴让您可以搜索并发现每只宝可梦的详细信息，包括类型、技能、进化和统计数据。找到您最喜欢的宝可梦，前所未有地沉浸在宝可梦的世界中！',
+  textHeader: "在这里，您将找到一个完整的互动宝可梦图鉴，您可以详细探索所有宝可梦，并访问宝可梦系列所有游戏的合集。发现更多有趣的内容、技能等！",
+  descPokedex: 'Pokedados 是一款完整的应用程序，汇集了所有已发布宝可梦的详细信息。您可以搜索和查看能力值、进化形态、外形、异色形态、图鉴描述、招式等内容，一切都以现代直观的图鉴形式呈现。此外，应用还提供历代宝可梦游戏的资讯，包括预告片、详细介绍、官方图片，以及前往任天堂和谷歌平台购买的直接链接。对于想要深入了解宝可梦世界的粉丝来说，这是一个不可或缺的一体化平台。',
   descPokemon: '宝可梦是由田尻智创立的一个系列，玩家捕捉、训练并与名为宝可梦的生物进行对战。目标是完成宝可梦图鉴并成为宝可梦冠军。最初于1996年作为游戏发布，该系列还包括电视节目、电影和各种产品，使其成为全球最大的媒体现象之一。',
+  descPokopia: "以变成类人形态的百变怪展开冒险！结识并与其他宝可梦成为朋友，建立属于自己的生活，并与巨蔓藤教授合作打造一座让所有宝可梦共同生活的城市。学习其他宝可梦的招式来改变环境，例如使用妙蛙种子的树叶招式让野草生长，并利用乘龙的冲浪等能力来探索与改变周围的世界。",
+  descZA: "在实时战斗中自由指挥你的宝可梦，在野区探索、捕捉并训练队伍，为每晚出现的激烈战斗区做好准备。经典玩法与现代元素相结合，《宝可梦传说：Z-A》为新老训练家带来充满策略与持续动作的全新宝可梦世界体验。",
   descScarlet: '在宝可梦 Scarlet 中，捕捉、战斗并训练宝可梦，探索帕尔代亚地区，这里有广阔的湖泊、雄伟的山脉、沙漠、村庄和正在扩展的城市。以自己的节奏探索开放世界，骑乘传奇宝可梦（Scarlet 中是科赖多，Violet 中是米莱多）穿越陆地、水域和空中。选择初始宝可梦：草苗龟、火焰鳄或鸭嘴炎，让它们成为你的伙伴，开始你的帕尔代亚之旅。',
-descArceus: '准备好迎接全新的宝可梦冒险了吗？《宝可梦：传说 阿尔宙斯》是一款全新的游戏，融合了动作、探索与宝可梦系列的RPG根源。进入古老的希苏地区，展开研究任务。探索自然环境，捕捉野生宝可梦，学习它们的行为，偷偷接近并准确投掷宝贝球。',
-descDiamond: '欢迎来到神奥地区！这里自然资源丰富，核心地带是强大的神奥山脉，是无数代传说的发源地。你将可以选择草苗龟、烈焰猴或波加曼作为你的初始宝可梦，开始你的冒险，成为宝可梦联盟的冠军。在旅途中，你会遇到神秘的银河队，还能与传奇宝可梦帝牙卢卡邂逅。',
-descSword: "全新一代宝可梦即将登陆Nintendo Switch™主机。选择Grookey、Scorbunny或Sobble作为你的宝可梦伙伴，踏上前往新区域加拉尔的冒险之旅，挑战恶势力团队Yell，并揭开传奇宝可梦Zacian和Zamazenta的神秘面纱。探索Wild Area，在这里你可以自由控制相机，参与全新的多人合作Max Raid Battles，与巨大的Dynamax宝可梦展开对决。",
-descPikachu: "在《宝可梦™：Let’s Go，皮卡丘！》中，与皮卡丘一起踏上冒险，捕捉并收集宝可梦。与其他训练师、道馆馆主以及邪恶的火箭队展开战斗。使用Joy-Con控制器或Poké Ball™ Plus捕捉宝可梦，或者在便携模式下玩。你还可以将游戏与Pokémon™ GO连接，转移在关东地区发现的宝可梦！",
-descUltra: '在《宝可梦 Ultra Sun 和 Ultra Moon》中，探索阿罗拉地区的全新冒险！发现扩展后的故事、全新的宝可梦，以及传奇宝可梦索尔迦雷欧与露奈雅拉的另类形态。与彩虹火箭队展开战斗，使用更强大的 Z 技能，穿越超空间虫洞，寻找稀有宝可梦。一次更宏大的冒险等待着你！',
-descSun: '在《宝可梦 Sun 和 Moon》中，踏上阿罗拉地区的热带冒险！探索丰饶的岛屿，捕捉新的宝可梦，挑战岛屿挑战而非传统的道馆。解锁传奇宝可梦太阳神索尔迦雷欧和月亮神露奈雅拉的秘密，体验全新的 Z 技能并对抗神秘的恶行队。一次创新且充满发现的冒险正等着你！',
-descOmega: '在《宝可梦 Omega Ruby》中，踏上霍恩地区的史诗旅程！重温经典冒险，享受提升的图形、全新的超级进化以及古老的地面宝可梦盖欧卡复原形态。对抗火焰队，个性化超级秘密基地，并与其他训练师在线交换宝可梦。无论是新手还是老玩家，都会享受这一令人沉浸的体验！',
-descY: '在《宝可梦 X 和 Y》中，探索美丽的卡洛斯地区！凭借全新的 3D 图形，捕捉新的宝可梦，挑战道馆馆主并体验强大的超级进化。个性化你的训练师角色，和传奇宝可梦基尔吉欧或伊菲塔一起踏上史诗冒险。这次的冒险充满了新的战斗模式和线上玩法！',
-descBlack2: '返回尤诺瓦地区，继续《宝可梦 Black 2》的全新冒险！在《宝可梦 Black》的两年后，探索新的区域，迎战重组的等离子队，并解开传奇宝可梦基拉祈黑的秘密。通过未曾见过的挑战，参与激烈的对战，这一续集提供了宝可梦系列最激动人心的冒险之一！',
-descWhite: '探索尤诺瓦地区，在《宝可梦 Black》中展开新的冒险！捕捉超过 150 种全新的宝可梦，挑战神秘的等离子队，并揭开传奇宝可梦烈空坐的秘密。这场冒险将为你带来引人入胜的故事、动态战斗以及全新的三重战斗模式，向你展示了不一样的宝可梦世界。',
-descSilver: '在《宝可梦 SoulSilver》中，重温经典的城都地区之旅！探索那些熟悉的城市和路线，带着一个宝可梦与你同行，挑战精英四人组，争取成为宝可梦联盟的冠军。在城都与关都两个地区挑战道馆，解开传奇宝可梦陆地之神的秘密。一次史诗般的冒险正等着你！',
-descPlatinum: '在《宝可梦 SoulSilver》中，重温经典的城都地区之旅！探索那些熟悉的城市和路线，带着一个宝可梦与你同行，挑战精英四人组，争取成为宝可梦联盟的冠军。在城都与关都两个地区挑战道馆，解开传奇宝可梦陆地之神的秘密。一次史诗般的冒险正等着你！',
-descPearl: '在《宝可梦 Pearl》中，探索神奥地区！捕捉未知的宝可梦，挑战道馆馆主成为冠军，打败银河队，解锁传奇宝可梦帕尔基亚的秘密。体验全新的战斗机制，这场神奥地区的冒险将给你带来一次难忘的经历！',
-descEsmerald: '在《宝可梦 Emerald》中，踏上霍恩地区的冒险！与水队和火队的领导者展开对战，揭开海皇哈克龙和火王盖欧卡的秘密。通过全新的战斗设施挑战，尽全力成为霍恩地区的冠军！',
-descFireRed: '重温经典的关东地区冒险，探索《宝可梦 FireRed》！通过现代化的图形和玩法，捕捉、训练并与其他训练师战斗。挑战关东的道馆，阻止火箭队的阴谋，解开传奇宝可梦 Mewtwo 的秘密！',
-descRuby: '准备好迎接霍恩地区的冒险了吗？在《宝可梦 Ruby》中，捕捉新宝可梦，挑战道馆，打败海洋队，阻止他们的邪恶计划！探索新的地区和神秘地点。',
-descCristal: '在《宝可梦 Crystal》中，体验全新的冒险！通过第一个可以选择角色性别的游戏玩法，探索丰富的城市与路线。对抗火箭队，捕捉传奇宝可梦瑞克苏，发现它的巨大秘密。',
-descGold: '在《宝可梦 Gold》中，开启金色之旅！挑战关都地区的道馆，捕捉全新宝可梦并阻止火箭队的阴谋，揭开传奇宝可梦 Ho-Oh 与 Lugia 的秘密。',
-descYellow: '在《宝可梦 Yellow》中，与皮卡丘一起踏上关东地区的冒险！随着皮卡丘的陪伴，挑战道馆并击败火箭队。捕捉传奇宝可梦 Zapdos、Moltres 和 Articuno！',
-descBlue: '在《宝可梦 Blue》中，开始你的冒险！挑战道馆，捕捉所有宝可梦，努力成为宝可梦联盟的冠军。与火箭队作战，探索一个充满挑战的世界。',
-descRed: '在《宝可梦 Red》中，开始你的经典冒险！捕捉、训练并挑战关东地区的道馆，击败火箭队并成为宝可梦联盟的冠军！',
-toastAlertDesenvolvi: "开发中",
-
+  descArceus: '准备好迎接全新的宝可梦冒险了吗？《宝可梦：传说 阿尔宙斯》是一款全新的游戏，融合了动作、探索与宝可梦系列的RPG根源。进入古老的希苏地区，展开研究任务。探索自然环境，捕捉野生宝可梦，学习它们的行为，偷偷接近并准确投掷宝贝球。',
+  descDiamond: '欢迎来到神奥地区！这里自然资源丰富，核心地带是强大的神奥山脉，是无数代传说的发源地。你将可以选择草苗龟、烈焰猴或波加曼作为你的初始宝可梦，开始你的冒险，成为宝可梦联盟的冠军。在旅途中，你会遇到神秘的银河队，还能与传奇宝可梦帝牙卢卡邂逅。',
+  descSword: "全新一代宝可梦即将登陆Nintendo Switch™主机。选择Grookey、Scorbunny或Sobble作为你的宝可梦伙伴，踏上前往新区域加拉尔的冒险之旅，挑战恶势力团队Yell，并揭开传奇宝可梦Zacian和Zamazenta的神秘面纱。探索Wild Area，在这里你可以自由控制相机，参与全新的多人合作Max Raid Battles，与巨大的Dynamax宝可梦展开对决。",
+  descPikachu: "在《宝可梦™：Let’s Go，皮卡丘！》中，与皮卡丘一起踏上冒险，捕捉并收集宝可梦。与其他训练师、道馆馆主以及邪恶的火箭队展开战斗。使用Joy-Con控制器或Poké Ball™ Plus捕捉宝可梦，或者在便携模式下玩。你还可以将游戏与Pokémon™ GO连接，转移在关东地区发现的宝可梦！",
+  descUltra: '在《宝可梦 Ultra Sun 和 Ultra Moon》中，探索阿罗拉地区的全新冒险！发现扩展后的故事、全新的宝可梦，以及传奇宝可梦索尔迦雷欧与露奈雅拉的另类形态。与彩虹火箭队展开战斗，使用更强大的 Z 技能，穿越超空间虫洞，寻找稀有宝可梦。一次更宏大的冒险等待着你！',
+  descSun: '在《宝可梦 Sun 和 Moon》中，踏上阿罗拉地区的热带冒险！探索丰饶的岛屿，捕捉新的宝可梦，挑战岛屿挑战而非传统的道馆。解锁传奇宝可梦太阳神索尔迦雷欧和月亮神露奈雅拉的秘密，体验全新的 Z 技能并对抗神秘的恶行队。一次创新且充满发现的冒险正等着你！',
+  descOmega: '在《宝可梦 Omega Ruby》中，踏上霍恩地区的史诗旅程！重温经典冒险，享受提升的图形、全新的超级进化以及古老的地面宝可梦盖欧卡复原形态。对抗火焰队，个性化超级秘密基地，并与其他训练师在线交换宝可梦。无论是新手还是老玩家，都会享受这一令人沉浸的体验！',
+  descY: '在《宝可梦 X 和 Y》中，探索美丽的卡洛斯地区！凭借全新的 3D 图形，捕捉新的宝可梦，挑战道馆馆主并体验强大的超级进化。个性化你的训练师角色，和传奇宝可梦基尔吉欧或伊菲塔一起踏上史诗冒险。这次的冒险充满了新的战斗模式和线上玩法！',
+  descBlack2: '返回尤诺瓦地区，继续《宝可梦 Black 2》的全新冒险！在《宝可梦 Black》的两年后，探索新的区域，迎战重组的等离子队，并解开传奇宝可梦基拉祈黑的秘密。通过未曾见过的挑战，参与激烈的对战，这一续集提供了宝可梦系列最激动人心的冒险之一！',
+  descWhite: '探索尤诺瓦地区，在《宝可梦 Black》中展开新的冒险！捕捉超过 150 种全新的宝可梦，挑战神秘的等离子队，并揭开传奇宝可梦烈空坐的秘密。这场冒险将为你带来引人入胜的故事、动态战斗以及全新的三重战斗模式，向你展示了不一样的宝可梦世界。',
+  descSilver: '在《宝可梦 SoulSilver》中，重温经典的城都地区之旅！探索那些熟悉的城市和路线，带着一个宝可梦与你同行，挑战精英四人组，争取成为宝可梦联盟的冠军。在城都与关都两个地区挑战道馆，解开传奇宝可梦陆地之神的秘密。一次史诗般的冒险正等着你！',
+  descPlatinum: '在《宝可梦 SoulSilver》中，重温经典的城都地区之旅！探索那些熟悉的城市和路线，带着一个宝可梦与你同行，挑战精英四人组，争取成为宝可梦联盟的冠军。在城都与关都两个地区挑战道馆，解开传奇宝可梦陆地之神的秘密。一次史诗般的冒险正等着你！',
+  descPearl: '在《宝可梦 Pearl》中，探索神奥地区！捕捉未知的宝可梦，挑战道馆馆主成为冠军，打败银河队，解锁传奇宝可梦帕尔基亚的秘密。体验全新的战斗机制，这场神奥地区的冒险将给你带来一次难忘的经历！',
+  descEsmerald: '在《宝可梦 Emerald》中，踏上霍恩地区的冒险！与水队和火队的领导者展开对战，揭开海皇哈克龙和火王盖欧卡的秘密。通过全新的战斗设施挑战，尽全力成为霍恩地区的冠军！',
+  descFireRed: '重温经典的关东地区冒险，探索《宝可梦 FireRed》！通过现代化的图形和玩法，捕捉、训练并与其他训练师战斗。挑战关东的道馆，阻止火箭队的阴谋，解开传奇宝可梦 Mewtwo 的秘密！',
+  descRuby: '准备好迎接霍恩地区的冒险了吗？在《宝可梦 Ruby》中，捕捉新宝可梦，挑战道馆，打败海洋队，阻止他们的邪恶计划！探索新的地区和神秘地点。',
+  descCristal: '在《宝可梦 Crystal》中，体验全新的冒险！通过第一个可以选择角色性别的游戏玩法，探索丰富的城市与路线。对抗火箭队，捕捉传奇宝可梦瑞克苏，发现它的巨大秘密。',
+  descGold: '在《宝可梦 Gold》中，开启金色之旅！挑战关都地区的道馆，捕捉全新宝可梦并阻止火箭队的阴谋，揭开传奇宝可梦 Ho-Oh 与 Lugia 的秘密。',
+  descYellow: '在《宝可梦 Yellow》中，与皮卡丘一起踏上关东地区的冒险！随着皮卡丘的陪伴，挑战道馆并击败火箭队。捕捉传奇宝可梦 Zapdos、Moltres 和 Articuno！',
+  descBlue: '在《宝可梦 Blue》中，开始你的冒险！挑战道馆，捕捉所有宝可梦，努力成为宝可梦联盟的冠军。与火箭队作战，探索一个充满挑战的世界。',
+  descRed: '在《宝可梦 Red》中，开始你的经典冒险！捕捉、训练并挑战关东地区的道馆，击败火箭队并成为宝可梦联盟的冠军！',
+  toastAlertDesenvolvi: "开发中",
 }
 
 const elementos = {
@@ -255,9 +254,7 @@ const elementos = {
   privacity: document.querySelector('.privacity'),
   descPokemon: document.querySelector('.contPokemon p'),
   descPokemonMobile: document.querySelector('.contDescMobile p'),
-  titlePokedex: document.querySelector('.contPokedex h1'),
   descPokedex: document.querySelector('.contPokedex p'),
-  btnPokedex: document.querySelector('.contPokedex button'),
   textHeader: document.querySelector('.logoPokemon p'),
   toastAlertDesenvolvi: document.querySelector(".textToast"),
 }
@@ -281,7 +278,41 @@ capaPokemon.forEach((audios) => {
      hover.play();
   });
 })
+
+// Funcionalidade da Exibição de descrição, logo e video do jogo
   
+pokopia.forEach((pokopias) => {
+  pokopias.addEventListener('click', () => {
+    gameDesc = "pokopia";
+    langPage();
+    logoPokemon.src = './image/pokopiaLogo.png';
+    logoPokemonMobile.src = './image/pokopiaLogo.png';
+    videoPokemon.src = './video/pokopia.mp4';
+    videoPokemonMobile.src = './video/pokopia.mp4';
+    linkJogo = 'https://www.nintendo.com/pt-br/store/products/pokemon-pokopia-switch-2/?srsltid=AfmBOoox79SHEHEYcyrjnw36FZjiPcQJr1Q5qNcy_Bmgs5Q3jXonPY6T';
+    capaPokemon.forEach((attribute) => {
+      attribute.classList.remove('actived');
+    });
+    pokopias.classList.add('actived');
+  });
+});
+
+zA.forEach((zAs) => {
+  zAs.addEventListener('click', () => {
+    gameDesc = "z-a";
+    langPage();
+    logoPokemon.src = './image/z-aLogo.png';
+    logoPokemonMobile.src = './image/z-aLogo.png';
+    videoPokemon.src = './video/z-a.mp4';
+    videoPokemonMobile.src = './video/z-a.mp4';
+    linkJogo = 'https://www.nintendo.com/pt-br/store/products/pokemon-legends-z-a-nintendo-switch-2-edition-switch-2/?srsltid=AfmBOoq0rqHDT5iuC2-RNetlmCnGNyjuPyp--7md8X9NkgXtTrDqZejH';
+    capaPokemon.forEach((attribute) => {
+      attribute.classList.remove('actived');
+    });
+    zAs.classList.add('actived');
+  });
+});
+
 scarlet.forEach((scarlets) => {
   scarlets.addEventListener('click', () => {
     gameDesc = "scarlet";
@@ -729,6 +760,14 @@ const ingles = () => {
   elementos.descPokemon.innerHTML = eua.descPokemon;
   elementos.descPokemonMobile.innerHTML = eua.descPokemon;
   switch (gameDesc) {
+    case 'pokopia':
+      elementos.descPokemon.innerHTML = eua.descPokopia;
+      elementos.descPokemonMobile.innerHTML = eua.descPokopia;
+      break;
+    case 'z-a':
+      elementos.descPokemon.innerHTML = eua.descZA;
+      elementos.descPokemonMobile.innerHTML = eua.descZA;
+      break;
     case 'scarlet':
       elementos.descPokemon.innerHTML = eua.descScarlet;
       elementos.descPokemonMobile.innerHTML = eua.descScarlet;
@@ -825,9 +864,7 @@ const ingles = () => {
       break;
   }
   elementos.toastAlertDesenvolvi.innerHTML = eua.toastAlertDesenvolvi;
-  elementos.titlePokedex.innerHTML = eua.titlePokedex;
   elementos.descPokedex.innerHTML = eua.descPokedex;
-  elementos.btnPokedex.innerHTML = eua.btnPokedex;
   elementos.textHeader.innerHTML = eua.textHeader;
 }
 
@@ -857,6 +894,14 @@ const portugues = () => {
   elementos.descPokemon.innerHTML = brasil.descPokemon;
   elementos.descPokemonMobile.innerHTML = brasil.descPokemon;
   switch (gameDesc) {
+    case 'pokopia':
+      elementos.descPokemon.innerHTML = brasil.descPokopia;
+      elementos.descPokemonMobile.innerHTML = brasil.descPokopia;
+      break;
+    case 'z-a':
+      elementos.descPokemon.innerHTML = brasil.descZA;
+      elementos.descPokemonMobile.innerHTML = brasil.descZA;
+      break;
     case 'scarlet':
       elementos.descPokemon.innerHTML = brasil.descScarlet;
       elementos.descPokemonMobile.innerHTML = brasil.descScarlet;
@@ -953,9 +998,7 @@ const portugues = () => {
       break;
   }
   elementos.toastAlertDesenvolvi.innerHTML = brasil.toastAlertDesenvolvi;
-  elementos.titlePokedex.innerHTML = brasil.titlePokedex;
   elementos.descPokedex.innerHTML = brasil.descPokedex;
-  elementos.btnPokedex.innerHTML = brasil.btnPokedex;
   elementos.textHeader.innerHTML = brasil.textHeader;
 }
 
@@ -985,6 +1028,14 @@ const espanha = () => {
   elementos.descPokemon.innerHTML = spain.descPokemon;
   elementos.descPokemonMobile.innerHTML = spain.descPokemon;
   switch (gameDesc) {
+    case 'pokopia':
+      elementos.descPokemon.innerHTML = spain.descPokopia;
+      elementos.descPokemonMobile.innerHTML = spain.descPokopia;
+      break;
+    case 'z-a':
+      elementos.descPokemon.innerHTML = spain.descZA;
+      elementos.descPokemonMobile.innerHTML = spain.descZA;
+      break;
     case 'scarlet':
       elementos.descPokemon.innerHTML = spain.descScarlet;
       elementos.descPokemonMobile.innerHTML = spain.descScarlet;
@@ -1077,9 +1128,7 @@ const espanha = () => {
       break;
 }
 elementos.toastAlertDesenvolvi.innerHTML = spain.toastAlertDesenvolvi;
-  elementos.titlePokedex.innerHTML = spain.titlePokedex;
   elementos.descPokedex.innerHTML = spain.descPokedex;
-  elementos.btnPokedex.innerHTML = spain.btnPokedex;
   elementos.textHeader.innerHTML = spain.textHeader;
 }
 
@@ -1109,6 +1158,14 @@ const frances = () => {
   elementos.descPokemon.innerHTML = franca.descPokemon;
   elementos.descPokemonMobile.innerHTML = franca.descPokemon;
   switch (gameDesc) {
+    case 'pokopia':
+      elementos.descPokemon.innerHTML = franca.descPokopia;
+      elementos.descPokemonMobile.innerHTML = franca.descPokopia;
+      break;
+    case 'z-a':
+      elementos.descPokemon.innerHTML = franca.descZA;
+      elementos.descPokemonMobile.innerHTML = franca.descZA;
+      break;
     case 'scarlet':
       elementos.descPokemon.innerHTML = franca.descScarlet;
       elementos.descPokemonMobile.innerHTML = franca.descScarlet;
@@ -1201,9 +1258,7 @@ const frances = () => {
       break;
 }
 elementos.toastAlertDesenvolvi.innerHTML = franca.toastAlertDesenvolvi;
-  elementos.titlePokedex.innerHTML = franca.titlePokedex;
   elementos.descPokedex.innerHTML = franca.descPokedex;
-  elementos.btnPokedex.innerHTML = franca.btnPokedex;
   elementos.textHeader.innerHTML = franca.textHeader;
 }
 
@@ -1233,6 +1288,14 @@ const chines = () => {
   elementos.descPokemon.innerHTML = china.descPokemon;
   elementos.descPokemonMobile.innerHTML = china.descPokemon;
   switch (gameDesc) {
+    case 'pokopia':
+      elementos.descPokemon.innerHTML = china.descPokopia;
+      elementos.descPokemonMobile.innerHTML = china.descPokopia;
+      break;
+    case 'z-a':
+      elementos.descPokemon.innerHTML = china.descZA;
+      elementos.descPokemonMobile.innerHTML = china.descZA;
+      break;
     case 'scarlet':
       elementos.descPokemon.innerHTML = china.descScarlet;
       elementos.descPokemonMobile.innerHTML = china.descScarlet;
@@ -1325,9 +1388,7 @@ const chines = () => {
       break;
 }
 elementos.toastAlertDesenvolvi.innerHTML = china.toastAlertDesenvolvi;
-  elementos.titlePokedex.innerHTML = china.titlePokedex;
   elementos.descPokedex.innerHTML = china.descPokedex;
-  elementos.btnPokedex.innerHTML = china.btnPokedex;
   elementos.textHeader.innerHTML = china.textHeader;
 }
 
@@ -1379,54 +1440,50 @@ let mutedMobile = true;
 videoPokemonMobile.volume = 0;
 
 btnAudio.addEventListener('click', () => {
- if (muted == true) {
-  videoPokemon.volume = 1;
-  muted = false;
-  btnAudioIcon.innerHTML = 'volume_up';
- } else {
-  muted = true;
-  videoPokemon.volume = 0;
-  btnAudioIcon.innerHTML = 'volume_off';
- }
+  if (muted == true) {
+    videoPokemon.volume = 1;
+    muted = false;
+    btnAudioIcon.innerHTML = 'volume_up';
+  } else {
+    muted = true;
+    videoPokemon.volume = 0;
+    btnAudioIcon.innerHTML = 'volume_off';
+  }
 });
 
 btnAudioMobile.addEventListener('click', () => {
-  if (mutedMobile == true) {
-   videoPokemonMobile.volume = 1;
-   mutedMobile = false;
-   btnAudioIconMobile.innerHTML = 'volume_up';
-  } else {
-   mutedMobile = true;
-   videoPokemonMobile.volume = 0;
-   btnAudioIconMobile.innerHTML = 'volume_off';
-  }
- });
+    if (mutedMobile == true) {
+    videoPokemonMobile.volume = 1;
+    mutedMobile = false;
+    btnAudioIconMobile.innerHTML = 'volume_up';
+    } else {
+    mutedMobile = true;
+    videoPokemonMobile.volume = 0;
+    btnAudioIconMobile.innerHTML = 'volume_off';
+    }
+});
 
- let toast = document.querySelector(".toast");
- let textToast = document.querySelector(".pToast");
- let imageToast = document.querySelector(".toast img");
- 
- const toastNotification = new Audio();
- toastNotification.src = "../../global/music/toastNotification.mp3";
- 
- const toastFunction = () => {
- 
-   const lang = localStorage.getItem("lang");
- 
-   if (lang === "eu") {
-     elementos.toastAlertDesenvolvi.innerHTML = eua.toastAlertDesenvolvi;
-   } else if (lang === "es") {
-     elementos.toastAlertDesenvolvi.innerHTML = spain.toastAlertDesenvolvi;
-   } else if (lang === "fr") {
-     elementos.toastAlertDesenvolvi.innerHTML = franca.toastAlertDesenvolvi;
-   } else if (lang === "ch") {
-     elementos.toastAlertDesenvolvi.innerHTML = china.toastAlertDesenvolvi;
-   } else {
-     // Caso nenhuma linguagem esteja no localStorage, define como 'br'
-     elementos.toastAlertDesenvolvi.innerHTML = brasil.toastAlertDesenvolvi;
-   }
- };
- 
- elementos.btnPokedex.addEventListener("click", () => {
-  window.location.href = "https://eryckborges.github.io/Dev-Escorpion/projects/pokemon/pokedex/";
- });
+let toast = document.querySelector(".toast");
+let textToast = document.querySelector(".pToast");
+let imageToast = document.querySelector(".toast img");
+
+const toastNotification = new Audio();
+toastNotification.src = "../../global/music/toastNotification.mp3";
+
+const toastFunction = () => {
+
+  const lang = localStorage.getItem("lang");
+
+  if (lang === "eu") {
+    elementos.toastAlertDesenvolvi.innerHTML = eua.toastAlertDesenvolvi;
+  } else if (lang === "es") {
+    elementos.toastAlertDesenvolvi.innerHTML = spain.toastAlertDesenvolvi;
+  } else if (lang === "fr") {
+    elementos.toastAlertDesenvolvi.innerHTML = franca.toastAlertDesenvolvi;
+  } else if (lang === "ch") {
+    elementos.toastAlertDesenvolvi.innerHTML = china.toastAlertDesenvolvi;
+  } else {
+    // Caso nenhuma linguagem esteja no localStorage, define como 'br'
+    elementos.toastAlertDesenvolvi.innerHTML = brasil.toastAlertDesenvolvi;
+  }
+};
