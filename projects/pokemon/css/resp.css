@@ -31,6 +31,20 @@
         height: 40%;
     }
 
+    .capaPokemon {
+        height: 50%;
+    }
+
+    .capaPokemon.actived {
+        width: 200px;
+        height: 60%;
+    }
+
+    .capaPokemon:hover {
+        width: 200px;
+        height: 60%;
+    }
+
     .btnAudioMobile {
         position: absolute;
         top: 2vh;

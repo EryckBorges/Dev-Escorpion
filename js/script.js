@@ -949,7 +949,7 @@ let isExpanded = false;
 const sololeveling = document.querySelector(".sololeveling");
 
 sololeveling.addEventListener("click", () => {
-  window.location.href = "./projects/sololeveling/";
+  window.location.href = "./projects/soloLeveling/";
 });
 
 const relogio = document.querySelector(".relogio");

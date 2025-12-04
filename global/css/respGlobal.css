@@ -61,7 +61,7 @@
     }
 
     .logo > a {
-        max-width: 60px;
+        max-width: auto;
         width: 50px;
     }
 
@@ -102,7 +102,7 @@
     }
 
     .logoMenu > .logo > img {
-        width: 80%;
+        width: auto;
         height: 90%;
     }
 

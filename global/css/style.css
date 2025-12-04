@@ -3,6 +3,7 @@
     padding:0;
     user-select: none;
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -320,6 +321,7 @@ footer {
     width: 100%;
     background: url('../icon/backgroundFooter.svg') center / cover no-repeat;
     flex-direction: column;
+    z-index: 99;
 }
 
 .conteudoFooter {
