@@ -51,12 +51,12 @@ document.addEventListener('DOMContentLoaded', () => {
   cnpq.addEventListener('click', () => {
     // Json com os dados que seram exibidos para o usuário
     let jsonImg = {
-      logo: '../Portfolio/image/icon/cnpq.svg',
+      logo: './image/icon/cnpq.svg',
       title: 'Descrição sobre o certificado',
       text: [
         "Esse certificado foi conquistado durante o desenvolvimento do nosso projeto de TCC, que consistia na criação de um site voltado para a adoção de pets. A plataforma permitia que usuários adotassem ou colocassem animais para adoção, além de oferecer a opção de assinar uma caixinha surpresa mensal, com produtos personalizados para cada pet. Se tiver mais interesse sobre ele basta acessar o link abaixo <br><br><a href='https://eryckborges.github.io/Dev-Escorpion/projects/aumigosPets/' target='_blank'>AuMigos Pet's ",
       ],
-      imagens: ['../Portfolio/image/certificados/cotuca.png'],
+      imagens: ['./image/certificados/cotuca.png'],
     }
 
     localStorage.setItem('jsonImages', JSON.stringify(jsonImg));
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
   unesp.addEventListener('click', () => {
     // Json com os dados que seram exibidos para o usuário
     let jsonImg = {
-      logo: '../Portfolio/image/icon/unesp.png',
+      logo: './image/icon/unesp.png',
       title: 'Descrição sobre o certificado',
       text: [
         "Esse certificado da UNESP foi conquistado durante uma semana exclusiva sobre tecnologia. Aprendi a criar animações 2D usando o GIMP, integrá-las ao HTML, desenvolver joguinhos e muito mais. Foi uma semana incrível da qual sentirei saudades.", 
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Já esse outro certificado foi da SETINF — a Semana de Tecnologia. Durante o evento, tive contato com diversos temas como impressoras 3D, programação em Python e outros recursos bastante interessantes.",
         "Já esse outro certificado foi da SETINF — a Semana de Tecnologia. Durante o evento, tive contato com diversos temas como impressoras 3D, programação em Python e outros recursos bastante interessantes."
       ],
-      imagens: ['../Portfolio/image/certificados/unesp-front.png', '../Portfolio/image/certificados/unesp-back.png', '../Portfolio/image/certificados/setinf-front.png', '../Portfolio/image/certificados/setinf-back.png'],
+      imagens: ['./image/certificados/unesp-front.png', './image/certificados/unesp-back.png', './image/certificados/setinf-front.png', './image/certificados/setinf-back.png'],
     };
   
     localStorage.setItem('jsonImages', JSON.stringify(jsonImg));
@@ -92,12 +92,12 @@ document.addEventListener('DOMContentLoaded', () => {
   plenus.addEventListener('click', () => {
     // Json com os dados que seram exibidos para o usuário
     let jsonImg = {
-      logo: '../Portfolio/image/icon/plenus.png',
+      logo: './image/icon/plenus.png',
       title: 'Descrição sobre o certificado',
       text: [
         "Conquistei esse certificado para aprofundar meus conhecimentos sobre aplicativos usados em design gráfico — uma área que gosto de explorar e personalizar de várias formas."
       ],
-      imagens: ['../Portfolio/image/certificados/plenus.png'],
+      imagens: ['./image/certificados/plenus.png'],
     };
   
     localStorage.setItem('jsonImages', JSON.stringify(jsonImg));
@@ -949,25 +949,25 @@ let isExpanded = false;
 const sololeveling = document.querySelector(".sololeveling");
 
 sololeveling.addEventListener("click", () => {
-  window.location.href = "https://eryckborges.github.io/Dev-Escorpion/projects/SoloLeveling/";
+  window.location.href = "./projects/sololeveling/";
 });
 
 const relogio = document.querySelector(".relogio");
 
 relogio.addEventListener("click", () => {
-  window.location.href = "https://eryckborges.github.io/Dev-Escorpion/projects/relogio/";
+  window.location.href = "./projects/relogio/";
 });
 
 const pokemon = document.querySelector(".pokemon");
 
 pokemon.addEventListener("click", () => {
-  window.location.href = "https://eryckborges.github.io/Dev-Escorpion/projects/pokemon/";
+  window.location.href = "./projects/pokemon/";
 });
 
 const aumigos = document.querySelector(".aumigos");
 
 aumigos.addEventListener("click", () => {
-  window.location.href = "https://eryckborges.github.io/Dev-Escorpion/projects/aumigosPets/";
+  window.location.href = "./projects/aumigosPets/";
 });
 
 
@@ -995,7 +995,7 @@ const toastFunction = () => {
 const slechi = document.querySelector(".slechi");
 
 slechi.addEventListener("click", () => {
-  window.location.href = "https://eryckborges.github.io/Dev-Escorpion/projects/client/slechi/";
+  window.location.href = "./projects/client/slechi/";
 });
 
 //Função dos cliques para mudar de idioma
