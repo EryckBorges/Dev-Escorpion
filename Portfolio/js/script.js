@@ -109,8 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 }); 
 
-
-
 let typedInstance; // Variável global para armazenar a instância de Typed.js
 
 // Função da animação de apresentação
@@ -177,6 +175,10 @@ privacity: 'Privacy',
   titlePokemon: "Pokedex and Games",
   titleSlechi: "Ice Cream Catalog",
   titleAumigos: "Graduation Project - AuMigos Pet's",
+  unespDesc: 'High School and Computer Technician',
+  dioDesc: 'Bootcamps and Other Courses',
+  cnpqDesc: '30th Young Scientist Award',
+  plenusDesc: 'Office Package, Design, and Much More',
   // btnAllProject: "See all projects",
 servicePrest: 'Discover the Services I Offer',
 servicePrestText: "I offer computer and laptop repair and maintenance services, as well as PC assembly and upgrades, helping you choose the best parts for performance and cost-effectiveness. I also work in web application development, creating modern and responsive websites using HTML, CSS, JavaScript, Git, GitHub, Figma, and Canva. Get in touch and take your technology to the next level! Let's Code!",
@@ -209,6 +211,10 @@ const brasil = {
   titlePokemon: "Pokedex e Jogos",
   titleSlechi: "Catalogo de Sorvetes",
   titleAumigos: "TCC - AuMigos Pet's",
+  unespDesc: 'Ensino médio e Técnico em Informática',
+  dioDesc: 'Bootcamps e Outros Cursos',
+  cnpqDesc: '30º Prêmio Jovem Cientista',
+  plenusDesc: 'Pacote Office, Design e muito mais...',
   // btnAllProject: "Veja todos os projetos",
   servicePrest: 'Conheça os Serviços que Ofereço',
 servicePrestText: "Ofereço serviços de conserto e manutenção de computadores e notebooks, além de montagem e upgrade de PCs, ajudando a escolher as melhores peças para desempenho e custo-benefício. Também atuo no desenvolvimento de aplicações web, criando sites modernos e responsivos com HTML, CSS, JavaScript, Git, GitHub, Figma e Canva. Entre em contato e leve sua tecnologia para o próximo nível! Let's Code!",
@@ -241,6 +247,10 @@ privacity: 'Privacidad',
   titlePokemon: "Pokedex y Juegos",
   titleSlechi: "Catálogo de Helados",
   titleAumigos: "Trabajo de Fin de Curso - AuMigos Pet's",
+  unespDesc: 'Secundaria y Técnico en Informática',
+  dioDesc: 'Bootcamps y Otros Cursos',
+  cnpqDesc: '30º Premio Joven Científico',
+  plenusDesc: 'Paquete Office, Diseño y Mucho Más',
   // btnAllProject: "Ver todos los proyectos",
 servicePrest: 'Descubre los Servicios que Ofrezco',
 servicePrestText: "Ofrezco servicios de reparación y mantenimiento de computadoras y laptops, así como ensamblaje y actualización de PC, ayudándote a elegir las mejores piezas para rendimiento y costo-beneficio. También me dedico al desarrollo de aplicaciones web, creando sitios modernos y responsivos con HTML, CSS, JavaScript, Git, GitHub, Figma y Canva. ¡Ponte en contacto y lleva tu tecnología al siguiente nivel! ¡Let's Code!",
@@ -273,6 +283,10 @@ privacity: 'Confidentialité',
   titlePokemon: "Pokedex et Jeux",
   titleSlechi: "Catalogue de Glaces",
   titleAumigos: "Projet de Fin d'Études - AuMigos Pet's",
+  unespDesc: 'Lycée et Technicien en Informatique',
+  dioDesc: 'Bootcamps et Autres Cours',
+  cnpqDesc: '30e Prix Jeune Scientifique',
+  plenusDesc: 'Pack Office, Design et Bien Plus',
 notConhecimento: "de connaissance <br> que je ne possède pas",
 servicePrest: 'Découvrez les services que j’offre',
 servicePrestText: "J'offre des services de réparation et de maintenance d'ordinateurs et d'ordinateurs portables, ainsi que l'assemblage et la mise à niveau de PC, en vous aidant à choisir les meilleures pièces pour la performance et le rapport qualité-prix. Je travaille également dans le développement d'applications web, en créant des sites modernes et responsifs avec HTML, CSS, JavaScript, Git, GitHub, Figma et Canva. Contactez-moi et faites passer votre technologie au niveau supérieur ! Let's Code ",
@@ -305,6 +319,10 @@ privacity: '隐私政策',
   titleSlechi: "冰淇淋目录",
   titlePokemon: "宝可梦图鉴与游戏",
   titleAumigos: "毕业项目 - AuMigos Pet's",
+  unespDesc: '高中与计算机技术员课程',
+  dioDesc: '训练营和其他课程',
+  cnpqDesc: '第30届青年科学家奖',
+  plenusDesc: 'Office 套件、设计及更多内容',
   // btnAllProject: "查看所有项目",
 servicePrest: '发现我提供的服务',
 servicePrestText: "我提供电脑和笔记本电脑的维修和维护服务，以及PC组装和升级，帮助您选择最佳配件，以提高性能并优化成本。我还从事Web应用开发，使用HTML、CSS、JavaScript、Git、GitHub、Figma和Canva创建现代化、响应式的网站。欢迎联系我们，让您的技术更上一层楼！Let's Code!",
@@ -336,6 +354,10 @@ const elementos = {
   titlePokemon: document.querySelector(".pokemon p"),
   titleSlechi: document.querySelector(".slechi p"),
   titleAumigos: document.querySelector(".aumigos p"),
+  unespDesc: document.querySelector(".unesp"),
+  dioDesc: document.querySelector(".dio"),
+  cnpqDesc: document.querySelector(".cnpq"),
+  plenusDesc: document.querySelector(".plenus"),
   // btnAllProject: document.querySelectorAll(".btnAllProject"),
   servicePrest: document.querySelector('.servicePrest'),
 servicePrestText: document.querySelector('.servicePrestText'),
@@ -376,6 +398,10 @@ const ingles = () => {
   elementos.tecnologias.innerHTML = eua.tecnologias;
   elementos.certificado.innerHTML = eua.certificado;
   elementos.avaliacaoTitle.innerHTML = eua.avaliacaoTitle;
+  elementos.unespDesc.innerHTML = eua.unespDesc;
+  elementos.dioDesc.innerHTML = eua.dioDesc;
+  elementos.cnpqDesc.innerHTML = eua.cnpqDesc;
+  elementos.plenusDesc.innerHTML = eua.plenusDesc;
   alternarIdioma("Eu");
   animacaoTyped(".typedEu", [
     "Hello, my name is Eryck Borges",
@@ -432,6 +458,10 @@ const portugues = () => {
   elementos.visualizar.forEach((button) => {
     button.innerHTML = brasil.visualizar;
   });
+   elementos.unespDesc.innerHTML = brasil.unespDesc;
+  elementos.dioDesc.innerHTML = brasil.dioDesc;
+  elementos.cnpqDesc.innerHTML = brasil.cnpqDesc;
+  elementos.plenusDesc.innerHTML = brasil.plenusDesc;
   elementos.ferramentas.innerHTML = brasil.ferramentas;
   elementos.tecnologias.innerHTML = brasil.tecnologias;
   elementos.certificado.innerHTML = brasil.certificado;
@@ -491,6 +521,10 @@ const espanha = () => {
   elementos.visualizar.forEach((button) => {
     button.innerHTML = spain.visualizar;
   });
+   elementos.unespDesc.innerHTML = spain.unespDesc;
+  elementos.dioDesc.innerHTML = spain.dioDesc;
+  elementos.cnpqDesc.innerHTML = spain.cnpqDesc;
+  elementos.plenusDesc.innerHTML = spain.plenusDesc;
   elementos.ferramentas.innerHTML = spain.ferramentas;
   elementos.tecnologias.innerHTML = spain.tecnologias;
   elementos.certificado.innerHTML = spain.certificado;
@@ -552,6 +586,10 @@ const frances = () => {
   elementos.visualizar.forEach((button) => {
     button.innerHTML = franca.visualizar;
   });
+   elementos.unespDesc.innerHTML = franca.unespDesc;
+  elementos.dioDesc.innerHTML = franca.dioDesc;
+  elementos.cnpqDesc.innerHTML = franca.cnpqDesc;
+  elementos.plenusDesc.innerHTML = franca.plenusDesc;
   elementos.ferramentas.innerHTML = franca.ferramentas;
   elementos.tecnologias.innerHTML = franca.tecnologias;
   elementos.certificado.innerHTML = franca.certificado;
@@ -600,6 +638,10 @@ const chines = () => {
   elementos.sobre.forEach((sobreText) => {
     sobreText.innerHTML = china.sobre;
   });
+   elementos.unespDesc.innerHTML = china.unespDesc;
+  elementos.dioDesc.innerHTML = china.dioDesc;
+  elementos.cnpqDesc.innerHTML = china.cnpqDesc;
+  elementos.plenusDesc.innerHTML = china.plenusDesc;
   elementos.sobreMim.innerHTML = china.sobreMim;
   elementos.contMim.innerHTML = china.contMim;
   elementos.meusProjetos.innerHTML = china.meusProjetos;
@@ -950,11 +992,64 @@ const toastFunction = () => {
   }
 };
 
-
 const slechi = document.querySelector(".slechi");
 
 slechi.addEventListener("click", () => {
   window.location.href = "https://eryckborges.github.io/Dev-Escorpion/projects/client/slechi/";
+});
+
+//Função dos cliques para mudar de idioma
+
+const eu = document.querySelector('.eua');
+const es = document.querySelector('.spain');
+const br = document.querySelector('.brasil');
+const fr = document.querySelector('.franca');
+const ch = document.querySelector('.china');
+
+
+let langSelecionada = document.querySelector(".idiomaSelecionada");
+let flagSelecionada = document.querySelector(".flagsSelecionada img");
+const flagsSelecionada = document.querySelector(".flagsSelecionada");
+const langs = document.querySelector('.lang');
+
+// Inglês
+eu.addEventListener('click', () => {
+  langSelecionada.innerHTML = "EN";
+  flagSelecionada.src = "https://eryckborges.github.io/Dev-Escorpion/global/icon/eua.png"
+  localStorage.setItem('lang', 'eu');
+  ingles();
+});
+
+// Espanhol
+es.addEventListener('click', () => {
+  langSelecionada.innerHTML = "ES";
+  flagSelecionada.src = "https://eryckborges.github.io/Dev-Escorpion/global/icon/spain.png"
+  localStorage.setItem('lang', 'es');
+  espanha();
+});
+
+// Português Brasil
+br.addEventListener('click', () => {
+  langSelecionada.innerHTML = "PT";
+  flagSelecionada.src = "https://eryckborges.github.io/Dev-Escorpion/global/icon/brasil.png"
+  localStorage.setItem('lang', 'br');
+  portugues();
+});
+
+// Francês
+fr.addEventListener('click', () => {
+  langSelecionada.innerHTML = "FR";
+  flagSelecionada.src = "https://eryckborges.github.io/Dev-Escorpion/global/icon/franca.png"
+  localStorage.setItem('lang', 'fr');
+  frances();
+});
+
+// Chinês
+ch.addEventListener('click', () => {
+  langSelecionada.innerHTML = "ZH";
+  flagSelecionada.src = "https://eryckborges.github.io/Dev-Escorpion/global/icon/china.png"
+  localStorage.setItem('lang', 'ch');
+  chines();
 });
 
 

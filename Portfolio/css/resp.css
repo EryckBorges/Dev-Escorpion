@@ -285,7 +285,7 @@
         display: none;
     }
    
-  .project {
+  .project, .service {
     width: 700px;
   }
   

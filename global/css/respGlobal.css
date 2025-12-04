@@ -13,6 +13,13 @@
         animation: openToast 0.5s linear;
     }
 
+    .toast.toastOpen {
+        display: flex;
+        opacity: 1;
+        width: 80%;
+        animation: openToast 0.5s linear;
+    }
+
     @keyframes openToast {
         from {
             width: 56px;
@@ -280,6 +287,13 @@ footer {
     margin-left: 0px;
 }
 
+.logoFooter > img {
+    width: auto;
+    height: 80%;
+    position: absolute;
+    top: 0;
+}
+
 .conteudoFooter {
     flex-direction: column;
 }
@@ -409,6 +423,12 @@ footer {
         width: 40%;
         animation: openToast 0.5s linear;
     }
+    .toast.toastOpen {
+        display: flex;
+        opacity: 1;
+        width: 40%;
+        animation: openToast 0.5s linear;
+    }
 
     @keyframes openToast {
         from {
@@ -440,7 +460,7 @@ footer {
     }
 
     .logoFooter > img {
-        width: 25%;
+        width: auto;
         height: 70%;
     }
 
@@ -452,6 +472,74 @@ footer {
     .copyRight > p {
         text-align: center;
         font-size: 1.2em !important;
+    }
+
+    
+    /* Box para exibição de imagens e afins */
+
+    .divContent {
+        width: 90%;
+        height: 80%;
+        flex-direction: column;
+    }
+
+    .divContentDesc {
+        width: 90%;
+        height: 40%;
+        padding: 10px 40px;
+    }
+
+    .divContentImagens {
+        width: 100%;
+        height: 60%;
+    }
+
+    .divDesc {
+        width: 100%;
+        height: 85%;
+        flex-direction: column;
+        justify-content: left !important;
+        gap: 10px;
+    }
+
+    .imgLogo {
+        width: auto;
+        height: 80%;
+    }
+
+    .titleDesc {
+        font-size: 1.6em !important;
+        padding: 10px 0px;
+    }
+
+    .textDesc {
+        font-size: 1.2em !important;
+        height: auto;
+        overflow-y: auto !important;
+    }
+
+    .imgMain {
+        width: 90%;
+        height: 80%;
+    }
+
+    .backButtonImage, .nextButtonImage {
+        width: 80px;
+        height: 80px;
+        font-size: 1.6em;
+    }
+
+    .backButtonImage {
+        left: 4vw;
+    }
+
+    .nextButtonImage {
+        right: 4vw;
+    }
+
+    .closedImage {
+        width: 60px;
+        height: 60px;
     }
 }
 

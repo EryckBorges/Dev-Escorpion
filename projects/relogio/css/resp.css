@@ -239,6 +239,10 @@
     .textClock > h1 {
         font-size: 2em;
     }
+
+    .textClock > p {
+        font-size: 1.6em !important;
+    }
     
     .relogio {
         height: 50%;
@@ -291,7 +295,7 @@
     }
 
     .contentClockChess > p {
-        font-size: 1.2em;
+        font-size: 1.6em;
     }
     
     .rightClock, .leftClock {
@@ -304,11 +308,11 @@
     }
 
     .contentCronometo > h1 {
-        font-size: 1.6em;
+        font-size: 2em;
     }
     
     .contentCronometo > p {
-        font-size: 1em;
+        font-size: 1.4em !important;
     }
   
 .contentCronometo {

@@ -35,8 +35,9 @@ privacity: 'Privacy',
     titleClockChess: 'Interactive Chess Clock',
     textClockChess: 'On the side, you can check out a dynamic chess clock, created with HTML, CSS, and JavaScript. It controls the time of each player in a match, showing how programming transforms strategic ideas into useful tools!',
     titleCronometro: "Digital Stopwatch",
-textCronometro: "On the side, you can check out a functional stopwatch, created as part of my portfolio. This project was developed using HTML, CSS, and JavaScript, utilizing timing functions like setInterval() to update the seconds in real-time. Explore this demonstration and see how programming can transform simple ideas into useful and dynamic tools!"
-
+    textCronometro: "On the side, you can check out a functional stopwatch, created as part of my portfolio. This project was developed using HTML, CSS, and JavaScript, utilizing timing functions like setInterval() to update the seconds in real-time. Explore this demonstration and see how programming can transform simple ideas into useful and dynamic tools!",
+    toastTemp: 'Add a Time',
+    titlePage: 'Dev Escorpion | Digital Clock', 
 };
 
 const brasil = {
@@ -73,8 +74,10 @@ const brasil = {
     textClock: 'Ao lado, você pode conferir um relógio digital em tempo real, criado como parte do meu portfólio. Este projeto utiliza a função Date() do JavaScript para exibir horas, minutos e segundos de forma dinâmica e precisa. Explore esta demonstração e veja como a programação pode dar vida a ideias simples e funcionais!',
     titleClockChess: 'Relógio de Xadrez Interativo',
     textClockChess: 'Ao lado, você pode conferir um relógio de xadrez dinâmico, criado com HTML, CSS e JavaScript. Ele controla o tempo de cada jogador em uma partida, mostrando como a programação transforma ideias estratégicas em ferramentas úteis!',
-titleCronometro: "Cronometro Digital",
-    textCronometro: "Ao lado, você pode conferir um cronômetro funcional, criado como parte do meu portfólio. Este projeto foi desenvolvido utilizando HTML, CSS e JavaScript, com o uso de funções de temporização como setInterval() para atualizar os segundos em tempo real. Explore esta demonstração e veja como a programação pode transformar ideias simples em ferramentas úteis e dinâmicas!"
+    titleCronometro: "Cronometro Digital",
+    titlePage: 'Dev Escorpion | Relógio Digital', 
+    textCronometro: "Ao lado, você pode conferir um cronômetro funcional, criado como parte do meu portfólio. Este projeto foi desenvolvido utilizando HTML, CSS e JavaScript, com o uso de funções de temporização como setInterval() para atualizar os segundos em tempo real. Explore esta demonstração e veja como a programação pode transformar ideias simples em ferramentas úteis e dinâmicas!",
+    toastTemp: 'Adicione um Tempo',
 };
 
 const spain = {
@@ -112,8 +115,9 @@ privacity: 'Privacidad',
     titleClockChess: 'Reloj de Ajedrez Interactivo',
     textClockChess: 'A la derecha, puedes ver un reloj de ajedrez dinámico, creado con HTML, CSS y JavaScript. Controla el tiempo de cada jugador en una partida, mostrando cómo la programación transforma ideas estratégicas en herramientas útiles!',
     titleCronometro: "Cronómetro Digital",
+    titlePage: 'Dev Escorpion | Reloj Digital', 
+    toastTemp: 'Agrega un Tiempo',
     textCronometro: "Al lado, puedes ver un cronómetro funcional, creado como parte de mi portafolio. Este proyecto fue desarrollado utilizando HTML, CSS y JavaScript, empleando funciones de temporización como setInterval() para actualizar los segundos en tiempo real. ¡Explora esta demostración y descubre cómo la programación puede transformar ideas simples en herramientas útiles y dinámicas!"
-    
 };
 
 const franca = {
@@ -149,10 +153,11 @@ privacity: 'Confidentialité',
     titleClock: 'Horloge numérique interactive',
     textClock: 'À côté, vous pouvez voir une horloge numérique en temps réel, créée dans le cadre de mon portfolio. Ce projet utilise la fonction Date() de JavaScript pour afficher les heures, les minutes et les secondes de manière dynamique et précise. Explorez cette démonstration et découvrez comment la programmation peut donner vie à des idées simples et fonctionnelles !',
     titleClockChess: 'Horloge d\'Échecs Interactive',
-textClockChess: 'À côté, vous pouvez consulter une horloge d\'échecs dynamique, créée avec HTML, CSS et JavaScript. Elle contrôle le temps de chaque joueur pendant une partie, montrant comment la programmation transforme des idées stratégiques en outils utiles!',
-titleCronometro: "Chronomètre Numérique",
-textCronometro: "À côté, vous pouvez découvrir un chronomètre fonctionnel, créé dans le cadre de mon portfolio. Ce projet a été développé en utilisant HTML, CSS et JavaScript, avec des fonctions de temporisation comme setInterval() pour mettre à jour les secondes en temps réel. Explorez cette démonstration et voyez comment la programmation peut transformer des idées simples en outils utiles et dynamiques !"
-
+    textClockChess: 'À côté, vous pouvez consulter une horloge d\'échecs dynamique, créée avec HTML, CSS et JavaScript. Elle contrôle le temps de chaque joueur pendant une partie, montrant comment la programmation transforme des idées stratégiques en outils utiles!',
+    titleCronometro: "Chronomètre Numérique",
+    titleClock: 'Dev Escorpion | Horloge Numérique',
+    toastTemp: 'Ajoutez un Temps',
+    textCronometro: "À côté, vous pouvez découvrir un chronomètre fonctionnel, créé dans le cadre de mon portfolio. Ce projet a été développé en utilisant HTML, CSS et JavaScript, avec des fonctions de temporisation comme setInterval() pour mettre à jour les secondes en temps réel. Explorez cette démonstration et voyez comment la programmation peut transformer des idées simples en outils utiles et dynamiques !"
 };
 
 const china = {
@@ -188,10 +193,11 @@ privacity: '隐私政策',
     titleClock: '互动数字时钟',
     textClock: '在旁边，您可以看到一个实时数字时钟，这是我作品集的一部分。这个项目使用了 JavaScript 的 Date() 函数，以动态和精确的方式显示小时、分钟和秒。探索这个演示，看看编程如何让简单而实用的想法变得生动起来！',
     titleClockChess: '互动国际象棋时钟',
-textClockChess: '在旁边，您可以查看一个动态国际象棋时钟，使用HTML、CSS和JavaScript创建。它控制每个玩家在比赛中的时间，展示了编程如何将战略思维转化为有用的工具！',
-titleCronometro: "数字计时器",
-textCronometro: "在旁边，您可以看到一个功能性计时器，这是我作品集的一部分。这个项目使用了 HTML、CSS 和 JavaScript 开发，并利用了像 setInterval() 这样的计时函数来实时更新秒数。探索这个演示，看看编程如何将简单的想法变成有用且动态的工具！"
-
+    textClockChess: '在旁边，您可以查看一个动态国际象棋时钟，使用HTML、CSS和JavaScript创建。它控制每个玩家在比赛中的时间，展示了编程如何将战略思维转化为有用的工具！',
+    titleCronometro: "数字计时器",
+    titleClock: 'Dev Escorpion | 数字时钟',
+    toastTemp: '添加一个时间',
+    textCronometro: "在旁边，您可以看到一个功能性计时器，这是我作品集的一部分。这个项目使用了 HTML、CSS 和 JavaScript 开发，并利用了像 setInterval() 这样的计时函数来实时更新秒数。探索这个演示，看看编程如何将简单的想法变成有用且动态的工具！"
 };
 
 const elementos = {
@@ -213,6 +219,8 @@ const elementos = {
     textClockChess: document.querySelector('.contentClockChess p'),
     titleCronometro: document.querySelector('.contentCronometo h1'),
     textCronometro: document.querySelector('.contentCronometo p'),
+    titleClock: document.querySelector('.titlePage'),
+    textToast: document.querySelector('.pToast'),
 };
 
 const ingles = () => {
@@ -234,10 +242,12 @@ const ingles = () => {
     elementos.sobre.forEach((sobreText) => {
         sobreText.innerHTML = eua.sobre;
     });  
+    elementos.textToast.innerHTML = eua.toastTemp;
     elementos.footerProject.innerHTML = eua.footerProject;
     elementos.use.innerHTML = eua.use;
     elementos.privacity.innerHTML = eua.privacity;
     elementos.cookie.innerHTML = eua.cookie;
+    elementos.titleClock.innerHTML = eua.titleClock;
     const data = new Date();
     let daySemana = data.getDay();
     let mesAno = data.getMonth();
@@ -333,8 +343,10 @@ const portugues = () => {
     elementos.sobre.forEach((sobreText) => {
         sobreText.innerHTML = brasil.sobre;
     });  
+    elementos.textToast.innerHTML = brasil.toastTemp;
     elementos.footerProject.innerHTML = brasil.footerProject;
     elementos.use.innerHTML = brasil.use;
+    elementos.titleClock.innerHTML = brasil.titleClock;
     elementos.privacity.innerHTML = brasil.privacity;
     elementos.cookie.innerHTML = brasil.cookie;
     const data = new Date();
@@ -432,8 +444,10 @@ const espanha = () => {
     elementos.sobre.forEach((sobreText) => {
         sobreText.innerHTML = spain.sobre;
     });  
+    elementos.textToast.innerHTML = spain.toastTemp;
     elementos.footerProject.innerHTML = spain.footerProject;
   elementos.use.innerHTML = spain.use;
+  elementos.titleClock.innerHTML = spain.titleClock;
   elementos.privacity.innerHTML = spain.privacity;
   elementos.cookie.innerHTML = spain.cookie;
     const data = new Date();
@@ -531,8 +545,10 @@ const frances = () => {
     elementos.sobre.forEach((sobreText) => {
         sobreText.innerHTML = franca.sobre;
     });   
+    elementos.textToast.innerHTML = franca.toastTemp;
     elementos.footerProject.innerHTML = franca.footerProject;
   elementos.use.innerHTML = franca.use;
+  elementos.titleClock.innerHTML = franca.titleClock;
   elementos.privacity.innerHTML = franca.privacity;
   elementos.cookie.innerHTML = franca.cookie;
     const data = new Date();
@@ -630,8 +646,10 @@ const chines = () => {
     elementos.sobre.forEach((sobreText) => {
         sobreText.innerHTML = china.sobre;
     });  
+    elementos.textToast.innerHTML = china.toastTemp;
     elementos.footerProject.innerHTML = china.footerProject;
     elementos.use.innerHTML = china.use;
+    elementos.titleClock.innerHTML = china.titleClock;
     elementos.privacity.innerHTML = china.privacity;
     elementos.cookie.innerHTML = china.cookie;
     const data = new Date();
@@ -1136,7 +1154,6 @@ const leftClickClock = document.querySelector('.leftClock');
 const rightClickClock = document.querySelector('.rightClock');
 
 let toast = document.querySelector('.toast');
-let textToast = document.querySelector('.pToast');
 let imageToast = document.querySelector('.toast img');
 
 const toastNotification = new Audio();
@@ -1146,7 +1163,7 @@ toast.addEventListener('click', () => {
     toast.classList.remove('toastOpen');
     toast.style.animation = 'closeToast 500ms';
     setTimeout(() => {
-        textToast.style.display = 'none'
+        elementos.textToast.style.display = 'none'
         setTimeout(() => {
             toast.style.opacity = '0'
             toast.style.display = 'none'
@@ -1213,23 +1230,24 @@ play.addEventListener('click', () => {
             toast.classList.add('toastOpen');
             toast.style.animation = 'openToast 1s';
             setTimeout(() => {
-                textToast.style.display = 'flex'
-                textToast.innerHTML = 'Adicione um Tempo'
-                
+                elementos.textToast.style.display = 'flex'
+                langPage();
+                document.querySelector('body').style.pointerEvents = 'none';
             }, 200);
         }, 200);
         setTimeout(() => {
             toast.classList.remove('toastOpen');
             toast.style.animation = 'closeToast 500ms';
             setTimeout(() => {
-                textToast.style.display = 'none'
+                elementos.textToast.style.display = 'none'
                 setTimeout(() => {
                     toast.style.opacity = '0'
                     toast.style.display = 'none'
                     toast.style.animation = 'none';
+                    document.querySelector('body').style.pointerEvents = 'auto';
                 }, 500);
             }, 200);
-        }, 5000);
+        }, 4000);
     }
 });
 
