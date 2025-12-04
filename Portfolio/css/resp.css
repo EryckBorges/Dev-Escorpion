@@ -10,13 +10,11 @@
     }
     
     .sobreMim {
-        height: 120vh;
         flex-direction: column;
     }
 
     .cont {
         width:90%;
-        height:100%;
     }
 
     .cont > h1 {
@@ -39,11 +37,20 @@
 
     .titleMyProject, .titleMyProjectServices {
         font-size: 1.6em;
-        position: relative;
     }
 
     .titleMyProject::after, .titleMyProject::before, .titleMyProjectServices::after, .titleMyProjectServices::before {
         width:150px;
+    }
+
+    .project, .service {
+        width: 350px;
+        height: 90%;
+    }
+
+    .project:hover {
+        width:350px;
+        height: 90%;
     }
 
     .project > p, .service > p {
@@ -51,10 +58,7 @@
     }    
     
     .ferramentas {
-        width:100%;
         height:90vh;
-        flex-direction: column;
-        position: relative;
     }
 
     .ferramentas > h1 {
@@ -64,7 +68,7 @@
     }
 
     .ferramentas::after {
-        width:150px;
+        width: 150px;
         height: 150px;
     }
 
@@ -80,7 +84,6 @@
     }
 
     .icons {
-        width: 100%;
         height: 35%;
         flex-direction: row;
         gap: 40px;
@@ -88,8 +91,8 @@
     }
 
     .icons > img {
-        width:80px;
-        height:80px;
+        width: 60px;
+        height: 60px;
     }
 
     .estudos {
@@ -97,8 +100,6 @@
     }
 
     .estudos > h1 {
-        height:30%;
-        width: 100%;
         font-size: 1.4em;
         text-align: center;
     }
@@ -106,6 +107,7 @@
     /* Certificados e Conquistas*/
 
     .certificados_section > h1 {
+        margin-bottom:20px;
         height:15vh;
         font-size: 1.4em;
         text-align: center;
@@ -124,6 +126,8 @@
 
     .instituicoes {
         height: 22vh;
+        width: 90%;
+        padding: 10px;
     }
 
     .instituicoes > img {
@@ -144,116 +148,114 @@
 
     /*Avaliações*/
 
-.avaliacao {
-    height:75vh;
-    margin-bottom:0px;
-}
+    .avaliacao {
+        height:75vh;
+        margin-bottom:0px;
+    }
 
-.avaliacao > h1 {
-    height:15%;
-    font-size: 1.4em;
-    text-align: center;
-    z-index: 2;
-}
+    .avaliacao > h1 {
+        height:15%;
+        font-size: 1.4em;
+        text-align: center;
+        z-index: 2;
+    }
 
-.avaliacao > h1::after {
-    border-right: 80px solid transparent;
-    border-top: 80px solid var(--vermelhoPadrao);
-    z-index: 1;
-}
+    .avaliacao > h1::after {
+        border-right: 80px solid transparent;
+        border-top: 80px solid var(--vermelhoPadrao);
+        z-index: 1;
+    }
 
-.avaliacao > h1::before {
-    border-right: 80px solid transparent;
-    border-top: 80px solid var(--preto);
-    z-index: -5;
-}
+    .avaliacao > h1::before {
+        border-right: 80px solid transparent;
+        border-top: 80px solid var(--preto);
+        z-index: -5;
+    }
 
-.avalia {
-    margin-top: 10px;
-}
+    .avalia {
+        margin-top: 10px;
+    }
 
-.avaliacoes {
-    width: 350px;
-    height: 90%;
-}
+    .avaliacoes {
+        width: 350px;
+        height: 90%;
+    }
 
-.nameAvaliador > h1 {
-    width:160px;
-    height:50px;
-}
+    .nameAvaliador > h1 {
+        width:160px;
+        height:50px;
+    }
 
-.avaliadorPhoto > img {
-    width:90px;
-    height: 90px;
-}
+    .avaliadorPhoto > img {
+        width:90px;
+        height: 90px;
+    }
 
-.avaliadorPhoto > button {
-    right: 7vw;
-    bottom: 2vh;
-}
+    .avaliadorPhoto > button {
+        right: 7vw;
+        bottom: 2vh;
+    }
 
-.avaliadorPhoto > button > span {
-    font-size: 2.5em;
-}
+    .avaliadorPhoto > button > span {
+        font-size: 2.5em;
+    }
 
-.contAvaliacao {
-    height: 80%;
-}
+    .contAvaliacao {
+        height: 80%;
+    }
 
-.stars {
-    font-size: 2em;
-    height:20%;
-}
+    .stars {
+        font-size: 2em;
+        height:20%;
+    }
 
-.contAvaliacao > p {
-    font-size: 1.1em;
-}
+    .contAvaliacao > p {
+        font-size: 1.1em;
+    }
 
-.descAvaliacao {
-    font-size: 1em;
-}
+    .descAvaliacao {
+        font-size: 1em;
+        height: 50%;
+    }
 
-.qrCode {
-    width: 60%;
-    margin-left: 0px;
-    padding-left: 10px;
-}
+    .qrCode {
+        width: 60%;
+        margin-left: 0px;
+        padding-left: 10px;
+    }
 
-.contactRedes {
-    margin-block: -20px;
-}
+    .contactRedes {
+        margin-block: -20px;
+    }
 
-.qrCode > h1 {
-    font-size: 1.4em;
-    height: auto;
-    text-align: center;
-}
+    .qrCode > h1 {
+        font-size: 1.4em;
+        height: auto;
+        text-align: center;
+    }
 
-.qrCode > img {
-    width: 95%;
-    height: 40%;
-}
+    .qrCode > img {
+        width: 95%;
+        height: 40%;
+    }
 
-.redesContact {
-    width: 40%;
-}
+    .redesContact {
+        width: 40%;
+    }
 
-.redesContact > a {
-    width: 60%;
-    height: 15%;
-}
+    .redesContact > a {
+        width: 60%;
+        height: 15%;
+    }
 
-.buttonAllProjects {
-    width: 60%;
-}
+    .buttonAllProjects {
+        width: 60%;
+    }
 
-.buttonAllProjects:hover {
-    width: 60%;
-    height: 60%;
-}
-
-
-
+    .buttonAllProjects:hover {
+        width: 60%;
+        height: 60%;
+    }
 }
 
 @media screen and (width >= 767px) and (width <= 1023px) {
