@@ -206,7 +206,7 @@
     
 }
 
-@media screen and (width <= 350px) {
+@media screen and (width <= 450px) {
     .logoPokemon {
         width: 90%;
         left: 0vw !important;
@@ -300,18 +300,18 @@
     }
 
     .divPokedex {
-        height: 150vh;
+        height: 180vh;
         flex-direction: column;
     }
 
     .pokedex {
         width: 100%;
-        height: 50%;
+        height: 40%;
     }
 
     .contPokedex {
         width: 100%;
-        height: 50%;
+        height: 60%;
     }
 
     .contPokedex > h1 {

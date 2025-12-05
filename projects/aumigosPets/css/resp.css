@@ -80,7 +80,7 @@
     }  
 }
 
-@media screen and (width <= 350px) {
+@media screen and (width <= 450px) {
     .content {
         width: 100%;
         background-color: rgba(0, 0, 0, 0.336);

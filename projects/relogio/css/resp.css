@@ -646,7 +646,7 @@
 
 }
 
-@media screen and (width <= 350px) {
+@media screen and (width <= 450px) {
 
     header {
         height: 30vh !important;
@@ -657,13 +657,13 @@
         z-index: 2;
         position: relative;
         width: 100%;
-        height: 120vh;
+        height: 80vh;
     }
 
     .textClock {
         width: 100%;
         top:35vh;
-        height:60%;
+        height:40%;
     }
 
     .textClock > h1 {
@@ -671,11 +671,11 @@
     }
 
     .textClock > p {
-        font-size: 0.8em;
+        font-size: 1em;
     }
     
     .relogio {
-        height: 50%;
+        height: 60%;
         width:96%;
         margin-inline: 8px;
     }
@@ -715,7 +715,7 @@
     }
 
     .contentClockChess > p {
-        font-size: 0.8em;
+        font-size: 1em;
     }
 
     .clockChessDiv {

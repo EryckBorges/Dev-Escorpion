@@ -655,7 +655,7 @@
     
 }
 
-@media screen and (width <= 350px) {
+@media screen and (width <= 450px) {
     .buttonAllProjects {
         width: 80%;
     }
@@ -686,6 +686,7 @@
     }
     
     .cont > p {
+        overflow-y: auto !important;
         font-size: 1em;
     }
     
@@ -708,19 +709,20 @@
     }    
 
     .meusProjetos {
-        height: 110vh;
+        height: 80vh;
         gap: 10px;
     }
 
-    .project > img {
-        width: 450px;
-        height: 100%;
+    .service > video {
+        width: 90%;
+        height: 60%;
     }
 
-    .service > img {
-        width: 100%;
-        height: 70%;
+    .project > video {
+        width: 90%;
+        height: 60%;
     }
+
 
     .project:hover > img {
         width: 450px;
@@ -823,7 +825,7 @@
     /*Avaliações*/
 
 .avaliacao {
-    height:200vh;
+    height: 80vh;
     margin-bottom:0px;
 }
 
@@ -848,6 +850,7 @@
 
 .avalia {
     margin-top: 10px;
+    height: 100%;
 }
 
 .avaliacoes {

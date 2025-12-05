@@ -584,7 +584,7 @@ footer {
     }
 }
 
-@media screen and (width <= 350px) {
+@media screen and (width <= 450px) {
     .logoMenu > .logo > img {
         width: 70%;
         height: 90%;
@@ -614,8 +614,8 @@ footer {
     }
 
     .toast {
-        width: 56px;
-        height: 60px;
+        width: 54px;
+        height: 55px;
         border-radius: 50px;
         background-color: var(--preto);
         position: fixed;
@@ -628,7 +628,7 @@ footer {
 
     @keyframes openToast {
         from {
-            width: 56px;
+            width: 54px;
         }to {
             width: 80%;
         }
@@ -638,7 +638,7 @@ footer {
         from {
             width:80%;
         }to {
-            width: 56px;
+            width: 54px;
         }
     }
     
