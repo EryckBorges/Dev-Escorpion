@@ -3,18 +3,7 @@ import { ToastFunction, MostrarImagens } from "../../global/js/script.js";
 
 // Assim que carregar a página já cria um toast e adiciona a própria página para poder ser manipulado pelo DOM
 document.addEventListener('DOMContentLoaded', () => {
-  
-  // <!-- Meta Pixel Code -->
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '25174390548887635');
-fbq('track', 'PageView');
+fbq('track', 'PageViewPortfolio');
 
   // Cria a caixa para exibição de imagens e outros elementos
   const boxImages = new MostrarImagens();
@@ -956,34 +945,6 @@ const buttonSpan = document.querySelector(".certificados button span");
 
 let isExpanded = false;
 
-
-//Redirecionamento dos projetos
-
-const sololeveling = document.querySelector(".sololeveling");
-
-sololeveling.addEventListener("click", () => {
-  window.location.href = "./projects/soloLeveling/";
-});
-
-const relogio = document.querySelector(".relogio");
-
-relogio.addEventListener("click", () => {
-  window.location.href = "./projects/relogio/";
-});
-
-const pokemon = document.querySelector(".pokemon");
-
-pokemon.addEventListener("click", () => {
-  window.location.href = "./projects/pokemon/";
-});
-
-const aumigos = document.querySelector(".aumigos");
-
-aumigos.addEventListener("click", () => {
-  window.location.href = "./projects/aumigosPets/";
-});
-
-
 const toastNotification = new Audio();
 toastNotification.src = "../global/music/toastNotification.mp3";
 
@@ -1066,9 +1027,35 @@ ch.addEventListener('click', () => {
 });
 
 
+//Redirecionamento dos projetos
+
+const sololeveling = document.querySelector(".sololeveling");
+
+sololeveling.addEventListener("click", () => {
+  window.location.href = "./projects/soloLeveling/";
+});
+
+const relogio = document.querySelector(".relogio");
+
+relogio.addEventListener("click", () => {
+  window.location.href = "./projects/relogio/";
+});
+
+const pokemon = document.querySelector(".pokemon");
+
+pokemon.addEventListener("click", () => {
+  window.location.href = "./projects/pokemon/";
+});
+
+const aumigos = document.querySelector(".aumigos");
+
+aumigos.addEventListener("click", () => {
+  window.location.href = "./projects/aumigosPets/";
+});
 
 
+//Eventos de click da meta ads 
 
+const curriculo = document.querySelector('.curriculo');
 
-
-
+curriculo.addEventListener('click', () => {fbq('trackCustom', 'downloadCurriculo');})

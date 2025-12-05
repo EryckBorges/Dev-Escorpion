@@ -1,3 +1,5 @@
+fbq('track', 'PageViewAumigosPets');
+
 const eua = {
     inicio: "Home",
     cursos: "Courses",

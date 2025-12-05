@@ -1,3 +1,5 @@
+fbq('track', 'PageViewPokemon');
+
 const pokopia = document.querySelectorAll('.pokopia');
 const zA = document.querySelectorAll('.z-a');
 const scarlet = document.querySelectorAll('.scarlet');

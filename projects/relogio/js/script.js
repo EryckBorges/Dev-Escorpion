@@ -1,3 +1,5 @@
+fbq('track', 'PageViewRelogio');
+
 //Linguagens 
 
 const eua = {

@@ -1,3 +1,5 @@
+fbq('track', 'PageViewSoloLeveling');
+
 //Linguagens 
 
 const eua = {

@@ -1,3 +1,5 @@
+fbq('track', 'PageViewSlechi');
+
 const eua = {
     inicio: "Home",
     cursos: "Courses",
