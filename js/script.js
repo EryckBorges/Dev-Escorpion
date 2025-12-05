@@ -55,8 +55,24 @@ fbq('track', 'PageViewPortfolio');
     let jsonImg = {
       logo: './image/icon/cnpq.svg',
       title: 'Descrição sobre o certificado',
+      titleEU: 'Description of the certificate',
+      titleES: 'Descripción del certificado',
+      titleFR: 'Description du certificat',
+      titleCH: '证书说明',
       text: [
         "Esse certificado foi conquistado durante o desenvolvimento do nosso projeto de TCC, que consistia na criação de um site voltado para a adoção de pets. A plataforma permitia que usuários adotassem ou colocassem animais para adoção, além de oferecer a opção de assinar uma caixinha surpresa mensal, com produtos personalizados para cada pet. Se tiver mais interesse sobre ele basta acessar o link abaixo <br><br><a href='https://eryckborges.github.io/Dev-Escorpion/projects/aumigosPets/' target='_blank'>AuMigos Pet's ",
+      ],
+      textEU: [
+        "This certificate was earned during the development of our graduation project, which consisted of creating a website focused on pet adoption. The platform allowed users to adopt animals or put them up for adoption, as well as subscribe to a monthly surprise box with personalized products for each pet. If you are interested in learning more, just access the link below:<br><br><a href='https://eryckborges.github.io/Dev-Escorpion/projects/aumigosPets/' target='_blank'>AuMigos Pet's</a>",
+      ],
+      textES: [
+        "Este certificado fue obtenido durante el desarrollo de nuestro proyecto de fin de curso, que consistió en la creación de un sitio web enfocado en la adopción de mascotas. La plataforma permitía a los usuarios adoptar animales o ponerlos en adopción, además de ofrecer la opción de suscribirse a una caja sorpresa mensual con productos personalizados para cada mascota. Si tienes más interés, simplemente accede al enlace abajo:<br><br><a href='https://eryckborges.github.io/Dev-Escorpion/projects/aumigosPets/' target='_blank'>AuMigos Pet's</a>",
+      ],
+      textFR: [
+        "Ce certificat a été obtenu lors du développement de notre projet de fin d’études, qui consistait à créer un site web dédié à l’adoption d’animaux. La plateforme permettait aux utilisateurs d’adopter ou de proposer des animaux à l’adoption, ainsi que de s’abonner à une boîte surprise mensuelle contenant des produits personnalisés pour chaque animal. Pour en savoir plus, il vous suffit d’accéder au lien ci-dessous :<br><br><a href='https://eryckborges.github.io/Dev-Escorpion/projects/aumigosPets/' target='_blank'>AuMigos Pet's</a>",
+      ],
+      textCH: [
+        "该证书是在我们毕业项目开发过程中获得的，该项目旨在创建一个专注于宠物领养的网站。平台允许用户领养动物或发布待领养的宠物，并提供订阅每月惊喜礼盒的选项，礼盒内包含为每只宠物量身定制的产品。若您想了解更多，请点击下方链接：<br><br><a href='https://eryckborges.github.io/Dev-Escorpion/projects/aumigosPets/' target='_blank'>AuMigos Pet's</a>"
       ],
       imagens: ['./image/certificados/cotuca.png'],
     }
@@ -74,11 +90,39 @@ fbq('track', 'PageViewPortfolio');
     let jsonImg = {
       logo: './image/icon/unesp.png',
       title: 'Descrição sobre o certificado',
+      titleEU: 'Description of the certificate',
+      titleES: 'Descripción del certificado',
+      titleFR: 'Description du certificat',
+      titleCH: '证书说明',
       text: [
         "Esse certificado da UNESP foi conquistado durante uma semana exclusiva sobre tecnologia. Aprendi a criar animações 2D usando o GIMP, integrá-las ao HTML, desenvolver joguinhos e muito mais. Foi uma semana incrível da qual sentirei saudades.", 
         "Esse certificado da UNESP foi conquistado durante uma semana exclusiva sobre tecnologia. Aprendi a criar animações 2D usando o GIMP, integrá-las ao HTML, desenvolver joguinhos e muito mais. Foi uma semana incrível da qual sentirei saudades.",
         "Já esse outro certificado foi da SETINF — a Semana de Tecnologia. Durante o evento, tive contato com diversos temas como impressoras 3D, programação em Python e outros recursos bastante interessantes.",
         "Já esse outro certificado foi da SETINF — a Semana de Tecnologia. Durante o evento, tive contato com diversos temas como impressoras 3D, programação em Python e outros recursos bastante interessantes."
+      ],
+      textEU: [
+        "This UNESP certificate was earned during an exclusive technology week. I learned to create 2D animations using GIMP, integrate them into HTML, develop small games, and much more. It was an amazing week that I will miss.",
+        "This UNESP certificate was earned during an exclusive technology week. I learned to create 2D animations using GIMP, integrate them into HTML, develop small games, and much more. It was an amazing week that I will miss.",
+        "This other certificate is from SETINF — the Technology Week. During the event, I explored several topics such as 3D printers, Python programming, and other very interesting resources.",
+        "This other certificate is from SETINF — the Technology Week. During the event, I explored several topics such as 3D printers, Python programming, and other very interesting resources."
+      ],
+      textES: [
+        "Este certificado de la UNESP fue obtenido durante una semana exclusiva dedicada a la tecnología. Aprendí a crear animaciones 2D con GIMP, integrarlas en HTML, desarrollar pequeños juegos y mucho más. Fue una semana increíble que extrañaré.",
+        "Este certificado de la UNESP fue obtenido durante una semana exclusiva dedicada a la tecnología. Aprendí a crear animaciones 2D con GIMP, integrarlas en HTML, desarrollar pequeños juegos y mucho más. Fue una semana increíble que extrañaré.",
+        "Este otro certificado es de la SETINF — la Semana de Tecnología. Durante el evento, tuve contacto con varios temas como impresoras 3D, programación en Python y otros recursos muy interesantes.",
+        "Este otro certificado es de la SETINF — la Semana de Tecnología. Durante el evento, tuve contacto con varios temas como impresoras 3D, programación en Python y otros recursos muy interesantes."
+      ],
+      textFR: [
+        "Ce certificat de l’UNESP a été obtenu lors d’une semaine exclusive dédiée à la technologie. J’ai appris à créer des animations 2D avec GIMP, à les intégrer dans du HTML, à développer de petits jeux, et bien plus encore. Ce fut une semaine incroyable qui me manquera.",
+        "Ce certificat de l’UNESP a été obtenu lors d’une semaine exclusive dédiée à la technologie. J’ai appris à créer des animations 2D avec GIMP, à les intégrer dans du HTML, à développer de petits jeux, et bien plus encore. Ce fut une semaine incroyable qui me manquera.",
+        "Cet autre certificat provient de la SETINF — la Semaine de la Technologie. Pendant l'événement, j’ai découvert plusieurs sujets tels que les imprimantes 3D, la programmation Python et d’autres ressources très intéressantes.",
+        "Cet autre certificat provient de la SETINF — la Semaine de la Technologie. Pendant l'événement, j’ai découvert plusieurs sujets tels que les imprimantes 3D, la programmation Python et d’autres ressources très intéressantes."
+      ],
+      textCH: [
+        "这个来自 UNESP 的证书是在一场以科技为主题的特别活动周中获得的。我学习了如何使用 GIMP 创建 2D 动画、将它们整合到 HTML 中、开发小游戏等内容。这是令人难忘的一周，我会非常怀念。",
+        "这个来自 UNESP 的证书是在一场以科技为主题的特别活动周中获得的。我学习了如何使用 GIMP 创建 2D 动画、将它们整合到 HTML 中、开发小游戏等内容。这是令人难忘的一周，我会非常怀念。",
+        "而另一个证书来自 SETINF —— 技术周。在活动期间，我接触到了多个主题，如 3D 打印机、Python 编程以及其他非常有趣的技术资源。",
+        "而另一个证书来自 SETINF —— 技术周。在活动期间，我接触到了多个主题，如 3D 打印机、Python 编程以及其他非常有趣的技术资源。"
       ],
       imagens: ['./image/certificados/unesp-front.png', './image/certificados/unesp-back.png', './image/certificados/setinf-front.png', './image/certificados/setinf-back.png'],
     };
@@ -96,8 +140,24 @@ fbq('track', 'PageViewPortfolio');
     let jsonImg = {
       logo: './image/icon/plenus.png',
       title: 'Descrição sobre o certificado',
+      titleEU: 'Description of the certificate',
+      titleES: 'Descripción del certificado',
+      titleFR: 'Description du certificat',
+      titleCH: '证书说明',
       text: [
         "Conquistei esse certificado para aprofundar meus conhecimentos sobre aplicativos usados em design gráfico — uma área que gosto de explorar e personalizar de várias formas."
+      ],
+      textEU: [
+        "I earned this certificate to deepen my knowledge of applications used in graphic design — an area I enjoy exploring and customizing in many different ways."
+      ],
+      textES: [
+        "Obtuve este certificado para profundizar mis conocimientos sobre aplicaciones utilizadas en el diseño gráfico, un área que me gusta explorar y personalizar de varias maneras.",
+      ],
+      textFR: [
+        "J’ai obtenu ce certificat pour approfondir mes connaissances des applications utilisées en design graphique — un domaine que j’aime explorer et personnaliser de différentes manières.",
+      ],
+      textCH: [
+        "我获得此证书是为了加深对平面设计所使用应用程序的了解，这是一个我喜欢以多种方式探索和个性化的领域"
       ],
       imagens: ['./image/certificados/plenus.png'],
     };
@@ -108,7 +168,6 @@ fbq('track', 'PageViewPortfolio');
     boxImages.nextElement();
     boxImages.backElement();
   });
-
 }); 
 
 let typedInstance; // Variável global para armazenar a instância de Typed.js
@@ -181,6 +240,7 @@ privacity: 'Privacy',
   dioDesc: 'Bootcamps and Other Courses',
   cnpqDesc: '30th Young Scientist Award',
   plenusDesc: 'Office Package, Design, and Much More',
+  btnCertificados: 'Certificates',
   // btnAllProject: "See all projects",
 servicePrest: 'Discover the Services I Offer',
 servicePrestText: "I offer computer and laptop repair and maintenance services, as well as PC assembly and upgrades, helping you choose the best parts for performance and cost-effectiveness. I also work in web application development, creating modern and responsive websites using HTML, CSS, JavaScript, Git, GitHub, Figma, and Canva. Get in touch and take your technology to the next level! Let's Code!",
@@ -217,6 +277,7 @@ const brasil = {
   dioDesc: 'Bootcamps e Outros Cursos',
   cnpqDesc: '30º Prêmio Jovem Cientista',
   plenusDesc: 'Pacote Office, Design e muito mais...',
+  btnCertificados: 'Certificados',
   // btnAllProject: "Veja todos os projetos",
   servicePrest: 'Conheça os Serviços que Ofereço',
 servicePrestText: "Ofereço serviços de conserto e manutenção de computadores e notebooks, além de montagem e upgrade de PCs, ajudando a escolher as melhores peças para desempenho e custo-benefício. Também atuo no desenvolvimento de aplicações web, criando sites modernos e responsivos com HTML, CSS, JavaScript, Git, GitHub, Figma e Canva. Entre em contato e leve sua tecnologia para o próximo nível! Let's Code!",
@@ -253,6 +314,7 @@ privacity: 'Privacidad',
   dioDesc: 'Bootcamps y Otros Cursos',
   cnpqDesc: '30º Premio Joven Científico',
   plenusDesc: 'Paquete Office, Diseño y Mucho Más',
+  btnCertificados: 'Certificados',
   // btnAllProject: "Ver todos los proyectos",
 servicePrest: 'Descubre los Servicios que Ofrezco',
 servicePrestText: "Ofrezco servicios de reparación y mantenimiento de computadoras y laptops, así como ensamblaje y actualización de PC, ayudándote a elegir las mejores piezas para rendimiento y costo-beneficio. También me dedico al desarrollo de aplicaciones web, creando sitios modernos y responsivos con HTML, CSS, JavaScript, Git, GitHub, Figma y Canva. ¡Ponte en contacto y lleva tu tecnología al siguiente nivel! ¡Let's Code!",
@@ -289,6 +351,7 @@ privacity: 'Confidentialité',
   dioDesc: 'Bootcamps et Autres Cours',
   cnpqDesc: '30e Prix Jeune Scientifique',
   plenusDesc: 'Pack Office, Design et Bien Plus',
+  btnCertificados: 'Certificats',
 notConhecimento: "de connaissance <br> que je ne possède pas",
 servicePrest: 'Découvrez les services que j’offre',
 servicePrestText: "J'offre des services de réparation et de maintenance d'ordinateurs et d'ordinateurs portables, ainsi que l'assemblage et la mise à niveau de PC, en vous aidant à choisir les meilleures pièces pour la performance et le rapport qualité-prix. Je travaille également dans le développement d'applications web, en créant des sites modernes et responsifs avec HTML, CSS, JavaScript, Git, GitHub, Figma et Canva. Contactez-moi et faites passer votre technologie au niveau supérieur ! Let's Code ",
@@ -325,6 +388,7 @@ privacity: '隐私政策',
   dioDesc: '训练营和其他课程',
   cnpqDesc: '第30届青年科学家奖',
   plenusDesc: 'Office 套件、设计及更多内容',
+  btnCertificados: '证书',
   // btnAllProject: "查看所有项目",
 servicePrest: '发现我提供的服务',
 servicePrestText: "我提供电脑和笔记本电脑的维修和维护服务，以及PC组装和升级，帮助您选择最佳配件，以提高性能并优化成本。我还从事Web应用开发，使用HTML、CSS、JavaScript、Git、GitHub、Figma和Canva创建现代化、响应式的网站。欢迎联系我们，让您的技术更上一层楼！Let's Code!",
@@ -360,6 +424,7 @@ const elementos = {
   dioDesc: document.querySelector(".dio"),
   cnpqDesc: document.querySelector(".cnpq"),
   plenusDesc: document.querySelector(".plenus"),
+  btnCertificados: document.querySelectorAll(".btnCertificados"),
   // btnAllProject: document.querySelectorAll(".btnAllProject"),
   servicePrest: document.querySelector('.servicePrest'),
 servicePrestText: document.querySelector('.servicePrestText'),
@@ -404,6 +469,9 @@ const ingles = () => {
   elementos.dioDesc.innerHTML = eua.dioDesc;
   elementos.cnpqDesc.innerHTML = eua.cnpqDesc;
   elementos.plenusDesc.innerHTML = eua.plenusDesc;
+  elementos.btnCertificados.forEach((textBtnCertificado) => {
+    textBtnCertificado.innerHTML = eua.btnCertificados;
+  })
   alternarIdioma("Eu");
   animacaoTyped(".typedEu", [
     "Hello, my name is Eryck Borges",
@@ -468,6 +536,9 @@ const portugues = () => {
   elementos.tecnologias.innerHTML = brasil.tecnologias;
   elementos.certificado.innerHTML = brasil.certificado;
   elementos.avaliacaoTitle.innerHTML = brasil.avaliacaoTitle;
+  elementos.btnCertificados.forEach((textBtnCertificado) => {
+    textBtnCertificado.innerHTML = brasil.btnCertificados;
+  })
   alternarIdioma("Br");
   animacaoTyped(".typedBr", [
     "Olá, meu nome é Eryck Borges",
@@ -531,6 +602,9 @@ const espanha = () => {
   elementos.tecnologias.innerHTML = spain.tecnologias;
   elementos.certificado.innerHTML = spain.certificado;
   elementos.avaliacaoTitle.innerHTML = spain.avaliacaoTitle;
+  elementos.btnCertificados.forEach((textBtnCertificado) => {
+    textBtnCertificado.innerHTML = spain.btnCertificados;
+  })
   alternarIdioma("Es");
   animacaoTyped(".typedEs", [
     "Hola, mi nombre es Éryck Borges",
@@ -595,7 +669,9 @@ const frances = () => {
   elementos.ferramentas.innerHTML = franca.ferramentas;
   elementos.tecnologias.innerHTML = franca.tecnologias;
   elementos.certificado.innerHTML = franca.certificado;
-  elementos.avaliacaoTitle.innerHTML = franca.avaliacaoTitle;
+  elementos.btnCertificados.forEach((textBtnCertificado) => {
+    textBtnCertificado.innerHTML = franca.btnCertificados;
+  })
   alternarIdioma("Fr");
   animacaoTyped(".typedFr", [
     "Bonjour, je m'appelle Éryck Borges",
@@ -658,7 +734,9 @@ const chines = () => {
   elementos.ferramentas.innerHTML = china.ferramentas;
   elementos.tecnologias.innerHTML = china.tecnologias;
   elementos.certificado.innerHTML = china.certificado;
-  elementos.avaliacaoTitle.innerHTML = china.avaliacaoTitle;
+  elementos.btnCertificados.forEach((textBtnCertificado) => {
+    textBtnCertificado.innerHTML = china.btnCertificados;
+  })
   alternarIdioma("Ch");
   animacaoTyped(".typedCh", [
     "你好，我的名字是 Éryck Borges",

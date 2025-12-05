@@ -287,6 +287,7 @@ export class MostrarImagens {
     this.imgs = imgs;
     this.contElement = 0;
     localStorage.setItem('contElement', this.contElement);
+    this.lang = localStorage.getItem('lang').toUpperCase();
   }
 
   // Cria o elemento usado para exibir as imagens e afins
@@ -321,7 +322,16 @@ export class MostrarImagens {
     h1.classList.add('over', 'title', 'titleDesc');
     p.classList.add('over', 'text', 'textDesc');
     h1.innerHTML = dados.title;
-    p.innerHTML = dados.text[contElement];
+    let keyTitle = this.lang === 'BR' ? 'title' : `title${this.lang}`;
+    let langTitle = dados[keyTitle]; 
+
+    h1.innerHTML = langTitle;
+
+    let key = this.lang === 'BR' ? 'text' : `text${this.lang}`;
+    let langText = dados[key]; 
+
+    p.innerHTML = langText[contElement];
+
 
     const divImage = document.createElement('div');
     const imgMain = document.createElement('img');
@@ -378,7 +388,8 @@ export class MostrarImagens {
 
   // Cria e Abre a caixa para exibição de imagens 
   openBox() {
-    this.showNewBox(this.contElement);
+    this.lang = localStorage.getItem('lang').toUpperCase();
+    this.showNewBox();
     const boxImages = document.querySelector('.boxImage');  
     boxImages.style.animation = 'fadeInBox 0.5s';
     boxImages.classList.remove('closedBox');
@@ -393,15 +404,19 @@ export class MostrarImagens {
     let dados = JSON.parse(localStorage.getItem('jsonImages')); 
     nextButtonImage.addEventListener('click', () => { 
       this.contElement++
+      localStorage.setItem('contElement', this.contElement);
       if(dados.imagens.length > this.contElement) {
-        localStorage.setItem('contElement', this.contElement);
         imgMain.src = dados.imagens[this.contElement];
-        textDesc.innerHTML = dados.text[this.contElement];
+        let key = this.lang === 'BR' ? 'text' : `text${this.lang}`;
+        let langTitle = dados[key][this.contElement]; 
+        textDesc.innerHTML = langTitle;
       }else if(dados.imagens.length == this.contElement) {
         this.contElement = 0;
         localStorage.setItem('contElement', this.contElement);
         imgMain.src = dados.imagens[this.contElement];
-        textDesc.innerHTML = dados.text[this.contElement];
+        let key = this.lang === 'BR' ? 'text' : `text${this.lang}`;
+        let langTitle = dados[key][this.contElement]; 
+        textDesc.innerHTML = langTitle;
       }
     })
   }
@@ -415,17 +430,20 @@ export class MostrarImagens {
     let dados = JSON.parse(localStorage.getItem('jsonImages')); 
     backButtonImage.addEventListener('click', () => { 
       if(this.contElement == 0) {
-        this.contElement = 0;
+        this.contElement = 3;
         localStorage.setItem('contElement', this.contElement);
         imgMain.src = dados.imagens[this.contElement];
-        textDesc.innerHTML = dados.text[this.contElement];
-      } else if(this.contElement <= dados.imagens.length) {
+        let key = this.lang === 'BR' ? 'text' : `text${this.lang}`;
+        let langTitle = dados[key][this.contElement]; 
+        textDesc.innerHTML = langTitle;
+      } else if(this.contElement < dados.imagens.length) {
         this.contElement--
-        console.log("oi");
-        
         localStorage.setItem('contElement', this.contElement);
         imgMain.src = dados.imagens[this.contElement];
-        textDesc.innerHTML = dados.text[this.contElement];
+        let key = this.lang === 'BR' ? 'text' : `text${this.lang}`;
+        let langTitle = dados[key][this.contElement]; 
+        console.log(langTitle);
+        textDesc.innerHTML = langTitle;
       }
     })
   }

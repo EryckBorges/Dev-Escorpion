@@ -1,3 +1,5 @@
+fbq('track', 'PageViewDio');
+
 const eua = {
     inicio: "Home",
     cursos: "Courses",
